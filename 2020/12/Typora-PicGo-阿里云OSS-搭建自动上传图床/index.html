@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo2.png">
+  <link rel="mask-icon" href="/images/logo2.svg" color="#222">
+  <meta name="msvalidate.01" content="C4629C76253BAF6F511BC39C8C5D670E">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="Typora+PicGo+阿里云OSS-搭建自动上传图床 前言  一定要注意空格啊！！！我就是因为Access Key ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！  好了，以上是吐槽，接下来进入正题。 在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要插入图片用的是本地链接。在本地，在编辑器中，我们能看到图">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Typora+PicGo+阿里云OSS-搭建自动上传图床">
+<meta property="og:url" content="http://www.yunying61.top/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/index.html">
+<meta property="og:site_name" content="星幕·云影">
+<meta property="og:description" content="Typora+PicGo+阿里云OSS-搭建自动上传图床 前言  一定要注意空格啊！！！我就是因为Access Key ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！  好了，以上是吐槽，接下来进入正题。 在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要插入图片用的是本地链接。在本地，在编辑器中，我们能看到图">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-22T08:54:26.000Z">
+<meta property="article:modified_time" content="2022-03-01T04:10:12.865Z">
+<meta property="article:author" content="yunying61">
+<meta property="article:tag" content="Typora">
+<meta property="article:tag" content="PicGo">
+<meta property="article:tag" content="OSS">
+<meta property="article:tag" content="图床">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yunying61.top/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yunying61.top/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/","path":"2020/12/Typora-PicGo-阿里云OSS-搭建自动上传图床/","title":"Typora+PicGo+阿里云OSS-搭建自动上传图床"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Typora+PicGo+阿里云OSS-搭建自动上传图床 | 星幕·云影</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">星幕·云影</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#typorapicgo%E9%98%BF%E9%87%8C%E4%BA%91oss-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.</span> <span class="nav-text">Typora+PicGo+阿里云OSS-搭建自动上传图床</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#picgo"><span class="nav-number">2.</span> <span class="nav-text">PicGo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E8%89%B2%E5%8A%9F%E8%83%BD"><span class="nav-number">2.1.</span> <span class="nav-text">特色功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text">下载安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#windows"><span class="nav-number">2.2.1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#macos"><span class="nav-number">2.2.2.</span> <span class="nav-text">macOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux"><span class="nav-number">2.2.3.</span> <span class="nav-text">Linux</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E6%88%AA%E5%9B%BE"><span class="nav-number">2.3.</span> <span class="nav-text">应用截图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#picgo%E9%85%8D%E7%BD%AE"><span class="nav-number">2.4.</span> <span class="nav-text">PicGo配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#picgo-core%E9%85%8D%E7%BD%AE"><span class="nav-number">2.5.</span> <span class="nav-text">PicGo-Core配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.5.1.</span> <span class="nav-text">默认配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">2.6.</span> <span class="nav-text">后记</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png">
+  <p class="site-author-name" itemprop="name">yunying61</p>
+  <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button class="js-gitter-toggle-chat-button"><i class="fa fa-comment"></i>
+      聊天室
+    </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yunying61" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yunying61" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yunying61@qq.com" title="E-Mail → mailto:yunying61@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/5119152507" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5119152507" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+<div id="musicplayer">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=34364124&auto=1&height=66">
+    </iframe>
+</div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/yunying61" class="github-corner" title="在GitHub上关注我" aria-label="在GitHub上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yunying61.png">
+      <meta itemprop="name" content="yunying61">
+      <meta itemprop="description" content="yunying61's Hexo Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星幕·云影">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Typora+PicGo+阿里云OSS-搭建自动上传图床
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-12-22 16:54:26" itemprop="dateCreated datePublished" datetime="2020-12-22T16:54:26+08:00">2020-12-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-01 12:10:12" itemprop="dateModified" datetime="2022-03-01T12:10:12+08:00">2022-03-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">应用</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BA%94%E7%94%A8/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="Typora+PicGo+阿里云OSS-搭建自动上传图床" href="/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::a4d9fd8f810faf409a03dcc3ca2e2ff6" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1
+id="typorapicgo阿里云oss-搭建自动上传图床">Typora+PicGo+阿里云OSS-搭建自动上传图床</h1>
+<h2 id="前言">前言</h2>
+<blockquote>
+<p>一定要注意空格啊！！！我就是因为Access Key
+ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！</p>
+</blockquote>
+<p>好了，以上是吐槽，接下来进入正题。</p>
+<p>在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要<strong>插入图片</strong>用的是本地链接。在本地，在编辑器中，我们能看到图片的展示。但是如果我们写完了，需要上传到自己的博客，或者去到某些平台发布。复制文章过去，图片并不能被复制过去，需要手动的去上传本地图片到图片服务器，然后根据URL导入文章中，再排版。十分的麻烦。</p>
+<p>而PicGo+阿里云的OSS就可以<strong>自动</strong>帮我们将图片上传到网上，转换成URL，然后出现在我们文章中需要插入图片的位置，使用该URL，不管我们在什么平台发布文章，都能显示我们的图片。</p>
+<span id="more"></span>
+<h1 id="picgo">PicGo</h1>
+<p>一个用于<strong>快速</strong>上传图片并获取URL链接的图床工具。</p>
+<p>PicGo 本体支持如下图床：</p>
+<ul>
+<li>SM.MS图床</li>
+<li>腾讯云COS</li>
+<li>Github图床</li>
+<li>七牛图床</li>
+<li>Imgur图床</li>
+<li><strong>阿里云OSS</strong></li>
+<li>又拍云图床</li>
+<li>如果你有其他图床的上传需求，还有第三方图床插件可以使用</li>
+</ul>
+<h2 id="特色功能">特色功能</h2>
+<ul>
+<li>支持拖拽图片上传</li>
+<li>支持快捷键上传剪贴板里第一张图片</li>
+<li>Windows 和 macOS 支持右键图片文件通过菜单上传 (v2.1.0+)</li>
+<li>上传图片后自动复制链接到剪贴板</li>
+<li>支持自定义复制到剪贴板的链接格式</li>
+<li>支持修改快捷键，默认快速上传快捷键：<code>command+shift+p</code>（macOS）|
+<code>control+shift+p</code>（Windows)</li>
+<li>支持插件系统，已有插件支持 Gitee、青云等第三方图床
+<ul>
+<li>更多第三方插件以及使用了 PicGo 底层的应用可以在 <a
+target="_blank" rel="noopener" href="https://github.com/PicGo/Awesome-PicGo">Awesome-PicGo</a>
+找到。欢迎贡献！</li>
+</ul></li>
+<li>支持通过发送 HTTP 请求调用 PicGo 上传（v2.2.0+)</li>
+</ul>
+<p><strong>如果第一次使用，请参考应用 <a
+target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/getting-started.html">使用文档</a>。遇到问题了还可以看看
+<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md">FAQ</a>
+以及被关闭的 <a
+target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed">issues</a>。</strong></p>
+<h2 id="下载安装">下载安装</h2>
+<blockquote>
+<p>注意：请确保你安装了 <code>Node.js</code>， 并且版本 &gt;= 8。</p>
+</blockquote>
+<h3 id="windows">Windows</h3>
+<p>Windows 用户请下载最新版本的 <code>exe</code> 文件。</p>
+<p><strong>还可以使用 <a target="_blank" rel="noopener" href="https://scoop.sh/">Scoop</a> 来安装
+PicGo:
+<code>scoop bucket add helbing https://github.com/helbing/scoop-bucket</code>
+&amp; <code>scoop install picgo</code>。 感谢 <span class="citation"
+data-cites="helbing">@helbing</span> 的贡献！</strong></p>
+<p><strong>还可以使用 <a target="_blank" rel="noopener" href="https://chocolatey.org/">Chocolatey</a>
+来安装 PicGo: <code>choco install picgo</code>。 感谢 <span
+class="citation" data-cites="iYato">@iYato</span> 的贡献！</strong></p>
+<h3 id="macos">macOS</h3>
+<p>macOS 用户请下载最新版本的 <code>dmg</code> 文件。</p>
+<p><strong>还可以使用 <code>brew cask</code> 来安装 PicGo:
+<code>brew cask install picgo</code>。感谢 <span class="citation"
+data-cites="womeimingzi11">@womeimingzi11</span> 的贡献！</strong></p>
+<h3 id="linux">Linux</h3>
+<p>Linux 用户请下载 <code>AppImage</code> 文件。</p>
+<p><strong>如果你是 Arch 类的 Linux 用户，可以直接通过
+<code>aurman -S picgo-appimage</code> 来安装 PicGo。感谢 <span
+class="citation" data-cites="houbaron">@houbaron</span>
+的贡献！</strong></p>
+<h2 id="应用截图">应用截图</h2>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/picgo-2.0.gif?x-oss-process=style/yunying61" /></p>
+<h2 id="picgo配置">PicGo配置</h2>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/picgo-alyoss.png?x-oss-process=style/yunying61" /></p>
+<p>阿里云OSS配置项及说明：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;accessKeyId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;accessKeySecret&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;bucket&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 存储空间名</span></span><br><span class="line">  <span class="attr">&quot;area&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 存储区域代号</span></span><br><span class="line">  <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 自定义存储路径</span></span><br><span class="line">  <span class="attr">&quot;customUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 自定义域名，注意要加http://或者https://</span></span><br><span class="line">  <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>&lt;abbr
+title:”没有就去阿里买一个OSS，很便宜的”&gt;默认你已经有了阿里云的OSS</abbr>，且知道阿里云的RAM访问控制</p>
+<p>*设定Keyld（accessKeyId）：这是你的<code>accessKeyId</code>
+*设定KeySecret（accessKeySecret）：这是你的<code>accessKeySecret</code>
+*设定存储空间名（bucket）：这是你的bucket名称
+*确认存储区域（area）：这是你bucket所在的地域，一般都为oss-cn-城市拼音
+指定存储路径（path）：默认为空，则放在bucket根目录下；如果有需求，则存储路径一定要以<code>/</code>结尾！
+设定网址后缀（options）：如果你的OSS有设置网址后缀，请注意是否要加上这个后缀。
+设定自定义域名（customUrl）：自定义域名，注意要加http://或者https://</p>
+<blockquote>
+<p>在Typora的偏好设置 - 图像，按照下图进行设置就可以了。</p>
+</blockquote>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/picgo-typora.png?x-oss-process=style/yunying61" />)</p>
+<blockquote>
+<p>以上配置是在PicGo软件上上传图片然后复制到URL进行使用的，而且在日常写作中，PicGo也是要开启才能使用，所以下面我将介绍一个更为方便的PicGo-Core，它是以命令行形式运行的，用完即退出进程，不会一直占用系统资源。</p>
+</blockquote>
+<h2 id="picgo-core配置">PicGo-Core配置</h2>
+<p>官网<a
+target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Core-Doc/">PicGo-Core</a></p>
+<p>安装：<code>注意请确保你的 Node.js 版本 &gt;= 8</code>。</p>
+<p>使用 <code>npm install picgo -g</code> 全局安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#简单使用</span></span><br><span class="line"><span class="comment"># 上传具体路径图片</span></span><br><span class="line">picgo upload /xxx/xxx.jpg</span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传剪贴板里的第一张图片（上传时会将格式转成png）</span></span><br><span class="line">picgo upload</span><br></pre></td></tr></table></figure>
+<h3 id="默认配置文件">默认配置文件</h3>
+<p>首先，先在命令窗口使用命令 <code>picgo -h</code>
+查看picgo的命令，同时会生成配置文件。</p>
+<p>picgo
+的默认配置文件为<code>~/.picgo/config.json</code>。其中<code>~</code>为用户目录。不同系统的用户目录不太一样。</p>
+<p>linux 和 macOS 均为<code>~/.picgo/config.json</code>。</p>
+<p>windows 则为<code>C:\Users\你的用户名\.picgo\config.json</code>。</p>
+<p>将配置文件填入如下，具体配置请根据上面的说明，把各项信息填好，并保存：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;picBed&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;uploader&quot;</span><span class="punctuation">:</span> <span class="string">&quot;aliyun&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;current&quot;</span><span class="punctuation">:</span> <span class="string">&quot;aliyun&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;aliyun&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;accessKeyId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;accessKeySecret&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;bucket&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;area&quot;</span><span class="punctuation">:</span> <span class="string">&quot;oss-cn-shanghai&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;customUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;PicGo/&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;picgoPlugins&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在Typora的偏好设置 - 图像，按照下图进行设置就可以了。</p>
+</blockquote>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/picgo-core-typora.png?x-oss-process=style/yunying61" /></p>
+<h2 id="后记">后记</h2>
+<p>至此，你就可以在Typora直接插入图片，PicGo-Core会自动帮你把图片上传到阿里云OSS，并且将链接替换成网页URL。在平时，也可以通过PicGo软件上传图片到远程服务器中进行备份。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="yunying61 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="yunying61 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>yunying61
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.yunying61.top/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/" title="Typora+PicGo+阿里云OSS-搭建自动上传图床">http://www.yunying61.top/2020/12/Typora-PicGo-阿里云OSS-搭建自动上传图床/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://blog.csdn.net/weixin_45385155">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">CSDN</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Typora/" rel="tag"># Typora</a>
+              <a href="/tags/PicGo/" rel="tag"># PicGo</a>
+              <a href="/tags/OSS/" rel="tag"># OSS</a>
+              <a href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag"># 图床</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/05/C-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" rel="prev" title="C++ 类&对象">
+                  <i class="fa fa-chevron-left"></i> C++ 类&对象
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/02/hello-world/" rel="next" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-changyan">changyan</a></li>
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane changyan" id="comment-changyan">
+              <div class="comments" id="SOHUCS" sid="a4d9fd8f810faf409a03dcc3ca2e2ff6"></div>
+            </div>
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yunying61</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">48k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">44 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"yunying61/community"}</script>
+<script src="/js/third-party/chat/gitter.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.13.10/dist/mermaid.min.js","integrity":"sha256-CmZCFVnvol9YL23PfjDflGY5nJwE+Mf/JN+8v+tD/34="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://www.yunying61.top/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvVXPmv7","appkey":"942f7dcea39f6d4b449332dde8fe4241"}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"yunying61","repo":"hexo-gitalk-comments","client_id":"cd26c5cc6e59fb8d7d2d","client_secret":"04ee0273d65d5b5b3a5b95c36a90aaaae29c3d39","admin_user":"yunying61","distraction_free_mode":true,"proxy":"http://www.yunying61.top/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"a4d9fd8f810faf409a03dcc3ca2e2ff6"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

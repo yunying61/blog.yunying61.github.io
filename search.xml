@@ -1,0 +1,1956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>markdown的笔记（代码运用)</title>
+    <url>/2019/11/markdown/</url>
+    <content><![CDATA[<blockquote>
+<p>以下所有演示，后面紧接的都是它们的代码行。</p>
+</blockquote>
+<h1 id="一级标题">一级标题</h1>
+<pre><code># 一级标题</code></pre>
+<h2 id="二级标题">二级标题</h2>
+<pre><code>## 二级标题</code></pre>
+<span id="more"></span>
+<h3 id="三级标题">三级标题</h3>
+<pre><code>### 三级标题</code></pre>
+<h4 id="四级标题">四级标题</h4>
+<pre><code>#### 四级标题</code></pre>
+<h5 id="五级标题">五级标题</h5>
+<pre><code>##### 五级标题</code></pre>
+<h6 id="六级标题">六级标题</h6>
+<pre><code>###### 六级标题</code></pre>
+<h2
+id="水平线以下都是水平线分割线的使用">水平线（以下都是水平线（分割线）的使用）</h2>
+<hr />
+<hr />
+<hr />
+<pre><code>___
+
+---
+
+***</code></pre>
+<h2 id="文本样式">文本样式</h2>
+<p><strong>This is bold text 加粗</strong></p>
+<pre><code>**This is bold text 加粗**</code></pre>
+<p><strong>This is bold text 加粗</strong></p>
+<pre><code>__This is bold text 加粗__</code></pre>
+<p><em>This is italic text 斜体</em></p>
+<pre><code>*This is italic text 斜体*</code></pre>
+<p><em>This is italic text 斜体</em></p>
+<pre><code>_This is italic text 斜体_</code></pre>
+<p><del>Strikethrough 删除线</del></p>
+<pre><code>~~Strikethrough 删除线~~ </code></pre>
+<p><u>xiahuaxian 下划线</u></p>
+<pre><code>&lt;u&gt;xiahuaxian 下划线&lt;/u&gt;  </code></pre>
+<p>Markdown 扩展语法 内联公式（例：<span
+class="math inline">\(\LaTeX\)</span>）</p>
+<pre><code>$\LaTeX$</code></pre>
+<p>下标（例：H<sub>2</sub>0）</p>
+<pre><code>H~2~0</code></pre>
+<p>上标（例：X<sup>2</sup>）</p>
+<pre><code>X^2^</code></pre>
+<p>高亮（例：==key==）</p>
+<pre><code>==key==</code></pre>
+<p>创建脚注格式类似这样（好像没用） :[^RUNOOB]。</p>
+<p>[^RUNOOB] : Markdown 在线编辑器<br />
+### 判断框</p>
+<ul>
+<li>[x]</li>
+<li>[ ]</li>
+</ul>
+<p>代码： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- [x] </span><br><span class="line">- [ ] </span><br></pre></td></tr></table></figure></p>
+<h2 id="方框">方框</h2>
+<pre>使用HTML的<b>pre标签</b>可以实现圆角方框的高亮提示。pre标签原本的使用是可以实现对空行和空格的控制，
+如：
+此例演示如何使用 pre 标签
+    对空行
+和    空格
+        进行控制</pre>
+<h2 id="列表">列表</h2>
+<h3 id="无序">无序</h3>
+<ul>
+<li>Create a list by starting a line with <code>+</code>,
+<code>-</code>, or
+<code>*</code>在每行代码的最前面输入前面3个符号的其中一个，注意有空格。</li>
+<li>Sub-lists are made by indenting 2 spaces:
+<ul>
+<li>Marker character change forces new list start:
+<ul>
+<li>Ac tristique libero volutpat at</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+</ul></li>
+</ul></li>
+<li>Very easy!</li>
+</ul>
+<h3 id="有序">有序</h3>
+<p>在每行代码的最前面输入序号如（1. ），注意有空格。<br />
+注意：只要有了第一个序号的开始，后面的编号会依次开始排序，如（5.
+，接下来的将会是6. ） 1. Lorem ipsum dolor sit amet 2. Consectetur
+adipiscing elit 3. Integer molestie lorem at massa</p>
+<ol type="1">
+<li>You can use sequential numbers...</li>
+<li>...or keep all the numbers as <code>1.</code></li>
+</ol>
+<p>Start numbering with offset（会按打头的编号开始排序）:</p>
+<ol start="57" type="1">
+<li>foo</li>
+<li>bar显示的序号你为58</li>
+</ol>
+<h2 id="markdown-区块">Markdown 区块</h2>
+<h3
+id="markdown-区块引用是在段落开头使用-符号-然后后面紧跟一个空格符号">Markdown
+区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</h3>
+<blockquote>
+<p>区块引用 菜鸟教程 学的不仅是技术更是梦想</p>
+</blockquote>
+<pre><code>&gt; 区块引用
+&gt; 菜鸟教程</code></pre>
+<h3
+id="区块是可以嵌套的一个-符号是最外层两个-符号是第一层嵌套以此类推退">区块是可以嵌套的，一个
+&gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推退：</h3>
+<blockquote>
+<p>最外层<br />
+最外层 &gt; 第一层嵌套<br />
+&gt; 第一层嵌套 &gt; &gt; 第二层嵌套<br />
+&gt; &gt; 第二层嵌套</p>
+</blockquote>
+<pre><code>&gt; 最外层  
+&gt; &gt; 第一层嵌套  
+&gt; &gt; &gt; 第二层嵌套  </code></pre>
+<h2 id="列表中使用区块">列表中使用区块</h2>
+<p><strong>如果要在列表项目内放进区块，那么就需要在 &gt;
+前添加四个空格的缩进。</strong></p>
+<p>区块中使用列表实例如下： * 第一项 &gt; 菜鸟教程<br />
+&gt; 学的不仅是技术更是梦想 * 第二项</p>
+<h2 id="代码">代码</h2>
+<p>Inline <code>高亮</code>代码→ <code>code</code> &gt;格式：
+&gt;单引号+字符+单引号 &gt;如：`这里插入需要高亮的字符`</p>
+<p>第一种代码行的写法(空行式Indented code) &gt;该种代码行的格式：<br />
+&gt;<code>该段空行</code> &gt;
+前面空4格（一个tab的长度），该段开始为代码行
+&gt;<code>结尾再空行，该段为结束</code></p>
+<pre><code>// Some comments
+line 1 of code
+line 2 of code
+line 3 of code</code></pre>
+<p>第二种代码行的写法(反引号式Block code"fences") &gt;该种代码行的格式：
+&gt;<code>3个反引号</code> &gt;该段开始为代码行
+&gt;<code>3个反引号</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Sample text here...</span><br></pre></td></tr></table></figure></p>
+<p>第三种代码行的写法(Syntax)highlighting<br />
+该种写法（可以在md文件中使代码语法高亮）是： &gt;该种代码行的格式：
+&gt;<code>3个反引号</code> <code>所使用的编程语言</code>
+&gt;该段开始为代码行 &gt;<code>3个反引号</code> <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="keyword">function</span> (<span class="params">bar</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> bar++;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">foo</span>(<span class="number">5</span>));</span><br></pre></td></tr></table></figure></p>
+<p>第四种代码块的写法 &gt;该种代码行的格式：</p>
+<pre><code>&#123;% codeblock [title] [lang:language] [url] [link text] %&#125;  
+    print("Hello World!);
+&#123;% endcodeblock %&#125;  </code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">print(&quot;Hello World!);</span><br></pre></td></tr></table></figure>
+<h2 id="链接使用方法如下">链接使用方法如下：</h2>
+<p>这是一个链接 <a href="https://www.runoob.com">菜鸟教程</a></p>
+<pre><code>这是一个链接 [菜鸟教程](https://www.runoob.com)</code></pre>
+<p>或者 <链接地址> <a href="https://www.runoob.com"
+class="uri">https://www.runoob.com</a></p>
+<h2 id="高级链接">高级链接</h2>
+<p>链接也可以用变量来代替，文档末尾附带变量地址：<br />
+这个链接用 1 作为网址变量 <a
+href="http://www.google.com/">Google</a><br />
+这个链接用 runoob 作为网址变量 <a
+href="http://www.runoob.com/">Runoob</a><br />
+然后在文档的结尾为变量赋值（网址）</p>
+<pre><code>[Google][1]   [Runoob][2]  
+[1]: http://www.google.com/  
+[2]: http://www.runoob.com/</code></pre>
+<h2 id="插入图片">插入图片</h2>
+<p>语法格式如下：<br />
+![alt 属性文本](图片地址)</p>
+<p>![alt 属性文本](图片地址 "可选标题")<br />
+开头一个感叹号 !<br />
+接着一个方括号，里面放上图片的替代文字<br />
+接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的
+'title' 属性的文字。<br />
+使用实例： <img data-src="http://static.runoob.com/images/runoob-logo.png"
+alt="RUNOOB 图标" /></p>
+<p><img data-src="http://static.runoob.com/images/runoob-logo.png"
+title="RUNOOB" alt="RUNOOB 图标" />
+当然，你也可以像网址那样对图片网址使用变量<br />
+Markdown
+还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img>
+标签。
+<img data-src="http://static.runoob.com/images/runoob-logo.png" width="50%"></p>
+<h2 id="制作表格">制作表格</h2>
+<p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 -
+来分隔表头和其他行。</p>
+语法格式如下：
+<pre>
+|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+</pre>
+<h4 id="对齐方式">对齐方式</h4>
+<p>我们可以设置表格的对齐方式： --: 设置内容和标题栏居右对齐。 :--
+设置内容和标题栏居左对齐。 :--: 设置内容和标题栏居中对齐。
+实例如下：</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">左对齐</th>
+<th style="text-align: right;">右对齐</th>
+<th style="text-align: center;">居中对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">单元格</td>
+<td style="text-align: right;">单元格</td>
+<td style="text-align: center;">单元格</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">单元格</td>
+<td style="text-align: right;">单元格</td>
+<td style="text-align: center;">单元格</td>
+</tr>
+</tbody>
+</table>
+<h2 id="支持的-html-元素">支持的 HTML 元素</h2>
+<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML
+撰写。</p>
+<p>目前支持的 HTML
+元素有：&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;，如：</p>
+<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
+<h2 id="转义">转义</h2>
+<p>Markdown
+使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown
+使用反斜杠转义特殊字符：<br />
+<strong>文本加粗</strong><br />
+** 正常显示星号 **</p>
+<h2
+id="markdown-支持以下这些符号前面加上反斜杠来帮助插入普通的符号">Markdown
+支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</h2>
+<p>  反斜线<br />
+` 反引号<br />
+* 星号<br />
+_ 下划线<br />
+{} 花括号<br />
+[] 方括号<br />
+() 小括号<br />
+#井字号<br />
++ 加号<br />
+- 减号<br />
+. 英文句点<br />
+! 感叹号</p>
+<h2 id="公式">公式</h2>
+<p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或
+LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax
+对数学公式进行渲染。如：<br />
+<span class="math display">\[
+\int \frac{1}{\sqrt{x^{2} \pm a^{2}}} d x=\ln |x+\sqrt{x^{2} \pm
+a^{2}}|+C
+\]</span></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-note(hexo的笔记)</title>
+    <url>/2019/12/hexo-note/</url>
+    <content><![CDATA[<h1 id="写作">写作</h1>
+<h2 id="新建一篇文章">新建一篇文章</h2>
+<blockquote>
+<p>你可以执行下列命令来创建一篇新文章或者新的页面：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new [layout] [title]</span><br></pre></td></tr></table></figure>
+<p>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改
+_config.yml 中的 default_layout 参数来指定默认布&gt;局。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="文件名称">文件名称</h2>
+<blockquote>
+<p>Hexo 默认以标题做为文件名称，但您也可以在_config.yml中编辑
+new_post_name 参数来改变默认的文件名称，举例来说，设为
+:year-:month-:day-:title.md 可让您更方便的通过日期来管理文章。</p>
+</blockquote>
+<h2 id="模版scaffold">模版（Scaffold）</h2>
+<blockquote>
+<p>在新建文章时，Hexo 会根据 scaffolds
+文件夹内相对应的文件来建立文件，例如：hexo new yun "My first
+article"<br />
+在执行这行指令时，Hexo 会尝试在 scaffolds 文件夹中寻找
+yun.md，并根据其内容建立文章</p>
+</blockquote>
+<hr />
+<h1 id="front-matter前页">Front-matter(前页)</h1>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/Front-matter.png"
+title="Front-matter(前页)" alt="Front-matter 摘自hexo" /><br />
+此处有个注意事项：github库
+图片引用中，把地址中的blob改成raw,否则可能不能使用。</p>
+<h2 id="分类和标签">分类和标签</h2>
+<blockquote>
+<p>只有文章支持分类和标签，您可以在 Front-matter
+中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo
+中两者有着明显的差别：分类具有顺序性和层次性，也就是说 Foo, Bar 不等于
+Bar, Foo；而标签没有顺序和层次。例如： &gt;categories: &gt;- Diary
+&gt;tags: &gt;- PS3 &gt;- Games</p>
+</blockquote>
+<blockquote>
+<p>如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。
+&gt;categories: &gt;- [Diary, PlayStation] &gt;- [Diary, Games] &gt;-
+[Life]<br />
+此时这篇文章同时包括三个分类： PlayStation 和 Games 分别都是父分类 Diary
+的子分类，同时 Life 是一个没有子分类的分类。</p>
+</blockquote>
+<blockquote>
+<p><b>JSON Front-matter</b><br />
+&gt;除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 ---
+代换成 ;;; 即可。<br />
+&gt;"title": "Hello World", &gt;"date": "2013/7/13 20:46:25" &gt;;;;</p>
+</blockquote>
+<hr />
+<h1 id="标签插件tag-plugins">标签插件（Tag Plugins）</h1>
+<p>标签插件和 Front-matter
+中的标签不同，它们是用于在文章中快速插入特定内容的插件。 ## 引用块
+在文章中插入引言，可包含作者、来源和标题。</p>
+<pre><code>&#123;% blockquote author, - source [link] [source_link_title] %&#125;
+content  
+&#123;% endblockquote %&#125;</code></pre>
+<p>效果如下：<br />
+<blockquote><p>content</p>
+<footer><strong>author</strong><cite>- source link source_link_title</cite></footer></blockquote></p>
+<h3 id="样例">样例</h3>
+<p><b>没有提供参数，则只输出普通的 blockquote</b><br />
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis
+aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu
+lorem.</p>
+</blockquote><br />
+<b>引用书上的句子</b><br />
+<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all.
+Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>- Wide Awake</cite></footer></blockquote><br />
+<b>引用 Twitter</b><br />
+<blockquote><p>NEW: DevDocs now comes with syntax highlighting.
+http://devdocs.io</p>
+<footer><strong>@DevDocs, -</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote> <b>引用网络上的文章</b><br />
+<blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin, -</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote></p>
+<h2 id="代码块">代码块</h2>
+<p>在文章中插入代码。</p>
+<pre><code>&#123;% codeblock [title] [lang:language] [url] [link text] %&#125;  
+code snippet  
+&#123;% endcodeblock %&#125;  </code></pre>
+<p>效果如下：<br />
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  </span><br><span class="line">code snippet  </span><br></pre></td></tr></table></figure></p>
+<h3 id="样例-1">样例</h3>
+<p><b>普通的代码块</b> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alert(&#x27;Hello World!&#x27;);</span><br></pre></td></tr></table></figure><br />
+<b>指定语言</b> <figure class="highlight objc"><table><tr><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure><br />
+<b>附加说明</b> <figure class="highlight plaintext"><figcaption><span>Array.map</span></figcaption><table><tr><td class="code"><pre><span class="line">array.map(callback[, thisArg])</span><br></pre></td></tr></table></figure><br />
+<b>附加说明和网址</b> <figure class="highlight plaintext"><figcaption><span>_.compact</span><a href="http://underscorejs.org/#compact">Underscore.js</a></figcaption><table><tr><td class="code"><pre><span class="line">_.compact([0, 1, false, 2, &#x27;&#x27;, 3]);</span><br><span class="line">=&gt; [1, 2, 3]</span><br></pre></td></tr></table></figure><br />
+这里我感觉我写的并不好，没有形象生动地展现处怎么用这些代码，建议去<a
+href="https://hexo.io/zh-cn/docs/tag-plugins#代码块">hexo官方文档</a>看一下，例如下面的是官方的样式
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/%E4%BB%A3%E7%A0%81%E6%A0%B7%E4%BE%8B.png"
+alt="代码样例" /></p>
+<h2 id="反引号代码块">反引号代码块</h2>
+<blockquote>
+<p>另一种形式的代码块，不同的是它使用三个<strong>反引号</strong>来包裹。<br />
+<code>[language] [title] [url] [link text] code snippet</code></p>
+</blockquote>
+<figure>
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/%E6%96%87%E7%AB%A0%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E6%8F%92%E5%85%A5.png"
+title="文章插入" alt="文章中的各种插入 摘自hexo" />
+<figcaption aria-hidden="true">文章中的各种插入 摘自hexo</figcaption>
+</figure>
+<h2 id="link">Link</h2>
+<blockquote>
+<p>在文章中插入链接，并自动给外部链接添加 target="_blank" 属性。</p>
+</blockquote>
+<blockquote>
+<a href="https://github.com/yunying61/file-by-yunying61/raw/master/html/%E6%98%9F%E5%B9%95-%E4%BA%91%E5%BD%B1%E7%9A%84%E7%BD%91%E7%AB%99%E5%BF%AB%E9%80%9F%E9%93%BE%E6%8E%A5%E5%BA%93.html" title="网站快速链接库" target="">星幕·云影的网站快速链接库</a>
+<p>这个链接是在本网页进行跳转</p>
+</blockquote>
+<h2 id="插入视频">插入视频</h2>
+<figure>
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/%E6%8F%92%E5%85%A5%E8%A7%86%E9%A2%91.png"
+title="视频插入" alt="插入视频 摘自hexo" />
+<figcaption aria-hidden="true">插入视频 摘自hexo</figcaption>
+</figure>
+<h2 id="插入代码">插入代码</h2>
+<p>插入 <code>source/downloads/code</code>
+文件夹内的代码文件。<code>source/downloads/code</code>
+不是固定的，取决于你在配置文件中 <code>code_dir</code> 的配置。</p>
+<pre><code>&#123;% include_code [title] [lang:language] [from:line] [to:line] path/to/file %&#125;</code></pre>
+<figure>
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/Include%20Code.png"
+title="代码插入" alt="插入(代码文件)中的代码 摘自hexo" />
+<figcaption aria-hidden="true">插入(代码文件)中的代码
+摘自hexo</figcaption>
+</figure>
+<h2 id="引用资源-和-raw">引用资源 和 Raw</h2>
+<figure>
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/%E5%BC%95%E7%94%A8%E8%B5%84%E6%BA%90%20%E5%92%8C%20Raw.png"
+title="代码插入" alt="引用资源 和 Raw 摘自hexo" />
+<figcaption aria-hidden="true">引用资源 和 Raw 摘自hexo</figcaption>
+</figure>
+<h2 id="引用文章">引用文章</h2>
+<p>这里的引用文章，是指引用你博客下的文章，把链接指向你的另一篇文章。
+基本使用方法：</p>
+<pre><code>&#123;% post_link 这里填写你的另一篇文章名称 %&#125;
+&#123;% post_link 这里填写你的另一篇文章名称 '这里是自定义链接的名称' %&#125;</code></pre>
+<figure>
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/%E5%BC%95%E7%94%A8%E6%96%87%E7%AB%A0.png"
+title="文章的引用" alt="引用文章 摘自hexo" />
+<figcaption aria-hidden="true">引用文章 摘自hexo</figcaption>
+</figure>
+<h2 id="文章摘要和截断">文章摘要和截断</h2>
+<figure>
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81%E5%92%8C%E6%88%AA%E6%96%AD.png"
+title="文章摘要和截断" alt="文章摘要和截断 摘自hexo" />
+<figcaption aria-hidden="true">文章摘要和截断 摘自hexo</figcaption>
+</figure>
+<hr />
+<h1 id="资源文件夹">资源文件夹</h1>
+<blockquote>
+<p>资源（Asset）代表 source
+文件夹中除了文章以外的所有文件，例如图片、CSS、JS
+文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在
+source/images 文件夹中。然后通过类似于 ![](/images/image.jpg)
+的方法访问它们。<br />
+## 直接引用 如果 Hexo 项目中只有少量图片，那最简单的方法就是将它们放在
+source/images 文件夹中，然后通过以下方法引用：</p>
+</blockquote>
+<pre><code>![NP15](/images/NP15.jpg)</code></pre>
+<h2 id="文章资源文件夹">文章资源文件夹</h2>
+<blockquote>
+<p>对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将
+config.yml 文件中的 post_asset_folder 选项设为 true 来打开。
+当资源文件管理功能打开后，Hexo将会在你每一次通过
+<code>hexo new layout title</code>命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。<br />
+### 引用的代码
+在不使用插件的情况下进行引用(开启了“post_asset_folder”文章资源文件夹)</p>
+</blockquote>
+<pre><code>![patch 3](./NP15.jpg)
+
+&#123;% asset_img "patch 2.jpg" %&#125;</code></pre>
+<blockquote>
+<p>这里要注意，(./NP15.jpg)这种格式不能使用空格，空格会导致无法识别，图片无法加载。例如：(./patch
+2.jpg)这是错误的。</p>
+</blockquote>
+<p>在使用hexo-asset-image<a
+href="https://blog.csdn.net/xjm850552586/article/details/84101345">参考链接1</a><a
+href="https://blog.csdn.net/Strong997/article/details/97767929">参考链接2</a>插件的情况下进行引用(开启了“post_asset_folder”文章资源文件夹)</p>
+<pre><code>![NP15](2020-02-16-试验组-1/NP15.jpg)</code></pre>
+<blockquote>
+<p>这里同样要注意，(2020-02-16-试验组-1/NP15.jpg)这种格式也不能使用空格，空格会导致无法识别，图片无法加载。例如：(2020-02-16-试验组-1/patch
+2.jpg)这是错误的。</p>
+</blockquote>
+<p>总结：既然加了插件也就增加了一种引用的方法，那还不如少加个插件，只用剩下的两种。当然，还可以使用外链，那就另算了。</p>
+<h3 id="使用相对路径进行引用">使用相对路径进行引用</h3>
+<figure>
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E7%9A%84%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6.png"
+title="相对路径引用" alt="相对路径引用的标签插件 摘自hexo" />
+<figcaption aria-hidden="true">相对路径引用的标签插件
+摘自hexo</figcaption>
+</figure>
+<h2 id="数据文件夹">数据文件夹</h2>
+<figure>
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6.png"
+title="数据文件夹" alt="数据文件夹 摘自hexo" />
+<figcaption aria-hidden="true">数据文件夹 摘自hexo</figcaption>
+</figure>
+<h2 id="hexo-server">hexo-server</h2>
+<h3 id="使用服务器">使用服务器</h3>
+<blockquote>
+<ul>
+<li>Hexo 3.0 把服务器独立成了个别模块，您必须先安装 hexo-server
+才能使用。在命令提示符（cmd）中输入：<br />
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-server --save</span><br></pre></td></tr></table></figure></li>
+<li>安装完成后，输入以下命令以启动服务器，您的网站会在
+http://localhost:4000 下启动。<strong>在服务器启动期间，Hexo
+会监视文件变动并自动更新，您无须重启服务器。</strong><br />
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><br />
+简写：<br />
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><br />
+</li>
+<li>如果您想要更改端口，或是在执行时遇到了 EADDRINUSE
+错误，可以在执行时使用 -p 选项指定其他端口，如下：<br />
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+<h3 id="静态模式">静态模式</h3>
+<blockquote>
+<p>在静态模式下，服务器只处理 public
+文件夹内的文件，而不会处理文件变动，在执行时，您应该先自行执行 hexo
+generate，此模式通常用于生产环境（production mode）下。</p>
+</blockquote>
+<h3 id="自定义-ip">自定义 IP</h3>
+<ul>
+<li>服务器默认运行在 0.0.0.0，您可以覆盖默认的 IP 设置，如下：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -i 192.168.1.1</span><br></pre></td></tr></table></figure></li>
+<li>指定这个参数后，您就只能通过该IP才能访问站点。例如，对于一台使用无线网络的笔记本电脑，除了指向本机的127.0.0.1外，通常还有一个192.168.<em>.</em>的局域网IP，如果像上面那样使用-i参数，就不能用127.0.0.1来访问站点了。对于有公网IP的主机，如果您指定一个局域网IP作为-i参数的值，那么就无法通过公网来访问站点。</li>
+</ul>
+<h3 id="pow">Pow</h3>
+<p>Pow 是一个<strong>Mac</strong>系统上的零配置 Rack
+服务器，它也可以作为一个简单易用的静态文件服务器来使用。</p>
+<h4 id="安装">安装</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl get.pow.cx | sh</span><br></pre></td></tr></table></figure>
+<h4 id="设置">设置</h4>
+<ul>
+<li>在 ~/.pow 文件夹建立链接（symlink）。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd ~/.pow</span><br><span class="line">ln -s /path/to/myapp</span><br></pre></td></tr></table></figure></li>
+<li>您的网站将会在 http://myapp.dev 下运行，网址根据链接名称而定。</li>
+</ul>
+<h2 id="生成文件部署网站">生成文件,部署网站</h2>
+<blockquote>
+<ul>
+<li>使用 Hexo 生成静态文件快速而且简单。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+<h3 id="监视文件变动">监视文件变动</h3>
+<blockquote>
+<ul>
+<li>Hexo 能够监视文件变动并立即重新生成静态文件，在生成时会比对文件的
+SHA1 checksum，只有变动的文件才会写入。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo generate --watch</span><br></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+<h3 id="完成后部署">完成后部署</h3>
+<blockquote>
+<ul>
+<li>您可执行下列的其中一个命令，让 Hexo
+在生成完毕后自动部署网站，两个命令的作用是相同的。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo generate --deploy</span><br><span class="line">hexo deploy --generate</span><br></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+<h3 id="简写">简写</h3>
+<blockquote>
+<ul>
+<li>上面两个命令可以简写为 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g -d</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客搭建和简单部署</title>
+    <url>/2020/03/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%92%8C%E7%AE%80%E5%8D%95%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h1 id="hexo简介">Hexo简介</h1>
+<p>Hexo是一款基于Node.js的静态博客框架，可以方便的生成静态网页托管在GitHub和Coding上或者自己的服务器上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。</p>
+<h1 id="hexo搭建步骤">Hexo搭建步骤</h1>
+<ol type="1">
+<li>安装Git</li>
+<li>安装Node.js</li>
+<li>安装Hexo</li>
+<li>GitHub创建个人仓库</li>
+<li>生成SSH添加到GitHub</li>
+<li>将hexo部署到GitHub</li>
+<li>设置个人域名</li>
+<li>发布文章</li>
+</ol>
+<span id="more"></span>
+<h2 id="安装git">1.安装Git</h2>
+<p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章。Git非常强大，我建议去了解一下。</p>
+<p>windows：到<a
+href="https://gitforwindows.org/">git</a>官网上下载，下载后会有一个Git
+Bash的命令行工具，以后就用这个工具来使用git。 linux：只需要一行代码
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure> 安装好后，用 <code>git --version</code> 来查看一下版本</p>
+<h2 id="安装node.js">2.安装Node.js</h2>
+<p>Hexo是基于Node.js编写的，所以需要安装一下Node.js和里面的npm工具。</p>
+<p>windows：<a
+href="https://nodejs.org/en/download/">Node.js</a>选择LTS版本就行了。
+linux：也是通过命令来安装 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
+安装完后，在命令行输入以下代码进行验证 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></p>
+<h2 id="安装hexo">3.安装hexo</h2>
+<p>先创建一个文件夹blog，然后<code>cd</code>到这个文件夹下（或者在这个文件夹下直接右键<code>git bash</code>打开）。
+输入命令 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure> 然后用<code>hexo -v</code>命令，查看一下版本。
+接下来初始化一下hexo，这里的myblog可以自己取名字，做为你的博客源地址了。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init myblog</span><br><span class="line">cd myblog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure> 新建完成后，指定文件夹目录下有： + node_modules:
+依赖包(或插件) + public：存放生成的页面
+（这个文件夹可能会没有，但当你使用<code>hexo g</code>
+构建时，就会有了。） + scaffolds：生成文章的一些模板 +
+source：用来存放你的博客资源 - _posts：用来存放你的文章 + themes：主题 -
+_config.yml：博客的配置文件 -
+package.json：一些应用程序的信息、命令的配置</p>
+<p>然后使用以下命令，生成静态文件和启动本地服务器。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+这两个命令可以简写为<code>hexo g和hexo s</code></p>
+<p>这样就打开hexo的服务，在浏览器输入 http://localhost:4000
+就可以看到你生成的博客了。</p>
+<blockquote>
+<p>每次运行完服务器后我建议使用 <code>hexo clean</code>
+命令进行缓存清理，而且这样可以解决一些小问题。</p>
+</blockquote>
+<h1 id="部署的前置操作">部署的前置操作</h1>
+<p>如果需要把你的博客简单的发布到网上，那你需要先安装deploy-git
+，也就是部署的命令,这样你才能用命令部署到coding、GitHub上。</p>
+<p><code>cd</code>到你的博客文件夹，输入下面的命令 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure></p>
+<h1 id="部署到coding国内访问">部署到coding(国内访问)</h1>
+<ol type="1">
+<li><p>去<a
+href="https://coding.net/">coding</a>的官网，注册一个账号。</p></li>
+<li><p>注册完后，新建一个<code>项目</code>并进入项目，打开<code>代码仓库</code>。</p></li>
+<li><p>复制右上方的<code>已公开源码  HTTPS</code>里的地址，留作后用。</p></li>
+<li><p>打开你的博客文件夹里的
+<abbr title="这个我是用VS code打开的，当然也可以用记事本打开">_config.yml</abbr>
+文件，在最下面的<code>deploy:</code>里， <code>type: 'git'</code>
+<code>repo:</code>
+<code>coding: https://e.coding.net/yunying61/blog-yunying61.git,master</code>
+&gt;<strong>注意缩进</strong>，而这里的<code>coding:</code>，注意英文冒号(:)后面还有一个空格，而这里就是刚才你复制的
+已公开源码 地址，再加上(英文逗号) ,master
+<img data-src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/deploy1.jpg?x-oss-process=style/yunying61"></p></li>
+<li><p>当你再次<code>hexo g</code> ,
+<code>hexo d</code>的时候，就会自动推送到coding的仓库里。</p></li>
+<li><p>然后去你的coding仓库，找到左侧的<code>构建与部署</code>，点击进入静态网站。
+<img data-src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/gyb.jpg?x-oss-process=style/yunying61"></p></li>
+<li><p>然后 立即发布静态网站，填写信息，保存。
+<img data-src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/html.jpg?x-oss-process=style/yunying61">
+&gt;到这里，你的博客就算是部署到了coding上了，通过coding给出的访问地址就可以访问你自己搭建的博客了。</p></li>
+</ol>
+<blockquote>
+<p>如果你有域名，那可以把域名绑定到coding给出的网址上，并且在coding的静态网站设置界面，添加你的域名。
+<img data-src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/ym.jpg?x-oss-process=style/yunying61"></p>
+</blockquote>
+<h1 id="部署到github国外访问">部署到github(国外访问)</h1>
+<ol type="1">
+<li><p>去<a
+href="https://github.com/">Github</a>的官网，注册一个账号。</p></li>
+<li><p>注册完，然后New repository新建一个<code>仓库</code>，名称为
+<code>你的账号名.github.io</code>
+，然后点击创建仓库；<u>复制HTTPS那一栏的网址，留作后用</u>。
+<img data-src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/github.jpg?x-oss-process=style/yunying61">
+&gt;名称这个一定要是这样，否则可能没有用，后续你就可以用这个直接进入你的博客了。</p></li>
+<li><p>然后去你电脑上的博客文件夹，右键 <code>git bash</code>
+到这个文件夹下，输入以下命令 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。
+可以用以下两条，检查一下你有没有输对 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+至于SSH要不要配置，那看你们自己了，配置了SSH就可以控制git上传你的文件到GitHub上。</p></li>
+<li><p>打开你的博客文件夹里的
+<abbr title="这个我是用VS code打开的，当然也可以用记事本打开">_config.yml</abbr>
+文件，在最下面的<code>deploy:</code>里， <code>type: 'git'</code>
+<code>repo:</code>
+<code>github: https://github.com/yunying61/yunying61.github.io.git,master</code>
+&gt;<strong>注意缩进</strong>，而这里的<code>github:</code>
+，注意英文冒号(:)后面还有一个空格，而这里就是刚才你复制的 HTTPS
+地址，再加上(英文逗号) ,master
+<img data-src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/hexo/deploy2.jpg?x-oss-process=style/yunying61"></p></li>
+<li><p>当你再次<code>hexo g</code> ,
+<code>hexo d</code>的时候，就会自动推送到github的仓库里。
+注意deploy时可能要你输入username和password，就是你GitHub的账号密码。</p></li>
+<li><p>推送完，就可以直接访问 https://你的名称.github.io/
+进入你的博客了</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>应用</category>
+        <category>IT</category>
+        <category>程序</category>
+        <category>技术</category>
+        <category>搭建与配置</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客</tag>
+        <tag>搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leanote蚂蚁笔记-私人云笔记服务搭建</title>
+    <url>/2020/02/leanote%E8%9A%82%E8%9A%81%E7%AC%94%E8%AE%B0-%E7%A7%81%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="leanote蚂蚁笔记">leanote蚂蚁笔记</h1>
+<p>目前在知识管理/笔记类软件领域有强大的印象笔记
+(Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。
+我一开始用的也是讯飞语记，刚开始还不懂，只是被它的语音识别和云同步所吸引。后来懂的越来越多，愈发觉得自己的一些笔记还是不要放别人的数据库里。碰巧，在阿里云的一篇学习文章里，我发现了leanote，于是乎我也就进入了私人云笔记时代！</p>
+<p>个人对leanote的理解： 简约、免费、开源、支持 Markdown
+语法，支持程序代码高亮、笔记历史记录、支持笔记分享协作、将笔记发布成博客、云同步、多终端兼容(Windows、Mac、iOS、Linux、Android)，最关键的：搭建私人云笔记。</p>
+<p>介绍： Leanote, 不只是笔记! Leanote
+蚂蚁笔记是一款国产的在线网页版云笔记软件，集知识管理、笔记、分享、博客功能于一身，界面简约但功能不简单！</p>
+<p>该项目采用 Golang+MongoDB
+开发，现已完全开源并能免费使用。普通用户可以直接使用 Leanote
+提供的公共服务，也可以自行搭建属于自己或公司局域网内的私有云笔记平台。</p>
+<p>论在工作还是生活方面，如果觉得印象笔记或目前你使用的笔记软件的编辑器不能满足你的需求，不能很好地贴代码片段、图片不能缩放、不能写
+Markdown？或者希望能将知识共享出去，能将笔记快速变成博客文章，而不用特意去搭建维护一个
+WordPress？又或者你希望<code>拥有一个私有的笔记平台</code>，那么不妨试试
+Leaonte 吧，相信你会发现这是一个相当不错的开源项目…</p>
+<p><strong>特性</strong></p>
+<ul>
+<li>高效笔记：Leanote 有易操作的界面,
+包含一款富文本编辑器和Markdown编辑器，让您的笔记记录更轻松和高效。对高阶用户，我们还提供Vim
+和Emacs 编辑模式，助推你的写作速度更上层楼。</li>
+<li>知识管理: Leanote
+灵活而强大的“笔记本-笔记-标签”系统，让它成为你个人知识管理的利器。</li>
+<li>分享: 你可以通过Leanote同好友分享知识、想法和经历,
+邀请好友加入你的笔记簿，通过云端交流信息。</li>
+<li>协作:
+Leanote协助你与同事之间相互协作，激荡新思路，随时随地头脑风暴。</li>
+<li>博客: Leanote也可以作为你的个人博客, 把你的知识传播的更远!</li>
+</ul>
+<p><strong>其它特性</strong></p>
+<ul>
+<li>支持Markdown编辑</li>
+<li>写作模式</li>
+<li>Vim 及 Emacs 编辑模式</li>
+<li>支持PDF导出</li>
+<li>支持批量操作</li>
+<li>博客自定义主题, 实现高度定制化</li>
+</ul>
+<h2 id="下载准备">下载准备</h2>
+<p>搭建leanote需要，<code>leanote</code>本体和<code>MongoDB</code>数据库支持。
+首先，是<a href="https://leanote.com/">leanote官方</a>的<a
+href="http://leanote.org/#download">下载地址</a>，<a
+href="https://www.mongodb.com/">MongoDB官方</a>的<a
+href="https://www.mongodb.com/download-center/community">下载地址</a>，用这个可以马上使用到最新的产品。
+然后，如果大家不想那么麻烦的去官方那里下载，我这里也提供下载链接，当然，<abbr title="2021年1月02日版">版本</abbr>我就不会持续更新了。
+<strong>Leanote</strong>：<a
+href="https://img-61.oss-cn-shanghai.aliyuncs.com/file/leanote-windows-amd64-v2.6.1.bin.tar.gz">Windows
+v2.6.1</a>，<a
+href="https://img-61.oss-cn-shanghai.aliyuncs.com/file/leanote-linux-amd64-v2.6.1.bin.tar.gz">Linux
+v2.6.1</a> <strong>MongoDB</strong>：<a
+href="https://img-61.oss-cn-shanghai.aliyuncs.com/file/mongodb-windows-x86_64-4.4.2-signed.msi">Windows64位
+4.2.2</a>，<a
+href="https://img-61.oss-cn-shanghai.aliyuncs.com/file/mongodb-linux-x86_64-rhel80-4.2.11.tgz">Linux
+4.2.11</a></p>
+<h2 id="写在前面">写在前面</h2>
+<p>这里，我将介绍Windows版和Linux版的搭建过程。</p>
+<p>如需Windows版，点击 <a href="#win">Windows版</a> 跳转；</p>
+<p>如需Linux版，点击 <a href="#Linux">Linux版</a> 跳转。</p>
+<h2 id="安装与配置windows版">安装与配置（Windows版）</h2>
+<p>1、将下载的文件里面的leanote-windows-amd64-v2.6.1.bin.tar.gz文件解压到C盘（本文默认解压到了
+C:）。
+2、运行mongodb-windows-x86_64-4.4.2-signed.msi进行安装（本文默认解压到了
+C:\4.2）。
+接下来的MongoDB的配置<strong>极其麻烦</strong>，这里我放到另一篇文章里，<a href="#">Post not found: MongoDB数据库-安装与配置 MongoDB 安装与配置</a></p>
+<hr />
+<h3 id="测试mongodb安装">测试mongodb安装</h3>
+<p>打开cmd， <code>cd</code> 进入C:\4.2目录输入:</p>
+<blockquote>
+<p>mongo</p>
+</blockquote>
+<p>行首出现&gt; 表示进入mongo 的交互程序。此时输入：</p>
+<blockquote>
+<p>show dbs</p>
+</blockquote>
+<blockquote>
+<p>出现 show dbs admin 0.000GB config 0.000GB local 0.000GB
+即安装成功</p>
+</blockquote>
+<p>这个窗口可以先不要关</p>
+<h3 id="导入初始数据">导入初始数据</h3>
+<p>打开新cmd， <code>cd</code> 进入C:\4.2，复制并运行以下命令</p>
+<blockquote>
+<p>mongorestore -h localhost -d leanote --dir C:_backup_install_data</p>
+</blockquote>
+<p>出现 “499 document(s) restored successfully. 0 document(s) failed to
+restore.” 表示结束，这样就完成了数据的导入</p>
+<p>当你再次使用show dbs命令时就会显示</p>
+<blockquote>
+<p>show dbs admin 0.000GB config 0.000GB leanote 0.002GB local
+0.000GB</p>
+</blockquote>
+<blockquote>
+<p>有时候leanote的数据库名字不是<code>leanote</code>，而是
+<code>ir</code>那后面的配置文件里的数据库名字也要跟着改变</p>
+</blockquote>
+<h3
+id="为mongodb下的leanote数据库添加用户">为MongoDB下的leanote数据库添加用户</h3>
+<p>像MySQL一样MongoDB也有root用户, mongodb初始是没有用户的,
+这样很不安全, 所以要为leanote数据库新建一个用户来连接leanote数据库(注意,
+并不是为leanote的表users里新建用户, 而是新建一个连接leanote数据库的用户,
+类似mysql的root用户).</p>
+<p>在bin目录下打开cmd，然后输入mongo进入数据库，再输入下面的命令</p>
+<blockquote>
+<p>首先切换到leanote数据库下 use leanote;</p>
+<p>如果前面数据库名字是ir，这里也是ir</p>
+</blockquote>
+<blockquote>
+<p>添加一个用户root, 密码是abc123</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.createUser(&#123;</span><br><span class="line">user: &#x27;root&#x27;,</span><br><span class="line">pwd: &#x27;abc123&#x27;,</span><br><span class="line">roles: [&#123;role: &#x27;dbOwner&#x27;, db: &#x27;leanote&#x27;&#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>测试下是否正确</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.auth(&quot;root&quot;, &quot;abc123&quot;);</span><br></pre></td></tr></table></figure>
+<p>返回1表示正确</p>
+<p>用户添加好后重启下mongodb服务。 <strong>还要修改配置文件</strong>:
+修改 C: <code>app.conf</code> 文件</p>
+<blockquote>
+<p>db.host=127.0.0.1 db.port=27017 db.dbname=leanote # required
+db.username=<code>root</code> # if not exists, please leave blank
+db.password=<code>abc123</code> # if not exists, please leave blank</p>
+<p>如果前面数据库名字是ir，这里的db.dbname= 也是 ir</p>
+</blockquote>
+<h3 id="运行leanote">运行leanote</h3>
+<p>到了这一步，基本上可以宣告成功了 以 管理员权限 打开cmd，输入：</p>
+<blockquote>
+<p>cd C:</p>
+</blockquote>
+<blockquote>
+<p>run.bat</p>
+</blockquote>
+<p>最后出现以下信息证明运行成功: Listening on :9000...</p>
+<p>恭喜你, 打开浏览器输入: http://localhost:9000 体验leanote吧!
+选择登录，默认管理员账号为admin，密码为abc123。登陆成功后选择右上角的后台管理，即可登录后台管理。</p>
+<p>注意：做到这里，leanote已经正常运行，但在电脑重启后，还需要再依次运行MongoDB
+server、leanote才能够启动，所以把 C: 路径下的run.bat文件
+创建一个快捷方式放到系统的启动里面即可，也可以放在桌面开机的时候手动启动。</p>
+<h3 id="绑定域名">绑定域名</h3>
+<p>修改 C: <code>app.conf</code> 文件里的</p>
+<blockquote>
+<p>http.port=80 site.url=http://localhost:9000</p>
+</blockquote>
+<p>输入<a href="http://localhost:9000"
+class="uri">http://localhost:9000</a>，假设ip地址是111.111.111.111,把localhost换成你的IP地址111.111.111.111即可，如果有域名，也可以把localhost换成你的域名</p>
+<h2 id="安装与配置linux版">安装与配置（Linux版）</h2>
+<h3 id="解压leanote压缩包">解压Leanote压缩包</h3>
+<p>假设已将文件下载到 <code>/home/</code>
+目录下，打开<code>终端</code>，通过使用下面的命令</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"></span><br><span class="line">tar -xzvf leanote-linux-amd64-v2.6.1.bin.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /home/software</span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /home/leanote /home/software/leanote</span><br></pre></td></tr></table></figure>
+<p>解压文件，从而在 <code>/home/software</code> 目录下生成
+<code>leanote</code>目录</p>
+<h3 id="解压mongodb压缩包">解压MongoDB压缩包</h3>
+<p>假设已将文件下载到 <code>/home/</code>
+目录下，打开<code>终端</code>，通过使用下面的命令</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"></span><br><span class="line">tar -xzvf mongodb-linux-x86_64-rhel80-4.2.11.tgz</span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /home/mongodb-linux-x86_64-rhel80-4.2.11.tgz /home/software/mongodb-4.2.11</span><br></pre></td></tr></table></figure>
+<p>解压文件，从而在 <code>/home/software</code> 目录下生成
+<code>mongodb-4.2.11</code>目录</p>
+<hr />
+<h3 id="配置mongodb">配置MongoDB</h3>
+<p>为了快速使用<code>mongodb</code>命令, 可以配置环境变量。</p>
+<p>编辑 <code>~/.profile</code>或<code>/etc/profile</code> 文件，
+将<code>mongodb/bin</code>路径加入即可，打开<code>终端</code>，输入命令:</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
+<p>在<code>/etc/profile</code>中，按<code>i</code>进入编辑模式，在最下面添加以下行，注意路径：</p>
+<blockquote>
+<p>export PATH=$PATH:/home/software/mongodb-4.2.11/bin</p>
+</blockquote>
+<p>按<code>ESC</code>退出编辑模式，再输入<code>:wq</code>保存修改后，在终端运行以下命令使环境变量生效:</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：建议重启一下，不然，每新打开一个终端，都要输入<code>source /etc/profile</code>才能使用mongo命令</p>
+</blockquote>
+<p>然后，是建立数据库的存放位置和日志文件的存放位置，在终端运行以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//用于存放数据库</span><br><span class="line">mkdir -p /home/data/mongo-db</span><br><span class="line">//用于存放日志文件</span><br><span class="line">mkdir -p /home/data/mongo-log</span><br></pre></td></tr></table></figure>
+<p>接着，在<code>/home/software/mongodb-4.2.11</code>目录下新建一个名为
+<code>mongodb.conf</code> 的配置文件，写入如下配置内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim mongodb.conf</span><br></pre></td></tr></table></figure>
+<p>按<code>i</code>进入编辑模式，按<code>ESC</code>退出编辑模式，再输入<code>:wq</code>保存修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#端口</span><br><span class="line">port=27017</span><br><span class="line"></span><br><span class="line">#数据库存文件存放目录 </span><br><span class="line">dbpath= /home/data/mongo-db</span><br><span class="line"></span><br><span class="line">#日志文件</span><br><span class="line">logpath= /home/data/mongo-log/mongodb.log</span><br><span class="line"></span><br><span class="line">#使用追加的方式写日志</span><br><span class="line">logappend=true</span><br><span class="line"></span><br><span class="line">#不以守护程序的方式启用，即不在后台运行</span><br><span class="line">fork=false</span><br><span class="line"></span><br><span class="line">#最大同时连接数</span><br><span class="line">maxConns=100</span><br><span class="line"></span><br><span class="line">#不启用验证</span><br><span class="line">noauth=true</span><br><span class="line"></span><br><span class="line">#每次写入会记录一条操作日志（通过journal可以重新构造出写入的数据）。</span><br><span class="line">#即使宕机，启动时wiredtiger会先将数据恢复到最近一次的checkpoint点，然后重放后续的journal日志来恢复。</span><br><span class="line">journal=true</span><br><span class="line"></span><br><span class="line">#存储引擎有mmapv1、wiretiger、mongorocks</span><br><span class="line">storageEngine=wiredTiger</span><br><span class="line"></span><br><span class="line">bind_ip = 0.0.0.0  #这样就可外部访问了，例如从win10中去连虚拟机中的MongoDB</span><br></pre></td></tr></table></figure>
+<p>用以下命令启动<code>mongodb</code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mongod --config /home/software/mongodb-4.2.11/mongodb.conf</span><br></pre></td></tr></table></figure>
+<p>这时<code>mongod</code>已经启动了（这代表mongodb已经开始运行，所以请不要关闭这个窗口）</p>
+<h3 id="测试mongodb安装-1">测试mongodb安装</h3>
+<p><code>重新打开</code>一个终端,
+键入<code>mongo</code>进入交互程序：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
+<p>行首出现&gt; 表示进入mongo 的交互程序，此时输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>出现</p>
+<p>admin 0.000GB config 0.000GB local 0.000GB 即安装成功</p>
+</blockquote>
+<p>这个窗口可以先不要关</p>
+<h3 id="导入leanote初始数据">导入Leanote初始数据</h3>
+<p><code>mongodb</code>安装到此为止,
+下面为<code>mongodb</code>导入<code>leanote</code>初始数据。</p>
+<p><code>leanote</code>初始数据存放在
+<code>/home/software/leanote/mongodb_backup/leanote_install_data</code>中。</p>
+<p>再次<code>重新打开</code>一个终端(此时应该要有3个终端)，
+输入以下命令导入数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mongorestore -h localhost -d leanote --dir /home/software/leanote/mongodb_backup/leanote_install_data/</span><br></pre></td></tr></table></figure>
+<p>出现 “499 document(s) restored successfully. 0 document(s) failed to
+restore.” 表示结束，这样就完成了数据的导入</p>
+<p>当你再次使用show dbs命令时就会显示</p>
+<blockquote>
+<p>show dbs admin 0.000GB config 0.000GB leanote 0.001GB local
+0.000GB</p>
+</blockquote>
+<blockquote>
+<p>有时候leanote的数据库名字不是<code>leanote</code>，而是
+<code>ir</code>那后面的配置文件里的数据库名字也要跟着改变</p>
+</blockquote>
+<p>初始数据的<code>users</code>表中已有2个用户:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">user1 username: admin, password: abc123 (管理员, 只有该用户才有权管理后台, 请及时修改密码)</span><br><span class="line">user2 username: demo@leanote.com, password: demo@leanote.com (仅供体验使用)</span><br></pre></td></tr></table></figure>
+<h3
+id="为mongodb下的leanote数据库添加用户-1">为MongoDB下的leanote数据库添加用户</h3>
+<p>像MySQL一样MongoDB也有root用户, mongodb初始是没有用户的,
+这样很不安全, 所以要为leanote数据库新建一个用户来连接leanote数据库(注意,
+并不是为leanote的表users里新建用户, 而是新建一个连接leanote数据库的用户,
+类似mysql的root用户).</p>
+<p>在bin目录下打开cmd，然后输入mongo进入数据库，再输入下面的命令</p>
+<blockquote>
+<p>首先切换到leanote数据库下 use leanote;</p>
+<p>如果前面数据库名字是ir，这里也是ir</p>
+</blockquote>
+<blockquote>
+<p>添加一个用户root, 密码是asd123</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.createUser(&#123;</span><br><span class="line">user: &#x27;root&#x27;,</span><br><span class="line">pwd: &#x27;asd123&#x27;,</span><br><span class="line">roles: [&#123;role: &#x27;dbOwner&#x27;, db: &#x27;leanote&#x27;&#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>测试下是否正确</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.auth(&quot;root&quot;, &quot;asd123&quot;);</span><br></pre></td></tr></table></figure>
+<p>返回1表示正确</p>
+<p><strong>还要修改配置文件</strong>: 修改
+/home/software/leanote/conf/<code>app.conf</code>文件</p>
+<blockquote>
+<p>db.host=127.0.0.1 db.port=27017 db.dbname=leanote # required
+db.username=<code>root</code> # if not exists, please leave blank
+db.password=<code>asd123</code> # if not exists, please leave blank</p>
+<p>如果前面数据库名字是ir，这里的db.dbname= 也是 ir</p>
+</blockquote>
+<p>除此之外，请务必修改<code>app.secret</code>一项,
+在若干个随机位置处，将字符修改成一个其他的值,
+否则会有安全隐患！其它的配置可暂时保持不变，或根据需要进行修改。</p>
+<h3 id="运行leanote-1">运行leanote</h3>
+<p>到了这一步，基本上可以宣告成功了。</p>
+<p>新开一个窗口, 运行：（<strong>注意:</strong>
+在此之前请确保<code>mongodb</code>已在运行！）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash /home/software/leanote/bin/run.sh</span><br></pre></td></tr></table></figure>
+<p>最后出现以下信息证明运行成功:</p>
+<blockquote>
+<p>Listening on :9000...</p>
+</blockquote>
+<p>恭喜你完成安装, 打开浏览器输入: http://localhost:9000 体验leanote吧!
+选择登录，默认管理员账号为admin，密码为abc123。登陆成功后选择右上角的后台管理，即可登录后台管理。</p>
+<p>注意：做到这里，leanote已经正常运行，但在电脑重启后，还需要再依次运行MongoDB、leanote才能够启动，所以可以把
+Mongodb 创建一个服务项，并设为开机自启；把 leanote 设置为启动项。</p>
+<h3 id="绑定域名-1">绑定域名</h3>
+<p>修改 /home/software/leanote/conf/app.conf 文件里的</p>
+<blockquote>
+<p>http.port=80 site.url=http://localhost:9000</p>
+</blockquote>
+<p>输入<a href="http://localhost:9000"
+class="uri">http://localhost:9000</a>，假设ip地址是111.111.111.111,把localhost换成你的IP地址111.111.111.111即可，如果有域名，也可以把localhost换成你的域名</p>
+]]></content>
+      <categories>
+        <category>应用</category>
+        <category>程序</category>
+        <category>服务器</category>
+        <category>搭建与配置</category>
+        <category>搭建</category>
+      </categories>
+      <tags>
+        <tag>搭建</tag>
+        <tag>leanote</tag>
+        <tag>蚂蚁笔记</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo部署到个人服务器</title>
+    <url>/2020/03/Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="section"></h1>
+<span id="more"></span>
+<p>查看当前git账户：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+<p>修改文件权限，并编辑sudoers文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 740 /etc/sudoers</span><br><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/image-20220308114231895.png?x-oss-process=style/yunying61"
+alt="image-20220308114231895" />
+<figcaption aria-hidden="true">image-20220308114231895</figcaption>
+</figure>
+<p>添加（将yunying61改为你刚才查找到的git账户名）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yunying61 	ALL=(ALL) 	ALL</span><br></pre></td></tr></table></figure>
+<p>保存退出（按 Esc 键退出编辑模式，输入”:wq”回车）并改回权限:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 400 /etc/sudoers</span><br></pre></td></tr></table></figure>
+<h2 id="保存ssh公钥">保存ssh公钥</h2>
+<p>将本地端生成的SSH秘钥保存到服务器端的 authorized_keys 文件中保存</p>
+<p>请在搜索引擎上搜索关键词：<strong>生成SSH公钥并保存</strong>
+，本文不介绍如何操作</p>
+<h2 id="测试ssh连接">测试SSH连接</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -v root@SERVER</span><br></pre></td></tr></table></figure>
+<h2 id="新建git仓库">新建git仓库</h2>
+<h2 id="新建网站仓库">新建网站仓库</h2>
+<h2 id="新建git钩子">新建Git钩子</h2>
+]]></content>
+      <categories>
+        <category>IT</category>
+        <category>技术</category>
+        <category>搭建与配置</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客</tag>
+        <tag>搭建</tag>
+        <tag>部署</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 类&amp;对象</title>
+    <url>/2020/05/C-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h1 id="c-类对象">C++ 类&amp;对象</h1>
+<p>C++ 在 C 语言的基础上增加了面向对象编程，C++
+支持面向对象程序设计。类是 C++
+的核心特性，通常被称为用户定义的类型。</p>
+<p>类用于指定对象的形式，它包含了数据表示法和用于处理数据的方法。类中的数据和方法称为类的成员。函数在一个类中被称为类的成员。</p>
+<span id="more"></span>
+<p>[TOC]</p>
+<h2 id="c-类定义">C++ 类定义</h2>
+<p>定义一个类，本质上是定义一个数据类型的蓝图。这实际上并没有定义任何数据，但它定义了类的名称意味着它定义了类的对象包括了什么，以及可以在这个对象上执行哪些操作。</p>
+<p>类定义是以关键字 <strong>class</strong>
+开头，后跟类的名称。类的主体是包含在一对花括号中。类定义后必须跟着一个分号或一个声明列表。<u>并且其中的成员数据（变量）不能赋初始值</u>。例如，我们使用关键字
+<strong>class</strong> 定义 Box 数据类型，如下所示：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="type">void</span> <span class="title">V</span><span class="params">()</span></span>&#123;v=length*breadth*height;<span class="keyword">return</span> v;&#125;		<span class="comment">//计算体积</span></span><br><span class="line">    	<span class="function"><span class="type">void</span> <span class="title">C</span><span class="params">()</span></span>&#123;c=<span class="number">4</span>*(length+breadth+height);<span class="keyword">return</span> c;&#125;	<span class="comment">//计算周长</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="type">double</span> length;   <span class="comment">// 盒子的长度</span></span><br><span class="line"> 		<span class="type">double</span> breadth;  <span class="comment">// 盒子的宽度</span></span><br><span class="line"> 		<span class="type">double</span> height;   <span class="comment">// 盒子的高度</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="类成员的访问限制权限">类成员的访问限制(权限)</h2>
+<p>数据封装是面向对象编程的一个重要特点，它防止函数直接访问类类型的内部成员。类成员的访问限制是通过在类主体内部对各个区域标记
+<strong>public、private、protected</strong> 来指定的。关键字
+<strong>public、private、protected</strong> 称为访问修饰符。</p>
+<p>一个类可以有多个 public、protected 或 private
+标记区域。<code>每个标记区域在下一个标记区域开始之前</code>或者<code>在遇到类主体结束右括号之前</code>都是有效的。<u>成员和类的默认访问修饰符是
+private</u>。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">		<span class="comment">// 公有成员</span></span><br><span class="line">	<span class="keyword">protected</span>:</span><br><span class="line"> 		<span class="comment">// 受保护成员</span></span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		<span class="comment">// 私有成员</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="公有public成员">公有（public）成员</h3>
+<p><strong>公有</strong>成员在程序中类的外部是可访问的。您可以不使用任何成员函数来设置和获取公有变量的值。</p>
+<h3 id="私有private成员">私有（private）成员</h3>
+<p><strong>私有</strong>成员变量或函数在类的外部是不可访问的，甚至是不可查看的。只有类和友元函数可以访问私有成员。</p>
+<p>默认情况下，如果您没有使用任何访问修饰符，类的成员将被假定为私有成员。</p>
+<h3 id="保护protected成员">保护（protected）成员</h3>
+<p><strong>保护</strong>成员变量或函数与私有成员十分相似，但有一点不同，保护成员在派生类（即子类）中是可访问的。</p>
+<h4 id="代码演示">代码演示：</h4>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">text</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="type">int</span> a;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="type">int</span> b;</span><br><span class="line">    <span class="keyword">protected</span>:</span><br><span class="line">    	<span class="type">int</span> c;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="type">void</span> <span class="title">setb</span><span class="params">(<span class="type">int</span> Bb)</span></span>&#123;b=Bb;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">t</span>::text	<span class="comment">// t 是 text 的派生类</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="type">void</span> <span class="title">setc</span><span class="params">(<span class="type">int</span> Cc)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">t::setc</span><span class="params">(<span class="type">int</span> Cc)</span> </span>&#123;c=Cc;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    text text1;</span><br><span class="line">    text1.a = <span class="number">5</span>;	<span class="comment">//这是允许的，因为 a 是公有的</span></span><br><span class="line">    text1.b = <span class="number">10</span>;	<span class="comment">//这是不允许的，因为 b 是私有的</span></span><br><span class="line">    text1.<span class="built_in">setb</span>(<span class="number">10</span>);	<span class="comment">//这是允许的，因为 b 的赋值是通过外部接口去给 b 赋值</span></span><br><span class="line">    </span><br><span class="line">    t text2;</span><br><span class="line">    t.<span class="built_in">setc</span>(<span class="number">15</span>);		<span class="comment">//这里使用了成员函数给 text 中的 c 赋值了</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="定义-类-的对象">定义 类 的对象</h2>
+<p>类提供了对象的蓝图，所以基本上，对象是根据类来创建的。声明类的对象，就像声明基本类型的变量一样。下面的语句声明了类
+Box 的两个对象：</p>
+<p>Box Box1; // 声明 Box1，类型为 Box Box Box2; // 声明 Box2，类型为
+Box</p>
+<p>对象 Box1 和 Box2 都有它们各自的数据成员。</p>
+<h2 id="访问-对象-里的数据成员">访问 对象 里的数据成员</h2>
+<p><strong><u>在 类 外</u></strong>访问 类的对象里
+的<code>公共数据成员</code>可以使用直接成员访问运算符 (.) 来访问。
+如使用 “对象名.成员名” 的方式访问<code>public</code>属性的成员</p>
+<p>为了更好地理解这些概念，让我们尝试一下下面的实例：</p>
+<h3 id="实例">实例</h3>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">      <span class="type">double</span> length;   <span class="comment">// 长度</span></span><br><span class="line">      <span class="type">double</span> breadth;  <span class="comment">// 宽度</span></span><br><span class="line">      <span class="type">double</span> height;   <span class="comment">// 高度</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   Box Box1;        <span class="comment">// 声明 Box1，类型为 Box</span></span><br><span class="line">   Box Box2;        <span class="comment">// 声明 Box2，类型为 Box</span></span><br><span class="line">   <span class="type">double</span> volume = <span class="number">0.0</span>;     <span class="comment">// 用于存储体积</span></span><br><span class="line">   </span><br><span class="line">   <span class="comment">// box 1 详述</span></span><br><span class="line">   Box1.height = <span class="number">5.0</span>; </span><br><span class="line">   Box1.length = <span class="number">6.0</span>; </span><br><span class="line">   Box1.breadth = <span class="number">7.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 详述</span></span><br><span class="line">   Box2.height = <span class="number">10.0</span>;</span><br><span class="line">   Box2.length = <span class="number">12.0</span>;</span><br><span class="line">   Box2.breadth = <span class="number">13.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 1 的体积</span></span><br><span class="line">   volume = Box1.height * Box1.length * Box1.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box1 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 的体积</span></span><br><span class="line">   volume = Box2.height * Box2.length * Box2.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box2 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Box1 的体积：210</span><br><span class="line">Box2 的体积：1560</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，私有的成员和受保护的成员不能使用直接成员访问运算符 (.)
+来直接访问。我们将在后续的教程中学习如何访问私有成员和受保护的成员。</p>
+<h2 id="类的构造函数">类的构造函数</h2>
+<p>类的<strong>构造函数</strong>是类的一种特殊的成员函数，它会在每次创建类的新对象时执行。</p>
+<p><strong>特点：</strong></p>
+<ol type="1">
+<li>构造函数的名称与类的名称是完全相同的，</li>
+<li>并且不会返回任何类型，</li>
+<li>也不会返回 void。</li>
+</ol>
+<p><strong>作用：</strong>构造函数可用于为某些成员变量设置初始值。</p>
+<blockquote>
+<p>在创建派生类对象时,构造函数的执行顺序： 基类构造函数 -
+对象成员构造函数 - 派生类本身的构造函数</p>
+</blockquote>
+<p>下面的实例有助于更好地理解构造函数的概念：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Line</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="function"><span class="type">void</span> <span class="title">setLength</span><span class="params">( <span class="type">double</span> len )</span></span>;</span><br><span class="line">		<span class="function"><span class="type">double</span> <span class="title">getLength</span><span class="params">( <span class="type">void</span> )</span></span>;</span><br><span class="line">		<span class="built_in">Line</span>();  <span class="comment">// 这是不带参数的构造函数，可以用于旁白。</span></span><br><span class="line">		<span class="built_in">Line</span>(<span class="type">double</span> len);  <span class="comment">// 这是带参数的构造函数,在创建对象时就会给对象赋初始值</span></span><br><span class="line">		<span class="comment">//这里的两个Line是使用了重载函数</span></span><br><span class="line">    </span><br><span class="line">   <span class="keyword">private</span>:</span><br><span class="line">      <span class="type">double</span> length;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 成员函数定义，包括构造函数</span></span><br><span class="line">Line::<span class="built_in">Line</span>(<span class="type">void</span>)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Object is being created&quot;</span> &lt;&lt; endl;</span><br><span class="line">    length = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">Line::<span class="built_in">Line</span>( <span class="type">double</span> len)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Object is being created, length = &quot;</span> &lt;&lt; len &lt;&lt; endl;</span><br><span class="line">    length = len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Line::setLength</span><span class="params">( <span class="type">double</span> len )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    length = len;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Line::getLength</span><span class="params">( <span class="type">void</span> )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> length;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 程序的主函数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Line line1;			<span class="comment">//自动指向不带参数的</span></span><br><span class="line">    <span class="function">Line <span class="title">line2</span><span class="params">(<span class="number">10.0</span>)</span></span>;	<span class="comment">//自动指向带参数的</span></span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 设置长度</span></span><br><span class="line">   line.<span class="built_in">setLength</span>(<span class="number">6.0</span>); </span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Length of line : &quot;</span> &lt;&lt; line.<span class="built_in">getLength</span>() &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用初始化列表来初始化字段">使用初始化列表来初始化字段</h3>
+<p>主要是用于 较多参数 时的值的初始化</p>
+<p>使用初始化列表来初始化字段：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Line::<span class="built_in">Line</span>( <span class="type">double</span> len): <span class="built_in">length</span>(len)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Object is being created, length = &quot;</span> &lt;&lt; len &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的语法等同于如下语法：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Line::<span class="built_in">Line</span>( <span class="type">double</span> len)</span><br><span class="line">&#123;</span><br><span class="line">    length = len;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Object is being created, length = &quot;</span> &lt;&lt; len &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>假设有一个类 C，具有多个字段 X、Y、Z
+等需要进行初始化，同理地，您可以使用上面的语法，只需要在不同的字段使用逗号进行分隔，如下所示：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">C::<span class="built_in">C</span>( <span class="type">double</span> a, <span class="type">double</span> b, <span class="type">double</span> c): <span class="built_in">X</span>(a), <span class="built_in">Y</span>(b), <span class="built_in">Z</span>(c)</span><br><span class="line">&#123;</span><br><span class="line">  ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="类的析构函数">类的析构函数</h2>
+<p>类的<strong>析构函数</strong>是类的一种特殊的成员函数，它会在每次删除所创建的对象时执行。</p>
+<p>析构函数的名称与类的名称是完全相同的，只是在前面加了个波浪号（~）作为前缀，它不会返回任何值，也不能带有任何参数。析构函数有助于在跳出程序（比如关闭文件、释放内存等）前释放资源。</p>
+<blockquote>
+<p>在具有继承关系的类层次体系中,析构函数执行的顺序：
+派生类本身的析构函数 - 对象成员析构函数 - 基类析构函数</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Line</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">      <span class="function"><span class="type">void</span> <span class="title">setLength</span><span class="params">( <span class="type">double</span> len )</span></span>;</span><br><span class="line">      <span class="function"><span class="type">double</span> <span class="title">getLength</span><span class="params">( <span class="type">void</span> )</span></span>;</span><br><span class="line">      <span class="built_in">Line</span>();   <span class="comment">// 这是构造函数声明</span></span><br><span class="line">      ~<span class="built_in">Line</span>();  <span class="comment">// 这是析构函数声明</span></span><br><span class="line"> </span><br><span class="line">   <span class="keyword">private</span>:</span><br><span class="line">      <span class="type">double</span> length;</span><br><span class="line">&#125;;</span><br><span class="line"> <span class="comment">// 成员函数定义，包括构造函数</span></span><br><span class="line">Line::<span class="built_in">Line</span>(<span class="type">void</span>)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;对象已被创建&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">Line::~<span class="built_in">Line</span>(<span class="type">void</span>)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;对象已被删除&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Line::setLength</span><span class="params">( <span class="type">double</span> len )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    length = len;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Line::getLength</span><span class="params">( <span class="type">void</span> )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> length;</span><br><span class="line">&#125;</span><br><span class="line"> <span class="comment">// 程序的主函数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Line line;</span><br><span class="line"> <span class="comment">// 设置长度</span></span><br><span class="line">	line.<span class="built_in">setLength</span>(<span class="number">6.0</span>); </span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Length of line : &quot;</span> &lt;&lt; line.<span class="built_in">getLength</span>() &lt;&lt;endl;</span><br><span class="line"> 	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行后的结果为：</p>
+<blockquote>
+<p>对象已被创建 Length of line : 6 对象已被删除</p>
+</blockquote>
+<h2 id="类的拷贝构造函数">类的拷贝构造函数</h2>
+<h2 id="类的友元函数">类的友元函数</h2>
+<p>类的友元函数是定义在类外部，但有权访问类的所有私有（private）成员和保护（protected）成员。尽管友元函数的原型有在类的定义中出现过，但是友元函数并不是成员函数。
+友元可以是一个函数，该函数被称为友元函数；友元也可以是一个类，该类被称为友元类，在这种情况下，整个类及其所有成员都是友元。
+如果要声明函数为一个类的友元，需要在类定义中该函数原型前使用关键字
+<strong><u>friend</u></strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> width;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">friend</span> <span class="type">void</span> <span class="title">printWidth</span><span class="params">(Box box1)</span></span>;<span class="comment">//也可以是(Box &amp;box1)，在于是否需要形参改变实参。</span></span><br><span class="line">    <span class="keyword">friend</span> <span class="keyword">class</span> <span class="title class_">BigBox</span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setWidth</span><span class="params">(<span class="type">double</span> wid)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BigBox</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span> :</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Print</span><span class="params">(<span class="type">int</span> width, Box &amp;box2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// BigBox是Box的友元类，它可以直接访问Box类的任何成员</span></span><br><span class="line">        box2.<span class="built_in">setWidth</span>(width);</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Width of box : &quot;</span> &lt;&lt; box2.width &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 成员函数定义</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Box::setWidth</span><span class="params">(<span class="type">double</span> wid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    width = wid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请注意：printWidth() 不是任何类的成员函数</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printWidth</span><span class="params">(Box box1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* 因为 printWidth() 是 Box 的友元，它可以直接访问该类的任何成员 */</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Width of box : &quot;</span> &lt;&lt; box1.width &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 程序的主函数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Box box;</span><br><span class="line">    BigBox big;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用成员函数设置宽度</span></span><br><span class="line">    box.<span class="built_in">setWidth</span>(<span class="number">10.0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用友元函数输出宽度</span></span><br><span class="line">    <span class="built_in">printWidth</span>(box);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用友元类中的方法设置宽度</span></span><br><span class="line">    big.<span class="built_in">Print</span>(<span class="number">20</span>, box);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="类-对象详解">类 &amp; 对象详解</h1>
+<p>到目前为止，我们已经对 C++
+的类和对象有了基本的了解。下面的列表中还列出了其他一些 C++
+类和对象相关的概念，可以点击相应的链接进行学习。</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">概念</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a
+href="https://www.runoob.com/cplusplus/cpp-class-member-functions.html">类成员函数</a></td>
+<td
+style="text-align: left;">类的成员函数是指那些把定义和原型写在类定义内部的函数，就像类定义中的其他变量一样。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a
+href="https://www.runoob.com/cplusplus/cpp-class-access-modifiers.html">类访问修饰符</a></td>
+<td style="text-align: left;">类成员可以被定义为 public、private 或
+protected。默认情况下是定义为 private。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a
+href="https://www.runoob.com/cplusplus/cpp-constructor-destructor.html">构造函数
+&amp; 析构函数</a></td>
+<td
+style="text-align: left;">类的构造函数是一种特殊的函数，在创建一个新的对象时调用。类的析构函数也是一种特殊的函数，在删除所创建的对象时调用。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a
+href="https://www.runoob.com/cplusplus/cpp-copy-constructor.html">C++
+拷贝构造函数</a></td>
+<td
+style="text-align: left;">拷贝构造函数，是一种特殊的构造函数，它在创建对象时，是使用同一类中之前创建的对象来初始化新创建的对象。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a
+href="https://www.runoob.com/cplusplus/cpp-friend-functions.html">C++
+友元函数</a></td>
+<td style="text-align: left;"><strong>友元函数</strong>可以访问类的
+private 和 protected 成员。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a
+href="https://www.runoob.com/cplusplus/cpp-inline-functions.html">C++
+内联函数</a></td>
+<td
+style="text-align: left;">通过内联函数，编译器试图在调用函数的地方扩展函数体中的代码。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a
+href="https://www.runoob.com/cplusplus/cpp-this-pointer.html">C++ 中的
+this 指针</a></td>
+<td style="text-align: left;">每个对象都有一个特殊的指针
+<strong>this</strong>，它指向对象本身。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a
+href="https://www.runoob.com/cplusplus/cpp-pointer-to-class.html">C++
+中指向类的指针</a></td>
+<td
+style="text-align: left;">指向类的指针方式如同指向结构的指针。实际上，类可以看成是一个带有函数的结构。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a
+href="https://www.runoob.com/cplusplus/cpp-static-members.html">C++
+类的静态成员</a></td>
+<td
+style="text-align: left;">类的数据成员和函数成员都可以被声明为静态的。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="继承-派生">继承 &amp; 派生</h1>
+<h4 id="单继承">单继承</h4>
+<p>一个类可以派生自多个类，这意味着，它可以从多个基类继承数据和函数。定义一个派生类，我们使用一个类派生列表来指定基类。类派生列表以一个或多个基类命名，形式如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">derived_class</span>: access_specifier base_class</span><br></pre></td></tr></table></figure>
+<p>其中，访问修饰符 access_specifier 是
+<strong>public</strong>、<strong>protected</strong> 或
+<strong>private</strong> 其中的一个，base_class
+是之前定义过的某个类（基类）的名称。如果未使用访问修饰符
+access_specifier，则<code>默认为 private</code>。</p>
+<hr />
+<h4 id="多继承">多继承</h4>
+<p>多继承即一个子类可以有多个父类，它继承了多个父类的特性。</p>
+<p>C++ 类可以从多个类 继承成员，语法如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> &lt;派生类名&gt;:&lt;继承方式<span class="number">1</span>&gt;&lt;基类名<span class="number">1</span>&gt;,&lt;继承方式<span class="number">2</span>&gt;&lt;基类名<span class="number">2</span>&gt;,...</span><br><span class="line">&#123;&lt;派生类类体&gt;&#125;;</span><br></pre></td></tr></table></figure>
+<p>其中，访问修饰符 继承方式 是
+<strong>public</strong>、<strong>protected</strong> 或
+<strong>private</strong>
+其中的一个，用来修饰每个基类，各个基类之间用逗号分隔。</p>
+<hr />
+<h3 id="公有继承-pubilc">公有继承 pubilc</h3>
+<ul>
+<li>基类的public和protected<code>成员</code>的访问属性在派生类中保持不变，但基类的private<code>成员</code>不可直接访问。</li>
+<li>派生类中的<code>成员函数</code>可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员。</li>
+<li>通过派生类的<code>对象</code>只能访问基类的public成员。</li>
+</ul>
+<h3 id="保护继承-protected">保护继承 protected</h3>
+<ul>
+<li>基类的public和protected<code>成员</code>都以protected<code>权限</code>出现在派生类中，但基类的private<code>成员</code>不可直接访问。</li>
+<li>派生类中的<code>成员函数</code>可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员。</li>
+<li>通过派生类的<code>对象</code>不能直接访问基类中的==任何成员==</li>
+</ul>
+<h3 id="私有继承-private">私有继承 private</h3>
+<ul>
+<li>基类的public和protected<code>成员</code>都以private<code>权限</code>出现在派生类中，但基类的private<code>成员</code>不可直接访问，且以
+<code>该派生类</code> 为 ==基类== 的派生类不能访问 <code>该基类</code>
+的 ==任何成员==。</li>
+<li>派生类中的<code>成员函数</code>可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员。</li>
+<li>通过派生类的<code>对象</code>不能直接访问基类中的==任何成员==。</li>
+</ul>
+<hr />
+<p><strong>派生后 继承 到的 权限 所对应的：</strong></p>
+<p>派生类的<code>成员</code>对基类成员的访问</p>
+<p>派生类的<code>对象</code>对基类成员的访问</p>
+<p><strong>一个派生类继承了所有的基类方法，但下列情况除外：</strong></p>
+<ul>
+<li>基类的构造函数、析构函数和拷贝构造函数。</li>
+<li>基类的重载运算符。</li>
+<li>基类的友元函数。</li>
+</ul>
+<h4 id="二义性问题">二义性问题</h4>
+<h3 id="虚基类">虚基类</h3>
+<p><strong>总结一下三种继承方式：</strong></p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 16%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">继承方式</th>
+<th style="text-align: left;">基类的public成员</th>
+<th style="text-align: left;">基类的protected成员</th>
+<th style="text-align: left;">基类的private成员</th>
+<th style="text-align: left;">继承引起的访问控制关系变化概括</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">public继承</td>
+<td style="text-align: left;">仍为public成员</td>
+<td style="text-align: left;">仍为protected成员</td>
+<td style="text-align: left;">不可访问</td>
+<td style="text-align: left;">基类的非私有成员在子类的访问属性不变</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">protected继承</td>
+<td style="text-align: left;">变为protected成员</td>
+<td style="text-align: left;">仍为protected成员</td>
+<td style="text-align: left;">不可访问</td>
+<td style="text-align: left;">基类的非私有成员都为子类的保护成员</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">private继承</td>
+<td style="text-align: left;">变为private成员</td>
+<td style="text-align: left;">变为private成员</td>
+<td style="text-align: left;">不可访问</td>
+<td
+style="text-align: left;">基类中的非私有成员都称为子类的私有成员</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>IT</category>
+        <category>C/C++</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>C++</tag>
+        <tag>类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客的初始化和配置</title>
+    <url>/2020/03/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<span id="more"></span>
+]]></content>
+      <categories>
+        <category>IT</category>
+        <category>技术</category>
+        <category>搭建与配置</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客</tag>
+        <tag>配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Typora+PicGo+阿里云OSS-搭建自动上传图床</title>
+    <url>/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h1
+id="typorapicgo阿里云oss-搭建自动上传图床">Typora+PicGo+阿里云OSS-搭建自动上传图床</h1>
+<h2 id="前言">前言</h2>
+<blockquote>
+<p>一定要注意空格啊！！！我就是因为Access Key
+ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！</p>
+</blockquote>
+<p>好了，以上是吐槽，接下来进入正题。</p>
+<p>在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要<strong>插入图片</strong>用的是本地链接。在本地，在编辑器中，我们能看到图片的展示。但是如果我们写完了，需要上传到自己的博客，或者去到某些平台发布。复制文章过去，图片并不能被复制过去，需要手动的去上传本地图片到图片服务器，然后根据URL导入文章中，再排版。十分的麻烦。</p>
+<p>而PicGo+阿里云的OSS就可以<strong>自动</strong>帮我们将图片上传到网上，转换成URL，然后出现在我们文章中需要插入图片的位置，使用该URL，不管我们在什么平台发布文章，都能显示我们的图片。</p>
+<span id="more"></span>
+<h1 id="picgo">PicGo</h1>
+<p>一个用于<strong>快速</strong>上传图片并获取URL链接的图床工具。</p>
+<p>PicGo 本体支持如下图床：</p>
+<ul>
+<li>SM.MS图床</li>
+<li>腾讯云COS</li>
+<li>Github图床</li>
+<li>七牛图床</li>
+<li>Imgur图床</li>
+<li><strong>阿里云OSS</strong></li>
+<li>又拍云图床</li>
+<li>如果你有其他图床的上传需求，还有第三方图床插件可以使用</li>
+</ul>
+<h2 id="特色功能">特色功能</h2>
+<ul>
+<li>支持拖拽图片上传</li>
+<li>支持快捷键上传剪贴板里第一张图片</li>
+<li>Windows 和 macOS 支持右键图片文件通过菜单上传 (v2.1.0+)</li>
+<li>上传图片后自动复制链接到剪贴板</li>
+<li>支持自定义复制到剪贴板的链接格式</li>
+<li>支持修改快捷键，默认快速上传快捷键：<code>command+shift+p</code>（macOS）|
+<code>control+shift+p</code>（Windows)</li>
+<li>支持插件系统，已有插件支持 Gitee、青云等第三方图床
+<ul>
+<li>更多第三方插件以及使用了 PicGo 底层的应用可以在 <a
+href="https://github.com/PicGo/Awesome-PicGo">Awesome-PicGo</a>
+找到。欢迎贡献！</li>
+</ul></li>
+<li>支持通过发送 HTTP 请求调用 PicGo 上传（v2.2.0+)</li>
+</ul>
+<p><strong>如果第一次使用，请参考应用 <a
+href="https://picgo.github.io/PicGo-Doc/zh/guide/getting-started.html">使用文档</a>。遇到问题了还可以看看
+<a href="https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md">FAQ</a>
+以及被关闭的 <a
+href="https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed">issues</a>。</strong></p>
+<h2 id="下载安装">下载安装</h2>
+<blockquote>
+<p>注意：请确保你安装了 <code>Node.js</code>， 并且版本 &gt;= 8。</p>
+</blockquote>
+<h3 id="windows">Windows</h3>
+<p>Windows 用户请下载最新版本的 <code>exe</code> 文件。</p>
+<p><strong>还可以使用 <a href="https://scoop.sh/">Scoop</a> 来安装
+PicGo:
+<code>scoop bucket add helbing https://github.com/helbing/scoop-bucket</code>
+&amp; <code>scoop install picgo</code>。 感谢 <span class="citation"
+data-cites="helbing">@helbing</span> 的贡献！</strong></p>
+<p><strong>还可以使用 <a href="https://chocolatey.org/">Chocolatey</a>
+来安装 PicGo: <code>choco install picgo</code>。 感谢 <span
+class="citation" data-cites="iYato">@iYato</span> 的贡献！</strong></p>
+<h3 id="macos">macOS</h3>
+<p>macOS 用户请下载最新版本的 <code>dmg</code> 文件。</p>
+<p><strong>还可以使用 <code>brew cask</code> 来安装 PicGo:
+<code>brew cask install picgo</code>。感谢 <span class="citation"
+data-cites="womeimingzi11">@womeimingzi11</span> 的贡献！</strong></p>
+<h3 id="linux">Linux</h3>
+<p>Linux 用户请下载 <code>AppImage</code> 文件。</p>
+<p><strong>如果你是 Arch 类的 Linux 用户，可以直接通过
+<code>aurman -S picgo-appimage</code> 来安装 PicGo。感谢 <span
+class="citation" data-cites="houbaron">@houbaron</span>
+的贡献！</strong></p>
+<h2 id="应用截图">应用截图</h2>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/picgo-2.0.gif?x-oss-process=style/yunying61" /></p>
+<h2 id="picgo配置">PicGo配置</h2>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/picgo-alyoss.png?x-oss-process=style/yunying61" /></p>
+<p>阿里云OSS配置项及说明：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;accessKeyId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;accessKeySecret&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;bucket&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 存储空间名</span></span><br><span class="line">  <span class="attr">&quot;area&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 存储区域代号</span></span><br><span class="line">  <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 自定义存储路径</span></span><br><span class="line">  <span class="attr">&quot;customUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 自定义域名，注意要加http://或者https://</span></span><br><span class="line">  <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>&lt;abbr
+title:”没有就去阿里买一个OSS，很便宜的”&gt;默认你已经有了阿里云的OSS</abbr>，且知道阿里云的RAM访问控制</p>
+<p>*设定Keyld（accessKeyId）：这是你的<code>accessKeyId</code>
+*设定KeySecret（accessKeySecret）：这是你的<code>accessKeySecret</code>
+*设定存储空间名（bucket）：这是你的bucket名称
+*确认存储区域（area）：这是你bucket所在的地域，一般都为oss-cn-城市拼音
+指定存储路径（path）：默认为空，则放在bucket根目录下；如果有需求，则存储路径一定要以<code>/</code>结尾！
+设定网址后缀（options）：如果你的OSS有设置网址后缀，请注意是否要加上这个后缀。
+设定自定义域名（customUrl）：自定义域名，注意要加http://或者https://</p>
+<blockquote>
+<p>在Typora的偏好设置 - 图像，按照下图进行设置就可以了。</p>
+</blockquote>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/picgo-typora.png?x-oss-process=style/yunying61" />)</p>
+<blockquote>
+<p>以上配置是在PicGo软件上上传图片然后复制到URL进行使用的，而且在日常写作中，PicGo也是要开启才能使用，所以下面我将介绍一个更为方便的PicGo-Core，它是以命令行形式运行的，用完即退出进程，不会一直占用系统资源。</p>
+</blockquote>
+<h2 id="picgo-core配置">PicGo-Core配置</h2>
+<p>官网<a
+href="https://picgo.github.io/PicGo-Core-Doc/">PicGo-Core</a></p>
+<p>安装：<code>注意请确保你的 Node.js 版本 &gt;= 8</code>。</p>
+<p>使用 <code>npm install picgo -g</code> 全局安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#简单使用</span></span><br><span class="line"><span class="comment"># 上传具体路径图片</span></span><br><span class="line">picgo upload /xxx/xxx.jpg</span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传剪贴板里的第一张图片（上传时会将格式转成png）</span></span><br><span class="line">picgo upload</span><br></pre></td></tr></table></figure>
+<h3 id="默认配置文件">默认配置文件</h3>
+<p>首先，先在命令窗口使用命令 <code>picgo -h</code>
+查看picgo的命令，同时会生成配置文件。</p>
+<p>picgo
+的默认配置文件为<code>~/.picgo/config.json</code>。其中<code>~</code>为用户目录。不同系统的用户目录不太一样。</p>
+<p>linux 和 macOS 均为<code>~/.picgo/config.json</code>。</p>
+<p>windows 则为<code>C:\Users\你的用户名\.picgo\config.json</code>。</p>
+<p>将配置文件填入如下，具体配置请根据上面的说明，把各项信息填好，并保存：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;picBed&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;uploader&quot;</span><span class="punctuation">:</span> <span class="string">&quot;aliyun&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;current&quot;</span><span class="punctuation">:</span> <span class="string">&quot;aliyun&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;aliyun&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;accessKeyId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;accessKeySecret&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;bucket&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;area&quot;</span><span class="punctuation">:</span> <span class="string">&quot;oss-cn-shanghai&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;customUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;PicGo/&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;picgoPlugins&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在Typora的偏好设置 - 图像，按照下图进行设置就可以了。</p>
+</blockquote>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/picgo-core-typora.png?x-oss-process=style/yunying61" /></p>
+<h2 id="后记">后记</h2>
+<p>至此，你就可以在Typora直接插入图片，PicGo-Core会自动帮你把图片上传到阿里云OSS，并且将链接替换成网页URL。在平时，也可以通过PicGo软件上传图片到远程服务器中进行备份。</p>
+]]></content>
+      <categories>
+        <category>应用</category>
+        <category>IT</category>
+        <category>程序</category>
+        <category>技术</category>
+        <category>搭建与配置</category>
+      </categories>
+      <tags>
+        <tag>Typora</tag>
+        <tag>PicGo</tag>
+        <tag>OSS</tag>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-Next主题-相关配置</title>
+    <url>/2022/03/Hexo-Next%E4%B8%BB%E9%A2%98-%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="取消全文预览启用阅读全文">取消“全文预览”，启用“阅读全文”</h2>
+<p>在md文章中任意位置插入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+<p>位于其下方的内容将不在首页<code>“全文预览”</code>，而是采用<code>“阅读全文”</code>的按钮打开文章，阅读全部内容。</p>
+<span id="more"></span>
+<h2 id="按钮标签">按钮标签</h2>
+<p>详细用法请参考 <a
+href="https://theme-next.js.org/docs/tag-plugins/button.html#">Button |
+NexT</a></p>
+<h3 id="用法"><strong>用法</strong></h3>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% button url, text, icon [class], [title] %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Tag Alias 标签别名 --&gt;</span></span><br><span class="line">&#123;% btn url, text, icon [class], [title] %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>url</code>：URL 的绝对或相对路径。</li>
+<li><code>text</code>：按钮文本。如果未指定<code>图标</code>，则为必需。</li>
+<li><code>icon</code>：<strong>Font Awesome</strong>
+图标名称。如果未指定<code>文本</code>，则为必需。</li>
+<li><code>[class]</code>：<em>可选参数</em>。 <strong>Font
+Awesome</strong> 类： | | | |
+|<code>fa-fw``fa-lg``fa-2x``fa-3x``fa-4x``fa-5x</code></li>
+<li><code>[title]</code>：<em>可选参数</em>。鼠标悬停时的工具提示。</li>
+</ul>
+<h3 id="例子"><strong>例子</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% button #按钮标签, 文本 %&#125;</span><br></pre></td></tr></table></figure>
+<a class="btn" href="#按钮标签">文本</a>
+<p>​</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% btn #例子, 文本与提示,, 提示 %&#125;</span><br></pre></td></tr></table></figure>
+<a class="btn" href="#例子" title="提示">文本与提示</a>
+<h2 id="图片组">图片组</h2>
+<p>详细用法请参考 <a
+href="https://theme-next.js.org/docs/tag-plugins/group-pictures.html">Group
+Pictures | NexT</a></p>
+<h3 id="用法-1"><strong>用法</strong></h3>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% grouppicture [number]-[layout] %&#125;&#123;% endgrouppicture %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Tag Alias 标签别名 --&gt;</span></span><br><span class="line">&#123;% gp [number]-[layout] %&#125;&#123;% endgp %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>[number]</code>：<em>可选参数。</em>要添加到组图片中的图片总数。</p></li>
+<li><p><code>[layout]</code>：<em>可选参数。</em>布局的索引，可以根据下图获得。</p></li>
+</ul>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/group-picture-1.png" /></p>
+<p><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/group-picture-2.png" /></p>
+<h3 id="例子-1"><strong>例子</strong></h3>
+<p>例如，有3张图，先设置图片总数为3，再选用 <strong>“3张图布局”</strong>
+中的第2种布局，代码如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% grouppicture 3-2 %&#125;</span><br><span class="line">![](<span class="link">/images/next.svg</span>)</span><br><span class="line">![](<span class="link">/images/next.svg</span>)</span><br><span class="line">![](<span class="link">/images/next.svg</span>)</span><br><span class="line">&#123;% endgrouppicture %&#125;</span><br></pre></td></tr></table></figure>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/next.svg" /></div><div class="group-picture-column"><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/next.svg" /></div></div><div class="group-picture-row"><div class="group-picture-column"><img
+src="https://img-61.oss-cn-shanghai.aliyuncs.com/img/PicGo/next.svg" /></div></div></div>
+<h2 id="标签文本高亮">标签（文本高亮）</h2>
+<p>详细用法请参考 <a
+href="https://theme-next.js.org/docs/tag-plugins/label.html">Label |
+NexT</a></p>
+<h3 id="用法-2"><strong>用法</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% label [class]@text %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>[class]</code>：<em>可选参数。</em>支持的值：default | primary
+| success | info | warning | danger
+如果未指定，则将使用浏览器的默认样式，该样式在不同的浏览器中可能会有所不同。</li>
+<li><code>text</code>：可以指定带或不带空格</li>
+</ul>
+<h3 id="例子-2"><strong>例子</strong></h3>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">Lorem &#123;% label @ipsum %&#125; &#123;% label primary@dolor sit %&#125; amet, consectetur &#123;% label success@adipiscing elit, %&#125; sed &#123;% label info@do eiusmod %&#125; tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim *&#123;% label warning @ad %&#125;* minim veniam, quis **&#123;% label danger@nostrud %&#125;** exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span><br><span class="line"></span><br><span class="line">Duis aute irure dolor in reprehenderit in voluptate ~~&#123;% label default @velit %&#125;~~ <span class="tag">&lt;<span class="name">mark</span>&gt;</span>esse<span class="tag">&lt;/<span class="name">mark</span>&gt;</span> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure>
+<p>Lorem <mark class="label ">ipsum</mark> <mark class="label primary">dolor sit</mark> amet, consectetur <mark class="label success">adipiscing elit,</mark>
+sed <mark class="label info">do eiusmod</mark> tempor incididunt ut labore et dolore magna
+aliqua.</p>
+<p>Ut enim <em><mark class="label warning">ad</mark></em> minim veniam, quis
+<strong><mark class="label danger">nostrud</mark></strong> exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate
+<del><mark class="label default">velit</mark></del> <mark>esse</mark> cillum dolore eu fugiat
+nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2 id="链接网格">链接网格</h2>
+<p>详细用法请参考 <a
+href="https://theme-next.js.org/docs/tag-plugins/link-grid.html">Link
+Grid | NexT</a></p>
+<h3 id="用法-3"><strong>用法</strong></h3>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% linkgrid [image] [delimiter] [comment] %&#125;&#123;% endlinkgrid %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Tag Alias --&gt;</span></span><br><span class="line">&#123;% lg [image] [delimiter] [comment] %&#125;&#123;% endlg %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>[image]</code>：<em>可选参数。</em>默认图像网址。</li>
+<li><code>[delimiter]</code>：<em>可选参数。</em>如果给定了可选的分隔符参数，则将其解释为每行中项的分隔符。</li>
+<li><code>[comment]</code>：<em>可选参数。</em>如果给出了可选的注释参数，则将其解释为注释掉一行的符号。</li>
+</ul>
+<h2 id="各种图表流程图mermaid">各种图表、流程图（Mermaid）</h2>
+<p>以类似于标记的方式从文本中生成图表和流程图</p>
+<p>Mermaid 是一个基于 Javascript 的图表绘制工具，通过解析类 Markdown
+的文本语法来实现图表的创建和动态修改。Mermaid
+诞生的主要目的是让文档的更新能够及时跟上开发进度。</p>
+<p>详细用法请参考 <a
+href="https://theme-next.js.org/docs/tag-plugins/mermaid.html">Mermaid |
+NexT</a> ，GitHub： <a
+href="https://github.com/mermaid-js/mermaid">mermaid</a> 官方中文介绍：
+<a
+href="https://github.com/mermaid-js/mermaid/blob/develop/README.zh-CN.md">mermaid/README.zh-CN.md</a></p>
+<hr />
+<p>个人的第一印象：用法很复杂，在我看来还不如用其他软件绘图，然后导出图片，再传到博客上。</p>
+<p>第一感觉：</p>
+<ul>
+<li>有点复杂</li>
+<li>非常清晰的格式化；</li>
+<li>无法直接被爬取 “流程图” ；</li>
+<li>显示清楚；</li>
+<li>代码党福音（不用考虑绘图的琐事）。</li>
+</ul>
+<p>官方表述：</p>
+<ul>
+<li>减少绘图和编写文档的时间</li>
+<li>提高了内容的智能化和可重用性</li>
+<li>易于维护和更新</li>
+</ul>
+<blockquote>
+<p>本博客已启用此功能，以后或许会用吧</p>
+</blockquote>
+<h3 id="用法-4"><strong>用法</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% mermaid type %&#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="例子-3"><strong>例子</strong></h3>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% mermaid graph TD %&#125;</span><br><span class="line">A[Hard] --&gt;|Text| B(Round)</span><br><span class="line">B --&gt; C&#123;Decision&#125;</span><br><span class="line">C --&gt;|One| D[Result 1]</span><br><span class="line">C --&gt;|Two| E[Result 2]</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">
+graph TD
+A[Hard] --&gt;|Text| B(Round)
+B --&gt; C{Decision}
+C --&gt;|One| D[Result 1]
+C --&gt;|Two| E[Result 2]
+</pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% mermaid pie %&#125;</span><br><span class="line">&quot;Dogs&quot; : 386</span><br><span class="line">&quot;Cats&quot; : 85</span><br><span class="line">&quot;Rats&quot; : 15</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">
+pie
+&quot;Dogs&quot; : 386
+&quot;Cats&quot; : 85
+&quot;Rats&quot; : 15
+</pre>
+<h2 id="批注提示注意">批注（提示、注意）</h2>
+<p>详细用法请参考 <a
+href="https://theme-next.js.org/docs/tag-plugins/note.html">Note
+(Bootstrap Callout) | NexT</a></p>
+<h3 id="用法-5"><strong>用法</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] [summary] %&#125;</span><br><span class="line">Any content (support inline tags too).</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>[class]</code>：<em>可选参数。</em>支持的值：default | primary
+| success | info | warning | danger.</li>
+<li><code>[no-icon]</code>：<em>可选参数。</em>禁用批注中的图标。</li>
+<li><code>[summary]</code>：<em>可选参数。</em> 可选的隐藏摘要。</li>
+</ul>
+<p>所有参数都是可选的。</p>
+<h3 id="例子-4"><strong>例子</strong></h3>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line"><span class="section">#### 页眉</span></span><br><span class="line">（不带定义类样式）</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note "><h4 id="页眉">页眉</h4>
+<p>（不带定义类样式）</p>
+</div>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note info %&#125;</span><br><span class="line"><span class="section">#### 信息标题</span></span><br><span class="line"><span class="strong">**欢迎来到**</span> [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note info"><h4 id="信息标题">信息标题</h4>
+<p><strong>欢迎来到</strong> <a href="https://hexo.io">Hexo!</a></p>
+</div>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line"><span class="section">#### 警告标头</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><h4 id="警告标头">警告标头</h4>
+<p><strong>Welcome</strong> to <a href="https://hexo.io">Hexo!</a></p>
+</div>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;</span><br><span class="line"><span class="section">#### 危险标头</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note danger"><h4 id="危险标头">危险标头</h4>
+<p><strong>Welcome</strong> to <a href="https://hexo.io">Hexo!</a></p>
+</div>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note primary This is a summary %&#125;</span><br><span class="line"><span class="section">#### 详细信息和摘要</span></span><br><span class="line">附注摘要：<span class="code">`note primary This is a summary`</span></span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<details class="note primary"><summary><p>这是一个摘要</p>
+</summary>
+<h4 id="详细信息和摘要">详细信息和摘要</h4>
+<p>附注摘要：<code>note primary This is a summary</code></p>
+
+</details>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="section">#### 批注中的代码块</span></span><br><span class="line">&#123;% code %&#125;</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">&#123;% endcode %&#125;</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note success"><h4 id="批注中的代码块">批注中的代码块</h4>
+<figure class="highlight plaintext">
+<table>
+<tr>
+<td class="gutter">
+<pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
+</td>
+<td class="code">
+<pre><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br></pre>
+</td>
+</tr>
+</table>
+</figure>
+</div>
+<h2 id="pdf支持">PDF支持</h2>
+<p>详细用法请参考 <a
+href="https://theme-next.js.org/docs/tag-plugins/pdf.html">PDF |
+NexT</a></p>
+<p>这是一个插件，允许在博客页面中预览PDF文件。</p>
+<p>如果浏览器本身支持嵌入式 PDF，NexT 将创建一个标签，并在您的网站上包含
+PDF
+文件。否则，它将创建一个标签并使用PDF.js通过@mozilla来呈现pdf文件。</p>
+<h2 id="选项卡">选项卡</h2>
+<p>详细用法请参考 <a
+href="https://theme-next.js.org/docs/tag-plugins/tabs.html">Tabs |
+NexT</a></p>
+<p>让选项卡的导航条嵌入内容之中，用以在同一行通过选项卡呈现不同的内容</p>
+<h3 id="用法-6"><strong>用法</strong></h3>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Unique name, [index] %&#125;</span><br><span class="line"><span class="comment">&lt;!-- tab [Tab caption] [@icon] --&gt;</span></span><br><span class="line">Any content (support inline tags too).</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>Unique name</code>：选项卡块标记的唯一名称，不带逗号。
+将在#id用作每个选项卡及其索引号的前缀。
+如果名称中有空格，则对于生成#id所有空格都将替换为短划线。
+仅对于帖子/页面的当前网址必须是唯一的！</li>
+<li><code>[index]</code>：活动选项卡的索引号。
+如果未指定，将选择第一个选项卡 （1）。 如果索引为
+-1，则不会选择任何选项卡。这将是类似剧透的东西。 可选参数。</li>
+<li><code>[Tab caption]</code>：当前选项卡的标题。
+如果未指定标题，则带有选项卡索引后缀的唯一名称将用作选项卡的标题。
+如果未指定标题，但指定了图标，则标题将为空。 可选参数。</li>
+<li><code>[@icon]</code>：Font Awesome 图标名称。
+可以指定带或不带空格;例如，"Tab caption <span class="citation"
+data-cites="icon">@icon</span>"与"Tab caption@icon"相同。
+可选参数。</li>
+</ul>
+<h3 id="例子-5"><strong>例子</strong></h3>
+<h4 id="选中了第-3-个选项卡的选项卡">选中了第 3 个选项卡的选项卡</h4>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Second unique name, 3 %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="second-unique-name"><ul class="nav-tabs"><li class="tab"><a href="#second-unique-name-1">Second unique name 1</a></li><li class="tab"><a href="#second-unique-name-2">Second unique name 2</a></li><li class="tab active"><a href="#second-unique-name-3">Second unique name 3</a></li></ul><div class="tab-content"><div class="tab-pane" id="second-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="second-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane active" id="second-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<h4 id="未选择选项卡的选项卡">未选择选项卡的选项卡</h4>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Third unique name, -1 %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="third-unique-name"><ul class="nav-tabs"><li class="tab"><a href="#third-unique-name-1">Third unique name 1</a></li><li class="tab"><a href="#third-unique-name-2">Third unique name 2</a></li><li class="tab"><a href="#third-unique-name-3">Third unique name 3</a></li></ul><div class="tab-content"><div class="tab-pane" id="third-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="third-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="third-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<h4
+id="带有图标和自定义标签名称的选项卡">带有图标和自定义标签名称的选项卡</h4>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Fourth unique name %&#125;</span><br><span class="line">&lt;!-- tab 解决方案1@text-width --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab 解决方案2@font --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab 解决方案3@bold --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="fourth-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#fourth-unique-name-1"><i class="fa fa-text-width"></i>解决方案1</a></li><li class="tab"><a href="#fourth-unique-name-2"><i class="fa fa-font"></i>解决方案2</a></li><li class="tab"><a href="#fourth-unique-name-3"><i class="fa fa-bold"></i>解决方案3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="fourth-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="fourth-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="fourth-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<h4 id="标签永久链接测试">标签永久链接测试</h4>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">链接至 &gt; [<span class="string">Tab one</span>](<span class="link">#tab-one</span>).</span><br><span class="line">链接至 &gt; [<span class="string">Tab one 1</span>](<span class="link">#tab-one-1</span>).</span><br><span class="line">链接至 &gt; [<span class="string">Tab one 2</span>](<span class="link">#tab-one-2</span>).</span><br><span class="line">链接至 &gt; [<span class="string">Tab one 3</span>](<span class="link">#tab-one-3</span>).</span><br><span class="line"></span><br><span class="line">链接至 &gt; [<span class="string">Tab two</span>](<span class="link">#tab-two</span>).</span><br><span class="line">链接至 &gt; [<span class="string">Tab two 1</span>](<span class="link">#tab-two-1</span>).</span><br><span class="line">链接至 &gt; [<span class="string">Tab two 2</span>](<span class="link">#tab-two-2</span>).</span><br><span class="line">链接至 &gt; [<span class="string">Tab two 3</span>](<span class="link">#tab-two-3</span>).</span><br><span class="line"></span><br><span class="line">&#123;% tabs Tab one %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% tabs Tab two %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note info"><p>名称中有空格，则对于生成#id所有空格都将替换为短划线。</p>
+</div>
+<p>链接至 &gt; <a href="#tab-one">Tab one</a>. 链接至 &gt; <a
+href="#tab-one-1">Tab one 1</a>. 链接至 &gt; <a href="#tab-one-2">Tab
+one 2</a>. 链接至 &gt; <a href="#tab-one-3">Tab one 3</a>.</p>
+<p>链接至 &gt; <a href="#tab-two">Tab two</a>. 链接至 &gt; <a
+href="#tab-two-1">Tab two 1</a>. 链接至 &gt; <a href="#tab-two-2">Tab
+two 2</a>. 链接至 &gt; <a href="#tab-two-3">Tab two 3</a>.</p>
+<div class="tabs" id="tab-one"><ul class="nav-tabs"><li class="tab active"><a href="#tab-one-1">Tab one 1</a></li><li class="tab"><a href="#tab-one-2">Tab one 2</a></li><li class="tab"><a href="#tab-one-3">Tab one 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-one-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="tab-one-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="tab-one-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<div class="tabs" id="tab-two"><ul class="nav-tabs"><li class="tab active"><a href="#tab-two-1">Tab two 1</a></li><li class="tab"><a href="#tab-two-2">Tab two 2</a></li><li class="tab"><a href="#tab-two-3">Tab two 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-two-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="tab-two-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="tab-two-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<h4 id="嵌套选项卡">嵌套选项卡</h4>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Tags %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> One</span><br><span class="line"><span class="bullet">2.</span> Two</span><br><span class="line"><span class="bullet">3.</span> Three</span><br><span class="line"></span><br><span class="line">Indented code block:</span><br><span class="line"></span><br><span class="line"><span class="code">    nano /etc</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">Tagged code block:</span><br><span class="line"></span><br><span class="line">&#123;% code %&#125;</span><br><span class="line">code tag</span><br><span class="line">code tag</span><br><span class="line">code tag</span><br><span class="line">&#123;% endcode %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default %&#125;</span><br><span class="line">Note default tag.</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">*</span> Five</span><br><span class="line"><span class="bullet">*</span> Six</span><br><span class="line"><span class="bullet">*</span> Seven</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">&#123;% youtube Kt7u5kr<span class="emphasis">_P5o %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&lt;!-- tab --&gt;</span></span><br><span class="line"><span class="emphasis"><span class="strong">**This is Tab 3.**</span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% subtabs Sub Tabs %&#125;</span></span><br><span class="line"><span class="emphasis">&lt;!-- tab --&gt;</span></span><br><span class="line"><span class="emphasis"><span class="strong">**This is Sub Tab 1.**</span></span></span><br><span class="line"><span class="emphasis">&#123;% note success %&#125;</span></span><br><span class="line"><span class="emphasis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% note warning %&#125;</span></span><br><span class="line"><span class="emphasis">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&lt;!-- tab --&gt;</span></span><br><span class="line"><span class="emphasis"><span class="strong">**This is Sub Tab 2.**</span></span></span><br><span class="line"><span class="emphasis">&#123;% note success %&#125;</span></span><br><span class="line"><span class="emphasis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% note danger %&#125;</span></span><br><span class="line"><span class="emphasis">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&lt;!-- tab --&gt;</span></span><br><span class="line"><span class="emphasis"><span class="strong">**This is Sub Tab 3.**</span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% subtabs Sub-Sub Tabs %&#125;</span></span><br><span class="line"><span class="emphasis">&lt;!-- tab --&gt;</span></span><br><span class="line"><span class="emphasis"><span class="strong">**This is Sub-Sub Tab 1 of Sub Tab 3.**</span></span></span><br><span class="line"><span class="emphasis">&#123;% note success %&#125;</span></span><br><span class="line"><span class="emphasis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&lt;!-- tab --&gt;</span></span><br><span class="line"><span class="emphasis"><span class="strong">**This is Sub-Sub Tab 2 of Sub Tab 3.**</span></span></span><br><span class="line"><span class="emphasis">&#123;% note success %&#125;</span></span><br><span class="line"><span class="emphasis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% note warning %&#125;</span></span><br><span class="line"><span class="emphasis">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&lt;!-- tab --&gt;</span></span><br><span class="line"><span class="emphasis"><span class="strong">**This is Sub-Sub Tab 3 of Sub Tab 3.**</span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% note success %&#125;</span></span><br><span class="line"><span class="emphasis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% note warning %&#125;</span></span><br><span class="line"><span class="emphasis">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% note danger %&#125;</span></span><br><span class="line"><span class="emphasis">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% endnote %&#125;</span></span><br><span class="line"><span class="emphasis">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="emphasis">&#123;% endsubtabs %&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="emphasis">&#123;% endsubtabs %&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="emphasis">&#123;% endtabs %&#125;</span></span><br></pre></td></tr></table></figure>
+<div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">Tags 1</a></li><li class="tab"><a href="#tags-2">Tags 2</a></li><li class="tab"><a href="#tags-3">Tags 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p><strong>This is Tab 1.</strong></p>
+<ol type="1">
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+</ol>
+<p>Indented code block:</p>
+<pre><code>nano /etc</code></pre>
+<p>Tagged code block:</p>
+<figure class="highlight plaintext">
+<table>
+<tr>
+<td class="gutter">
+<pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
+</td>
+<td class="code">
+<pre><span class="line">code tag</span><br><span class="line">code tag</span><br><span class="line">code tag</span><br></pre>
+</td>
+</tr>
+</table>
+</figure>
+<div class="note default">
+<p>
+Note default tag.
+</p>
+</div></div><div class="tab-pane" id="tags-2"><p><strong>This is Tab 2.</strong></p>
+<ul>
+<li>Five</li>
+<li>Six</li>
+<li>Seven</li>
+</ul>
+<div class="note primary">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/Kt7u5kr_P5o" frameborder="0" loading="lazy" allowfullscreen>
+</iframe>
+</div>
+</div></div><div class="tab-pane" id="tags-3"><p><strong>This is Tab 3.</strong></p>
+<div id="sub-tabs" class="tabs">
+<ul class="nav-tabs">
+<li class="tab active">
+<a href="#sub-tabs-1">Sub Tabs 1</a>
+</li>
+<li class="tab">
+<a href="#sub-tabs-2">Sub Tabs 2</a>
+</li>
+<li class="tab">
+<a href="#sub-tabs-3">Sub Tabs 3</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="sub-tabs-1" class="tab-pane active">
+<strong>This is Sub Tab 1.</strong>
+<div class="note success">
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
+hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet
+vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin
+laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu
+nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque
+fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut,
+elementum vulputate, nunc.
+</p>
+<div class="note warning">
+<p>
+Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
+luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing,
+commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit
+tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices
+sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.
+Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+</p>
+</div>
+<p>
+Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a
+ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero
+dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius,
+adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam
+pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida
+vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu,
+vulputate vel, nisl.
+</p>
+</div>
+</div>
+<div id="sub-tabs-2" class="tab-pane">
+<strong>This is Sub Tab 2.</strong>
+<div class="note success">
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
+hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet
+vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin
+laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu
+nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque
+fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut,
+elementum vulputate, nunc.
+</p>
+<p>
+Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
+luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing,
+commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit
+tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices
+sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.
+Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+</p>
+<div class="note danger">
+<p>
+Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a
+ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero
+dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius,
+adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam
+pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida
+vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu,
+vulputate vel, nisl.
+</p>
+</div>
+</div>
+</div>
+<div id="sub-tabs-3" class="tab-pane">
+<p>
+<strong>This is Sub Tab 3.</strong>
+</p>
+<div id="sub-sub-tabs" class="tabs">
+<ul class="nav-tabs">
+<li class="tab active">
+<a href="#sub-sub-tabs-1">Sub-Sub Tabs 1</a>
+</li>
+<li class="tab">
+<a href="#sub-sub-tabs-2">Sub-Sub Tabs 2</a>
+</li>
+<li class="tab">
+<a href="#sub-sub-tabs-3">Sub-Sub Tabs 3</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="sub-sub-tabs-1" class="tab-pane active">
+<strong>This is Sub-Sub Tab 1 of Sub Tab 3.</strong>
+<div class="note success">
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
+hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet
+vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin
+laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu
+nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque
+fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut,
+elementum vulputate, nunc.
+</p>
+<p>
+Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
+luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing,
+commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit
+tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices
+sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.
+Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+</p>
+<p>
+Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a
+ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero
+dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius,
+adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam
+pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida
+vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu,
+vulputate vel, nisl.
+</p>
+</div>
+</div>
+<div id="sub-sub-tabs-2" class="tab-pane">
+<strong>This is Sub-Sub Tab 2 of Sub Tab 3.</strong>
+<div class="note success">
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
+hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet
+vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin
+laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu
+nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque
+fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut,
+elementum vulputate, nunc.
+</p>
+<div class="note warning">
+<p>
+Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
+luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing,
+commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit
+tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices
+sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.
+Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+</p>
+<p>
+Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a
+ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero
+dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius,
+adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam
+pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida
+vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu,
+vulputate vel, nisl.
+</p>
+</div>
+</div>
+</div>
+<div id="sub-sub-tabs-3" class="tab-pane">
+<p>
+<strong>This is Sub-Sub Tab 3 of Sub Tab 3.</strong>
+</p>
+<div class="note success">
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
+hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet
+vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin
+laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu
+nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque
+fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut,
+elementum vulputate, nunc.
+</p>
+<div class="note warning">
+<p>
+Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
+luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing,
+commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit
+tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices
+sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.
+Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+</p>
+<div class="note danger">
+<p>
+Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a
+ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero
+dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius,
+adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam
+pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida
+vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu,
+vulputate vel, nisl.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>配置</tag>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows11程序安装或卸载 问题解决</title>
+    <url>/2022/03/Windows11%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%8D%B8%E8%BD%BD-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p><a
+href="https://support.microsoft.com/zh-cn/windows/修复阻止程序安装或删除的问题-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">修复阻止程序安装或删除的问题
+(microsoft.com)</a></p>
+<span id="more"></span>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Win11</tag>
+        <tag>问题解决</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/02/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
