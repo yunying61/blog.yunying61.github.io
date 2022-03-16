@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo2.png">
+  <link rel="mask-icon" href="/images/logo2.svg" color="#222">
+  <meta name="msvalidate.01" content="C4629C76253BAF6F511BC39C8C5D670E">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="C语言 （Windows）环境配置 代码编辑器   首推VS Code,这是一款由微软开发的免费开源的现代化轻量级代码编辑器，支持几乎所有主流的编程语言的开发、语法高亮、智能代码补全、自定义热键、括号匹配、代码片段、代码对比 Diff、GIT 等特性，支持插件扩展，并针对网页开发和云端应用开发做了优化。软件跨平台支持 Win、Mac 以及 Linux，运行流畅，软件小巧精致。  安装地址：VS C">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="C语言的笔记">
+<meta property="og:url" content="http://www.yunying61.top/2019/12/C-note/index.html">
+<meta property="og:site_name" content="星幕·云影">
+<meta property="og:description" content="C语言 （Windows）环境配置 代码编辑器   首推VS Code,这是一款由微软开发的免费开源的现代化轻量级代码编辑器，支持几乎所有主流的编程语言的开发、语法高亮、智能代码补全、自定义热键、括号匹配、代码片段、代码对比 Diff、GIT 等特性，支持插件扩展，并针对网页开发和云端应用开发做了优化。软件跨平台支持 Win、Mac 以及 Linux，运行流畅，软件小巧精致。  安装地址：VS C">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-05T11:41:43.000Z">
+<meta property="article:modified_time" content="2022-03-15T09:02:00.298Z">
+<meta property="article:author" content="yunying61">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="C">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yunying61.top/2019/12/C-note/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yunying61.top/2019/12/C-note/","path":"2019/12/C-note/","title":"C语言的笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C语言的笔记 | 星幕·云影</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">星幕·云影</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">C语言 （Windows）环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">1.1.</span> <span class="nav-text">代码编辑器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">C 程序结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">C 基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E7%9A%84%E4%BB%A4%E7%89%8C%EF%BC%88Tokens%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">C 的令牌（Tokens）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8F%B7-%F0%9F%98%89"><span class="nav-number">3.2.</span> <span class="nav-text">分号(😉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">3.3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-number">3.4.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">3.5.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E4%B8%AD%E7%9A%84%E7%A9%BA%E6%A0%BC"><span class="nav-number">3.6.</span> <span class="nav-text">C 中的空格</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">C 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">为什么C语言程序运行闪一下就没有了(解决方法)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E4%B8%ADsystem-%E2%80%9Cpause%E2%80%9D"><span class="nav-number">5.1.</span> <span class="nav-text">C语言中system(“pause”)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getchar"><span class="nav-number">5.2.</span> <span class="nav-text">getchar()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getch-%E5%87%BD%E6%95%B0"><span class="nav-number">5.3.</span> <span class="nav-text">getch()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getchar-%E4%B8%8Egetch-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="nav-number">5.4.</span> <span class="nav-text">getchar()与getch()的区别：</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png">
+  <p class="site-author-name" itemprop="name">yunying61</p>
+  <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button class="js-gitter-toggle-chat-button"><i class="fa fa-comment"></i>
+      聊天室
+    </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yunying61" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yunying61" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yunying61@qq.com" title="E-Mail → mailto:yunying61@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/5119152507" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5119152507" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+<div id="musicplayer">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=34364124&auto=1&height=66">
+    </iframe>
+</div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/yunying61" class="github-corner" title="在GitHub上关注我" aria-label="在GitHub上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2019/12/C-note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yunying61.png">
+      <meta itemprop="name" content="yunying61">
+      <meta itemprop="description" content="yunying61's Hexo Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星幕·云影">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言的笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-05 19:41:43" itemprop="dateCreated datePublished" datetime="2019-12-05T19:41:43+08:00">2019-12-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-15 17:02:00" itemprop="dateModified" datetime="2022-03-15T17:02:00+08:00">2022-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">编程语言</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="C语言的笔记" href="/2019/12/C-note/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::27d2d2207ac8a7f14511f5eca9903439" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>C语言 （Windows）环境配置</h1>
+<h2 id="代码编辑器"><a class="header-anchor" href="#代码编辑器"></a>代码编辑器</h2>
+<ul>
+<li>
+<p>首推<abbr title="Visual Studio Code"><b>VS Code</b></abbr>,这是一款由微软开发的免费开源的现代化轻量级代码编辑器，支持几乎所有主流的编程语言的开发、语法高亮、智能代码补全、自定义热键、括号匹配、代码片段、代码对比 Diff、GIT 等特性，支持插件扩展，并针对网页开发和云端应用开发做了优化。软件跨平台支持 Win、Mac 以及 Linux，运行流畅，软件小巧精致。</p>
+<blockquote>
+<p>安装地址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">VS Code官网下载</a><br />
+百度云（版本：win64位-1.40.2）链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1lkAnve07Zk0pDGXMtJ8HSw">https://pan.baidu.com/s/1lkAnve07Zk0pDGXMtJ8HSw</a> 提取码: rh99</p>
+</blockquote>
+</li>
+<li>
+<p>其次就是学生党们可能还在用的<strong>Visual C++ 6.0</strong></p>
+<blockquote>
+<p>百度云 链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/10-YF4j3q5-1ElOBiKOM-tg">https://pan.baidu.com/s/10-YF4j3q5-1ElOBiKOM-tg</a> 提取码: rdqq</p>
+</blockquote>
+</li>
+<li>
+<p>GCC的话。。。有点麻烦不推荐，为了在 Windows 上安装 GCC，您需要安装 MinGW。为了安装 MinGW，请访问 MinGW 的主页 <a target="_blank" rel="noopener" href="https://www.mingw.org">https://www.mingw.org</a>，进入 MinGW 下载页面，下载最新版本的 MinGW 安装程序。如果想弄的话下面这个链接</p>
+<blockquote><p>windows下安装MinGW及C++的环境配置</p>
+<footer><strong>啊sir_,</strong><cite><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013171283/article/details/80898442">地址</a></cite></footer></blockquote>
+</li>
+</ul>
+<h1>C 程序结构</h1>
+<p>其实刚学C语言的时候，不要觉得这串代码很奇怪，那串代码也很奇怪。每当遇到一个陌生代码的时候，我会先假设它有一个特殊用途，然后忽略掉它的陌生感带来的恐惧。随着学习的深入，你迟早会学到这个曾经陌生的代码的用处。</p>
+<ol>
+<li>首先先了解以下C程序的结构</li>
+</ol>
+<ul>
+<li>C 程序主要包括以下部分：</li>
+<li>预处理器指令</li>
+<li>函数</li>
+<li>变量</li>
+<li>语句 &amp; 表达式</li>
+<li>注释（这个看你需不需要注释）</li>
+</ul>
+<ol start="2">
+<li>再看一下一个简单的C程序长什么样</li>
+</ol>
+  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Hello, World!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>它的作用很简单，就是在屏幕上输出Hello, World!</p>
+<p>由于过于简单吗，我就不贴图片了（贴图片都更复杂）。</p>
+<ol start="3">
+<li>接下来我讲解一下上面这段程序：
+<ul>
+<li>程序的第一行 #include &lt;stdio.h&gt; 是预处理器指令，告诉 C 编译器在实际编译之前要包含 stdio.h 文件。</li>
+<li>void main() 是主函数，程序从这里开始执行。</li>
+<li>printf(“…”) 是 C 中另一个可用的函数（它被包含在stdio.h 文件），会在屏幕上显示消息 “Hello, World!”。</li>
+</ul>
+</li>
+</ol>
+<h1>C 基本语法</h1>
+<h2 id="C-的令牌（Tokens）"><a class="header-anchor" href="#C-的令牌（Tokens）"></a>C 的令牌（Tokens）</h2>
+<p>C 程序由各种令牌组成，令牌可以是关键字、标识符、常量、字符串值，或者是一个符号。例如，下面的 C 语句包括五个令牌：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello, World! \n&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>这五个令牌分别是：</p>
+<pre><code>printf
+(
+&quot;Hello, World! \n&quot;
+)
+;
+</code></pre>
+<h2 id="分号-😉"><a class="header-anchor" href="#分号-😉"></a>分号(😉</h2>
+<p>在 C 程序中，分号是语句结束符。也就是说，每个语句必须以分号结束。它表明一个逻辑实体的结束。(在某些函数运用中要特别注意，如:if函数、for循环函数…)</p>
+<h2 id="注释"><a class="header-anchor" href="#注释"></a>注释</h2>
+<p>注释在某些方面看来，还是很重要的。当你共享代码时，方便别人阅读您的代码。<br />
+C 语言有两种注释方式：<br />
+1.单行注释</p>
+<pre><code>// 单行注释，双左斜杠 后全部为注释。
+</code></pre>
+<p>以 // 开始的单行注释，这种注释可以单独占一行。</p>
+<p>2.多功能注释</p>
+<pre><code>/* 单行注释 */
+/* 
+多行注释
+多行注释
+多行注释
+*/
+</code></pre>
+<p>/* */ 这种格式的注释可以单行或多行。<br />
+您<strong>不能在注释内嵌套注释</strong>，注释也不能出现在字符串或字符值中。<br />
+如：</p>
+<pre><code>printf(&quot;//how do you do!\n&quot;);
+</code></pre>
+<p>或</p>
+<pre><code>printf(&quot;/*how do you do!*/\n);
+</code></pre>
+<p>输出分别是：//how do you do！和 /*how do you do!*/</p>
+<h2 id="标识符"><a class="header-anchor" href="#标识符"></a>标识符</h2>
+<p><strong>标识符</strong>：在编程语言中，标识符是用户编程时使用的名字，变量、常量、函数、语句块都有名字。是用来标识某个实体的一个符号，是对变量名、函数名、标号和其他各种用户定义的对象命名。</p>
+<blockquote>
+<p>C语言中标识符的命名规范：</p>
+</blockquote>
+<ol>
+<li>标识符由字母、数字、下划线组成，并且首字母不能是数字。</li>
+<li>不能把C的关键字作为用户的标识符，例如：if、for、while等。（注：标识符不能和C语言的关键字相同，也不能和用户自定义的函数或C语言库函数同名）</li>
+<li>标识符长度是由机器上的编译系统决定的，一般的限制为8字符，(注：8字符长度限制是C89标准，C99标准已经扩充长度，其实大部分工业标准都更长)。</li>
+<li>标识符对大小写敏感，即严格区分大小写。一般对变量名用小写，符号常量命名用大写。（注：C语言中字母是区分大小写的，因此score、Score、SCORE分别代表三个不同的标识符）</li>
+<li>标识符命名应做到&quot;见名知意&quot;，例如，长度（外语：length），求和、总计（外语：sum），圆周率（外语：pi）</li>
+</ol>
+<p>C 标识符是用来标识变量、函数，或任何其他用户自定义项目的名称。一个标识符以字母 A-Z 或 a-z 或<code>下划线 _ </code>开始，后跟零个或多个字母、下划线和数字（0-9）。<br />
+C 标识符内不允许出现标点字符，比如 @、$ 和 %。C 是区分大小写的编程语言。因此，在 C 中，Manpower 和 manpower 是两个不同的标识符。下面列出几个有效的标识符：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">mohd</td>
+<td>zara</td>
+<td>abc</td>
+<td>move_name</td>
+<td>a_123</td>
+</tr>
+<tr>
+<td style="text-align:center">myname50</td>
+<td>_temp</td>
+<td>j</td>
+<td>a23b9</td>
+<td>retVal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="关键字"><a class="header-anchor" href="#关键字"></a>关键字</h2>
+<p>下表列出了 C 中的保留字。这些保留字不能作为常量名、变量名或其他标识符名称。</p>
+<pre>
+<b>关键字</b>	 	说明
+auto		声明自动变量
+break		跳出当前循环
+case		开关语句分支
+char		声明字符型变量或函数返回值类型
+const		声明只读变量
+continue	结束当前循环，开始下一轮循环
+default		开关语句中的"其它"分支
+do			循环语句的循环体
+double		声明双精度浮点型变量或函数返回值类型
+else		条件语句否定分支（与 if 连用）
+enum		声明枚举类型
+extern		声明变量或函数是在其它文件或本文件的其他位置定义
+float		声明浮点型变量或函数返回值类型
+for			一种循环语句
+goto		无条件跳转语句
+if			条件语句
+int			声明整型变量或函数
+long		声明长整型变量或函数返回值类型
+register	声明寄存器变量
+return		子程序返回语句（可以带参数，也可不带参数）
+short		声明短整型变量或函数
+signed		声明有符号类型变量或函数
+sizeof		计算数据类型或变量长度（即所占字节数）
+static		声明静态变量
+struct		声明结构体类型
+switch		用于开关语句
+typedef		用以给数据类型取别名
+unsigned	声明无符号类型变量或函数
+union		声明共用体类型
+void		声明函数无返回值或无参数，声明无类型指针
+volatile	说明变量在程序执行中可被隐含地改变
+while		循环语句的循环条件
+**C99 		新增关键字**
+_Bool	
+_Complex	
+_Imaginary	
+inline	
+restrict
+**C11 新增关键字**
+_Alignas	
+_Alignof	
+_Atomic	
+_Generic	
+_Noreturn
+_Static_assert	_Thread_local    
+</pre>
+<h2 id="C-中的空格"><a class="header-anchor" href="#C-中的空格"></a>C 中的空格</h2>
+<p>只包含空格的行，被称为空白行，可能带有注释，C 编译器会完全忽略它。<br />
+在 C 中，空格用于描述空白符、制表符、换行符和注释。空格分隔语句的各个部分，让编译器能识别语句中的某个元素（比如 int）在哪里结束，下一个元素在哪里开始。因此，在下面的语句中：</p>
+<pre><code>int age;
+</code></pre>
+<p>在这里，int 和 age 之间必须至少有一个空格字符（通常是一个空白符），这样编译器才能够区分它们。另一方面，在下面的语句中：</p>
+<pre><code>fruit = apples + oranges;   // 获取水果的总数
+</code></pre>
+<p>fruit 和 =，或者 = 和 apples 之间的空格字符不是必需的，但是为了增强可读性，您可以根据需要适当增加一些空格。</p>
+<h1>C 函数</h1>
+<p>准确的说，函数这个名称不太准确，容易误导人。C/C++里的函数应该被叫做__“子程序”__，是一个独立的程序段，可以被重复调用用来完成类似的功能</p>
+<p>这样的“子程序”很多情况下是用来__提供一个值__的，这就是通常的函数，这个值的类型必须明确，就是返回值的类型。</p>
+<p>但有的子程序不是用来提供一个值，可以仅仅是执行某些__特定的操作__，那么，定义为空类型是__安全的__，表示“不允许该子程序返回值”。这种子程序只能通过独立的语句调用，不能用在表达式里。</p>
+<p>之所以需要空类型，是因为，函数的默认返回值类型是int，如果在函数定义时未带返回类型说明，则默认为int；即使函数中没有return语句，编译器按照函数返回值的原理，会返回一个__不确定的值__。如果将这样的函数错用在表达式里，语法上没错，但会带来很难察觉的逻辑错误。<br />
+而将空类型函数用在表达式里是一个编译错误。</p>
+<h1>为什么C语言程序运行闪一下就没有了(解决方法)</h1>
+<ol>
+<li>system(“pause”)</li>
+<li>getchar()</li>
+<li>getch()</li>
+</ol>
+<h2 id="C语言中system-“pause”"><a class="header-anchor" href="#C语言中system-“pause”"></a>C语言中system(“pause”)</h2>
+<p>如果想要使用system(“pause”)，就要先包含该函数的头文件stdlib.h(#include &lt;stdlib.h&gt;)<br />
+system就是调用从程序中调用系统命令(和shell命令)。<br />
+system(“pause”)就是从程序里调用“pause”命令;<br />
+而“pause”这个系统命令的功能很简单，意思是停下这个程序，然后等待按下一个按键后退出程序。会在命令行上输出一行类似于“Press any key to exit”的字，等待用户按一个键，然后返回。</p>
+<h2 id="getchar"><a class="header-anchor" href="#getchar"></a>getchar()</h2>
+<p>getchar()函数的作用是从计算机终端(一般为键盘)输入一个字符。getchar()函数只能接收一个字符，其函数值就是从输入设备得到的字符。</p>
+<h2 id="getch-函数"><a class="header-anchor" href="#getch-函数"></a>getch()函数</h2>
+<p>如果想要使用getch(); ，就要先包含该函数的头文件conio.h(#include &lt;conio.h&gt;)</p>
+<p>getch()是编程中所用的函数，这个函数是一个不回显函数，当用户按下某个字符时，函数自动读取，无需按回车，有的C语言命令行程序会用到此函数做游戏，但是这个函数并非标准函数，要注意移植性！</p>
+<h2 id="getchar-与getch-的区别："><a class="header-anchor" href="#getchar-与getch-的区别："></a>getchar()与getch()的区别：</h2>
+<p>用getchar()时，在键盘上按一个字符后，要按回车才能读取进去；</p>
+<p>用getch()时，要包含头文件&lt;conio.h&gt;，在键盘上按一个字符马上就被读取进去，不用按回车，因此可以作为“按任意键继续”的执行语句。</p>
+<p>getch返回值是用户输入的ASCII码,出错返回-1，输入的字符不会回显在屏幕上。</p>
+<p>getch函数常用于程序调试中，在调试时，在关键位置显示有关的结果以待查看，然后用getch函数暂停程序运行，当按任意键后程序继续运行。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="yunying61 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="yunying61 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>yunying61
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.yunying61.top/2019/12/C-note/" title="C语言的笔记">http://www.yunying61.top/2019/12/C-note/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://blog.csdn.net/weixin_45385155">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">CSDN</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/C/" rel="tag"># C</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/12/hexo%E8%AF%AD%E6%B3%95/" rel="prev" title="hexo语法">
+                  <i class="fa fa-chevron-left"></i> hexo语法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/12/FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" rel="next" title="FTP服务器搭建">
+                  FTP服务器搭建 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-changyan">changyan</a></li>
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane changyan" id="comment-changyan">
+              <div class="comments" id="SOHUCS" sid="27d2d2207ac8a7f14511f5eca9903439"></div>
+            </div>
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yunying61</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">96k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:27</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"yunying61/community"}</script>
+<script src="/js/third-party/chat/gitter.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.13.10/dist/mermaid.min.js","integrity":"sha256-CmZCFVnvol9YL23PfjDflGY5nJwE+Mf/JN+8v+tD/34="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://www.yunying61.top/2019/12/C-note/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvVXPmv7","appkey":"942f7dcea39f6d4b449332dde8fe4241"}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"yunying61","repo":"hexo-gitalk-comments","client_id":"cd26c5cc6e59fb8d7d2d","client_secret":"04ee0273d65d5b5b3a5b95c36a90aaaae29c3d39","admin_user":"yunying61","distraction_free_mode":true,"proxy":"http://www.yunying61.top/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"27d2d2207ac8a7f14511f5eca9903439"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo2.png">
+  <link rel="mask-icon" href="/images/logo2.svg" color="#222">
+  <meta name="msvalidate.01" content="C4629C76253BAF6F511BC39C8C5D670E">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="mklink命令 mklink是windows系统下创建符号链接和硬链接的命令工具，它是一个很好的解决文件系统问题的工具。使用它需要管理员权限。 首先，先来介绍下mklink这个命令： mklink [[&#x2F;D] | [&#x2F;H] | [&#x2F;J]] Link Target &#x2F;D      创建目录符号链接。默认为文件符号链接。 &#x2F;H      创建硬链接而非符号链接。 &#x2F;J      创建目录联接。 Li">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Windows下mklink使用">
+<meta property="og:url" content="http://www.yunying61.top/2020/01/Windows%E4%B8%8Bmklink%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="星幕·云影">
+<meta property="og:description" content="mklink命令 mklink是windows系统下创建符号链接和硬链接的命令工具，它是一个很好的解决文件系统问题的工具。使用它需要管理员权限。 首先，先来介绍下mklink这个命令： mklink [[&#x2F;D] | [&#x2F;H] | [&#x2F;J]] Link Target &#x2F;D      创建目录符号链接。默认为文件符号链接。 &#x2F;H      创建硬链接而非符号链接。 &#x2F;J      创建目录联接。 Li">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-01T02:51:39.000Z">
+<meta property="article:modified_time" content="2022-03-15T10:04:51.564Z">
+<meta property="article:author" content="yunying61">
+<meta property="article:tag" content="cmd">
+<meta property="article:tag" content="mklink">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="文件链接">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yunying61.top/2020/01/Windows%E4%B8%8Bmklink%E4%BD%BF%E7%94%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yunying61.top/2020/01/Windows%E4%B8%8Bmklink%E4%BD%BF%E7%94%A8/","path":"2020/01/Windows下mklink使用/","title":"Windows下mklink使用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Windows下mklink使用 | 星幕·云影</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">星幕·云影</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">mklink命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5%EF%BC%88Symbolic-link%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">符号链接（Symbolic link）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E9%93%BE%E6%8E%A5%EF%BC%88Hard-link%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">硬链接（Hard link）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E8%81%94%E6%8E%A5-%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5%E9%A6%96%E9%80%89"><span class="nav-number">1.3.</span> <span class="nav-text">目录联接(创建软链接首选)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mklink-%E7%A1%AC%E9%93%BE%E6%8E%A5%E5%92%8C%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.4.</span> <span class="nav-text">mklink 硬链接和符号链接的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mklink-D%E5%92%8C-J%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.5.</span> <span class="nav-text">mklink &#x2F;D和&#x2F;J的区别</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png">
+  <p class="site-author-name" itemprop="name">yunying61</p>
+  <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button class="js-gitter-toggle-chat-button"><i class="fa fa-comment"></i>
+      聊天室
+    </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yunying61" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yunying61" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yunying61@qq.com" title="E-Mail → mailto:yunying61@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/5119152507" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5119152507" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+<div id="musicplayer">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=34364124&auto=1&height=66">
+    </iframe>
+</div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/yunying61" class="github-corner" title="在GitHub上关注我" aria-label="在GitHub上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/01/Windows%E4%B8%8Bmklink%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yunying61.png">
+      <meta itemprop="name" content="yunying61">
+      <meta itemprop="description" content="yunying61's Hexo Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星幕·云影">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows下mklink使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-01-01 10:51:39" itemprop="dateCreated datePublished" datetime="2020-01-01T10:51:39+08:00">2020-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-15 18:04:51" itemprop="dateModified" datetime="2022-03-15T18:04:51+08:00">2022-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="Windows下mklink使用" href="/2020/01/Windows%E4%B8%8Bmklink%E4%BD%BF%E7%94%A8/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::650a28f7df4d114c5cec4824d5abb4e2" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>mklink命令</h1>
+<p>mklink是windows系统下创建符号链接和硬链接的命令工具，它是一个很好的解决文件系统问题的工具。使用它需要<strong>管理员权限</strong>。</p>
+<p>首先，先来介绍下mklink这个命令：</p>
+<pre><code>mklink [[/D] | [/H] | [/J]] Link Target
+/D      创建目录符号链接。默认为文件符号链接。
+/H      创建硬链接而非符号链接。
+/J      创建目录联接。
+Link    指定新的符号链接名称。
+Target  指定新链接引用的路径(相对或绝对)。
+</code></pre>
+<blockquote>
+<p>注意：因为powershell不支持mklink命令，所以要在前面加cmd /c表示用cmd来运行该命令，路径注意引号，可以是相对路径也可以是绝对路径。</p>
+</blockquote>
+<h2 id="符号链接（Symbolic-link）"><a class="header-anchor" href="#符号链接（Symbolic-link）"></a>符号链接（Symbolic link）</h2>
+<p>对文件创建符号链接</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink &quot;link&quot; &quot;target&quot;</span><br></pre></td></tr></table></figure>
+<p>对文件夹创建符号链接</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /D &quot;link&quot; &quot;target&quot;</span><br></pre></td></tr></table></figure>
+<p>符号链接连接远程的路径</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /D &quot;D:\link&quot; &quot;\\<span class="number">123</span>.<span class="number">123</span>.<span class="number">0</span>.<span class="number">1</span>\D$\target&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>特点</strong></p>
+<ul>
+<li>创建链接后的图标和快捷方式很像, 都有一个箭头的标志</li>
+<li>在系统中不占用空间</li>
+<li>在文件系统中不是一个单独的文件</li>
+<li>如果源文件被删除了，链接就没用了</li>
+<li>移除源文件不会影响符号链接</li>
+<li>移除链接文件也不会影响源文件</li>
+<li>win10_x64_build10565上测试不可以右键修改图标和设置管理员运行</li>
+<li>文件大小为0字节和不占用空间</li>
+<li>文件属性的创建时间和修改时间都是软链接创建和修改时的时间</li>
+<li>文件类型是.SYMLINK</li>
+<li>可以在cmd下运行软链接(假如链接的是程序, 且运行命令是XXX即可)(win10_x64_build10565上测试通过)</li>
+</ul>
+<p>符号链接是在文件系统上实现的链接，对操作系统上大多数软件来说是透明的，也就是说，当软件访问符号链接时，其实际上是在访问该符号链接所指向的文件夹。<br />
+创建的符号链接显示的类型是文件夹，实际上相当于是指向<code>其他盘</code>真实的文件夹路径的<code>快捷方式</code>，符号链接本身不占空间。路径映射的过程对程序来说是透明的，程序对这个符号链接的操作实际上是<code>对文件夹的操作</code>，因此程序可以正常运行，所以这和普通的创建快捷方式是不一样的操作。此外，符号链接和目录联接是有快捷方式的那个箭头的。</p>
+<blockquote>
+<p>注意：软链接的创建需要<code>管理员权限</code>，确保cmd是管理员模式。对于文件夹的软链接创建，一定要加上&quot;/D&quot;。通过<code>相对路径</code>创建的软链接在移动后无法使用，<code>绝对路径</code>创建的移动后不影响使用。符号链接可以直接右键删除，或通过<strong>rmdir</strong>命令删除，不会影响原文件，但<strong>del</strong>命令则<strong>会把目标文件删除</strong>。</p>
+</blockquote>
+<h2 id="硬链接（Hard-link）"><a class="header-anchor" href="#硬链接（Hard-link）"></a>硬链接（Hard link）</h2>
+<p>对文件创建硬链接</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /H &quot;link&quot; &quot;target&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>硬链接只能用于文件，不能对文件夹创建硬链接，不然会提示“拒绝访问”</li>
+<li>在系统中占用的空间与源文件相同，但在系统中引用的是相同的对象（不是拷贝）</li>
+<li>图标和创建快捷方式的图标不同(没有快捷方式的小箭头)</li>
+<li>移除源文件不会影响硬链接</li>
+<li>移除硬链接不会影响源文件</li>
+<li>如果源文件被删除，它的内容依然通过硬链接存在</li>
+<li>硬链接文件的任何更改都会影响到源文件</li>
+<li>文件大小, 占用空间, 创建和修改时间跟原原文件一样</li>
+<li>可以在cmd下运行硬连接(假如链接的是程序)</li>
+</ul>
+<p>通过上述命令就可以创建从“link”路径到“target”路径的硬链接，例如：在D盘根目录下新建文本“A.txt”，然后输入命令如下即可创建到&quot;A.txt&quot;的硬链接&quot;B.txt&quot;<br />
+在文件资源管理器上看，“B.txt”与“A.txt”占用同样大小的空间，其实这个数据并不用去理会，硬链接相当于给文件的数据多创建了一个“入口”，“A.txt”,“B.txt”指向的是硬盘中的同一块区域，因此这两个文件的内容是完全一样的，编辑任何一个文件都会影响到另一文件，当删除其中一个文件，只是删除这个文件其中一个“入口”，要两个文件都删除，文件系统才会标志这块硬盘区域上的文件被删除。</p>
+<h2 id="目录联接-创建软链接首选"><a class="header-anchor" href="#目录联接-创建软链接首选"></a>目录联接(创建软链接首选)</h2>
+<p>对文件夹创建目录联接</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /J &quot;link&quot; &quot;target&quot;</span><br></pre></td></tr></table></figure>
+<p>“目录联接”只能应用于文件夹，不可用于文件。根据网上能找到的资料显示，对文件夹创建的“目录联接”与“符号链接”并没有区别，一样可以实现软件数据的迁移。不过貌似这两者对剪切操作有不一样的表现。<br />
+例如，我现在在D盘创建“文件夹A”,在“文件夹A”里新建A.txt，然后在D盘根目录创建一个“目录联接B”指向这个“文件夹A”，通过这个“目录联接B”，我可以访问到A.txt，接着我对“目录联接B”进行剪切操作，剪切到C盘，发现“文件夹A”和“目录联接B”还是在D盘，但是打开却发现A.txt不见了，被剪切到了C盘的“文件夹B”中，也就是说对“目录联接”的剪切操作会<code>影响原来的文件</code>。<br />
+对于这其中的机制，很神奇。。。感觉“目录联接”跟“符号链接”有点像，给文件夹里的内容提供一个“入口”即所谓的“联接点”，剪切操作时会通过这个“联接点”把内容剪切出来，原来的目录和“联接点”虽然没有变化，但里面的内容被剪切出来了。<br />
+而“符号链接”的剪切操作<code>仅仅是对这个“符号链接”的剪切</code>，并不会透过这个“符号链接”把其<code>内容剪切掉</code>。</p>
+<h2 id="mklink-硬链接和符号链接的区别"><a class="header-anchor" href="#mklink-硬链接和符号链接的区别"></a>mklink 硬链接和符号链接的区别</h2>
+<p>硬链接只能用于文件，不能用于文件夹，而且硬链接和目标文件必须在同一个分区或者卷中。硬链接的目的是<code>为了给文件创建多个目录路径(多个入口)</code>，而不像符号链接是为了指向某个已有的文件。</p>
+<p>假设要给Target. txt文件创建一个硬链接，系统下载可以执行以下命令：</p>
+<p>mklink/H Link.txt Target.txt</p>
+<p>和符号链接一样，<code>硬链接中所做的任何修改，都会自动应用到目标文件上</code>。但是硬链接具有以下一些不同的地方。</p>
+<p>(1)硬链接必须引用同一个分区或者卷中的文件，而符号链接可以指向不同分区或者共享文件夹上的文件或者文件夹。</p>
+<p>(2) 硬链接只能引用文件，而符号链接可以引用文件或者文件夹。</p>
+<p>(3)Windows会自动维护硬链接，即使把硬链接复制到其他文件夹，硬链接和目标都可以继续访问。</p>
+<p>(4)删除目标文件，硬链接可以继续保留。只有把目标文件和所有的硬链接都删除，才能把该文件彻底删除。</p>
+<p>(5)如果win7把符号链接的目标文件删除，然后用一个同名文件替换，则符号链接会指向新的目标文件；而把硬链接的目标文件删除’再用同名文件替换，则硬链接还是会继续引用原始文件。</p>
+<p>(6)也就是说，硬链接和目标文件的地位相等。事实上，原始的目标文件本身也相当于硬链接，新建硬链接，只是相当于增加一个目录路後而已。</p>
+<p>(7)硬链接看上去和真的文件一模一样(实际上就是真实的文件)，不像符号链接那样有一个快捷方式的小箭头，但是硬链接并不会增加磁盘空间的占用。</p>
+<p>(8)对硬链接进行NTFS权限的修改，会同时影响到目标文件(因为两者等价)，而符号链接和目标文件可以设置不同的NTFS权限。</p>
+<blockquote>
+<p>综上，我们可以将硬链接理解成C语言中的指针、空间中的传送门，文件随着硬链接的创建，等于它有一个“固定”地址，但它对外沟通的通道有多个，只要通道还存在，该文件就不会消失。</p>
+</blockquote>
+<h2 id="mklink-D和-J的区别"><a class="header-anchor" href="#mklink-D和-J的区别"></a>mklink /D和/J的区别</h2>
+<p><strong>目录符号链接</strong>和<strong>目录联接</strong>的区别在于：</p>
+<p>目录联接在创建时会自动引用目标目录的绝对路径，而符号链接允许相对路径的引用。</p>
+<p>如分别用 mklink /D dira tdir 和 mklink /J dirb tdir 创建 dira、dirb 对相对目录的 tdir 的符号链接和目录联接，之后将 dira、dirb 移动到其它目录下，则访问 dira 时会提示“位置不可用”，访问 dirb 时仍然正常指向 tdir；</p>
+<p>且win10_x64_build10565的cmd下dir命令查看会发现, dira符号链接链接到的是相对路径下的tdir文件(不管是否存在tdir文件), 且文件类型是symlink, dirb目录联接则链接到绝对(全)路径下的tdir文件, 且文件类型是junction(可能是系统自动把相对路径转换为全路径)</p>
+<p>而分别用 mklink /D dira c:\demo\tdir 和 mklink /J dirb c:\demo\tdir 创建 c:\demo\tdir 的符号链接和目录联接，再将这两个目录链接移动到其它目录下，则 dira 和 dirb 均可正常指向 c:\demo\tdir；</p>
+<p>由此可见当创建目录链接时对目标目录使用绝对路径，D 和 J 两个参数实现的目录链接效果是一样的；</p>
+<p>英文原文：</p>
+<p>MKLINK /D | /H | /J Link Target</p>
+<p>/D Creates a directory symbolic link. Default is a file symbolic link. /H Creates a hard link instead of a symbolic link. /J Creates a Directory Junction.</p>
+<p>/D creates a symbolic link, or a soft link.This essentially acts like a shortcut to a folder in prior versions of Windows, except you don’t have to use an actual shortcut.</p>
+<p>/H creates a hard link, which points directly to the file.This option can’t be used for folders directly for some reason, you’ll have to use the next option.</p>
+<p>/J creates a “Directory Junction”A Directory Junction is actually just a hard link to a directory. This is a feature that existed prior to Vista as well. If you are trying to symlink to a directory using a hard link, then you should use this option.</p>
+<p>Understanding Hard vs Soft Links ==== Hard Link</p>
+<p>A hard link directly points to the file, and acts to the operating system as if it is the file itself. You’ll want to use this option the majority of the time if you are trying to fake an application’s directory.</p>
+<p>Soft Link</p>
+<p>A soft link is essentially a shortcut to a file or folder – if you are using Windows explorer, you’ll be redirected to the directory if you double-click on a shortcut, it won’t pretend its part of the filesystem. You can still directly reference or open a file with the symlinked path, and it mostly works.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="yunying61 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="yunying61 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>yunying61
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.yunying61.top/2020/01/Windows%E4%B8%8Bmklink%E4%BD%BF%E7%94%A8/" title="Windows下mklink使用">http://www.yunying61.top/2020/01/Windows下mklink使用/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://blog.csdn.net/weixin_45385155">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">CSDN</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/cmd/" rel="tag"># cmd</a>
+              <a href="/tags/mklink/" rel="tag"># mklink</a>
+              <a href="/tags/windows/" rel="tag"># windows</a>
+              <a href="/tags/%E6%96%87%E4%BB%B6%E9%93%BE%E6%8E%A5/" rel="tag"># 文件链接</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/12/FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" rel="prev" title="FTP服务器搭建">
+                  <i class="fa fa-chevron-left"></i> FTP服务器搭建
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/01/Minecraft%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" rel="next" title="Minecraft服务器搭建">
+                  Minecraft服务器搭建 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-changyan">changyan</a></li>
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane changyan" id="comment-changyan">
+              <div class="comments" id="SOHUCS" sid="650a28f7df4d114c5cec4824d5abb4e2"></div>
+            </div>
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yunying61</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">96k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:27</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"yunying61/community"}</script>
+<script src="/js/third-party/chat/gitter.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.13.10/dist/mermaid.min.js","integrity":"sha256-CmZCFVnvol9YL23PfjDflGY5nJwE+Mf/JN+8v+tD/34="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://www.yunying61.top/2020/01/Windows%E4%B8%8Bmklink%E4%BD%BF%E7%94%A8/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvVXPmv7","appkey":"942f7dcea39f6d4b449332dde8fe4241"}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"yunying61","repo":"hexo-gitalk-comments","client_id":"cd26c5cc6e59fb8d7d2d","client_secret":"04ee0273d65d5b5b3a5b95c36a90aaaae29c3d39","admin_user":"yunying61","distraction_free_mode":true,"proxy":"http://www.yunying61.top/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"650a28f7df4d114c5cec4824d5abb4e2"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

@@ -165,18 +165,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">42</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -239,6 +239,382 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2022/03/Node-js-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yunying61.png">
+      <meta itemprop="name" content="yunying61">
+      <meta itemprop="description" content="yunying61's Hexo Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星幕·云影">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/Node-js-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Node.js 安装与配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-10 17:15:07" itemprop="dateCreated datePublished" datetime="2022-03-10T17:15:07+08:00">2022-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-15 14:38:30" itemprop="dateModified" datetime="2022-03-15T14:38:30+08:00">2022-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="Node.js 安装与配置" href="/2022/03/Node-js-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::becf033aae5eb5dfcca87d0767dcd6e6" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>399</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1>Node.js</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/Node-js-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2022/03/%E8%80%83%E7%A0%94-%E6%95%B0%E4%BA%8C-2022%E5%B9%B4%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yunying61.png">
+      <meta itemprop="name" content="yunying61">
+      <meta itemprop="description" content="yunying61's Hexo Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星幕·云影">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/%E8%80%83%E7%A0%94-%E6%95%B0%E4%BA%8C-2022%E5%B9%B4%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2/" class="post-title-link" itemprop="url">考研-数二-2022年考试大纲</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-10 14:58:51" itemprop="dateCreated datePublished" datetime="2022-03-10T14:58:51+08:00">2022-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-15 14:36:38" itemprop="dateModified" datetime="2022-03-15T14:36:38+08:00">2022-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA/" itemprop="url" rel="index"><span itemprop="name">个人</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA/%E5%AD%A6%E4%B9%A0/%E8%80%83%E7%A0%94/" itemprop="url" rel="index"><span itemprop="name">考研</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="考研-数二-2022年考试大纲" href="/2022/03/%E8%80%83%E7%A0%94-%E6%95%B0%E4%BA%8C-2022%E5%B9%B4%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::4180cf0e6be46264c7f2e980147b1a78" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[TOC]</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/%E8%80%83%E7%A0%94-%E6%95%B0%E4%BA%8C-2022%E5%B9%B4%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2022/03/%E8%80%83%E7%A0%94-%E9%AB%98%E6%95%B0%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yunying61.png">
+      <meta itemprop="name" content="yunying61">
+      <meta itemprop="description" content="yunying61's Hexo Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星幕·云影">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/%E8%80%83%E7%A0%94-%E9%AB%98%E6%95%B0%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">考研-高数复习笔记</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-10 09:21:51" itemprop="dateCreated datePublished" datetime="2022-03-10T09:21:51+08:00">2022-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-15 14:36:01" itemprop="dateModified" datetime="2022-03-15T14:36:01+08:00">2022-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA/" itemprop="url" rel="index"><span itemprop="name">个人</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA/%E5%AD%A6%E4%B9%A0/%E8%80%83%E7%A0%94/" itemprop="url" rel="index"><span itemprop="name">考研</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="考研-高数复习笔记" href="/2022/03/%E8%80%83%E7%A0%94-%E9%AB%98%E6%95%B0%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::b02f935980ef570a7e8d508cc69c4da9" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[TOC]</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/%E8%80%83%E7%A0%94-%E9%AB%98%E6%95%B0%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2022/03/Windows11%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%8D%B8%E8%BD%BD-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -262,9 +638,40 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-06 22:17:51 / 修改时间：22:30:07" itemprop="dateCreated datePublished" datetime="2022-03-06T22:17:51+08:00">2022-03-06</time>
+      <time title="创建时间：2022-03-06 22:17:51" itemprop="dateCreated datePublished" datetime="2022-03-06T22:17:51+08:00">2022-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-15 14:33:35" itemprop="dateModified" datetime="2022-03-15T14:33:35+08:00">2022-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+        </span>
     </span>
 
   
@@ -306,9 +713,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a
-target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/windows/修复阻止程序安装或删除的问题-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">修复阻止程序安装或删除的问题
-(microsoft.com)</a></p>
+          <p><a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">修复阻止程序安装或删除的问题 (microsoft.com)</a></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/03/Windows11%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%8D%B8%E8%BD%BD-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/#more" rel="contents">
@@ -373,7 +778,7 @@ target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/windows
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-07 17:21:02" itemprop="dateModified" datetime="2022-03-07T17:21:02+08:00">2022-03-07</time>
+      <time title="修改时间：2022-03-15 14:33:04" itemprop="dateModified" datetime="2022-03-15T14:33:04+08:00">2022-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -381,7 +786,23 @@ target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/windows
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
         </span>
     </span>
 
@@ -424,7 +845,7 @@ target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/windows
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="取消全文预览启用阅读全文">取消“全文预览”，启用“阅读全文”</h2>
+          <h2 id="取消“全文预览”，启用“阅读全文”"><a class="header-anchor" href="#取消“全文预览”，启用“阅读全文”"></a>取消“全文预览”，启用“阅读全文”</h2>
 <p>在md文章中任意位置插入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
 <p>位于其下方的内容将不在首页<code>“全文预览”</code>，而是采用<code>“阅读全文”</code>的按钮打开文章，阅读全部内容。</p>
@@ -461,7 +882,7 @@ target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/windows
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2022/02/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yunying61.png">
@@ -474,122 +895,7 @@ target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/windows
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-02-26 18:18:31" itemprop="dateCreated datePublished" datetime="2022-02-26T18:18:31+08:00">2022-02-26</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="Hello World" href="/2022/02/hello-world/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::cddf419ebed12b9d2ddb8eacf9a81089" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>367</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yunying61.png">
-      <meta itemprop="name" content="yunying61">
-      <meta itemprop="description" content="yunying61's Hexo Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星幕·云影">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/" class="post-title-link" itemprop="url">Typora+PicGo+阿里云OSS-搭建自动上传图床</a>
+          <a href="/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" class="post-title-link" itemprop="url">Typora-PicGo-阿里云OSS-搭建图床</a>
         </h2>
 
         <div class="post-meta-container">
@@ -607,7 +913,7 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-01 12:10:12" itemprop="dateModified" datetime="2022-03-01T12:10:12+08:00">2022-03-01</time>
+      <time title="修改时间：2022-03-15 14:29:55" itemprop="dateModified" datetime="2022-03-15T14:29:55+08:00">2022-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -615,15 +921,7 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">应用</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BA%94%E7%94%A8/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -631,7 +929,15 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
         </span>
     </span>
 
@@ -644,8 +950,8 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
       </span>
       <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="Typora+PicGo+阿里云OSS-搭建自动上传图床" href="/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::a4d9fd8f810faf409a03dcc3ca2e2ff6" class="cy_cmt_count" itemprop="commentCount"></span>
+    <a title="Typora-PicGo-阿里云OSS-搭建图床" href="/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::6130dc7729357d0c44b310f82a7ed34e" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -656,7 +962,7 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3k</span>
+      <span>3.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -674,19 +980,17 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1
-id="typorapicgo阿里云oss-搭建自动上传图床">Typora+PicGo+阿里云OSS-搭建自动上传图床</h1>
-<h2 id="前言">前言</h2>
+          <h1>Typora+PicGo+阿里云OSS-搭建自动上传图床</h1>
+<h2 id="前言"><a class="header-anchor" href="#前言"></a>前言</h2>
 <blockquote>
-<p>一定要注意空格啊！！！我就是因为Access Key
-ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！</p>
+<p>一定要注意空格啊！！！我就是因为Access Key ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！</p>
 </blockquote>
 <p>好了，以上是吐槽，接下来进入正题。</p>
 <p>在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要<strong>插入图片</strong>用的是本地链接。在本地，在编辑器中，我们能看到图片的展示。但是如果我们写完了，需要上传到自己的博客，或者去到某些平台发布。复制文章过去，图片并不能被复制过去，需要手动的去上传本地图片到图片服务器，然后根据URL导入文章中，再排版。十分的麻烦。</p>
 <p>而PicGo+阿里云的OSS就可以<strong>自动</strong>帮我们将图片上传到网上，转换成URL，然后出现在我们文章中需要插入图片的位置，使用该URL，不管我们在什么平台发布文章，都能显示我们的图片。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A/#more" rel="contents">
+              <a class="btn" href="/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -717,7 +1021,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/05/C-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/05/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yunying61.png">
@@ -730,7 +1034,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/05/C-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" class="post-title-link" itemprop="url">C++ 类&对象</a>
+          <a href="/2020/05/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" class="post-title-link" itemprop="url">C++ 类&对象</a>
         </h2>
 
         <div class="post-meta-container">
@@ -748,7 +1052,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-28 20:33:32" itemprop="dateModified" datetime="2022-02-28T20:33:32+08:00">2022-02-28</time>
+      <time title="修改时间：2022-03-15 20:47:15" itemprop="dateModified" datetime="2022-03-15T20:47:15+08:00">2022-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -756,15 +1060,15 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/C-C/" itemprop="url" rel="index"><span itemprop="name">C/C++</span></a>
+          <a href="/categories/IT/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">编程语言</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
         </span>
     </span>
 
@@ -777,8 +1081,8 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
       </span>
       <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="C++ 类&对象" href="/2020/05/C-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::819f3d84b3b1f923f5145fea5ddfcaf3" class="cy_cmt_count" itemprop="commentCount"></span>
+    <a title="C++ 类&对象" href="/2020/05/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::00095c1c5c11da3ee2cc37ef020436fc" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -807,136 +1111,17 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="c-类对象">C++ 类&amp;对象</h1>
-<p>C++ 在 C 语言的基础上增加了面向对象编程，C++
-支持面向对象程序设计。类是 C++
-的核心特性，通常被称为用户定义的类型。</p>
+          <h1>C++ 类&amp;对象</h1>
+<p>C++ 在 C 语言的基础上增加了面向对象编程，C++ 支持面向对象程序设计。类是 C++ 的核心特性，通常被称为用户定义的类型。</p>
 <p>类用于指定对象的形式，它包含了数据表示法和用于处理数据的方法。类中的数据和方法称为类的成员。函数在一个类中被称为类的成员。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/05/C-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/#more" rel="contents">
+              <a class="btn" href="/2020/05/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/03/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E9%85%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yunying61.png">
-      <meta itemprop="name" content="yunying61">
-      <meta itemprop="description" content="yunying61's Hexo Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星幕·云影">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/03/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Hexo博客的初始化和配置</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-03-02 21:05:02" itemprop="dateCreated datePublished" datetime="2020-03-02T21:05:02+08:00">2020-03-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-28 20:33:22" itemprop="dateModified" datetime="2022-02-28T20:33:22+08:00">2022-02-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="Hexo博客的初始化和配置" href="/2020/03/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E9%85%8D%E7%BD%AE/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::c5ffd624475188001da62bf7fcaa98e4" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
       
     </div>
 
@@ -993,7 +1178,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-28 20:33:16" itemprop="dateModified" datetime="2022-02-28T20:33:16+08:00">2022-02-28</time>
+      <time title="修改时间：2022-03-15 17:28:09" itemprop="dateModified" datetime="2022-03-15T17:28:09+08:00">2022-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1001,23 +1186,23 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">应用</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BA%94%E7%94%A8/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+          <a href="/categories/IT/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
         </span>
     </span>
 
@@ -1042,7 +1227,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.5k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1060,19 +1245,8 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="hexo简介">Hexo简介</h1>
+          <h2 id="Hexo简介"><a class="header-anchor" href="#Hexo简介"></a>Hexo简介</h2>
 <p>Hexo是一款基于Node.js的静态博客框架，可以方便的生成静态网页托管在GitHub和Coding上或者自己的服务器上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。</p>
-<h1 id="hexo搭建步骤">Hexo搭建步骤</h1>
-<ol type="1">
-<li>安装Git</li>
-<li>安装Node.js</li>
-<li>安装Hexo</li>
-<li>GitHub创建个人仓库</li>
-<li>生成SSH添加到GitHub</li>
-<li>将hexo部署到GitHub</li>
-<li>设置个人域名</li>
-<li>发布文章</li>
-</ol>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/03/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%92%8C%E7%AE%80%E5%8D%95%E9%83%A8%E7%BD%B2/#more" rel="contents">
@@ -1137,7 +1311,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-08 12:12:02" itemprop="dateModified" datetime="2022-03-08T12:12:02+08:00">2022-03-08</time>
+      <time title="修改时间：2022-03-15 14:17:18" itemprop="dateModified" datetime="2022-03-15T14:17:18+08:00">2022-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1149,11 +1323,19 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+          <a href="/categories/IT/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
         </span>
     </span>
 
@@ -1178,7 +1360,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>343</span>
+      <span>320</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1196,7 +1378,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="section"></h1>
+          <h1></h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/03/Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/#more" rel="contents">
@@ -1230,7 +1412,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/02/leanote%E8%9A%82%E8%9A%81%E7%AC%94%E8%AE%B0-%E7%A7%81%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/02/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yunying61.png">
@@ -1243,7 +1425,7 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/02/leanote%E8%9A%82%E8%9A%81%E7%AC%94%E8%AE%B0-%E7%A7%81%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">leanote蚂蚁笔记-私人云笔记服务搭建</a>
+          <a href="/2020/02/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">MongoDB数据库 安装与配置</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1254,14 +1436,14 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2020-02-22 21:53:24" itemprop="dateCreated datePublished" datetime="2020-02-22T21:53:24+08:00">2020-02-22</time>
+      <time title="创建时间：2020-02-22 21:53:49" itemprop="dateCreated datePublished" datetime="2020-02-22T21:53:49+08:00">2020-02-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-01 12:06:11" itemprop="dateModified" datetime="2022-03-01T12:06:11+08:00">2022-03-01</time>
+      <time title="修改时间：2022-03-15 11:55:55" itemprop="dateModified" datetime="2022-03-15T11:55:55+08:00">2022-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1269,23 +1451,19 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">应用</span></a>
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BA%94%E7%94%A8/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">搭建</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
         </span>
     </span>
 
@@ -1298,8 +1476,8 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
       </span>
       <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="leanote蚂蚁笔记-私人云笔记服务搭建" href="/2020/02/leanote%E8%9A%82%E8%9A%81%E7%AC%94%E8%AE%B0-%E7%A7%81%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::104782541c54333ab42b9d14cd2d6b1d" class="cy_cmt_count" itemprop="commentCount"></span>
+    <a title="MongoDB数据库 安装与配置" href="/2020/02/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::c775f890452c201a51e167db14350baf" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1310,14 +1488,14 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>6.7k</span>
+      <span>8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -1328,394 +1506,88 @@ ID开头多打了一个空格，导致一直报错，折腾了2小时，无意�
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="leanote蚂蚁笔记">leanote蚂蚁笔记</h1>
-<p>目前在知识管理/笔记类软件领域有强大的印象笔记
-(Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。
-我一开始用的也是讯飞语记，刚开始还不懂，只是被它的语音识别和云同步所吸引。后来懂的越来越多，愈发觉得自己的一些笔记还是不要放别人的数据库里。碰巧，在阿里云的一篇学习文章里，我发现了leanote，于是乎我也就进入了私人云笔记时代！</p>
-<p>个人对leanote的理解： 简约、免费、开源、支持 Markdown
-语法，支持程序代码高亮、笔记历史记录、支持笔记分享协作、将笔记发布成博客、云同步、多终端兼容(Windows、Mac、iOS、Linux、Android)，最关键的：搭建私人云笔记。</p>
-<p>介绍： Leanote, 不只是笔记! Leanote
-蚂蚁笔记是一款国产的在线网页版云笔记软件，集知识管理、笔记、分享、博客功能于一身，界面简约但功能不简单！</p>
-<p>该项目采用 Golang+MongoDB
-开发，现已完全开源并能免费使用。普通用户可以直接使用 Leanote
-提供的公共服务，也可以自行搭建属于自己或公司局域网内的私有云笔记平台。</p>
-<p>论在工作还是生活方面，如果觉得印象笔记或目前你使用的笔记软件的编辑器不能满足你的需求，不能很好地贴代码片段、图片不能缩放、不能写
-Markdown？或者希望能将知识共享出去，能将笔记快速变成博客文章，而不用特意去搭建维护一个
-WordPress？又或者你希望<code>拥有一个私有的笔记平台</code>，那么不妨试试
-Leaonte 吧，相信你会发现这是一个相当不错的开源项目…</p>
-<p><strong>特性</strong></p>
-<ul>
-<li>高效笔记：Leanote 有易操作的界面,
-包含一款富文本编辑器和Markdown编辑器，让您的笔记记录更轻松和高效。对高阶用户，我们还提供Vim
-和Emacs 编辑模式，助推你的写作速度更上层楼。</li>
-<li>知识管理: Leanote
-灵活而强大的“笔记本-笔记-标签”系统，让它成为你个人知识管理的利器。</li>
-<li>分享: 你可以通过Leanote同好友分享知识、想法和经历,
-邀请好友加入你的笔记簿，通过云端交流信息。</li>
-<li>协作:
-Leanote协助你与同事之间相互协作，激荡新思路，随时随地头脑风暴。</li>
-<li>博客: Leanote也可以作为你的个人博客, 把你的知识传播的更远!</li>
-</ul>
-<p><strong>其它特性</strong></p>
-<ul>
-<li>支持Markdown编辑</li>
-<li>写作模式</li>
-<li>Vim 及 Emacs 编辑模式</li>
-<li>支持PDF导出</li>
-<li>支持批量操作</li>
-<li>博客自定义主题, 实现高度定制化</li>
-</ul>
-<h2 id="下载准备">下载准备</h2>
-<p>搭建leanote需要，<code>leanote</code>本体和<code>MongoDB</code>数据库支持。
-首先，是<a target="_blank" rel="noopener" href="https://leanote.com/">leanote官方</a>的<a
-target="_blank" rel="noopener" href="http://leanote.org/#download">下载地址</a>，<a
-target="_blank" rel="noopener" href="https://www.mongodb.com/">MongoDB官方</a>的<a
-target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">下载地址</a>，用这个可以马上使用到最新的产品。
-然后，如果大家不想那么麻烦的去官方那里下载，我这里也提供下载链接，当然，<abbr title="2021年1月02日版">版本</abbr>我就不会持续更新了。
-<strong>Leanote</strong>：<a
-target="_blank" rel="noopener" href="https://img-61.oss-cn-shanghai.aliyuncs.com/file/leanote-windows-amd64-v2.6.1.bin.tar.gz">Windows
-v2.6.1</a>，<a
-target="_blank" rel="noopener" href="https://img-61.oss-cn-shanghai.aliyuncs.com/file/leanote-linux-amd64-v2.6.1.bin.tar.gz">Linux
-v2.6.1</a> <strong>MongoDB</strong>：<a
-target="_blank" rel="noopener" href="https://img-61.oss-cn-shanghai.aliyuncs.com/file/mongodb-windows-x86_64-4.4.2-signed.msi">Windows64位
-4.2.2</a>，<a
-target="_blank" rel="noopener" href="https://img-61.oss-cn-shanghai.aliyuncs.com/file/mongodb-linux-x86_64-rhel80-4.2.11.tgz">Linux
-4.2.11</a></p>
-<h2 id="写在前面">写在前面</h2>
-<p>这里，我将介绍Windows版和Linux版的搭建过程。</p>
-<p>如需Windows版，点击 <a href="#win">Windows版</a> 跳转；</p>
-<p>如需Linux版，点击 <a href="#Linux">Linux版</a> 跳转。</p>
-<h2 id="安装与配置windows版">安装与配置（Windows版）</h2>
-<p>1、将下载的文件里面的leanote-windows-amd64-v2.6.1.bin.tar.gz文件解压到C盘（本文默认解压到了
-C:）。
-2、运行mongodb-windows-x86_64-4.4.2-signed.msi进行安装（本文默认解压到了
-C:\4.2）。
-接下来的MongoDB的配置<strong>极其麻烦</strong>，这里我放到另一篇文章里，<a href="#">Post not found: MongoDB数据库-安装与配置 MongoDB 安装与配置</a></p>
+          <h2 id="下载准备"><a class="header-anchor" href="#下载准备"></a>下载准备</h2>
+<p><a target="_blank" rel="noopener" href="https://www.mongodb.com/">MongoDB官方</a>的<a target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">下载地址</a></p>
+<h2 id="安装与配置-Windows版"><a class="header-anchor" href="#安装与配置-Windows版"></a>安装与配置(Windows版)</h2>
+<ol>
+<li>
+<p>运行mongodb-windows-x86_64-4.4.2-signed.msi进行安装（本文默认解压到了 C:\MongoDB\Server\4.2）。</p>
+<p>安装比较容易，但有一个关键是，不要安装<code>MongoDB Compass</code>，这是MongoDB的官方图形用户界面，很大，下载速度很慢，而且有其他更好的替代品。</p>
+<p>难点在配置文件，启动Mongodb的服务以及将MongoDB设置成Windows服务，加载配置文件在windows的“服务”中找到。</p>
+<p>关于网上教程中普遍推荐新建一个data文件夹等等一些操作，我的看法是可有可无，因为到了我这个版本，mongodb会自己创建这些东西。当然，如果为了方便寻找数据库和日志，自己建一个也可以。</p>
+<blockquote>
+<p>这里我就简单描述一下：<br />
+（这里我默认在 C:\MongoDB\ 创建了文件夹）<br />
+C:\MongoDB\data\log目录，用来存放日志文件；<br />
+C:\MongoDB\Server\4.2\log\mongodb.log 里的 mongodb.log ，用来存放日志信息；<br />
+C:\MongoDB\Server\4.2\data\db目录，用来存放数据库数据。</p>
+</blockquote>
+</li>
+<li>
+<p>在C:\MongoDB\Server\4.2\data目录下创建<code>db</code>文件夹(因为默认安装中没有这个文件夹，但后面要用)<br />
+在C:\MongoDB\Server\4.2目录下创建mongo.config，在文件内部复制如下文本：</p>
+ <figure class="highlight plaintext"><figcaption><span>mongo.config</span><a href="/downloads/code/mongo.config">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#端口号 默认为27017</span><br><span class="line">port=27017 </span><br><span class="line"></span><br><span class="line">##数据文件  此处=后对应到数据所存放的目录</span><br><span class="line">dbpath=C:\MongoDB\Server\4.2\data\db</span><br><span class="line"></span><br><span class="line">##日志文件  此处=后对应到日志文件所在路径</span><br><span class="line">logpath=C:\MongoDB\Server\4.2\log\mongodb.log</span><br><span class="line"></span><br><span class="line">#启用日志文件，默认启用，每次写入会记录一条操作日志（通过journal可以重新构造出写入的数据）。</span><br><span class="line">journal=true </span><br><span class="line"></span><br><span class="line">##错误日志采用追加模式，配置这个选项后mongodb的日志会追加到现有的日志文件，而不是从新创建一个新文件</span><br><span class="line">logappend=true </span><br><span class="line"></span><br><span class="line">#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false</span><br><span class="line">quiet=true </span><br><span class="line"></span><br><span class="line">#这样就可外部访问了，例如从win10中去连虚拟机中的MongoDB</span><br><span class="line">bind_ip = 0.0.0.0</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>安装服务<br />
+用<code>管理员权限</code>打开cmd命令行，输入如下命令安装mongodb服务：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc create MongoDB binPath= &quot;C:\MongoDB\Server\4.2\bin\mongod.exe --service --config=C:\MongoDB\Server\4.2\mongo.config&quot; </span><br></pre></td></tr></table></figure>
+<p>如果一直显示<code>[SC] CreateService 失败 1072:指定的服务已标记为删除。</code>，那请先退出<code>服务</code>那个窗口，因为那个占用“频道”了。<br />
+再 <code>cd</code> 进入C:\MongoDB\Server\4.2\bin文件夹，使用如下命令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:\MongoDB\Server\4.2\bin</span><br><span class="line"></span><br><span class="line">mongod --config C:\MongoDB\Server\4.2\mongo.config --install --serviceName &quot;MongoDB&quot;</span><br></pre></td></tr></table></figure>
+<p>继续使用如下命令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --logpath &quot;C:\MongoDB\Server\4.2\log\mongodb.log&quot; --logappend --dbpath &quot;C:\MongoDB\Server\4.2\data\db&quot; --serviceName &quot;MongoDB&quot; --install</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <hr />
-<h3 id="测试mongodb安装">测试mongodb安装</h3>
-<p>打开cmd， <code>cd</code> 进入C:\4.2目录输入:</p>
-<blockquote>
-<p>mongo</p>
-</blockquote>
-<p>行首出现&gt; 表示进入mongo 的交互程序。此时输入：</p>
-<blockquote>
-<p>show dbs</p>
-</blockquote>
-<blockquote>
-<p>出现 show dbs admin 0.000GB config 0.000GB local 0.000GB
-即安装成功</p>
-</blockquote>
-<p>这个窗口可以先不要关</p>
-<h3 id="导入初始数据">导入初始数据</h3>
-<p>打开新cmd， <code>cd</code> 进入C:\4.2，复制并运行以下命令</p>
-<blockquote>
-<p>mongorestore -h localhost -d leanote --dir C:_backup_install_data</p>
-</blockquote>
-<p>出现 “499 document(s) restored successfully. 0 document(s) failed to
-restore.” 表示结束，这样就完成了数据的导入</p>
-<p>当你再次使用show dbs命令时就会显示</p>
-<blockquote>
-<p>show dbs admin 0.000GB config 0.000GB leanote 0.002GB local
-0.000GB</p>
-</blockquote>
-<blockquote>
-<p>有时候leanote的数据库名字不是<code>leanote</code>，而是
-<code>ir</code>那后面的配置文件里的数据库名字也要跟着改变</p>
-</blockquote>
-<h3
-id="为mongodb下的leanote数据库添加用户">为MongoDB下的leanote数据库添加用户</h3>
-<p>像MySQL一样MongoDB也有root用户, mongodb初始是没有用户的,
-这样很不安全, 所以要为leanote数据库新建一个用户来连接leanote数据库(注意,
-并不是为leanote的表users里新建用户, 而是新建一个连接leanote数据库的用户,
-类似mysql的root用户).</p>
-<p>在bin目录下打开cmd，然后输入mongo进入数据库，再输入下面的命令</p>
-<blockquote>
-<p>首先切换到leanote数据库下 use leanote;</p>
-<p>如果前面数据库名字是ir，这里也是ir</p>
-</blockquote>
-<blockquote>
-<p>添加一个用户root, 密码是abc123</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">db.createUser(&#123;</span><br><span class="line">user: &#x27;root&#x27;,</span><br><span class="line">pwd: &#x27;abc123&#x27;,</span><br><span class="line">roles: [&#123;role: &#x27;dbOwner&#x27;, db: &#x27;leanote&#x27;&#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>测试下是否正确</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.auth(&quot;root&quot;, &quot;abc123&quot;);</span><br></pre></td></tr></table></figure>
-<p>返回1表示正确</p>
-<p>用户添加好后重启下mongodb服务。 <strong>还要修改配置文件</strong>:
-修改 C: <code>app.conf</code> 文件</p>
-<blockquote>
-<p>db.host=127.0.0.1 db.port=27017 db.dbname=leanote # required
-db.username=<code>root</code> # if not exists, please leave blank
-db.password=<code>abc123</code> # if not exists, please leave blank</p>
-<p>如果前面数据库名字是ir，这里的db.dbname= 也是 ir</p>
-</blockquote>
-<h3 id="运行leanote">运行leanote</h3>
-<p>到了这一步，基本上可以宣告成功了 以 管理员权限 打开cmd，输入：</p>
-<blockquote>
-<p>cd C:</p>
-</blockquote>
-<blockquote>
-<p>run.bat</p>
-</blockquote>
-<p>最后出现以下信息证明运行成功: Listening on :9000...</p>
-<p>恭喜你, 打开浏览器输入: http://localhost:9000 体验leanote吧!
-选择登录，默认管理员账号为admin，密码为abc123。登陆成功后选择右上角的后台管理，即可登录后台管理。</p>
-<p>注意：做到这里，leanote已经正常运行，但在电脑重启后，还需要再依次运行MongoDB
-server、leanote才能够启动，所以把 C: 路径下的run.bat文件
-创建一个快捷方式放到系统的启动里面即可，也可以放在桌面开机的时候手动启动。</p>
-<h3 id="绑定域名">绑定域名</h3>
-<p>修改 C: <code>app.conf</code> 文件里的</p>
-<blockquote>
-<p>http.port=80 site.url=http://localhost:9000</p>
-</blockquote>
-<p>输入<a target="_blank" rel="noopener" href="http://localhost:9000"
-class="uri">http://localhost:9000</a>，假设ip地址是111.111.111.111,把localhost换成你的IP地址111.111.111.111即可，如果有域名，也可以把localhost换成你的域名</p>
-<h2 id="安装与配置linux版">安装与配置（Linux版）</h2>
-<h3 id="解压leanote压缩包">解压Leanote压缩包</h3>
-<p>假设已将文件下载到 <code>/home/</code>
-目录下，打开<code>终端</code>，通过使用下面的命令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"></span><br><span class="line">tar -xzvf leanote-linux-amd64-v2.6.1.bin.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /home/software</span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /home/leanote /home/software/leanote</span><br></pre></td></tr></table></figure>
-<p>解压文件，从而在 <code>/home/software</code> 目录下生成
-<code>leanote</code>目录</p>
-<h3 id="解压mongodb压缩包">解压MongoDB压缩包</h3>
-<p>假设已将文件下载到 <code>/home/</code>
-目录下，打开<code>终端</code>，通过使用下面的命令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"></span><br><span class="line">tar -xzvf mongodb-linux-x86_64-rhel80-4.2.11.tgz</span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /home/mongodb-linux-x86_64-rhel80-4.2.11.tgz /home/software/mongodb-4.2.11</span><br></pre></td></tr></table></figure>
-<p>解压文件，从而在 <code>/home/software</code> 目录下生成
-<code>mongodb-4.2.11</code>目录</p>
+<p>​	然后在cmd里输入<code>services.msc</code>打开服务管理器，找到MongoDB服务，设置成自动启动，并启动。</p>
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/leanote/mongodb.png?x-oss-process=style/yunying61">
+<p>​	如果启动不成功，先删除服务，使用如下命令：</p>
+<p>​	<code>sc delete MongoDB</code></p>
+<p>​	然后再从第2步开始，重新排查各种配置项及操作</p>
 <hr />
-<h3 id="配置mongodb">配置MongoDB</h3>
-<p>为了快速使用<code>mongodb</code>命令, 可以配置环境变量。</p>
-<p>编辑 <code>~/.profile</code>或<code>/etc/profile</code> 文件，
-将<code>mongodb/bin</code>路径加入即可，打开<code>终端</code>，输入命令:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
-<p>在<code>/etc/profile</code>中，按<code>i</code>进入编辑模式，在最下面添加以下行，注意路径：</p>
+<ol start="4">
+<li>
+<p>测试是否安装成功<br />
+进入C:\MongoDB\Server\4.2\bin文件夹下，点击mongod.exe，如果闪一下退出，说明安装正常。<br />
+然后在浏览器里访问这个地址<a target="_blank" rel="noopener" href="http://localhost:27017/">http://localhost:27017/</a><br />
+如果显示了</p>
 <blockquote>
-<p>export PATH=$PATH:/home/software/mongodb-4.2.11/bin</p>
+<p>It looks like you are trying to access MongoDB over HTTP on the native driver port.</p>
 </blockquote>
-<p>按<code>ESC</code>退出编辑模式，再输入<code>:wq</code>保存修改后，在终端运行以下命令使环境变量生效:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+<p>说明服务和端口正常。</p>
+</li>
+</ol>
+<hr />
+<h2 id="配置环境变量（可省略）"><a class="header-anchor" href="#配置环境变量（可省略）"></a>配置环境变量（可省略）</h2>
+<ul>
+<li>如果不配置环境变量，在使用mongo命令时要先 <code>cd</code> 进入C:\MongoDB\Server\4.2\bin 目录才能使用命令</li>
+<li>通过配置环境变量的方式，让mongo命令在所有文件夹内都可以访问<br />
+在系统变量中找到path，双击打开后在变量值中的末尾增加输入<code>C:\MongoDB\Server\4.2\bin;</code>即可<br />
+(Win10则双击打开后点击“<code>编辑文本</code>”同样在变量值中的末尾增加输入)！</li>
+</ul>
+<h2 id="远程连接MongoDB数据库（Windows版）"><a class="header-anchor" href="#远程连接MongoDB数据库（Windows版）"></a>远程连接MongoDB数据库（Windows版）</h2>
+<p>打开bin目录中的mongod.cfg文件进行编辑，其中bindIp:127.0.0.1改为0.0.0.0 不然别的地方访问不了，<br />
+取消security的<code>#</code>注释符，并添加authorization:enabled</p>
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/leanote/mongod-cfg.jpg?x-oss-process=style/yunying61">
+<p>然后以管理员身份在bin目录下执行如下命令，使配置生效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config &quot;C:\MongoDB\Server\4.2\bin\mongod.cfg&quot; --install</span><br></pre></td></tr></table></figure>
+<p>然后重启MongoDB服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">net stop mongodb		// 先关闭mongodb</span><br><span class="line">net start mongodb		// 后开启mongodb</span><br></pre></td></tr></table></figure>
+<p>这里设置了0.0.0.0允许远程访问，所以最好加一层验证，添加一个mongo用户进行管理。<br />
+在bin目录打开cmd输入<code>mongo</code>执行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd C:\MongoDB\Server\4.2\bin</span><br><span class="line"></span><br><span class="line">mongo</span><br><span class="line"></span><br><span class="line">use admin</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>注意：建议重启一下，不然，每新打开一个终端，都要输入<code>source /etc/profile</code>才能使用mongo命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  db.createUser(&#123;</span><br><span class="line">  &quot;user&quot;:&quot;admin&quot;,&quot;pwd&quot;:&quot;password&quot;,</span><br><span class="line">    &quot;roles&quot;:[</span><br><span class="line">      &#123;role:&quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot;&#125;, </span><br><span class="line">&#123;role:&quot;readWriteAnyDatabase&quot;, db: &quot;admin&quot;&#125; </span><br><span class="line">  ]&#125;);</span><br></pre></td></tr></table></figure>
 </blockquote>
-<p>然后，是建立数据库的存放位置和日志文件的存放位置，在终端运行以下命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//用于存放数据库</span><br><span class="line">mkdir -p /home/data/mongo-db</span><br><span class="line">//用于存放日志文件</span><br><span class="line">mkdir -p /home/data/mongo-log</span><br></pre></td></tr></table></figure>
-<p>接着，在<code>/home/software/mongodb-4.2.11</code>目录下新建一个名为
-<code>mongodb.conf</code> 的配置文件，写入如下配置内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim mongodb.conf</span><br></pre></td></tr></table></figure>
-<p>按<code>i</code>进入编辑模式，按<code>ESC</code>退出编辑模式，再输入<code>:wq</code>保存修改。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#端口</span><br><span class="line">port=27017</span><br><span class="line"></span><br><span class="line">#数据库存文件存放目录 </span><br><span class="line">dbpath= /home/data/mongo-db</span><br><span class="line"></span><br><span class="line">#日志文件</span><br><span class="line">logpath= /home/data/mongo-log/mongodb.log</span><br><span class="line"></span><br><span class="line">#使用追加的方式写日志</span><br><span class="line">logappend=true</span><br><span class="line"></span><br><span class="line">#不以守护程序的方式启用，即不在后台运行</span><br><span class="line">fork=false</span><br><span class="line"></span><br><span class="line">#最大同时连接数</span><br><span class="line">maxConns=100</span><br><span class="line"></span><br><span class="line">#不启用验证</span><br><span class="line">noauth=true</span><br><span class="line"></span><br><span class="line">#每次写入会记录一条操作日志（通过journal可以重新构造出写入的数据）。</span><br><span class="line">#即使宕机，启动时wiredtiger会先将数据恢复到最近一次的checkpoint点，然后重放后续的journal日志来恢复。</span><br><span class="line">journal=true</span><br><span class="line"></span><br><span class="line">#存储引擎有mmapv1、wiretiger、mongorocks</span><br><span class="line">storageEngine=wiredTiger</span><br><span class="line"></span><br><span class="line">bind_ip = 0.0.0.0  #这样就可外部访问了，例如从win10中去连虚拟机中的MongoDB</span><br></pre></td></tr></table></figure>
-<p>用以下命令启动<code>mongodb</code>:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config /home/software/mongodb-4.2.11/mongodb.conf</span><br></pre></td></tr></table></figure>
-<p>这时<code>mongod</code>已经启动了（这代表mongodb已经开始运行，所以请不要关闭这个窗口）</p>
-<h3 id="测试mongodb安装-1">测试mongodb安装</h3>
-<p><code>重新打开</code>一个终端,
-键入<code>mongo</code>进入交互程序：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
-<p>行首出现&gt; 表示进入mongo 的交互程序，此时输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>出现</p>
-<p>admin 0.000GB config 0.000GB local 0.000GB 即安装成功</p>
-</blockquote>
-<p>这个窗口可以先不要关</p>
-<h3 id="导入leanote初始数据">导入Leanote初始数据</h3>
-<p><code>mongodb</code>安装到此为止,
-下面为<code>mongodb</code>导入<code>leanote</code>初始数据。</p>
-<p><code>leanote</code>初始数据存放在
-<code>/home/software/leanote/mongodb_backup/leanote_install_data</code>中。</p>
-<p>再次<code>重新打开</code>一个终端(此时应该要有3个终端)，
-输入以下命令导入数据。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongorestore -h localhost -d leanote --dir /home/software/leanote/mongodb_backup/leanote_install_data/</span><br></pre></td></tr></table></figure>
-<p>出现 “499 document(s) restored successfully. 0 document(s) failed to
-restore.” 表示结束，这样就完成了数据的导入</p>
-<p>当你再次使用show dbs命令时就会显示</p>
-<blockquote>
-<p>show dbs admin 0.000GB config 0.000GB leanote 0.001GB local
-0.000GB</p>
-</blockquote>
-<blockquote>
-<p>有时候leanote的数据库名字不是<code>leanote</code>，而是
-<code>ir</code>那后面的配置文件里的数据库名字也要跟着改变</p>
-</blockquote>
-<p>初始数据的<code>users</code>表中已有2个用户:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user1 username: admin, password: abc123 (管理员, 只有该用户才有权管理后台, 请及时修改密码)</span><br><span class="line">user2 username: demo@leanote.com, password: demo@leanote.com (仅供体验使用)</span><br></pre></td></tr></table></figure>
-<h3
-id="为mongodb下的leanote数据库添加用户-1">为MongoDB下的leanote数据库添加用户</h3>
-<p>像MySQL一样MongoDB也有root用户, mongodb初始是没有用户的,
-这样很不安全, 所以要为leanote数据库新建一个用户来连接leanote数据库(注意,
-并不是为leanote的表users里新建用户, 而是新建一个连接leanote数据库的用户,
-类似mysql的root用户).</p>
-<p>在bin目录下打开cmd，然后输入mongo进入数据库，再输入下面的命令</p>
-<blockquote>
-<p>首先切换到leanote数据库下 use leanote;</p>
-<p>如果前面数据库名字是ir，这里也是ir</p>
-</blockquote>
-<blockquote>
-<p>添加一个用户root, 密码是asd123</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">db.createUser(&#123;</span><br><span class="line">user: &#x27;root&#x27;,</span><br><span class="line">pwd: &#x27;asd123&#x27;,</span><br><span class="line">roles: [&#123;role: &#x27;dbOwner&#x27;, db: &#x27;leanote&#x27;&#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>测试下是否正确</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.auth(&quot;root&quot;, &quot;asd123&quot;);</span><br></pre></td></tr></table></figure>
-<p>返回1表示正确</p>
-<p><strong>还要修改配置文件</strong>: 修改
-/home/software/leanote/conf/<code>app.conf</code>文件</p>
-<blockquote>
-<p>db.host=127.0.0.1 db.port=27017 db.dbname=leanote # required
-db.username=<code>root</code> # if not exists, please leave blank
-db.password=<code>asd123</code> # if not exists, please leave blank</p>
-<p>如果前面数据库名字是ir，这里的db.dbname= 也是 ir</p>
-</blockquote>
-<p>除此之外，请务必修改<code>app.secret</code>一项,
-在若干个随机位置处，将字符修改成一个其他的值,
-否则会有安全隐患！其它的配置可暂时保持不变，或根据需要进行修改。</p>
-<h3 id="运行leanote-1">运行leanote</h3>
-<p>到了这一步，基本上可以宣告成功了。</p>
-<p>新开一个窗口, 运行：（<strong>注意:</strong>
-在此之前请确保<code>mongodb</code>已在运行！）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash /home/software/leanote/bin/run.sh</span><br></pre></td></tr></table></figure>
-<p>最后出现以下信息证明运行成功:</p>
-<blockquote>
-<p>Listening on :9000...</p>
-</blockquote>
-<p>恭喜你完成安装, 打开浏览器输入: http://localhost:9000 体验leanote吧!
-选择登录，默认管理员账号为admin，密码为abc123。登陆成功后选择右上角的后台管理，即可登录后台管理。</p>
-<p>注意：做到这里，leanote已经正常运行，但在电脑重启后，还需要再依次运行MongoDB、leanote才能够启动，所以可以把
-Mongodb 创建一个服务项，并设为开机自启；把 leanote 设置为启动项。</p>
-<h3 id="绑定域名-1">绑定域名</h3>
-<p>修改 /home/software/leanote/conf/app.conf 文件里的</p>
-<blockquote>
-<p>http.port=80 site.url=http://localhost:9000</p>
-</blockquote>
-<p>输入<a target="_blank" rel="noopener" href="http://localhost:9000"
-class="uri">http://localhost:9000</a>，假设ip地址是111.111.111.111,把localhost换成你的IP地址111.111.111.111即可，如果有域名，也可以把localhost换成你的域名</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
+<p>这里就添加了一个admin的用户，密码为password</p>
+<div class="note warning"><p>另外远程访问的话，记得开启安全组和防火墙端口，可能会因为这个导致全盘皆输</p>
 </div>
+<h2 id="关于-MongoDB用户-的命令"><a class="header-anchor" href="#关于-MongoDB用户-的命令"></a>关于 MongoDB用户 的命令</h2>
+<figure class="highlight txt"><figcaption><span>MongoDB用户命令.txt</span><a href="/downloads/code/MongoDB用户命令.txt">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">show dbs        查看数据库</span><br><span class="line">use dbname      进入数据库</span><br><span class="line">show users      查看当前数据库用户权限</span><br><span class="line">创建用户</span><br><span class="line">db.createUser({user:&quot;usertest&quot;,pwd:&quot;passtest&quot;,roles:[  {role:&quot;clusterAdmin&quot;, db:&quot;admin&quot; }, {role:&quot;readAnyDatabase&quot;,db:&quot;admin&quot; }, {role:&quot;readWrite&quot;,db:&quot;testDB&quot; } ]})</span><br><span class="line">权限详解</span><br><span class="line">内建角色：</span><br><span class="line">数据库用户角色：    read、readWrite；</span><br><span class="line">数据库管理角色：    dbAdmin、dbOwner、userAdmin；</span><br><span class="line">集群管理角色：      clusterAdmin、clusterManager、clusterMonitor、hostManager；</span><br><span class="line">备份恢复角色：      backup、restore；</span><br><span class="line">所有数据库角色：    readAnyDatabase、readWriteAnyDatabase、userAdminAnyDatabase、dbAdminAnyDatabase</span><br><span class="line">超级用户角色：      root；  这里还有几个角色间接或直接提供了系统超级用户的访问（dbOwner 、userAdmin、userAdminAnyDatabase）</span><br><span class="line">内部角色：          __system；</span><br><span class="line">------------------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">角色说明：</span><br><span class="line">Read：                      允许用户读取指定数据库</span><br><span class="line">readWrite：                 允许用户读写指定数据库</span><br><span class="line">dbAdmin：                   允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问system.profile</span><br><span class="line">userAdmin：                 允许用户向system.users集合写入，可以找指定数据库里创建、删除和管理用户</span><br><span class="line">dbOwner：                   允许在当前DB中执行任意操作</span><br><span class="line">readAnyDatabase：           赋予用户所有数据库的读权限，只在admin数据库中可用</span><br><span class="line">readWriteAnyDatabase：      赋予用户所有数据库的读写权限，只在admin数据库中可用</span><br><span class="line">userAdminAnyDatabase：      赋予用户所有数据库管理User的权限，只在admin数据库中可用</span><br><span class="line">dbAdminAnyDatabase：        赋予管理所有数据库的权限，只在admin数据库中可用</span><br><span class="line">root：                      超级账号，超级权限，只在admin数据库中可用。</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">集群管理角色：</span><br><span class="line">clusterAdmin：                 赋予管理集群的最高权限，只在admin数据库中可用</span><br><span class="line">clusterManager：               赋予管理和监控集群的权限</span><br><span class="line">clusterMonitor：               赋予监控集群的权限，对监控工具具有readonly的权限</span><br><span class="line">hostManager：                  赋予管理Server</span><br><span class="line"></span><br><span class="line">修改密码</span><br><span class="line">方法1：db.changeUserPassword(&quot;usertest&quot;,&quot;changepass&quot;);</span><br><span class="line">方法2：db.updateUser(&quot;usertest&quot;,{pwd:&quot;changepass1&quot;})；</span><br><span class="line"></span><br><span class="line">修改权限</span><br><span class="line">db.updateUser(&quot;usertest&quot;,{roles:[ {role:&quot;read&quot;,db:&quot;testDB&quot;} ]})</span><br><span class="line"></span><br><span class="line">注：updateuser它是完全替换之前的值，如果要新增或添加roles而不是代替它 </span><br><span class="line">则使用方法： db.grantRolesToUser() 和 db.revokeRolesFromUser(）</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">修改权限</span><br><span class="line">db.grantRolesToUser(&quot;usertest&quot;, [{role:&quot;readWrite&quot;, db:&quot;testDB&quot;},{role:&quot;read&quot;, db:&quot;testDB&quot;}])</span><br><span class="line">删除权限</span><br><span class="line">db.revokeRolesFromUser(&quot;usertest&quot;,[{role:&quot;read&quot;, db:&quot;testDB&quot;}])</span><br></pre></td></tr></table></figure>
+<h2 id="MongoDB命令"><a class="header-anchor" href="#MongoDB命令"></a>MongoDB命令</h2>
+<figure class="highlight txt"><figcaption><span>mongodb.txt</span><a href="/downloads/code/mongodb.txt">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line">这是mongodb的一些命令： </span><br><span class="line"></span><br><span class="line">mongo   </span><br><span class="line">	运行mongo</span><br><span class="line"></span><br><span class="line">以下命令要运行mongo以后才能用</span><br><span class="line"></span><br><span class="line">db	</span><br><span class="line">	显示当前的数据库名称</span><br><span class="line"></span><br><span class="line">show dbs	</span><br><span class="line">	显示当前服务器下数据库（非空的数据库）列表</span><br><span class="line"></span><br><span class="line">use test	</span><br><span class="line">	如果test数据库不存在，则创建test数据库</span><br><span class="line">	如果test已存在，则切换到test数据库</span><br><span class="line"></span><br><span class="line">show collections	</span><br><span class="line">	显示当前数据库下所包含的集合（表）列表</span><br><span class="line"></span><br><span class="line">db.users.insert({name:&#x27;zhangsha&#x27;})	</span><br><span class="line">	向users集合中插入数据</span><br><span class="line">	如果users集合存在，则直接插入数据，如果不存在，则创建users集合再插入数据</span><br><span class="line"></span><br><span class="line">db.createCollection(&#x27;products&#x27;)</span><br><span class="line">	创建一个空集合products</span><br><span class="line"></span><br><span class="line">db.products.insert([{name:&#x27;lishi&#x27;},{name:&#x27;wangwu&#x27;}])		</span><br><span class="line">	一次插入多个数据</span><br><span class="line"></span><br><span class="line">db.products.find()</span><br><span class="line">	查询products集合中所有的数据</span><br><span class="line"></span><br><span class="line">db.products.find({name:&#x27;苹果手机&#x27;})</span><br><span class="line">	查询stu集合中name=&#x27;苹果手机&#x27;的数据</span><br><span class="line"></span><br><span class="line">db.products.find({name:{$eq:&#x27;苹果手机&#x27;}})</span><br><span class="line">	同上，$eq=&gt;等号，建议使用上面的方式，易记，易输入</span><br><span class="line">	eq = equal</span><br><span class="line"></span><br><span class="line">db.products.find({price:{$gt:18}})</span><br><span class="line">	查询stu集合中age&gt;18的数据  </span><br><span class="line"> 	把$gt换成如下的符号试试：</span><br><span class="line">    $gt=&gt;大于   great</span><br><span class="line">    $gte=&gt;大于等于 great equal</span><br><span class="line">    $lt=&gt;小于   less than</span><br><span class="line">    $lte=&gt;小于等于 less than equal</span><br><span class="line">    $ne=&gt;不等于  not equal</span><br><span class="line">    $in=&gt;在范围内</span><br><span class="line">    $nin=&gt;不在范围内</span><br><span class="line">	以上几个符号格式总结为：{ field: {符号: value}}</span><br><span class="line"></span><br><span class="line">db.products.find({name:/^华为/})</span><br><span class="line">	查找stu集合中name域中以“华为”字符的开头的数据</span><br><span class="line"></span><br><span class="line">db.products.find({name:{$in:[&#x27;手机1&#x27;,&#x27;手机2&#x27;]}})</span><br><span class="line">	查询stu集合中name=&#x27;手机1&#x27;和name=&#x27;手机2&#x27;的数据</span><br><span class="line">$in=&gt;在范围内</span><br><span class="line">$nin=&gt;不在范围内</span><br><span class="line">	以上两个符号格式为：{ field:{符号:[value1,value2,....]}}</span><br><span class="line"></span><br><span class="line">db.products.find({name:&quot;华为手机&quot;,price:800})</span><br><span class="line">	查找name=&quot;华为手机&quot;并且price:800的数据</span><br><span class="line"></span><br><span class="line">db.products.find({$or:[{name:&#x27;华为手机&#x27;},{price:{$lt:1000}}]})</span><br><span class="line">	查询products集合中name=&#x27;华为手机&#x27; 或者 price&lt;1000的数据</span><br><span class="line">    $or=&gt;或者  注意$or:[{},{},....]</span><br><span class="line">    $and=&gt;并且  格式同$or, 例：{$and:[{},{},....]}</span><br><span class="line">    $nor=&gt;not or 与$or相反， 格式同$or</span><br><span class="line"></span><br><span class="line">db.products.find({price:{$not:{$gt:100}}})</span><br><span class="line">	查询products集合中price&lt;=100的数据，不存在price属性的数据也会查询出来</span><br><span class="line">    $not=&gt;取反 </span><br><span class="line"></span><br><span class="line">db.products.find({price:{$exists: true}})</span><br><span class="line">	查询products集合中包含域名称为price的数据</span><br><span class="line"></span><br><span class="line">db.products.find({name:{$type:2}})</span><br><span class="line">	查询products集合中name属性为字符串类型的数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">db.products.find({</span><br><span class="line">	$where: function(){</span><br><span class="line">		return this.name == &#x27;华为手机&#x27;</span><br><span class="line">	}</span><br><span class="line">})</span><br><span class="line">	查询products集合中name=&#x27;华为手机’的数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">db.products.find({</span><br><span class="line">	$where: function(){</span><br><span class="line"> 		return  this.name.indexOf(&#x27;华为手机&#x27;) &gt; -1;</span><br><span class="line">	}</span><br><span class="line">})</span><br><span class="line">	查询products集合中name域中包含“华为手机”字符的数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">db.products.update({name:&#x27;华为手机&#x27;},{$set:{price:2000}},{</span><br><span class="line">	upsert: true,</span><br><span class="line">	multi:false</span><br><span class="line">})</span><br><span class="line">	把products集合中name=&#x27;华为手机&#x27;的那条数据，把price属性设置成2000，其它属性保留</span><br><span class="line">    $set是指更改的属性列表，不在列表中其他属性会被保留，如果不加此符号，其它属性会被丢弃（_id属性比较特殊，不会丢失）</span><br><span class="line">    upsert:true如果没有符号条件的更新时，则插入一条，为false时，则不会插入, 默认是false</span><br><span class="line">    multi:false一次只能更新一条数据，为true时，可更新多条，默认是false</span><br><span class="line"></span><br><span class="line">db.students.remove({})</span><br><span class="line">	清空集合students</span><br><span class="line"></span><br><span class="line">db.products.remove({name:&#x27;abc&#x27;})</span><br><span class="line">	删除products集合中name=&#x27;abc&#x27;的数据，注意，即使把集合products中的所有数据都删除了</span><br><span class="line">	products集合仍然存在， remove()是用来删除数据的，而drop()不仅会删除数据，还会把集合的结构给删除</span><br><span class="line"></span><br><span class="line">db.products.drop()</span><br><span class="line">	把stu集合彻底从当前数据中删除，集合stu不再存在，注意与remove()的区别</span><br><span class="line"></span><br><span class="line">db.dropDatabase()</span><br><span class="line">	删除当前数据库</span><br><span class="line"></span><br><span class="line">db.users.distinct(&#x27;name&#x27;)</span><br><span class="line">	查询users集合中不重复的name属性，返回的是数组</span><br><span class="line"></span><br><span class="line">db.stu.count({name:&#x27;zhangshan&#x27;})</span><br><span class="line">	查询stu集合中name=&#x27;zhangshan&#x27;的数据数量</span><br><span class="line"></span><br><span class="line">db.stu.find().limit(5)</span><br><span class="line">	查询stu集合中前5条数据</span><br><span class="line"></span><br><span class="line">db.stu.find().skip(5)</span><br><span class="line">	查询stu集合中跳过前5条后的数据</span><br><span class="line"></span><br><span class="line">db.stu.find().sort({name:1})</span><br><span class="line">	查询stu集合中的全部数据，并按name属性正序排列  注：1：正序 -1: 倒序</span><br><span class="line"></span><br><span class="line">由于mongodb的api接口方法很多，除以上命令外，其他的命令请多看官方文档</span><br></pre></td></tr></table></figure>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2019/12/hexo-note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yunying61.png">
-      <meta itemprop="name" content="yunying61">
-      <meta itemprop="description" content="yunying61's Hexo Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星幕·云影">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/12/hexo-note/" class="post-title-link" itemprop="url">hexo-note(hexo的笔记)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-12-01 15:03:07" itemprop="dateCreated datePublished" datetime="2019-12-01T15:03:07+08:00">2019-12-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-28 20:33:11" itemprop="dateModified" datetime="2022-02-28T20:33:11+08:00">2022-02-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="hexo-note(hexo的笔记)" href="/2019/12/hexo-note/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::488f8df23d8f3bffa7e38e5f3dad3056" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>4.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="写作">写作</h1>
-<h2 id="新建一篇文章">新建一篇文章</h2>
-<blockquote>
-<p>你可以执行下列命令来创建一篇新文章或者新的页面：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] [title]</span><br></pre></td></tr></table></figure>
-<p>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改
-_config.yml 中的 default_layout 参数来指定默认布&gt;局。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/hexo-note/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -1734,7 +1606,7 @@ _config.yml 中的 default_layout 参数来指定默认布&gt;局。</p>
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -1757,13 +1629,13 @@ _config.yml 中的 default_layout 参数来指定默认布&gt;局。</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">48k</span>
+    <span title="站点总字数">96k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">44 分钟</span>
+    <span title="站点阅读时长">1:27</span>
   </span>
 </div>
 <div class="busuanzi-count">
