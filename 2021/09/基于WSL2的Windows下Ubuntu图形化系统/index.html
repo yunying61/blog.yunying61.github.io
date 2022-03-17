@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo2.png">
+  <link rel="mask-icon" href="/images/logo2.svg" color="#222">
+  <meta name="msvalidate.01" content="C4629C76253BAF6F511BC39C8C5D670E">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="前言 WSL是微软推出的windows的linux子系统，目的就是为了在windows平台上更方便的运行 linux。相比于VMware这样的虚拟机产品，WSL有许多优势：  方便。WSL操作Linux系统像windows上的cmd、PowerShell一样，直接操作其 Terminal终端 。只需要在开始菜单，单击其图标就可以打开一个窗口运行linux命令行工具，这是VMware这样的虚拟机产品">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="基于WSL2的Windows下Ubuntu图形化系统">
+<meta property="og:url" content="http://www.yunying61.top/2021/09/%E5%9F%BA%E4%BA%8EWSL2%E7%9A%84Windows%E4%B8%8BUbuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="星幕·云影">
+<meta property="og:description" content="前言 WSL是微软推出的windows的linux子系统，目的就是为了在windows平台上更方便的运行 linux。相比于VMware这样的虚拟机产品，WSL有许多优势：  方便。WSL操作Linux系统像windows上的cmd、PowerShell一样，直接操作其 Terminal终端 。只需要在开始菜单，单击其图标就可以打开一个窗口运行linux命令行工具，这是VMware这样的虚拟机产品">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Ubuntu.png?x-oss-process=style/yunying61">
+<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_GWSL.png?x-oss-process=style/yunying61">
+<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/GWSL_%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE.png?x-oss-process=style/yunying61">
+<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Windows%20Terminal.png?x-oss-process=style/yunying61">
+<meta property="og:image" content="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png">
+<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B9.png?x-oss-process=style/yunying61">
+<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%88%90%E5%8A%9F.png?x-oss-process=style/yunying61">
+<meta property="article:published_time" content="2021-09-10T03:32:01.000Z">
+<meta property="article:modified_time" content="2022-03-17T11:20:45.139Z">
+<meta property="article:author" content="yunying61">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="WSL">
+<meta property="article:tag" content="虚拟机">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Ubuntu.png?x-oss-process=style/yunying61">
+
+
+<link rel="canonical" href="http://www.yunying61.top/2021/09/%E5%9F%BA%E4%BA%8EWSL2%E7%9A%84Windows%E4%B8%8BUbuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%B3%BB%E7%BB%9F/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yunying61.top/2021/09/%E5%9F%BA%E4%BA%8EWSL2%E7%9A%84Windows%E4%B8%8BUbuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%B3%BB%E7%BB%9F/","path":"2021/09/基于WSL2的Windows下Ubuntu图形化系统/","title":"基于WSL2的Windows下Ubuntu图形化系统"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>基于WSL2的Windows下Ubuntu图形化系统 | 星幕·云影</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">星幕·云影</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WSL%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">WSL的问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">开始安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E5%BC%80%E5%90%AF%E5%8A%9F%E8%83%BD%E6%94%AF%E6%8C%81"><span class="nav-number">2.1.</span> <span class="nav-text">Windows开启功能支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Ubuntu"><span class="nav-number">2.2.</span> <span class="nav-text">安装Ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85GWSL"><span class="nav-number">2.3.</span> <span class="nav-text">安装GWSL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8WSL2"><span class="nav-number">2.4.</span> <span class="nav-text">使用WSL2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Windows-Terminal%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">安装Windows Terminal（可选）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E5%B9%B6%E4%BD%BF%E7%94%A8-Ubuntu"><span class="nav-number">2.6.</span> <span class="nav-text">打开并使用 Ubuntu</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">为 Ubuntu 安装图形化界面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BAWSL2%E4%B8%8A%E7%9A%84-Ubuntu-%E5%90%AF%E7%94%A8systemd%E6%94%AF%E6%8C%81"><span class="nav-number">3.1.</span> <span class="nav-text">为WSL2上的 Ubuntu 启用systemd支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Gnome%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2"><span class="nav-number">3.2.</span> <span class="nav-text">安装Gnome图形界面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E8%BF%90%E8%A1%8C%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="nav-number">3.3.</span> <span class="nav-text">试运行图形化界面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E6%B1%89%E5%8C%96"><span class="nav-number">4.1.</span> <span class="nav-text">图形界面汉化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC-WSL-%E5%91%BD%E4%BB%A4"><span class="nav-number">4.2.</span> <span class="nav-text">基本 WSL 命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E4%B9%8B%E9%97%B4%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%B8%E4%BA%92%E8%AE%BF%E9%97%AE"><span class="nav-number">4.3.</span> <span class="nav-text">系统之间文件系统的相互访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C"><span class="nav-number">4.4.</span> <span class="nav-text">跨文件系统工作</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png">
+  <p class="site-author-name" itemprop="name">yunying61</p>
+  <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">110</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button class="js-gitter-toggle-chat-button"><i class="fa fa-comment"></i>
+      聊天室
+    </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yunying61" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yunying61" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yunying61@qq.com" title="E-Mail → mailto:yunying61@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/5119152507" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5119152507" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+<div id="musicplayer">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=34364124&auto=1&height=66">
+    </iframe>
+</div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/yunying61" class="github-corner" title="在GitHub上关注我" aria-label="在GitHub上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2021/09/%E5%9F%BA%E4%BA%8EWSL2%E7%9A%84Windows%E4%B8%8BUbuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yunying61.png">
+      <meta itemprop="name" content="yunying61">
+      <meta itemprop="description" content="yunying61's Hexo Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星幕·云影">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          基于WSL2的Windows下Ubuntu图形化系统
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-10 11:32:01" itemprop="dateCreated datePublished" datetime="2021-09-10T11:32:01+08:00">2021-09-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-17 19:20:45" itemprop="dateModified" datetime="2022-03-17T19:20:45+08:00">2022-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="基于WSL2的Windows下Ubuntu图形化系统" href="/2021/09/%E5%9F%BA%E4%BA%8EWSL2%E7%9A%84Windows%E4%B8%8BUbuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%B3%BB%E7%BB%9F/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::4e6bc552acdd5a21ab89e7120e258f4a" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>前言</h1>
+<p>WSL是微软推出的windows的linux子系统，目的就是为了在windows平台上更方便的运行 linux。相比于VMware这样的虚拟机产品，WSL有许多优势：</p>
+<ol>
+<li><strong>方便</strong>。WSL操作Linux系统像windows上的cmd、PowerShell一样，直接操作其 <em>Terminal终端</em> 。只需要在开始菜单，单击其图标就可以打开一个窗口运行linux命令行工具，这是VMware这样的虚拟机产品想都不敢想的。</li>
+<li><strong>启动速度快</strong>。基本保持在5秒内就启动了。而VMware虚拟机，要先启动虚拟机产品，然后在虚拟机产品里面选择 Linux 分发版系统，点击启动按钮，等待系统自动，这时间相比，浪费太多了。</li>
+<li><strong>占用少</strong>。虽然WSL2还是在虚拟机上运行的Linux内核，但是在资源占用和性能这方面，无论是在内存占用还是在CPU消耗，都甩一般虚拟机产品几条街。用微软的话说就是：<br />
+WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟机 (VM) 中运行 Linux 内核。 但是，WSL 2 不是传统的 VM 体验。</li>
+<li><strong>文件互通</strong>。WSL上的Linux与宿主Windows文件系统互通，WSL可以直接访问Window系统上的文件，而Windows系统也可以直接对Linux系统进行各种文件操作。</li>
+</ol>
+<span id="more"></span>
+<h2 id="WSL的问题"><a class="header-anchor" href="#WSL的问题"></a>WSL的问题</h2>
+<p>WSL在使用上的问题大致有以下几个：</p>
+<ol>
+<li>没有图形界面。WSL运行Linux命令行很方便，但是目前还不能直接打开Linux图形界面。目前可以通过远程桌面的方式访问图形界面。</li>
+<li>C盘占用。按照一般的安装方法，默认是将子系统安装在C盘，C盘占用太大，可以通过官网上介绍的方法将子系统安装在其他盘。</li>
+<li>不支持systemd。wsl默认是没有systemd服务，需要自行安装并配置，后面会介绍如何安装。</li>
+<li>跨OS文件操作慢。这个文件操作慢是相对于WSL1来说的，WSL由于是用了VM，操作宿主系统上的文件难免会慢。<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43878324/article/details/113636451">解决办法</a></li>
+</ol>
+<h1>开始安装</h1>
+<p>微软官方文档：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">适用于 Linux 的 Windows 子系统安装指南 (Windows 10) </a></p>
+<h2 id="Windows开启功能支持"><a class="header-anchor" href="#Windows开启功能支持"></a>Windows开启功能支持</h2>
+<p>需要先启用“适用于 Linux 的 Windows 子系统”可选功能，然后才能在 Windows 上安装 Linux 分发。</p>
+<p>打开 PowerShell 命令行并输入以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:Microsoft<span class="literal">-Windows-Subsystem-Linux</span> /all /norestart</span><br></pre></td></tr></table></figure>
+<hr />
+<p>安装 WSL 2 之前，必须启用“虚拟机平台”可选功能。 计算机需要[BIOS虚拟化功能](<a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=bios%E8%99%9A%E6%8B%9F%E5%8C%96&amp;form=ANNTH1&amp;refig=f67cefd7bf7b436c8927d729b66691f7">bios虚拟化 - 国内版 Bing</a>)才能使用此功能。</p>
+<p>打开 PowerShell 命令行并输入以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:VirtualMachinePlatform /all /norestart</span><br></pre></td></tr></table></figure>
+<h2 id="安装Ubuntu"><a class="header-anchor" href="#安装Ubuntu"></a>安装Ubuntu</h2>
+<p>在 Microsoft Store 中搜索 <a target="_blank" rel="noopener" href="https://www.microsoft.com/store/productId/9NBLGGH4MSV6">Ubuntu</a></p>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Ubuntu.png?x-oss-process=style/yunying61" alt="image-20210910124253227" /></p>
+<p>点击并安装第一个 <strong>Ubuntu</strong></p>
+<h2 id="安装GWSL"><a class="header-anchor" href="#安装GWSL"></a>安装GWSL</h2>
+<p>在 Microsoft Store 中搜索 <a target="_blank" rel="noopener" href="https://www.microsoft.com/store/productId/9NL6KD1H33V3">GWSL</a></p>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_GWSL.png?x-oss-process=style/yunying61" alt="image-20210910124435587" /></p>
+<p>点击并安装第一个 <strong>GWSL</strong></p>
+<p>启动 GWSL ，在右下角通知图标栏中找到 GWSL ，对其右键，点击设置 GWSL：</p>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/GWSL_%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE.png?x-oss-process=style/yunying61" alt="image-20210911000305527" /></p>
+<h2 id="使用WSL2"><a class="header-anchor" href="#使用WSL2"></a>使用WSL2</h2>
+<ol>
+<li>
+<p>下载Linux 内核更新包</p>
+<p><a target="_blank" rel="noopener" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">适用于 x64 计算机的 WSL2 Linux 内核更新包</a></p>
+</li>
+<li>
+<p>运行更新包</p>
+</li>
+<li>
+<p>设置 WSL 2 为默认体系结构，打开 PowerShell 命令行并输入以下命令</p>
+ <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--set-default-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>可先检查分配给每个已安装的 Linux 分发版的 WSL 版本，打开 PowerShell 命令行并输入以下命令：</p>
+ <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--list</span> <span class="literal">--verbose</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>如果 Ubuntu 的WSL版本为1，则将其设置为受 WSL2 版本支持，打开 PowerShell 命令行并输入以下命令：</p>
+ <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--set-version</span> Ubuntu <span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="安装Windows-Terminal（可选）"><a class="header-anchor" href="#安装Windows-Terminal（可选）"></a>安装Windows Terminal（可选）</h2>
+<p>在 Microsoft Store 中搜索并安装  <a target="_blank" rel="noopener" href="https://aka.ms/terminal">Windows Terminal</a> 。</p>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Windows%20Terminal.png?x-oss-process=style/yunying61" alt="image-20210910225238909" /></p>
+<p>点击并安装第一个 <strong>Windows Terminal</strong></p>
+<h2 id="打开并使用-Ubuntu"><a class="header-anchor" href="#打开并使用-Ubuntu"></a>打开并使用 Ubuntu</h2>
+<p>到目前为止就可以正常使用 Ubuntu 命令行系统了，按下 Win 键，找到刚刚安装的 Ubuntu 打开，第一次启动，稍等片刻，以后都是5秒内就可以用了。接下来，设置 Linux 用户信息。</p>
+<p><img data-src="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png" alt="ubuntuinstall" /></p>
+<p>输入用户名，然后输入并确认两遍密码。</p>
+<p>对于 Ubuntu，请使用 命令 <code>sudo apt update &amp;&amp; sudo apt upgrade</code> ，对 Ubuntu 进行初次更新。</p>
+<h1>为 Ubuntu 安装图形化界面</h1>
+<h2 id="为WSL2上的-Ubuntu-启用systemd支持"><a class="header-anchor" href="#为WSL2上的-Ubuntu-启用systemd支持"></a>为WSL2上的 Ubuntu 启用systemd支持</h2>
+<p>参考该<a target="_blank" rel="noopener" href="https://www.5axxw.com/wiki/content/k34hu0">教程</a></p>
+<ol>
+<li>
+<p>需要安装<code>git</code>才能进行接下来的操作。所以先按下 Win 键，找到刚刚安装的 Ubuntu 打开</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y git</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>运行脚本和命令</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo git <span class="built_in">clone</span> https://github.com/DamionGans/ubuntu-wsl2-systemd-script.git</span><br><span class="line"><span class="built_in">cd</span> ubuntu-wsl2-systemd-script/</span><br><span class="line">bash ubuntu-wsl2-systemd-script.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>然后在 PowerShell 命令行并输入<code>wsl --shutdown</code>重新启动 Ubuntu应用 并尝试运行<code>systemctl</code></p>
+<p>如果没有得到错误并看到单元列表，那么脚本就起作用了，就可以使用<code>systemctl</code>。</p>
+</li>
+</ol>
+<h2 id="安装Gnome图形界面"><a class="header-anchor" href="#安装Gnome图形界面"></a>安装Gnome图形界面</h2>
+<ol>
+<li>
+<p>在 Ubuntu 中，输入以下命令安装 Ubuntu Desktop ：</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y ubuntu-desktop</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>安装完后，输入<code>sudo vi ~/.bashrc</code>，在文件末尾按 “i” 键添加：</p>
+</li>
+</ol>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>):0.0</span><br><span class="line"><span class="built_in">export</span> XDG_SESSION_TYPE=x11</span><br></pre></td></tr></table></figure>
+<p>按 “Esc” 后输入<code>:wq</code>保存并退出，并使用<code>source ~/.bashrc</code>命令应用修改。</p>
+<h2 id="试运行图形化界面"><a class="header-anchor" href="#试运行图形化界面"></a>试运行图形化界面</h2>
+<p>之后每次启动图形化桌面的步骤为：</p>
+<ol>
+<li>在 Windows 中启动 GWSL</li>
+<li>在 Windows 中启动 Ubuntu</li>
+</ol>
+<p>在Ubuntu中输入</p>
+<p><code>gnome-session</code></p>
+<p>稍等片刻就可以在 GWSL 打开的窗口中看到图形化界面</p>
+<h1>使用</h1>
+<h2 id="图形界面汉化"><a class="header-anchor" href="#图形界面汉化"></a>图形界面汉化</h2>
+<p>网上有很多，我就不单独再做了，可以参考这个<a target="_blank" rel="noopener" href="https://www.jb51.net/os/Ubuntu/298601.html">方法</a></p>
+<h2 id="基本-WSL-命令"><a class="header-anchor" href="#基本-WSL-命令"></a>基本 WSL 命令</h2>
+<p>查看linux版本</p>
+<p><code>wsl -l</code></p>
+<p>停止linux系统</p>
+<p><code>wsl -t Ubuntu</code></p>
+<p>导出系统</p>
+<p><code>wsl --export Ubuntu C:\Ubuntu.tar</code></p>
+<p>删除系统</p>
+<p><code>wsl --unregister Ubuntu</code></p>
+<p>导入系统</p>
+<p><code> wsl --import Ubuntu C:\\WSL  C:\\Ubuntu.tar</code></p>
+<p>通过 WSL 安装的 Linux 分发版最好使用 PowerShell 或 Windows 命令提示符 (CMD) 。 一些基本命令包括：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#list-distributions">列出已安装的分发</a>：<code>wsl -l -v</code></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#unregister-and-reinstall-a-distribution">取消注册并重新安装分发</a>：<code>wsl --unregister &lt;DistributionName&gt;</code></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#run-as-a-specific-user">以特定用户运行</a>： <code>wsl -u &lt;Username&gt;</code></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk">装载磁盘</a>：若要查看中可用的磁盘 <code>wmic diskdrive list brief</code> ；若要使用通过上一命令发现的路径装载磁盘 <code>wsl --mount &lt;DiskPath&gt;</code></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk#unmount-the-disk">卸载磁盘</a> ：<code>wsl --unmount &lt;DiskPath&gt;</code></li>
+</ul>
+<h2 id="系统之间文件系统的相互访问"><a class="header-anchor" href="#系统之间文件系统的相互访问"></a>系统之间文件系统的相互访问</h2>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk#mount-a-vhd-in-wsl">https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk#mount-a-vhd-in-wsl</a></p>
+<p><strong>父windows系统访问子linux系统的文件：</strong><br />
+直接在文件资源管理器输入<code>\\wsl$</code>就可以访问到wsl子系统的文件系统：</p>
+<p>WIN+R输入<code>\\wsl$</code></p>
+<p>此外，还可以将其映射为网络驱动器，这样就可以像访问C盘、D盘一样访问 Ubuntu 的文件系统了</p>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B9.png?x-oss-process=style/yunying61" alt="image-20210911150356629" /></p>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%88%90%E5%8A%9F.png?x-oss-process=style/yunying61" alt="image-20210911150604540" /></p>
+<p><strong>linux子系统访问父windows系统的文件：</strong><br />
+直接<code>cd /mnt</code>就可以看到c/、d/两个文件夹，对应的就是电脑上的C盘、D盘，cd进去就可以访问对应windows上的文件</p>
+<h2 id="跨文件系统工作"><a class="header-anchor" href="#跨文件系统工作"></a>跨文件系统工作</h2>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/filesystems#run-linux-tools-from-a-windows-command-line">跨 Windows 和 Linux 文件系统工作</a></p>
+<p>建议不要跨操作系统使用文件，除非有这么做的特定原因。 若想获得最快的性能速度，请将文件存储在 WSL 文件系统中，前提是在 Linux 命令行（Ubuntu、OpenSUSE 等）中工作。 如果使用 Windows 命令行（PowerShell、命令提示符）工作，请将文件存储在 Windows 文件系统中。</p>
+<p>此外，许多命令在 Windows Linux 之间可互操作。 下面是几个示例：</p>
+<ul>
+<li>
+<p>从 Windows 命令行（如 PowerShell）运行 Linux 工具（如 grep ）：<br />
+打开 PowerShell</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 在 C:\temp&gt; 目录下</span><br><span class="line">wsl ls -la</span><br><span class="line">// 显示 C:\temp 目录的内容</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>混合使用 Linux和 Windows 命令：<br />
+若要使用 Linux 命令 <code>ls -la</code> 列出文件，并使用 PowerShell 命令 <code>findstr</code> 来筛选包含“git”的单词的结果，请组合这些命令：</p>
+  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="built_in">ls</span> <span class="literal">-la</span> | findstr <span class="string">&quot;git&quot;</span></span><br></pre></td></tr></table></figure>
+<p>若要使用 PowerShell 命令 <code>dir</code> 列出文件，并使用 Linux 命令 <code>grep</code> 来筛选包含“git”的单词的结果，请组合这些命令：</p>
+  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span> | wsl grep git</span><br></pre></td></tr></table></figure>
+<p>若要使用 Linux 命令 <code>ls -la</code> 列出文件，并使用 PowerShell 命令 <code>&gt; out.txt</code> 将该列表输出到名为“out.txt”的文本文件，请组合这些命令：</p>
+  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="built_in">ls</span> <span class="literal">-la</span> &gt; out.txt</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="yunying61 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="yunying61 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>yunying61
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.yunying61.top/2021/09/%E5%9F%BA%E4%BA%8EWSL2%E7%9A%84Windows%E4%B8%8BUbuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%B3%BB%E7%BB%9F/" title="基于WSL2的Windows下Ubuntu图形化系统">http://www.yunying61.top/2021/09/基于WSL2的Windows下Ubuntu图形化系统/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://blog.csdn.net/weixin_45385155">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">CSDN</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+              <a href="/tags/WSL/" rel="tag"># WSL</a>
+              <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="tag"># 虚拟机</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/08/%E7%BD%91%E7%BB%9C%E5%94%A4%E9%86%92-%E8%BF%9C%E7%A8%8B%E5%94%A4%E9%86%92%E7%94%B5%E8%84%91WOL-Wake-On-LAN/" rel="prev" title="网络唤醒 - 远程唤醒电脑WOL(Wake On LAN)">
+                  <i class="fa fa-chevron-left"></i> 网络唤醒 - 远程唤醒电脑WOL(Wake On LAN)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/01/Windows%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE0x204%EF%BC%88%E5%81%8F%E9%97%A8%E9%97%AE%E9%A2%98%EF%BC%89%E5%B7%B2%E8%A7%A3%E5%86%B3/" rel="next" title="Windows远程桌面无法访问0x204（偏门问题）已解决">
+                  Windows远程桌面无法访问0x204（偏门问题）已解决 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-changyan">changyan</a></li>
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane changyan" id="comment-changyan">
+              <div class="comments" id="SOHUCS" sid="4e6bc552acdd5a21ab89e7120e258f4a"></div>
+            </div>
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yunying61</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">159k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:24</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"yunying61/community"}</script>
+<script src="/js/third-party/chat/gitter.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.13.10/dist/mermaid.min.js","integrity":"sha256-CmZCFVnvol9YL23PfjDflGY5nJwE+Mf/JN+8v+tD/34="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://www.yunying61.top/2021/09/%E5%9F%BA%E4%BA%8EWSL2%E7%9A%84Windows%E4%B8%8BUbuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%B3%BB%E7%BB%9F/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvVXPmv7","appkey":"942f7dcea39f6d4b449332dde8fe4241"}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"yunying61","repo":"hexo-gitalk-comments","client_id":"cd26c5cc6e59fb8d7d2d","client_secret":"04ee0273d65d5b5b3a5b95c36a90aaaae29c3d39","admin_user":"yunying61","distraction_free_mode":true,"proxy":"http://www.yunying61.top/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"4e6bc552acdd5a21ab89e7120e258f4a"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

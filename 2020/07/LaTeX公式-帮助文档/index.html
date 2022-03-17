@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo2.png">
+  <link rel="mask-icon" href="/images/logo2.svg" color="#222">
+  <meta name="msvalidate.01" content="C4629C76253BAF6F511BC39C8C5D670E">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="符号与字母 Symbol and Alphabet 希腊字母 Greek alphabet 在输入 Latex 代码时，要用 $$   $$ 包含">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="LaTeX公式 帮助文档(未整理好)">
+<meta property="og:url" content="http://www.yunying61.top/2020/07/LaTeX%E5%85%AC%E5%BC%8F-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/index.html">
+<meta property="og:site_name" content="星幕·云影">
+<meta property="og:description" content="符号与字母 Symbol and Alphabet 希腊字母 Greek alphabet 在输入 Latex 代码时，要用 $$   $$ 包含">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-06T03:26:47.000Z">
+<meta property="article:modified_time" content="2022-03-17T08:45:49.613Z">
+<meta property="article:author" content="yunying61">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="LaTeX">
+<meta property="article:tag" content="公式">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yunying61.top/2020/07/LaTeX%E5%85%AC%E5%BC%8F-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yunying61.top/2020/07/LaTeX%E5%85%AC%E5%BC%8F-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/","path":"2020/07/LaTeX公式-帮助文档/","title":"LaTeX公式 帮助文档(未整理好)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>LaTeX公式 帮助文档(未整理好) | 星幕·云影</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">星幕·云影</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">符号与字母 Symbol and Alphabet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D-Greek-alphabet"><span class="nav-number">1.1.</span> <span class="nav-text">希腊字母 Greek alphabet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%8C%E4%BC%AF%E6%9D%A5%E5%AD%97%E6%AF%8D-Hebrew-alphabet"><span class="nav-number">1.2.</span> <span class="nav-text">希伯来字母 Hebrew alphabet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6-Binary-operations"><span class="nav-number">1.3.</span> <span class="nav-text">二元运算符 Binary operations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%85%83%E5%85%B3%E7%B3%BB%E7%AC%A6-Binary-relations"><span class="nav-number">1.4.</span> <span class="nav-text">二元关系符 Binary relations</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8C%85%E5%90%AB%E7%AD%89%E5%8F%B7%E3%80%81%E5%A4%A7%E4%BA%8E%E3%80%81%E5%B0%8F%E4%BA%8E%E3%80%81%E5%85%B3%E7%B3%BB%E4%BB%8E%E5%B1%9E%E3%80%82"><span class="nav-number">1.4.0.0.1.</span> <span class="nav-text">包含等号、大于、小于、关系从属。</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E7%AC%A6%E5%8F%B7-Geometric-symbols"><span class="nav-number">1.5.</span> <span class="nav-text">几何符号 Geometric symbols</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E7%AC%A6%E5%8F%B7-Logic-symbols"><span class="nav-number">1.6.</span> <span class="nav-text">逻辑符号 Logic symbols</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88-Sets"><span class="nav-number">1.7.</span> <span class="nav-text">集合 Sets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%AD%E5%A4%B4-Arrows"><span class="nav-number">1.8.</span> <span class="nav-text">箭头 Arrows</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">运算与函数 Operations &amp; Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90"><span class="nav-number">2.1.</span> <span class="nav-text">极限</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png">
+  <p class="site-author-name" itemprop="name">yunying61</p>
+  <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">110</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button class="js-gitter-toggle-chat-button"><i class="fa fa-comment"></i>
+      聊天室
+    </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yunying61" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yunying61" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yunying61@qq.com" title="E-Mail → mailto:yunying61@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/5119152507" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5119152507" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+<div id="musicplayer">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=34364124&auto=1&height=66">
+    </iframe>
+</div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/yunying61" class="github-corner" title="在GitHub上关注我" aria-label="在GitHub上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yunying61.top/2020/07/LaTeX%E5%85%AC%E5%BC%8F-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yunying61.png">
+      <meta itemprop="name" content="yunying61">
+      <meta itemprop="description" content="yunying61's Hexo Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星幕·云影">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LaTeX公式 帮助文档(未整理好)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-07-06 11:26:47" itemprop="dateCreated datePublished" datetime="2020-07-06T11:26:47+08:00">2020-07-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-17 16:45:49" itemprop="dateModified" datetime="2022-03-17T16:45:49+08:00">2022-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">编程语言</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Latex/" itemprop="url" rel="index"><span itemprop="name">Latex</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="LaTeX公式 帮助文档(未整理好)" href="/2020/07/LaTeX%E5%85%AC%E5%BC%8F-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::d46ad9bbac1c5f7e7e8beabe9f71c113" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>符号与字母 Symbol and Alphabet</h1>
+<h2 id="希腊字母-Greek-alphabet"><a class="header-anchor" href="#希腊字母-Greek-alphabet"></a>希腊字母 Greek alphabet</h2>
+<p>在输入 Latex 代码时，要用 $$   $$ 包含</p>
+<span id="more"></span>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">LaTeX</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">LaTeX</th>
+<th>显示</th>
+<th>LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">常用</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">常用</td>
+<td style="text-align:center"></td>
+<td>常用</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">$\alpha$</td>
+<td style="text-align:center">\alpha</td>
+<td style="text-align:center">$\beta$</td>
+<td style="text-align:center">\beta</td>
+<td>$\gamma$</td>
+<td>\gamma</td>
+</tr>
+<tr>
+<td style="text-align:center">$\delta$</td>
+<td style="text-align:center">\delta</td>
+<td style="text-align:center">$\xi$</td>
+<td style="text-align:center">\xi</td>
+<td>$\zeta$</td>
+<td>\zeta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\eta$</td>
+<td style="text-align:center">\eta</td>
+<td style="text-align:center">$\theta$</td>
+<td style="text-align:center">\theta</td>
+<td>$\lambda$</td>
+<td>\lambda</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mu$</td>
+<td style="text-align:center">\mu</td>
+<td style="text-align:center">$\varepsilon$</td>
+<td style="text-align:center">\varepsilon</td>
+<td>$\pi$</td>
+<td>\pi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\rho$</td>
+<td style="text-align:center">\rho</td>
+<td style="text-align:center">$\sigma$</td>
+<td style="text-align:center">\sigma</td>
+<td>$\phi$</td>
+<td>\phi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\varphi$</td>
+<td style="text-align:center">\varphi</td>
+<td style="text-align:center">$\Sigma$</td>
+<td style="text-align:center">\Sigma</td>
+<td>$\Gamma$</td>
+<td>\Gamma</td>
+</tr>
+<tr>
+<td style="text-align:center">$\Phi$</td>
+<td style="text-align:center">\Phi</td>
+<td style="text-align:center">$\Delta$</td>
+<td style="text-align:center">\Delta</td>
+<td>\Omega$$</td>
+<td>\Omega</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">$\epsilon$</td>
+<td style="text-align:center">\epsilon</td>
+<td style="text-align:center">$\vartheta$</td>
+<td style="text-align:center">\vartheta</td>
+<td>$\iota$</td>
+<td>\iota</td>
+</tr>
+<tr>
+<td style="text-align:center">$\kappa$</td>
+<td style="text-align:center">\kappa</td>
+<td style="text-align:center">$\nu$</td>
+<td style="text-align:center">\nu</td>
+<td>$o$</td>
+<td>o</td>
+</tr>
+<tr>
+<td style="text-align:center">$\varpi$</td>
+<td style="text-align:center">\varpi</td>
+<td style="text-align:center">$\varrho$</td>
+<td style="text-align:center">\varrho</td>
+<td>$\varsigma$</td>
+<td>\varsigma</td>
+</tr>
+<tr>
+<td style="text-align:center">$\tau$</td>
+<td style="text-align:center">\tau</td>
+<td style="text-align:center">$\upsilon$</td>
+<td style="text-align:center">\upsilon</td>
+<td>$\chi$</td>
+<td>\chi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\psi$</td>
+<td style="text-align:center">\psi</td>
+<td style="text-align:center">$\omega$</td>
+<td style="text-align:center">\omega</td>
+<td>$\Theta$</td>
+<td>\Theta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\Lambda$</td>
+<td style="text-align:center">\Lambda</td>
+<td style="text-align:center">$\Xi$</td>
+<td style="text-align:center">\Xi</td>
+<td>$\Pi$</td>
+<td>\Pi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\Upsilon$</td>
+<td style="text-align:center">\Upsilon</td>
+<td style="text-align:center">$\Phi$</td>
+<td style="text-align:center">\Phi</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意:</strong> MathJax支持的大写希腊字母有限，如需其他（如大写Alpha），可使用<strong>罗马体</strong>转换，如<code>\mathrm&#123;A&#125;</code>表示大写Alpha：$\mathrm{A}$。</p>
+<h2 id="希伯来字母-Hebrew-alphabet"><a class="header-anchor" href="#希伯来字母-Hebrew-alphabet"></a>希伯来字母 Hebrew alphabet</h2>
+<p>在输入 Latex 代码时，要用 $$   $$ 包含</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">LaTeX</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\aleph$</td>
+<td style="text-align:center">\aleph</td>
+<td style="text-align:center">$\beth$</td>
+<td style="text-align:center">\beth</td>
+</tr>
+<tr>
+<td style="text-align:center">$\gimel$</td>
+<td style="text-align:center">\gimel</td>
+<td style="text-align:center">$\daleth$</td>
+<td style="text-align:center">\daleth</td>
+</tr>
+</tbody>
+</table>
+<h2 id="二元运算符-Binary-operations"><a class="header-anchor" href="#二元运算符-Binary-operations"></a>二元运算符 Binary operations</h2>
+<p>在输入 Latex 代码时，要用 $$   $$ 包含</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">LaTeX</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">LaTeX</th>
+<th>显示</th>
+<th>LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$+$</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">$\pm$</td>
+<td style="text-align:center">\pm</td>
+<td>$\cdot$</td>
+<td>\cdot</td>
+</tr>
+<tr>
+<td style="text-align:center">$-$</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">$\mp$</td>
+<td style="text-align:center">\mp</td>
+<td>$\bullet$</td>
+<td>\bullet</td>
+</tr>
+<tr>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">\times</td>
+<td style="text-align:center">$\star$</td>
+<td style="text-align:center">\star</td>
+<td>$\cup$</td>
+<td>\cup</td>
+</tr>
+<tr>
+<td style="text-align:center">$\div$</td>
+<td style="text-align:center">\div   (在physics扩展<br/>开启状态下不是除号)</td>
+<td style="text-align:center">$\ast$</td>
+<td style="text-align:center">\ast</td>
+<td>$\cap$</td>
+<td>\cap</td>
+</tr>
+<tr>
+<td style="text-align:center">$\triangleleft$</td>
+<td style="text-align:center">\triangleleft</td>
+<td style="text-align:center">$\setminus$</td>
+<td style="text-align:center">\setminus</td>
+<td>$\sqcup$</td>
+<td>\sqcup</td>
+</tr>
+<tr>
+<td style="text-align:center">$\triangleright$</td>
+<td style="text-align:center">\triangleright</td>
+<td style="text-align:center">$\circ$</td>
+<td style="text-align:center">\circ</td>
+<td>$\sqcap$</td>
+<td>\sqcap</td>
+</tr>
+<tr>
+<td style="text-align:center">$\lhd$</td>
+<td style="text-align:center">\lhd</td>
+<td style="text-align:center">$\vee$</td>
+<td style="text-align:center">\vee</td>
+<td>$\bigcirc$</td>
+<td>\bigcirc</td>
+</tr>
+<tr>
+<td style="text-align:center">$\rhd$</td>
+<td style="text-align:center">\rhd</td>
+<td style="text-align:center">$\wedge$</td>
+<td style="text-align:center">\wedge</td>
+<td>$\wr$</td>
+<td>\wr</td>
+</tr>
+<tr>
+<td style="text-align:center">$\bigtriangleup$</td>
+<td style="text-align:center">\bigtriangleup</td>
+<td style="text-align:center">$\oplus$</td>
+<td style="text-align:center">\oplus</td>
+<td>$\uplus$</td>
+<td>\uplus</td>
+</tr>
+<tr>
+<td style="text-align:center">$\bigtriangledown$</td>
+<td style="text-align:center">\bigtriangledown</td>
+<td style="text-align:center">$\ominus$</td>
+<td style="text-align:center">\ominus</td>
+<td>$\amalg$</td>
+<td>\amalg</td>
+</tr>
+<tr>
+<td style="text-align:center">$\unlhd$</td>
+<td style="text-align:center">\unlhd</td>
+<td style="text-align:center">$\odot$</td>
+<td style="text-align:center">\odot</td>
+<td>$\dagger$</td>
+<td>\dagger</td>
+</tr>
+<tr>
+<td style="text-align:center">$\unrhd$</td>
+<td style="text-align:center">\unrhd</td>
+<td style="text-align:center">$\oslash$</td>
+<td style="text-align:center">\oslash</td>
+<td>$\ddagger$</td>
+<td>\ddagger</td>
+</tr>
+<tr>
+<td style="text-align:center">$\diamond$</td>
+<td style="text-align:center">\diamond</td>
+<td style="text-align:center">$\otimes$</td>
+<td style="text-align:center">\otimes</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="二元关系符-Binary-relations"><a class="header-anchor" href="#二元关系符-Binary-relations"></a>二元关系符 Binary relations</h2>
+<h5 id="包含等号、大于、小于、关系从属。"><a class="header-anchor" href="#包含等号、大于、小于、关系从属。"></a>包含等号、大于、小于、关系从属。</h5>
+<p>在输入 Latex 代码时，要用 $$   $$ 包含</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">LaTeX</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">LaTeX</th>
+<th>显示</th>
+<th>LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$=$</td>
+<td style="text-align:center">=</td>
+<td style="text-align:center">$\ne$</td>
+<td style="text-align:center">\ne</td>
+<td>$\neq$</td>
+<td>\neq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\equiv$</td>
+<td style="text-align:center">\equiv</td>
+<td style="text-align:center">$\not\equiv$</td>
+<td style="text-align:center">\not\equiv</td>
+<td>$\doteq$</td>
+<td>\doteq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\doteqdot$</td>
+<td style="text-align:center">\doteqdot</td>
+<td style="text-align:center">$\overset{\underset{\mathrm{def}}{}}{=}$</td>
+<td style="text-align:center">\overset{\underset{\mathrm{def}}{}}{=}</td>
+<td>$:=$</td>
+<td>:=</td>
+</tr>
+<tr>
+<td style="text-align:center">$\sim$</td>
+<td style="text-align:center">\sim</td>
+<td style="text-align:center">$\nsim$</td>
+<td style="text-align:center">\nsim</td>
+<td>$\cong$</td>
+<td>\cong</td>
+</tr>
+<tr>
+<td style="text-align:center">$\thicksim$</td>
+<td style="text-align:center">\thicksim</td>
+<td style="text-align:center">$\backsim$</td>
+<td style="text-align:center">\backsim</td>
+<td>$\ncong$</td>
+<td>\ncong</td>
+</tr>
+<tr>
+<td style="text-align:center">$\simeq$</td>
+<td style="text-align:center">\simeq</td>
+<td style="text-align:center">$\backsimeq$</td>
+<td style="text-align:center">\backsimeq</td>
+<td>$\eqsim$</td>
+<td>\eqsim</td>
+</tr>
+<tr>
+<td style="text-align:center">$\approx$</td>
+<td style="text-align:center">\approx</td>
+<td style="text-align:center">$\thickapprox$</td>
+<td style="text-align:center">\thickapprox</td>
+<td>$\approxeq$</td>
+<td>\approxeq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\asymp$</td>
+<td style="text-align:center">\asymp</td>
+<td style="text-align:center">$\propto$</td>
+<td style="text-align:center">\propto</td>
+<td>$\varpropto$</td>
+<td>\varpropto</td>
+</tr>
+<tr>
+<td style="text-align:center">$&lt;$</td>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">$\nless$</td>
+<td style="text-align:center">\nless</td>
+<td>$\ll$</td>
+<td>\ll</td>
+</tr>
+<tr>
+<td style="text-align:center">$\lll$</td>
+<td style="text-align:center">\lll</td>
+<td style="text-align:center">$\not\lll$</td>
+<td style="text-align:center">\not\lll</td>
+<td>$\not\ll$</td>
+<td>\not\ll</td>
+</tr>
+<tr>
+<td style="text-align:center">$&gt;$</td>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">$\ngtr$</td>
+<td style="text-align:center">\ngtr</td>
+<td>$\gg$</td>
+<td>\gg</td>
+</tr>
+<tr>
+<td style="text-align:center">$\ggg$</td>
+<td style="text-align:center">\ggg</td>
+<td style="text-align:center">$\not\ggg$</td>
+<td style="text-align:center">\not\ggg</td>
+<td>$\not\gg$</td>
+<td>\not\gg</td>
+</tr>
+<tr>
+<td style="text-align:center">$\lessdot$</td>
+<td style="text-align:center">\lessdot</td>
+<td style="text-align:center">$\gtrdot$</td>
+<td style="text-align:center">\gtrdot</td>
+<td>$\le$</td>
+<td>\le</td>
+</tr>
+<tr>
+<td style="text-align:center">$\ge$</td>
+<td style="text-align:center">\ge</td>
+<td style="text-align:center">$\geq$</td>
+<td style="text-align:center">\geq</td>
+<td>$\leq$</td>
+<td>\leq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\lneq$</td>
+<td style="text-align:center">\lneq</td>
+<td style="text-align:center">$\leqq$</td>
+<td style="text-align:center">\leqq</td>
+<td>$\nleq$</td>
+<td>\nleq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\nleqq$</td>
+<td style="text-align:center">\nleqq</td>
+<td style="text-align:center">$\lneqq$</td>
+<td style="text-align:center">\lneqq</td>
+<td>$\lvertneqq$</td>
+<td>\lvertneqq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\gneq$</td>
+<td style="text-align:center">\gneq</td>
+<td style="text-align:center">$\geqq$</td>
+<td style="text-align:center">\geqq</td>
+<td>$\ngeq$</td>
+<td>\ngeq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\ngeqq$</td>
+<td style="text-align:center">\ngeqq</td>
+<td style="text-align:center">$\gneqq$</td>
+<td style="text-align:center">\gneqq</td>
+<td>$\gvertneqq$</td>
+<td>\gvertneqq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\lessgtr$</td>
+<td style="text-align:center">\lessgtr</td>
+<td style="text-align:center">$\lesseqgtr$</td>
+<td style="text-align:center">\lesseqgtr</td>
+<td>$\lesseqqgtr$</td>
+<td>\lesseqqgtr</td>
+</tr>
+<tr>
+<td style="text-align:center">$\gtrless$</td>
+<td style="text-align:center">\gtrless</td>
+<td style="text-align:center">$\gtreqless$</td>
+<td style="text-align:center">\gtreqless</td>
+<td>$\gtreqqless$</td>
+<td>\gtreqqless</td>
+</tr>
+<tr>
+<td style="text-align:center">$\leqslant$</td>
+<td style="text-align:center">\leqslant</td>
+<td style="text-align:center">$\nleqslant$</td>
+<td style="text-align:center">\nleqslant</td>
+<td>$\eqslantless$</td>
+<td>\eqslantless</td>
+</tr>
+<tr>
+<td style="text-align:center">$\geqslant$</td>
+<td style="text-align:center">\geqslant</td>
+<td style="text-align:center">$\ngeqslant$</td>
+<td style="text-align:center">\ngeqslant</td>
+<td>$\eqslantgtr$</td>
+<td>\eqslantgtr</td>
+</tr>
+<tr>
+<td style="text-align:center">$\lesssim$</td>
+<td style="text-align:center">\lesssim</td>
+<td style="text-align:center">$\lnsim$</td>
+<td style="text-align:center">\lnsim</td>
+<td>$\lessapprox$</td>
+<td>\lessapprox</td>
+</tr>
+<tr>
+<td style="text-align:center">$\gtrsim$</td>
+<td style="text-align:center">\gtrsim</td>
+<td style="text-align:center">$\gnsim$</td>
+<td style="text-align:center">\gnsim</td>
+<td>$\gtrapprox$</td>
+<td>\gtrapprox</td>
+</tr>
+<tr>
+<td style="text-align:center">$\lnapprox$</td>
+<td style="text-align:center">\lnapprox</td>
+<td style="text-align:center">$\gnapprox$</td>
+<td style="text-align:center">\gnapprox</td>
+<td>$\prec$</td>
+<td>\prec</td>
+</tr>
+<tr>
+<td style="text-align:center">$\nprec$</td>
+<td style="text-align:center">\nprec</td>
+<td style="text-align:center">$\preceq$</td>
+<td style="text-align:center">\preceq</td>
+<td>$\npreceq$</td>
+<td>\npreceq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\precneqq$</td>
+<td style="text-align:center">\precneqq</td>
+<td style="text-align:center">$\succ$</td>
+<td style="text-align:center">\succ</td>
+<td>$\nsucc$</td>
+<td>\nsucc</td>
+</tr>
+<tr>
+<td style="text-align:center">$\succeq$</td>
+<td style="text-align:center">\succeq</td>
+<td style="text-align:center">$\nsucceq$</td>
+<td style="text-align:center">\nsucceq</td>
+<td>$\succneqq$</td>
+<td>\succneqq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\preccurlyeq$</td>
+<td style="text-align:center">\preccurlyeq</td>
+<td style="text-align:center">$\curlyeqprec$</td>
+<td style="text-align:center">\curlyeqprec</td>
+<td>$\succcurlyeq$</td>
+<td>\succcurlyeq</td>
+</tr>
+<tr>
+<td style="text-align:center">$\curlyeqsucc$</td>
+<td style="text-align:center">\curlyeqsucc</td>
+<td style="text-align:center">$\precsim$</td>
+<td style="text-align:center">\precsim</td>
+<td>$\precnsim$</td>
+<td>\precnsim</td>
+</tr>
+<tr>
+<td style="text-align:center">$\precapprox$</td>
+<td style="text-align:center">\precapprox</td>
+<td style="text-align:center">$\precnapprox$</td>
+<td style="text-align:center">\precnapprox</td>
+<td>$\succsim$</td>
+<td>\succsim</td>
+</tr>
+<tr>
+<td style="text-align:center">$\succnsim$</td>
+<td style="text-align:center">\succnsim</td>
+<td style="text-align:center">$\succapprox$</td>
+<td style="text-align:center">\succapprox</td>
+<td>$\succnapprox$</td>
+<td>\succnapprox</td>
+</tr>
+</tbody>
+</table>
+<h2 id="几何符号-Geometric-symbols"><a class="header-anchor" href="#几何符号-Geometric-symbols"></a>几何符号 Geometric symbols</h2>
+<p>在输入 Latex 代码时，要用 $$   $$ 包含</p>
+<table>
+<thead>
+<tr>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\parallel$</td>
+<td>\parallel</td>
+<td>$\angle$</td>
+<td>\angle</td>
+<td>$\bigstar$</td>
+<td>\bigstar</td>
+<td>$\blacktriangle$</td>
+<td>\blacktriangle</td>
+</tr>
+<tr>
+<td>$\nparallel$</td>
+<td>\nparallel</td>
+<td>$\perp$</td>
+<td>\perp</td>
+<td>$\bigcirc$</td>
+<td>\bigcirc</td>
+<td>$\blacktriangledown$</td>
+<td>\blacktriangledown</td>
+</tr>
+<tr>
+<td>$\shortparallel$</td>
+<td>\shortparallel</td>
+<td>$\sphericalangle$</td>
+<td>\sphericalangle</td>
+<td>$\triangle$</td>
+<td>\triangle</td>
+<td>$\blacktriangleleft$</td>
+<td>\blacktriangleleft</td>
+</tr>
+<tr>
+<td>$\nshortparallel$</td>
+<td>\nshortparallel</td>
+<td>$\measuredangle$</td>
+<td>\measuredangle</td>
+<td>$\bigtriangleup$</td>
+<td>\bigtriangleup</td>
+<td>$\blacktriangleright$</td>
+<td>\blacktriangleright</td>
+</tr>
+<tr>
+<td>$\Box$</td>
+<td>\Box</td>
+<td>$61^\circ$</td>
+<td>25^\circ</td>
+<td>$\bigtriangledown$</td>
+<td>\bigtriangledown</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$\blacksquare$</td>
+<td>\blacksquare</td>
+<td>$\lozenge$</td>
+<td>\lozenge</td>
+<td>$\vartriangle$</td>
+<td>\vartriangle</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$\diamond$</td>
+<td>\diamond</td>
+<td>$\blacklozenge$</td>
+<td>\blacklozenge</td>
+<td>$\triangledown$</td>
+<td>\triangledown</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="逻辑符号-Logic-symbols"><a class="header-anchor" href="#逻辑符号-Logic-symbols"></a>逻辑符号 Logic symbols</h2>
+<p>在输入 Latex 代码时，要用 $$   $$ 包含</p>
+<table>
+<thead>
+<tr>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\because$</td>
+<td>\because</td>
+<td>$\forall$</td>
+<td>\forall</td>
+<td>$\And$</td>
+<td>\And</td>
+</tr>
+<tr>
+<td>$\therefore$</td>
+<td>\therefore</td>
+<td>$\exists$</td>
+<td>\exists</td>
+<td>$\nexists$</td>
+<td>\nexists</td>
+</tr>
+<tr>
+<td>$\lor$</td>
+<td>\lor</td>
+<td>$\vee$</td>
+<td>\vee</td>
+<td>$\bigvee$</td>
+<td>\bigvee</td>
+</tr>
+<tr>
+<td>$\land$</td>
+<td>\land</td>
+<td>$\wedge$</td>
+<td>\wedge</td>
+<td>$\bigwedge$</td>
+<td>\bigwedge</td>
+</tr>
+<tr>
+<td>$\curlyvee$</td>
+<td>\curlyvee</td>
+<td>$\curlywedge$</td>
+<td>\curlywedge</td>
+<td>$\overline{abc}$</td>
+<td>\overline{abc}</td>
+</tr>
+<tr>
+<td>$\lnot$</td>
+<td>\lnot</td>
+<td>$\neg$</td>
+<td>\neg</td>
+<td>$\bar{abc}$</td>
+<td>\bar{abc}</td>
+</tr>
+<tr>
+<td>$\not\operatorname{R}$</td>
+<td>\not\operatorname{R}</td>
+<td>$\bot$</td>
+<td>\bot</td>
+<td>$\top$</td>
+<td>\top</td>
+</tr>
+<tr>
+<td>$\vdash$</td>
+<td>\vdash</td>
+<td>$\dashv$</td>
+<td>\dashv</td>
+<td>$\vDash$</td>
+<td>\vDash</td>
+</tr>
+<tr>
+<td>$\Vvdash$</td>
+<td>\Vvdash</td>
+<td>$\Vdash$</td>
+<td>\Vdash</td>
+<td>$\models$</td>
+<td>\models</td>
+</tr>
+<tr>
+<td>$\nvdash$</td>
+<td>\nvdash</td>
+<td>$\nVdash$</td>
+<td>\nVdash</td>
+<td>$\nvDash$</td>
+<td>\nvDash</td>
+</tr>
+<tr>
+<td>$\urcorner$</td>
+<td>\urcorner</td>
+<td>$\ulcorner$</td>
+<td>\ulcorner</td>
+<td>$\nVDash$</td>
+<td>\nVDash</td>
+</tr>
+<tr>
+<td>$\lrcorner$</td>
+<td>\lrcorner</td>
+<td>$\llcorner$</td>
+<td>\llcorner</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="集合-Sets"><a class="header-anchor" href="#集合-Sets"></a>集合 Sets</h2>
+<p>在输入 Latex 代码时，要用 $$   $$ 包含</p>
+<table>
+<thead>
+<tr>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>${}$</td>
+<td>{}</td>
+<td>$\emptyset$</td>
+<td>\emptyset</td>
+<td>$\varnothing$</td>
+<td>\varnothing</td>
+<td>$\setminus$</td>
+<td>\setminus</td>
+</tr>
+<tr>
+<td>$\in$</td>
+<td>\in</td>
+<td>$\notin$</td>
+<td>\notin</td>
+<td>$\ni$</td>
+<td>\ni</td>
+<td>$\smallsetminus$</td>
+<td>\smallsetminus</td>
+</tr>
+<tr>
+<td>$\cap$</td>
+<td>\cap</td>
+<td>$\Cap$</td>
+<td>\Cap</td>
+<td>$\sqcap$</td>
+<td>\sqcap</td>
+<td>$\bigcap$</td>
+<td>\bigcap</td>
+</tr>
+<tr>
+<td>$\cup$</td>
+<td>\cup</td>
+<td>$\Cup$</td>
+<td>\Cup</td>
+<td>$\sqcup$</td>
+<td>\sqcup</td>
+<td>$\bigcup$</td>
+<td>\bigcup</td>
+</tr>
+<tr>
+<td>$\bigsqcup$</td>
+<td>\bigsqcup</td>
+<td>$\uplus$</td>
+<td>\uplus</td>
+<td>$\biguplus$</td>
+<td>\biguplus</td>
+<td>$\times$</td>
+<td>\times</td>
+</tr>
+<tr>
+<td>$\subset$</td>
+<td>\subset</td>
+<td>$\Subset$</td>
+<td>\Subset</td>
+<td>$\sqsubset$</td>
+<td>\sqsubset</td>
+<td>$\sqsubseteq$</td>
+<td>\sqsubseteq</td>
+</tr>
+<tr>
+<td>$\supset$</td>
+<td>\supset</td>
+<td>$\Supset$</td>
+<td>\Supset</td>
+<td>$\sqsupset$</td>
+<td>\sqsupset</td>
+<td>$\sqsupseteq$</td>
+<td>\sqsupseteq</td>
+</tr>
+<tr>
+<td>$\subseteq$</td>
+<td>\subseteq</td>
+<td>$\nsubseteq$</td>
+<td>\nsubseteq</td>
+<td>$\subsetneq$</td>
+<td>\subsetneq</td>
+<td>$\varsubsetneq$</td>
+<td>\varsubsetneq</td>
+</tr>
+<tr>
+<td>$\supseteq$</td>
+<td>\supseteq</td>
+<td>$\nsupseteq$</td>
+<td>\nsupseteq</td>
+<td>$\supsetneq$</td>
+<td>\supsetneq</td>
+<td>$\varsupsetneq$</td>
+<td>\varsupsetneq</td>
+</tr>
+<tr>
+<td>$\subseteqq$</td>
+<td>\subseteqq</td>
+<td>$\nsubseteqq$</td>
+<td>\nsubseteqq</td>
+<td>$\subsetneqq$</td>
+<td>\subsetneqq</td>
+<td>$\varsubsetneqq$</td>
+<td>\varsubsetneqq</td>
+</tr>
+<tr>
+<td>$\supseteqq$</td>
+<td>\supseteqq</td>
+<td>$\nsupseteqq$</td>
+<td>\nsupseteqq</td>
+<td>$\supsetneqq$</td>
+<td>\supsetneqq</td>
+<td>$\varsupsetneqq$</td>
+<td>\varsupsetneqq</td>
+</tr>
+</tbody>
+</table>
+<h2 id="箭头-Arrows"><a class="header-anchor" href="#箭头-Arrows"></a>箭头 Arrows</h2>
+<p>在输入 Latex 代码时，要用 $$   $$ 包含</p>
+<table>
+<thead>
+<tr>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+<th>显示</th>
+<th>Latex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1>运算与函数 Operations &amp; Functions</h1>
+<h2 id="极限"><a class="header-anchor" href="#极限"></a>极限</h2>
+<table>
+<thead>
+<tr>
+<th>显示</th>
+<th>Latex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\lim_{n \to \infty}x_n$</td>
+<td>\lim_{n \to \infty}x_n</td>
+</tr>
+<tr>
+<td>$\textstyle \lim_{n \to \infty}x_n$</td>
+<td>\textstyle \lim_{n \to \infty}x_n</td>
+</tr>
+<tr>
+<td>$\lim\limits_{n \to \infty}x_n$</td>
+<td>\lim\limits_{n \to \infty}x_n</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="yunying61 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="yunying61 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>yunying61
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.yunying61.top/2020/07/LaTeX%E5%85%AC%E5%BC%8F-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" title="LaTeX公式 帮助文档(未整理好)">http://www.yunying61.top/2020/07/LaTeX公式-帮助文档/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://blog.csdn.net/weixin_45385155">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">CSDN</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
+              <a href="/tags/%E5%85%AC%E5%BC%8F/" rel="tag"># 公式</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/05/C++-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0-%E9%BB%98%E8%AE%A4%E5%BD%A2%E5%8F%82/" rel="prev" title="C++ 自定义函数 默认形参">
+                  <i class="fa fa-chevron-left"></i> C++ 自定义函数 默认形参
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/07/winodows%E6%96%87%E4%BB%B6%E5%A4%B9%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4-%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E6%89%80%E6%9C%89%E8%80%85/" rel="next" title="winodows文件夹无法删除 无法显示当前所有者">
+                  winodows文件夹无法删除 无法显示当前所有者 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-changyan">changyan</a></li>
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane changyan" id="comment-changyan">
+              <div class="comments" id="SOHUCS" sid="d46ad9bbac1c5f7e7e8beabe9f71c113"></div>
+            </div>
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yunying61</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">159k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:24</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"yunying61/community"}</script>
+<script src="/js/third-party/chat/gitter.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.13.10/dist/mermaid.min.js","integrity":"sha256-CmZCFVnvol9YL23PfjDflGY5nJwE+Mf/JN+8v+tD/34="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://www.yunying61.top/2020/07/LaTeX%E5%85%AC%E5%BC%8F-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvVXPmv7","appkey":"942f7dcea39f6d4b449332dde8fe4241"}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"yunying61","repo":"hexo-gitalk-comments","client_id":"cd26c5cc6e59fb8d7d2d","client_secret":"04ee0273d65d5b5b3a5b95c36a90aaaae29c3d39","admin_user":"yunying61","distraction_free_mode":true,"proxy":"http://www.yunying61.top/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"d46ad9bbac1c5f7e7e8beabe9f71c113"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
