@@ -3336,17 +3336,30 @@ body {
   background-size: cover;
   background-position: 50% 50%;
 }
-.post-block {
-  background: rgba(51,51,51,0.85) none repeat scroll !important;
+@media (prefers-color-scheme: light) {
+  .post-block {
+    background: rgba(255,255,255,0.85) none repeat scroll !important;
+  }
+  .sidebar {
+    opacity: 0.9;
+  }
+  .header-inner {
+    background: rgba(255,255,255,0.9);
+  }
+  .popup {
+    opacity: 0.95;
+  }
 }
-.sidebar {
-  opacity: 0.85;
-}
-.header-inner {
-  background: rgba(85,85,85,0.85);
-}
-.popup {
-  opacity: 0.85;
+@media (prefers-color-scheme: dark) {
+  .post-block {
+    background: rgba(51,51,51,0.85) none repeat scroll !important;
+  }
+  .sidebar {
+    opacity: 0.85;
+  }
+  .header-inner {
+    opacity: 0.85;
+  }
 }
 .back-to-top {
   font-size: 18px;
