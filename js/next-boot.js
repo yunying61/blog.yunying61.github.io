@@ -1,3 +1,12 @@
+/*
+ * @Author: yunying61
+ * @创建时间: 2022-03-15-20:24:19
+ * @最后修改者: yunying61
+ * @最后编辑时间: 2022-03-21-19:23:09
+ * @文件相对于项目的路径: \undefinedg:\blog_hexo_next\themes\next\source\js\next-boot.js
+ * @消息: 添加了代码折叠(codeUnfold)的功能
+ * 星幕·云影
+ */
 /* global NexT, CONFIG */
 
 NexT.boot = {};
@@ -32,7 +41,8 @@ NexT.boot.registerEvents = function() {
 };
 
 NexT.boot.refresh = function() {
-
+  // 代码折叠
+  codeUnfold();
   /**
    * Register JS handlers by condition option.
    * Need to add config option in Front-End at 'scripts/helpers/next-config.js' file.
