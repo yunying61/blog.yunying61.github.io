@@ -17,7 +17,6 @@ $ git pull origin master
 > 待更新文章：
 >
 > 1. 2020-03-02-Hexo部署到个人服务器.md
-> 2. 2022-03-06-Windows11程序安装或卸载-问题解决.md
 > 3. 2022-03-10-Node-js-安装与配置.md
 
 ![image-20220315101515911](https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/Hexo%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB.png)
