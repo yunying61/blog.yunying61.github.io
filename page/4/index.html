@@ -312,14 +312,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
+      <span>10k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>9 分钟</span>
     </span>
 </div>
 
@@ -330,7 +330,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1></h1>
+          <h1 id="section"></h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/04/Markdown%E4%BD%BF%E7%94%A8emoji%E8%A1%A8%E6%83%85/#more" rel="contents">
@@ -558,7 +558,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>样式配置</h1>
+          <h1 id="样式配置">样式配置</h1>
 <p>用公式编辑器，首先要解决的问题就是样式的配置。</p>
 <p>因为不把样式弄好，很多公式写起来非常不顺心，比如矩阵(我被恶心了好久)。</p>
           <!--noindex-->
@@ -674,7 +674,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="Hexo简介"><a class="header-anchor" href="#Hexo简介"></a>Hexo简介</h2>
+          <h2 id="hexo简介">Hexo简介</h2>
 <p>Hexo是一款基于Node.js的静态博客框架，可以方便的生成静态网页托管在GitHub和Coding上或者自己的服务器上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。</p>
           <!--noindex-->
             <div class="post-button">
@@ -740,7 +740,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-27 16:12:03" itemprop="dateModified" datetime="2022-03-27T16:12:03+08:00">2022-03-27</time>
+      <time title="修改时间：2022-03-27 17:52:26" itemprop="dateModified" datetime="2022-03-27T17:52:26+08:00">2022-03-27</time>
     </span>
 
   
@@ -771,14 +771,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>614</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -789,14 +789,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="本地Hexo配置"><a class="header-anchor" href="#本地Hexo配置"></a>本地Hexo配置</h2>
-<p>修改Hexo博客根目录下的<code>_config.yml</code>文件中的deploy配置，如下</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span> </span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">    <span class="attr">aliyun:</span> <span class="string">git@server:/home/git/hexoBlog.git,master</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">https://github.com/yunying61/yunying61.github.io.git,master</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>以上是我自己的配置，我配置了两个部署位置，一个部署到服务器上，一个部署到Github上。</p>
-<p>本文只需要看第一个部署到<code>aliyun</code>上就可以</p>
-<p>root：网上其他人说用git代替root账户，但我</p>
-</blockquote>
+          <h2 id="前言">前言</h2>
+<p>博客已经是部署到GitHub上了，但自己还有一个服务器，就想说能不能也把博客部署到服务器上，然后再通过Nginx发布到网上。毕竟GitHub访问慢，而且在国内访问还不稳定，放在服务器上，国内访问也能更方便。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/03/Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/#more" rel="contents">
@@ -910,8 +904,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>在右键菜单中添加‘打开cmd命令’</h1>
-<p>对于有些操作，cmd命令的使用频率也是很高的，而且还有很多的操作需要进入指定的文件夹目录，这就让人非常不爽了💢。毕竟我们不希望每次都要输入一长串命令，只是为了进入一个文件夹而已，所以在右键中添加一个“打开cmd的命令”是解决问题的一个好方法😎。</p>
+          <h1 id="在右键菜单中添加打开cmd命令">在右键菜单中添加‘打开cmd命令’</h1>
+<p>对于有些操作，cmd命令的使用频率也是很高的，而且还有很多的操作需要进入指定的文件夹目录，这就让人非常不爽了:anger:。毕竟我们不希望每次都要输入一长串命令，只是为了进入一个文件夹而已，所以在右键中添加一个“打开cmd的命令”是解决问题的一个好方法:sunglasses:。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/02/%E5%9C%A8Windows%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80cmd%E5%91%BD%E4%BB%A4/#more" rel="contents">
@@ -1025,7 +1019,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="下载准备-3"><a class="header-anchor" href="#下载准备-3"></a>下载准备</h2>
+          <h2 id="下载准备"><a class="header-anchor" href="#下载准备"></a>下载准备</h2>
 <p><a target="_blank" rel="noopener" href="https://www.mongodb.com/">MongoDB官方</a>的<a target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">下载地址</a></p>
           <!--noindex-->
             <div class="post-button">
@@ -1122,7 +1116,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>7.1k</span>
+      <span>7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1140,8 +1134,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>leanote蚂蚁笔记</h1>
-<p>目前在知识管理/笔记类软件领域有强大的印象笔记 (Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。<br />
+          <h1 id="leanote蚂蚁笔记">leanote蚂蚁笔记</h1>
+<p>目前在知识管理/笔记类软件领域有强大的印象笔记
+(Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。
 我一开始用的也是讯飞语记，刚开始还不懂，只是被它的语音识别和云同步所吸引。后来懂的越来越多，愈发觉得自己的一些笔记还是不要放别人的数据库里。碰巧，在阿里云的一篇学习文章里，我发现了leanote，于是乎，我也就进入了私人云笔记时代！</p>
           <!--noindex-->
             <div class="post-button">
@@ -1256,7 +1251,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>这里为大家推荐一款免费的，可以单独为文件夹设置密码的小程序[Folder-locker]。这是国人开发的一款开源加密小程序，它只有一个功能，就是给文件夹上密码，而且原理非常简单，所以不提供<abbr title="懂了原理，很简单就能解开">安全保障</abbr>。项目地址：<a target="_blank" rel="noopener" href="https://github.com/Albert-W/Folder-locker">https://github.com/Albert-W/Folder-locker</a></p>
+          <p>这里为大家推荐一款免费的，可以单独为文件夹设置密码的小程序<a
+href="#folder-locker">Folder-locker</a>。这是国人开发的一款开源加密小程序，它只有一个功能，就是给文件夹上密码，而且原理非常简单，所以不提供<abbr title="懂了原理，很简单就能解开">安全保障</abbr>。项目地址：<a
+target="_blank" rel="noopener" href="https://github.com/Albert-W/Folder-locker"
+class="uri">https://github.com/Albert-W/Folder-locker</a></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/02/%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8A%A0%E5%AF%86/#more" rel="contents">
@@ -1352,7 +1350,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>997</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1370,7 +1368,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>通过外链</h1>
+          <h1 id="通过外链">通过外链</h1>
 <p>Markdown的语法格式如下：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">alt 属性文本</span>](<span class="link">图片地址</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">alt 属性文本</span>](<span class="link">图片地址 &quot;可选标题&quot;</span>)  </span><br></pre></td></tr></table></figure>
           <!--noindex-->
@@ -1422,13 +1420,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">164k</span>
+    <span title="站点总字数">170k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:29</span>
+    <span title="站点阅读时长">2:35</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

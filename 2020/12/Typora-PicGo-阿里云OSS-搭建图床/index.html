@@ -35,17 +35,13 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yunying61.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content="Typora+PicGo+阿里云OSS-搭建自动上传图床 前言  一定要注意空格啊！！！我就是因为Access Key ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！  好了，以上是吐槽，接下来进入正题。 在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要插入图片用的是本地链接。在本地，在编辑器中，我们能看到图片的展示。但是">
+  <meta name="description" content="Typora+PicGo+阿里云OSS-搭建自动上传图床 前言  一定要注意空格啊！！！我就是因为Access Key ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！  好了，以上是吐槽，接下来进入正题。 在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要插入图片用的是本地链接。在本地，在编辑器中，我们能看到图">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Typora-PicGo-阿里云OSS-搭建图床">
 <meta property="og:url" content="https://yunying61.github.io/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="Typora+PicGo+阿里云OSS-搭建自动上传图床 前言  一定要注意空格啊！！！我就是因为Access Key ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！  好了，以上是吐槽，接下来进入正题。 在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要插入图片用的是本地链接。在本地，在编辑器中，我们能看到图片的展示。但是">
+<meta property="og:description" content="Typora+PicGo+阿里云OSS-搭建自动上传图床 前言  一定要注意空格啊！！！我就是因为Access Key ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！  好了，以上是吐槽，接下来进入正题。 在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要插入图片用的是本地链接。在本地，在编辑器中，我们能看到图">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://user-images.githubusercontent.com/12621342/34242310-b5056510-e655-11e7-8568-60ffd4f71910.gif">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/picgo-alyoss.png">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/picgo-typora.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/picgo-core-typora.png?x-oss-process=style/yunying61">
 <meta property="article:published_time" content="2020-12-22T08:54:26.000Z">
 <meta property="article:modified_time" content="2022-03-24T02:00:21.599Z">
 <meta property="article:author" content="yunying61">
@@ -54,7 +50,6 @@
 <meta property="article:tag" content="OSS">
 <meta property="article:tag" content="图床">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://user-images.githubusercontent.com/12621342/34242310-b5056510-e655-11e7-8568-60ffd4f71910.gif">
 
 
 <link rel="canonical" href="https://yunying61.github.io/2020/12/Typora-PicGo-%E9%98%BF%E9%87%8C%E4%BA%91OSS-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">
@@ -175,7 +170,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Typora+PicGo+阿里云OSS-搭建自动上传图床</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">PicGo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E8%89%B2%E5%8A%9F%E8%83%BD"><span class="nav-number">2.1.</span> <span class="nav-text">特色功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text">下载安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows"><span class="nav-number">2.2.1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#macOS"><span class="nav-number">2.2.2.</span> <span class="nav-text">macOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux"><span class="nav-number">2.2.3.</span> <span class="nav-text">Linux</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E6%88%AA%E5%9B%BE"><span class="nav-number">2.3.</span> <span class="nav-text">应用截图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PicGo%E9%85%8D%E7%BD%AE"><span class="nav-number">2.4.</span> <span class="nav-text">PicGo配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PicGo-Core%E9%85%8D%E7%BD%AE"><span class="nav-number">2.5.</span> <span class="nav-text">PicGo-Core配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.5.1.</span> <span class="nav-text">默认配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">2.6.</span> <span class="nav-text">后记</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#typorapicgo%E9%98%BF%E9%87%8C%E4%BA%91oss-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.</span> <span class="nav-text">Typora+PicGo+阿里云OSS-搭建自动上传图床</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#picgo"><span class="nav-number">2.</span> <span class="nav-text">PicGo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E8%89%B2%E5%8A%9F%E8%83%BD"><span class="nav-number">2.1.</span> <span class="nav-text">特色功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text">下载安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#windows"><span class="nav-number">2.2.1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#macos"><span class="nav-number">2.2.2.</span> <span class="nav-text">macOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux"><span class="nav-number">2.2.3.</span> <span class="nav-text">Linux</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E6%88%AA%E5%9B%BE"><span class="nav-number">2.3.</span> <span class="nav-text">应用截图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#picgo%E9%85%8D%E7%BD%AE"><span class="nav-number">2.4.</span> <span class="nav-text">PicGo配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#picgo-core%E9%85%8D%E7%BD%AE"><span class="nav-number">2.5.</span> <span class="nav-text">PicGo-Core配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.5.1.</span> <span class="nav-text">默认配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">2.6.</span> <span class="nav-text">后记</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -313,11 +308,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
         </span>
     </span>
 
@@ -367,16 +362,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1>Typora+PicGo+阿里云OSS-搭建自动上传图床</h1>
-<h2 id="前言"><a class="header-anchor" href="#前言"></a>前言</h2>
+        <h1
+id="typorapicgo阿里云oss-搭建自动上传图床">Typora+PicGo+阿里云OSS-搭建自动上传图床</h1>
+<h2 id="前言">前言</h2>
 <blockquote>
-<p>一定要注意空格啊！！！我就是因为Access Key ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！</p>
+<p>一定要注意空格啊！！！我就是因为Access Key
+ID开头多打了一个空格，导致一直报错，折腾了2小时，无意间在配置文件里发现这里多了一个空格！</p>
 </blockquote>
 <p>好了，以上是吐槽，接下来进入正题。</p>
 <p>在Typora使用markdown语法写作时，是不是遇到过这样子的情况。我需要<strong>插入图片</strong>用的是本地链接。在本地，在编辑器中，我们能看到图片的展示。但是如果我们写完了，需要上传到自己的博客，或者去到某些平台发布。复制文章过去，图片并不能被复制过去，需要手动的去上传本地图片到图片服务器，然后根据URL导入文章中，再排版。十分的麻烦。</p>
 <p>而PicGo+阿里云的OSS就可以<strong>自动</strong>帮我们将图片上传到网上，转换成URL，然后出现在我们文章中需要插入图片的位置，使用该URL，不管我们在什么平台发布文章，都能显示我们的图片。</p>
 <span id="more"></span>
-<h1>PicGo</h1>
+<h1 id="picgo">PicGo</h1>
 <p>一个用于<strong>快速</strong>上传图片并获取URL链接的图床工具。</p>
 <p>PicGo 本体支持如下图床：</p>
 <ul>
@@ -389,46 +386,67 @@
 <li>又拍云图床</li>
 <li>如果你有其他图床的上传需求，还有第三方图床插件可以使用</li>
 </ul>
-<h2 id="特色功能"><a class="header-anchor" href="#特色功能"></a>特色功能</h2>
+<h2 id="特色功能">特色功能</h2>
 <ul>
 <li>支持拖拽图片上传</li>
 <li>支持快捷键上传剪贴板里第一张图片</li>
 <li>Windows 和 macOS 支持右键图片文件通过菜单上传 (v2.1.0+)</li>
 <li>上传图片后自动复制链接到剪贴板</li>
 <li>支持自定义复制到剪贴板的链接格式</li>
-<li>支持修改快捷键，默认快速上传快捷键：<code>command + shift + p</code>（macOS）| <code>win + shift + p</code>（Windows\Linux)</li>
+<li>支持修改快捷键，默认快速上传快捷键：<code>command + shift + p</code>（macOS）|
+<code>win + shift + p</code>（Windows)</li>
 <li>支持插件系统，已有插件支持 Gitee、青云等第三方图床
 <ul>
-<li>更多第三方插件以及使用了 PicGo 底层的应用可以在 <a target="_blank" rel="noopener" href="https://github.com/PicGo/Awesome-PicGo">Awesome-PicGo</a> 找到。欢迎贡献！</li>
-</ul>
-</li>
+<li>更多第三方插件以及使用了 PicGo 底层的应用可以在 <a
+target="_blank" rel="noopener" href="https://github.com/PicGo/Awesome-PicGo">Awesome-PicGo</a>
+找到。欢迎贡献！</li>
+</ul></li>
 <li>支持通过发送 HTTP 请求调用 PicGo 上传（v2.2.0+)</li>
 </ul>
-<p><strong>如果第一次使用，请参考应用 <a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/getting-started.html">使用文档</a>。遇到问题了还可以看看 <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md">FAQ</a> 以及被关闭的 <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed">issues</a>。</strong></p>
-<h2 id="下载安装"><a class="header-anchor" href="#下载安装"></a>下载安装</h2>
+<p><strong>如果第一次使用，请参考应用 <a
+target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/getting-started.html">使用文档</a>。遇到问题了还可以看看
+<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md">FAQ</a>
+以及被关闭的 <a
+target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed">issues</a>。</strong></p>
+<h2 id="下载安装">下载安装</h2>
 <blockquote>
 <p>注意：请确保你安装了 <code>Node.js</code>， 并且版本 &gt;= 8。</p>
 </blockquote>
-<p>点击此处下载 <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">应用</a>。</p>
-<h3 id="Windows"><a class="header-anchor" href="#Windows"></a>Windows</h3>
+<p>点击此处下载 <a
+target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">应用</a>。</p>
+<h3 id="windows">Windows</h3>
 <p>Windows 用户请下载最新版本的 <code>exe</code> 文件。</p>
-<p><strong>还可以使用 <a target="_blank" rel="noopener" href="https://scoop.sh/">Scoop</a> 来安装 PicGo: <code>scoop bucket add helbing https://github.com/helbing/scoop-bucket</code> &amp; <code>scoop install picgo</code>。 感谢 @helbing 的贡献！</strong></p>
-<p><strong>还可以使用 <a target="_blank" rel="noopener" href="https://chocolatey.org/">Chocolatey</a> 来安装 PicGo: <code>choco install picgo</code>。 感谢 @iYato 的贡献！</strong></p>
-<h3 id="macOS"><a class="header-anchor" href="#macOS"></a>macOS</h3>
+<p><strong>还可以使用 <a target="_blank" rel="noopener" href="https://scoop.sh/">Scoop</a> 来安装
+PicGo:
+<code>scoop bucket add helbing https://github.com/helbing/scoop-bucket</code>
+&amp; <code>scoop install picgo</code>。 感谢 <span class="citation"
+data-cites="helbing">@helbing</span> 的贡献！</strong></p>
+<p><strong>还可以使用 <a target="_blank" rel="noopener" href="https://chocolatey.org/">Chocolatey</a>
+来安装 PicGo: <code>choco install picgo</code>。 感谢 <span
+class="citation" data-cites="iYato">@iYato</span> 的贡献！</strong></p>
+<h3 id="macos">macOS</h3>
 <p>macOS 用户请下载最新版本的 <code>dmg</code> 文件。</p>
-<p><strong>还可以使用 <code>brew cask</code> 来安装 PicGo: <code>brew cask install picgo</code>。感谢 @womeimingzi11 的贡献！</strong></p>
-<h3 id="Linux"><a class="header-anchor" href="#Linux"></a>Linux</h3>
+<p><strong>还可以使用 <code>brew cask</code> 来安装 PicGo:
+<code>brew cask install picgo</code>。感谢 <span class="citation"
+data-cites="womeimingzi11">@womeimingzi11</span> 的贡献！</strong></p>
+<h3 id="linux">Linux</h3>
 <p>Linux 用户请下载 <code>AppImage</code> 文件。</p>
-<p><strong>如果你是 Arch 类的 Linux 用户，可以直接通过 <code>aurman -S picgo-appimage</code> 来安装 PicGo。感谢 @houbaron 的贡献！</strong></p>
-<h2 id="应用截图"><a class="header-anchor" href="#应用截图"></a>应用截图</h2>
-<p><img data-src="https://user-images.githubusercontent.com/12621342/34242310-b5056510-e655-11e7-8568-60ffd4f71910.gif" alt="" /></p>
-<h2 id="PicGo配置"><a class="header-anchor" href="#PicGo配置"></a>PicGo配置</h2>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/picgo-alyoss.png" alt="" /></p>
+<p><strong>如果你是 Arch 类的 Linux 用户，可以直接通过
+<code>aurman -S picgo-appimage</code> 来安装 PicGo。感谢 <span
+class="citation" data-cites="houbaron">@houbaron</span>
+的贡献！</strong></p>
+<h2 id="应用截图">应用截图</h2>
+<p><img
+src="https://user-images.githubusercontent.com/12621342/34242310-b5056510-e655-11e7-8568-60ffd4f71910.gif" /></p>
+<h2 id="picgo配置">PicGo配置</h2>
+<p><img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/picgo-alyoss.png" /></p>
 <p>阿里云OSS配置项及说明：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;accessKeyId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;accessKeySecret&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;bucket&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 存储空间名</span></span><br><span class="line">  <span class="attr">&quot;area&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 存储区域代号</span></span><br><span class="line">  <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 自定义存储路径</span></span><br><span class="line">  <span class="attr">&quot;customUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 自定义域名，注意要加http://或者https://</span></span><br><span class="line">  <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <div class="note info"><p>注意空格啊！！！不要像我一样怀疑了半天的人生，结果就是多打了一个空格！</p>
 </div>
-<p>&lt;abbr title:”没有就去阿里买一个OSS，很便宜的”&gt;默认你已经有了阿里云的OSS</abbr>，而且知道阿里云的<strong>RAM访问控制</strong>。</p>
+<p>&lt;abbr
+title:”没有就去阿里买一个OSS，很便宜的”&gt;默认你已经有了阿里云的OSS</abbr>，而且知道阿里云的<strong>RAM访问控制</strong>。</p>
 <ul>
 <li>*设定Keyld（accessKeyId）：这是你的<code>accessKeyId</code></li>
 <li>*设定KeySecret（accessKeySecret）：这是你的<code>accessKeySecret</code></li>
@@ -441,18 +459,22 @@
 <blockquote>
 <p>在Typora的偏好设置 - 图像，按照下图进行设置就可以了。</p>
 </blockquote>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/picgo-typora.png?x-oss-process=style/yunying61" alt="" /></p>
+<p><img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/picgo-typora.png?x-oss-process=style/yunying61" /></p>
 <blockquote>
 <p>以上配置是在PicGo软件上上传图片然后复制到URL进行使用的，而且在日常写作中，PicGo也是要开启才能使用，所以下面我将介绍一个更为方便的PicGo-Core，它是以命令行形式运行的，用完即退出进程，不会一直占用系统资源。</p>
 </blockquote>
-<h2 id="PicGo-Core配置"><a class="header-anchor" href="#PicGo-Core配置"></a>PicGo-Core配置</h2>
-<p>官网<a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Core-Doc/">PicGo-Core</a></p>
+<h2 id="picgo-core配置">PicGo-Core配置</h2>
+<p>官网<a
+target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Core-Doc/">PicGo-Core</a></p>
 <p>安装：<code>注意请确保你的 Node.js 版本 &gt;= 8</code>。</p>
 <p>使用 <code>npm install picgo -g</code> 全局安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#简单使用</span></span><br><span class="line"><span class="comment"># 上传具体路径图片</span></span><br><span class="line">picgo upload /xxx/xxx.jpg</span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传剪贴板里的第一张图片（上传时会将格式转成png）</span></span><br><span class="line">picgo upload</span><br></pre></td></tr></table></figure>
-<h3 id="默认配置文件"><a class="header-anchor" href="#默认配置文件"></a>默认配置文件</h3>
-<p>首先，先在命令窗口使用命令 <code>picgo -h</code> 查看picgo的命令，同时会生成配置文件。</p>
-<p>picgo 的默认配置文件为<code>~/.picgo/config.json</code>。其中<code>~</code>为用户目录。不同系统的用户目录不太一样。</p>
+<h3 id="默认配置文件">默认配置文件</h3>
+<p>首先，先在命令窗口使用命令 <code>picgo -h</code>
+查看picgo的命令，同时会生成配置文件。</p>
+<p>picgo
+的默认配置文件为<code>~/.picgo/config.json</code>。其中<code>~</code>为用户目录。不同系统的用户目录不太一样。</p>
 <p>linux 和 macOS 均为<code>~/.picgo/config.json</code>。</p>
 <p>windows 则为<code>C:\Users\你的用户名\.picgo\config.json</code>。</p>
 <p>将配置文件填入如下，具体配置请根据上面的说明，把各项信息填好，并保存：</p>
@@ -460,8 +482,9 @@
 <blockquote>
 <p>在Typora的偏好设置 - 图像，按照下图进行设置就可以了。</p>
 </blockquote>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/picgo-core-typora.png?x-oss-process=style/yunying61" alt="" /></p>
-<h2 id="后记"><a class="header-anchor" href="#后记"></a>后记</h2>
+<p><img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/picgo-core-typora.png?x-oss-process=style/yunying61" /></p>
+<h2 id="后记">后记</h2>
 <p>至此，你就可以在Typora直接插入图片，PicGo-Core会自动帮你把图片上传到阿里云OSS，并且将链接替换成网页URL。在平时，也可以通过PicGo软件上传图片到远程服务器中进行备份。</p>
 <p>而PicGo-Core只会将图片按原名称进行上传，意味着不能改名。</p>
 <p>PicGo_APP可以在上传前修改图片名称，再上传。</p>
@@ -589,13 +612,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">164k</span>
+    <span title="站点总字数">170k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:29</span>
+    <span title="站点阅读时长">2:35</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
