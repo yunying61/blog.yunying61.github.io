@@ -35,22 +35,13 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yunying61.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content=".在CentOS-8上搭建MediaWiki知识库 .什么是MediaWiki MediaWiki全球最著名的开源wiki程序，运行于PHP+MySQL环境。MediaWiki从2002年2月25日被作为维基百科全书的系统软件，并有大量其他应用实例。MediaWiki的开发得到维基媒体基金会的支持。 MediaWiki是建立wiki网站的首选后台程序，国内的灰狐维客等站点都采用这套系统。">
+  <meta name="description" content="在CentOS-8上搭建MediaWiki知识库 什么是MediaWiki MediaWiki全球最著名的开源wiki程序，运行于PHP+MySQL环境。MediaWiki从2002年2月25日被作为维基百科全书的系统软件，并有大量其他应用实例。MediaWiki的开发得到维基媒体基金会的支持。 MediaWiki是建立wiki网站的首选后台程序，国内的灰狐维客等站点都采用这套系统。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="在CentOS-8上搭建MediaWiki知识库">
 <meta property="og:url" content="https://yunying61.github.io/2020/08/%E5%9C%A8CentOS-8%E4%B8%8A%E6%90%AD%E5%BB%BAMediaWiki%E7%9F%A5%E8%AF%86%E5%BA%93/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content=".在CentOS-8上搭建MediaWiki知识库 .什么是MediaWiki MediaWiki全球最著名的开源wiki程序，运行于PHP+MySQL环境。MediaWiki从2002年2月25日被作为维基百科全书的系统软件，并有大量其他应用实例。MediaWiki的开发得到维基媒体基金会的支持。 MediaWiki是建立wiki网站的首选后台程序，国内的灰狐维客等站点都采用这套系统。">
+<meta property="og:description" content="在CentOS-8上搭建MediaWiki知识库 什么是MediaWiki MediaWiki全球最著名的开源wiki程序，运行于PHP+MySQL环境。MediaWiki从2002年2月25日被作为维基百科全书的系统软件，并有大量其他应用实例。MediaWiki的开发得到维基媒体基金会的支持。 MediaWiki是建立wiki网站的首选后台程序，国内的灰狐维客等站点都采用这套系统。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-1.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-2.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-3.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-4.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-5.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-6.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-7.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-8.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-1.png?x-oss-process=style/yunying61">
 <meta property="article:published_time" content="2020-08-07T09:35:45.000Z">
 <meta property="article:modified_time" content="2022-03-17T09:25:25.559Z">
 <meta property="article:author" content="yunying61">
@@ -59,7 +50,6 @@
 <meta property="article:tag" content="wiki">
 <meta property="article:tag" content="维基">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-1.png?x-oss-process=style/yunying61">
 
 
 <link rel="canonical" href="https://yunying61.github.io/2020/08/%E5%9C%A8CentOS-8%E4%B8%8A%E6%90%AD%E5%BB%BAMediaWiki%E7%9F%A5%E8%AF%86%E5%BA%93/">
@@ -180,7 +170,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8CentOS-8%E4%B8%8A%E6%90%AD%E5%BB%BAMediaWiki%E7%9F%A5%E8%AF%86%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">在CentOS-8上搭建MediaWiki知识库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMediaWiki"><span class="nav-number">1.1.</span> <span class="nav-text">什么是MediaWiki</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA-2"><span class="nav-number">1.2.</span> <span class="nav-text">开始搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装软件包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85libxml2"><span class="nav-number">1.2.2.</span> <span class="nav-text">安装libxml2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Nginx"><span class="nav-number">1.2.3.</span> <span class="nav-text">安装Nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.4.</span> <span class="nav-text">MySQL配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85MediaWiki"><span class="nav-number">1.2.5.</span> <span class="nav-text">下载安装MediaWiki</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%80%85%E7%9A%84%E8%AF%9D-3"><span class="nav-number">1.3.</span> <span class="nav-text">编者的话</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8centos-8%E4%B8%8A%E6%90%AD%E5%BB%BAmediawiki%E7%9F%A5%E8%AF%86%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">在CentOS-8上搭建MediaWiki知识库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFmediawiki"><span class="nav-number">1.1.</span> <span class="nav-text">什么是MediaWiki</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA"><span class="nav-number">1.2.</span> <span class="nav-text">开始搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装软件包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85libxml2"><span class="nav-number">1.2.2.</span> <span class="nav-text">安装libxml2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nginx"><span class="nav-number">1.2.3.</span> <span class="nav-text">安装Nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.4.</span> <span class="nav-text">MySQL配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85mediawiki"><span class="nav-number">1.2.5.</span> <span class="nav-text">下载安装MediaWiki</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%80%85%E7%9A%84%E8%AF%9D"><span class="nav-number">1.3.</span> <span class="nav-text">编者的话</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -195,18 +185,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">110</span>
+        <span class="site-state-item-count">113</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -372,33 +362,37 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="在CentOS-8上搭建MediaWiki知识库"><a class="header-anchor" href="#在CentOS-8上搭建MediaWiki知识库">.</a>在CentOS-8上搭建MediaWiki知识库</h1>
-<h2 id="什么是MediaWiki"><a class="header-anchor" href="#什么是MediaWiki">.</a>什么是MediaWiki</h2>
-<p><strong>MediaWiki</strong>全球最著名的开源wiki程序，运行于PHP+MySQL环境。MediaWiki从2002年2月25日被作为<a target="_blank" rel="noopener" href="https://baike.so.com/doc/5329027-5564199.html">维基百科</a>全书的系统软件，并有大量其他应用实例。MediaWiki的开发得到<a target="_blank" rel="noopener" href="https://baike.so.com/doc/7915746-8189841.html">维基媒体基金会</a>的支持。</p>
+        <h1
+id="在centos-8上搭建mediawiki知识库">在CentOS-8上搭建MediaWiki知识库</h1>
+<h2 id="什么是mediawiki">什么是MediaWiki</h2>
+<p><strong>MediaWiki</strong>全球最著名的开源wiki程序，运行于PHP+MySQL环境。MediaWiki从2002年2月25日被作为<a
+target="_blank" rel="noopener" href="https://baike.so.com/doc/5329027-5564199.html">维基百科</a>全书的系统软件，并有大量其他应用实例。MediaWiki的开发得到<a
+target="_blank" rel="noopener" href="https://baike.so.com/doc/7915746-8189841.html">维基媒体基金会</a>的支持。</p>
 <p>MediaWiki是建立wiki网站的首选后台程序，国内的灰狐维客等站点都采用这套系统。</p>
 <span id="more"></span>
-<h2 id="开始搭建-2"><a class="header-anchor" href="#开始搭建-2">.</a>开始搭建</h2>
-<h3 id="安装软件包"><a class="header-anchor" href="#安装软件包">.</a>安装软件包</h3>
+<h2 id="开始搭建">开始搭建</h2>
+<h3 id="安装软件包">安装软件包</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install php php-mysql php-gd php-xml mysql-server mysql</span><br><span class="line"># 安装依赖</span><br><span class="line">yum install gcc zlib zlib-devel pcre-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
-<h3 id="安装libxml2"><a class="header-anchor" href="#安装libxml2">.</a>安装libxml2</h3>
+<h3 id="安装libxml2">安装libxml2</h3>
 <p>打开终端，输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install libxml2</span><br></pre></td></tr></table></figure>
 <p>手动编译安装基本操作如下：</p>
 <blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget http://xmlsoft.org/sources/old/libxml2-2.6.26.tar.gz</span><br><span class="line">tar xvf libxml2-2.6.26.tar.gz</span><br><span class="line"><span class="built_in">cd</span> libxml2-2.6.26</span><br><span class="line">./configure --prefix=/usr/local/libxml2/</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-<p>如果安装失败使用命令<br />
-<code>make uninstall</code></p>
+<p>如果安装失败使用命令 <code>make uninstall</code></p>
 </blockquote>
-<h3 id="安装Nginx"><a class="header-anchor" href="#安装Nginx">.</a>安装Nginx</h3>
+<h3 id="安装nginx">安装Nginx</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/local</span><br><span class="line">wget http://nginx.org/download/nginx-1.18.0.tar.gz</span><br><span class="line"><span class="comment"># 解压缩</span></span><br><span class="line">tar -zxvf nginx-1.18.0.tar.gz</span><br><span class="line"><span class="comment"># 重命名</span></span><br><span class="line"><span class="built_in">mv</span> nginx-1.18.0 nginx</span><br><span class="line"><span class="built_in">cd</span> nginx</span><br><span class="line"><span class="comment"># 执行配置</span></span><br><span class="line">./configure</span><br><span class="line"><span class="comment"># 编译安装(默认安装在/usr/local/nginx)</span></span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
 <p>启动nginx</p>
 <p><code>/usr/local/nginx/sbin/nginx -s reload</code></p>
 <blockquote>
-<p>如果出现报错：<u>nginx: [error] open() ＂/usr/local/nginx/logs/nginx.pid＂ failed</u></p>
-<p>则运行： <code>/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</code></p>
+<p>如果出现报错：<u>nginx: [error] open()
+＂/usr/local/nginx/logs/nginx.pid＂ failed</u></p>
+<p>则运行：
+<code>/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</code></p>
 <p>再次启动即可！</p>
 </blockquote>
-<h3 id="MySQL配置"><a class="header-anchor" href="#MySQL配置">.</a>MySQL配置</h3>
+<h3 id="mysql配置">MySQL配置</h3>
 <p><strong>启动mysql服务</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
 <p><strong>设置mysql</strong></p>
@@ -407,11 +401,12 @@
 <p><strong>创建wiki要用的数据库，并赋予相关权限</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p //登陆mysql</span><br><span class="line">输入密码后</span><br><span class="line">create database wikidb;</span><br><span class="line">GRANT ALL PRIVILEGES ON wikidb.* TO &#x27;wikiuser&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;password&#x27;;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>注：<em>wikiuser</em>为用户名, <em>wikidb_passwd</em>为该用户的数据库密码，建议修改。</p>
+<p>注：<em>wikiuser</em>为用户名,
+<em>wikidb_passwd</em>为该用户的数据库密码，建议修改。</p>
 </blockquote>
 <p><strong>重启mysql服务</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
-<h3 id="下载安装MediaWiki"><a class="header-anchor" href="#下载安装MediaWiki">.</a>下载安装MediaWiki</h3>
+<h3 id="下载安装mediawiki">下载安装MediaWiki</h3>
 <p>下载并解压安装包</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://releases.wikimedia.org/mediawiki/1.29/mediawiki-1.29.1.tar.gz</span><br><span class="line">解压缩</span><br><span class="line">tar -zxvf mediawiki-1.29.1.tar.gz</span><br></pre></td></tr></table></figure>
 <p>移动至网站目录</p>
@@ -422,26 +417,28 @@
 <p>赋予权限</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod /home/wwwroot/default/mediawiki</span><br></pre></td></tr></table></figure>
 <p>登录网页安装MediaWiki</p>
-<p>在本地浏览器中输入<a target="_blank" rel="noopener" href="http://localhost/mediawiki">http://localhost/mediawiki</a>，依照以下图片流程走</p>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-1.png?x-oss-process=style/yunying61" alt="" /></p>
+<p>在本地浏览器中输入<a target="_blank" rel="noopener" href="http://localhost/mediawiki"
+class="uri">http://localhost/mediawiki</a>，依照以下图片流程走</p>
+<p><img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-1.png?x-oss-process=style/yunying61" />
+<strong><em> <img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-2.png?x-oss-process=style/yunying61" />
+</em></strong> <img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-3.png?x-oss-process=style/yunying61" />
+<strong><em> <img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-4.png?x-oss-process=style/yunying61" />
+</em></strong> <img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-5.png?x-oss-process=style/yunying61" />
+<strong><em> <img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-6.png?x-oss-process=style/yunying61" />
+</em></strong> <img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-7.png?x-oss-process=style/yunying61" />
+<strong><em> <img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-8.png?x-oss-process=style/yunying61" />
+</em></strong> <img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-1.png?x-oss-process=style/yunying61" /></p>
 <hr />
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-2.png?x-oss-process=style/yunying61" alt="" /></p>
-<hr />
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-3.png?x-oss-process=style/yunying61" alt="" /></p>
-<hr />
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-4.png?x-oss-process=style/yunying61" alt="" /></p>
-<hr />
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-5.png?x-oss-process=style/yunying61" alt="" /></p>
-<hr />
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-6.png?x-oss-process=style/yunying61" alt="" /></p>
-<hr />
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-7.png?x-oss-process=style/yunying61" alt="" /></p>
-<hr />
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-8.png?x-oss-process=style/yunying61" alt="" /></p>
-<hr />
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/wiki/wiki-1.png?x-oss-process=style/yunying61" alt="" /></p>
-<hr />
-<h2 id="编者的话-3"><a class="header-anchor" href="#编者的话-3">.</a>编者的话</h2>
+<h2 id="编者的话">编者的话</h2>
 <p>我个人感觉，Wiki也是一个很有用的东西，类似于写博客，Wiki同样也可以作为你的知识库的存储站。</p>
 
     </div>
@@ -567,13 +564,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">177k</span>
+    <span title="站点总字数">183k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:41</span>
+    <span title="站点阅读时长">2:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

@@ -35,20 +35,13 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yunying61.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content=".前言 WSL是微软推出的windows的linux子系统，目的就是为了在windows平台上更方便的运行 linux。相比于VMware这样的虚拟机产品，WSL有许多优势：  方便。WSL操作Linux系统像windows上的cmd、PowerShell一样，直接操作其 Terminal终端 。只需要在开始菜单，单击其图标就可以打开一个窗口运行linux命令行工具，这是VMware这样的虚拟机产">
+  <meta name="description" content="前言 WSL是微软推出的windows的linux子系统，目的就是为了在windows平台上更方便的运行 linux。相比于VMware这样的虚拟机产品，WSL有许多优势：  方便。WSL操作Linux系统像windows上的cmd、PowerShell一样，直接操作其 Terminal终端 。只需要在开始菜单，单击其图标就可以打开一个窗口运行linux命令行工具，这是VMware这样">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="基于WSL2的Windows下Ubuntu图形化系统">
 <meta property="og:url" content="https://yunying61.github.io/2021/09/%E5%9F%BA%E4%BA%8EWSL2%E7%9A%84Windows%E4%B8%8BUbuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content=".前言 WSL是微软推出的windows的linux子系统，目的就是为了在windows平台上更方便的运行 linux。相比于VMware这样的虚拟机产品，WSL有许多优势：  方便。WSL操作Linux系统像windows上的cmd、PowerShell一样，直接操作其 Terminal终端 。只需要在开始菜单，单击其图标就可以打开一个窗口运行linux命令行工具，这是VMware这样的虚拟机产">
+<meta property="og:description" content="前言 WSL是微软推出的windows的linux子系统，目的就是为了在windows平台上更方便的运行 linux。相比于VMware这样的虚拟机产品，WSL有许多优势：  方便。WSL操作Linux系统像windows上的cmd、PowerShell一样，直接操作其 Terminal终端 。只需要在开始菜单，单击其图标就可以打开一个窗口运行linux命令行工具，这是VMware这样">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Ubuntu.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_GWSL.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/GWSL_%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Windows%20Terminal.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B9.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%88%90%E5%8A%9F.png?x-oss-process=style/yunying61">
 <meta property="article:published_time" content="2021-09-10T03:32:01.000Z">
 <meta property="article:modified_time" content="2022-03-21T11:36:47.677Z">
 <meta property="article:author" content="yunying61">
@@ -57,7 +50,6 @@
 <meta property="article:tag" content="WSL">
 <meta property="article:tag" content="虚拟机">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Ubuntu.png?x-oss-process=style/yunying61">
 
 
 <link rel="canonical" href="https://yunying61.github.io/2021/09/%E5%9F%BA%E4%BA%8EWSL2%E7%9A%84Windows%E4%B8%8BUbuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%B3%BB%E7%BB%9F/">
@@ -178,7 +170,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80-3"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WSL%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">WSL的问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">开始安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E5%BC%80%E5%90%AF%E5%8A%9F%E8%83%BD%E6%94%AF%E6%8C%81"><span class="nav-number">2.1.</span> <span class="nav-text">Windows开启功能支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Ubuntu"><span class="nav-number">2.2.</span> <span class="nav-text">安装Ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85GWSL"><span class="nav-number">2.3.</span> <span class="nav-text">安装GWSL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8WSL2"><span class="nav-number">2.4.</span> <span class="nav-text">使用WSL2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Windows-Terminal%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">安装Windows Terminal（可选）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E5%B9%B6%E4%BD%BF%E7%94%A8-Ubuntu"><span class="nav-number">2.6.</span> <span class="nav-text">打开并使用 Ubuntu</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA-Ubuntu-%E5%AE%89%E8%A3%85%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="nav-number">3.</span> <span class="nav-text">为 Ubuntu 安装图形化界面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BAWSL2%E4%B8%8A%E7%9A%84-Ubuntu-%E5%90%AF%E7%94%A8systemd%E6%94%AF%E6%8C%81"><span class="nav-number">3.1.</span> <span class="nav-text">为WSL2上的 Ubuntu 启用systemd支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Gnome%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2"><span class="nav-number">3.2.</span> <span class="nav-text">安装Gnome图形界面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E8%BF%90%E8%A1%8C%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="nav-number">3.3.</span> <span class="nav-text">试运行图形化界面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-2"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E6%B1%89%E5%8C%96"><span class="nav-number">4.1.</span> <span class="nav-text">图形界面汉化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC-WSL-%E5%91%BD%E4%BB%A4"><span class="nav-number">4.2.</span> <span class="nav-text">基本 WSL 命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E4%B9%8B%E9%97%B4%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%B8%E4%BA%92%E8%AE%BF%E9%97%AE"><span class="nav-number">4.3.</span> <span class="nav-text">系统之间文件系统的相互访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C"><span class="nav-number">4.4.</span> <span class="nav-text">跨文件系统工作</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wsl%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">WSL的问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">开始安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows%E5%BC%80%E5%90%AF%E5%8A%9F%E8%83%BD%E6%94%AF%E6%8C%81"><span class="nav-number">2.1.</span> <span class="nav-text">Windows开启功能支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85ubuntu"><span class="nav-number">2.2.</span> <span class="nav-text">安装Ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85gwsl"><span class="nav-number">2.3.</span> <span class="nav-text">安装GWSL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8wsl2"><span class="nav-number">2.4.</span> <span class="nav-text">使用WSL2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85windows-terminal%E5%8F%AF%E9%80%89"><span class="nav-number">2.5.</span> <span class="nav-text">安装Windows Terminal（可选）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E5%B9%B6%E4%BD%BF%E7%94%A8-ubuntu"><span class="nav-number">2.6.</span> <span class="nav-text">打开并使用 Ubuntu</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA-ubuntu-%E5%AE%89%E8%A3%85%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="nav-number">3.</span> <span class="nav-text">为 Ubuntu 安装图形化界面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BAwsl2%E4%B8%8A%E7%9A%84-ubuntu-%E5%90%AF%E7%94%A8systemd%E6%94%AF%E6%8C%81"><span class="nav-number">3.1.</span> <span class="nav-text">为WSL2上的 Ubuntu
+启用systemd支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85gnome%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2"><span class="nav-number">3.2.</span> <span class="nav-text">安装Gnome图形界面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E8%BF%90%E8%A1%8C%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="nav-number">3.3.</span> <span class="nav-text">试运行图形化界面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E6%B1%89%E5%8C%96"><span class="nav-number">4.1.</span> <span class="nav-text">图形界面汉化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC-wsl-%E5%91%BD%E4%BB%A4"><span class="nav-number">4.2.</span> <span class="nav-text">基本 WSL 命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E4%B9%8B%E9%97%B4%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%B8%E4%BA%92%E8%AE%BF%E9%97%AE"><span class="nav-number">4.3.</span> <span class="nav-text">系统之间文件系统的相互访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C"><span class="nav-number">4.4.</span> <span class="nav-text">跨文件系统工作</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -193,18 +186,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">110</span>
+        <span class="site-state-item-count">113</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -370,117 +363,138 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言-3"><a class="header-anchor" href="#前言-3">.</a>前言</h1>
-<p>WSL是微软推出的windows的linux子系统，目的就是为了在windows平台上更方便的运行 linux。相比于VMware这样的虚拟机产品，WSL有许多优势：</p>
-<ol>
-<li><strong>方便</strong>。WSL操作Linux系统像windows上的cmd、PowerShell一样，直接操作其 <em>Terminal终端</em> 。只需要在开始菜单，单击其图标就可以打开一个窗口运行linux命令行工具，这是VMware这样的虚拟机产品想都不敢想的。</li>
-<li><strong>启动速度快</strong>。基本保持在5秒内就启动了。而VMware虚拟机，要先启动虚拟机产品，然后在虚拟机产品里面选择 Linux 分发版系统，点击启动按钮，等待系统自动，这时间相比，浪费太多了。</li>
-<li><strong>占用少</strong>。虽然WSL2还是在虚拟机上运行的Linux内核，但是在资源占用和性能这方面，无论是在内存占用还是在CPU消耗，都甩一般虚拟机产品几条街。用微软的话说就是：<br />
-WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟机 (VM) 中运行 Linux 内核。 但是，WSL 2 不是传统的 VM 体验。</li>
+        <h1 id="前言">前言</h1>
+<p>WSL是微软推出的windows的linux子系统，目的就是为了在windows平台上更方便的运行
+linux。相比于VMware这样的虚拟机产品，WSL有许多优势：</p>
+<ol type="1">
+<li><strong>方便</strong>。WSL操作Linux系统像windows上的cmd、PowerShell一样，直接操作其
+<em>Terminal终端</em>
+。只需要在开始菜单，单击其图标就可以打开一个窗口运行linux命令行工具，这是VMware这样的虚拟机产品想都不敢想的。</li>
+<li><strong>启动速度快</strong>。基本保持在5秒内就启动了。而VMware虚拟机，要先启动虚拟机产品，然后在虚拟机产品里面选择
+Linux
+分发版系统，点击启动按钮，等待系统自动，这时间相比，浪费太多了。</li>
+<li><strong>占用少</strong>。虽然WSL2还是在虚拟机上运行的Linux内核，但是在资源占用和性能这方面，无论是在内存占用还是在CPU消耗，都甩一般虚拟机产品几条街。用微软的话说就是：
+WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟机 (VM) 中运行
+Linux 内核。 但是，WSL 2 不是传统的 VM 体验。</li>
 <li><strong>文件互通</strong>。WSL上的Linux与宿主Windows文件系统互通，WSL可以直接访问Window系统上的文件，而Windows系统也可以直接对Linux系统进行各种文件操作。</li>
 </ol>
 <span id="more"></span>
-<h2 id="WSL的问题"><a class="header-anchor" href="#WSL的问题">.</a>WSL的问题</h2>
+<h2 id="wsl的问题">WSL的问题</h2>
 <p>WSL在使用上的问题大致有以下几个：</p>
-<ol>
+<ol type="1">
 <li>没有图形界面。WSL运行Linux命令行很方便，但是目前还不能直接打开Linux图形界面。目前可以通过远程桌面的方式访问图形界面。</li>
 <li>C盘占用。按照一般的安装方法，默认是将子系统安装在C盘，C盘占用太大，可以通过官网上介绍的方法将子系统安装在其他盘。</li>
 <li>不支持systemd。wsl默认是没有systemd服务，需要自行安装并配置，后面会介绍如何安装。</li>
-<li>跨OS文件操作慢。这个文件操作慢是相对于WSL1来说的，WSL由于是用了VM，操作宿主系统上的文件难免会慢。<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43878324/article/details/113636451">解决办法</a></li>
+<li>跨OS文件操作慢。这个文件操作慢是相对于WSL1来说的，WSL由于是用了VM，操作宿主系统上的文件难免会慢。<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43878324/article/details/113636451">解决办法</a></li>
 </ol>
-<h1 id="开始安装"><a class="header-anchor" href="#开始安装">.</a>开始安装</h1>
-<p>微软官方文档：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">适用于 Linux 的 Windows 子系统安装指南 (Windows 10) </a></p>
-<h2 id="Windows开启功能支持"><a class="header-anchor" href="#Windows开启功能支持">.</a>Windows开启功能支持</h2>
-<p>需要先启用“适用于 Linux 的 Windows 子系统”可选功能，然后才能在 Windows 上安装 Linux 分发。</p>
+<h1 id="开始安装">开始安装</h1>
+<p>微软官方文档：<a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">适用于
+Linux 的 Windows 子系统安装指南 (Windows 10)</a></p>
+<h2 id="windows开启功能支持">Windows开启功能支持</h2>
+<p>需要先启用“适用于 Linux 的 Windows 子系统”可选功能，然后才能在
+Windows 上安装 Linux 分发。</p>
 <p>打开 PowerShell 命令行并输入以下命令：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:Microsoft<span class="literal">-Windows-Subsystem-Linux</span> /all /norestart</span><br></pre></td></tr></table></figure>
 <hr />
-<p>安装 WSL 2 之前，必须启用“虚拟机平台”可选功能。 计算机需要[BIOS虚拟化功能](<a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=bios%E8%99%9A%E6%8B%9F%E5%8C%96&amp;form=ANNTH1&amp;refig=f67cefd7bf7b436c8927d729b66691f7">bios虚拟化 - 国内版 Bing</a>)才能使用此功能。</p>
+<p>安装 WSL 2 之前，必须启用“虚拟机平台”可选功能。 计算机需要<a
+href="%5Bbios虚拟化%20-%20国内版%20Bing%5D(https://cn.bing.com/search?q=bios虚拟化&amp;form=ANNTH1&amp;refig=f67cefd7bf7b436c8927d729b66691f7)">BIOS虚拟化功能</a>才能使用此功能。</p>
 <p>打开 PowerShell 命令行并输入以下命令：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:VirtualMachinePlatform /all /norestart</span><br></pre></td></tr></table></figure>
-<h2 id="安装Ubuntu"><a class="header-anchor" href="#安装Ubuntu">.</a>安装Ubuntu</h2>
-<p>在 Microsoft Store 中搜索 <a target="_blank" rel="noopener" href="https://www.microsoft.com/store/productId/9NBLGGH4MSV6">Ubuntu</a></p>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Ubuntu.png?x-oss-process=style/yunying61" alt="" /></p>
+<h2 id="安装ubuntu">安装Ubuntu</h2>
+<p>在 Microsoft Store 中搜索 <a
+target="_blank" rel="noopener" href="https://www.microsoft.com/store/productId/9NBLGGH4MSV6">Ubuntu</a></p>
+<p><img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Ubuntu.png?x-oss-process=style/yunying61" /></p>
 <p>点击并安装第一个 <strong>Ubuntu</strong></p>
-<h2 id="安装GWSL"><a class="header-anchor" href="#安装GWSL">.</a>安装GWSL</h2>
-<p>在 Microsoft Store 中搜索 <a target="_blank" rel="noopener" href="https://www.microsoft.com/store/productId/9NL6KD1H33V3">GWSL</a></p>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_GWSL.png?x-oss-process=style/yunying61" alt="" /></p>
+<h2 id="安装gwsl">安装GWSL</h2>
+<p>在 Microsoft Store 中搜索 <a
+target="_blank" rel="noopener" href="https://www.microsoft.com/store/productId/9NL6KD1H33V3">GWSL</a></p>
+<p><img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_GWSL.png?x-oss-process=style/yunying61" /></p>
 <p>点击并安装第一个 <strong>GWSL</strong></p>
-<p>启动 GWSL ，在右下角通知图标栏中找到 GWSL ，对其右键，点击设置 GWSL：</p>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/GWSL_%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE.png?x-oss-process=style/yunying61" alt="" /></p>
-<h2 id="使用WSL2"><a class="header-anchor" href="#使用WSL2">.</a>使用WSL2</h2>
-<ol>
-<li>
-<p>下载Linux 内核更新包</p>
-<p><a target="_blank" rel="noopener" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">适用于 x64 计算机的 WSL2 Linux 内核更新包</a></p>
-</li>
-<li>
-<p>运行更新包</p>
-</li>
-<li>
-<p>设置 WSL 2 为默认体系结构，打开 PowerShell 命令行并输入以下命令</p>
- <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--set-default-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>可先检查分配给每个已安装的 Linux 分发版的 WSL 版本，打开 PowerShell 命令行并输入以下命令：</p>
- <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--list</span> <span class="literal">--verbose</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>如果 Ubuntu 的WSL版本为1，则将其设置为受 WSL2 版本支持，打开 PowerShell 命令行并输入以下命令：</p>
- <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--set-version</span> Ubuntu <span class="number">2</span></span><br></pre></td></tr></table></figure>
-</li>
+<p>启动 GWSL ，在右下角通知图标栏中找到 GWSL ，对其右键，点击设置
+GWSL：</p>
+<p><img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/GWSL_%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE.png?x-oss-process=style/yunying61" /></p>
+<h2 id="使用wsl2">使用WSL2</h2>
+<ol type="1">
+<li><p>下载Linux 内核更新包</p>
+<p><a
+target="_blank" rel="noopener" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">适用于
+x64 计算机的 WSL2 Linux 内核更新包</a></p></li>
+<li><p>运行更新包</p></li>
+<li><p>设置 WSL 2 为默认体系结构，打开 PowerShell
+命令行并输入以下命令</p>
+<p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--set-default-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>可先检查分配给每个已安装的 Linux 分发版的 WSL 版本，打开
+PowerShell 命令行并输入以下命令：</p>
+<p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--list</span> <span class="literal">--verbose</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>如果 Ubuntu 的WSL版本为1，则将其设置为受 WSL2 版本支持，打开
+PowerShell 命令行并输入以下命令：</p>
+<p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--set-version</span> Ubuntu <span class="number">2</span></span><br></pre></td></tr></table></figure></p></li>
 </ol>
-<h2 id="安装Windows-Terminal（可选）"><a class="header-anchor" href="#安装Windows-Terminal（可选）">.</a>安装Windows Terminal（可选）</h2>
-<p>在 Microsoft Store 中搜索并安装  <a target="_blank" rel="noopener" href="https://aka.ms/terminal">Windows Terminal</a> 。</p>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Windows%20Terminal.png?x-oss-process=style/yunying61" alt="" /></p>
+<h2 id="安装windows-terminal可选">安装Windows Terminal（可选）</h2>
+<p>在 Microsoft Store 中搜索并安装 <a
+target="_blank" rel="noopener" href="https://aka.ms/terminal">Windows Terminal</a> 。</p>
+<p><img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/%E5%BE%AE%E8%BD%AF%E5%95%86%E5%BA%97_Windows%20Terminal.png?x-oss-process=style/yunying61" /></p>
 <p>点击并安装第一个 <strong>Windows Terminal</strong></p>
-<h2 id="打开并使用-Ubuntu"><a class="header-anchor" href="#打开并使用-Ubuntu">.</a>打开并使用 Ubuntu</h2>
-<p>到目前为止就可以正常使用 Ubuntu 命令行系统了，按下 Win 键，找到刚刚安装的 Ubuntu 打开，第一次启动，稍等片刻，以后都是5秒内就可以用了。接下来，设置 Linux 用户信息。</p>
-<p><img data-src="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png" alt="ubuntuinstall" /></p>
+<h2 id="打开并使用-ubuntu">打开并使用 Ubuntu</h2>
+<p>到目前为止就可以正常使用 Ubuntu 命令行系统了，按下 Win
+键，找到刚刚安装的 Ubuntu
+打开，第一次启动，稍等片刻，以后都是5秒内就可以用了。接下来，设置 Linux
+用户信息。</p>
+<figure>
+<img
+src="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png"
+alt="ubuntuinstall" />
+<figcaption aria-hidden="true">ubuntuinstall</figcaption>
+</figure>
 <p>输入用户名，然后输入并确认两遍密码。</p>
-<p>对于 Ubuntu，请使用 命令 <code>sudo apt update &amp;&amp; sudo apt upgrade</code> ，对 Ubuntu 进行初次更新。</p>
-<h1 id="为-Ubuntu-安装图形化界面"><a class="header-anchor" href="#为-Ubuntu-安装图形化界面">.</a>为 Ubuntu 安装图形化界面</h1>
-<h2 id="为WSL2上的-Ubuntu-启用systemd支持"><a class="header-anchor" href="#为WSL2上的-Ubuntu-启用systemd支持">.</a>为WSL2上的 Ubuntu 启用systemd支持</h2>
-<p>参考该<a target="_blank" rel="noopener" href="https://www.5axxw.com/wiki/content/k34hu0">教程</a></p>
-<ol>
-<li>
-<p>需要安装<code>git</code>才能进行接下来的操作。所以先按下 Win 键，找到刚刚安装的 Ubuntu 打开</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y git</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>运行脚本和命令</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo git <span class="built_in">clone</span> https://github.com/DamionGans/ubuntu-wsl2-systemd-script.git</span><br><span class="line"><span class="built_in">cd</span> ubuntu-wsl2-systemd-script/</span><br><span class="line">bash ubuntu-wsl2-systemd-script.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>然后在 PowerShell 命令行并输入<code>wsl --shutdown</code>重新启动 Ubuntu应用 并尝试运行<code>systemctl</code></p>
-<p>如果没有得到错误并看到单元列表，那么脚本就起作用了，就可以使用<code>systemctl</code>。</p>
-</li>
+<p>对于 Ubuntu，请使用 命令
+<code>sudo apt update &amp;&amp; sudo apt upgrade</code> ，对 Ubuntu
+进行初次更新。</p>
+<h1 id="为-ubuntu-安装图形化界面">为 Ubuntu 安装图形化界面</h1>
+<h2 id="为wsl2上的-ubuntu-启用systemd支持">为WSL2上的 Ubuntu
+启用systemd支持</h2>
+<p>参考该<a
+target="_blank" rel="noopener" href="https://www.5axxw.com/wiki/content/k34hu0">教程</a></p>
+<ol type="1">
+<li><p>需要安装<code>git</code>才能进行接下来的操作。所以先按下 Win
+键，找到刚刚安装的 Ubuntu 打开</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y git</span><br></pre></td></tr></table></figure></p></li>
+<li><p>运行脚本和命令</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo git <span class="built_in">clone</span> https://github.com/DamionGans/ubuntu-wsl2-systemd-script.git</span><br><span class="line"><span class="built_in">cd</span> ubuntu-wsl2-systemd-script/</span><br><span class="line">bash ubuntu-wsl2-systemd-script.sh</span><br></pre></td></tr></table></figure></p></li>
+<li><p>然后在 PowerShell 命令行并输入<code>wsl --shutdown</code>重新启动
+Ubuntu应用 并尝试运行<code>systemctl</code></p>
+<p>如果没有得到错误并看到单元列表，那么脚本就起作用了，就可以使用<code>systemctl</code>。</p></li>
 </ol>
-<h2 id="安装Gnome图形界面"><a class="header-anchor" href="#安装Gnome图形界面">.</a>安装Gnome图形界面</h2>
-<ol>
-<li>
-<p>在 Ubuntu 中，输入以下命令安装 Ubuntu Desktop ：</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y ubuntu-desktop</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>安装完后，输入<code>sudo vi ~/.bashrc</code>，在文件末尾按 “i” 键添加：</p>
-</li>
+<h2 id="安装gnome图形界面">安装Gnome图形界面</h2>
+<ol type="1">
+<li><p>在 Ubuntu 中，输入以下命令安装 Ubuntu Desktop ：</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y ubuntu-desktop</span><br></pre></td></tr></table></figure></p></li>
+<li><p>安装完后，输入<code>sudo vi ~/.bashrc</code>，在文件末尾按 “i”
+键添加：</p></li>
 </ol>
-  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>):0.0</span><br><span class="line"><span class="built_in">export</span> XDG_SESSION_TYPE=x11</span><br></pre></td></tr></table></figure>
-<p>按 “Esc” 后输入<code>:wq</code>保存并退出，并使用<code>source ~/.bashrc</code>命令应用修改。</p>
-<h2 id="试运行图形化界面"><a class="header-anchor" href="#试运行图形化界面">.</a>试运行图形化界面</h2>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>):0.0</span><br><span class="line"><span class="built_in">export</span> XDG_SESSION_TYPE=x11</span><br></pre></td></tr></table></figure></p>
+<p>按 “Esc”
+后输入<code>:wq</code>保存并退出，并使用<code>source ~/.bashrc</code>命令应用修改。</p>
+<h2 id="试运行图形化界面">试运行图形化界面</h2>
 <p>之后每次启动图形化桌面的步骤为：</p>
-<ol>
+<ol type="1">
 <li>在 Windows 中启动 GWSL</li>
 <li>在 Windows 中启动 Ubuntu</li>
 </ol>
 <p>在Ubuntu中输入</p>
 <p><code>gnome-session</code></p>
 <p>稍等片刻就可以在 GWSL 打开的窗口中看到图形化界面</p>
-<h1 id="使用-2"><a class="header-anchor" href="#使用-2">.</a>使用</h1>
-<h2 id="图形界面汉化"><a class="header-anchor" href="#图形界面汉化">.</a>图形界面汉化</h2>
-<p>网上有很多，我就不单独再做了，可以参考这个<a target="_blank" rel="noopener" href="https://www.jb51.net/os/Ubuntu/298601.html">方法</a></p>
-<h2 id="基本-WSL-命令"><a class="header-anchor" href="#基本-WSL-命令">.</a>基本 WSL 命令</h2>
+<h1 id="使用">使用</h1>
+<h2 id="图形界面汉化">图形界面汉化</h2>
+<p>网上有很多，我就不单独再做了，可以参考这个<a
+target="_blank" rel="noopener" href="https://www.jb51.net/os/Ubuntu/298601.html">方法</a></p>
+<h2 id="基本-wsl-命令">基本 WSL 命令</h2>
 <p>查看linux版本</p>
 <p><code>wsl -l</code></p>
 <p>停止linux系统</p>
@@ -490,44 +504,70 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
 <p>删除系统</p>
 <p><code>wsl --unregister Ubuntu</code></p>
 <p>导入系统</p>
-<p><code> wsl --import Ubuntu C:\\WSL  C:\\Ubuntu.tar</code></p>
-<p>通过 WSL 安装的 Linux 分发版最好使用 PowerShell 或 Windows 命令提示符 (CMD) 。 一些基本命令包括：</p>
+<p><code>wsl --import Ubuntu C:\\WSL  C:\\Ubuntu.tar</code></p>
+<p>通过 WSL 安装的 Linux 分发版最好使用 PowerShell 或 Windows 命令提示符
+(CMD) 。 一些基本命令包括：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#list-distributions">列出已安装的分发</a>：<code>wsl -l -v</code></li>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#unregister-and-reinstall-a-distribution">取消注册并重新安装分发</a>：<code>wsl --unregister &lt;DistributionName&gt;</code></li>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#run-as-a-specific-user">以特定用户运行</a>： <code>wsl -u &lt;Username&gt;</code></li>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk">装载磁盘</a>：若要查看中可用的磁盘 <code>wmic diskdrive list brief</code> ；若要使用通过上一命令发现的路径装载磁盘 <code>wsl --mount &lt;DiskPath&gt;</code></li>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk#unmount-the-disk">卸载磁盘</a> ：<code>wsl --unmount &lt;DiskPath&gt;</code></li>
+<li><a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#list-distributions">列出已安装的分发</a>：<code>wsl -l -v</code></li>
+<li><a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#unregister-and-reinstall-a-distribution">取消注册并重新安装分发</a>：<code>wsl --unregister &lt;DistributionName&gt;</code></li>
+<li><a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl-config#run-as-a-specific-user">以特定用户运行</a>：
+<code>wsl -u &lt;Username&gt;</code></li>
+<li><a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk">装载磁盘</a>：若要查看中可用的磁盘
+<code>wmic diskdrive list brief</code>
+；若要使用通过上一命令发现的路径装载磁盘
+<code>wsl --mount &lt;DiskPath&gt;</code></li>
+<li><a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk#unmount-the-disk">卸载磁盘</a>
+：<code>wsl --unmount &lt;DiskPath&gt;</code></li>
 </ul>
-<h2 id="系统之间文件系统的相互访问"><a class="header-anchor" href="#系统之间文件系统的相互访问">.</a>系统之间文件系统的相互访问</h2>
-<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk#mount-a-vhd-in-wsl">https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk#mount-a-vhd-in-wsl</a></p>
-<p><strong>父windows系统访问子linux系统的文件：</strong><br />
+<h2 id="系统之间文件系统的相互访问">系统之间文件系统的相互访问</h2>
+<p><a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk#mount-a-vhd-in-wsl"
+class="uri">https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-mount-disk#mount-a-vhd-in-wsl</a></p>
+<p><strong>父windows系统访问子linux系统的文件：</strong>
 直接在文件资源管理器输入<code>\\wsl$</code>就可以访问到wsl子系统的文件系统：</p>
 <p>WIN+R输入<code>\\wsl$</code></p>
-<p>此外，还可以将其映射为网络驱动器，这样就可以像访问C盘、D盘一样访问 Ubuntu 的文件系统了</p>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B9.png?x-oss-process=style/yunying61" alt="" /></p>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%88%90%E5%8A%9F.png?x-oss-process=style/yunying61" alt="image-20210911150604540" /></p>
-<p><strong>linux子系统访问父windows系统的文件：</strong><br />
+<p>此外，还可以将其映射为网络驱动器，这样就可以像访问C盘、D盘一样访问
+Ubuntu 的文件系统了</p>
+<p><img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B9.png?x-oss-process=style/yunying61" /></p>
+<figure>
+<img
+src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/WSL/Ubuntu_%E6%98%A0%E5%B0%84%E6%88%90%E5%8A%9F.png?x-oss-process=style/yunying61"
+alt="image-20210911150604540" />
+<figcaption aria-hidden="true">image-20210911150604540</figcaption>
+</figure>
+<p><strong>linux子系统访问父windows系统的文件：</strong>
 直接<code>cd /mnt</code>就可以看到c/、d/两个文件夹，对应的就是电脑上的C盘、D盘，cd进去就可以访问对应windows上的文件</p>
-<h2 id="跨文件系统工作"><a class="header-anchor" href="#跨文件系统工作">.</a>跨文件系统工作</h2>
-<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/filesystems#run-linux-tools-from-a-windows-command-line">跨 Windows 和 Linux 文件系统工作</a></p>
-<p>建议不要跨操作系统使用文件，除非有这么做的特定原因。 若想获得最快的性能速度，请将文件存储在 WSL 文件系统中，前提是在 Linux 命令行（Ubuntu、OpenSUSE 等）中工作。 如果使用 Windows 命令行（PowerShell、命令提示符）工作，请将文件存储在 Windows 文件系统中。</p>
+<h2 id="跨文件系统工作">跨文件系统工作</h2>
+<p><a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/filesystems#run-linux-tools-from-a-windows-command-line">跨
+Windows 和 Linux 文件系统工作</a></p>
+<p>建议不要跨操作系统使用文件，除非有这么做的特定原因。
+若想获得最快的性能速度，请将文件存储在 WSL 文件系统中，前提是在 Linux
+命令行（Ubuntu、OpenSUSE 等）中工作。 如果使用 Windows
+命令行（PowerShell、命令提示符）工作，请将文件存储在 Windows
+文件系统中。</p>
 <p>此外，许多命令在 Windows Linux 之间可互操作。 下面是几个示例：</p>
 <ul>
-<li>
-<p>从 Windows 命令行（如 PowerShell）运行 Linux 工具（如 grep ）：<br />
+<li><p>从 Windows 命令行（如 PowerShell）运行 Linux 工具（如 grep ）：
 打开 PowerShell</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 在 C:\temp&gt; 目录下</span><br><span class="line">wsl ls -la</span><br><span class="line">// 显示 C:\temp 目录的内容</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>混合使用 Linux和 Windows 命令：<br />
-若要使用 Linux 命令 <code>ls -la</code> 列出文件，并使用 PowerShell 命令 <code>findstr</code> 来筛选包含“git”的单词的结果，请组合这些命令：</p>
-  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="built_in">ls</span> <span class="literal">-la</span> | findstr <span class="string">&quot;git&quot;</span></span><br></pre></td></tr></table></figure>
-<p>若要使用 PowerShell 命令 <code>dir</code> 列出文件，并使用 Linux 命令 <code>grep</code> 来筛选包含“git”的单词的结果，请组合这些命令：</p>
-  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span> | wsl grep git</span><br></pre></td></tr></table></figure>
-<p>若要使用 Linux 命令 <code>ls -la</code> 列出文件，并使用 PowerShell 命令 <code>&gt; out.txt</code> 将该列表输出到名为“out.txt”的文本文件，请组合这些命令：</p>
-  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="built_in">ls</span> <span class="literal">-la</span> &gt; out.txt</span><br></pre></td></tr></table></figure>
-</li>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 在 C:\temp&gt; 目录下</span><br><span class="line">wsl ls -la</span><br><span class="line">// 显示 C:\temp 目录的内容</span><br></pre></td></tr></table></figure></p></li>
+<li><p>混合使用 Linux和 Windows 命令： 若要使用 Linux 命令
+<code>ls -la</code> 列出文件，并使用 PowerShell 命令
+<code>findstr</code> 来筛选包含“git”的单词的结果，请组合这些命令：</p>
+<p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="built_in">ls</span> <span class="literal">-la</span> | findstr <span class="string">&quot;git&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>若要使用 PowerShell 命令 <code>dir</code> 列出文件，并使用 Linux 命令
+<code>grep</code> 来筛选包含“git”的单词的结果，请组合这些命令：</p>
+<p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span> | wsl grep git</span><br></pre></td></tr></table></figure></p>
+<p>若要使用 Linux 命令 <code>ls -la</code> 列出文件，并使用 PowerShell
+命令 <code>&gt; out.txt</code>
+将该列表输出到名为“out.txt”的文本文件，请组合这些命令：</p>
+<p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="built_in">ls</span> <span class="literal">-la</span> &gt; out.txt</span><br></pre></td></tr></table></figure></p></li>
 </ul>
 
     </div>
@@ -653,13 +693,13 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">177k</span>
+    <span title="站点总字数">183k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:41</span>
+    <span title="站点阅读时长">2:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

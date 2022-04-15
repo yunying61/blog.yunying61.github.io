@@ -35,12 +35,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yunying61.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content=".前言 最近在家里新组装了一台机子，然后突发奇想，如果我在外地要用这个机子，虽然有远程桌面，但电脑都没开，怎么远程桌面呢？所以我就想搞一个远程开机，这样就可以不需要叫别人的情况下，自己控制电脑开机。">
+  <meta name="description" content="前言 最近在家里新组装了一台机子，然后突发奇想，如果我在外地要用这个机子，虽然有远程桌面，但电脑都没开，怎么远程桌面呢？所以我就想搞一个远程开机，这样就可以不需要叫别人的情况下，自己控制电脑开机。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="网络唤醒 - 远程唤醒电脑WOL(Wake On LAN)">
 <meta property="og:url" content="https://yunying61.github.io/2021/08/%E7%BD%91%E7%BB%9C%E5%94%A4%E9%86%92-%E8%BF%9C%E7%A8%8B%E5%94%A4%E9%86%92%E7%94%B5%E8%84%91WOL-Wake-On-LAN/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content=".前言 最近在家里新组装了一台机子，然后突发奇想，如果我在外地要用这个机子，虽然有远程桌面，但电脑都没开，怎么远程桌面呢？所以我就想搞一个远程开机，这样就可以不需要叫别人的情况下，自己控制电脑开机。">
+<meta property="og:description" content="前言 最近在家里新组装了一台机子，然后突发奇想，如果我在外地要用这个机子，虽然有远程桌面，但电脑都没开，怎么远程桌面呢？所以我就想搞一个远程开机，这样就可以不需要叫别人的情况下，自己控制电脑开机。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-28T10:41:26.000Z">
 <meta property="article:modified_time" content="2022-03-17T10:05:47.541Z">
@@ -169,7 +169,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80-4"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">前提条件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%94%A4%E9%86%92%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">唤醒工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BIOS%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">BIOS设置</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">前提条件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%94%A4%E9%86%92%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">唤醒工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bios%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">BIOS设置</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -184,18 +184,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">110</span>
+        <span class="site-state-item-count">113</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -307,19 +307,19 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/IT/%E6%8A%80%E6%9C%AF/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
         </span>
     </span>
 
@@ -351,7 +351,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>349</span>
+      <span>345</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -369,19 +369,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言-4"><a class="header-anchor" href="#前言-4">.</a>前言</h1>
+        <h1 id="前言">前言</h1>
 <p>最近在家里新组装了一台机子，然后突发奇想，如果我在外地要用这个机子，虽然有远程桌面，但电脑都没开，怎么远程桌面呢？所以我就想搞一个远程开机，这样就可以不需要叫别人的情况下，自己控制电脑开机。</p>
 <span id="more"></span>
-<h2 id="前提条件"><a class="header-anchor" href="#前提条件">.</a>前提条件</h2>
+<h2 id="前提条件">前提条件</h2>
 <ul>
 <li><strong>主板支持</strong>，现在的主板基本都支持，所以这方面可以不用担心；</li>
 <li>电源通电，<strong>网卡带电</strong>（表现为网线接口处关机状态下也亮灯，也可能不亮，视具体情况而定）；</li>
 <li><strong>正常关机</strong>（S5状态），非正常关机可能会唤醒失败，所以如果断电导致关机的话，可能需要手动开启一遍电脑；</li>
 <li>被唤醒的电脑<strong>必须连网</strong>，或者路由器；</li>
 </ul>
-<h1 id="唤醒工具"><a class="header-anchor" href="#唤醒工具">.</a>唤醒工具</h1>
-<p>先介绍一下唤醒工具，推荐使用 <a target="_blank" rel="noopener" href="https://pan.baidu.com/link/zhihu/7NhXzWuVhrizStolJ1d1Ni1kV2cmNGewZkJ0==#list/path=%2F">Wake On LAN</a> ，它有PC版、手机版、微信小程序版（直接搜WakeOnLan）</p>
-<h1 id="BIOS设置"><a class="header-anchor" href="#BIOS设置">.</a>BIOS设置</h1>
+<h1 id="唤醒工具">唤醒工具</h1>
+<p>先介绍一下唤醒工具，推荐使用 <a
+target="_blank" rel="noopener" href="https://pan.baidu.com/link/zhihu/7NhXzWuVhrizStolJ1d1Ni1kV2cmNGewZkJ0==#list/path=%2F">Wake
+On LAN</a> ，它有PC版、手机版、微信小程序版（直接搜WakeOnLan）</p>
+<h1 id="bios设置">BIOS设置</h1>
 <p>由于没有公网IP、不清楚路由器内网穿透怎么搞，本篇暂时搁置更新。。。😑我也很无奈😕</p>
 
     </div>
@@ -506,13 +508,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">177k</span>
+    <span title="站点总字数">183k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:41</span>
+    <span title="站点阅读时长">2:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
