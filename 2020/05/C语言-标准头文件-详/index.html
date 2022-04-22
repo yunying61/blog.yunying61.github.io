@@ -33,30 +33,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
   <meta name="description" content=".C语言 标准头文件(详) https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35782149&#x2F;article&#x2F;details&#x2F;79391154 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_36955347&#x2F;article&#x2F;details&#x2F;71511900 位于C 源代码 开头的 头文件引用 #include &quot;xxx.h&quot;">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="C语言 标准头文件(详)">
-<meta property="og:url" content="https://www.yunying61.top/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/index.html">
+<meta property="og:url" content="https://www.yunying61.cn/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/index.html">
 <meta property="og:site_name" content="星幕·云影">
 <meta property="og:description" content=".C语言 标准头文件(详) https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35782149&#x2F;article&#x2F;details&#x2F;79391154 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_36955347&#x2F;article&#x2F;details&#x2F;71511900 位于C 源代码 开头的 头文件引用 #include &quot;xxx.h&quot;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-31T14:55:28.000Z">
 <meta property="article:modified_time" content="2020-05-31T14:55:28.000Z">
 <meta property="article:author" content="yunying61">
-<meta property="article:tag" content="C">
 <meta property="article:tag" content="笔记">
+<meta property="article:tag" content="C">
 <meta property="article:tag" content="头文件">
 <meta property="article:tag" content=".h">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.yunying61.top/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/">
+<link rel="canonical" href="https://www.yunying61.cn/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.yunying61.top/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/","path":"2020/05/C语言-标准头文件-详/","title":"C语言 标准头文件(详)"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.yunying61.cn/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/","path":"2020/05/C语言-标准头文件-详/","title":"C语言 标准头文件(详)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>C语言 标准头文件(详) | 星幕·云影</title>
@@ -185,7 +185,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">60</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -196,7 +196,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">113</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -257,7 +257,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yunying61.top/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/">
+    <link itemprop="mainEntityOfPage" href="https://www.yunying61.cn/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yunying61.png">
@@ -835,7 +835,7 @@ EILSEQ 源自于不合法的字符顺序,例如 wcstombs(str, L&quot;\xffff&quot
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.yunying61.top/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/" title="C语言 标准头文件(详)">https://www.yunying61.top/2020/05/C语言-标准头文件-详/</a>
+      <a href="https://www.yunying61.cn/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/" title="C语言 标准头文件(详)">https://www.yunying61.cn/2020/05/C语言-标准头文件-详/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -861,8 +861,8 @@ EILSEQ 源自于不合法的字符顺序,例如 wcstombs(str, L&quot;\xffff&quot
 </div>
 
           <div class="post-tags">
-              <a href="/tags/C/" rel="tag"># C</a>
               <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/C/" rel="tag"># C</a>
               <a href="/tags/%E5%A4%B4%E6%96%87%E4%BB%B6/" rel="tag"># 头文件</a>
               <a href="/tags/h/" rel="tag"># .h</a>
           </div>
@@ -924,13 +924,13 @@ EILSEQ 源自于不合法的字符顺序,例如 wcstombs(str, L&quot;\xffff&quot
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">179k</span>
+    <span title="站点总字数">183k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:43</span>
+    <span title="站点阅读时长">2:46</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -978,7 +978,7 @@ EILSEQ 源自于不合法的字符顺序,例如 wcstombs(str, L&quot;\xffff&quot
 
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://www.yunying61.top/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://www.yunying61.cn/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvVXPmv7","appkey":"942f7dcea39f6d4b449332dde8fe4241"}</script>
 <script src="/js/third-party/comments/changyan.js"></script>
