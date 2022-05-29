@@ -332,7 +332,7 @@
     <div class="post-body" itemprop="articleBody">
           <h1 id="C-中-static-静态存储"><a class="header-anchor" href="#C-中-static-静态存储">.</a>C++ 中 static 静态存储</h1>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/guotianqing/article/details/79828100">https://blog.csdn.net/guotianqing/article/details/79828100</a></p>
-<h2 id="描述-5"><a class="header-anchor" href="#描述-5">.</a>描述</h2>
+<h2 id="描述-4"><a class="header-anchor" href="#描述-4">.</a>描述</h2>
 <p>static关键字在c语言中比较常用，使用恰当能够大大提高程序的模块化特性，有利于扩展和维护。</p>
 <p>但是对于c语言初学者，static由于使用灵活，并不容易掌握。</p>
           <!--noindex-->
@@ -800,7 +800,7 @@
           <h1 id="C-内联函数"><a class="header-anchor" href="#C-内联函数">.</a>C++ 内联函数</h1>
 <p>C++中支持内联函数，其目的是为了提高函数的执行效率，用关键字 inline 放在函数定义的前面(注意是定义而非声明)即可将函数指定为内联函数，内联函数通常就是将它在程序中的每个调用点上“内联地”展开。</p>
 <p>内联函数有效地提高函数的执行效率，如果写成函数有一个潜在的缺点：调用函数比求解等价表达式要慢得多。在大多数的机器上，调用函数都要做很多工作：调用前要先保存寄存器，并在返回时恢复，复制实参，程序还必须转向一个新位置执行。</p>
-<h2 id="描述-4"><a class="header-anchor" href="#描述-4">.</a>描述</h2>
+<h2 id="描述-5"><a class="header-anchor" href="#描述-5">.</a>描述</h2>
 <p>C++ <strong>内联函数</strong>是通常与<a target="_blank" rel="noopener" href="https://www.runoob.com/cplusplus/cpp-classes-objects.html">类</a>一起使用。如果一个函数是内联的，那么在编译时，编译器会把该函数的代码副本放置在每个调用该函数的地方。</p>
 <p>对内联函数进行任何修改，都需要<strong>重新编译</strong>函数的所有客户端，因为编译器需要重新更换一次所有的代码，否则将会继续使用旧的函数。</p>
 <p>如果想把一个函数定义为内联函数，则需要定义函数时在函数名前面放置关键字 <strong><u>inline</u></strong>，在调用函数之前需要对函数进行定义。如果已定义的函数多于一行，编译器会忽略 inline 限定符。</p>
@@ -838,7 +838,7 @@
 <p>有些函数即使声明为内联的也不一定会被编译器内联, 这点很重要; 比如虚函数和递归函数就不会被正常内联. 通常, 递归函数不应该声明成内联函数.(递归调用堆栈的展开并不像循环那么简单, 比如递归层数在编译时可能是未知的, 大多数编译器都不支持内联递归函数). 虚函数内联的主要原因则是想把它的函数体放在类定义内, 为了图个方便, 抑或是当作文档描述其行为, 比如精短的存取函数.</p>
 </li>
 </ul>
-<h2 id="实例"><a class="header-anchor" href="#实例">.</a>实例</h2>
+<h2 id="实例-2"><a class="header-anchor" href="#实例-2">.</a>实例</h2>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">max</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a &gt; b ? a : b;</span><br><span class="line">&#125;</span><br><span class="line">则调用： cout&lt;&lt; <span class="built_in">max</span>(a, b) &lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">在编译时会展开为： cout&lt;&lt; (a &gt; b ? a : b) &lt;&lt;endl;</span><br><span class="line">从而消除了把 max写成函数的额外执行开销</span><br></pre></td></tr></table></figure>
 <p>关键字 inline 必须与函数定义体放在一起才能使函数成为内联，仅将 inline 放在函数声明前面不起任何作用。<u>声明与定义不可混为一谈</u></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">如下的函数 Foo 不能成为内联函数：</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">Foo</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span>;   <span class="comment">// inline 仅与函数声明放在一起 </span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Foo</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span>&#123;...&#125;</span><br><span class="line"></span><br><span class="line">而如下风格的函数 Foo 则成为内联函数：</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Foo</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">Foo</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span>&#123;...&#125;   <span class="comment">// inline 与函数定义体放在一起</span></span><br></pre></td></tr></table></figure>
