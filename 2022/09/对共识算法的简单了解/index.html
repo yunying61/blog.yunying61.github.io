@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo2.png">
+  <link rel="mask-icon" href="/images/logo2.svg" color="#222">
+  <meta name="msvalidate.01" content="C4629C76253BAF6F511BC39C8C5D670E">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":true,"bookmark":{"enable":true,"color":"#f00","save":"manual"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content=".共识算法 共识算法（consensus A7M），即达成共识的过程，而非一致性算法。一致性（consistency）是终态，共识算法是达成一致性的一种实现手段和过程。 常见的共识算法有 PBFT（Practical Byzantine Fault Tolerance，实用拜占庭容错算法） PoW（Proof of Work，工作量证明） PoS（Proof of Stake，权益证明） DPoS">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="对共识算法的简单了解">
+<meta property="og:url" content="https://www.yunying61.cn/2022/09/%E5%AF%B9%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3/index.html">
+<meta property="og:site_name" content="星幕·云影">
+<meta property="og:description" content=".共识算法 共识算法（consensus A7M），即达成共识的过程，而非一致性算法。一致性（consistency）是终态，共识算法是达成一致性的一种实现手段和过程。 常见的共识算法有 PBFT（Practical Byzantine Fault Tolerance，实用拜占庭容错算法） PoW（Proof of Work，工作量证明） PoS（Proof of Stake，权益证明） DPoS">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-19T06:37:24.000Z">
+<meta property="article:modified_time" content="2022-09-19T08:10:27.294Z">
+<meta property="article:author" content="yunying61">
+<meta property="article:tag" content="共识算法">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.yunying61.cn/2022/09/%E5%AF%B9%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.yunying61.cn/2022/09/%E5%AF%B9%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3/","path":"2022/09/对共识算法的简单了解/","title":"对共识算法的简单了解"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>对共识算法的简单了解 | 星幕·云影</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">星幕·云影</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+<div id="musicplayer">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=270 height=86 src="//music.163.com/outchain/player?type=2&id=34364124&auto=0&height=66">
+    </iframe>
+</div>
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">共识算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6%EF%BC%88%E5%8D%8F%E8%AE%AE%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">共识机制（协议）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99-2"><span class="nav-number">2.</span> <span class="nav-text">参考资料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">什么是共识算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAP-%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.1.</span> <span class="nav-text">CAP 原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Paxos-%E6%9C%80%E6%97%A9%E7%9A%84%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%EF%BC%8C%E9%9D%9E%E6%8B%9C%E5%8D%A0%E5%BA%AD%E7%AE%97%E6%B3%95%E7%9A%84%E4%BB%A3%E8%A1%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">Paxos 最早的共识算法，非拜占庭算法的代表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PBFT-%E5%9C%A8%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8A%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.1.3.</span> <span class="nav-text">PBFT 在区块链上的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E8%AF%86%E7%9A%84%E4%B8%80%E8%88%AC%E6%B5%81%E7%A8%8B"><span class="nav-number">2.1.4.</span> <span class="nav-text">共识的一般流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.2.</span> <span class="nav-text">共识算法介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97%E9%93%BE%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E7%A0%94%E7%A9%B6%E7%BB%BC%E8%BF%B0"><span class="nav-number">2.3.</span> <span class="nav-text">区块链共识算法研究综述</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E6%80%9D%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">个人思考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
+  <p class="site-author-name" itemprop="name">yunying61</p>
+  <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">139</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button class="js-gitter-toggle-chat-button"><i class="fa fa-comment"></i>
+      聊天室
+    </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yunying61" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yunying61" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yunying61@qq.com" title="E-Mail → mailto:yunying61@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/5119152507" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5119152507" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/yunying61" class="github-corner" title="在GitHub上关注我" aria-label="在GitHub上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.yunying61.cn/2022/09/%E5%AF%B9%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yunying61.png">
+      <meta itemprop="name" content="yunying61">
+      <meta itemprop="description" content="yunying61's Hexo Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星幕·云影">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          对共识算法的简单了解
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-09-19 14:37:24" itemprop="dateCreated datePublished" datetime="2022-09-19T14:37:24+08:00">2022-09-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-09-19 16:10:27" itemprop="dateModified" datetime="2022-09-19T16:10:27+08:00">2022-09-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/IT/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA/" itemprop="url" rel="index"><span itemprop="name">个人</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2022/09/%E5%AF%B9%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3/" class="post-meta-item leancloud_visitors" data-flag-title="对共识算法的简单了解" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">评论：</span>
+    
+    <a title="对共识算法的简单了解" href="/2022/09/%E5%AF%B9%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::8b4650eab553ca482f9afc755f2b64ca" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="共识算法"><a class="header-anchor" href="#共识算法">.</a>共识算法</h1>
+<p><strong>共识算法</strong>（consensus A7M），即达成共识的过程，而非一致性算法。一致性（consistency）是终态，共识算法是达成一致性的一种实现手段和过程。</p>
+<p>常见的共识算法有</p>
+<p>PBFT（Practical Byzantine Fault Tolerance，实用拜占庭容错算法）</p>
+<p>PoW（Proof of Work，工作量证明）</p>
+<p>PoS（Proof of Stake，权益证明）</p>
+<p>DPoS（Delegate Proof of Stake，委托权益证明）</p>
+<p>Ripple（瑞波）</p>
+<h2 id="共识机制（协议）"><a class="header-anchor" href="#共识机制（协议）">.</a>共识机制（协议）</h2>
+<p>需要一种机制来保证区块链中的每一区块只能由一个节点来负责修改，如何选出修改数据的节点，这就是共识机制。让平等的参与者按照某种秩序达成一致意见。</p>
+<span id="more"></span>
+<h1 id="参考资料-2"><a class="header-anchor" href="#参考资料-2">.</a>参考资料</h1>
+<h2 id="什么是共识算法"><a class="header-anchor" href="#什么是共识算法">.</a><a target="_blank" rel="noopener" href="https://blog.csdn.net/shangsongwww/article/details/89021915">什么是共识算法</a></h2>
+<p>分布式系统集群设计中面临着一个不可回避的问题，<strong>一致性问题</strong>。</p>
+<p>对于系统中的多个服务节点，给定一系列操作，如何试图使全局对局部处理结果达成某种程度的一致？</p>
+<p>这个一致性问题大致有如下的场景：</p>
+<ul>
+<li>
+<p><strong>节点之间通讯不可靠的，延迟和阻塞</strong></p>
+</li>
+<li>
+<p><strong>节点的处理可能是错误的，甚至节点自身随时可能宕机</strong></p>
+</li>
+<li>
+<p><strong>节点作恶</strong></p>
+</li>
+</ul>
+<p>一个很重要的解决一致性算法的解决思路，即：</p>
+<p><strong>将可能引发不一致的并行操作进行串行化，就是现在计算机系统里处理分布式一致性问题基础思路和唯一秘诀</strong>。</p>
+<h3 id="CAP-原理"><a class="header-anchor" href="#CAP-原理">.</a>CAP 原理</h3>
+<ul>
+<li>C（一致性）：所有的节点上的数据时刻保持同步，即数据一致</li>
+<li>A（可用性）：每个请求都能在一定时间内接受到一个响应，即低延迟</li>
+<li>P（分区容错）：当系统发生分区时仍然可以运行的</li>
+</ul>
+<hr />
+<p>一致性：是指分布式系统中所有节点在同一时刻持有同样的数据信息;</p>
+<p>可用性：是指系统处于服务状态,当客户端发出请求,服务端能在有效的时间内返回结果;</p>
+<p>分区容忍性：是指允许网络中部分节点不与其他节点通信,即允许网络发生分区(不同区域之间的节点不能建立通信)。</p>
+<hr />
+<p><strong>定理：任何分布式系统只可同时满足二点，没法三者兼顾。即一致性、可用性和分区容忍性不可能同时满足。</strong></p>
+<p>CAP原理在分布式网络系统的应用讨论，其实就是讨论在允许网络发生故障的系统中，该选择<strong>一致性</strong>还是<strong>可靠性</strong>？</p>
+<p>如果系统重视一致性，那么可以基于ACID原则做系统设计</p>
+<p>即 Atomicity（原子性）、Consistency（一致性）、Isolation（隔离性）、Durability（持久性）。</p>
+<p>ACID 原则描述了对分布式数据库的一致性需求，同时付出了可用性的代价。</p>
+<ul>
+<li>Atomicity：每次操作是原子的，要么成功，要么不执行；</li>
+<li>Consistency：数据库的状态是一致的，无中间状态；</li>
+<li>Isolation：各种操作彼此互相不影响；</li>
+<li>Durability：状态的改变是持久的，不会失效</li>
+</ul>
+<p>相应的有一个BASE原则，（Basic Availiability，Soft state，Eventually Consistency）则强调了可用性。</p>
+<h3 id="Paxos-最早的共识算法，非拜占庭算法的代表"><a class="header-anchor" href="#Paxos-最早的共识算法，非拜占庭算法的代表">.</a>Paxos 最早的共识算法，非拜占庭算法的代表</h3>
+<p>Paxos有三种角色：</p>
+<ul>
+<li>proposer：提出一个提案，等待大家批准为结案。客户端担任该角色；</li>
+<li>acceptor：负责对提案进行投票。往往是服务端担任该角色；</li>
+<li>learner：被告知结案结果，并与之统一，不参与投票过程。即普通节点</li>
+</ul>
+<p>系统运行由proposer驱动，当合法提案在一定时间内收到1/2以上投票后达成共识。</p>
+<p>因此，可得出无法达成共识的条件：</p>
+<ol>
+<li>proposer故障</li>
+<li>二分之一以上acceptor故障</li>
+</ol>
+<p>对于拜占庭问题来说，假如将军总数为 N，叛变将军数为 F，则当N&gt;=3F+1 时，问题才有解，即叛变的将军不超过1/3时，存在有效的算法，如BFT，不论叛变者如何折腾，忠诚的将军们总能达成一致的结果。</p>
+<h3 id="PBFT-在区块链上的实现"><a class="header-anchor" href="#PBFT-在区块链上的实现">.</a>PBFT 在区块链上的实现</h3>
+<p>区块链的节点分为记账节点和普通节点两个角色</p>
+<p>记账节点负责向全网提供记账服务，并维护全局账本，每过一段时间从记账节点中选一个议长，进行命令的分发，其他记账节点则作为议员进行验证</p>
+<p>将军就是记账节点，拥有全局账本，并验证交易的有效性，过互相传达验证结果，在f&lt;=(n-1)/3的前提下，可以保证能达到全局的一致性</p>
+<h3 id="共识的一般流程"><a class="header-anchor" href="#共识的一般流程">.</a>共识的一般流程</h3>
+<ol>
+<li>
+<p>任一节点接收到发送者签名的交易数据请求后，向全网广播</p>
+</li>
+<li>
+<p>所有记账节点均独立监听全网的交易数据，并记录在内存</p>
+</li>
+<li>
+<p>议长在经过t后发送共识请求提案request</p>
+</li>
+<li>
+<p>议员在收到提案后，进行相关验证，发送响应response</p>
+</li>
+<li>
+<p>节点在限定时间内收到至少F+1个response后，共识达成，把交易记录入区块并发布给全网，如果超时，则更换视图和议长</p>
+</li>
+<li>
+<p>任意节点在收到完整区块后，把包含的交易从内存中删除</p>
+</li>
+</ol>
+<p>开始下一个共识循环</p>
+<h2 id="共识算法介绍"><a class="header-anchor" href="#共识算法介绍">.</a><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8b50304db034">共识算法介绍</a></h2>
+<h2 id="区块链共识算法研究综述"><a class="header-anchor" href="#区块链共识算法研究综述">.</a><a target="_blank" rel="noopener" href="https://x.cnki.net/Trilalread/article/TrilalXml?filename=XAXB202102006&amp;tablename=CJFDTOTAL&amp;dbcode=CJFD&amp;topic=&amp;fileSourceType=1&amp;taskId=0&amp;from=readinghistory&amp;groupid=&amp;appId=CRSP_BASIC_PSMC&amp;ts=1663600624295&amp;act=&amp;SsoTokenId=&amp;SharedTextId=#">区块链共识算法研究综述</a></h2>
+<h1 id="个人思考"><a class="header-anchor" href="#个人思考">.</a>个人思考</h1>
+<p>首先要建立起一个基本的认知框架。</p>
+<p>然后，要扩大共识算法所囊括的个体，以保证整体的稳固性。</p>
+<p>控制整体的大小。</p>
+<p>思考：以相对较少的低延迟节点构建分布式系统的核心，以极高的同步速率来避免三分之一以下节点异常导致的系统不正常变化。</p>
+<p>节点异常：</p>
+<ol>
+<li>
+<p>故障的，不响应的节点</p>
+</li>
+<li>
+<p>恶意响应的节点</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    捐助
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="yunying61 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="yunying61 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>yunying61
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.yunying61.cn/2022/09/%E5%AF%B9%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3/" title="对共识算法的简单了解">https://www.yunying61.cn/2022/09/对共识算法的简单了解/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://blog.csdn.net/weixin_45385155">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">CSDN</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95/" rel="tag"># 共识算法</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/08/RSR%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8-%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/" rel="prev" title="RSR系列路由器-入门操作">
+                  <i class="fa fa-chevron-left"></i> RSR系列路由器-入门操作
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/09/Windows%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8FPath%E8%BF%87%E9%95%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" rel="next" title="Windows系统环境变量Path过长的解决方法">
+                  Windows系统环境变量Path过长的解决方法 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-changyan">changyan</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane changyan" id="comment-changyan">
+              <div class="comments" id="SOHUCS" sid="8b4650eab553ca482f9afc755f2b64ca"></div>
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yunying61</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">198k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">9:10</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+<script src="/js/code-unfold.js"></script>
+
+  
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"yunying61/community"}</script>
+<script src="/js/third-party/chat/gitter.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://unpkg.com/mermaid@8.13.10/dist/mermaid.min.js","integrity":"sha256-CmZCFVnvol9YL23PfjDflGY5nJwE+Mf/JN+8v+tD/34="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"7kyqjXsjdE3wAN3dI4gLIo7v-gzGzoHsz","app_key":"UkvjI7B9eeKoRussvCw56hN9","server_url":null,"security":false}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://unpkg.com/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://www.yunying61.cn/2022/09/%E5%AF%B9%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvVXPmv7","appkey":"942f7dcea39f6d4b449332dde8fe4241"}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"yunying61/hexo-gitalk-comments","issue_term":"title","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+<!-- hexo injector body_end start -->
+  <script src="/js/date_to_now.js"></script>
+<!-- hexo injector body_end end --></body>
+</html>

@@ -16,6 +16,8 @@ $ git pull origin master
 
 > 待更新文章：
 >
-> 1. 2022-05-04-Bolt-Unity可视化编程学习体验.md
+> 1. 2022-05-04-Bolt-Unity可视化编程学习体验
+> 1. 2022-06-02-Hexo-Fluid主题-相关配置
+> 1. 2022-07-20-Blender学习历程
 
-![image-20220315101515911](https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/Hexo%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB.png)
+![博客分类](https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/Hexo%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB.png)
