@@ -169,7 +169,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">C++ 内联函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0-5"><span class="nav-number">1.1.</span> <span class="nav-text">描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">提示：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="nav-number">1.2.</span> <span class="nav-text">实例</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">C++ 内联函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0-6"><span class="nav-number">1.1.</span> <span class="nav-text">描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">提示：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="nav-number">1.2.</span> <span class="nav-text">实例</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -184,18 +184,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">139</span>
+        <span class="site-state-item-count">140</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -210,11 +210,17 @@
         <a href="https://github.com/yunying61" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yunying61" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:yunying61@qq.com" title="E-Mail → mailto:yunying61@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:yunying61@outlook.com" title="E-Mail → mailto:yunying61@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="http://weibo.com/u/5119152507" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5119152507" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <a href="https://weibo.com/yunying61" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yunying61" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
       </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/yunying61" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;yunying61" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
   </div>
 
 
@@ -356,7 +362,7 @@
         <h1 id="C-内联函数"><a class="header-anchor" href="#C-内联函数">.</a>C++ 内联函数</h1>
 <p>C++中支持内联函数，其目的是为了提高函数的执行效率，用关键字 inline 放在函数定义的前面(注意是定义而非声明)即可将函数指定为内联函数，内联函数通常就是将它在程序中的每个调用点上“内联地”展开。</p>
 <p>内联函数有效地提高函数的执行效率，如果写成函数有一个潜在的缺点：调用函数比求解等价表达式要慢得多。在大多数的机器上，调用函数都要做很多工作：调用前要先保存寄存器，并在返回时恢复，复制实参，程序还必须转向一个新位置执行。</p>
-<h2 id="描述-5"><a class="header-anchor" href="#描述-5">.</a>描述</h2>
+<h2 id="描述-6"><a class="header-anchor" href="#描述-6">.</a>描述</h2>
 <p>C++ <strong>内联函数</strong>是通常与<a target="_blank" rel="noopener" href="https://www.runoob.com/cplusplus/cpp-classes-objects.html">类</a>一起使用。如果一个函数是内联的，那么在编译时，编译器会把该函数的代码副本放置在每个调用该函数的地方。</p>
 <p>对内联函数进行任何修改，都需要<strong>重新编译</strong>函数的所有客户端，因为编译器需要重新更换一次所有的代码，否则将会继续使用旧的函数。</p>
 <p>如果想把一个函数定义为内联函数，则需要定义函数时在函数名前面放置关键字 <strong><u>inline</u></strong>，在调用函数之前需要对函数进行定义。如果已定义的函数多于一行，编译器会忽略 inline 限定符。</p>
@@ -404,6 +410,8 @@
     
     
     
+      
+
 
     <footer class="post-footer">
           <div class="reward-container">
@@ -521,13 +529,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">198k</span>
+    <span title="站点总字数">203k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9:10</span>
+    <span title="站点阅读时长">9:23</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
