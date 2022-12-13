@@ -32,8 +32,7 @@ NexT.boot.registerEvents = function() {
 };
 
 NexT.boot.refresh = function() {
-  // 代码折叠
-  codeUnfold();
+
   /**
    * Register JS handlers by condition option.
    * Need to add config option in Front-End at 'scripts/helpers/next-config.js' file.
@@ -46,13 +45,13 @@ NexT.boot.refresh = function() {
   CONFIG.pangu && window.pangu.spacingPage();
 
   CONFIG.exturl && NexT.utils.registerExtURL();
+  NexT.utils.wrapTableWithBox();
   NexT.utils.registerCopyCode();
   NexT.utils.registerTabsTag();
   NexT.utils.registerActiveMenuItem();
   NexT.utils.registerLangSelect();
   NexT.utils.registerSidebarTOC();
   NexT.utils.registerPostReward();
-  NexT.utils.wrapTableWithBox();
   NexT.utils.registerVideoIframe();
 };
 
