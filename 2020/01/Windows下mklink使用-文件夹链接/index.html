@@ -24,12 +24,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content=".mklink命令 mklink是windows系统下创建符号链接和硬链接的命令工具，它是一个很好的解决文件系统问题的工具。使用它需要管理员权限。 首先，先来介绍下mklink这个命令： mklink [[&#x2F;D] | [&#x2F;H] | [&#x2F;J]] Link Target &#x2F;D      创建目录符号链接。默认为文件符号链接。 &#x2F;H      创建硬链接而非符号链接。 &#x2F;J      创建目录联接。 L">
+    <meta name="description" content="mklink命令· mklink是windows系统下创建符号链接和硬链接的命令工具，它是一个很好的解决文件系统问题的工具。使用它需要管理员权限。 首先，先来介绍下mklink这个命令： mklink [[&#x2F;D] | [&#x2F;H] | [&#x2F;J]] Link Target &#x2F;D      创建目录符号链接。默认为文件符号链接。 &#x2F;H      创建硬链接而非符号链接。 &#x2F;J      创建目录联接。 L">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Windows下mklink使用-文件夹链接">
 <meta property="og:url" content="https://www.yunying61.cn/2020/01/Windows%E4%B8%8Bmklink%E4%BD%BF%E7%94%A8-%E6%96%87%E4%BB%B6%E5%A4%B9%E9%93%BE%E6%8E%A5/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content=".mklink命令 mklink是windows系统下创建符号链接和硬链接的命令工具，它是一个很好的解决文件系统问题的工具。使用它需要管理员权限。 首先，先来介绍下mklink这个命令： mklink [[&#x2F;D] | [&#x2F;H] | [&#x2F;J]] Link Target &#x2F;D      创建目录符号链接。默认为文件符号链接。 &#x2F;H      创建硬链接而非符号链接。 &#x2F;J      创建目录联接。 L">
+<meta property="og:description" content="mklink命令· mklink是windows系统下创建符号链接和硬链接的命令工具，它是一个很好的解决文件系统问题的工具。使用它需要管理员权限。 首先，先来介绍下mklink这个命令： mklink [[&#x2F;D] | [&#x2F;H] | [&#x2F;J]] Link Target &#x2F;D      创建目录符号链接。默认为文件符号链接。 &#x2F;H      创建硬链接而非符号链接。 &#x2F;J      创建目录联接。 L">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-01T02:51:39.000Z">
 <meta property="article:modified_time" content="2022-10-21T10:10:51.232Z">
@@ -168,18 +168,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-count">88</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">148</span>
+        <span class="site-state-item-count">149</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -340,7 +340,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="mklink命令"><a class="header-anchor" href="#mklink命令">.</a>mklink命令</h1>
+        <h1 id="mklink命令">mklink命令<a class="header-anchor" href="#mklink命令">·</a></h1>
 <p>mklink是windows系统下创建符号链接和硬链接的命令工具，它是一个很好的解决文件系统问题的工具。使用它需要<strong>管理员权限</strong>。</p>
 <p>首先，先来介绍下mklink这个命令：</p>
 <pre><code>mklink [[/D] | [/H] | [/J]] Link Target
@@ -354,7 +354,7 @@ Target  指定新链接引用的路径(相对或绝对)。
 <blockquote>
 <p>注意：因为powershell不支持mklink命令，所以要在前面加cmd /c表示用cmd来运行该命令，路径注意引号，可以是相对路径也可以是绝对路径。</p>
 </blockquote>
-<h2 id="符号链接（Symbolic-link）"><a class="header-anchor" href="#符号链接（Symbolic-link）">.</a>符号链接（Symbolic link）</h2>
+<h2 id="符号链接（Symbolic-link）">符号链接（Symbolic link）<a class="header-anchor" href="#符号链接（Symbolic-link）">·</a></h2>
 <p>对文件创建符号链接</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink &quot;link&quot; &quot;target&quot;</span><br></pre></td></tr></table></figure>
 <p>对文件夹创建符号链接</p>
@@ -380,7 +380,7 @@ Target  指定新链接引用的路径(相对或绝对)。
 <blockquote>
 <p>注意：软链接的创建需要<code>管理员权限</code>，确保cmd是管理员模式。对于文件夹的软链接创建，一定要加上&quot;/D&quot;。通过<code>相对路径</code>创建的软链接在移动后无法使用，<code>绝对路径</code>创建的移动后不影响使用。符号链接可以直接右键删除，或通过<strong>rmdir</strong>命令删除，不会影响原文件，但<strong>del</strong>命令则<strong>会把目标文件删除</strong>。</p>
 </blockquote>
-<h2 id="硬链接（Hard-link）"><a class="header-anchor" href="#硬链接（Hard-link）">.</a>硬链接（Hard link）</h2>
+<h2 id="硬链接（Hard-link）">硬链接（Hard link）<a class="header-anchor" href="#硬链接（Hard-link）">·</a></h2>
 <p>对文件创建硬链接</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /H &quot;link&quot; &quot;target&quot;</span><br></pre></td></tr></table></figure>
 <ul>
@@ -396,14 +396,14 @@ Target  指定新链接引用的路径(相对或绝对)。
 </ul>
 <p>通过上述命令就可以创建从“link”路径到“target”路径的硬链接，例如：在D盘根目录下新建文本“A.txt”，然后输入命令如下即可创建到&quot;A.txt&quot;的硬链接&quot;B.txt&quot;<br />
 在文件资源管理器上看，“B.txt”与“A.txt”占用同样大小的空间，其实这个数据并不用去理会，硬链接相当于给文件的数据多创建了一个“入口”，“A.txt”,“B.txt”指向的是硬盘中的同一块区域，因此这两个文件的内容是完全一样的，编辑任何一个文件都会影响到另一文件，当删除其中一个文件，只是删除这个文件其中一个“入口”，要两个文件都删除，文件系统才会标志这块硬盘区域上的文件被删除。</p>
-<h2 id="目录联接-创建软链接首选"><a class="header-anchor" href="#目录联接-创建软链接首选">.</a>目录联接(创建软链接首选)</h2>
+<h2 id="目录联接-创建软链接首选">目录联接(创建软链接首选)<a class="header-anchor" href="#目录联接-创建软链接首选">·</a></h2>
 <p>对文件夹创建目录联接</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /J &quot;link&quot; &quot;target&quot;</span><br></pre></td></tr></table></figure>
 <p>“目录联接”只能应用于文件夹，不可用于文件。根据网上能找到的资料显示，对文件夹创建的“目录联接”与“符号链接”并没有区别，一样可以实现软件数据的迁移。不过貌似这两者对剪切操作有不一样的表现。<br />
 例如，我现在在D盘创建“文件夹A”,在“文件夹A”里新建A.txt，然后在D盘根目录创建一个“目录联接B”指向这个“文件夹A”，通过这个“目录联接B”，我可以访问到A.txt，接着我对“目录联接B”进行剪切操作，剪切到C盘，发现“文件夹A”和“目录联接B”还是在D盘，但是打开却发现A.txt不见了，被剪切到了C盘的“文件夹B”中，也就是说对“目录联接”的剪切操作会<code>影响原来的文件</code>。<br />
 对于这其中的机制，很神奇。。。感觉“目录联接”跟“符号链接”有点像，给文件夹里的内容提供一个“入口”即所谓的“联接点”，剪切操作时会通过这个“联接点”把内容剪切出来，原来的目录和“联接点”虽然没有变化，但里面的内容被剪切出来了。<br />
 而“符号链接”的剪切操作<code>仅仅是对这个“符号链接”的剪切</code>，并不会透过这个“符号链接”把其<code>内容剪切掉</code>。</p>
-<h2 id="mklink-硬链接和符号链接的区别"><a class="header-anchor" href="#mklink-硬链接和符号链接的区别">.</a>mklink 硬链接和符号链接的区别</h2>
+<h2 id="mklink-硬链接和符号链接的区别">mklink 硬链接和符号链接的区别<a class="header-anchor" href="#mklink-硬链接和符号链接的区别">·</a></h2>
 <p>硬链接只能用于文件，不能用于文件夹，而且硬链接和目标文件必须在同一个分区或者卷中。硬链接的目的是<code>为了给文件创建多个目录路径(多个入口)</code>，而不像符号链接是为了指向某个已有的文件。</p>
 <p>假设要给Target. txt文件创建一个硬链接，系统下载可以执行以下命令：</p>
 <p>mklink/H Link.txt Target.txt</p>
@@ -419,7 +419,7 @@ Target  指定新链接引用的路径(相对或绝对)。
 <blockquote>
 <p>综上，我们可以将硬链接理解成C语言中的指针、空间中的传送门，文件随着硬链接的创建，等于它有一个“固定”地址，但它对外沟通的通道有多个，只要通道还存在，该文件就不会消失。</p>
 </blockquote>
-<h2 id="mklink-D和-J的区别"><a class="header-anchor" href="#mklink-D和-J的区别">.</a>mklink /D和/J的区别</h2>
+<h2 id="mklink-D和-J的区别">mklink /D和/J的区别<a class="header-anchor" href="#mklink-D和-J的区别">·</a></h2>
 <p><strong>目录符号链接</strong>和<strong>目录联接</strong>的区别在于：</p>
 <p>目录联接在创建时会自动引用目标目录的绝对路径，而符号链接允许相对路径的引用。</p>
 <p>如分别用 mklink /D dira tdir 和 mklink /J dirb tdir 创建 dira、dirb 对相对目录的 tdir 的符号链接和目录联接，之后将 dira、dirb 移动到其它目录下，则访问 dira 时会提示“位置不可用”，访问 dirb 时仍然正常指向 tdir；</p>
@@ -549,7 +549,7 @@ Target  指定新链接引用的路径(相对或绝对)。
 
 <div class="copyright">
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
@@ -561,14 +561,14 @@ Target  指定新链接引用的路径(相对或绝对)。
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">234k</span>
+    <span title="站点总字数">305k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10:49</span>
+    <span title="站点阅读时长">14:08</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

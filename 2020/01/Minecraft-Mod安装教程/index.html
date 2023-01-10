@@ -24,12 +24,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content=".Mod(模组) .Mod API 我的世界的API均为爱好者产品，Mojang不对任何API提供任何技术支持。 Mojang并未针对Java版开发Mod API，故不存在“官方API”。">
+    <meta name="description" content="Mod(模组)· Mod API· 我的世界的API均为爱好者产品，Mojang不对任何API提供任何技术支持。 Mojang并未针对Java版开发Mod API，故不存在“官方API”。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Minecraft Mod安装教程">
 <meta property="og:url" content="https://www.yunying61.cn/2020/01/Minecraft-Mod%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content=".Mod(模组) .Mod API 我的世界的API均为爱好者产品，Mojang不对任何API提供任何技术支持。 Mojang并未针对Java版开发Mod API，故不存在“官方API”。">
+<meta property="og:description" content="Mod(模组)· Mod API· 我的世界的API均为爱好者产品，Mojang不对任何API提供任何技术支持。 Mojang并未针对Java版开发Mod API，故不存在“官方API”。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-61.oss-cn-shanghai.aliyuncs.com/img/Minacraft/forge.jpg">
 <meta property="article:published_time" content="2020-01-31T07:45:44.000Z">
@@ -170,18 +170,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-count">88</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">148</span>
+        <span class="site-state-item-count">149</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -330,18 +330,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Mod-模组"><a class="header-anchor" href="#Mod-模组">.</a>Mod(模组)</h1>
-<h2 id="Mod-API"><a class="header-anchor" href="#Mod-API">.</a>Mod API</h2>
+        <h1 id="Mod-模组">Mod(模组)<a class="header-anchor" href="#Mod-模组">·</a></h1>
+<h2 id="Mod-API">Mod API<a class="header-anchor" href="#Mod-API">·</a></h2>
 <p>我的世界的API均为爱好者产品，Mojang不对任何API提供任何技术支持。<br />
 Mojang并未针对Java版开发Mod API，故不存在“官方API”。</p>
 <span id="more"></span>
-<h3 id="什么是API"><a class="header-anchor" href="#什么是API">.</a>什么是API</h3>
+<h3 id="什么是API">什么是API<a class="header-anchor" href="#什么是API">·</a></h3>
 <p>API是英文Application Programming Interface的缩写，英文即“应用程序编程接口”，作为程序之间的桥梁，起衔接与协调作用。本文内所述的Mod API，如Modloader、Forge等<code>本身其实也是mod</code>，这几个Mod可以与其它功能性Mod配合，使大家与Minecraft协同工作且避免冲突。</p>
 <p>举个例子吧：A Mod 改了游戏核心程序里的某个图像文件，B Mod也改了，他们俩都改了，那么覆盖后其中一个Mod会出问题——因此游戏会因为部分Mod找不到文件而黑屏或是崩溃。API的引入解决了这一切。具体工作原理这里不做具体介绍，总之API可以让众多MOD协同工作。</p>
 <p>API的还有一个最大作用是作为Mod开发者与Minecraft之间的桥梁。如果我要添加一个新的合成配方，如果没有API的协助，我可能就需要苦苦研究Minecraft的源代码，找到哪部分是关于合成的，还要找到恰当的方法把合成配方弄进去，排成什么样子应该怎么写代码全部要搞得一清二楚，等Mod写出来，人已经累死了。有了API就没这么麻烦了：API可以给你提供一个方便的增添合成配方的途径——就像“翻译官”一样，用一个简单的语句就可以定义一个合成配方。至于合成配方怎么让Minecraft看懂，那就是API的分内工作了。</p>
 <p>现在有不少流行的API：Minecraft Forge、Player API等等等等，各有特色。MOD制作者也选择了不同的API。<u>所以你在自己动手安装Mod时必须注意你想要装的Mod的安装说明，预先下载安装好“对应的”Mod API</u>。</p>
 <p>Mojang，即Minecraft开发商，没有为Java版开发Mod API的计划。</p>
-<h3 id="各API的原发布地址链接"><a class="header-anchor" href="#各API的原发布地址链接">.</a>各API的原发布地址链接</h3>
+<h3 id="各API的原发布地址链接">各API的原发布地址链接<a class="header-anchor" href="#各API的原发布地址链接">·</a></h3>
 <p>Forge<br />
 <a target="_blank" rel="noopener" href="http://www.minecraftforge.net/forum/">http://www.minecraftforge.net/forum/</a></p>
 <p>Player API(创始人:Divisor)<br />
@@ -353,10 +353,10 @@ Mojang并未针对Java版开发Mod API，故不存在“官方API”。</p>
 <a target="_blank" rel="noopener" href="http://www.minecraftforum.net/topic/1261354-/">http://www.minecraftforum.net/topic/1261354-/</a></p>
 <p>Fabric（创始人asiekierka）<br />
 <a target="_blank" rel="noopener" href="https://fabricmc.net/">https://fabricmc.net/</a></p>
-<h3 id="为什么有些版本没有API，也没有什么Mod？"><a class="header-anchor" href="#为什么有些版本没有API，也没有什么Mod？">.</a>为什么有些版本没有API，也没有什么Mod？</h3>
+<h3 id="为什么有些版本没有API，也没有什么Mod？">为什么有些版本没有API，也没有什么Mod？<a class="header-anchor" href="#为什么有些版本没有API，也没有什么Mod？">·</a></h3>
 <p>哪个版本有没有Mod API取决于该版本有没有对应的Minecraft Coder Pack。Minecraft Coder Pack为非官方的Minecraft反编译/反混淆代码工具包——尽管实质上Minecraft Coder Pack（下文简称MCP）违反了著作权法，但因为Mod的制作是基于对于源代码的解析的，在官方API难产的前提下，Mojang对MCP的存在是默许的——没有这群反编译的人，哪有接下来这么丰富的Mod。因此，以Minecraft 1.8.X为例，2015年一直到年末之前，MCP只有针对1.8的版本，而1.8.1-1.8.8都没有。所以尽管当时的最新正式版为1.8.8，但几乎所有Mod还停留在1.8。</p>
-<h3 id="API安装"><a class="header-anchor" href="#API安装">.</a>API安装</h3>
-<h4 id="说明"><a class="header-anchor" href="#说明">.</a>说明</h4>
+<h3 id="API安装">API安装<a class="header-anchor" href="#API安装">·</a></h3>
+<h4 id="说明">说明<a class="header-anchor" href="#说明">·</a></h4>
 <ul>
 <li>对于<strong>较早期版本的Minecraft</strong>（一般为Minecraft Java版 1.6之前版本），如果要安装API，如未特别注明，请使用下文“Mod安装方法”一节的方法一。</li>
 <li>对于<strong>较新版本的Minecraft</strong>（一般为Minecraft Java版 1.6之后版本），流行API已经基本上只剩下了三大家族：Forge、Player API兄弟，以及LiteLoader。</li>
@@ -365,7 +365,7 @@ Mojang并未针对Java版开发Mod API，故不存在“官方API”。</p>
 <li><strong>LiteLoader</strong>较为特立独行，可以不依赖Forge。请使用其安装器安装，但注意如果你想让Forge和LiteLoader同时生效，就必须先安装Forge之后在LiteLoader安装器界面的Extended from后的下拉菜单中选择Forge安装器建立的版本，一般格式为  版本号-forge-XXXXX</li>
 <li><strong>Player API</strong>以及<strong>Render Player API</strong>基本已经成为Forge的附庸。请使用下文《Mod图文安装教程》的“方法二（mods文件夹法）”</li>
 </ul>
-<h4 id="forge的安装"><a class="header-anchor" href="#forge的安装">.</a>forge的安装</h4>
+<h4 id="forge的安装">forge的安装<a class="header-anchor" href="#forge的安装">·</a></h4>
 <p>使用Forge自动安装器安装客户端Forge之前，必须满足下列两个条件之一，否则会提示no launcher profile错误：</p>
 <ol>
 <li>正版启动器以及使用非官方启动器进行正版登入的用户：运行过至少一次正版启动器（无需登录）。</li>
@@ -388,13 +388,13 @@ Mojang并未针对Java版开发Mod API，故不存在“官方API”。</p>
 <p>安装成功后，.minecraft/versions文件夹下会出现名为“Forge&lt;版本号&gt;”的文件夹，如果你使用正版启动器的话还会自动配置独立的，名为Forge的Profile；非官方启动器用户请自己配置启动器指向该文件夹（具体方法请询问启动器作者）。无法读取json的非官方启动器请您果断放弃。</p>
 </li>
 </ul>
-<h4 id="LiteLoader的安装"><a class="header-anchor" href="#LiteLoader的安装">.</a>LiteLoader的安装</h4>
+<h4 id="LiteLoader的安装">LiteLoader的安装<a class="header-anchor" href="#LiteLoader的安装">·</a></h4>
 <p>注意：使用LiteLoader可以不依赖Forge，但目前绝大多数mod都需要forge，一般都是先考虑forge再考虑LiteLoader。</p>
 <p>请使用其安装器安装，但注意如果你想让Forge和LiteLoader同时生效，就必须<code>先安装Forge之后</code>在LiteLoader安装器界面的Extended from后的下拉菜单中选择Forge安装器建立的版本，一般格式为  版本号-forge-XXXXX</p>
-<h4 id="Player-API与Render-Player-API的安装"><a class="header-anchor" href="#Player-API与Render-Player-API的安装">.</a>Player API与Render Player API的安装</h4>
+<h4 id="Player-API与Render-Player-API的安装">Player API与Render Player API的安装<a class="header-anchor" href="#Player-API与Render-Player-API的安装">·</a></h4>
 <p>（仅适用于Minecraft 1.6之后）：<br />
 将zip文件里的jar文件解压出来（别解压jar本身，仅仅是将jar从zip文件里面弄出来），然后参考下文 Mod的安装 的“方法二（mods文件夹法）”。<code>Player API依赖Forge，Forge未安装时Player API无法生效！</code></p>
-<h2 id="Mod的安装"><a class="header-anchor" href="#Mod的安装">.</a>Mod的安装</h2>
+<h2 id="Mod的安装">Mod的安装<a class="header-anchor" href="#Mod的安装">·</a></h2>
 <p>(适用于Windows):这里只是做个通用的概略说明。一些Mod的安装方法依Mod不同而异，请时刻注意Mod原发布的安装说明！</p>
 <ol>
 <li>
@@ -437,7 +437,7 @@ Modloader在你把Minecraft放在默认目录的前提下（即%appdata%下）�
 </ol>
 </li>
 </ol>
-<h3 id="Mod安装后"><a class="header-anchor" href="#Mod安装后">.</a>Mod安装后</h3>
+<h3 id="Mod安装后">Mod安装后<a class="header-anchor" href="#Mod安装后">·</a></h3>
 <p>根据我的经验，不是说你想玩什么mod就可以随便往mods文件夹里乱加mod，每个mod之间或多或少都是有一定冲突的，而上面讲的API可以将其之间的冲突最大化的减小，而一些不可避免的冲突有时就会造成游戏崩溃。<br />
 所以，在添加一个新mod的时候，最好先把游戏目录备份一下，然后再添加mod，并登入游戏查看是否mod之间会“打架”。<br />
 同理，配置一个客户端的时候，也是这样的道理。</p>
@@ -554,7 +554,7 @@ Modloader在你把Minecraft放在默认目录的前提下（即%appdata%下）�
 
 <div class="copyright">
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
@@ -566,14 +566,14 @@ Modloader在你把Minecraft放在默认目录的前提下（即%appdata%下）�
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">234k</span>
+    <span title="站点总字数">305k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10:49</span>
+    <span title="站点阅读时长">14:08</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

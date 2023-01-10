@@ -172,18 +172,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-count">88</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">148</span>
+        <span class="site-state-item-count">149</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -294,11 +294,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url" rel="index"><span itemprop="name">问题解决</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+          <a href="/categories/IT/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url" rel="index"><span itemprop="name">问题解决</span></a>
         </span>
     </span>
 
@@ -352,7 +352,7 @@
 <span id="more"></span>
 <p>但是！第一个和第三个我都没问题，问题就出在第二个注册表上，而且还特别隐秘😂，我还是再一次无意的尝试中才解决了问题，原来是注册表中一个值不对劲。</p>
 <p>好了，我的经历的吐槽到此结束，接下来进入正题。</p>
-<h2 id="win10设置"><a class="header-anchor" href="#win10设置">.</a>win10设置</h2>
+<h2 id="win10设置">win10设置<a class="header-anchor" href="#win10设置">·</a></h2>
 <ol>
 <li>按win+i进入设置，然后先去  <u>隐私 - 常规 - 更改隐私选项</u>，如图打开<code>允许Windows跟踪应用启动，以改进开始和搜索结果</code><br />
 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/Windows/%E8%AE%BE%E7%BD%AE-%E9%9A%90%E7%A7%81.jpg?x-oss-process=style/yunying61" alt="" /></li>
@@ -378,7 +378,7 @@
 </li>
 </ol>
 </blockquote>
-<h2 id="本地组策略"><a class="header-anchor" href="#本地组策略">.</a>本地组策略</h2>
+<h2 id="本地组策略">本地组策略<a class="header-anchor" href="#本地组策略">·</a></h2>
 <p>鉴于这个方法，我也不确定有没有用，所以我给个路子，大家自行看着配置。</p>
 <blockquote>
 <p>win+R打开运行，输入 <code>gpedit.msc</code> 并打开，在 本地组策略编辑器 左边窗口找到，<u>用户配置 - 管理模板 - &quot;开始&quot;菜单和任务栏</u> ，在 <code>&quot;开始&quot;菜单和任务栏 </code>下自己看看那个可能与运行的历史记录有关，我估计有这几个：</p>
@@ -392,7 +392,7 @@
 <li>从“开始”菜单中删除&quot;运行”菜单</li>
 </ol>
 </blockquote>
-<h2 id="Windows注册表"><a class="header-anchor" href="#Windows注册表">.</a>Windows注册表</h2>
+<h2 id="Windows注册表">Windows注册表<a class="header-anchor" href="#Windows注册表">·</a></h2>
 <p>重头戏来了！我就栽在这了。</p>
 <p>首先win+R打开运行，输入 <code>regedit</code> 并打开，导航到以下关键路径 ：</p>
 <blockquote>
@@ -403,7 +403,7 @@
 <p>重点重点，来啦！！！</p>
 <p>将<code>MRUList</code>的值（数值数据）设为***<code>ba</code><em><strong>，对就是</strong><code>ba</code></em>*。</p>
 </blockquote>
-<h2 id="写在最后"><a class="header-anchor" href="#写在最后">.</a>写在最后</h2>
+<h2 id="写在最后">写在最后<a class="header-anchor" href="#写在最后">·</a></h2>
 <p>我一开始的值是a，然后无意中看到了，就想着加上去了，然后就有用了​，😭，我从开始遇到这个问题到解决问题，过去了两三个月。。。哎，<s>总算解决</s>了（实际上并没有解决，只能短暂地解决，估计我这台电脑有更深层次的原因）。</p>
 <p>最后希望能帮到大家😊</p>
 
@@ -519,7 +519,7 @@
 
 <div class="copyright">
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
@@ -531,14 +531,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">234k</span>
+    <span title="站点总字数">305k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10:49</span>
+    <span title="站点阅读时长">14:08</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
