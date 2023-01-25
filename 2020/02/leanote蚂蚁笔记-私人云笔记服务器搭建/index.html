@@ -19,17 +19,27 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="leanote蚂蚁笔记· 目前在知识管理&#x2F;笔记类软件领域有强大的印象笔记 (Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。 我一开始用的也是讯飞语记，刚开始还不懂，只是被它的语音识别和云同步所吸引。后来懂的越来越多，愈发觉得自己的一些笔记还是不要放别人的数据库里。碰巧">
+    <meta name="description" content="leanote蚂蚁笔记 目前在知识管理&#x2F;笔记类软件领域有强大的印象笔记 (Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。 我一开始用的也是讯飞语记，刚开始还不懂，只是被它的语音识别和云同步所吸引。后来懂的越来越多，愈发觉得自己的一些笔记还是不要放别人的数据库里。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="leanote蚂蚁笔记-私人云笔记服务器搭建">
 <meta property="og:url" content="https://www.yunying61.cn/2020/02/leanote%E8%9A%82%E8%9A%81%E7%AC%94%E8%AE%B0-%E7%A7%81%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="leanote蚂蚁笔记· 目前在知识管理&#x2F;笔记类软件领域有强大的印象笔记 (Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。 我一开始用的也是讯飞语记，刚开始还不懂，只是被它的语音识别和云同步所吸引。后来懂的越来越多，愈发觉得自己的一些笔记还是不要放别人的数据库里。碰巧">
+<meta property="og:description" content="leanote蚂蚁笔记 目前在知识管理&#x2F;笔记类软件领域有强大的印象笔记 (Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。 我一开始用的也是讯飞语记，刚开始还不懂，只是被它的语音识别和云同步所吸引。后来懂的越来越多，愈发觉得自己的一些笔记还是不要放别人的数据库里。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-22T13:53:24.000Z">
 <meta property="article:modified_time" content="2022-04-26T09:17:56.966Z">
@@ -153,14 +163,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#leanote%E8%9A%82%E8%9A%81%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">leanote蚂蚁笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leanote"><span class="nav-number">1.2.</span> <span class="nav-text">leanote</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%87%86%E5%A4%87"><span class="nav-number">1.3.</span> <span class="nav-text">下载准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.4.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E7%89%88%E5%AE%89%E8%A3%85"><span class="nav-number">1.5.</span> <span class="nav-text">Windows版安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95mongodb%E5%AE%89%E8%A3%85"><span class="nav-number">1.5.1.</span> <span class="nav-text">测试mongodb安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%88%9D%E5%A7%8B%E6%95%B0%E6%8D%AE"><span class="nav-number">1.5.2.</span> <span class="nav-text">导入初始数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0leanote%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%A8%E6%88%B7"><span class="nav-number">1.5.3.</span> <span class="nav-text">添加leanote数据库用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cleanote"><span class="nav-number">1.5.4.</span> <span class="nav-text">运行leanote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="nav-number">1.5.5.</span> <span class="nav-text">绑定域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E7%89%88%E5%AE%89%E8%A3%85"><span class="nav-number">1.6.</span> <span class="nav-text">Linux版安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.6.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8BLeanote%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="nav-number">1.6.2.</span> <span class="nav-text">解压Leanote压缩包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mongodb-%E5%AE%89%E8%A3%85"><span class="nav-number">1.6.3.</span> <span class="nav-text">Mongodb 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5Leanote%E5%88%9D%E5%A7%8B%E6%95%B0%E6%8D%AE"><span class="nav-number">1.6.4.</span> <span class="nav-text">导入Leanote初始数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0leanote%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%A8%E6%88%B7-2"><span class="nav-number">1.6.5.</span> <span class="nav-text">添加leanote数据库用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cleanote-2"><span class="nav-number">1.6.6.</span> <span class="nav-text">运行leanote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D-2"><span class="nav-number">1.6.7.</span> <span class="nav-text">绑定域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leanote%E5%A4%87%E4%BB%BD"><span class="nav-number">1.7.</span> <span class="nav-text">leanote备份</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#leanote%E8%9A%82%E8%9A%81%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">leanote蚂蚁笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leanote"><span class="nav-number">1.2.</span> <span class="nav-text">leanote</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%87%86%E5%A4%87"><span class="nav-number">1.3.</span> <span class="nav-text">下载准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.4.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#windows%E7%89%88%E5%AE%89%E8%A3%85"><span class="nav-number">1.5.</span> <span class="nav-text">Windows版安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95mongodb%E5%AE%89%E8%A3%85"><span class="nav-number">1.5.1.</span> <span class="nav-text">测试mongodb安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%88%9D%E5%A7%8B%E6%95%B0%E6%8D%AE"><span class="nav-number">1.5.2.</span> <span class="nav-text">导入初始数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0leanote%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%A8%E6%88%B7"><span class="nav-number">1.5.3.</span> <span class="nav-text">添加leanote数据库用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cleanote"><span class="nav-number">1.5.4.</span> <span class="nav-text">运行leanote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="nav-number">1.5.5.</span> <span class="nav-text">绑定域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux%E7%89%88%E5%AE%89%E8%A3%85"><span class="nav-number">1.6.</span> <span class="nav-text">Linux版安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.6.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8Bleanote%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="nav-number">1.6.2.</span> <span class="nav-text">解压Leanote压缩包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mongodb-%E5%AE%89%E8%A3%85"><span class="nav-number">1.6.3.</span> <span class="nav-text">Mongodb 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5leanote%E5%88%9D%E5%A7%8B%E6%95%B0%E6%8D%AE"><span class="nav-number">1.6.4.</span> <span class="nav-text">导入Leanote初始数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0leanote%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%A8%E6%88%B7-1"><span class="nav-number">1.6.5.</span> <span class="nav-text">添加leanote数据库用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cleanote-1"><span class="nav-number">1.6.6.</span> <span class="nav-text">运行leanote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D-1"><span class="nav-number">1.6.7.</span> <span class="nav-text">绑定域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leanote%E5%A4%87%E4%BB%BD"><span class="nav-number">1.7.</span> <span class="nav-text">leanote备份</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="yunying61"
-      src="/images/yunying61.png">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
   <p class="site-author-name" itemprop="name">yunying61</p>
   <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
 </div>
@@ -179,7 +189,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">149</span>
+        <span class="site-state-item-count">150</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -286,15 +296,16 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
         </span>
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/02/leanote%E8%9A%82%E8%9A%81%E7%AC%94%E8%AE%B0-%E7%A7%81%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" class="post-meta-item leancloud_visitors" data-flag-title="leanote蚂蚁笔记-私人云笔记服务器搭建" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -340,22 +351,30 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="leanote蚂蚁笔记">leanote蚂蚁笔记<a class="header-anchor" href="#leanote蚂蚁笔记">·</a></h1>
-<p>目前在知识管理/笔记类软件领域有强大的印象笔记 (Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。<br />
+        <h1 id="leanote蚂蚁笔记">leanote蚂蚁笔记</h1>
+<p>目前在知识管理/笔记类软件领域有强大的印象笔记
+(Evernote)、微软（OneNote）、国产的（为知笔记）、（有道云笔记）以及（讯飞语记）等都是非常优秀的产品，但总有一部分人会觉得“把自己的笔记放在别人兜里，心里不踏实”。
 我一开始用的也是讯飞语记，刚开始还不懂，只是被它的语音识别和云同步所吸引。后来懂的越来越多，愈发觉得自己的一些笔记还是不要放别人的数据库里。碰巧，在阿里云的一篇学习文章里，我发现了leanote，于是乎，我也就进入了私人云笔记时代！</p>
 <span id="more"></span>
-<p>个人对leanote的理解：<br />
-简约、免费、开源、支持 Markdown 语法，支持程序代码高亮、笔记历史记录、支持笔记分享协作、将笔记发布成博客、云同步、多终端兼容(Windows、Mac、iOS、Linux、Android)，最关键的：搭建私人云笔记。</p>
-<h2 id="介绍">介绍<a class="header-anchor" href="#介绍">·</a></h2>
+<p>个人对leanote的理解： 简约、免费、开源、支持 Markdown
+语法，支持程序代码高亮、笔记历史记录、支持笔记分享协作、将笔记发布成博客、云同步、多终端兼容(Windows、Mac、iOS、Linux、Android)，最关键的：搭建私人云笔记。</p>
+<h2 id="介绍">介绍</h2>
 <p>Leanote, 不只是笔记!</p>
-<p>Leanote 蚂蚁笔记是一款国产的在线网页版云笔记软件，集知识管理、笔记、分享、博客功能于一身，界面简约但功能不简单！</p>
-<p>该项目采用 Golang+MongoDB 开发，现已完全开源并能免费使用。普通用户可以直接使用 Leanote 提供的公共服务，也可以自行搭建属于自己或公司局域网内的私有云笔记平台。</p>
+<p>Leanote
+蚂蚁笔记是一款国产的在线网页版云笔记软件，集知识管理、笔记、分享、博客功能于一身，界面简约但功能不简单！</p>
+<p>该项目采用 Golang+MongoDB
+开发，现已完全开源并能免费使用。普通用户可以直接使用 Leanote
+提供的公共服务，也可以自行搭建属于自己或公司局域网内的私有云笔记平台。</p>
 <p><strong>特性</strong></p>
 <ul>
-<li>高效笔记：Leanote 有易操作的界面, 包含富文本编辑器和Markdown编辑器，让您的笔记记录更轻松和高效。对高阶用户，还提供Vim和Emacs编辑模式，助推你的写作速度更上层楼。</li>
-<li>知识管理: Leanote 灵活而强大的“笔记本-笔记-标签”系统，让它成为你个人知识管理的利器。</li>
-<li>分享: 你可以通过Leanote同好友分享知识、想法和经历, 邀请好友加入你的笔记簿，通过云端交流信息。</li>
-<li>协作: Leanote协助你与同事之间相互协作，激荡新思路，随时随地头脑风暴。</li>
+<li>高效笔记：Leanote 有易操作的界面,
+包含富文本编辑器和Markdown编辑器，让您的笔记记录更轻松和高效。对高阶用户，还提供Vim和Emacs编辑模式，助推你的写作速度更上层楼。</li>
+<li>知识管理: Leanote
+灵活而强大的“笔记本-笔记-标签”系统，让它成为你个人知识管理的利器。</li>
+<li>分享: 你可以通过Leanote同好友分享知识、想法和经历,
+邀请好友加入你的笔记簿，通过云端交流信息。</li>
+<li>协作:
+Leanote协助你与同事之间相互协作，激荡新思路，随时随地头脑风暴。</li>
 <li>博客: Leanote也可以作为你的个人博客, 把你的知识传播的更远!</li>
 </ul>
 <p><strong>其它特性</strong></p>
@@ -367,21 +386,26 @@
 <li>支持批量操作</li>
 <li>博客自定义主题, 实现高度定制化</li>
 </ul>
-<h2 id="leanote">leanote<a class="header-anchor" href="#leanote">·</a></h2>
-<h2 id="下载准备">下载准备<a class="header-anchor" href="#下载准备">·</a></h2>
+<h2 id="leanote">leanote</h2>
+<h2 id="下载准备">下载准备</h2>
 <p>搭建leanote需要，<code>leanote</code>本体和<code>MongoDB</code>数据库支持。</p>
-<p>首先，是<a target="_blank" rel="noopener" href="https://leanote.com/">leanote官方</a>的<a target="_blank" rel="noopener" href="http://leanote.org/#download">下载地址</a>，<a target="_blank" rel="noopener" href="https://www.mongodb.com/">MongoDB官方</a>的<a target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">下载地址</a>，用这个可以马上使用到最新的产品。</p>
+<p>首先，是<a target="_blank" rel="noopener" href="https://leanote.com/">leanote官方</a>的<a
+target="_blank" rel="noopener" href="http://leanote.org/#download">下载地址</a>，<a
+target="_blank" rel="noopener" href="https://www.mongodb.com/">MongoDB官方</a>的<a
+target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">下载地址</a>，用这个可以马上使用到最新的产品。</p>
 <p>然后，如果大家不想那么麻烦的去官方那里下载，或者官方链接已经丢失，可以私聊我获取文件。</p>
-<h2 id="写在前面">写在前面<a class="header-anchor" href="#写在前面">·</a></h2>
+<h2 id="写在前面">写在前面</h2>
 <p>这里，我将介绍Windows版和Linux版的搭建过程。</p>
 <a class="btn" href="#Windows版安装">Windows版</a>
 <a class="btn" href="#Linux版安装">Linux版</a>
-<h2 id="Windows版安装">Windows版安装<a class="header-anchor" href="#Windows版安装">·</a></h2>
-<p>1、将下载的文件里面的leanote-windows-amd64-v2.6.1.bin.tar.gz文件解压到C盘（本文默认解压到了 <strong>C:\leanote</strong>）。<br />
-2、运行mongodb-windows-x86_64-4.4.2-signed.msi进行安装（本文默认解压到了 <strong>C:\MongoDB\Server\4.2</strong>）。<br />
+<h2 id="windows版安装">Windows版安装</h2>
+<p>1、将下载的文件里面的leanote-windows-amd64-v2.6.1.bin.tar.gz文件解压到C盘（本文默认解压到了
+**C:*）。
+2、运行mongodb-windows-x86_64-4.4.2-signed.msi进行安装（本文默认解压到了
+<strong>C:\4.2</strong>）。
 接下来的MongoDB的配置<strong>极其麻烦</strong>，这里我放到另一篇文章里，<a href="/2020/02/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="MongoDB数据库 安装与配置">MongoDB数据库 安装与配置</a></p>
 <hr />
-<h3 id="测试mongodb安装">测试mongodb安装<a class="header-anchor" href="#测试mongodb安装">·</a></h3>
+<h3 id="测试mongodb安装">测试mongodb安装</h3>
 <p>打开cmd，输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd C:\MongoDB\Server\4.2\bin</span><br><span class="line">mongo</span><br></pre></td></tr></table></figure>
 <p>行首出现&gt; 表示进入mongo 的交互程序。此时输入：</p>
@@ -392,16 +416,21 @@
 <p>即安装成功</p>
 </blockquote>
 <p>这个窗口可以先不要关</p>
-<h3 id="导入初始数据">导入初始数据<a class="header-anchor" href="#导入初始数据">·</a></h3>
+<h3 id="导入初始数据">导入初始数据</h3>
 <p>打开新cmd， 运行以下命令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd C:\MongoDB\Server\4.2\bin</span><br><span class="line">mongorestore -h localhost -d leanote --dir C:\leanote\mongodb_backup\leanote_install_data</span><br></pre></td></tr></table></figure>
-<p>出现  “499 document(s) restored successfully. 0 document(s) failed to restore.”  表示结束，这样就完成了数据的导入</p>
+<p>出现 “499 document(s) restored successfully. 0 document(s) failed to
+restore.” 表示结束，这样就完成了数据的导入</p>
 <p>在刚才没关闭的窗口里，你再次使用show dbs命令时就会显示</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br><span class="line">admin    0.000GB</span><br><span class="line">config   0.000GB</span><br><span class="line">leanote  0.002GB</span><br><span class="line">local    0.000GB</span><br></pre></td></tr></table></figure>
-<div class="note info"><p>有时候leanote的数据库名字不是<code>leanote</code>，而是 <code>ir</code>那后面的配置文件里的数据库名字也要跟着改变</p>
+<div class="note info"><p>有时候leanote的数据库名字不是<code>leanote</code>，而是
+<code>ir</code>那后面的配置文件里的数据库名字也要跟着改变</p>
 </div>
-<h3 id="添加leanote数据库用户">添加leanote数据库用户<a class="header-anchor" href="#添加leanote数据库用户">·</a></h3>
-<p>像MySQL一样MongoDB也有root用户, mongodb初始是没有用户的, 这样很不安全, 所以要为leanote数据库新建一个用户来连接leanote数据库(注意, 并不是为leanote的表users里新建用户, 而是新建一个连接leanote数据库的用户, 类似数据库 表管理员).</p>
+<h3 id="添加leanote数据库用户">添加leanote数据库用户</h3>
+<p>像MySQL一样MongoDB也有root用户, mongodb初始是没有用户的,
+这样很不安全, 所以要为leanote数据库新建一个用户来连接leanote数据库(注意,
+并不是为leanote的表users里新建用户, 而是新建一个连接leanote数据库的用户,
+类似数据库 表管理员).</p>
 <p>打开cmd，进入bin目录，然后输入mongo进入数据库，再输入下面的命令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:\MongoDB\Server\4.2\bin</span><br><span class="line">mongo            // 进入mongodb的交互程序</span><br><span class="line">use leanote;        // 切换到leanote数据库下，如果前面数据库名字是ir，这里也是ir</span><br></pre></td></tr></table></figure>
 <p>添加一个用户root, 密码是abc123</p>
@@ -409,60 +438,74 @@
 <p>测试下是否正确</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.auth(&quot;root&quot;, &quot;abc123&quot;);</span><br></pre></td></tr></table></figure>
 <p>返回1表示正确</p>
-<p>用户添加好后重启下<strong>mongodb服务</strong>。 （如果不会就去网上搜：<code>重启Windows服务</code>）</p>
+<p>用户添加好后重启下<strong>mongodb服务</strong>。
+（如果不会就去网上搜：<code>重启Windows服务</code>）</p>
 <hr />
-<p><strong>还要修改配置文件</strong>: 修改 <u>C:\leanote\conf\app.conf</u> 文件</p>
+<p><strong>还要修改配置文件</strong>: 修改 <u>C:.conf</u> 文件</p>
 <p>找到以下参数，并修改为你之前配置的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">db.host=127.0.0.1</span><br><span class="line">db.port=27017</span><br><span class="line">db.dbname=leanote       # required</span><br><span class="line">db.username=`root`       # if not exists, please leave blank</span><br><span class="line">db.password=`abc123`     # if not exists, please leave blank</span><br></pre></td></tr></table></figure>
-<div class="note info"><p>如果前面数据库名字是ir，这里的<code>db.dbname= </code>   也是  ir</p>
+<div class="note info"><p>如果前面数据库名字是ir，这里的<code>db.dbname=</code> 也是 ir</p>
 </div>
-<p>除此之外，请务必修改<code>app.secret</code>一项, 在若干个随机位置处，将字符修改成一个其他的值, 否则会有安全隐患！其它的配置可暂时保持不变，或根据需要进行修改。</p>
-<h3 id="运行leanote">运行leanote<a class="header-anchor" href="#运行leanote">·</a></h3>
-<p>到了这一步，基本上可以宣告成功了<br />
-以 <strong>管理员权限</strong> 打开cmd，输入：</p>
+<p>除此之外，请务必修改<code>app.secret</code>一项,
+在若干个随机位置处，将字符修改成一个其他的值,
+否则会有安全隐患！其它的配置可暂时保持不变，或根据需要进行修改。</p>
+<h3 id="运行leanote">运行leanote</h3>
+<p>到了这一步，基本上可以宣告成功了 以 <strong>管理员权限</strong>
+打开cmd，输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd C:\leanote\bin</span><br><span class="line">run.bat</span><br></pre></td></tr></table></figure>
 <p>最后出现以下信息证明运行成功:</p>
 <blockquote>
-<p>Listening on :9000…</p>
+<p>Listening on :9000...</p>
 </blockquote>
-<p>恭喜你, 打开浏览器输入: <a target="_blank" rel="noopener" href="http://localhost:9000">http://localhost:9000</a> 体验leanote吧!</p>
+<p>恭喜你, 打开浏览器输入: <a target="_blank" rel="noopener" href="http://localhost:9000"
+class="uri">http://localhost:9000</a> 体验leanote吧!</p>
 <p>选择登录，默认管理员账号为admin，密码为abc123。登陆成功后选择右上角的后台管理，即可登录后台管理。</p>
 <details class="note primary"><summary><p>提示</p>
 </summary>
-<p>做到这里，leanote已经正常运行，但在电脑重启后，还需要再依次运行MongoDB server、leanote才能够正常使用，所以把 C:\leanote\bin\ 路径下的run.bat文件，创建一个快捷方式放到系统的启动里面即可，也可以放在桌面开机的时候手动启动。</p>
+<p>做到这里，leanote已经正常运行，但在电脑重启后，还需要再依次运行MongoDB
+server、leanote才能够正常使用，所以把
+C: 路径下的run.bat文件，创建一个快捷方式放到系统的启动里面即可，也可以放在桌面开机的时候手动启动。</p>
 <p>如果你建在服务器上，那请自行将MongoDB服务设为自启，把Leanote启动文件配置为开机自动运行。</p>
 
 </details>
-<h3 id="绑定域名">绑定域名<a class="header-anchor" href="#绑定域名">·</a></h3>
-<p>修改 <u>C:\leanote\conf\app.conf</u> 文件里的</p>
+<h3 id="绑定域名">绑定域名</h3>
+<p>修改 <u>C:.conf</u> 文件里的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http.port=80</span><br><span class="line">site.url=http://localhost:9000</span><br></pre></td></tr></table></figure>
-<p>输入<a target="_blank" rel="noopener" href="http://localhost:9000">http://localhost:9000</a>，假设ip地址是111.111.111.111,把localhost换成你的IP地址111.111.111.111即可，如果有域名，也可以把localhost换成你的域名</p>
-<h2 id="Linux版安装">Linux版安装<a class="header-anchor" href="#Linux版安装">·</a></h2>
-<h3 id="下载">下载<a class="header-anchor" href="#下载">·</a></h3>
+<p>输入<a target="_blank" rel="noopener" href="http://localhost:9000"
+class="uri">http://localhost:9000</a>，假设ip地址是111.111.111.111,把localhost换成你的IP地址111.111.111.111即可，如果有域名，也可以把localhost换成你的域名</p>
+<h2 id="linux版安装">Linux版安装</h2>
+<h3 id="下载">下载</h3>
 <p>Leanote：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"></span><br><span class="line">wget https://sourceforge.net/projects/leanote-bin/files/2.6.1/leanote-linux-amd64-v2.6.1.bin.tar.gz/download</span><br></pre></td></tr></table></figure>
 <p>MongoDB：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"></span><br><span class="line">wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel80-5.0.6.tgz</span><br></pre></td></tr></table></figure>
-<h3 id="解压Leanote压缩包">解压Leanote压缩包<a class="header-anchor" href="#解压Leanote压缩包">·</a></h3>
-<p>假设已将文件下载到 <code>/home/</code> 目录下，打开<code>终端</code>，通过使用下面的命令</p>
+<h3 id="解压leanote压缩包">解压Leanote压缩包</h3>
+<p>假设已将文件下载到 <code>/home/</code>
+目录下，打开<code>终端</code>，通过使用下面的命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"></span><br><span class="line">tar -xzvf leanote-linux-amd64-v2.6.1.bin.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /home/software</span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /home/leanote /home/software/leanote</span><br></pre></td></tr></table></figure>
-<p>解压文件，从而在 <code>/home/software</code> 目录下生成 <code>leanote</code>目录</p>
-<h3 id="Mongodb-安装">Mongodb 安装<a class="header-anchor" href="#Mongodb-安装">·</a></h3>
+<p>解压文件，从而在 <code>/home/software</code> 目录下生成
+<code>leanote</code>目录</p>
+<h3 id="mongodb-安装">Mongodb 安装</h3>
 <a href="/2020/02/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="MongoDB数据库 安装与配置">MongoDB数据库 安装与配置</a>
-<h3 id="导入Leanote初始数据">导入Leanote初始数据<a class="header-anchor" href="#导入Leanote初始数据">·</a></h3>
+<h3 id="导入leanote初始数据">导入Leanote初始数据</h3>
 <p>下面为<strong>MongoDB</strong>导入<strong>leanote</strong>初始数据。</p>
 <p><strong>leanote</strong>初始数据存放在<code>/home/software/leanote/mongodb_backup/leanote_install_data</code>中。</p>
 <p><strong>重新打开</strong>一个终端， 输入以下命令导入数据。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongorestore -h localhost -d leanote --dir /home/software/leanote/mongodb_backup/leanote_install_data/</span><br></pre></td></tr></table></figure>
-<p>出现  “499 document(s) restored successfully. 0 document(s) failed to restore.”  表示结束，这样就完成了数据的导入</p>
+<p>出现 “499 document(s) restored successfully. 0 document(s) failed to
+restore.” 表示结束，这样就完成了数据的导入</p>
 <p>当你再次使用show dbs命令时就会显示</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br><span class="line"></span><br><span class="line">admin    0.000GB</span><br><span class="line">config   0.000GB</span><br><span class="line">leanote  0.001GB</span><br><span class="line">local    0.000GB</span><br></pre></td></tr></table></figure>
-<div class="note info"><p>有时候leanote的数据库名字不是<code>leanote</code>，而是 <code>ir</code>那后面的配置文件里的数据库名字也要跟着改变</p>
+<div class="note info"><p>有时候leanote的数据库名字不是<code>leanote</code>，而是
+<code>ir</code>那后面的配置文件里的数据库名字也要跟着改变</p>
 </div>
 <p>初始数据的<code>users</code>表中已有2个用户:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user1 username: admin, password: abc123 (管理员, 只有该用户才有权管理后台, 请及时修改密码)</span><br><span class="line">user2 username: demo@leanote.com, password: demo@leanote.com (仅供体验使用)</span><br></pre></td></tr></table></figure>
-<h3 id="添加leanote数据库用户-2">添加leanote数据库用户<a class="header-anchor" href="#添加leanote数据库用户-2">·</a></h3>
-<p>像MySQL一样MongoDB也有root用户, mongodb初始是没有用户的, 这样很不安全, 所以要为leanote数据库新建一个用户来连接leanote数据库(注意, 并不是为leanote的表users里新建用户, 而是新建一个连接leanote数据库的用户, 类似数据库 表管理员).</p>
+<h3 id="添加leanote数据库用户-1">添加leanote数据库用户</h3>
+<p>像MySQL一样MongoDB也有root用户, mongodb初始是没有用户的,
+这样很不安全, 所以要为leanote数据库新建一个用户来连接leanote数据库(注意,
+并不是为leanote的表users里新建用户, 而是新建一个连接leanote数据库的用户,
+类似数据库 表管理员).</p>
 <p>打开终端，进入bin目录，然后输入mongo进入数据库，再输入下面的命令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /home/software/mongodb-5.0.6/bin</span><br><span class="line">mongo            // 进入mongodb的交互程序</span><br><span class="line">use leanote;        // 切换到leanote数据库下，如果前面数据库名字是ir，这里也是ir</span><br></pre></td></tr></table></figure>
 <p>添加一个用户root, 密码是abc123</p>
@@ -471,35 +514,41 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.auth(&quot;root&quot;, &quot;abc123&quot;);</span><br></pre></td></tr></table></figure>
 <p>返回1表示正确</p>
 <hr />
-<p><strong>还要修改配置文件</strong>: 修改 /home/software/leanote/conf/<code>app.conf</code>文件</p>
+<p><strong>还要修改配置文件</strong>: 修改
+/home/software/leanote/conf/<code>app.conf</code>文件</p>
 <p>找到以下参数，并修改为你之前配置的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">db.host=127.0.0.1</span><br><span class="line">db.port=27017</span><br><span class="line">db.dbname=leanote       # required</span><br><span class="line">db.username=root       # if not exists, please leave blank</span><br><span class="line">db.password=abc123     # if not exists, please leave blank</span><br></pre></td></tr></table></figure>
-<div class="note info"><p>如果前面数据库名字是ir，这里的<code>db.dbname= </code>   也是  ir</p>
+<div class="note info"><p>如果前面数据库名字是ir，这里的<code>db.dbname=</code> 也是 ir</p>
 </div>
-<p>除此之外，请务必修改<code>app.secret</code>一项, 在若干个随机位置处，将字符修改成一个其他的值, 否则会有安全隐患！其它的配置可暂时保持不变，或根据需要进行修改。</p>
-<h3 id="运行leanote-2">运行leanote<a class="header-anchor" href="#运行leanote-2">·</a></h3>
+<p>除此之外，请务必修改<code>app.secret</code>一项,
+在若干个随机位置处，将字符修改成一个其他的值,
+否则会有安全隐患！其它的配置可暂时保持不变，或根据需要进行修改。</p>
+<h3 id="运行leanote-1">运行leanote</h3>
 <p>到了这一步，基本上可以宣告成功了。</p>
-<p>新开一个窗口, 运行：（<strong>注意:</strong> 在此之前请确保<code>mongodb</code>已在运行！）</p>
+<p>新开一个窗口, 运行：（<strong>注意:</strong>
+在此之前请确保<code>mongodb</code>已在运行！）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash /home/software/leanote/bin/run.sh</span><br></pre></td></tr></table></figure>
 <p>最后出现以下信息证明运行成功:</p>
 <blockquote>
-<p>Listening on :9000…</p>
+<p>Listening on :9000...</p>
 </blockquote>
-<p>恭喜你完成安装, 打开浏览器输入: <a target="_blank" rel="noopener" href="http://localhost:9000">http://localhost:9000</a> 体验leanote吧!<br />
+<p>恭喜你完成安装, 打开浏览器输入: <a target="_blank" rel="noopener" href="http://localhost:9000"
+class="uri">http://localhost:9000</a> 体验leanote吧!
 选择登录，默认管理员账号为admin，密码为abc123。登陆成功后选择右上角的后台管理，即可登录后台管理。</p>
 <details class="note primary"><summary><p>提示</p>
 </summary>
-<p>做到这里，leanote已经正常运行，但在电脑重启后，还需要再依次运行MongoDB、leanote才能够启动，所以可以把 Mongodb 创建一个服务项，并设为开机自启；把 leanote 设置为启动项。</p>
+<p>做到这里，leanote已经正常运行，但在电脑重启后，还需要再依次运行MongoDB、leanote才能够启动，所以可以把
+Mongodb 创建一个服务项，并设为开机自启；把 leanote 设置为启动项。</p>
 
 </details>
-<h3 id="绑定域名-2">绑定域名<a class="header-anchor" href="#绑定域名-2">·</a></h3>
+<h3 id="绑定域名-1">绑定域名</h3>
 <p>修改 /home/software/leanote/conf/app.conf 文件里的</p>
 <blockquote>
-<p>http.port=80<br />
-site.url=http://localhost:9000</p>
+<p>http.port=80 site.url=http://localhost:9000</p>
 </blockquote>
-<p>输入<a target="_blank" rel="noopener" href="http://localhost:9000">http://localhost:9000</a>，假设ip地址是111.111.111.111,把localhost换成你的IP地址111.111.111.111即可，如果有域名，也可以把localhost换成你的域名</p>
-<h2 id="leanote备份">leanote备份<a class="header-anchor" href="#leanote备份">·</a></h2>
+<p>输入<a target="_blank" rel="noopener" href="http://localhost:9000"
+class="uri">http://localhost:9000</a>，假设ip地址是111.111.111.111,把localhost换成你的IP地址111.111.111.111即可，如果有域名，也可以把localhost换成你的域名</p>
+<h2 id="leanote备份">leanote备份</h2>
 <p>笔记的备份还是非常有必要的，我曾经发生过mongodb崩溃、Leanote崩溃、服务器崩溃等等问题，虽然基本上都救回来了，但如果有备份的话，那一切都会更简单一点。</p>
 <p>新建一个<code>leanote_backup.sh</code>脚本，输入以下内容：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获得当前的时间</span></span><br><span class="line">currentTime=$(<span class="built_in">date</span>  +%Y%m%d%H%M%S)</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /home/data/leanote_backup/new</span><br><span class="line"><span class="built_in">mkdir</span> -p /home/data/leanote_backup/old</span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /home/data/leanote_backup/new/leanote_* /home/data/leanote_backup/old</span><br><span class="line"></span><br><span class="line"><span class="comment"># mongodb备份命令</span></span><br><span class="line">mongodump -h 127.0.0.1:27017  -d leanote -o /home/data/leanote_backup</span><br><span class="line"></span><br><span class="line"><span class="comment"># 压缩为tar.gz文件</span></span><br><span class="line">tar -zcvf /home/data/leanote_backup/new/leanote_<span class="variable">$&#123;currentTime&#125;</span>.tar.gz /home/data/leanote_backup/leanote</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除30天前的备份文件</span></span><br><span class="line"><span class="comment"># 类型匹配查找 -type ,f 为普通文件，d 为目录，l 为链接</span></span><br><span class="line">find  /home/data/leanote_backup/old/   -mtime  +30  -<span class="built_in">type</span> f  -name <span class="string">&quot;*.tar.gz&quot;</span> -<span class="built_in">exec</span>  <span class="built_in">rm</span>  -rf  &#123;&#125; \;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除leanote备份文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf /home/data/leanote_backup/leanote</span><br></pre></td></tr></table></figure>
@@ -630,14 +679,14 @@ site.url=http://localhost:9000</p>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">305k</span>
+    <span title="站点总字数">310k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:08</span>
+    <span title="站点阅读时长">14:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -667,6 +716,7 @@ site.url=http://localhost:9000</p>
   <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/code-unfold.js"></script>
 
   <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>

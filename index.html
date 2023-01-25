@@ -19,6 +19,16 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
@@ -153,8 +163,8 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="yunying61"
-      src="/images/yunying61.png">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
   <p class="site-author-name" itemprop="name">yunying61</p>
   <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
 </div>
@@ -173,7 +183,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">149</span>
+        <span class="site-state-item-count">150</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -276,6 +286,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6-QFramework/" class="post-meta-item leancloud_visitors" data-flag-title="游戏开发框架-QFramework" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -321,10 +332,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href=":/f4bf0e07c6be499dbc7322aafbcb46a0">Unity学习 | 了解QFramework游戏开发框架</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.gamepixedu.com/goods/show/25?targetId=50&amp;preview=0">【专栏 /视频】QFramework v1.0 使用指南 - GamePix 独立游戏学院</a></p>
-<h1 id="QFramework-简介">QFramework 简介<a class="header-anchor" href="#QFramework-简介">·</a></h1>
-<p>QFramework 是一套渐进式、快速开发框架，适用于任何类型的游戏及应用项目。</p>
+          <p><a href=":/f4bf0e07c6be499dbc7322aafbcb46a0">Unity学习 |
+了解QFramework游戏开发框架</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://www.gamepixedu.com/goods/show/25?targetId=50&amp;preview=0">【专栏
+/视频】QFramework v1.0 使用指南 - GamePix 独立游戏学院</a></p>
+<h1 id="qframework-简介">QFramework 简介</h1>
+<p>QFramework
+是一套渐进式、快速开发框架，适用于任何类型的游戏及应用项目。</p>
 <p>QFramework 包含一套 开发架构 和 大量的工具集。</p>
 <p>QFramework 特性速览：</p>
 <ul>
@@ -337,8 +352,7 @@
 <li>符合 SOLID原则</li>
 <li>可以使用 DDD 的方式设计项目</li>
 <li>不到 1000 行代码</li>
-</ul>
-</li>
+</ul></li>
 </ul>
           <!--noindex-->
             <div class="post-button">
@@ -430,6 +444,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/Unity-%E9%97%AE%E9%A2%98%E7%BB%BC%E8%BF%B0/" class="post-meta-item leancloud_visitors" data-flag-title="Unity-问题综述" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -457,7 +472,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>776</span>
+      <span>764</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -475,9 +490,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="解决玩家碰撞物体时的抖动问题">解决玩家碰撞物体时的抖动问题<a class="header-anchor" href="#解决玩家碰撞物体时的抖动问题">·</a></h2>
-<p><a target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/shi-jie-jiao-hu-zu-zhi-yi-dong?uv=2020.3&amp;projectId=5facf921edbc2a2003a58d3a#6073de22edbc2a0021c5b6f5">为什么会抖动？</a><br />
-当玩家不断尝试往箱子里面移动时，物理系统会处理碰撞，阻止你的移入，然后将你移回。你要求代码执行的操作与物理系统执行的操作之间的这种冲突就会导致发生抖动。<br />
+          <h2 id="解决玩家碰撞物体时的抖动问题">解决玩家碰撞物体时的抖动问题</h2>
+<p><a
+target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/shi-jie-jiao-hu-zu-zhi-yi-dong?uv=2020.3&amp;projectId=5facf921edbc2a2003a58d3a#6073de22edbc2a0021c5b6f5">为什么会抖动？</a>
+当玩家不断尝试往箱子里面移动时，物理系统会处理碰撞，阻止你的移入，然后将你移回。你要求代码执行的操作与物理系统执行的操作之间的这种冲突就会导致发生抖动。
 要解决玩家的抖动问题，你需要移动刚体本身而不是游戏对象变换组件，并让物理系统将游戏对象位置同步到刚体位置。这样，物理系统就可以在进入箱子之前停止移动，而不必在玩家已经进入箱子之后再移出玩家。</p>
           <!--noindex-->
             <div class="post-button">
@@ -548,7 +564,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-01-10 17:11:26" itemprop="dateModified" datetime="2023-01-10T17:11:26+08:00">2023-01-10</time>
+      <time title="修改时间：2023-01-25 17:16:06" itemprop="dateModified" datetime="2023-01-25T17:16:06+08:00">2023-01-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -569,6 +585,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/Unity%E5%B8%B8%E7%94%A8-xxx-%E7%94%A8%E6%B3%95-%E7%89%B9%E6%80%A7/" class="post-meta-item leancloud_visitors" data-flag-title="Unity常用[xxx]用法 特性" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -614,10 +631,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="常用">常用<a class="header-anchor" href="#常用">·</a></h1>
+          <h1 id="常用">常用</h1>
 <p>组织Inspector中的属性显示</p>
 <p>涉及到的参数越来越多，需要来组织一下这些参数在Inspector上的显示。</p>
-<p>通过 “Header”、“Tooltip”、“Space”、“HideInInspector” 、“SerializeField”和属性来组织Inspector中的属性显示。</p>
+<p>通过 “Header”、“Tooltip”、“Space”、“HideInInspector”
+、“SerializeField”和属性来组织Inspector中的属性显示。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/01/Unity%E5%B8%B8%E7%94%A8-xxx-%E7%94%A8%E6%B3%95-%E7%89%B9%E6%80%A7/#more" rel="contents">
@@ -708,6 +726,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/Unity-%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-meta-item leancloud_visitors" data-flag-title="Unity-小技巧" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -735,7 +754,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>822</span>
+      <span>821</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -753,12 +772,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="复制和粘贴组件">复制和粘贴组件<a class="header-anchor" href="#复制和粘贴组件">·</a></h1>
-<p>巧用复制和粘贴组件来保留<strong>运行模式</strong>下本来即将要丢失的修改信息。</p>
-<h1 id="按单位快速对齐">按单位快速对齐<a class="header-anchor" href="#按单位快速对齐">·</a></h1>
-<p>将游戏对象按照一定的数量单位进行移动、缩放和旋转。</p>
-<p>在移动、旋转、缩放等模式下，按住 Ctrl 键，可按单位对齐。<br />
-在菜单 -&gt; 编辑 -&gt; <strong>网格与捕捉设置</strong>，可调整对齐的单位大小。</p>
+          <h1 id="复制和粘贴组件">复制和粘贴组件</h1>
+<p>巧用复制和粘贴组件来保留<strong>运行模式</strong>下本来即将要丢失的修改信息。
+# 按单位快速对齐 将游戏对象按照一定的数量单位进行移动、缩放和旋转。</p>
+<p>在移动、旋转、缩放等模式下，按住 Ctrl 键，可按单位对齐。 在菜单 -&gt;
+编辑 -&gt; <strong>网格与捕捉设置</strong>，可调整对齐的单位大小。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/01/Unity-%E5%B0%8F%E6%8A%80%E5%B7%A7/#more" rel="contents">
@@ -849,6 +867,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/Unity-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-meta-item leancloud_visitors" data-flag-title="Unity-设计模式" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -876,7 +895,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -894,10 +913,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="组合模式">组合模式<a class="header-anchor" href="#组合模式">·</a></h1>
+          <h1 id="组合模式">组合模式</h1>
 <p>组合模式是为了在项目提高代码复用性，降低增加对象成本的设计模式。</p>
 <p>简单来说，就是将每个功能单独分为一个脚本上使用，然后根据需要挂载到游戏对象上。</p>
-<p>在 Unity 中，脚本继承了 MonoBehaviour 类，就会被视为一个脚本组件，如：<code>public class GameManager : MonoBehaviour</code> ，然后根据需要，将脚本组件添加到游戏对象上。</p>
+<p>在 Unity 中，脚本继承了 MonoBehaviour
+类，就会被视为一个脚本组件，如：<code>public class GameManager : MonoBehaviour</code>
+，然后根据需要，将脚本组件添加到游戏对象上。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/01/Unity-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/#more" rel="contents">
@@ -988,6 +1009,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/Unity-%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD/" class="post-meta-item leancloud_visitors" data-flag-title="Unity-实现功能" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1022,7 +1044,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>16 分钟</span>
+      <span>15 分钟</span>
     </span>
 </div>
 
@@ -1033,11 +1055,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="游戏全局">游戏全局<a class="header-anchor" href="#游戏全局">·</a></h1>
-<h2 id="进入游戏">进入游戏<a class="header-anchor" href="#进入游戏">·</a></h2>
+          <h1 id="游戏全局">游戏全局</h1>
+<h2 id="进入游戏">进入游戏</h2>
 <p>进入游戏的第一个界面，应该放置多个按钮，以供玩家选择是否开始游戏、退出游戏。</p>
-<h2 id="GameManager-游戏管理器">GameManager - 游戏管理器<a class="header-anchor" href="#GameManager-游戏管理器">·</a></h2>
-<p>用来控制游戏的整体进程，以及界面文本、按钮的功能实现。<br />
+<h2 id="gamemanager---游戏管理器">GameManager - 游戏管理器</h2>
+<p>用来控制游戏的整体进程，以及界面文本、按钮的功能实现。
 也常用于记录各种需要在整个游戏过程中<strong>持久化</strong>的数据。</p>
           <!--noindex-->
             <div class="post-button">
@@ -1129,6 +1151,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/Unity-%E4%BC%98%E5%8C%96/" class="post-meta-item leancloud_visitors" data-flag-title="Unity-优化" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1174,9 +1197,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="性能分析器"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/Profiler.html">性能分析器</a><a class="header-anchor" href="#性能分析器">·</a></h1>
-<p>Unity 性能分析器 (Unity Profiler) 是一种可以用来获取应用程序性能信息的工具。可以将性能分析器连接到网络中的设备或连接到已连接到计算机的设备，从而测试应用程序在目标发布平台上的运行情况。还可以在 Editor 中运行性能分析器，从而在开发应用程序时概要了解资源分配情况。<br />
-性能分析器可以收集并显示有关应用程序各个方面（例如 CPU、内存、渲染器和音频）的性能数据。该工具可用于识别应用程序中可提高性能的方面，并在这些方面进行迭代。您可以查明代码、资源、场景设置、摄像机渲染和构建设置如何影响应用程序性能等方面的情况。性能分析器在一系列图表中显示结果，因此可以直观地查看应用程序性能出现尖峰的位置。</p>
+          <h1 id="性能分析器"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/Profiler.html">性能分析器</a></h1>
+<p>Unity 性能分析器 (Unity Profiler)
+是一种可以用来获取应用程序性能信息的工具。可以将性能分析器连接到网络中的设备或连接到已连接到计算机的设备，从而测试应用程序在目标发布平台上的运行情况。还可以在
+Editor 中运行性能分析器，从而在开发应用程序时概要了解资源分配情况。
+性能分析器可以收集并显示有关应用程序各个方面（例如
+CPU、内存、渲染器和音频）的性能数据。该工具可用于识别应用程序中可提高性能的方面，并在这些方面进行迭代。您可以查明代码、资源、场景设置、摄像机渲染和构建设置如何影响应用程序性能等方面的情况。性能分析器在一系列图表中显示结果，因此可以直观地查看应用程序性能出现尖峰的位置。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/01/Unity-%E4%BC%98%E5%8C%96/#more" rel="contents">
@@ -1267,6 +1294,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/Unity-%E7%89%B9%E6%95%88%EF%BC%88VFX%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Unity-特效（VFX）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1294,7 +1322,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.5k</span>
+      <span>3.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1312,7 +1340,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="视觉特效">视觉特效<a class="header-anchor" href="#视觉特效">·</a></h1>
+          <h1 id="视觉特效">视觉特效</h1>
 <p>视觉特效可以分为两类：</p>
 <ul>
 <li><strong>环境效果</strong>，旨在表示物理事件，例如火灾、雨、雾或爆炸。</li>
@@ -1391,7 +1419,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-01-10 17:16:29" itemprop="dateModified" datetime="2023-01-10T17:16:29+08:00">2023-01-10</time>
+      <time title="修改时间：2023-01-10 17:21:56" itemprop="dateModified" datetime="2023-01-10T17:21:56+08:00">2023-01-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1412,6 +1440,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/Unity-%E5%8A%A8%E7%94%BB%EF%BC%88Animation%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Unity-动画（Animation）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1457,7 +1486,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="在Unity中使用动画">在Unity中使用动画<a class="header-anchor" href="#在Unity中使用动画">·</a></h1>
+          <h1 id="在unity中使用动画">在Unity中使用动画</h1>
 <p>在 Unity 中使用两种主要类型的动画：</p>
 <ul>
 <li>从其他程序导入的动画</li>
@@ -1553,6 +1582,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2023/01/Unity-%E7%9D%80%E8%89%B2%E5%99%A8%E5%9B%BE%E5%BD%A2%EF%BC%88Shader-Graph%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Unity-着色器图形（Shader Graph）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1580,7 +1610,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
+      <span>2.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1598,7 +1628,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="着色器窗口">着色器窗口<a class="header-anchor" href="#着色器窗口">·</a></h1>
+          <h1 id="着色器窗口">着色器窗口</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/01/Unity-%E7%9D%80%E8%89%B2%E5%99%A8%E5%9B%BE%E5%BD%A2%EF%BC%88Shader-Graph%EF%BC%89/#more" rel="contents">
@@ -1649,14 +1679,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">305k</span>
+    <span title="站点总字数">310k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:08</span>
+    <span title="站点阅读时长">14:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -1686,6 +1716,7 @@
   <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/code-unfold.js"></script>
 
   <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>

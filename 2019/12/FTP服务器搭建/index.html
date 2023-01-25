@@ -19,52 +19,28 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="什么是FTP服务器· FTP服务器(File Transfer Protocol Server)是在互联网上提供文件存储和访问服务的计算机，它们依照FTP协议提供服务。 FTP是File Transfer Protocol(文件传输协议)。顾名思义，就是专门用来传输文件的协议。简单地说，支持FTP协议的服务器就是FTP服务器。">
+    <meta name="description" content="什么是FTP服务器 FTP服务器(File Transfer Protocol Server)是在互联网上提供文件存储和访问服务的计算机，它们依照FTP协议提供服务。 FTP是File Transfer Protocol(文件传输协议)。顾名思义，就是专门用来传输文件的协议。简单地说，支持FTP协议的服务器就是FTP服务器。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="FTP服务器搭建">
 <meta property="og:url" content="https://www.yunying61.cn/2019/12/FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="什么是FTP服务器· FTP服务器(File Transfer Protocol Server)是在互联网上提供文件存储和访问服务的计算机，它们依照FTP协议提供服务。 FTP是File Transfer Protocol(文件传输协议)。顾名思义，就是专门用来传输文件的协议。简单地说，支持FTP协议的服务器就是FTP服务器。">
+<meta property="og:description" content="什么是FTP服务器 FTP服务器(File Transfer Protocol Server)是在互联网上提供文件存储和访问服务的计算机，它们依照FTP协议提供服务。 FTP是File Transfer Protocol(文件传输协议)。顾名思义，就是专门用来传输文件的协议。简单地说，支持FTP协议的服务器就是FTP服务器。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/win-IIS.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/IP%20%E7%AB%AF%E5%8F%A3%20SSL%E8%AE%BE%E7%BD%AE.png">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E5%92%8C%E6%8E%88%E6%9D%83%E4%BF%A1%E6%81%AF%E8%AE%BE%E7%BD%AE.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/FTP%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.png">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/FTP%E6%8E%88%E6%9D%83%E8%A7%84%E5%88%99%E4%B8%BE%E4%BE%8B.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/%E7%AE%A1%E7%90%86.png">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/%E6%96%B0%E7%94%A8%E6%88%B7.png">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/1.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/2.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/3.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/4.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/5.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/6.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/7.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/11.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/22.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/33.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/44.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/55.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/66.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/111.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/1111.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/2222.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/3333.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/4444.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/222.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/333.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/444.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/a.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/g.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/h.jpg">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/fb1.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/fb2.png?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/fb3.png?x-oss-process=style/yunying61">
 <meta property="article:published_time" content="2019-12-14T07:34:19.000Z">
 <meta property="article:modified_time" content="2022-03-16T04:41:07.819Z">
 <meta property="article:author" content="yunying61">
@@ -72,7 +48,6 @@
 <meta property="article:tag" content="服务器">
 <meta property="article:tag" content="文件服务器">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/win-IIS.png?x-oss-process=style/yunying61">
 
 
 <link rel="canonical" href="https://www.yunying61.cn/2019/12/FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">
@@ -187,14 +162,15 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFFTP%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">什么是FTP服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E7%A7%8D%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">软件种类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">工作模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%88%E7%AE%80%E6%98%93%E7%89%88%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">本地FTP服务器搭建（简易版）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AEIIS-Web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">第一步：配置IIS Web服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AEIIS-Web%E7%AB%99%E7%82%B9"><span class="nav-number">2.2.</span> <span class="nav-text">第二步：配置IIS Web站点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E6%B5%8B%E8%AF%95FTP%E7%AB%99%E7%82%B9%EF%BC%88%E5%85%88%E5%9C%A8-%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E9%9A%8F%E4%BE%BF%E6%94%BE%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">第三步：测试FTP站点（先在 根目录文件夹，随便放一个文件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">2.4.</span> <span class="nav-text">结语</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E5%B8%83%E8%87%B3%E5%A4%96%E7%BD%91%EF%BC%88Serv-u%E7%89%88%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">FTP服务器发布至外网（Serv-u版）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E5%8F%8A%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="nav-number">3.1.</span> <span class="nav-text">工具及环境：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Serv-U%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text">Serv-U的安装与配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E8%87%B3%E5%A4%96%E7%BD%91%EF%BC%88%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%89"><span class="nav-number">3.3.</span> <span class="nav-text">发布至外网（云服务器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FTP%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="nav-number">3.4.</span> <span class="nav-text">FTP绑定域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFftp%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">什么是FTP服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E7%A7%8D%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">软件种类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">工作模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93%E7%89%88"><span class="nav-number">2.</span> <span class="nav-text">本地FTP服务器搭建（简易版）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E9%85%8D%E7%BD%AEiis-web%E7%AB%99%E7%82%B9"><span class="nav-number">2.1.</span> <span class="nav-text">第二步：配置IIS Web站点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%E6%B5%8B%E8%AF%95ftp%E7%AB%99%E7%82%B9%E5%85%88%E5%9C%A8-%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E9%9A%8F%E4%BE%BF%E6%94%BE%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">第三步：测试FTP站点（先在
+根目录文件夹，随便放一个文件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">2.3.</span> <span class="nav-text">结语</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E5%B8%83%E8%87%B3%E5%A4%96%E7%BD%91serv-u%E7%89%88"><span class="nav-number">3.</span> <span class="nav-text">FTP服务器发布至外网（Serv-u版）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E5%8F%8A%E7%8E%AF%E5%A2%83"><span class="nav-number">3.1.</span> <span class="nav-text">工具及环境：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#serv-u%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text">Serv-U的安装与配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E8%87%B3%E5%A4%96%E7%BD%91%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">3.3.</span> <span class="nav-text">发布至外网（云服务器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ftp%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="nav-number">3.4.</span> <span class="nav-text">FTP绑定域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="yunying61"
-      src="/images/yunying61.png">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
   <p class="site-author-name" itemprop="name">yunying61</p>
   <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
 </div>
@@ -213,7 +189,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">149</span>
+        <span class="site-state-item-count">150</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -333,6 +309,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2019/12/FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" class="post-meta-item leancloud_visitors" data-flag-title="FTP服务器搭建" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -378,64 +355,64 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="什么是FTP服务器">什么是FTP服务器<a class="header-anchor" href="#什么是FTP服务器">·</a></h2>
-<p>FTP服务器(File Transfer Protocol Server)是在互联网上提供文件存储和访问服务的计算机，它们依照FTP协议提供服务。 FTP是File Transfer Protocol(文件传输协议)。顾名思义，就是专门用来传输文件的协议。简单地说，支持FTP协议的服务器就是FTP服务器。</p>
+        <h2 id="什么是ftp服务器">什么是FTP服务器</h2>
+<p>FTP服务器(File Transfer Protocol
+Server)是在互联网上提供文件存储和访问服务的计算机，它们依照FTP协议提供服务。
+FTP是File Transfer
+Protocol(文件传输协议)。顾名思义，就是专门用来传输文件的协议。简单地说，支持FTP协议的服务器就是FTP服务器。</p>
 <span id="more"></span>
-<h3 id="软件种类">软件种类<a class="header-anchor" href="#软件种类">·</a></h3>
-<ol>
+<h3 id="软件种类">软件种类</h3>
+<ol type="1">
 <li>Server-U</li>
 <li>FileZilla</li>
 <li>VsFTP</li>
 <li>IIS FTP</li>
 </ol>
-<h3 id="工作模式">工作模式<a class="header-anchor" href="#工作模式">·</a></h3>
-<p>FTP是仅基于TCP的服务，不支持UDP。与众不同的是FTP使用2个端口，一个数据端口和一个命令端口(也可叫做控制端口)。通常来说这两个端口是21(命令端口)和20(数据端口)。但FTP 工作方式的不同，数据端口并不总是20。这就是主动与被动FTP的最大不同之处。主要有两种工作模式:</p>
-<ol>
-<li>
-<p>主动模式(<strong>PORT</strong>)<br />
-主动模式下，客户端随机打开一个大于1024 的端口向服务器的命令端口 P，即 21 端口，发起连接，同时开放N +1 端口监听，并向服务器发出 “port N+1” 命令，由服务器从它自己的数据端口 (20) 主动连接到客户端指定的数据端口 (N+1)。<br />
-FTP 的客户端只是告诉服务器自己的端口号，让服务器来连接客户端指定的端口。对于客户端的防火墙来说，这是从外部到内部的连接，可能会被阻塞。</p>
-</li>
-<li>
-<p>被动模式(<strong>PASV</strong>)<br />
-为了解决服务器发起到客户的连接问题，有了另一种 FTP 连接方式，即被动方式。命令连接和数据连接都由客户端发起，这样就解决了从服务器到客户端的数据端口的连接被防火墙过滤的问题。<br />
-被动模式下，当开启一个 FTP 连接时，客户端打开两个任意的本地端口 (N &gt; 1024 和 N+1) 。</p>
-</li>
+<h3 id="工作模式">工作模式</h3>
+<p>FTP是仅基于TCP的服务，不支持UDP。与众不同的是FTP使用2个端口，一个数据端口和一个命令端口(也可叫做控制端口)。通常来说这两个端口是21(命令端口)和20(数据端口)。但FTP
+工作方式的不同，数据端口并不总是20。这就是主动与被动FTP的最大不同之处。主要有两种工作模式:
+1. 主动模式(<strong>PORT</strong>)
+主动模式下，客户端随机打开一个大于1024 的端口向服务器的命令端口 P，即 21
+端口，发起连接，同时开放N +1 端口监听，并向服务器发出 “port N+1”
+命令，由服务器从它自己的数据端口 (20) 主动连接到客户端指定的数据端口
+(N+1)。<br />
+FTP
+的客户端只是告诉服务器自己的端口号，让服务器来连接客户端指定的端口。对于客户端的防火墙来说，这是从外部到内部的连接，可能会被阻塞。</p>
+<ol start="2" type="1">
+<li>被动模式(<strong>PASV</strong>)
+为了解决服务器发起到客户的连接问题，有了另一种 FTP
+连接方式，即被动方式。命令连接和数据连接都由客户端发起，这样就解决了从服务器到客户端的数据端口的连接被防火墙过滤的问题。<br />
+被动模式下，当开启一个 FTP 连接时，客户端打开两个任意的本地端口 (N &gt;
+1024 和 N+1) 。</li>
 </ol>
-<h3 id="总结">总结<a class="header-anchor" href="#总结">·</a></h3>
+<h3 id="总结">总结</h3>
 <p>在主动模式下:FTP服务器的控制端口是21，数据端口是20，所以在做静态映射的时候只需要开放21端口即可，他会用20端口和客户端主动的发起连接。</p>
 <p>在被动模式下:FTP服务器的控制端口是21，数据端口是随机的，且是客户端去连接对应的数据端口，所以在做静态的映射话只开放21端口是不可以的。此时需要做DMZ。</p>
-<h2 id="本地FTP服务器搭建（简易版）">本地FTP服务器搭建（简易版）<a class="header-anchor" href="#本地FTP服务器搭建（简易版）">·</a></h2>
-<p>参考资料：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/popfisher/p/7992036.html">https://www.cnblogs.com/popfisher/p/7992036.html</a></p>
-<h3 id="第一步：配置IIS-Web服务器">第一步：配置IIS Web服务器<a class="header-anchor" href="#第一步：配置IIS-Web服务器">·</a></h3>
+<h2 id="本地ftp服务器搭建简易版">本地FTP服务器搭建（简易版）</h2>
+<p>参考资料：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/popfisher/p/7992036.html"
+class="uri">https://www.cnblogs.com/popfisher/p/7992036.html</a> ###
+第一步：配置IIS Web服务器</p>
 <ul>
-<li>
-<p>1.1 控制面板中找到“程序”并打开</p>
-</li>
-<li>
-<p>1.2 “程序”界面找到“启用或关闭Windows功能”并打开</p>
+<li><p>1.1 控制面板中找到“程序”并打开</p></li>
+<li><p>1.2 “程序”界面找到“启用或关闭Windows功能”并打开</p>
 <blockquote>
-<p>上面两步也可以简化为一步：按【Win + R】快捷键打开运行对话框，输入“optionalfeatures”后，按回车键</p>
-</blockquote>
-</li>
-<li>
-<p>1.3 从“启用或关闭Windows功能”弹窗中找到Internet Information Services(或者中文版Internet信息服务)并打开</p>
-</li>
-<li>
-<p>1.4 配置IIS并点击确定<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/win-IIS.png?x-oss-process=style/yunying61" alt="win功能中配置IIS" /></p>
-</li>
+<p>上面两步也可以简化为一步：按【Win +
+R】快捷键打开运行对话框，输入“optionalfeatures”后，按回车键</p>
+</blockquote></li>
+<li><p>1.3 从“启用或关闭Windows功能”弹窗中找到Internet Information
+Services(或者中文版Internet信息服务)并打开</p></li>
+<li><p>1.4 配置IIS并点击确定 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/win-IIS.png?x-oss-process=style/yunying61"
+alt="win功能中配置IIS" /></p></li>
 </ul>
-<h3 id="第二步：配置IIS-Web站点">第二步：配置IIS Web站点<a class="header-anchor" href="#第二步：配置IIS-Web站点">·</a></h3>
+<h3 id="第二步配置iis-web站点">第二步：配置IIS Web站点</h3>
 <ul>
-<li>
-<p>2.1 开始菜单搜索“IIS”并点击进入IIS管理器(Internet Information Services (IIS)管理器)</p>
+<li><p>2.1 开始菜单搜索“IIS”并点击进入IIS管理器(Internet Information
+Services (IIS)管理器)</p>
 <blockquote>
-<p>简化操作：按【Win + R】快捷键打开运行对话框，输入“inetMgr.exe”后，按回车键</p>
-</blockquote>
-</li>
-<li>
-<p>2.2 新建FTP站点</p>
+<p>简化操作：按【Win +
+R】快捷键打开运行对话框，输入“inetMgr.exe”后，按回车键</p>
+</blockquote></li>
+<li><p>2.2 新建FTP站点</p>
 <ul>
 <li>2.2.1 新建FTP服务器 根目录文件夹</li>
 </ul>
@@ -443,18 +420,17 @@ FTP 的客户端只是告诉服务器自己的端口号，让服务器来连接�
 <p>这步就是你随便找个位置新建一个文件夹，这个文件夹可以随意放置，没有特定需要，当然，尽量不要放在系统盘。</p>
 </blockquote>
 <ul>
-<li>2.2.2 查看本机ip地址，后续访问Ftp地址需要用到（打开cmd输入ipconfig）</li>
+<li>2.2.2
+查看本机ip地址，后续访问Ftp地址需要用到（打开cmd输入ipconfig）</li>
 </ul>
 <blockquote>
-<p>本机ip地址是IPv4 地址，当然，可能有些人的电脑连接了很多地址，那就要看你当前用的是无线局域网适配器还是以太网，以及更加细致的分类。</p>
+<p>本机ip地址是IPv4
+地址，当然，可能有些人的电脑连接了很多地址，那就要看你当前用的是无线局域网适配器还是以太网，以及更加细致的分类。</p>
 </blockquote>
 <ul>
-<li>
-<p>2.2.3 IIS网站管理器界面左边导航栏找到“网站”，右键弹出菜单，在弹出菜单中点击“添加FTP站点”</p>
-</li>
-<li>
-<p>2.2.4 配置网站（网站名称：FtpSite 物理路径：E:\ftpserver）</p>
-</li>
+<li><p>2.2.3
+IIS网站管理器界面左边导航栏找到“网站”，右键弹出菜单，在弹出菜单中点击“添加FTP站点”</p></li>
+<li><p>2.2.4 配置网站（网站名称：FtpSite 物理路径：E:）</p></li>
 </ul>
 <blockquote>
 <p>这里，名称随意，物理路径就是刚才你的新建文件夹的路径。</p>
@@ -463,185 +439,171 @@ FTP 的客户端只是告诉服务器自己的端口号，让服务器来连接�
 <li>2.2.5 IP 端口号 SSL设置</li>
 </ul>
 <blockquote>
-<p>本机IP地址(从下拉菜单选择)：<s>此处是你的IP地址</s><br />
+<p>本机IP地址(从下拉菜单选择)：<del>此处是你的IP地址</del><br />
 端口号是21，要不要自动启动（开机就启动）看你自己<br />
-SSL设置为无SSL，除非你有SSL，并且知道怎么用了。<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/IP%20%E7%AB%AF%E5%8F%A3%20SSL%E8%AE%BE%E7%BD%AE.png" alt="IP 端口 SSL设置" /></p>
+SSL设置为无SSL，除非你有SSL，并且知道怎么用了。 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/IP%20%E7%AB%AF%E5%8F%A3%20SSL%E8%AE%BE%E7%BD%AE.png"
+alt="IP 端口 SSL设置" /></p>
 </blockquote>
 <ul>
 <li>2.2.6 身份验证和授权信息设置</li>
 </ul>
 <blockquote>
-<p>为了方便测试，此处身份验证先设置为匿名（以后可以更改），授权 允许所有用户，权限 读写都打勾。<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E5%92%8C%E6%8E%88%E6%9D%83%E4%BF%A1%E6%81%AF%E8%AE%BE%E7%BD%AE.png?x-oss-process=style/yunying61" alt="身份验证和授权信息设置" /></p>
-</blockquote>
-</li>
+<p>为了方便测试，此处身份验证先设置为匿名（以后可以更改），授权
+允许所有用户，权限 读写都打勾。 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E5%92%8C%E6%8E%88%E6%9D%83%E4%BF%A1%E6%81%AF%E8%AE%BE%E7%BD%AE.png?x-oss-process=style/yunying61"
+alt="身份验证和授权信息设置" /></p>
+</blockquote></li>
 </ul>
-<h3 id="第三步：测试FTP站点（先在-根目录文件夹，随便放一个文件）">第三步：测试FTP站点（先在 根目录文件夹，随便放一个文件）<a class="header-anchor" href="#第三步：测试FTP站点（先在-根目录文件夹，随便放一个文件）">·</a></h3>
+<h3
+id="第三步测试ftp站点先在-根目录文件夹随便放一个文件">第三步：测试FTP站点（先在
+根目录文件夹，随便放一个文件）</h3>
 <ul>
-<li>
-<p>3.1 浏览器或者<strong>文件管理器</strong>地址栏输入ftp地址（ftp://192.168.0.105） ，别傻傻地复制粘贴，输入你自己的IP，注意前缀<u>ftp://</u></p>
-</li>
-<li>
-<p>3.2 IIS管理器中的FTP身份验证里面配置身份认证<br />
-在FTP的管理栏中，打开FTP身份验证</p>
-</li>
+<li><p>3.1
+浏览器或者<strong>文件管理器</strong>地址栏输入ftp地址（ftp://192.168.0.105）
+，别傻傻地复制粘贴，输入你自己的IP，注意前缀<u>ftp://</u></p></li>
+<li><p>3.2 IIS管理器中的FTP身份验证里面配置身份认证
+在FTP的管理栏中，打开FTP身份验证</p></li>
 </ul>
 <blockquote>
-<p>此处根据你自己的需要进行设置，<strong>基本身份验证</strong>是根据你电脑中的用户访问的，<strong>匿名身份验证</strong>是指任何人都可以访问。<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/FTP%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.png" alt="FTP身份验证" /></p>
+<p>此处根据你自己的需要进行设置，<strong>基本身份验证</strong>是根据你电脑中的用户访问的，<strong>匿名身份验证</strong>是指任何人都可以访问。
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/FTP%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.png"
+alt="FTP身份验证" /></p>
 </blockquote>
 <ul>
-<li>
-<p>3.3 IIS管理器中的FTP授权规则</p>
+<li><p>3.3 IIS管理器中的FTP授权规则</p>
 <blockquote>
 <p>在FTP的管理栏中，打开FTP授权规则<br />
-在右边操作栏里，<strong>添加允许规则</strong> 和 <strong>添加拒绝规则</strong>，根据自己需要，设置相应规则。<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/FTP%E6%8E%88%E6%9D%83%E8%A7%84%E5%88%99%E4%B8%BE%E4%BE%8B.png?x-oss-process=style/yunying61" alt="FTP授权规则举例" /></p>
-</blockquote>
-</li>
-<li>
-<p>3.4 配置FTP站点用户名和密码</p>
+在右边操作栏里，<strong>添加允许规则</strong> 和
+<strong>添加拒绝规则</strong>，根据自己需要，设置相应规则。 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/FTP%E6%8E%88%E6%9D%83%E8%A7%84%E5%88%99%E4%B8%BE%E4%BE%8B.png?x-oss-process=style/yunying61"
+alt="FTP授权规则举例" /></p>
+</blockquote></li>
+<li><p>3.4 配置FTP站点用户名和密码</p>
 <ul>
-<li>3.4.1 此电脑（桌面计算机图标右键）—&gt;管理-&gt;本地用户和组-&gt;用户-&gt;新建一个用户，并设置密码<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/%E7%AE%A1%E7%90%86.png" alt="计算机管理" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/%E6%96%B0%E7%94%A8%E6%88%B7.png" alt="新用户" /></li>
+<li>3.4.1
+此电脑（桌面计算机图标右键）—&gt;管理-&gt;本地用户和组-&gt;用户-&gt;新建一个用户，并设置密码
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/%E7%AE%A1%E7%90%86.png"
+alt="计算机管理" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/%E6%96%B0%E7%94%A8%E6%88%B7.png"
+alt="新用户" />
+&gt;细心的你可能已经发现这里的账户就是我们计算机的账户，所以说访问你的FTP服务器的账号实际上是你的电脑用户账号。
+&gt;
+&gt;我们使用自己登录电脑的用户名和密码来登录FTP站点，不用新建这个test用户都可以。</li>
+</ul></li>
 </ul>
-<blockquote>
-<p>细心的你可能已经发现这里的账户就是我们计算机的账户，所以说访问你的FTP服务器的账号实际上是你的电脑用户账号。</p>
-<p>我们使用自己登录电脑的用户名和密码来登录FTP站点，不用新建这个test用户都可以。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="结语">结语<a class="header-anchor" href="#结语">·</a></h3>
+<h3 id="结语">结语</h3>
 <p>到此一个简单的FTP服务器搭建成功，同一个<strong>局域网</strong>内其他人可以访问到你的电脑了，可以相互传输文件。当然这只是局限于局域网，如果想要在任何一台联网的电脑上访问到这个FTP文件服务器，那紧接着下面的教程吧！</p>
-<h2 id="FTP服务器发布至外网（Serv-u版）">FTP服务器发布至外网（Serv-u版）<a class="header-anchor" href="#FTP服务器发布至外网（Serv-u版）">·</a></h2>
+<h2
+id="ftp服务器发布至外网serv-u版">FTP服务器发布至外网（Serv-u版）</h2>
 <p>参考资料：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/suliang5158/article/details/79273099">https://blog.csdn.net/suliang5158/article/details/79273099</a><br />
-<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/e75aca85634b68142edac6f2.html">https://jingyan.baidu.com/article/e75aca85634b68142edac6f2.html</a><br />
-<a target="_blank" rel="noopener" href="https://blog.csdn.net/wz947324/article/details/80063061">https://blog.csdn.net/wz947324/article/details/80063061</a><br />
-<a target="_blank" rel="noopener" href="https://blog.csdn.net/superdog007/article/details/48787049">https://blog.csdn.net/superdog007/article/details/48787049</a></p>
-<h3 id="工具及环境：">工具及环境：<a class="header-anchor" href="#工具及环境：">·</a></h3>
-<ol>
-<li>
-<p>系统：Windows Server2012R2</p>
-</li>
-<li>
-<p>软件：Serv-u(MFT Server 15.1.2)</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/suliang5158/article/details/79273099"
+class="uri">https://blog.csdn.net/suliang5158/article/details/79273099</a>
+<a
+target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/e75aca85634b68142edac6f2.html"
+class="uri">https://jingyan.baidu.com/article/e75aca85634b68142edac6f2.html</a>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/wz947324/article/details/80063061"
+class="uri">https://blog.csdn.net/wz947324/article/details/80063061</a>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/superdog007/article/details/48787049"
+class="uri">https://blog.csdn.net/superdog007/article/details/48787049</a></p>
+<h3 id="工具及环境">工具及环境：</h3>
+<ol type="1">
+<li><p>系统：Windows Server2012R2</p></li>
+<li><p>软件：Serv-u(MFT Server 15.1.2)</p>
 <blockquote>
-<p>百度云 链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1QrqlfzFIcP-y1YD6981CbQ">https://pan.baidu.com/s/1QrqlfzFIcP-y1YD6981CbQ</a> 提取码: kja7</p>
-</blockquote>
-</li>
-<li>
-<p>环境配置：</p>
-</li>
+<p>百度云 链接: <a
+target="_blank" rel="noopener" href="https://pan.baidu.com/s/1QrqlfzFIcP-y1YD6981CbQ"
+class="uri">https://pan.baidu.com/s/1QrqlfzFIcP-y1YD6981CbQ</a> 提取码:
+kja7</p>
+</blockquote></li>
+<li><p>环境配置：</p></li>
 </ol>
 <ul>
-<li>
-<p>如果是购买阿里云的服务器的话，必须还得在阿里云后台开放指定端口！</p>
-<ol>
-<li>
-<p>登录阿里云，知道服务器控制台页面，左侧菜单栏有个 安全组 的子菜单</p>
-</li>
-<li>
-<p>安全组中添加两个规则：</p>
+<li><p>如果是购买阿里云的服务器的话，必须还得在阿里云后台开放指定端口！</p>
+<ol type="1">
+<li><p>登录阿里云，知道服务器控制台页面，左侧菜单栏有个 安全组
+的子菜单</p></li>
+<li><p>安全组中添加两个规则：</p>
 <blockquote>
 <p>开放20-21端口</p>
 <p>开放13001-13003端口</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li>
-<p>目前（2019/12/14），我在腾讯云上没遇到这个问题，是可以直接使用的。</p>
-</li>
+</blockquote></li>
+</ol></li>
+<li><p>目前（2019/12/14），我在腾讯云上没遇到这个问题，是可以直接使用的。</p></li>
 </ul>
-<h3 id="Serv-U的安装与配置">Serv-U的安装与配置<a class="header-anchor" href="#Serv-U的安装与配置">·</a></h3>
-<ol>
-<li>
-<p>打开SU-FTP-Server-Windows-v15.1.2执行安装,选择中文（简体）<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/1.jpg" alt="安装1" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/2.jpg" alt="安装2" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/3.jpg" alt="安装3" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/4.jpg" alt="安装4" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/5.jpg" alt="安装5" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/6.jpg" alt="安装6" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/7.jpg" alt="安装7" /></p>
-</li>
-<li>
-<p>启动Serv-U管理控制台，进行域配置<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/11.jpg?x-oss-process=style/yunying61" alt="域配置1" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/22.jpg" alt="域配置2" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/33.jpg" alt="域配置3" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/44.jpg" alt="域配置4" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/55.jpg" alt="域配置5" /></p>
-</li>
+<h3 id="serv-u的安装与配置">Serv-U的安装与配置</h3>
+<ol type="1">
+<li><p>打开SU-FTP-Server-Windows-v15.1.2执行安装,选择中文（简体） <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/1.jpg"
+alt="安装1" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/2.jpg"
+alt="安装2" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/3.jpg"
+alt="安装3" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/4.jpg"
+alt="安装4" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/5.jpg"
+alt="安装5" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/6.jpg"
+alt="安装6" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/7.jpg"
+alt="安装7" /></p></li>
+<li><p>启动Serv-U管理控制台，进行域配置 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/11.jpg?x-oss-process=style/yunying61"
+alt="域配置1" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/22.jpg"
+alt="域配置2" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/33.jpg"
+alt="域配置3" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/44.jpg"
+alt="域配置4" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/55.jpg"
+alt="域配置5" />
+&gt;注意这里的IPv4地址填写你自己FTP服务器所在的内网IP</p></li>
+</ol>
+<figure>
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/66.jpg?x-oss-process=style/yunying61"
+alt="域配置6" />
+<figcaption aria-hidden="true">域配置6</figcaption>
+</figure>
+<ol start="3" type="1">
+<li><p>使用向导创建匿名用户 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/111.jpg"
+alt="使用向导0" />
+这里点击<code>是</code>后，会跳转到使用向导创建，然后同意使用向导创建，进入下图的界面。
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/1111.jpg?x-oss-process=style/yunying61"
+alt="使用向导1" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/2222.jpg?x-oss-process=style/yunying61"
+alt="使用向导2" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/3333.jpg?x-oss-process=style/yunying61"
+alt="使用向导3" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/4444.jpg?x-oss-process=style/yunying61"
+alt="使用向导4" /></p></li>
+<li><p>新建域用户，添加域管理员 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/222.jpg"
+alt="域管理员1" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/333.jpg"
+alt="域管理员2" />
+选择域管理员用户，双击编辑该用户，进入'目录访问'标签，添加如图(域管理员3)两个路径。
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/444.jpg?x-oss-process=style/yunying61"
+alt="域管理员3" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/a.jpg"
+alt="域管理员4" /> 同理，也可以设置匿名用户的目录访问权限</p></li>
+<li><p>解决FTP服务器在浏览时出现中文乱码的问题 &gt;1.
+在<strong>域</strong>下面选择“限制和设置”——“FTP设置”——“用户默认设置”中找到OPTS
+UTF8命令，右击禁用此命令。 &gt;2.
+点击下面的“全局属性”——高级选项”里，把“对所有已收发的路径和文件名使用UFT-8编码”前面的钩去掉。
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/g.jpg"
+alt="解决中文乱码1" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/h.jpg"
+alt="解决中文乱码2" />
+&gt;这样，在上传或浏览FTP服务器时就不会出现中文乱码了。</p></li>
+</ol>
+<h3 id="发布至外网云服务器">发布至外网（云服务器）</h3>
+<ol type="1">
+<li>配置监听器，指向公网IP <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/fb1.png?x-oss-process=style/yunying61"
+alt="监听器" /></li>
+<li>对ftp服务器下的监听器进行修改 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/fb2.png?x-oss-process=style/yunying61"
+alt="监听器修改" /></li>
+<li>设置PASV端口范围（就是服务器向外发送数据用端口） <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/fb3.png?x-oss-process=style/yunying61"
+alt="配置端口" /></li>
 </ol>
 <blockquote>
-<p>注意这里的IPv4地址填写你自己FTP服务器所在的内网IP</p>
+<p>到这里，应该是可以让你在其他电脑上访问你搭建的FTP服务器了，访问路径是ftp://<del>此处填写你的公网IP</del></p>
 </blockquote>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/66.jpg?x-oss-process=style/yunying61" alt="域配置6" /></p>
-<ol start="3">
-<li>
-<p>使用向导创建匿名用户<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/111.jpg" alt="使用向导0" /><br />
-这里点击<code>是</code>后，会跳转到使用向导创建，然后同意使用向导创建，进入下图的界面。<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/1111.jpg?x-oss-process=style/yunying61" alt="使用向导1" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/2222.jpg?x-oss-process=style/yunying61" alt="使用向导2" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/3333.jpg?x-oss-process=style/yunying61" alt="使用向导3" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/4444.jpg?x-oss-process=style/yunying61" alt="使用向导4" /></p>
-</li>
-<li>
-<p>新建域用户，添加域管理员<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/222.jpg" alt="域管理员1" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/333.jpg" alt="域管理员2" /><br />
-选择域管理员用户，双击编辑该用户，进入’目录访问’标签，添加如图(域管理员3)两个路径。<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/444.jpg?x-oss-process=style/yunying61" alt="域管理员3" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/a.jpg" alt="域管理员4" /><br />
-同理，也可以设置匿名用户的目录访问权限</p>
-</li>
-<li>
-<p>解决FTP服务器在浏览时出现中文乱码的问题</p>
-</li>
-</ol>
-<blockquote>
-<ol>
-<li>在<strong>域</strong>下面选择“限制和设置”——“FTP设置”——“用户默认设置”中找到OPTS UTF8命令，右击禁用此命令。</li>
-<li>点击下面的“全局属性”——高级选项”里，把“对所有已收发的路径和文件名使用UFT-8编码”前面的钩去掉。<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/g.jpg" alt="解决中文乱码1" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/h.jpg" alt="解决中文乱码2" /><br />
-这样，在上传或浏览FTP服务器时就不会出现中文乱码了。</li>
-</ol>
-</blockquote>
-<h3 id="发布至外网（云服务器）">发布至外网（云服务器）<a class="header-anchor" href="#发布至外网（云服务器）">·</a></h3>
-<ol>
-<li>配置监听器，指向公网IP<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/fb1.png?x-oss-process=style/yunying61" alt="监听器" /></li>
-<li>对ftp服务器下的监听器进行修改<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/fb2.png?x-oss-process=style/yunying61" alt="监听器修改" /></li>
-<li>设置PASV端口范围（就是服务器向外发送数据用端口）<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/FTP/fb3.png?x-oss-process=style/yunying61" alt="配置端口" /></li>
-</ol>
-<blockquote>
-<p>到这里，应该是可以让你在其他电脑上访问你搭建的FTP服务器了，访问路径是ftp://<s>此处填写你的公网IP</s></p>
-</blockquote>
-<h3 id="FTP绑定域名">FTP绑定域名<a class="header-anchor" href="#FTP绑定域名">·</a></h3>
-<p><strong>添加域名解析</strong><br />
+<h3 id="ftp绑定域名">FTP绑定域名</h3>
+<p><strong>添加域名解析</strong>
 进入你购买域名的服务商控制台，在域名管理中添加一个域名解析。选择A记录，填写二级域名前缀，记录值为你的公网ip。<br />
-然后在ftp服务器空间后台绑定这个域名，这样的话等域名解析生效了，那么就可以用域名访问ftp服务器以及里面的内容了。<br />
-访问地址为：ftp://<s>此处填写你的域名</s></p>
+然后在ftp服务器空间后台绑定这个域名，这样的话等域名解析生效了，那么就可以用域名访问ftp服务器以及里面的内容了。
+访问地址为：ftp://<del>此处填写你的域名</del></p>
 <p>有可能出现访问不到的情况，可能是你的云服务器还没备案，先去备案吧。</p>
-<h2 id="总结-2">总结<a class="header-anchor" href="#总结-2">·</a></h2>
-<ol>
-<li>
-<p>PASV端口范围<br />
+<h2 id="总结-1">总结</h2>
+<ol type="1">
+<li><p>PASV端口范围
 被动模式（PASV）下，有数据要传输时，服务器会打开一个数据端口（并处于监听状态），然后告知客户端，客户端连接这个数据端口发送数据。但是数据端口是随机的，那么服务器该如何将这些随机数据端口映射到公网的路由器上呢？总不能让内部网的一台机器完全暴露到公网上吧，虽然确实有这样的方案（称之为DMZ主机），但这绝对是最愚蠢的选择。<br />
-虽然数据端口是随机的，但Serv-U可以指定随机的范围。打开Serv-U管理控制台 &gt; 管理服务器 &gt; 服务器限制和设置 &gt; 服务器设置 。在“设置”选项卡里找到“PASV端口范围”，就是上面的配置端口那张图。只需要把这些指定的端口映射出去就可以了。</p>
-</li>
-<li>
-<p>PASV IP地址<br />
-<u>这是全文中想要发布至外网的关键所在。</u>打开Serv-U管理控制台 &gt; 你自定义的域名 &gt; 域详细信息 &gt; 监听器 &gt; 编辑 ，在PASV IP地址或域名中设置公网IP即可。</p>
-</li>
+虽然数据端口是随机的，但Serv-U可以指定随机的范围。打开Serv-U管理控制台
+&gt; 管理服务器 &gt; 服务器限制和设置 &gt; 服务器设置
+。在“设置”选项卡里找到“PASV端口范围”，就是上面的配置端口那张图。只需要把这些指定的端口映射出去就可以了。</p></li>
+<li><p>PASV IP地址
+<u>这是全文中想要发布至外网的关键所在。</u>打开Serv-U管理控制台 &gt;
+你自定义的域名 &gt; 域详细信息 &gt; 监听器 &gt; 编辑 ，在PASV
+IP地址或域名中设置公网IP即可。</p></li>
 </ol>
 
     </div>
@@ -767,14 +729,14 @@ SSL设置为无SSL，除非你有SSL，并且知道怎么用了。<br />
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">305k</span>
+    <span title="站点总字数">310k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:08</span>
+    <span title="站点阅读时长">14:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -804,6 +766,7 @@ SSL设置为无SSL，除非你有SSL，并且知道怎么用了。<br />
   <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/code-unfold.js"></script>
 
   <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>

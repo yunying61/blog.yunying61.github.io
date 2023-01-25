@@ -19,24 +19,28 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Unity-学习笔记· Sence - “场景”视图·  平移：在工具栏中选择“抓手”工具，然后在“场景”视图中单击并拖动以平面横向移动视图。 **缩放：**按住 Alt （Windows） 或 Option （macOS），在场景视图中右键单击并拖动以进行缩放。 **轴点：**按住 Alt（Windows）或 Option （macOS），左键点按并拖动以围绕当前轴点观察。（注： 此选项在 2D">
+    <meta name="description" content="Unity-学习笔记 Sence - “场景”视图  平移：在工具栏中选择“抓手”工具，然后在“场景”视图中单击并拖动以平面横向移动视图。 缩放：按住 Alt （Windows） 或 Option （macOS），在场景视图中右键单击并拖动以进行缩放。 轴点：按住 Alt（Windows）或 Option （macOS），左键点按并拖动以围绕当前轴点观察。（注： 此选项在 2D">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Unity-学习笔记">
 <meta property="og:url" content="https://www.yunying61.cn/2022/04/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="Unity-学习笔记· Sence - “场景”视图·  平移：在工具栏中选择“抓手”工具，然后在“场景”视图中单击并拖动以平面横向移动视图。 **缩放：**按住 Alt （Windows） 或 Option （macOS），在场景视图中右键单击并拖动以进行缩放。 **轴点：**按住 Alt（Windows）或 Option （macOS），左键点按并拖动以围绕当前轴点观察。（注： 此选项在 2D">
+<meta property="og:description" content="Unity-学习笔记 Sence - “场景”视图  平移：在工具栏中选择“抓手”工具，然后在“场景”视图中单击并拖动以平面横向移动视图。 缩放：按住 Alt （Windows） 或 Option （macOS），在场景视图中右键单击并拖动以进行缩放。 轴点：按住 Alt（Windows）或 Option （macOS），左键点按并拖动以围绕当前轴点观察。（注： 此选项在 2D">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://connect-cdn-public-prd.unitychina.cn/h1/20210831/learn/images/6111c17f-fed9-413c-a549-51eb325d4b25_B.2.1_img10.png.1800x0x1.png">
-<meta property="og:image" content="https://connect-cdn-public-prd.unitychina.cn/h1/20210901/learn/images/dd5106e0-bda8-4473-b7ce-bdcde83f9461_3.1.11.png.1800x0x1.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/28154130/1667372171922-7c1391e0-0eb7-4802-8f7c-130c655690a3.png#averageHue=%233d3d3d&amp;clientId=ucaf7a866-209d-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=78&amp;id=u3f9f6204&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=78&amp;originWidth=933&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=12794&amp;status=done&amp;style=none&amp;taskId=u22f9e9a1-c25a-45af-8865-7969c6259d6&amp;title=&amp;width=933">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/28154130/1652667491146-6bd46141-a881-46b6-9927-683177014c11.png#averageHue=%2379716c&amp;clientId=ud7b90d53-a856-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ud53cc927&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=534&amp;originWidth=810&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=83228&amp;status=done&amp;style=none&amp;taskId=u98b03cc1-16a5-4e51-8b0a-8513aea4f0c&amp;title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/28154130/1652667470128-3b3497fe-58ba-42cb-b7fb-0484ed0571d8.png#averageHue=%23766f6a&amp;clientId=ud7b90d53-a856-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u794721c1&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=572&amp;originWidth=860&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=92113&amp;status=done&amp;style=none&amp;taskId=u8415d70f-a3a3-453b-934b-4b83bb91c0d&amp;title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/28154130/1653447561623-05b66cac-3b72-4133-ac75-5ad4af587d70.png#averageHue=%237d7d7d&amp;clientId=ub6026e58-5b6d-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u8824bf38&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=414&amp;originWidth=689&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=77965&amp;status=done&amp;style=none&amp;taskId=u34902906-a188-4d48-8e7e-22f5e606a9a&amp;title=">
 <meta property="article:published_time" content="2022-04-10T07:46:18.000Z">
 <meta property="article:modified_time" content="2023-01-10T09:01:17.871Z">
 <meta property="article:author" content="yunying61">
@@ -44,7 +48,6 @@
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://connect-cdn-public-prd.unitychina.cn/h1/20210831/learn/images/6111c17f-fed9-413c-a549-51eb325d4b25_B.2.1_img10.png.1800x0x1.png">
 
 
 <link rel="canonical" href="https://www.yunying61.cn/2022/04/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -159,14 +162,47 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">Unity-学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sence-%E2%80%9C%E5%9C%BA%E6%99%AF%E2%80%9D%E8%A7%86%E5%9B%BE"><span class="nav-number">1.1.</span> <span class="nav-text">Sence - “场景”视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A3%9E%E8%B6%8A%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.1.</span> <span class="nav-text">飞越模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.2.</span> <span class="nav-text">查看工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.</span> <span class="nav-text">坐标系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.1.</span> <span class="nav-text">世界坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.2.</span> <span class="nav-text">局部坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%8F%E5%B9%95%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.3.</span> <span class="nav-text">屏幕坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E5%8F%A3%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.4.</span> <span class="nav-text">视口坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E4%BD%8D%E7%BD%AE"><span class="nav-number">1.2.5.</span> <span class="nav-text">鼠标位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2-API"><span class="nav-number">1.2.6.</span> <span class="nav-text">坐标系之间的转换(API)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Camera-%E6%91%84%E5%83%8F%E6%9C%BA"><span class="nav-number">1.3.</span> <span class="nav-text">Camera - 摄像机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E8%A7%86%E8%A7%92"><span class="nav-number">1.3.1.</span> <span class="nav-text">使用场景的视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E4%BD%93%E6%98%BE%E7%A4%BA%E9%A1%BA%E5%BA%8F"><span class="nav-number">1.3.2.</span> <span class="nav-text">物体显示顺序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PivotRotation-%E5%AE%9A%E5%90%91%E6%96%B9%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">PivotRotation -定向方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.5.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MonoBehaviour"><span class="nav-number">1.6.</span> <span class="nav-text">MonoBehaviour</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Awake-%E8%84%9A%E6%9C%AC%E8%BD%BD%E5%85%A5%E6%97%B6%E8%B0%83%E7%94%A8"><span class="nav-number">1.6.1.</span> <span class="nav-text">Awake() - 脚本载入时调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Start-%E8%84%9A%E6%9C%AC%E5%AE%9E%E4%BE%8B%E6%97%B6%E8%B0%83%E7%94%A8"><span class="nav-number">1.6.2.</span> <span class="nav-text">Start() - 脚本实例时调用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Start-%E5%92%8CAwake-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">Start()和Awake()的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FixedUpdate-%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-number">1.6.3.</span> <span class="nav-text">FixedUpdate() - 物理系统更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Update"><span class="nav-number">1.6.4.</span> <span class="nav-text">Update()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LateUpdate-%E5%BB%B6%E6%97%B6%E6%9B%B4%E6%96%B0"><span class="nav-number">1.6.5.</span> <span class="nav-text">LateUpdate() - 延时更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StartCoroutine-%E5%90%AF%E5%8A%A8%E5%8D%8F%E7%A8%8B"><span class="nav-number">1.6.6.</span> <span class="nav-text">StartCoroutine - 启动协程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GameObject-%E6%B8%B8%E6%88%8F%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.7.</span> <span class="nav-text">GameObject - 游戏对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Find-%E6%8C%89%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.7.1.</span> <span class="nav-text">Find - 按名称获取对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FindWithTag-%E6%8C%89%E6%A0%87%E7%AD%BE%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.7.2.</span> <span class="nav-text">FindWithTag - 按标签获取对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FindGameObjectsWithTag-%E6%8C%89%E6%A0%87%E7%AD%BE%E8%8E%B7%E5%8F%96%E2%80%9C%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E2%80%9D"><span class="nav-number">1.7.3.</span> <span class="nav-text">FindGameObjectsWithTag - 按标签获取“对象数组”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%BE%97%E5%88%B0%E7%9A%84%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E9%A1%BA%E5%BA%8F%E7%9A%84%E9%97%AE%E9%A2%98-by-%E5%AE%87%E7%BE%BD"><span class="nav-number">1.7.3.1.</span> <span class="nav-text">关于得到的数组内容顺序的问题 - by.宇羽</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CompareTag-%E6%A3%80%E6%B5%8B%E5%AF%B9%E8%B1%A1%E6%A0%87%E7%AD%BE"><span class="nav-number">1.7.4.</span> <span class="nav-text">CompareTag - 检测对象标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GetComponent-%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E7%BB%84%E4%BB%B6"><span class="nav-number">1.7.5.</span> <span class="nav-text">GetComponent - 获取对象组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transform-%E5%8F%98%E6%8D%A2"><span class="nav-number">1.8.</span> <span class="nav-text">Transform - 变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Position-%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87"><span class="nav-number">1.8.1.</span> <span class="nav-text">Position - 世界坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localPosition-%E5%B1%80%E9%83%A8%E4%BD%8D%E7%BD%AE%E5%9D%90%E6%A0%87"><span class="nav-number">1.8.2.</span> <span class="nav-text">localPosition - 局部位置坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%8B%E8%BD%AC"><span class="nav-number">1.8.3.</span> <span class="nav-text">旋转</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#localRotation-%E5%B1%80%E9%83%A8%E6%97%8B%E8%BD%AC"><span class="nav-number">1.8.3.1.</span> <span class="nav-text">localRotation - 局部旋转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#eulerAngles-%E6%AC%A7%E6%8B%89%E6%97%8B%E8%BD%AC"><span class="nav-number">1.8.3.2.</span> <span class="nav-text">eulerAngles - 欧拉旋转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#eulerAngles%E5%92%8Crotation%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.8.3.3.</span> <span class="nav-text">eulerAngles和rotation的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localScale-%E5%B1%80%E9%83%A8%E5%8F%98%E6%8D%A2%E7%BC%A9%E6%94%BE"><span class="nav-number">1.8.4.</span> <span class="nav-text">localScale - 局部变换缩放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RectTransform-%E7%9F%A9%E5%BD%A2%E5%8F%98%E6%8D%A2"><span class="nav-number">1.8.5.</span> <span class="nav-text">RectTransform - 矩形变换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RectTransform%E4%B9%8BUI%E5%AE%BD%E9%AB%98%E5%92%8CSizeDelta"><span class="nav-number">1.8.5.1.</span> <span class="nav-text">RectTransform之UI宽高和SizeDelta</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector3-%E4%B8%89%E7%BB%B4%E5%90%91%E9%87%8F"><span class="nav-number">1.9.</span> <span class="nav-text">Vector3 - 三维向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#normalized-%E5%BD%92%E4%B8%80%E5%8C%96%E5%90%91%E9%87%8F"><span class="nav-number">1.9.1.</span> <span class="nav-text">normalized - 归一化向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Normalize-%E5%BD%92%E4%B8%80%E5%8C%96%E5%87%BD%E6%95%B0"><span class="nav-number">1.9.2.</span> <span class="nav-text">Normalize - 归一化函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#magnitude-%E5%90%91%E9%87%8F%E9%95%BF%E5%BA%A6"><span class="nav-number">1.9.3.</span> <span class="nav-text">magnitude - 向量长度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqrMagnitude-%E5%90%91%E9%87%8F%E9%95%BF%E5%BA%A6%E7%9A%84%E5%B9%B3%E6%96%B9"><span class="nav-number">1.9.4.</span> <span class="nav-text">sqrMagnitude - 向量长度的平方</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collider2D-2D%E7%A2%B0%E6%92%9E%E4%BD%93"><span class="nav-number">1.10.</span> <span class="nav-text">Collider2D - 2D碰撞体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IsTouchingLayers-%E4%B8%8ELayers%E8%A7%A6%E7%A2%B0"><span class="nav-number">1.10.1.</span> <span class="nav-text">IsTouchingLayers - 与Layers触碰</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ClosestPoint-%E7%A2%B0%E6%92%9E%E5%A4%84%E7%9A%84%E6%9C%80%E8%BF%91%E7%82%B9"><span class="nav-number">1.10.2.</span> <span class="nav-text">ClosestPoint - 碰撞处的最近点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bounds-ClosestPoint"><span class="nav-number">1.10.3.</span> <span class="nav-text">Bounds.ClosestPoint</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Time-%E6%97%B6%E9%97%B4"><span class="nav-number">1.11.</span> <span class="nav-text">Time - 时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#timeScale-%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D%E9%80%9F%E7%8E%87"><span class="nav-number">1.11.1.</span> <span class="nav-text">timeScale - 时间流逝速率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="nav-number">1.12.</span> <span class="nav-text">协程与线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Coroutine-%E5%8D%8F%E7%A8%8B"><span class="nav-number">1.12.1.</span> <span class="nav-text">Coroutine - 协程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%81%9C%E6%AD%A2%E5%8D%8F%E7%A8%8B"><span class="nav-number">1.12.1.1.</span> <span class="nav-text">停止协程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B"><span class="nav-number">1.12.2.</span> <span class="nav-text">线程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input-%E8%BE%93%E5%85%A5%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="nav-number">1.13.</span> <span class="nav-text">Input - 输入控制器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GetAxis-%E8%8E%B7%E5%8F%96%E8%BD%B4"><span class="nav-number">1.13.1.</span> <span class="nav-text">GetAxis - 获取轴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GetButtonDown-%E6%8C%89%E9%92%AE%E6%8C%89%E4%B8%8B"><span class="nav-number">1.13.2.</span> <span class="nav-text">GetButtonDown - 按钮按下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prefab-%E9%A2%84%E5%88%B6%E4%BD%93"><span class="nav-number">1.14.</span> <span class="nav-text">Prefab - 预制体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prefab-Variant-%E9%A2%84%E5%88%B6%E4%BB%B6%E5%8F%98%E4%BD%93"><span class="nav-number">1.15.</span> <span class="nav-text">Prefab Variant - 预制件变体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object"><span class="nav-number">1.16.</span> <span class="nav-text">Object</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Instantiate-%E5%85%8B%E9%9A%86%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.16.1.</span> <span class="nav-text">Instantiate - 克隆对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E"><span class="nav-number">1.16.1.1.</span> <span class="nav-text">返回</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0"><span class="nav-number">1.16.1.2.</span> <span class="nav-text">参数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SceneManager"><span class="nav-number">1.17.</span> <span class="nav-text">SceneManager</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LoadScene-%E5%8A%A0%E8%BD%BD%E5%9C%BA%E6%99%AF"><span class="nav-number">1.17.1.</span> <span class="nav-text">LoadScene - 加载场景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#LoadSceneMode-%E5%9C%BA%E6%99%AF%E5%8A%A0%E8%BD%BD%E7%9A%84%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.17.1.1.</span> <span class="nav-text">LoadSceneMode - 场景加载的模式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attributes-%E5%8F%98%E9%87%8F"><span class="nav-number">1.18.</span> <span class="nav-text">Attributes - 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SerializeField-%E5%BA%8F%E5%88%97%E5%8C%96"><span class="nav-number">1.18.1.</span> <span class="nav-text">SerializeField - 序列化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NonSerialized-%E5%8F%96%E6%B6%88%E5%BA%8F%E5%88%97%E5%8C%96"><span class="nav-number">1.18.2.</span> <span class="nav-text">NonSerialized - 取消序列化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tags-and-Layers-%E6%A0%87%E7%AD%BE%E3%80%81%E5%9B%BE%E5%B1%82"><span class="nav-number">2.</span> <span class="nav-text">Tags and Layers - 标签、图层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Layer-%E5%B1%82"><span class="nav-number">2.1.</span> <span class="nav-text">Layer - 层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E5%B1%82%E7%9A%84%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B"><span class="nav-number">2.1.1.</span> <span class="nav-text">基于层的碰撞检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SortingLayer"><span class="nav-number">2.2.</span> <span class="nav-text">SortingLayer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SortingGroup-%E6%8E%92%E5%BA%8F%E7%BB%84"><span class="nav-number">2.3.</span> <span class="nav-text">SortingGroup - 排序组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E6%8E%92%E5%BA%8F%E7%BB%84"><span class="nav-number">2.3.1.</span> <span class="nav-text">设置排序组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sorting-Group-%E5%B1%9E%E6%80%A7"><span class="nav-number">2.3.2.</span> <span class="nav-text">Sorting Group 属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bolt-%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BC%96%E7%A8%8B"><span class="nav-number">2.4.</span> <span class="nav-text">Bolt - 可视化编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quaternion-%E5%9B%9B%E5%85%83%E6%95%B0"><span class="nav-number">2.5.</span> <span class="nav-text">Quaternion - 四元数</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">Unity-学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#sence---%E5%9C%BA%E6%99%AF%E8%A7%86%E5%9B%BE"><span class="nav-number">1.1.</span> <span class="nav-text">Sence - “场景”视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A3%9E%E8%B6%8A%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.1.</span> <span class="nav-text">飞越模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.2.</span> <span class="nav-text">查看工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.</span> <span class="nav-text">坐标系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.1.</span> <span class="nav-text">世界坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.2.</span> <span class="nav-text">局部坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%8F%E5%B9%95%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.3.</span> <span class="nav-text">屏幕坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E5%8F%A3%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.2.4.</span> <span class="nav-text">视口坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E4%BD%8D%E7%BD%AE"><span class="nav-number">1.2.5.</span> <span class="nav-text">鼠标位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E8%A7%86%E8%A7%92"><span class="nav-number">1.2.6.</span> <span class="nav-text">使用场景的视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E4%BD%93%E6%98%BE%E7%A4%BA%E9%A1%BA%E5%BA%8F"><span class="nav-number">1.2.7.</span> <span class="nav-text">物体显示顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awake---%E8%84%9A%E6%9C%AC%E8%BD%BD%E5%85%A5%E6%97%B6%E8%B0%83%E7%94%A8"><span class="nav-number">1.2.8.</span> <span class="nav-text">Awake()
+- 脚本载入时调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#start---%E8%84%9A%E6%9C%AC%E5%AE%9E%E4%BE%8B%E6%97%B6%E8%B0%83%E7%94%A8"><span class="nav-number">1.2.9.</span> <span class="nav-text">Start()
+- 脚本实例时调用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#start%E5%92%8Cawake%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.2.9.1.</span> <span class="nav-text">Start()和Awake()的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fixedupdate---%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-number">1.2.10.</span> <span class="nav-text">FixedUpdate()
+- 物理系统更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#update"><span class="nav-number">1.2.11.</span> <span class="nav-text">Update()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#startcoroutine---%E5%90%AF%E5%8A%A8%E5%8D%8F%E7%A8%8B"><span class="nav-number">1.2.12.</span> <span class="nav-text">StartCoroutine
+- 启动协程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gameobject---%E6%B8%B8%E6%88%8F%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.3.</span> <span class="nav-text">GameObject
+- 游戏对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find---%E6%8C%89%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.3.1.</span> <span class="nav-text">Find
+- 按名称获取对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#findgameobjectswithtag---%E6%8C%89%E6%A0%87%E7%AD%BE%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84"><span class="nav-number">1.3.2.</span> <span class="nav-text">FindGameObjectsWithTag
+- 按标签获取“对象数组”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%BE%97%E5%88%B0%E7%9A%84%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E9%A1%BA%E5%BA%8F%E7%9A%84%E9%97%AE%E9%A2%98---by.%E5%AE%87%E7%BE%BD"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">关于得到的数组内容顺序的问题
+- by.宇羽</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comparetag---%E6%A3%80%E6%B5%8B%E5%AF%B9%E8%B1%A1%E6%A0%87%E7%AD%BE"><span class="nav-number">1.3.3.</span> <span class="nav-text">CompareTag
+- 检测对象标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getcomponent---%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E7%BB%84%E4%BB%B6"><span class="nav-number">1.3.4.</span> <span class="nav-text">GetComponent
+- 获取对象组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform---%E5%8F%98%E6%8D%A2"><span class="nav-number">1.4.</span> <span class="nav-text">Transform
+- 变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#position---%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87"><span class="nav-number">1.4.1.</span> <span class="nav-text">Position
+- 世界坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localposition---%E5%B1%80%E9%83%A8%E4%BD%8D%E7%BD%AE%E5%9D%90%E6%A0%87"><span class="nav-number">1.4.2.</span> <span class="nav-text">localPosition
+- 局部位置坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%8B%E8%BD%AC"><span class="nav-number">1.4.3.</span> <span class="nav-text">旋转</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#localrotation---%E5%B1%80%E9%83%A8%E6%97%8B%E8%BD%AC"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">localRotation
+- 局部旋转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#eulerangles---%E6%AC%A7%E6%8B%89%E6%97%8B%E8%BD%AC"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">eulerAngles
+- 欧拉旋转</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#recttransform---%E7%9F%A9%E5%BD%A2%E5%8F%98%E6%8D%A2"><span class="nav-number">1.4.4.</span> <span class="nav-text">RectTransform
+- 矩形变换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#recttransform%E4%B9%8Bui%E5%AE%BD%E9%AB%98%E5%92%8Csizedelta"><span class="nav-number">1.4.4.1.</span> <span class="nav-text">RectTransform之UI宽高和SizeDelta</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector3---%E4%B8%89%E7%BB%B4%E5%90%91%E9%87%8F"><span class="nav-number">1.5.</span> <span class="nav-text">Vector3
+- 三维向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#normalized---%E5%BD%92%E4%B8%80%E5%8C%96%E5%90%91%E9%87%8F"><span class="nav-number">1.5.1.</span> <span class="nav-text">normalized
+- 归一化向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#normalize---%E5%BD%92%E4%B8%80%E5%8C%96%E5%87%BD%E6%95%B0"><span class="nav-number">1.5.2.</span> <span class="nav-text">Normalize
+- 归一化函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#magnitude---%E5%90%91%E9%87%8F%E9%95%BF%E5%BA%A6"><span class="nav-number">1.5.3.</span> <span class="nav-text">magnitude
+- 向量长度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqrmagnitude---%E5%90%91%E9%87%8F%E9%95%BF%E5%BA%A6%E7%9A%84%E5%B9%B3%E6%96%B9"><span class="nav-number">1.5.4.</span> <span class="nav-text">sqrMagnitude
+- 向量长度的平方</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#collider2d---2d%E7%A2%B0%E6%92%9E%E4%BD%93"><span class="nav-number">1.6.</span> <span class="nav-text">Collider2D
+- 2D碰撞体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#closestpoint---%E7%A2%B0%E6%92%9E%E5%A4%84%E7%9A%84%E6%9C%80%E8%BF%91%E7%82%B9"><span class="nav-number">1.6.1.</span> <span class="nav-text">ClosestPoint -
+碰撞处的最近点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="nav-number">1.7.</span> <span class="nav-text">协程与线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#input---%E8%BE%93%E5%85%A5%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="nav-number">1.8.</span> <span class="nav-text">Input
+- 输入控制器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#getbuttondown---%E6%8C%89%E9%92%AE%E6%8C%89%E4%B8%8B"><span class="nav-number">1.8.1.</span> <span class="nav-text">GetButtonDown
+- 按钮按下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prefab---%E9%A2%84%E5%88%B6%E4%BD%93"><span class="nav-number">1.9.</span> <span class="nav-text">Prefab
+- 预制体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prefab-variant---%E9%A2%84%E5%88%B6%E4%BB%B6%E5%8F%98%E4%BD%93"><span class="nav-number">1.10.</span> <span class="nav-text">Prefab
+Variant - 预制件变体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#object"><span class="nav-number">1.11.</span> <span class="nav-text">Object</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#instantiate---%E5%85%8B%E9%9A%86%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.11.1.</span> <span class="nav-text">Instantiate
+- 克隆对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scenemanager"><span class="nav-number">1.12.</span> <span class="nav-text">SceneManager</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#loadscene---%E5%8A%A0%E8%BD%BD%E5%9C%BA%E6%99%AF"><span class="nav-number">1.12.1.</span> <span class="nav-text">LoadScene
+- 加载场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#attributes---%E5%8F%98%E9%87%8F"><span class="nav-number">1.13.</span> <span class="nav-text">Attributes - 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#serializefield--%E5%BA%8F%E5%88%97%E5%8C%96"><span class="nav-number">1.13.1.</span> <span class="nav-text">SerializeField-
+序列化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nonserialized--%E5%8F%96%E6%B6%88%E5%BA%8F%E5%88%97%E5%8C%96"><span class="nav-number">1.13.2.</span> <span class="nav-text">NonSerialized-
+取消序列化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tags-and-layers---%E6%A0%87%E7%AD%BE%E5%9B%BE%E5%B1%82"><span class="nav-number">2.</span> <span class="nav-text">Tags
+and Layers - 标签、图层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#layer---%E5%B1%82"><span class="nav-number">2.1.</span> <span class="nav-text">Layer -
+层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E5%B1%82%E7%9A%84%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B"><span class="nav-number">2.1.1.</span> <span class="nav-text">基于层的碰撞检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sortinglayer"><span class="nav-number">2.2.</span> <span class="nav-text">SortingLayer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bolt---%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BC%96%E7%A8%8B"><span class="nav-number">2.3.</span> <span class="nav-text">Bolt - 可视化编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#quaternion---%E5%9B%9B%E5%85%83%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">Quaternion - 四元数</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="yunying61"
-      src="/images/yunying61.png">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
   <p class="site-author-name" itemprop="name">yunying61</p>
   <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
 </div>
@@ -185,7 +221,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">149</span>
+        <span class="site-state-item-count">150</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -305,6 +341,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2022/04/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-meta-item leancloud_visitors" data-flag-title="Unity-学习笔记" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -332,7 +369,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>21k</span>
+      <span>22k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -350,16 +387,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Unity-学习笔记">Unity-学习笔记<a class="header-anchor" href="#Unity-学习笔记">·</a></h1>
-<h2 id="Sence-“场景”视图">Sence - “场景”视图<a class="header-anchor" href="#Sence-“场景”视图">·</a></h2>
+        <h1 id="unity-学习笔记">Unity-学习笔记</h1>
+<h2 id="sence---场景视图">Sence - “场景”视图</h2>
 <ul>
-<li><strong>平移：<strong>在工具栏中选择</strong>“抓手</strong>”工具，然后在“场景”视图中单击并拖动以<strong>平面横向移动</strong>视图。</li>
-<li>**缩放：**按住 <strong>Alt</strong> （Windows） 或 <strong>Option</strong> （macOS），在场景视图中右键单击并拖动以进行缩放。</li>
-<li>**轴点：**按住 <strong>Alt</strong>（Windows）或 <strong>Option</strong> （macOS），左键点按并拖动以围绕当前轴点观察。（注： 此选项在 2D 模式下不可用。）</li>
-<li>**焦点（帧选择）：**选择游戏对象后， 在“场景”视图中按 <strong>F</strong> 键，将视图聚焦在该游戏对象上。 <strong>注：</strong> 如果光标不在“场景”视图中，则“帧选择”将不起作用。</li>
+<li><strong>平移：</strong>在工具栏中选择<strong>“抓手</strong>”工具，然后在“场景”视图中单击并拖动以<strong>平面横向移动</strong>视图。</li>
+<li><strong>缩放：</strong>按住 <strong>Alt</strong> （Windows） 或
+<strong>Option</strong>
+（macOS），在场景视图中右键单击并拖动以进行缩放。</li>
+<li><strong>轴点：</strong>按住 <strong>Alt</strong>（Windows）或
+<strong>Option</strong>
+（macOS），左键点按并拖动以围绕当前轴点观察。（注： 此选项在 2D
+模式下不可用。）</li>
+<li><strong>焦点（帧选择）：</strong>选择游戏对象后， 在“场景”视图中按
+<strong>F</strong> 键，将视图聚焦在该游戏对象上。 <strong>注：</strong>
+如果光标不在“场景”视图中，则“帧选择”将不起作用。</li>
 </ul>
 <span id="more"></span>
-<h3 id="飞越模式">飞越模式<a class="header-anchor" href="#飞越模式">·</a></h3>
+<h3 id="飞越模式">飞越模式</h3>
 <p>通过以第一人称飞来飞去，在场景视图中导航：</p>
 <ul>
 <li>在“场景”视图中，按住鼠标右键。</li>
@@ -367,25 +411,28 @@
 <li>使用 <strong>Q</strong> 和 <strong>E</strong> 上下移动视图。</li>
 <li>选择并按住 <strong>Shift</strong> 以加快移动速度。</li>
 </ul>
-<p><strong>注：</strong> 飞越模式在 2D 模式下不可用。相反，在移动光标的同时按住鼠标右键可在“场景”视图中平移。</p>
-<h3 id="查看工具">查看工具<a class="header-anchor" href="#查看工具">·</a></h3>
-<p><img data-src="https://connect-cdn-public-prd.unitychina.cn/h1/20210831/learn/images/6111c17f-fed9-413c-a549-51eb325d4b25_B.2.1_img10.png.1800x0x1.png" alt="" /></p>
-<p>**Q：**手动工具，用于平移视图</p>
-<p>**W：**移动工具，以选择和更改位置</p>
-<p>**E：**旋转工具，用于选择和旋转</p>
-<p>**R：**缩放工具，用于选择和更改大小</p>
-<p>**T：**矩形变换工具，以 2D 形式缩放</p>
-<p>**Y：**变换工具，使用一个 Gizmo 进行移动、缩放和旋转</p>
-<p>对于每个变换工具，都会显示一个 Gizmo，允许您沿每个特定轴操作游戏对象。当您操作这些控件时，转换组件中的值会相应地更改。</p>
-<p><img data-src="https://connect-cdn-public-prd.unitychina.cn/h1/20210901/learn/images/dd5106e0-bda8-4473-b7ce-bdcde83f9461_3.1.11.png.1800x0x1.png" alt="" /></p>
-<h2 id="坐标系">坐标系<a class="header-anchor" href="#坐标系">·</a></h2>
-<h3 id="世界坐标系">世界坐标系<a class="header-anchor" href="#世界坐标系">·</a></h3>
+<p><strong>注：</strong> 飞越模式在 2D
+模式下不可用。相反，在移动光标的同时按住鼠标右键可在“场景”视图中平移。</p>
+<h3 id="查看工具">查看工具</h3>
+<p><img data-src="https://connect-cdn-public-prd.unitychina.cn/h1/20210831/learn/images/6111c17f-fed9-413c-a549-51eb325d4b25_B.2.1_img10.png.1800x0x1.png" /></p>
+<p><strong>Q：</strong>手动工具，用于平移视图</p>
+<p><strong>W：</strong>移动工具，以选择和更改位置</p>
+<p><strong>E：</strong>旋转工具，用于选择和旋转</p>
+<p><strong>R：</strong>缩放工具，用于选择和更改大小</p>
+<p><strong>T：</strong>矩形变换工具，以 2D 形式缩放</p>
+<p><strong>Y：</strong>变换工具，使用一个 Gizmo 进行移动、缩放和旋转</p>
+<p>对于每个变换工具，都会显示一个
+Gizmo，允许您沿每个特定轴操作游戏对象。当您操作这些控件时，转换组件中的值会相应地更改。</p>
+<p><img data-src="https://connect-cdn-public-prd.unitychina.cn/h1/20210901/learn/images/dd5106e0-bda8-4473-b7ce-bdcde83f9461_3.1.11.png.1800x0x1.png" /></p>
+<h2 id="坐标系">坐标系</h2>
+<h3 id="世界坐标系">世界坐标系</h3>
 <ul>
 <li>在Unity中创建的物体都是以全局坐标系中的坐标原点（0,0,0），来确定各自的位置的</li>
-<li>Unity中，如果一个游戏物体没有父物体，则 Inspector中transform 显示的为全局坐标</li>
+<li>Unity中，如果一个游戏物体没有父物体，则 Inspector中transform
+显示的为全局坐标</li>
 <li>Unity中，可以用 transform.position 取得一个物体的世界坐标</li>
 </ul>
-<h3 id="局部坐标系">局部坐标系<a class="header-anchor" href="#局部坐标系">·</a></h3>
+<h3 id="局部坐标系">局部坐标系</h3>
 <blockquote>
 <ul>
 <li>每个物体都有自身独立的物体坐标系；当物体移动或改变方向时，和该物体相关联的局部坐标系本身将随之移动或改变方向</li>
@@ -394,368 +441,726 @@
 </blockquote>
 <blockquote>
 <ul>
-<li>如果一个游戏物体是另一个的子物体，则该物体的坐标 在 Inspector 中 transform 显示的为其父物体的局部坐标。  其实子物体的坐标是相对于其父物体的原点坐标来计算的。</li>
-<li>可以通过 transform.localPosition 取得一个物体在其父物体的局部坐标系中的坐标</li>
-<li>如果该游戏物体没有父物体，那么 transform.localPosition 获得的依然是该物体在全局坐标系中的坐标。</li>
-<li>如果该物体有父物体，则获得是其<strong>在父物体的局部坐标系中的坐标</strong>。此时检视视图中显示的为 localPosition 的值。</li>
+<li>如果一个游戏物体是另一个的子物体，则该物体的坐标 在 Inspector 中
+transform 显示的为其父物体的局部坐标。
+其实子物体的坐标是相对于其父物体的原点坐标来计算的。</li>
+<li>可以通过 transform.localPosition
+取得一个物体在其父物体的局部坐标系中的坐标</li>
+<li>如果该游戏物体没有父物体，那么 transform.localPosition
+获得的依然是该物体在全局坐标系中的坐标。</li>
+<li>如果该物体有父物体，则获得是其<strong>在父物体的局部坐标系中的坐标</strong>。此时检视视图中显示的为
+localPosition 的值。</li>
 </ul>
 </blockquote>
-<h3 id="屏幕坐标系">屏幕坐标系<a class="header-anchor" href="#屏幕坐标系">·</a></h3>
-<p>屏幕坐标系是以屏幕**左下角为（0,0）**点，<strong>右上角为（Screen.Width,Screen.Height)</strong> 。</p>
+<h3 id="屏幕坐标系">屏幕坐标系</h3>
+<p>屏幕坐标系是以屏幕<strong>左下角为（0,0）</strong>点，<strong>右上角为（Screen.Width,Screen.Height)</strong>
+。</p>
 <ul>
-<li>屏幕坐标系是建立在屏幕上的二维坐标系；是以像素为单位，屏幕的左下角为(0, 0)，右上角为 (Screen.width, Screen.height)；z轴坐标为相机的世界坐标中z轴的负值</li>
-<li>鼠标位置坐标属于屏幕坐标 ， 可以使用 Input.mousePosition 获得鼠标当前位置的坐标。通过该函数返回的是Vector3类型的变量，但z分量始终为0。</li>
-<li>手指触摸屏幕的坐标属于屏幕坐标 ； 可以使用Input.GetTouch(0).position 可以获得单个手指触摸屏幕时手指的坐标。</li>
+<li>屏幕坐标系是建立在屏幕上的二维坐标系；是以像素为单位，屏幕的左下角为(0,
+0)，右上角为 (Screen.width,
+Screen.height)；z轴坐标为相机的世界坐标中z轴的负值</li>
+<li>鼠标位置坐标属于屏幕坐标 ， 可以使用 Input.mousePosition
+获得鼠标当前位置的坐标。通过该函数返回的是Vector3类型的变量，但z分量始终为0。</li>
+<li>手指触摸屏幕的坐标属于屏幕坐标 ； 可以使用Input.GetTouch(0).position
+可以获得单个手指触摸屏幕时手指的坐标。</li>
 </ul>
-<h3 id="视口坐标系">视口坐标系<a class="header-anchor" href="#视口坐标系">·</a></h3>
-<p>视口坐标是以摄像机为准，以<strong>屏幕的左下角为（0,0）点</strong>，<strong>右上角为（1,1）点</strong> 。</p>
-<blockquote>
-<ul>
-<li>视口坐标系是与屏幕坐标系息息相关的，它是将 Game视图的屏幕坐标系单位化，即左下角为(0, 0)，右上角为(1, 1)，z轴坐标是相机的世界坐标中z轴坐标的负值</li>
-<li>假如说屏幕坐标系左下角是（0,0）， 右上角是 （800,600）。  现在在一个点在屏幕坐标系上的坐标为 （200,450）。  现在我们把该点的坐标单位化为： x = =( 200/800 = 0.25), y == ( 450 / 600 = 0.75 ),  最终该点单位化的结果坐标为 （0.25,0.75，0）</li>
-</ul>
-</blockquote>
-<h3 id="鼠标位置">鼠标位置<a class="header-anchor" href="#鼠标位置">·</a></h3>
-<p>Input.mousePosition</p>
-<h3 id="坐标系之间的转换-API"><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34536551/article/details/90269908">坐标系之间的转换(API)</a><a class="header-anchor" href="#坐标系之间的转换-API">·</a></h3>
-<p>世界转本地<br />
-transform.InverseTransformDirection();<br />
-transform.InverseTransformPoint();<br />
-transform.TransformVector();</p>
-<p>本地转世界<br />
-transform.TransformDirection();<br />
-transform.TransformPoint();<br />
-transform.TransformVector();</p>
-<p>世界转屏幕<br />
-Camera.main.WorldToScreenPoint();</p>
-<p>屏幕转世界<br />
-Camera.main.ScreenToWorldPoint();</p>
-<p>世界转视口<br />
-Camera.main.WorldToViewportPoint();</p>
-<p>视口转世界<br />
-Camera.main.ViewportToWorldPoint();</p>
-<p>视口转屏幕<br />
-Camera.main.ViewportToScreenPoint();</p>
-<p>屏幕转视口<br />
-Camera.main.ScreenToViewportPoint();</p>
-<h2 id="Camera-摄像机">Camera - 摄像机<a class="header-anchor" href="#Camera-摄像机">·</a></h2>
-<h3 id="使用场景的视角">使用场景的视角<a class="header-anchor" href="#使用场景的视角">·</a></h3>
-<p>将摄像机与当前场景视图对齐，方法是在“层次结构”窗口中选择摄像机，然后按 Ctrl+Shift+F。</p>
-<h3 id="物体显示顺序">物体显示顺序<a class="header-anchor" href="#物体显示顺序">·</a></h3>
-<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1667372171922-7c1391e0-0eb7-4802-8f7c-130c655690a3.png#averageHue=%233d3d3d&amp;clientId=ucaf7a866-209d-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=78&amp;id=u3f9f6204&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=78&amp;originWidth=933&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=12794&amp;status=done&amp;style=none&amp;taskId=u22f9e9a1-c25a-45af-8865-7969c6259d6&amp;title=&amp;width=933" alt="image.png" /><br />
-此设置，会将物体从 Y 轴上排序，位于屏幕<strong>上方</strong>的物体会被屏幕<strong>下方</strong>的物体所遮挡。</p>
-<h2 id="PivotRotation-定向方式"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PivotRotation.html">PivotRotation</a> -定向方式<a class="header-anchor" href="#PivotRotation-定向方式">·</a></h2>
-<h2 id="描述">描述<a class="header-anchor" href="#描述">·</a></h2>
-<p>对象坐标的定向方式。</p>
+<h3 id="视口坐标系">视口坐标系</h3>
+<p>视口坐标是以摄像机为准，以<strong>屏幕的左下角为（0,0）点</strong>，<strong>右上角为（1,1）点</strong>
+。 &gt; - 视口坐标系是与屏幕坐标系息息相关的，它是将
+Game视图的屏幕坐标系单位化，即左下角为(0, 0)，右上角为(1,
+1)，z轴坐标是相机的世界坐标中z轴坐标的负值 &gt; -
+假如说屏幕坐标系左下角是（0,0）， 右上角是 （800,600）。
+现在在一个点在屏幕坐标系上的坐标为 （200,450）。
+现在我们把该点的坐标单位化为： x = =( 200/800 = 0.25), y == ( 450 / 600
+= 0.75 ), 最终该点单位化的结果坐标为 （0.25,0.75，0）</p>
+<h3 id="鼠标位置">鼠标位置</h3>
+<p>Input.mousePosition ### <a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34536551/article/details/90269908">坐标系之间的转换(API)</a>
+世界转本地 transform.InverseTransformDirection();
+transform.InverseTransformPoint(); transform.TransformVector();</p>
+<p>本地转世界 transform.TransformDirection();
+transform.TransformPoint(); transform.TransformVector();</p>
+<p>世界转屏幕 Camera.main.WorldToScreenPoint();</p>
+<p>屏幕转世界 Camera.main.ScreenToWorldPoint();</p>
+<p>世界转视口 Camera.main.WorldToViewportPoint();</p>
+<p>视口转世界 Camera.main.ViewportToWorldPoint();</p>
+<p>视口转屏幕 Camera.main.ViewportToScreenPoint();</p>
+<p>屏幕转视口 Camera.main.ScreenToViewportPoint(); ## Camera -
+摄像机</p>
+<h3 id="使用场景的视角">使用场景的视角</h3>
+<p>将摄像机与当前场景视图对齐，方法是在“层次结构”窗口中选择摄像机，然后按
+Ctrl+Shift+F。</p>
+<h3 id="物体显示顺序">物体显示顺序</h3>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1667372171922-7c1391e0-0eb7-4802-8f7c-130c655690a3.png#averageHue=%233d3d3d&amp;clientId=ucaf7a866-209d-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=78&amp;id=u3f9f6204&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=78&amp;originWidth=933&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=12794&amp;status=done&amp;style=none&amp;taskId=u22f9e9a1-c25a-45af-8865-7969c6259d6&amp;title=&amp;width=933"
+alt="image.png" /> 此设置，会将物体从 Y
+轴上排序，位于屏幕<strong>上方</strong>的物体会被屏幕<strong>下方</strong>的物体所遮挡。
+## <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PivotRotation.html">PivotRotation</a>
+-定向方式 ## 描述 对象坐标的定向方式。</p>
 <table>
+<colgroup>
+<col style="width: 78%" />
+<col style="width: 21%" />
+</colgroup>
 <thead>
-<tr>
-<th><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PivotRotation.Local.html">Local</a></th>
+<tr class="header">
+<th><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PivotRotation.Local.html">Local</a></th>
 <th>从活动对象定向。</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PivotRotation.Global.html">Global</a></td>
+<tr class="odd">
+<td><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PivotRotation.Global.html">Global</a></td>
 <td>与全局轴对齐。</td>
 </tr>
 </tbody>
 </table>
-<p>Local（局部）：物体的自身坐标，可以理解为上下左右<br />
+<p>Local（局部）：物体的自身坐标，可以理解为上下左右
 Global（全局）：物体的世界坐标，可以理解为东南西北</p>
-<p>当cube旋转时，Global的坐标朝向是不变的，Local的坐标朝向<strong>与物体的旋转朝向一致</strong><br />
-<img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1652667491146-6bd46141-a881-46b6-9927-683177014c11.png#averageHue=%2379716c&amp;clientId=ud7b90d53-a856-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ud53cc927&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=534&amp;originWidth=810&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=83228&amp;status=done&amp;style=none&amp;taskId=u98b03cc1-16a5-4e51-8b0a-8513aea4f0c&amp;title=" alt="image.png" /><br />
-<img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1652667470128-3b3497fe-58ba-42cb-b7fb-0484ed0571d8.png#averageHue=%23766f6a&amp;clientId=ud7b90d53-a856-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u794721c1&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=572&amp;originWidth=860&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=92113&amp;status=done&amp;style=none&amp;taskId=u8415d70f-a3a3-453b-934b-4b83bb91c0d&amp;title=" alt="image.png" /></p>
-<h2 id="MonoBehaviour"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.html">MonoBehaviour</a><a class="header-anchor" href="#MonoBehaviour">·</a></h2>
-<p>MonoBehaviour 是一个基类，所有 Unity 脚本都派生自该类。<br />
-使用 C# 时，必须显式派生自 MonoBehaviour。</p>
-<p>该类不支持 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/maooyt/p/11856507.html">null 条件运算符</a> (?.) 和 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/expressions#the-null-coalescing-operator">null 合并运算符</a> (??)。</p>
-<h3 id="Awake-脚本载入时调用"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake()</a> - 脚本载入时调用<a class="header-anchor" href="#Awake-脚本载入时调用">·</a></h3>
+<p>当cube旋转时，Global的坐标朝向是不变的，Local的坐标朝向<strong>与物体的旋转朝向一致</strong>
+<img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1652667491146-6bd46141-a881-46b6-9927-683177014c11.png#averageHue=%2379716c&amp;clientId=ud7b90d53-a856-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ud53cc927&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=534&amp;originWidth=810&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=83228&amp;status=done&amp;style=none&amp;taskId=u98b03cc1-16a5-4e51-8b0a-8513aea4f0c&amp;title="
+alt="image.png" /> <img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1652667470128-3b3497fe-58ba-42cb-b7fb-0484ed0571d8.png#averageHue=%23766f6a&amp;clientId=ud7b90d53-a856-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u794721c1&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=572&amp;originWidth=860&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=92113&amp;status=done&amp;style=none&amp;taskId=u8415d70f-a3a3-453b-934b-4b83bb91c0d&amp;title="
+alt="image.png" /> ## <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></p>
+<p>MonoBehaviour 是一个基类，所有 Unity 脚本都派生自该类。 使用 C#
+时，必须显式派生自 MonoBehaviour。</p>
+<p>该类不支持 <a
+target="_blank" rel="noopener" href="https://www.cnblogs.com/maooyt/p/11856507.html">null
+条件运算符</a> (?.) 和 <a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/expressions#the-null-coalescing-operator">null
+合并运算符</a> (??)。</p>
+<h3 id="awake---脚本载入时调用"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake()</a>
+- 脚本载入时调用</h3>
 <p>Awake 在加载脚本实例时调用。</p>
-<p>在加载场景时初始化包含脚本的活动 GameObject 时，或者在将先前非活动的 GameObject 设置为活动时，或者在初始化使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.Instantiate.html">Object.Instantiate</a> 创建的 GameObject 之后，都将调用 Awake。 在应用程序启动前使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 来初始化变量或状态。</p>
-<p>在脚本实例的生存期内，Unity <strong>仅调用 <strong><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html"><strong>Awake</strong></a></strong> 一次</strong>。脚本的生存期持续到包含它的场景被卸载为止。如果重新加载场景，Unity 会再次加载脚本实例，因此会再次调用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>。如果以叠加方式加载场景多次，Unity 会加载多个脚本实例，因此 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 会被调用多次（<strong>每个实例一次</strong>）。</p>
+<p>在加载场景时初始化包含脚本的活动 GameObject 时，或者在将先前非活动的
+GameObject 设置为活动时，或者在初始化使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.Instantiate.html">Object.Instantiate</a>
+创建的 GameObject 之后，都将调用 Awake。 在应用程序启动前使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+来初始化变量或状态。</p>
+<p>在脚本实例的生存期内，Unity <strong>仅调用 </strong><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html"><strong>Awake</strong></a>**
+一次<strong>。脚本的生存期持续到包含它的场景被卸载为止。如果重新加载场景，Unity
+会再次加载脚本实例，因此会再次调用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>。如果以叠加方式加载场景多次，Unity
+会加载多个脚本实例，因此 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+会被调用多次（</strong>每个实例一次**）。</p>
 <hr />
-<p>对于放置在场景中的活动 GameObject，Unity 在初始化场景中的所有活动 GameObject 后调用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>，因此可以安全地使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.FindWithTag.html">GameObject.FindWithTag</a> 等方法查询其他 GameObject。</p>
-<p>Unity 调用每个 GameObject 的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 的顺序是不确定的。因此，你不应依赖一个 GameObject 的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 会在另一个 GameObject 的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 之前或之后调用（例如，你不应假定由一个 GameObject 的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 设置的引用可在另一个 GameObject 的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 中使用）。相反，你应该使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 在脚本之间设置引用，并使用 /Start/（在所有 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 调用完成后调用）来回传递任何信息。</p>
-<p>始终先调用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>，然后才调用任何 Start 函数。这让你可以对脚本的初始化进行排序。即使脚本是活动 GameObject 的禁用组件，也将调用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 不能充当协程。</p>
-<p>注意：请使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 来代替构造函数进行初始化，因为组件的序列化状态在构造时是未定义的。 与构造函数一样，仅调用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 一次。</p>
-<h3 id="Start-脚本实例时调用"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Start.html">Start()</a> - 脚本实例时调用<a class="header-anchor" href="#Start-脚本实例时调用">·</a></h3>
+<p>对于放置在场景中的活动 GameObject，Unity 在初始化场景中的所有活动
+GameObject 后调用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>，因此可以安全地使用
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.FindWithTag.html">GameObject.FindWithTag</a>
+等方法查询其他 GameObject。</p>
+<p>Unity 调用每个 GameObject 的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+的顺序是不确定的。因此，你不应依赖一个 GameObject 的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+会在另一个 GameObject 的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+之前或之后调用（例如，你不应假定由一个 GameObject 的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+设置的引用可在另一个 GameObject 的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+中使用）。相反，你应该使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+在脚本之间设置引用，并使用 /Start/（在所有 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+调用完成后调用）来回传递任何信息。</p>
+<p>始终先调用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>，然后才调用任何
+Start 函数。这让你可以对脚本的初始化进行排序。即使脚本是活动 GameObject
+的禁用组件，也将调用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>。</p>
+<p><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+不能充当协程。</p>
+<p>注意：请使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+来代替构造函数进行初始化，因为组件的序列化状态在构造时是未定义的。
+与构造函数一样，仅调用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+一次。</p>
+<h3 id="start---脚本实例时调用"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Start.html">Start()</a>
+- 脚本实例时调用</h3>
 <p>在首次调用任何 Update 方法之前启用脚本时，在帧上调用 Start。</p>
-<p>类似于 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 函数，Start 在脚本生命周期内<strong>仅调用一次</strong>。<br />
-但是，不管是否启用脚本，初始化脚本对象时都会调用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>。如果在初始化时未启用脚本，则可以在与 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 不同的帧上调用 Start。</p>
+<p>类似于 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+函数，Start 在脚本生命周期内<strong>仅调用一次</strong>。
+但是，不管是否启用脚本，初始化脚本对象时都会调用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>。如果在初始化时未启用脚本，则可以在与
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+不同的帧上调用 Start。</p>
 <blockquote>
-<p>在调用任何对象的 Start 函数之前，将在场景中的所有对象上调用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 函数。如果对象 A 的初始化代码需要依赖于已经初始化的对象 B，则这一点会非常有用；此时，B 的初始化应在 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 中完成，A 则应在 Start 中完成。</p>
+<p>在调用任何对象的 Start 函数之前，将在场景中的所有对象上调用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+函数。如果对象 A 的初始化代码需要依赖于已经初始化的对象
+B，则这一点会非常有用；此时，B 的初始化应在 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+中完成，A 则应在 Start 中完成。</p>
 </blockquote>
-<p>在游戏过程中实例化对象时，<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a> 函数在 Scene 对象的 Start 函数完成后调用。</p>
-<h4 id="Start-和Awake-的区别"><a target="_blank" rel="noopener" href="https://blog.csdn.net/pleasecallmewhy/article/details/8535329">Start()和Awake()的区别</a><a class="header-anchor" href="#Start-和Awake-的区别">·</a></h4>
-<p>Awake在MonoBehavior创建后就立刻调用，Start将在MonoBehavior创建后在该帧Update之前，在该Monobehavior.enabled == true的情况下执行。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Awake</span> ()</span>&#123;&#125;     </span><br><span class="line"><span class="comment">//初始化函数，在游戏开始时系统自动调用。一般用来创建变量之类的东西。</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span>&#123;&#125;</span><br><span class="line"><span class="comment">//初始化函数，在所有Awake函数运行完之后（一般是这样，但不一定），在所有Update函数前系统自动条用。一般用来给变量赋值。</span></span><br></pre></td></tr></table></figure>
-<p>参考资料：<a target="_blank" rel="noopener" href="https://blog.csdn.net/pleasecallmewhy/article/details/8535329">[Unity3D]脚本中Start()和Awake()的区别</a></p>
+<p>在游戏过程中实例化对象时，<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Awake.html">Awake</a>
+函数在 Scene 对象的 Start 函数完成后调用。</p>
+<h4 id="start和awake的区别"><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/pleasecallmewhy/article/details/8535329">Start()和Awake()的区别</a></h4>
+<p>Awake在MonoBehavior创建后就立刻调用，Start将在MonoBehavior创建后在该帧Update之前，在该Monobehavior.enabled
+== true的情况下执行。 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Awake</span> ()</span>&#123;&#125;     </span><br><span class="line"><span class="comment">//初始化函数，在游戏开始时系统自动调用。一般用来创建变量之类的东西。</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span>&#123;&#125;</span><br><span class="line"><span class="comment">//初始化函数，在所有Awake函数运行完之后（一般是这样，但不一定），在所有Update函数前系统自动条用。一般用来给变量赋值。</span></span><br></pre></td></tr></table></figure> 参考资料：<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/pleasecallmewhy/article/details/8535329">[Unity3D]脚本中Start()和Awake()的区别</a></p>
 <blockquote>
-<p>创建对象时的情况：<br />
-创建对象时 Unity 不会运行 Start()，而是在下一帧才开始运行。<br />
-创建对象时（调用 Instantiate 时）就会立即调用 Awake() 。</p>
-<p>这会导致，在 Start() 里面赋值的 Rigidbody ，在创建对象时并没有调用并赋值。<br />
-所以，要放在 Awake() 里面赋值。</p>
+<p>创建对象时的情况： 创建对象时 Unity 不会运行
+Start()，而是在下一帧才开始运行。 创建对象时（调用 Instantiate
+时）就会立即调用 Awake() 。</p>
+<p>这会导致，在 Start() 里面赋值的 Rigidbody
+，在创建对象时并没有调用并赋值。 所以，要放在 Awake() 里面赋值。</p>
 </blockquote>
-<h3 id="FixedUpdate-物理系统更新"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate()</a> - 物理系统更新<a class="header-anchor" href="#FixedUpdate-物理系统更新">·</a></h3>
-<p>用于物理计算且独立于帧率的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">MonoBehaviour.FixedUpdate</a> 消息。</p>
-<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">MonoBehaviour.FixedUpdate</a> 具有物理系统的频率；<strong>每个固定帧率帧调用该函数。</strong><br />
-在 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a> 之后，进行 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Physics.html">Physics</a> 系统计算。调用之间的默认时间为 0.02 秒（50 次调用/秒）。使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a> 来访问该值。变更该值，方法是在脚本内将其设置为所需的值，或者导航到 Edit &gt; Settings &gt; Time &gt; Fixed Timestep，然后在此处对其进行设置。</p>
-<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a> 频率高于或低于 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Update.html">Update</a>。如果应用程序以 25 帧/秒 (fps) 的速度运行，Unity 大约每帧调用该应用程序两次，或者，100 fps 使每个 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a> 大约渲染两帧。通过 Time 设置，控制所需帧率以及 Fixed Timestep 速率。使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Application-targetFrameRate.html">Application.targetFrameRate</a> 可以设置帧率。</p>
-<p>使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Rigidbody.html">Rigidbody</a> 时使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>。将力设置为 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Rigidbody.html">Rigidbody</a>，并在每个固定帧应用该力。<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a> 按照测量的时间步长进行，一般不会与 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Update.html">MonoBehaviour.Update</a> 冲突。</p>
-<h3 id="Update">Update()<a class="header-anchor" href="#Update">·</a></h3>
-<p>如果启用了 MonoBehaviour，则每帧调用 Update。<br />
-在实现任何类型的游戏脚本时，Update 都是最常用函数。 但并非所有 MonoBehaviour 脚本都需 Update()。</p>
-<p>要获取自上次调用 Update 以来所经过的时间，请使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-deltaTime.html">Time.deltaTime</a>。 仅在启用了 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Behaviour.html">Behaviour</a> 时，才会调用该函数。 您可以重写该函数来提供自定义组件的功能。</p>
-<h3 id="LateUpdate-延时更新"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.LateUpdate.html">LateUpdate()</a> - 延时更新<a class="header-anchor" href="#LateUpdate-延时更新">·</a></h3>
-<p>如果启用了 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Behaviour.html">Behaviour</a>，则每帧调用 LateUpdate。<br />
-LateUpdate 在调用所有 Update 函数后调用。 这对于安排脚本的执行顺序很有用。</p>
-<p>例如，跟随摄像机应始终在 LateUpdate 中实现， 因为它跟踪的对象可能已在 Update 中发生移动。</p>
-<p>要获取自上次调用 LateUpdate 以来所经过的时间，请使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-deltaTime.html">Time.deltaTime</a>。 仅在启用了 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Behaviour.html">Behaviour</a> 时，才会调用该函数。 您可以重载该函数来提供您的组件的功能。</p>
-<h3 id="StartCoroutine-启动协程"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.StartCoroutine.html">StartCoroutine</a> - 启动协程<a class="header-anchor" href="#StartCoroutine-启动协程">·</a></h3>
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Coroutine.html">Coroutine</a> StartCoroutine (IEnumerator routine);</p>
-<p>可以使用 yield 语句，随时暂停协程的执行。使用 yield 语句时，协程会暂停执行，并在下一帧自动恢复。请参阅<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/Coroutines.html">协程</a>文档以了解更多详细信息。</p>
-<p>协程非常适合用于在若干帧中对行为建模。StartCoroutine 方法在第一个 yield 返回时返回，不过可以生成结果，这会等到协程完成执行。即使多个协程在同一帧中完成，也不能保证它们按照与启动相同的顺序结束。</p>
-<p>生成的任何类型（包括 null）都会导致执行在后面的帧返回，除非协程已停止或完成。</p>
-<p>注意：可以使用 MonoBehaviour.<strong>StopCoroutine</strong> 和 MonoBehaviour.<strong>StopAllCoroutines</strong> <strong>停止协程</strong>。<br />
-销毁 MonoBehaviour 时，或是如果 MonoBehaviour 所附加到的 GameObject 已禁用，也会停止协程。<br />
-禁用 MonoBehaviour 时，不会停止协程。</p>
-<h2 id="GameObject-游戏对象"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.html">GameObject</a> - 游戏对象<a class="header-anchor" href="#GameObject-游戏对象">·</a></h2>
-<h3 id="Find-按名称获取对象"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.Find.html">Find</a> - 按名称获取对象<a class="header-anchor" href="#Find-按名称获取对象">·</a></h3>
-<p>public static <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.html">GameObject</a> Find (string name);</p>
-<p>按 name 查找 GameObject  对象，然后返回它。<br />
-此函数仅返回找到的其中一个活动 GameObject（不确定）。如果未找到具有 name 的 GameObject，则返回 null。如果 name 包含“/”字符，则会向路径名称那样遍历此层级视图。</p>
-<p>Find()<strong>较为消耗性能</strong>，建议不要每帧（Update()里）都使用此函数，而是在启动时将结果缓存到成员变量中，或者使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.FindWithTag.html">GameObject.FindWithTag</a>。</p>
-<p>注意：如果您要查找子 GameObject，使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Transform.Find.html">Transform.Find</a> 通常会更加轻松。<br />
-注意：如果正在使用多个场景运行此游戏，则 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.Find.html">Find</a> 将在所有这些场景中进行搜索。</p>
-<p>常见使用：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> GameObject hand;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    hand = GameObject.Find(<span class="string">&quot;/Monster/Arm/Hand&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    hand.transform.Rotate(<span class="number">0</span>, <span class="number">100</span> * Time.deltaTime, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="FindWithTag-按标签获取对象"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.FindWithTag.html">FindWithTag</a> - 按标签获取对象<a class="header-anchor" href="#FindWithTag-按标签获取对象">·</a></h3>
-<p>public static <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/GameObject.html">GameObject</a> FindWithTag (string tag);</p>
-<p>返回一个标签为 tag 的活动** <strong><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/GameObject.html"><strong>GameObject</strong></a></strong> 对象**。如果未找到 GameObject，则返回 null。<br />
-在使用标签之前，必须先在标签管理器中声明标签。如果标签不存在，或将空字符串或 null 作为标签传递，将抛出 UnityException。</p>
-<p>注意：此方法返回它找到的具有指定标签的第一个 GameObject。如果一个场景包含多个具有指定标签的活动 GameObjects，则无法保证此方法返回特定 GameObject。</p>
-<h3 id="FindGameObjectsWithTag-按标签获取“对象数组”"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.FindGameObjectsWithTag.html">FindGameObjectsWithTag</a> - 按标签获取“对象数组”<a class="header-anchor" href="#FindGameObjectsWithTag-按标签获取“对象数组”">·</a></h3>
+<h3 id="fixedupdate---物理系统更新"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate()</a>
+- 物理系统更新</h3>
+<p>用于物理计算且独立于帧率的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">MonoBehaviour.FixedUpdate</a>
+消息。</p>
+<p><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">MonoBehaviour.FixedUpdate</a>
+具有物理系统的频率；<strong>每个固定帧率帧调用该函数。</strong> 在 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>
+之后，进行 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Physics.html">Physics</a>
+系统计算。调用之间的默认时间为 0.02 秒（50 次调用/秒）。使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a>
+来访问该值。变更该值，方法是在脚本内将其设置为所需的值，或者导航到 Edit
+&gt; Settings &gt; Time &gt; Fixed
+Timestep，然后在此处对其进行设置。</p>
+<p><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>
+频率高于或低于 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Update.html">Update</a>。如果应用程序以
+25 帧/秒 (fps) 的速度运行，Unity 大约每帧调用该应用程序两次，或者，100
+fps 使每个 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>
+大约渲染两帧。通过 Time 设置，控制所需帧率以及 Fixed Timestep 速率。使用
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Application-targetFrameRate.html">Application.targetFrameRate</a>
+可以设置帧率。</p>
+<p>使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Rigidbody.html">Rigidbody</a>
+时使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>。将力设置为
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Rigidbody.html">Rigidbody</a>，并在每个固定帧应用该力。<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>
+按照测量的时间步长进行，一般不会与 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.Update.html">MonoBehaviour.Update</a>
+冲突。</p>
+<h3 id="update">Update()</h3>
+<p>如果启用了 MonoBehaviour，则每帧调用 Update。
+在实现任何类型的游戏脚本时，Update 都是最常用函数。 但并非所有
+MonoBehaviour 脚本都需 Update()。</p>
+<p>要获取自上次调用 Update 以来所经过的时间，请使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-deltaTime.html">Time.deltaTime</a>。
+仅在启用了 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Behaviour.html">Behaviour</a>
+时，才会调用该函数。 您可以重写该函数来提供自定义组件的功能。 ### <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.LateUpdate.html">LateUpdate()</a>
+- 延时更新</p>
+<p>如果启用了 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Behaviour.html">Behaviour</a>，则每帧调用
+LateUpdate。 LateUpdate 在调用所有 Update 函数后调用。
+这对于安排脚本的执行顺序很有用。</p>
+<p>例如，跟随摄像机应始终在 LateUpdate 中实现， 因为它跟踪的对象可能已在
+Update 中发生移动。</p>
+<p>要获取自上次调用 LateUpdate 以来所经过的时间，请使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-deltaTime.html">Time.deltaTime</a>。
+仅在启用了 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Behaviour.html">Behaviour</a>
+时，才会调用该函数。 您可以重载该函数来提供您的组件的功能。</p>
+<h3 id="startcoroutine---启动协程"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.StartCoroutine.html">StartCoroutine</a>
+- 启动协程</h3>
+<p>public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Coroutine.html">Coroutine</a>
+StartCoroutine (IEnumerator routine);</p>
+<p>可以使用 yield 语句，随时暂停协程的执行。使用 yield
+语句时，协程会暂停执行，并在下一帧自动恢复。请参阅<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/Coroutines.html">协程</a>文档以了解更多详细信息。</p>
+<p>协程非常适合用于在若干帧中对行为建模。StartCoroutine 方法在第一个
+yield
+返回时返回，不过可以生成结果，这会等到协程完成执行。即使多个协程在同一帧中完成，也不能保证它们按照与启动相同的顺序结束。</p>
+<p>生成的任何类型（包括
+null）都会导致执行在后面的帧返回，除非协程已停止或完成。</p>
+<p>注意：可以使用 MonoBehaviour.<strong>StopCoroutine</strong> 和
+MonoBehaviour.<strong>StopAllCoroutines</strong>
+<strong>停止协程</strong>。 销毁 MonoBehaviour 时，或是如果
+MonoBehaviour 所附加到的 GameObject 已禁用，也会停止协程。 禁用
+MonoBehaviour 时，不会停止协程。</p>
+<h2 id="gameobject---游戏对象"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.html">GameObject</a>
+- 游戏对象</h2>
+<h3 id="find---按名称获取对象"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.Find.html">Find</a>
+- 按名称获取对象</h3>
+<p>public static <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.html">GameObject</a>
+Find (string name);</p>
+<p>按 name 查找 GameObject 对象，然后返回它。
+此函数仅返回找到的其中一个活动 GameObject（不确定）。如果未找到具有 name
+的 GameObject，则返回 null。如果 name
+包含“/”字符，则会向路径名称那样遍历此层级视图。</p>
+<p>Find()<strong>较为消耗性能</strong>，建议不要每帧（Update()里）都使用此函数，而是在启动时将结果缓存到成员变量中，或者使用
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.FindWithTag.html">GameObject.FindWithTag</a>。</p>
+<p>注意：如果您要查找子 GameObject，使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Transform.Find.html">Transform.Find</a>
+通常会更加轻松。 注意：如果正在使用多个场景运行此游戏，则 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.Find.html">Find</a>
+将在所有这些场景中进行搜索。</p>
+<p>常见使用： <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> GameObject hand;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    hand = GameObject.Find(<span class="string">&quot;/Monster/Arm/Hand&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    hand.transform.Rotate(<span class="number">0</span>, <span class="number">100</span> * Time.deltaTime, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> ### <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.FindWithTag.html">FindWithTag</a>
+- 按标签获取对象 public static <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/GameObject.html">GameObject</a>
+FindWithTag (string tag);</p>
+<p>返回一个标签为 tag 的活动** <strong><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/GameObject.html"><strong>GameObject</strong></a></strong>
+对象**。如果未找到 GameObject，则返回 null。
+在使用标签之前，必须先在标签管理器中声明标签。如果标签不存在，或将空字符串或
+null 作为标签传递，将抛出 UnityException。</p>
+<p>注意：此方法返回它找到的具有指定标签的第一个
+GameObject。如果一个场景包含多个具有指定标签的活动
+GameObjects，则无法保证此方法返回特定 GameObject。</p>
+<h3 id="findgameobjectswithtag---按标签获取对象数组"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.FindGameObjectsWithTag.html">FindGameObjectsWithTag</a>
+- 按标签获取“对象数组”</h3>
 <p>public static GameObject[] FindGameObjectsWithTag (string tag);</p>
-<p>返回标签为 tag 的活动 GameObjects 的** GameObject[] 数组**。如果未找到任何 GameObject，则返回空数组。<br />
-标签在使用前必须在标签管理器中加以声明。如果此标签不存在，或者传递了空字符串或 null 作为标签，则将抛出 UnityException。</p>
-<h4 id="关于得到的数组内容顺序的问题-by-宇羽">关于得到的数组内容顺序的问题 - <a target="_blank" rel="noopener" href="https://blog.csdn.net/u011081914/article/details/80194283">by.宇羽</a><a class="header-anchor" href="#关于得到的数组内容顺序的问题-by-宇羽">·</a></h4>
+<p>返回标签为 tag 的活动 GameObjects 的** GameObject[]
+数组**。如果未找到任何 GameObject，则返回空数组。
+标签在使用前必须在标签管理器中加以声明。如果此标签不存在，或者传递了空字符串或
+null 作为标签，则将抛出 UnityException。</p>
+<h4
+id="关于得到的数组内容顺序的问题---by.宇羽">关于得到的数组内容顺序的问题
+- <a
+target="_blank" rel="noopener" href="https://blog.csdn.net/u011081914/article/details/80194283">by.宇羽</a></h4>
 <p>当通过FindGameObjectsWithTag来找相关物体，得到的集合顺序是<strong>随机</strong>的，并不是按照Hierarchy面板中的顺序。（editor里是按Hierarchy排序的，但build后就完全乱来了）</p>
-<p>当我们需要对其进行排序时，可以借助GetSiblingIndex()来实现。<br />
-<code>GameObject[] Imgs =GameObject.FindGameObjectsWithTag(&quot;Image&quot;).OrderBy(g =&gt; g.transform.GetSiblingIndex()).ToArray();</code></p>
-<h3 id="CompareTag-检测对象标签"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.CompareTag.html">CompareTag</a> - 检测对象标签<a class="header-anchor" href="#CompareTag-检测对象标签">·</a></h3>
+<p>当我们需要对其进行排序时，可以借助GetSiblingIndex()来实现。
+<code>GameObject[] Imgs =GameObject.FindGameObjectsWithTag("Image").OrderBy(g =&gt; g.transform.GetSiblingIndex()).ToArray();</code></p>
+<h3 id="comparetag---检测对象标签"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.CompareTag.html">CompareTag</a>
+- 检测对象标签</h3>
 <p>public bool CompareTag (string tag);</p>
-<p>下面的示例显示 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.CompareTag.html">CompareTag</a> 检查一个标签为 Player 的碰撞体。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">OnTriggerEnter</span>(<span class="params">Collider other</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span> (other.gameObject.CompareTag(<span class="string">&quot;Player&quot;</span>))</span><br><span class="line">  &#123;</span><br><span class="line">    Destroy(other.gameObject);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="GetComponent-获取对象组件"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.2/ScriptReference/GameObject.GetComponent.html">GetComponent</a> - 获取对象组件<a class="header-anchor" href="#GetComponent-获取对象组件">·</a></h3>
+<p>下面的示例显示 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.CompareTag.html">CompareTag</a>
+检查一个标签为 Player 的碰撞体。 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">OnTriggerEnter</span>(<span class="params">Collider other</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span> (other.gameObject.CompareTag(<span class="string">&quot;Player&quot;</span>))</span><br><span class="line">  &#123;</span><br><span class="line">    Destroy(other.gameObject);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="getcomponent---获取对象组件"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.2/ScriptReference/GameObject.GetComponent.html">GetComponent</a>
+- 获取对象组件</h3>
 <p>public T GetComponent ();</p>
-<p>如果游戏对象附加了类型为 <T> 的组件，则将其返回，否则返回 null。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HingeJoint hinge = gameObject.GetComponent&lt;HingeJoint&gt;();</span><br><span class="line"><span class="keyword">if</span> (hinge != <span class="literal">null</span>)</span><br><span class="line">    hinge.useSpring = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<p>如果游戏对象附加了类型为 <T> 的组件，则将其返回，否则返回 null。
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HingeJoint hinge = gameObject.GetComponent&lt;HingeJoint&gt;();</span><br><span class="line"><span class="keyword">if</span> (hinge != <span class="literal">null</span>)</span><br><span class="line">    hinge.useSpring = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure></p>
 <hr />
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.2/ScriptReference/Component.html">Component</a> GetComponent (Type type);</p>
-<p>如果游戏对象附加了类型为 type 的组件，则将其返回，否则返回 null。<br />
-使用 gameObject.GetComponent 将返回找到的第一个组件，并且未定义顺序。如果预期存在多个相同类型的组件，请改用 gameObject.GetComponents，并针对某些唯一的属性循环使用返回的组件测试。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HingeJoint hinge = gameObject.GetComponent(<span class="keyword">typeof</span>(HingeJoint)) <span class="keyword">as</span> HingeJoint;</span><br><span class="line"><span class="keyword">if</span> (hinge != <span class="literal">null</span>)</span><br><span class="line">    hinge.useSpring = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<p>public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.2/ScriptReference/Component.html">Component</a>
+GetComponent (Type type);</p>
+<p>如果游戏对象附加了类型为 type 的组件，则将其返回，否则返回 null。
+使用 gameObject.GetComponent
+将返回找到的第一个组件，并且未定义顺序。如果预期存在多个相同类型的组件，请改用
+gameObject.GetComponents，并针对某些唯一的属性循环使用返回的组件测试。
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HingeJoint hinge = gameObject.GetComponent(<span class="keyword">typeof</span>(HingeJoint)) <span class="keyword">as</span> HingeJoint;</span><br><span class="line"><span class="keyword">if</span> (hinge != <span class="literal">null</span>)</span><br><span class="line">    hinge.useSpring = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure></p>
 <hr />
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.2/ScriptReference/Component.html">Component</a> GetComponent (string type);</p>
-<p>如果游戏对象附加了名为 type 的组件，则将其返回，否则返回 null。<br />
-出于性能原因，最好使用具有类型而不是字符串的 GetComponent。 但有时可能无法访问该类型，例如在尝试从 Javascript 访问 C# 脚本时。 在这种情况下，可以仅根据名称而不是类型访问该组件。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HingeJoint hinge = gameObject.GetComponent(<span class="string">&quot;HingeJoint&quot;</span>) <span class="keyword">as</span> HingeJoint;</span><br><span class="line"><span class="keyword">if</span> (hinge != <span class="literal">null</span>)</span><br><span class="line">    hinge.useSpring = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<p>public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.2/ScriptReference/Component.html">Component</a>
+GetComponent (string type);</p>
+<p>如果游戏对象附加了名为 type 的组件，则将其返回，否则返回 null。
+出于性能原因，最好使用具有类型而不是字符串的 GetComponent。
+但有时可能无法访问该类型，例如在尝试从 Javascript 访问 C# 脚本时。
+在这种情况下，可以仅根据名称而不是类型访问该组件。 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HingeJoint hinge = gameObject.GetComponent(<span class="string">&quot;HingeJoint&quot;</span>) <span class="keyword">as</span> HingeJoint;</span><br><span class="line"><span class="keyword">if</span> (hinge != <span class="literal">null</span>)</span><br><span class="line">    hinge.useSpring = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure></p>
 <hr />
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>type</th>
 <th>要检索的组件的类型。</th>
 </tr>
 </thead>
+<tbody>
+</tbody>
 </table>
-<h2 id="Transform-变换"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.2/ScriptReference/Transform.html">Transform</a> - 变换<a class="header-anchor" href="#Transform-变换">·</a></h2>
-<h3 id="Position-世界坐标"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-position.html">Position</a> - 世界坐标<a class="header-anchor" href="#Position-世界坐标">·</a></h3>
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Vector3.html">Vector3</a> position ;</p>
-<p>当前物体在世界空间中的变换位置，即世界坐标，(按分析)不会受父物体的影响。<br />
-<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/GameObject.html">GameObject</a> 的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform.html">Transform</a> 的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-position.html">position</a> 属性，可以在 Unity Editor 中以及通过脚本来访问该属性。变更该值可移动 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/GameObject.html">GameObject</a>。获得该值可在 3D 世界空间中定位此 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/GameObject.html">GameObject</a>。</p>
-<h3 id="localPosition-局部位置坐标"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localPosition.html">localPosition</a> - 局部位置坐标<a class="header-anchor" href="#localPosition-局部位置坐标">·</a></h3>
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Vector3.html">Vector3</a> localPosition ;</p>
-<p>相对于父变换的变换位置，即相对位置坐标，(按分析)会受到父物体的影响。<br />
-如果变换没有父级，则其与 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-position.html">Transform.position</a> 相同。</p>
+<h2 id="transform---变换"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.2/ScriptReference/Transform.html">Transform</a>
+- 变换</h2>
+<h3 id="position---世界坐标"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-position.html">Position</a>
+- 世界坐标</h3>
+<p>public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Vector3.html">Vector3</a>
+position ;</p>
+<p>当前物体在世界空间中的变换位置，即世界坐标，(按分析)不会受父物体的影响。
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/GameObject.html">GameObject</a>
+的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform.html">Transform</a>
+的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-position.html">position</a>
+属性，可以在 Unity Editor 中以及通过脚本来访问该属性。变更该值可移动 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/GameObject.html">GameObject</a>。获得该值可在
+3D 世界空间中定位此 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/GameObject.html">GameObject</a>。</p>
+<h3 id="localposition---局部位置坐标"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localPosition.html">localPosition</a>
+- 局部位置坐标</h3>
+<p>public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Vector3.html">Vector3</a>
+localPosition ;</p>
+<p>相对于父变换的变换位置，即相对位置坐标，(按分析)会受到父物体的影响。
+如果变换没有父级，则其与 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-position.html">Transform.position</a>
+相同。</p>
 <p>在Unity的Hierarchy面板中，所显示的position为localPosition，对于无父物体的物体而言，其代表世界坐标(其父亲为世界坐标轴)，对于有父物体的物体而言，则表示两者的相对位置。</p>
-<h3 id="旋转">旋转<a class="header-anchor" href="#旋转">·</a></h3>
-<p>Unity中的 <code>rotation</code>、<code>localRotation</code>和<code>eulerAngles</code>、<code>localEulerAngles</code>都是用来表示旋转的一个API。<br />
-不同的是rotation、localRotation是Quaternion类型，返回一个<strong>四元数</strong>（x，y，z，w）范围：(0,1)<br />
+<h3 id="旋转">旋转</h3>
+<p>Unity中的
+<code>rotation</code>、<code>localRotation</code>和<code>eulerAngles</code>、<code>localEulerAngles</code>都是用来表示旋转的一个API。
+不同的是rotation、localRotation是Quaternion类型，返回一个<strong>四元数</strong>（x，y，z，w）范围：(0,1)
 而eulerAngles、localEulerAngles返回的是一个<strong>欧拉角</strong>（x，y，z）范围：(0,360)</p>
-<h4 id="localRotation-局部旋转"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localRotation.html">localRotation</a> - 局部旋转<a class="header-anchor" href="#localRotation-局部旋转">·</a></h4>
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Quaternion.html">Quaternion</a> localRotation ;</p>
-<p>相对于父级旋转的变换旋转。<br />
-Unity 在内部将旋转存储为四元数。<br />
-要旋转对象，请使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform.Rotate.html">Transform.Rotate</a>。<br />
-要将旋转修改为欧拉角，请使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localEulerAngles.html">Transform.localEulerAngles</a>。</p>
-<p>参考资料：<a target="_blank" rel="noopener" href="https://blog.csdn.net/loongkingwhat/article/details/80688618">Unity3D中的欧拉角使用(二) ——localRotation</a><br />
+<h4 id="localrotation---局部旋转"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localRotation.html">localRotation</a>
+- 局部旋转</h4>
+<p>public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Quaternion.html">Quaternion</a>
+localRotation ;</p>
+<p>相对于父级旋转的变换旋转。 Unity 在内部将旋转存储为四元数。
+要旋转对象，请使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform.Rotate.html">Transform.Rotate</a>。
+要将旋转修改为欧拉角，请使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localEulerAngles.html">Transform.localEulerAngles</a>。</p>
+<p>参考资料：<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/loongkingwhat/article/details/80688618">Unity3D中的欧拉角使用(二)
+——localRotation</a>
 <code>transform.localRotation = Quaternion.Eular(x,y,z)</code>控制旋转的时候，按照<code>Z-X-Y</code>的旋转顺规，且绕轴旋转的坐标轴是父节点本地坐标系的坐标轴</p>
-<h4 id="eulerAngles-欧拉旋转"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-eulerAngles.html">eulerAngles</a> - 欧拉旋转<a class="header-anchor" href="#eulerAngles-欧拉旋转">·</a></h4>
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Vector3.html">Vector3</a> eulerAngles ;</p>
-<p>以欧拉角表示的旋转（以度为单位）。<br />
-<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-eulerAngles.html">Transform.eulerAngles</a> 表示世界空间中的旋转。在检视面板中查看 GameObject 的旋转时，可能会看到与此属性中存储的值不同的角度值。这是因为检视面板显示本地旋转，有关更多信息，请参阅 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localEulerAngles.html">Transform.localEulerAngles</a>。</p>
-<p>欧拉角可以通过围绕各个轴执行三个单独的旋转来表示三维旋转。在 Unity 中，围绕 Z 轴、X 轴和 Y 轴（按该顺序）执行这些旋转。可以通过设置此属性来设置四元数的旋转，并且可以通过读取此属性来读取欧拉角的值。</p>
-<p>使用 .eulerAngles 属性设置旋转时，务必要了解，虽然提供 X、Y 和 Z 旋转值描述旋转，但是这些值不存储在旋转中。而是将 X、Y 和 Z 值转换为四元数的内部格式。<br />
-读取 .eulerAngles 属性时，Unity 将四元数的内部旋转表示形式转换为欧拉角。因为可通过多种方式使用欧拉角表示任何给定旋转，所以读出的值可能与分配的值截然不同。如果尝试逐渐增加值以生成动画，则这种情况可能会导致混淆。<br />
-若要避免这些类型的问题，使用旋转的建议方式是避免在读取 .eulerAngles 时依赖一致的结果，特别是在尝试逐渐增加旋转以生成动画时。有关实现此目标的更佳方式，请参阅<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Quaternion-operator_multiply.html">四元数 * 运算符</a>。</p>
-<p>不要单独设置某个 eulerAngles 轴（例如，eulerAngles.x = 10;），这会导致偏差和不希望的旋转。 在将它们设置为新值时，请一次性设置所有 eulerAngles 轴。 Unity 在角度与存储在 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-rotation.html">Transform.rotation</a> 中的旋转之间进行转换。</p>
-<p>参考资料：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1917420">Unity中的 eulerAngles、localEulerAngles细节剖析</a></p>
-<h4 id="eulerAngles和rotation的区别">eulerAngles和rotation的区别<a class="header-anchor" href="#eulerAngles和rotation的区别">·</a></h4>
-<p>eulerAngles的角度是不能随时变化的，是一个定值，<br />
-而rotation的角度是可以增加的，<br />
-eulerAngles用vector3来赋值，而rotation用Quaternion来赋值。</p>
-<h3 id="localScale-局部变换缩放"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localScale.html">localScale</a> - 局部变换缩放<a class="header-anchor" href="#localScale-局部变换缩放">·</a></h3>
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Vector3.html">Vector3</a> localScale ;</p>
+<h4 id="eulerangles---欧拉旋转"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-eulerAngles.html">eulerAngles</a>
+- 欧拉旋转</h4>
+<p>public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Vector3.html">Vector3</a>
+eulerAngles ;</p>
+<p>以欧拉角表示的旋转（以度为单位）。 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-eulerAngles.html">Transform.eulerAngles</a>
+表示世界空间中的旋转。在检视面板中查看 GameObject
+的旋转时，可能会看到与此属性中存储的值不同的角度值。这是因为检视面板显示本地旋转，有关更多信息，请参阅
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localEulerAngles.html">Transform.localEulerAngles</a>。</p>
+<p>欧拉角可以通过围绕各个轴执行三个单独的旋转来表示三维旋转。在 Unity
+中，围绕 Z 轴、X 轴和 Y
+轴（按该顺序）执行这些旋转。可以通过设置此属性来设置四元数的旋转，并且可以通过读取此属性来读取欧拉角的值。</p>
+<p>使用 .eulerAngles 属性设置旋转时，务必要了解，虽然提供 X、Y 和 Z
+旋转值描述旋转，但是这些值不存储在旋转中。而是将 X、Y 和 Z
+值转换为四元数的内部格式。 读取 .eulerAngles 属性时，Unity
+将四元数的内部旋转表示形式转换为欧拉角。因为可通过多种方式使用欧拉角表示任何给定旋转，所以读出的值可能与分配的值截然不同。如果尝试逐渐增加值以生成动画，则这种情况可能会导致混淆。
+若要避免这些类型的问题，使用旋转的建议方式是避免在读取 .eulerAngles
+时依赖一致的结果，特别是在尝试逐渐增加旋转以生成动画时。有关实现此目标的更佳方式，请参阅<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Quaternion-operator_multiply.html">四元数
+* 运算符</a>。</p>
+<p>不要单独设置某个 eulerAngles 轴（例如，eulerAngles.x =
+10;），这会导致偏差和不希望的旋转。
+在将它们设置为新值时，请一次性设置所有 eulerAngles 轴。 Unity
+在角度与存储在 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-rotation.html">Transform.rotation</a>
+中的旋转之间进行转换。</p>
+<p>参考资料：<a
+target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1917420">Unity中的
+eulerAngles、localEulerAngles细节剖析</a> ####
+eulerAngles和rotation的区别
+eulerAngles的角度是不能随时变化的，是一个定值，
+而rotation的角度是可以增加的，
+eulerAngles用vector3来赋值，而rotation用Quaternion来赋值。 ### <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform-localScale.html">localScale</a>
+- 局部变换缩放 public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Vector3.html">Vector3</a>
+localScale ;</p>
 <p>相对于 GameObjects 父对象的变换缩放。</p>
-<h3 id="RectTransform-矩形变换"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/RectTransform.html">RectTransform</a> - 矩形变换<a class="header-anchor" href="#RectTransform-矩形变换">·</a></h3>
-<p>class in UnityEngine / 继承自：<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform.html">Transform</a></p>
-<p>矩形的位置、大小、锚点和轴心信息。<br />
-RectTransforms <strong>用于 GUI</strong>，不过也可以用于其他情况。 它用于存储和操作矩形的位置、大小和锚定，并支持各种形式的缩放（基于父 RectTransform）。<br />
-Rect Transform（矩形变换）仍然是一种 Transform（变换），因此可以在脚本中用作变换，但矩形变换具有<strong>额外的 UI 数据</strong>。</p>
-<p>注意：Inspector 基于在使用哪个锚点预设对公开哪些属性进行更改。有关更多信息，请参阅<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-RectTransform.html">矩形变换</a>和<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/UIBasicLayout.html">基本布局</a>。</p>
-<h4 id="RectTransform之UI宽高和SizeDelta"><a target="_blank" rel="noopener" href="https://blog.csdn.net/zcaixzy5211314/article/details/86839636">RectTransform之UI宽高和SizeDelta</a><a class="header-anchor" href="#RectTransform之UI宽高和SizeDelta">·</a></h4>
-<h2 id="Vector3-三维向量"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2018.4/ScriptReference/Vector3.html">Vector3</a> - 三维向量<a class="header-anchor" href="#Vector3-三维向量">·</a></h2>
-<h3 id="normalized-归一化向量"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3-normalized.html">normalized</a> - 归一化向量<a class="header-anchor" href="#normalized-归一化向量">·</a></h3>
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3.html">Vector3</a> normalized ;<br />
-对一个三维向量进行归一化，向量方向保持不变，但其大小设为 1.0，然后获取该值。</p>
+<h3 id="recttransform---矩形变换"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/RectTransform.html">RectTransform</a>
+- 矩形变换</h3>
+<p>class in UnityEngine / 继承自：<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Transform.html">Transform</a></p>
+<p>矩形的位置、大小、锚点和轴心信息。 RectTransforms <strong>用于
+GUI</strong>，不过也可以用于其他情况。
+它用于存储和操作矩形的位置、大小和锚定，并支持各种形式的缩放（基于父
+RectTransform）。 Rect Transform（矩形变换）仍然是一种
+Transform（变换），因此可以在脚本中用作变换，但矩形变换具有<strong>额外的
+UI 数据</strong>。</p>
+<p>注意：Inspector
+基于在使用哪个锚点预设对公开哪些属性进行更改。有关更多信息，请参阅<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-RectTransform.html">矩形变换</a>和<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/UIBasicLayout.html">基本布局</a>。</p>
+<h4 id="recttransform之ui宽高和sizedelta"><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/zcaixzy5211314/article/details/86839636">RectTransform之UI宽高和SizeDelta</a></h4>
+<h2 id="vector3---三维向量"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2018.4/ScriptReference/Vector3.html">Vector3</a>
+- 三维向量</h2>
+<h3 id="normalized---归一化向量"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3-normalized.html">normalized</a>
+- 归一化向量</h3>
+<p>public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3.html">Vector3</a>
+normalized ; 对一个三维向量进行归一化，向量方向保持不变，但其大小设为
+1.0，然后获取该值。</p>
 <p>请注意，<strong>当前向量</strong>保持不变，返回一个<strong>新的归一化向量</strong>。</p>
-<p>如果要对一个三维向量归一化并改变其值，请使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2018.4/ScriptReference/Vector3.Normalize.html">Normalize</a> 函数。</p>
+<p>如果要对一个三维向量归一化并改变其值，请使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2018.4/ScriptReference/Vector3.Normalize.html">Normalize</a>
+函数。</p>
 <p>如果向量太小而无法标准化，则返回零向量。</p>
-<h3 id="Normalize-归一化函数"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3.Normalize.html">Normalize</a> - 归一化函数<a class="header-anchor" href="#Normalize-归一化函数">·</a></h3>
-<p>public static <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3.html">Vector3</a> Normalize (<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3.html">Vector3</a> value);<br />
-对一个三维向量进行归一化，向量方向保持不变，但其大小设为 1.0，然后以结果改变其值。</p>
+<h3 id="normalize---归一化函数"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3.Normalize.html">Normalize</a>
+- 归一化函数</h3>
+<p>public static <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3.html">Vector3</a>
+Normalize (<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3.html">Vector3</a>
+value); 对一个三维向量进行归一化，向量方向保持不变，但其大小设为
+1.0，然后以结果改变其值。</p>
 <p>请注意，此函数将<strong>更改当前向量</strong>。</p>
-<p>如果 要保持当前向量不变，请使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2018.4/ScriptReference/Vector3-normalized.html">normalized</a> 变量。</p>
+<p>如果 要保持当前向量不变，请使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2018.4/ScriptReference/Vector3-normalized.html">normalized</a>
+变量。</p>
 <p>如果该向量太小而无法标准化，则将其设置为零。</p>
-<h3 id="magnitude-向量长度"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3-magnitude.html">magnitude</a> - 向量长度<a class="header-anchor" href="#magnitude-向量长度">·</a></h3>
-<p>public float magnitude ;<br />
-返回该向量的长度。（float）</p>
+<h3 id="magnitude---向量长度"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3-magnitude.html">magnitude</a>
+- 向量长度</h3>
+<p>public float magnitude ; 返回该向量的长度。（float）</p>
 <p>向量长度为 (x<em>x+y</em>y+z*z) 的平方根。</p>
-<p>如果只需要比较一些向量的大小， 则可以使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2018.4/ScriptReference/Vector3-sqrMagnitude.html">sqrMagnitude</a> 比较它们的平方数（计算平方数更快）。</p>
-<p>例如：<br />
-返回向量的长度，也就是点目标点(x,y,z)到原点(0,0,0)的距离。<br />
+<p>如果只需要比较一些向量的大小， 则可以使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2018.4/ScriptReference/Vector3-sqrMagnitude.html">sqrMagnitude</a>
+比较它们的平方数（计算平方数更快）。</p>
+<p>例如： 返回向量的长度，也就是点目标点(x,y,z)到原点(0,0,0)的距离。
 <code>float distance = gameObject.transform.position.magnitude;</code></p>
-<h3 id="sqrMagnitude-向量长度的平方"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3-sqrMagnitude.html">sqrMagnitude</a> - 向量长度的平方<a class="header-anchor" href="#sqrMagnitude-向量长度的平方">·</a></h3>
-<p>public float sqrMagnitude ;<br />
-返回该向量的平方长度。（只读）</p>
-<p>向量 v 的大小以 Mathf.Sqrt(Vector3.Dot(v, v)) 方式进行计算。 但是，Sqrt 计算相当复杂， 执行时间比普通算术运算要长。 计算平方数会比使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3-magnitude.html">magnitude</a> 属性要快得多 - 计算基本相同，只是消除了执行缓慢的 Sqrt 调用。 如果您<strong>只将大小用于比较距离的目的</strong>，则也可以将平方数与距离的平方进行比较， 因为这种比较也会给出相同的结果。</p>
-<h2 id="Collider2D-2D碰撞体"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Collider2D.html">Collider2D</a> - 2D碰撞体<a class="header-anchor" href="#Collider2D-2D碰撞体">·</a></h2>
-<p>2D 游戏使用的碰撞体类型的父类。<br />
-如：<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/BoxCollider2D.html">BoxCollider2D</a>、<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/CircleCollider2D.html">CircleCollider2D</a>、<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PolygonCollider2D.html">PolygonCollider2D</a>、<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/EdgeCollider2D.html">EdgeCollider2D</a>。</p>
-<h3 id="IsTouchingLayers-与Layers触碰"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Collider2D.IsTouchingLayers.html">IsTouchingLayers</a> - 与Layers触碰<a class="header-anchor" href="#IsTouchingLayers-与Layers触碰">·</a></h3>
-<p>public bool IsTouchingLayers (int layerMask = Physics2D.AllLayers);</p>
-<p>检查该碰撞体是否正在接触指定 layerMask 上的任何碰撞体。<br />
-请务必注意，检查碰撞体是否正在接触是对照上次物理系统更新进行的，即，当时接触碰撞体的状态。如果刚添加了新的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Collider2D.html">Collider2D</a>，或者移动了 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Collider2D.html">Collider2D</a>，但尚未进行更新，则这些碰撞体不会显示正在接触。接触状态与物理碰撞或触发器回调所指示的状态相同。</p>
-<p>如：<br />
-<code>bool isGound = myFeet.IsTouchingLayers(LayerMask.GetMask(&quot;Ground&quot;));</code></p>
-<h3 id="ClosestPoint-碰撞处的最近点">ClosestPoint - 碰撞处的最近点<a class="header-anchor" href="#ClosestPoint-碰撞处的最近点">·</a></h3>
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity3d.com/2022.1/Documentation/ScriptReference/Vector3.html">Vector3</a> ClosestPoint(<a target="_blank" rel="noopener" href="https://docs.unity3d.com/2022.1/Documentation/ScriptReference/Vector3.html">Vector3</a> position);</p>
+<h3 id="sqrmagnitude---向量长度的平方"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3-sqrMagnitude.html">sqrMagnitude</a>
+- 向量长度的平方</h3>
+<p>public float sqrMagnitude ; 返回该向量的平方长度。（只读）</p>
+<p>向量 v 的大小以 Mathf.Sqrt(Vector3.Dot(v, v)) 方式进行计算。
+但是，Sqrt 计算相当复杂， 执行时间比普通算术运算要长。
+计算平方数会比使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/Vector3-magnitude.html">magnitude</a>
+属性要快得多 - 计算基本相同，只是消除了执行缓慢的 Sqrt 调用。
+如果您<strong>只将大小用于比较距离的目的</strong>，则也可以将平方数与距离的平方进行比较，
+因为这种比较也会给出相同的结果。</p>
+<h2 id="collider2d---2d碰撞体"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/ScriptReference/Collider2D.html">Collider2D</a>
+- 2D碰撞体</h2>
+<p>2D 游戏使用的碰撞体类型的父类。 如：<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/BoxCollider2D.html">BoxCollider2D</a>、<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/CircleCollider2D.html">CircleCollider2D</a>、<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PolygonCollider2D.html">PolygonCollider2D</a>、<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/EdgeCollider2D.html">EdgeCollider2D</a>。
+### <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Collider2D.IsTouchingLayers.html">IsTouchingLayers</a>
+- 与Layers触碰 public bool IsTouchingLayers (int layerMask =
+Physics2D.AllLayers);</p>
+<p>检查该碰撞体是否正在接触指定 layerMask 上的任何碰撞体。
+请务必注意，检查碰撞体是否正在接触是对照上次物理系统更新进行的，即，当时接触碰撞体的状态。如果刚添加了新的
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Collider2D.html">Collider2D</a>，或者移动了
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Collider2D.html">Collider2D</a>，但尚未进行更新，则这些碰撞体不会显示正在接触。接触状态与物理碰撞或触发器回调所指示的状态相同。</p>
+<p>如：
+<code>bool isGound = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));</code></p>
+<h3 id="closestpoint---碰撞处的最近点">ClosestPoint -
+碰撞处的最近点</h3>
+<p>public <a
+target="_blank" rel="noopener" href="https://docs.unity3d.com/2022.1/Documentation/ScriptReference/Vector3.html">Vector3</a>
+ClosestPoint(<a
+target="_blank" rel="noopener" href="https://docs.unity3d.com/2022.1/Documentation/ScriptReference/Vector3.html">Vector3</a>
+position);</p>
 <ul>
 <li>position：您需要找到最接近点所对应的位置。</li>
 </ul>
 <p>返回碰撞体上最接近给定位置的一个点。</p>
-<p>此方法计算碰撞体上最接近于 3D 世界位置的点。在以下示例中，closestPoint 是碰撞体上的点，location 是 3D 空间中的点。如果 location 位于碰撞体中，closestPoint 将在内部。<br />
-注意：与 <a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/ScriptReference/Collider.ClosestPointOnBounds.html">ClosestPointOnBounds</a> 的区别是返回的点实际上位于碰撞体上，而不是在碰撞体的边界上。（<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/ScriptReference/Collider-bounds.html">bounds</a> 是围绕碰撞体的框形。）</p>
-<h3 id="Bounds-ClosestPoint"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Bounds.html">Bounds</a>.ClosestPoint<a class="header-anchor" href="#Bounds-ClosestPoint">·</a></h3>
-<p>public <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Vector3.html">Vector3</a> ClosestPoint (<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Vector3.html">Vector3</a> point);</p>
-<p>返回该包围盒上或其内部的最近的点。<br />
-如果该点在包围盒内，则将返回未修改的点位置。</p>
-<h2 id="Time-时间"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time.html">Time</a> - 时间<a class="header-anchor" href="#Time-时间">·</a></h2>
-<h3 id="timeScale-时间流逝速率"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-timeScale.html">timeScale</a> - 时间流逝速率<a class="header-anchor" href="#timeScale-时间流逝速率">·</a></h3>
-<p>public static float timeScale ;</p>
+<p>此方法计算碰撞体上最接近于 3D
+世界位置的点。在以下示例中，closestPoint 是碰撞体上的点，location 是 3D
+空间中的点。如果 location 位于碰撞体中，closestPoint 将在内部。 注意：与
+<a
+target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/ScriptReference/Collider.ClosestPointOnBounds.html">ClosestPointOnBounds</a>
+的区别是返回的点实际上位于碰撞体上，而不是在碰撞体的边界上。（<a
+target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/ScriptReference/Collider-bounds.html">bounds</a>
+是围绕碰撞体的框形。） ### <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Bounds.html">Bounds</a>.ClosestPoint
+public <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Vector3.html">Vector3</a>
+ClosestPoint (<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Vector3.html">Vector3</a>
+point);</p>
+<p>返回该包围盒上或其内部的最近的点。
+如果该点在包围盒内，则将返回未修改的点位置。 ## <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time.html">Time</a>
+- 时间 ### <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-timeScale.html">timeScale</a>
+- 时间流逝速率 public static float timeScale ;</p>
 <p>时间流逝的标度。可用于慢动作效果。</p>
-<p>当 timeScale 为 1.0 时，时间流逝的速度与实时一样快。<br />
-当 timeScale 为 0.5 时，时间流逝的速度比实时慢 2x。<br />
-当 timeScale 设置为 0 时，如果您的所有函数都是独立于帧率的， 则游戏基本上处于暂停状态。</p>
-<p>timeScale 影响 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time.html">Time</a> 类的<strong>所有时间和增量时间测量变量</strong>（但 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-realtimeSinceStartup.html">realtimeSinceStartup</a> 和 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-fixedDeltaTime.html">fixedDeltaTime</a> 除外）。<br />
-如果您减小了 timeScale，建议也将 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a> 减小相同的量。<br />
-当 timeScale 设置为 0 时，不会调用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a> 函数。</p>
-<h2 id="协程与线程">协程与线程<a class="header-anchor" href="#协程与线程">·</a></h2>
-<p>Unity3D是以生命周期主线程循环进行游戏开发。<br />
-<strong>线程：</strong><br />
-Unity3D中的子线程无法运行Unity SDK(开发者工具包，软件包、软件框架)跟API(应用程序编程接口,函数库)。<br />
-限制原因：大多数游戏引擎都是主循环结构，游戏中逻辑更新和画面更新的时间点要求有确定性，必须按照帧序列严格保持同步，否则就会出现游戏中的对象不同步的现象。虽然多线程也能保证这个效果，但是引用多线程，会加大同步处理的难度与游戏的不稳定性。<br />
+<p>当 timeScale 为 1.0 时，时间流逝的速度与实时一样快。 当 timeScale 为
+0.5 时，时间流逝的速度比实时慢 2x。 当 timeScale 设置为 0
+时，如果您的所有函数都是独立于帧率的， 则游戏基本上处于暂停状态。</p>
+<p>timeScale 影响 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time.html">Time</a>
+类的<strong>所有时间和增量时间测量变量</strong>（但 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-realtimeSinceStartup.html">realtimeSinceStartup</a>
+和 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-fixedDeltaTime.html">fixedDeltaTime</a>
+除外）。 如果您减小了 timeScale，建议也将 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a>
+减小相同的量。 当 timeScale 设置为 0 时，不会调用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>
+函数。</p>
+<h2 id="协程与线程">协程与线程</h2>
+<p>Unity3D是以生命周期主线程循环进行游戏开发。 <strong>线程：</strong>
+Unity3D中的子线程无法运行Unity
+SDK(开发者工具包，软件包、软件框架)跟API(应用程序编程接口,函数库)。
+限制原因：大多数游戏引擎都是主循环结构，游戏中逻辑更新和画面更新的时间点要求有确定性，必须按照帧序列严格保持同步，否则就会出现游戏中的对象不同步的现象。虽然多线程也能保证这个效果，但是引用多线程，会加大同步处理的难度与游戏的不稳定性。
 但是多线程也是有好处的，如果不是画面更新，也不是常规的逻辑更新（指包括AI、物理碰撞、角色控制这些），而是一些其他<strong>后台任务</strong>，比如大量耗时的数据计算、网络请求、复杂密集的I/O操作，则可以将这个独立出来做成一个工作线程，这需要写Unity游戏的Native扩展。</p>
-<p><strong>协程：</strong><br />
-对于Unity3D，它是生命周期主线程循环的设计，它更倾向于使用Time slicing(时间分片，时间流逝速度)的Coroutine(协程)去完成<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/22685960">异步</a>任务，融合到生命周期中。<br />
-协程能保留上一次调用时的状态（即所有局部状态的一个特定组合），每次过程重入时，就相当于进入上一次调用的状态，换种说法：进入上一次离开时所处逻辑流的位置。</p>
-<h3 id="Coroutine-协程"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/Coroutines.html">Coroutine</a> - 协程<a class="header-anchor" href="#Coroutine-协程">·</a></h3>
-<p>协程允许您将任务分散到多个帧中。在 Unity 中，协程是一种方法可以<strong>暂停执行并将控制权返回给 Unity</strong>，但随后在下一帧中<strong>从中断的位置继续</strong>。</p>
+<p><strong>协程：</strong>
+对于Unity3D，它是生命周期主线程循环的设计，它更倾向于使用Time
+slicing(时间分片，时间流逝速度)的Coroutine(协程)去完成<a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/22685960">异步</a>任务，融合到生命周期中。
+协程能保留上一次调用时的状态（即所有局部状态的一个特定组合），每次过程重入时，就相当于进入上一次调用的状态，换种说法：进入上一次离开时所处逻辑流的位置。
+### <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/Coroutines.html">Coroutine</a>
+- 协程</p>
+<p>协程允许您将任务分散到多个帧中。在 Unity
+中，协程是一种方法可以<strong>暂停执行并将控制权返回给
+Unity</strong>，但随后在下一帧中<strong>从中断的位置继续</strong>。</p>
 <p>在大多数情况下，当您调用方法时，该方法将运行到完成，然后将控制权以及任何可选的返回值返回给调用方法。这意味着在方法中发生的任何操作都必须在单个帧更新中发生。</p>
 <p>如果要使用方法调用来包含一段时间内的过程动画或一系列事件，则可以使用协程。</p>
-<p>但是，请务必记住，协程不是线程。在协程中运行的同步操作仍在主线程上执行。如果要减少在主线程上花费的 CPU 时间，则避免在协程中阻塞操作与在任何其他脚本代码中阻塞操作同样重要。如果要在 Unity 中使用多线程代码，请考虑<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/Manual/JobSystem.html">使用 C# 作业系统</a>。</p>
-<p>如果需要处理较长的异步操作（如<strong>等待</strong> HTTP 传输、资产加载或文件 I/O <strong>完成</strong>），最好使用协程。<br />
-（ HTTP 传输、资产加载或文件 I/O本身最好还是用线程）</p>
-<p>在Unity3D中，协程是可自行停止运行 (yield)，直到给定的 Yield Instruction 结束再继续运行的函数。协程 (Coroutines) 的不同用法：</p>
-<ol>
-<li>yield return null - 这一帧到此暂停，下一帧再从暂停处继续，常用于循环中。</li>
-<li>yield return new WaitForEndOfFrame - <strong>等到这一帧的cameras和GUI渲染结束</strong>后再从此处继续，即等到这帧的末尾再往下运行。这行之后的代码还是在当前帧运行，是在下一帧开始前执行，跟return null很相似。</li>
-<li>yield return new WaitForFixedUpdate - 在下一次执行FixedUpdate的时候继续执行这段代码，即<strong>等一次物理引擎的更新</strong>。</li>
-<li>yield return new WaitForSeconds(3.0f) - 等待3秒，然后继续从此处开始，常用于做<strong>定时器</strong>。</li>
+<p>但是，请务必记住，协程不是线程。在协程中运行的同步操作仍在主线程上执行。如果要减少在主线程上花费的
+CPU
+时间，则避免在协程中阻塞操作与在任何其他脚本代码中阻塞操作同样重要。如果要在
+Unity 中使用多线程代码，请考虑<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/Manual/JobSystem.html">使用 C#
+作业系统</a>。</p>
+<p>如果需要处理较长的异步操作（如<strong>等待</strong> HTTP
+传输、资产加载或文件 I/O <strong>完成</strong>），最好使用协程。 （ HTTP
+传输、资产加载或文件 I/O本身最好还是用线程）</p>
+<p>在Unity3D中，协程是可自行停止运行 (yield)，直到给定的 Yield
+Instruction 结束再继续运行的函数。协程 (Coroutines) 的不同用法：</p>
+<ol type="1">
+<li>yield return null -
+这一帧到此暂停，下一帧再从暂停处继续，常用于循环中。</li>
+<li>yield return new WaitForEndOfFrame -
+<strong>等到这一帧的cameras和GUI渲染结束</strong>后再从此处继续，即等到这帧的末尾再往下运行。这行之后的代码还是在当前帧运行，是在下一帧开始前执行，跟return
+null很相似。</li>
+<li>yield return new WaitForFixedUpdate -
+在下一次执行FixedUpdate的时候继续执行这段代码，即<strong>等一次物理引擎的更新</strong>。</li>
+<li>yield return new WaitForSeconds(3.0f) -
+等待3秒，然后继续从此处开始，常用于做<strong>定时器</strong>。</li>
 <li>yield return WWW - 等待直至<strong>异步下载</strong>完成。</li>
-<li>yield return StartCoroutine(methodName) - <strong>等待另一个协程执行完</strong>。这是把协程串联起来的关键，常用于让多个协程按顺序逐个运行。</li>
-<li>yield break - 直接跳出协程，对某些判定失败必须跳出的时候，比如加载AssetBundle的时候，WWW失败了，后边加载bundle没有必要了，这时候可以yield break跳出。</li>
+<li>yield return StartCoroutine(methodName) -
+<strong>等待另一个协程执行完</strong>。这是把协程串联起来的关键，常用于让多个协程按顺序逐个运行。</li>
+<li>yield break -
+直接跳出协程，对某些判定失败必须跳出的时候，比如加载AssetBundle的时候，WWW失败了，后边加载bundle没有必要了，这时候可以yield
+break跳出。</li>
 </ol>
-<p>值得注意的是 WaitForSeconds()受Time.timeScale影响，当Time.timeScale = 0f 时，yield return new WaitForSecond(x) 将暂停运行。</p>
+<p>值得注意的是 WaitForSeconds()受Time.timeScale影响，当Time.timeScale =
+0f 时，yield return new WaitForSecond(x) 将暂停运行。</p>
 <p>协程可以相互嵌套（也可以自身嵌套？）</p>
-<p>例如：下面是一个普通攻击模块，按下攻击键后，需要等待动画把攻击动画显示出来后，启用攻击碰撞框，然后再隔一段时间关闭攻击碰撞框。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Attack</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (Input.GetButtonDown(<span class="string">&quot;Attack&quot;</span>))      <span class="comment">// 监测‘攻击’键的输入</span></span><br><span class="line">    &#123;</span><br><span class="line">        anim.SetTrigger(<span class="string">&quot;Attack&quot;</span>);          <span class="comment">// 响应动画属性中的 Attack 变量，表示播放攻击动画</span></span><br><span class="line">        StartCoroutine(startAttack());      <span class="comment">// 调用‘启用攻击碰撞框’的协程</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新建一个‘启用攻击碰撞框’的协程</span></span><br><span class="line"><span class="function">IEnumerator <span class="title">startAttack</span>()</span>       </span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">yield</span> <span class="keyword">return</span> <span class="keyword">new</span> <span class="title">WaitForSeconds</span>(<span class="params">startTime</span>)</span>;     <span class="comment">// 等待一段指定的时间（startTime）延迟之后继续执行，在所有的Update函数完成调用的那一帧之后（这里的时间会受到Time.timeScale的影响）;</span></span><br><span class="line">    collider2D.enabled = <span class="literal">true</span>;                      <span class="comment">// 启用‘攻击碰撞框’</span></span><br><span class="line">    StartCoroutine(disableHitBox());                <span class="comment">// 调用‘关闭攻击碰撞框’的协程</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新建一个‘关闭攻击碰撞框’的协程</span></span><br><span class="line"><span class="function">IEnumerator <span class="title">disableHitBox</span>()</span>     </span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">yield</span> <span class="keyword">return</span> <span class="keyword">new</span> <span class="title">WaitForSeconds</span>(<span class="params">time</span>)</span>;          <span class="comment">// 等待一段指定的时间（time）延迟之后继续执行</span></span><br><span class="line">    collider2D.enabled = <span class="literal">false</span>;                     <span class="comment">// 关闭‘攻击碰撞框’</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">IEnumerator <span class="title">GenCoins</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 先执行下方代码</span></span><br><span class="line">    WaitForSeconds wait = <span class="keyword">new</span> WaitForSeconds(intervalTime);</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; coinQuantity; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        GameObject gb = Instantiate(coin, transform.position, Quaternion.identity);</span><br><span class="line">        Vector2 randomDirection = <span class="keyword">new</span> Vector2(Random.Range(<span class="number">-0.3f</span>, <span class="number">0.3f</span>), <span class="number">1.0f</span>);</span><br><span class="line">        gb.GetComponent&lt;Rigidbody2D&gt;().velocity = randomDirection * coinUpSpeed;</span><br><span class="line">        <span class="keyword">yield</span> <span class="keyword">return</span> wait;      <span class="comment">// 暂停代码运行，等待指定时间后继续运行</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="停止协程">停止协程<a class="header-anchor" href="#停止协程">·</a></h4>
-<p>若要停止协程，请使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/MonoBehaviour.StopCoroutine.html">StopCoroutine</a> 和 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/MonoBehaviour.StopAllCoroutines.html">StopAllCoroutines</a>。<br />
-如果协程附加到的游戏对象的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.SetActive.html">SetActive</a> 被设置为 false ，则协程也会停止。<br />
-调用 <strong>Destroy(example)</strong>（其中 example 是 MonoBehaviour 实例）会立即触发 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/MonoBehaviour.OnDisable.html">OnDisable</a>，并会处理协程，从而有效地停止它。最后，在帧结束时调用 <strong>OnDestroy</strong> 。</p>
-<p>注意：如果你通过设置 enabled 为 false 来禁用 MonoBehaviour , Unity不会停止协程。</p>
-<h3 id="线程">线程<a class="header-anchor" href="#线程">·</a></h3>
-<h2 id="Input-输入控制器"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Input.html">Input</a> - 输入控制器<a class="header-anchor" href="#Input-输入控制器">·</a></h2>
-<p>使用该类来读取<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/ConventionalGameInput.html">传统游戏输入</a>中设置的轴，以及访问移动设备上的多点触控/加速度计数据。<br />
-<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/KeyCode.html">KeyCode</a>，其中列出了所有的按键、鼠标和游戏杆选项</p>
-<h3 id="GetAxis-获取轴"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Input.GetAxis.html">GetAxis</a> - 获取轴<a class="header-anchor" href="#GetAxis-获取轴">·</a></h3>
-<p>public static float GetAxis (string axisName);</p>
-<p>返回由 axisName 标识的虚拟轴的值。<br />
+<p>例如：下面是一个普通攻击模块，按下攻击键后，需要等待动画把攻击动画显示出来后，启用攻击碰撞框，然后再隔一段时间关闭攻击碰撞框。
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Attack</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (Input.GetButtonDown(<span class="string">&quot;Attack&quot;</span>))      <span class="comment">// 监测‘攻击’键的输入</span></span><br><span class="line">    &#123;</span><br><span class="line">        anim.SetTrigger(<span class="string">&quot;Attack&quot;</span>);          <span class="comment">// 响应动画属性中的 Attack 变量，表示播放攻击动画</span></span><br><span class="line">        StartCoroutine(startAttack());      <span class="comment">// 调用‘启用攻击碰撞框’的协程</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新建一个‘启用攻击碰撞框’的协程</span></span><br><span class="line"><span class="function">IEnumerator <span class="title">startAttack</span>()</span>       </span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">yield</span> <span class="keyword">return</span> <span class="keyword">new</span> <span class="title">WaitForSeconds</span>(<span class="params">startTime</span>)</span>;     <span class="comment">// 等待一段指定的时间（startTime）延迟之后继续执行，在所有的Update函数完成调用的那一帧之后（这里的时间会受到Time.timeScale的影响）;</span></span><br><span class="line">    collider2D.enabled = <span class="literal">true</span>;                      <span class="comment">// 启用‘攻击碰撞框’</span></span><br><span class="line">    StartCoroutine(disableHitBox());                <span class="comment">// 调用‘关闭攻击碰撞框’的协程</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新建一个‘关闭攻击碰撞框’的协程</span></span><br><span class="line"><span class="function">IEnumerator <span class="title">disableHitBox</span>()</span>     </span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">yield</span> <span class="keyword">return</span> <span class="keyword">new</span> <span class="title">WaitForSeconds</span>(<span class="params">time</span>)</span>;          <span class="comment">// 等待一段指定的时间（time）延迟之后继续执行</span></span><br><span class="line">    collider2D.enabled = <span class="literal">false</span>;                     <span class="comment">// 关闭‘攻击碰撞框’</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">IEnumerator <span class="title">GenCoins</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 先执行下方代码</span></span><br><span class="line">    WaitForSeconds wait = <span class="keyword">new</span> WaitForSeconds(intervalTime);</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; coinQuantity; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        GameObject gb = Instantiate(coin, transform.position, Quaternion.identity);</span><br><span class="line">        Vector2 randomDirection = <span class="keyword">new</span> Vector2(Random.Range(<span class="number">-0.3f</span>, <span class="number">0.3f</span>), <span class="number">1.0f</span>);</span><br><span class="line">        gb.GetComponent&lt;Rigidbody2D&gt;().velocity = randomDirection * coinUpSpeed;</span><br><span class="line">        <span class="keyword">yield</span> <span class="keyword">return</span> wait;      <span class="comment">// 暂停代码运行，等待指定时间后继续运行</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> #### 停止协程 若要停止协程，请使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/MonoBehaviour.StopCoroutine.html">StopCoroutine</a>
+和 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/MonoBehaviour.StopAllCoroutines.html">StopAllCoroutines</a>。
+如果协程附加到的游戏对象的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/GameObject.SetActive.html">SetActive</a>
+被设置为 false ，则协程也会停止。 调用
+<strong>Destroy(example)</strong>（其中 example 是 MonoBehaviour
+实例）会立即触发 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2022.1/ScriptReference/MonoBehaviour.OnDisable.html">OnDisable</a>，并会处理协程，从而有效地停止它。最后，在帧结束时调用
+<strong>OnDestroy</strong> 。</p>
+<p>注意：如果你通过设置 enabled 为 false 来禁用 MonoBehaviour ,
+Unity不会停止协程。 ### 线程</p>
+<h2 id="input---输入控制器"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Input.html">Input</a>
+- 输入控制器</h2>
+<p>使用该类来读取<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/ConventionalGameInput.html">传统游戏输入</a>中设置的轴，以及访问移动设备上的多点触控/加速度计数据。
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/KeyCode.html">KeyCode</a>，其中列出了所有的按键、鼠标和游戏杆选项
+### <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Input.GetAxis.html">GetAxis</a>
+- 获取轴 public static float GetAxis (string axisName);</p>
+<p>返回由 axisName 标识的虚拟轴的值。
 对于键盘和游戏杆输入设备，该值将处于（-1 ~ 1）的范围内。</p>
-<p>该值的含义取决于输入控制的类型，例如，对于游戏杆的水平轴，值为 1 表示游戏杆向右推到底，值为 -1 表示游戏杆向左推到底；值为 0 表示游戏杆处于中性位置。</p>
-<p>如果将轴映射到鼠标，该值会有所不同，并且不会在 -1…1 的范围内。此时，该值为当前鼠标增量乘以轴灵敏度。通常，正值表示鼠标向右/向下移动，负值表示鼠标向左/向上移动。</p>
-<p>该值与帧率无关；使用该值时，您无需担心帧率变化问题。<br />
-如果您将输入用于任何类型的<strong>移动行为</strong>，请使用 Input.GetAxis。它为您提供了可以映射到键盘、操纵杆或鼠标的平滑且可配置的输入。仅将 Input.GetButton 用于类似操作的事件，请勿将其用于移动。</p>
-<h3 id="GetButtonDown-按钮按下"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Input.GetButtonDown.html">GetButtonDown</a> - 按钮按下<a class="header-anchor" href="#GetButtonDown-按钮按下">·</a></h3>
+<p>该值的含义取决于输入控制的类型，例如，对于游戏杆的水平轴，值为 1
+表示游戏杆向右推到底，值为 -1 表示游戏杆向左推到底；值为 0
+表示游戏杆处于中性位置。</p>
+<p>如果将轴映射到鼠标，该值会有所不同，并且不会在 -1...1
+的范围内。此时，该值为当前鼠标增量乘以轴灵敏度。通常，正值表示鼠标向右/向下移动，负值表示鼠标向左/向上移动。</p>
+<p>该值与帧率无关；使用该值时，您无需担心帧率变化问题。
+如果您将输入用于任何类型的<strong>移动行为</strong>，请使用
+Input.GetAxis。它为您提供了可以映射到键盘、操纵杆或鼠标的平滑且可配置的输入。仅将
+Input.GetButton 用于类似操作的事件，请勿将其用于移动。</p>
+<h3 id="getbuttondown---按钮按下"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Input.GetButtonDown.html">GetButtonDown</a>
+- 按钮按下</h3>
 <p>public static bool GetButtonDown (string buttonName);</p>
-<p>在用户按下由 buttonName 标识的虚拟按钮的帧期间返回 true。<br />
-从 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/MonoBehaviour.Update.html">Update</a> 函数调用此函数，因为状态每帧都会重置。在用户释放键并再次按下它之前，它不会返回 true。（只会检测<strong>一次按下</strong>，而不会检测<strong>按住</strong>）</p>
-<p>仅在实现武器单发开火事件等操作时，才使用该函数。<br />
-对于任意类型的移动行为，请使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Input.GetAxis.html">Input.GetAxis</a>。</p>
+<p>在用户按下由 buttonName 标识的虚拟按钮的帧期间返回 true。 从 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/MonoBehaviour.Update.html">Update</a>
+函数调用此函数，因为状态每帧都会重置。在用户释放键并再次按下它之前，它不会返回
+true。（只会检测<strong>一次按下</strong>，而不会检测<strong>按住</strong>）</p>
+<p>仅在实现武器单发开火事件等操作时，才使用该函数。
+对于任意类型的移动行为，请使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Input.GetAxis.html">Input.GetAxis</a>。</p>
 <p>编辑、设置或删除按钮及其名称（例如“Fire1”）：</p>
-<ol>
-<li>在 <code>Edit &gt; Project Settings &gt; Input Manager</code> 打开输入管理器.</li>
-<li>单击它旁边的箭头，展开 Axis。这将显示当前按钮的列表。您可以使用其中一个作为“buttonName”参数。</li>
+<ol type="1">
+<li>在 <code>Edit &gt; Project Settings &gt; Input Manager</code>
+打开输入管理器.</li>
+<li>单击它旁边的箭头，展开
+Axis。这将显示当前按钮的列表。您可以使用其中一个作为“buttonName”参数。</li>
 <li>展开列表中的某个项目后，可以访问和更改相关选项，例如按钮名称以及触发它的键、游戏杆或鼠标移动操作。</li>
-<li>有关按钮的更多信息，请参阅<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-InputManager.html">输入管理器</a>页面。</li>
+<li>有关按钮的更多信息，请参阅<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-InputManager.html">输入管理器</a>页面。</li>
 </ol>
-<h2 id="Prefab-预制体"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/Prefabs.html">Prefab</a> - 预制体<a class="header-anchor" href="#Prefab-预制体">·</a></h2>
-<p>Unity 的预制件系统允许创建、配置和存储游戏对象及其所有组件、属性值和子游戏对象作为<strong>可重用资源</strong>。预制件资源充当模板，在此模板的基础之上可以在场景中创建新的预制件实例。</p>
-<p>如果要在场景中的多个位置或项目中的多个场景之间重用以特定方式配置的游戏对象，比如非玩家角色 (NPC)、道具或景物，则应将此游戏对象转换为预制件。这种方式比简单复制和粘贴游戏对象更好，因为预制件系统可以自动保持所有副本同步。</p>
-<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/NestedPrefabs.html">预制件嵌套</a><br />
-预制件的<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/PrefabVariants.html">变体</a></p>
-<p>如果游戏对象在一开始不存在于场景中，而希望<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/InstantiatingPrefabs.html">在运行时实例化游戏对象</a>（例如，使能量块、特效、飞弹或 NPC 在游戏过程中的正确时间点出现），那么也应该使用预制件。</p>
+<h2 id="prefab---预制体"><a
+target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/Prefabs.html">Prefab</a>
+- 预制体</h2>
+<p>Unity
+的预制件系统允许创建、配置和存储游戏对象及其所有组件、属性值和子游戏对象作为<strong>可重用资源</strong>。预制件资源充当模板，在此模板的基础之上可以在场景中创建新的预制件实例。</p>
+<p>如果要在场景中的多个位置或项目中的多个场景之间重用以特定方式配置的游戏对象，比如非玩家角色
+(NPC)、道具或景物，则应将此游戏对象转换为预制件。这种方式比简单复制和粘贴游戏对象更好，因为预制件系统可以自动保持所有副本同步。</p>
+<p><a
+target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/NestedPrefabs.html">预制件嵌套</a>
+预制件的<a
+target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/PrefabVariants.html">变体</a></p>
+<p>如果游戏对象在一开始不存在于场景中，而希望<a
+target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/InstantiatingPrefabs.html">在运行时实例化游戏对象</a>（例如，使能量块、特效、飞弹或
+NPC 在游戏过程中的正确时间点出现），那么也应该使用预制件。</p>
 <p>使用预制件的一些<strong>常见示例</strong>包括：</p>
 <ul>
-<li>环境资源 - 例如，在一个关卡附近多次使用的某种树（如上面的截屏所示）。</li>
-<li>非玩家角色 (NPC) - 例如，某种类型的机器人可能会在游戏的多个关卡之间多次出现。它们的移动速度或声音可能不同（使用覆盖）。</li>
+<li>环境资源 -
+例如，在一个关卡附近多次使用的某种树（如上面的截屏所示）。</li>
+<li>非玩家角色 (NPC) -
+例如，某种类型的机器人可能会在游戏的多个关卡之间多次出现。它们的移动速度或声音可能不同（使用覆盖）。</li>
 <li>飞弹 - 例如，海盗的大炮可能会在每次射击时实例化炮弹预制件。</li>
-<li>玩家主角 - 玩家预制件可能被放置在游戏每个关卡（不同场景）的起点。</li>
+<li>玩家主角 -
+玩家预制件可能被放置在游戏每个关卡（不同场景）的起点。</li>
 </ul>
-<h2 id="Prefab-Variant-预制件变体"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/2022.1/Manual/PrefabVariants.html">Prefab Variant</a> - 预制件变体<a class="header-anchor" href="#Prefab-Variant-预制件变体">·</a></h2>
+<h2 id="prefab-variant---预制件变体"><a
+target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/2022.1/Manual/PrefabVariants.html">Prefab
+Variant</a> - 预制件变体</h2>
 <p>希望预制件有一组预定义的变化时，预制件变体非常有用。</p>
-<p>例如，您可能希望在游戏中使用几种不同类型的 GermSlimeTarget，这些全都基于同一个基本 GermSlimeTarget 预制件。但是，您可能想要一些 GermSlimeTarget 携带物品，一些以不同的速度移动，或者一些发出额外的声音效果。</p>
-<p>为此，您可以设置初始 GermSlimeTarget 预制件来执行您希望所有 GermSlimeTarget 共同执行的所有基本操作，然后可以创建多个预制件变体来实现以下目的：</p>
+<p>例如，您可能希望在游戏中使用几种不同类型的
+GermSlimeTarget，这些全都基于同一个基本 GermSlimeTarget
+预制件。但是，您可能想要一些 GermSlimeTarget
+携带物品，一些以不同的速度移动，或者一些发出额外的声音效果。</p>
+<p>为此，您可以设置初始 GermSlimeTarget 预制件来执行您希望所有
+GermSlimeTarget
+共同执行的所有基本操作，然后可以创建多个预制件变体来实现以下目的：</p>
 <ul>
-<li>通过在脚本上使用属性覆盖来更改速度，使 GermSlimeTarget 更快移动。</li>
+<li>通过在脚本上使用属性覆盖来更改速度，使 GermSlimeTarget
+更快移动。</li>
 <li>通过将额外的游戏对象附加到手臂，使 GermSlimeTarget 携带物品。</li>
-<li>通过添加一个播放格喳声的 AudioSource 组件，使 GermSlimeTarget 发出子弹般的格喳声。</li>
+<li>通过添加一个播放格喳声的 AudioSource 组件，使 GermSlimeTarget
+发出子弹般的格喳声。</li>
 </ul>
 <p>预制件变体<strong>继承</strong>另一个称为基础预制件的预制件的属性。对预制件变体进行的覆盖优先于基础预制件的值。预制件变体可以使用任何其他预制件作为其基础预制件（包括模型预制件或其他预制件变体）。</p>
 <ul>
@@ -764,171 +1169,280 @@ Unity3D中的子线程无法运行Unity SDK(开发者工具包，软件包、软
 <li>依赖</li>
 <li>解除依赖</li>
 </ul>
-<h2 id="Object"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a><a class="header-anchor" href="#Object">·</a></h2>
-<h3 id="Instantiate-克隆对象"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.Instantiate.html">Instantiate</a> - 克隆对象<a class="header-anchor" href="#Instantiate-克隆对象">·</a></h3>
-<p>public static Object Instantiate (<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a> original);<br />
-public static Object Instantiate (<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a> original, <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Transform.html">Transform</a> parent);<br />
-public static Object Instantiate (<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a> original, <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Transform.html">Transform</a> parent, bool instantiateInWorldSpace);<br />
-public static Object Instantiate (<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a> original, <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Vector3.html">Vector3</a> position, <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Quaternion.html">Quaternion</a> rotation);<br />
-public static Object Instantiate (<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a> original, <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Vector3.html">Vector3</a> position, <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Quaternion.html">Quaternion</a> rotation, <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Transform.html">Transform</a> parent);</p>
-<h4 id="返回">返回<a class="header-anchor" href="#返回">·</a></h4>
-<p>Object 实例化的克隆对象。</p>
-<h4 id="参数">参数<a class="header-anchor" href="#参数">·</a></h4>
-<table>
-<thead>
-<tr>
-<th>original</th>
-<th>要复制的现有对象。</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>position</td>
-<td>新对象的位置。</td>
-</tr>
-<tr>
-<td>rotation</td>
-<td>新对象的方向。</td>
-</tr>
-<tr>
-<td>parent</td>
-<td>将指定给新对象的父对象。</td>
-</tr>
-<tr>
-<td>instantiateInWorldSpace</td>
-<td>分配父对象时，传递 true 可直接在世界空间中定位新对象。传递 false 可相对于其新父项来设置对象的位置。</td>
-</tr>
-</tbody>
-</table>
+<h2 id="object"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a></h2>
+<h3 id="instantiate---克隆对象"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.Instantiate.html">Instantiate</a>
+- 克隆对象</h3>
+<p>public static Object Instantiate (<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a>
+original); public static Object Instantiate (<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a>
+original, <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Transform.html">Transform</a>
+parent); public static Object Instantiate (<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a>
+original, <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Transform.html">Transform</a>
+parent, bool instantiateInWorldSpace); public static Object Instantiate
+(<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a>
+original, <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Vector3.html">Vector3</a>
+position, <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Quaternion.html">Quaternion</a>
+rotation); public static Object Instantiate (<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Object.html">Object</a>
+original, <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Vector3.html">Vector3</a>
+position, <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Quaternion.html">Quaternion</a>
+rotation, <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Transform.html">Transform</a>
+parent); #### 返回 Object 实例化的克隆对象。 #### 参数 | original |
+要复制的现有对象。 | | ----------------------- |
+------------------------------------------------------------ | |
+position | 新对象的位置。 | | rotation | 新对象的方向。 | | parent |
+将指定给新对象的父对象。 | | instantiateInWorldSpace |
+分配父对象时，传递 true 可直接在世界空间中定位新对象。传递 false
+可相对于其新父项来设置对象的位置。 |</p>
 <p>克隆 original 对象并返回克隆对象。</p>
-<p>此函数会通过与编辑器中的复制命令类似的方式创建对象的副本。<br />
-如果要克隆 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.html">GameObject</a>，则可以指定其位置和旋转（否则，这些默认为原始 GameObject 的位置和旋转）。<br />
-如果要克隆 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Component.html">Component</a>，则也会克隆它附加到的 GameObject（同样可指定可选的位置和旋转）。</p>
-<p>克隆 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.html">GameObject</a> 或 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Component.html">Component</a> 时，也将克隆所有子对象和组件，它们的属性设置与原始对象相同。</p>
-<p>默认情况下，新对象的父对象 为 null；它与原始对象不&quot;同级”&quot;。但是，仍可以使用重载方法设置父对象。<br />
-如果指定了父对象但未指定位置和旋转，则使用原始对象的位置和旋转作为克隆对象的本地位置和旋转或是其世界位置和旋转（如果 instantiateInWorldSpace 参数为 true）。</p>
-<p>克隆时 GameObject 的活动状态会维持，因此，如果原始对象处于非活动状态，则克隆对象也会在非活动状态下创建。此外，对于层级视图中的对象和所有子对象，其每个 Monobehaviour 和 Component 都会仅当调用此方法时它们在层级视图中处于活动状态时，才会调用其 Awake 和 OnEnable 方法。</p>
-<p>这些方法不会创建与新实例化对象的预制件连接。可以使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PrefabUtility.InstantiatePrefab.html">PrefabUtility.InstantiatePrefab</a> 创建具有预制件连接的对象。<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/InstantiatingPrefabs.html">在运行时实例化预制件</a></p>
-<p>您还可以使用泛型来实例化对象。有关更多详细信息，请参阅<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/GenericFunctions.html">泛型函数</a>页面。<br />
-通过使用泛型，我们不需要将结果转换为特定类型。<br />
+<p>此函数会通过与编辑器中的复制命令类似的方式创建对象的副本。 如果要克隆
+<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.html">GameObject</a>，则可以指定其位置和旋转（否则，这些默认为原始
+GameObject 的位置和旋转）。 如果要克隆 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Component.html">Component</a>，则也会克隆它附加到的
+GameObject（同样可指定可选的位置和旋转）。</p>
+<p>克隆 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/GameObject.html">GameObject</a>
+或 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Component.html">Component</a>
+时，也将克隆所有子对象和组件，它们的属性设置与原始对象相同。</p>
+<p>默认情况下，新对象的父对象 为
+null；它与原始对象不"同级”"。但是，仍可以使用重载方法设置父对象。
+如果指定了父对象但未指定位置和旋转，则使用原始对象的位置和旋转作为克隆对象的本地位置和旋转或是其世界位置和旋转（如果
+instantiateInWorldSpace 参数为 true）。</p>
+<p>克隆时 GameObject
+的活动状态会维持，因此，如果原始对象处于非活动状态，则克隆对象也会在非活动状态下创建。此外，对于层级视图中的对象和所有子对象，其每个
+Monobehaviour 和 Component
+都会仅当调用此方法时它们在层级视图中处于活动状态时，才会调用其 Awake 和
+OnEnable 方法。</p>
+<p>这些方法不会创建与新实例化对象的预制件连接。可以使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/PrefabUtility.InstantiatePrefab.html">PrefabUtility.InstantiatePrefab</a>
+创建具有预制件连接的对象。<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/InstantiatingPrefabs.html">在运行时实例化预制件</a></p>
+<p>您还可以使用泛型来实例化对象。有关更多详细信息，请参阅<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/GenericFunctions.html">泛型函数</a>页面。
+通过使用泛型，我们不需要将结果转换为特定类型。
 <code>Missile missileCopy = Instantiate&lt;Missile&gt;(missile);</code></p>
-<h2 id="SceneManager"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.html">SceneManager</a><a class="header-anchor" href="#SceneManager">·</a></h2>
-<h3 id="LoadScene-加载场景"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadScene.html">LoadScene</a> - 加载场景<a class="header-anchor" href="#LoadScene-加载场景">·</a></h3>
-<p>public static void LoadScene (int sceneBuildIndex, <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.LoadSceneMode.html">SceneManagement.LoadSceneMode</a> mode= LoadSceneMode.Single);<br />
-public static void LoadScene (string sceneName, <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.LoadSceneMode.html">SceneManagement.LoadSceneMode</a> mode= LoadSceneMode.Single);</p>
+<h2 id="scenemanager"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.html">SceneManager</a></h2>
+<h3 id="loadscene---加载场景"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadScene.html">LoadScene</a>
+- 加载场景</h3>
+<p>public static void LoadScene (int sceneBuildIndex, <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.LoadSceneMode.html">SceneManagement.LoadSceneMode</a>
+mode= LoadSceneMode.Single); public static void LoadScene (string
+sceneName, <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.LoadSceneMode.html">SceneManagement.LoadSceneMode</a>
+mode= LoadSceneMode.Single);</p>
 <table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>sceneName</th>
 <th>要加载的场景的名称或路径。</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>sceneBuildIndex</td>
 <td>Build Settings 中要加载场景的索引。</td>
 </tr>
-<tr>
+<tr class="even">
 <td>mode</td>
-<td>允许您指定是否以累加方式加载场景。有关选项的更多信息，请参阅 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.LoadSceneMode.html">LoadSceneMode</a>。</td>
+<td>允许您指定是否以累加方式加载场景。有关选项的更多信息，请参阅 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.LoadSceneMode.html">LoadSceneMode</a>。</td>
 </tr>
 </tbody>
 </table>
-<p>按照 <strong>Build Settings</strong> 中的名称或索引加载场景。<br />
-注意：在大多数情况下，为了避免在加载时出现暂停或性能中断现象， 您应该使用此命令的<strong>异步版</strong>，即： <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html">LoadSceneAsync</a>。</p>
-<p>使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a> 时，不会立即加载场景，而是在下一帧加载。这种半异步的行为可能会导致帧卡顿，并可能令人困惑，因为加载无法立即完成。</p>
-<p>由于加载被设置为在下一个渲染帧中完成，调用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a> 会强制完成之前的所有 AsyncOperations，即使 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/AsyncOperation-allowSceneActivation.html">AsyncOperation.allowSceneActivation</a> 设置为 false 也一样。要避免这种情况，请改用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html">LoadSceneAsync</a>。</p>
-<p>提供的 sceneName 可以只是场景名称（不包含 .unity 扩展名），也可以是 BuildSettings 窗口中显示的路径（仍然不包含 .unity 扩展名）。如果仅提供场景名称，此方法将加载场景列表中匹配的第一个场景。如果有多个名称相同但路径不同的场景，应该使用完整路径。</p>
-<p>SceneA 能够以累加方式多次加载 SceneA。每个加载的场景都使用常规名称。如果 SceneA 加载 SceneB 十次，每个 SceneB 将具有相同的名称。无法找到特定的已添加场景。</p>
-<p>请注意，除非您从 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/AssetBundle.html">AssetBundle</a> 加载场景，否则 sceneName 不区分大小写。<br />
-有关在编辑器中打开场景的信息，请参阅 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.EditorSceneManager.OpenScene.html">EditorSceneManager.OpenScene</a>。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">LoadA</span>(<span class="params"><span class="built_in">string</span> scenename</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    SceneManager.LoadScene(scenename);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">LoadB</span>(<span class="params"><span class="built_in">int</span> sceneANumber</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    SceneManager.LoadScene(sceneANumber);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="LoadSceneMode-场景加载的模式"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/SceneManagement.LoadSceneMode.html">LoadSceneMode</a> - 场景加载的模式<a class="header-anchor" href="#LoadSceneMode-场景加载的模式">·</a></h4>
-<p>通过 LoadSceneMode 选择在使用 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a> 时加载哪种类型的场景。</p>
-<p><strong>单模式</strong>将加载一个标准的 Unity 场景，该场景将独立显示在 Hierarchy 窗口中。<br />
-<strong>附加模式</strong>将加载一个显示在 Hierarchy 窗口的场景，而窗口中同时还包含其他活动场景。</p>
+<p>按照 <strong>Build Settings</strong> 中的名称或索引加载场景。
+注意：在大多数情况下，为了避免在加载时出现暂停或性能中断现象，
+您应该使用此命令的<strong>异步版</strong>，即： <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html">LoadSceneAsync</a>。</p>
+<p>使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>
+时，不会立即加载场景，而是在下一帧加载。这种半异步的行为可能会导致帧卡顿，并可能令人困惑，因为加载无法立即完成。</p>
+<p>由于加载被设置为在下一个渲染帧中完成，调用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>
+会强制完成之前的所有 AsyncOperations，即使 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/AsyncOperation-allowSceneActivation.html">AsyncOperation.allowSceneActivation</a>
+设置为 false 也一样。要避免这种情况，请改用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html">LoadSceneAsync</a>。</p>
+<p>提供的 sceneName 可以只是场景名称（不包含 .unity 扩展名），也可以是
+BuildSettings 窗口中显示的路径（仍然不包含 .unity
+扩展名）。如果仅提供场景名称，此方法将加载场景列表中匹配的第一个场景。如果有多个名称相同但路径不同的场景，应该使用完整路径。</p>
+<p>SceneA 能够以累加方式多次加载
+SceneA。每个加载的场景都使用常规名称。如果 SceneA 加载 SceneB 十次，每个
+SceneB 将具有相同的名称。无法找到特定的已添加场景。</p>
+<p>请注意，除非您从 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/AssetBundle.html">AssetBundle</a>
+加载场景，否则 sceneName 不区分大小写。
+有关在编辑器中打开场景的信息，请参阅 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SceneManagement.EditorSceneManager.OpenScene.html">EditorSceneManager.OpenScene</a>。
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">LoadA</span>(<span class="params"><span class="built_in">string</span> scenename</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    SceneManager.LoadScene(scenename);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">LoadB</span>(<span class="params"><span class="built_in">int</span> sceneANumber</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    SceneManager.LoadScene(sceneANumber);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> #### <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/SceneManagement.LoadSceneMode.html">LoadSceneMode</a>
+- 场景加载的模式</p>
+<p>通过 LoadSceneMode 选择在使用 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>
+时加载哪种类型的场景。</p>
+<p><strong>单模式</strong>将加载一个标准的 Unity
+场景，该场景将独立显示在 Hierarchy 窗口中。
+<strong>附加模式</strong>将加载一个显示在 Hierarchy
+窗口的场景，而窗口中同时还包含其他活动场景。</p>
 <table>
+<colgroup>
+<col style="width: 60%" />
+<col style="width: 40%" />
+</colgroup>
 <thead>
-<tr>
-<th><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/SceneManagement.LoadSceneMode.Single.html">Single</a></th>
+<tr class="header">
+<th><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/SceneManagement.LoadSceneMode.Single.html">Single</a></th>
 <th>关闭所有当前加载的场景，并加载一个场景。</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/SceneManagement.LoadSceneMode.Additive.html">Additive</a></td>
+<tr class="odd">
+<td><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/SceneManagement.LoadSceneMode.Additive.html">Additive</a></td>
 <td>将场景添加到当前加载的场景。</td>
 </tr>
 </tbody>
 </table>
-<h2 id="Attributes-变量">Attributes - 变量<a class="header-anchor" href="#Attributes-变量">·</a></h2>
-<h3 id="SerializeField-序列化"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SerializeField.html">SerializeField </a>- 序列化<a class="header-anchor" href="#SerializeField-序列化">·</a></h3>
-<p>强制 Unity 对<strong>私有字段</strong>进行序列化。</p>
-<blockquote>
-<p>效果：在 Inspector(检查器)中显示被序列化的变量</p>
-</blockquote>
-<p>当 Unity 对脚本进行序列化时，仅对公共字段进行序列化。 如果还需要 Unity 对私有字段进行序列化， 可以将 SerializeField 属性添加到这些字段。</p>
-<p>Unity 将对所有脚本组件进行序列化，重新加载新程序集， 并从序列化的版本重新创建脚本组件。此 序列化是通过 <strong>Unity 内部序列化系统</strong>完成的；而不是通过 .NET 的序列化功能来完成。</p>
+<h2 id="attributes---变量">Attributes - 变量</h2>
+<h3 id="serializefield--序列化"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SerializeField.html">SerializeField</a>-
+序列化</h3>
+<p>强制 Unity 对<strong>私有字段</strong>进行序列化。 &gt; 效果：在
+Inspector(检查器)中显示被序列化的变量</p>
+<p>当 Unity 对脚本进行序列化时，仅对公共字段进行序列化。 如果还需要
+Unity 对私有字段进行序列化， 可以将 SerializeField
+属性添加到这些字段。</p>
+<p>Unity 将对所有脚本组件进行序列化，重新加载新程序集，
+并从序列化的版本重新创建脚本组件。此 序列化是通过 <strong>Unity
+内部序列化系统</strong>完成的；而不是通过 .NET 的序列化功能来完成。</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">SerializeField</span>]</span><br><span class="line"><span class="keyword">private</span> <span class="built_in">bool</span> isGround = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">[<span class="meta">SerializeField</span>]</span><br><span class="line"><span class="keyword">private</span> <span class="built_in">float</span> Health = <span class="number">10.0f</span>;</span><br></pre></td></tr></table></figure>
-<p>参考资料：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yangyong0717/article/details/71512251">Unity3D中[SerializeField]特性的使用</a></p>
+<p>参考资料：<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/yangyong0717/article/details/71512251">Unity3D中[SerializeField]特性的使用</a></p>
 <hr />
 <p>序列化系统可执行以下操作：</p>
 <ul>
 <li>可序列化（可序列化类型的）公共<strong>非静态</strong>字段</li>
-<li>可序列化标记有 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SerializeField.html">SerializeField</a> 属性的非公共非静态字段。</li>
+<li>可序列化标记有 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/SerializeField.html">SerializeField</a>
+属性的非公共非静态字段。</li>
 <li>不能序列化静态字段。</li>
 <li>不能序列化属性。</li>
 </ul>
 <p>可序列化的类型</p>
 <p>Unity 可序列化以下类型的字段：</p>
 <ul>
-<li>继承 UnityEngine.Object 的所有类，例如 GameObject、Component、MonoBehaviour、Texture2D、AnimationClip。</li>
+<li>继承 UnityEngine.Object 的所有类，例如
+GameObject、Component、MonoBehaviour、Texture2D、AnimationClip。</li>
 <li>所有基本数据类型，例如 int、string、float、bool。</li>
-<li>某些内置类型，例如 Vector2、Vector3、Vector4、Quaternion、Matrix4x4、Color、Rect、LayerMask。</li>
+<li>某些内置类型，例如
+Vector2、Vector3、Vector4、Quaternion、Matrix4x4、Color、Rect、LayerMask。</li>
 <li>可序列化类型数组</li>
 <li>可序列化类型列表</li>
 <li>枚举</li>
 <li>结构</li>
 </ul>
-<p>有关序列化的更多信息，请参阅<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/script-Serialization.html">脚本序列化</a>。</p>
+<p>有关序列化的更多信息，请参阅<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/Manual/script-Serialization.html">脚本序列化</a>。</p>
 <p>注意：如果在一个列表（或数组）中将一个元素放置两次，当此列表被序列化时，将获得该元素的两个副本，而不是获得两次新列表中的一个副本。</p>
-<p>注意：如果要序列化自定义 Struct 字段，则必须为该 Struct 给定 [System.Serializable] 属性。</p>
-<p>提示：Unity 不会序列化 Dictionary，但您可以为键存储一个 List&lt;&gt; 和为值存储一个 List&lt;&gt;，然后在 Awake() 上将它们组合在非序列化字典中。这不能解决您需要修改字典 并将其“保存”回时出现的问题，但在许多其他情况下，这是一个方便的技巧。</p>
-<h3 id="NonSerialized-取消序列化"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/NonSerialized.html">NonSerialized </a>- 取消序列化<a class="header-anchor" href="#NonSerialized-取消序列化">·</a></h3>
+<p>注意：如果要序列化自定义 Struct 字段，则必须为该 Struct 给定
+[System.Serializable] 属性。</p>
+<p>提示：Unity 不会序列化 Dictionary，但您可以为键存储一个 List&lt;&gt;
+和为值存储一个 List&lt;&gt;，然后在 Awake()
+上将它们组合在非序列化字典中。这不能解决您需要修改字典
+并将其“保存”回时出现的问题，但在许多其他情况下，这是一个方便的技巧。</p>
+<h3 id="nonserialized--取消序列化"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/NonSerialized.html">NonSerialized</a>-
+取消序列化</h3>
 <p>NonSerialized 属性将变量标记为无法序列化。</p>
-<p>通过该方法，您可以使一个变量<strong>保持公开</strong>，且 Unity 不会尝试序列化它或在 Inspector 中显示它。<br />
-另请参阅：<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/HideInInspector.html">HideInInspector</a>。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">System.NonSerialized</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="built_in">int</span> p = <span class="number">5</span>;</span><br></pre></td></tr></table></figure>
-<h1 id="Tags-and-Layers-标签、图层"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-TagManager.html">Tags and Layers</a> - 标签、图层<a class="header-anchor" href="#Tags-and-Layers-标签、图层">·</a></h1>
-<p>Tags and Layers 设置（主菜单：<strong>Edit</strong> &gt; Project Settings__，然后选择 Tags and Layers__ 类别）可用于设置<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-TagManager.html#Tags">标签 (Tags)</a>、<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-TagManager.html#SortingLayers">排序图层 (Sorting Layers)</a> 和<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-TagManager.html#Layers">图层 (Layers)</a>。</p>
-<h2 id="Layer-层"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.3/Manual/Layers.html">Layer</a> - 层<a class="header-anchor" href="#Layer-层">·</a></h2>
-<p>在 Unity 中，__层__定义哪些游戏对象可以与不同的功能以及彼此交互。它们主要有两种用途：由__摄像机__用来仅渲染场景的某一部分；由__光源__用来仅照亮场景的某些部分。但是，层也可以供射线投射用于选择性地忽略碰撞体或创建<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.3/Manual/LayerBasedCollision.html">碰撞</a>。</p>
-<p><strong>注意</strong>：第 31 层为 Editor 的预览窗口内部机制使用。为了防止冲突，请勿使用此层。</p>
-<h3 id="基于层的碰撞检测">基于层的碰撞检测<a class="header-anchor" href="#基于层的碰撞检测">·</a></h3>
-<p>通过基于层的碰撞检测，可以让某个游戏对象与另一个设置为特定层或多个层的游戏对象发生碰撞。<br />
-<img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1653447561623-05b66cac-3b72-4133-ac75-5ad4af587d70.png#averageHue=%237d7d7d&amp;clientId=ub6026e58-5b6d-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u8824bf38&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=414&amp;originWidth=689&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=77965&amp;status=done&amp;style=none&amp;taskId=u34902906-a188-4d48-8e7e-22f5e606a9a&amp;title=" alt="image.png" /><br />
-上图显示了 Scene 视图中的六个游戏对象（3 个平面，3 个立方体），窗口右侧显示了 Layer Collision Matrix（层碰撞矩阵）。Layer Collision Matrix 定义了哪些游戏对象与哪些层碰撞。<br />
-在此示例中，Layer Collision Matrix 设置为只有属于相同层的游戏对象才能碰撞。</p>
+<p>通过该方法，您可以使一个变量<strong>保持公开</strong>，且 Unity
+不会尝试序列化它或在 Inspector 中显示它。 另请参阅：<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/HideInInspector.html">HideInInspector</a>。
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">System.NonSerialized</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="built_in">int</span> p = <span class="number">5</span>;</span><br></pre></td></tr></table></figure></p>
+<h1 id="tags-and-layers---标签图层"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-TagManager.html">Tags
+and Layers</a> - 标签、图层</h1>
+<p>Tags and Layers 设置（主菜单：<strong>Edit</strong> &gt; Project
+Settings__，然后选择 Tags and Layers__ 类别）可用于设置<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-TagManager.html#Tags">标签
+(Tags)</a>、<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-TagManager.html#SortingLayers">排序图层
+(Sorting Layers)</a> 和<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/Manual/class-TagManager.html#Layers">图层
+(Layers)</a>。</p>
+<h2 id="layer---层"><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.3/Manual/Layers.html">Layer</a> -
+层</h2>
+<p>在 Unity
+中，__层__定义哪些游戏对象可以与不同的功能以及彼此交互。它们主要有两种用途：由__摄像机__用来仅渲染场景的某一部分；由__光源__用来仅照亮场景的某些部分。但是，层也可以供射线投射用于选择性地忽略碰撞体或创建<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.3/Manual/LayerBasedCollision.html">碰撞</a>。</p>
+<p><strong>注意</strong>：第 31 层为 Editor
+的预览窗口内部机制使用。为了防止冲突，请勿使用此层。</p>
+<h3 id="基于层的碰撞检测">基于层的碰撞检测</h3>
+<p>通过基于层的碰撞检测，可以让某个游戏对象与另一个设置为特定层或多个层的游戏对象发生碰撞。
+<img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1653447561623-05b66cac-3b72-4133-ac75-5ad4af587d70.png#averageHue=%237d7d7d&amp;clientId=ub6026e58-5b6d-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u8824bf38&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=414&amp;originWidth=689&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=77965&amp;status=done&amp;style=none&amp;taskId=u34902906-a188-4d48-8e7e-22f5e606a9a&amp;title="
+alt="image.png" /> 上图显示了 Scene 视图中的六个游戏对象（3 个平面，3
+个立方体），窗口右侧显示了 Layer Collision Matrix（层碰撞矩阵）。Layer
+Collision Matrix 定义了哪些游戏对象与哪些层碰撞。 在此示例中，Layer
+Collision Matrix 设置为只有属于相同层的游戏对象才能碰撞。</p>
 <p><strong>设置基于层的碰撞检测：</strong></p>
-<ol>
+<ol type="1">
 <li>在 Unity 菜单栏中，选择 Edit &gt; Project Settings，</li>
-<li>然后选择 Physics 类别以打开 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.3/Manual/class-PhysicsManager.html">Physics</a> 窗口。</li>
+<li>然后选择 Physics 类别以打开 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2020.3/Manual/class-PhysicsManager.html">Physics</a>
+窗口。</li>
 <li>选择碰撞矩阵中的哪些层将与其他层交互（勾选相应层即可）。</li>
 </ol>
-<p>参考资料：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014361280/article/details/112671632">Unity 基础 之 Layer(层layer)</a></p>
-<h2 id="SortingLayer">SortingLayer<a class="header-anchor" href="#SortingLayer">·</a></h2>
+<p>参考资料：<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/u014361280/article/details/112671632">Unity
+基础 之 Layer(层layer)</a></p>
+<h2 id="sortinglayer">SortingLayer</h2>
 <p>SortingLayer 可用于轻松设置多个物体的渲染顺序。</p>
-<p>始终有一个名称为“Default”的默认 SortingLayer，最初所有物体都添加到其中。添加了更多 SortingLayer，可轻松控制物体组的渲染顺序。图层可排在默认图层的前面或后面。</p>
-<p>参考资料：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_52719788/article/details/121548738">Unity SortingLayer和Layer区别、相机、渲染顺序和射线检测</a></p>
-<h2 id="SortingGroup-排序组"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-SortingGroup.html">SortingGroup</a> - 排序组<a class="header-anchor" href="#SortingGroup-排序组">·</a></h2>
-<p>排序组 (Sorting Group) 可以将具有<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-SpriteRenderer.html">精灵渲染器 (Sprite Renderer)</a> 的游戏对象分组在一起，并控制这些渲染器渲染精灵的顺序。Unity 将同一排序组中的精灵渲染器一起渲染，就好像它们是单个游戏对象一样。</p>
-<h3 id="设置排序组">设置排序组<a class="header-anchor" href="#设置排序组">·</a></h3>
-<p>要将游戏对象添加到排序组中，请将 Sorting Group 组件添加到此游戏对象。为此，请选择游戏对象，然后选择 <strong>Component &gt; Rendering &gt; Sorting Group</strong>，或者选择游戏对象的 Inspector 窗口中的 <a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/UsingComponents.html">Add Component</a> 按钮。<br />
-将 Sorting Group 组件添加到游戏对象时，Unity 会将同一<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-SortingGroup.html#SGProperties">排序组</a>应用于该组件附加到的游戏对象的所有子游戏对象。</p>
-<h3 id="Sorting-Group-属性">Sorting Group 属性<a class="header-anchor" href="#Sorting-Group-属性">·</a></h3>
-<p>Unity 使用 Sorting Group 组件的** <strong><a target="_blank" rel="noopener" href="https://docs.unity.cn/Manual/class-TagManager.html#SortingLayers"><strong>Sorting Layer</strong></a></strong> **和 <strong>Order in Layer</strong> 值来确定排序组在渲染队列内相对于场景中其他排序组和游戏对象的优先级。</p>
-<h2 id="Bolt-可视化编程">Bolt - 可视化编程<a class="header-anchor" href="#Bolt-可视化编程">·</a></h2>
-<h2 id="Quaternion-四元数">Quaternion - 四元数<a class="header-anchor" href="#Quaternion-四元数">·</a></h2>
+<p>始终有一个名称为“Default”的默认
+SortingLayer，最初所有物体都添加到其中。添加了更多
+SortingLayer，可轻松控制物体组的渲染顺序。图层可排在默认图层的前面或后面。</p>
+<p>参考资料：<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_52719788/article/details/121548738">Unity
+SortingLayer和Layer区别、相机、渲染顺序和射线检测</a> ## <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-SortingGroup.html">SortingGroup</a>
+- 排序组 排序组 (Sorting Group) 可以将具有<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-SpriteRenderer.html">精灵渲染器
+(Sprite Renderer)</a>
+的游戏对象分组在一起，并控制这些渲染器渲染精灵的顺序。Unity
+将同一排序组中的精灵渲染器一起渲染，就好像它们是单个游戏对象一样。 ###
+设置排序组 要将游戏对象添加到排序组中，请将 Sorting Group
+组件添加到此游戏对象。为此，请选择游戏对象，然后选择 <strong>Component
+&gt; Rendering &gt; Sorting Group</strong>，或者选择游戏对象的 Inspector
+窗口中的 <a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/UsingComponents.html">Add
+Component</a> 按钮。 将 Sorting Group 组件添加到游戏对象时，Unity
+会将同一<a
+target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-SortingGroup.html#SGProperties">排序组</a>应用于该组件附加到的游戏对象的所有子游戏对象。
+### Sorting Group 属性 Unity 使用 Sorting Group 组件的** <strong><a
+target="_blank" rel="noopener" href="https://docs.unity.cn/Manual/class-TagManager.html#SortingLayers"><strong>Sorting
+Layer</strong></a></strong> <strong>和 </strong>Order in Layer**
+值来确定排序组在渲染队列内相对于场景中其他排序组和游戏对象的优先级。</p>
+<h2 id="bolt---可视化编程">Bolt - 可视化编程</h2>
+<h2 id="quaternion---四元数">Quaternion - 四元数</h2>
 <p>Quaternion.identity 表示“无旋转”</p>
 
     </div>
@@ -1054,14 +1568,14 @@ public static void LoadScene (string sceneName, <a target="_blank" rel="noopener
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">305k</span>
+    <span title="站点总字数">310k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:08</span>
+    <span title="站点阅读时长">14:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -1091,6 +1605,7 @@ public static void LoadScene (string sceneName, <a target="_blank" rel="noopener
   <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/code-unfold.js"></script>
 
   <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>

@@ -19,17 +19,27 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="下载准备· MongoDB官方的下载地址">
+    <meta name="description" content="下载准备 MongoDB官方的下载地址">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="MongoDB数据库 安装与配置">
 <meta property="og:url" content="https://www.yunying61.cn/2020/02/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="下载准备· MongoDB官方的下载地址">
+<meta property="og:description" content="下载准备 MongoDB官方的下载地址">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/leanote/mongodb.png?x-oss-process=style/yunying61">
 <meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/leanote/mongod-cfg.jpg?x-oss-process=style/yunying61">
@@ -156,14 +166,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">下载准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">2.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E7%89%88"><span class="nav-number">3.</span> <span class="nav-text">Windows版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88%E5%8F%AF%E7%9C%81%E7%95%A5%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">配置环境变量（可省略）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88Windows%E7%89%88%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">远程连接MongoDB数据库（Windows版）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E7%89%88"><span class="nav-number">4.</span> <span class="nav-text">Linux版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8BMongoDB%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="nav-number">4.1.</span> <span class="nav-text">解压MongoDB压缩包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEMongoDB"><span class="nav-number">4.2.</span> <span class="nav-text">配置MongoDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95mongodb%E5%AE%89%E8%A3%85"><span class="nav-number">4.3.</span> <span class="nav-text">测试mongodb安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E-MongoDB%E7%94%A8%E6%88%B7-%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">关于 MongoDB用户 的命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB%E5%91%BD%E4%BB%A4"><span class="nav-number">6.</span> <span class="nav-text">MongoDB命令</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">下载准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">2.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#windows%E7%89%88"><span class="nav-number">3.</span> <span class="nav-text">Windows版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%8F%AF%E7%9C%81%E7%95%A5"><span class="nav-number">3.1.</span> <span class="nav-text">配置环境变量（可省略）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5mongodb%E6%95%B0%E6%8D%AE%E5%BA%93windows%E7%89%88"><span class="nav-number">3.2.</span> <span class="nav-text">远程连接MongoDB数据库（Windows版）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux%E7%89%88"><span class="nav-number">4.</span> <span class="nav-text">Linux版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8Bmongodb%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="nav-number">4.1.</span> <span class="nav-text">解压MongoDB压缩包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEmongodb"><span class="nav-number">4.2.</span> <span class="nav-text">配置MongoDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95mongodb%E5%AE%89%E8%A3%85"><span class="nav-number">4.3.</span> <span class="nav-text">测试mongodb安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E-mongodb%E7%94%A8%E6%88%B7-%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">关于 MongoDB用户 的命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mongodb%E5%91%BD%E4%BB%A4"><span class="nav-number">6.</span> <span class="nav-text">MongoDB命令</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="yunying61"
-      src="/images/yunying61.png">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
   <p class="site-author-name" itemprop="name">yunying61</p>
   <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
 </div>
@@ -182,7 +192,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">149</span>
+        <span class="site-state-item-count">150</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -294,6 +304,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/02/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="post-meta-item leancloud_visitors" data-flag-title="MongoDB数据库 安装与配置" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -321,7 +332,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>9.5k</span>
+      <span>9.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -339,80 +350,77 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="下载准备">下载准备<a class="header-anchor" href="#下载准备">·</a></h2>
-<p><a target="_blank" rel="noopener" href="https://www.mongodb.com/">MongoDB官方</a>的<a target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">下载地址</a></p>
+        <h2 id="下载准备">下载准备</h2>
+<p><a target="_blank" rel="noopener" href="https://www.mongodb.com/">MongoDB官方</a>的<a
+target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">下载地址</a></p>
 <span id="more"></span>
-<h2 id="写在前面">写在前面<a class="header-anchor" href="#写在前面">·</a></h2>
+<h2 id="写在前面">写在前面</h2>
 <p>这里，我将介绍Windows版和Linux版的搭建过程。</p>
 <a class="btn" href="#Windows版安装">Windows版</a>
 <a class="btn" href="#Linux版安装">Linux版</a>
-<h2 id="Windows版">Windows版<a class="header-anchor" href="#Windows版">·</a></h2>
-<ol>
-<li>
-<p>运行mongodb-windows-x86_64-4.4.2-signed.msi进行安装（本文默认解压到了 C:\MongoDB\Server\4.2）。</p>
+<h2 id="windows版">Windows版</h2>
+<ol type="1">
+<li><p>运行mongodb-windows-x86_64-4.4.2-signed.msi进行安装（本文默认解压到了
+C:\4.2）。</p>
 <p>安装比较容易，但有一个关键是，不要安装<code>MongoDB Compass</code>，这是MongoDB的官方图形用户界面，很大，下载速度很慢，而且有其他更好的替代品。</p>
 <p>难点在配置文件，启动Mongodb的服务以及将MongoDB设置成Windows服务，加载配置文件在windows的“服务”中找到。</p>
 <p>关于网上教程中普遍推荐新建一个data文件夹等等一些操作，我的看法是可有可无，因为到了我这个版本，mongodb会自己创建这些东西。当然，如果为了方便寻找数据库和日志，自己建一个也可以。</p>
 <blockquote>
-<p>这里我就简单描述一下：<br />
-（这里我默认在 C:\MongoDB\ 创建了文件夹）<br />
-C:\MongoDB\data\log目录，用来存放日志文件；<br />
-C:\MongoDB\Server\4.2\log\mongodb.log 里的 mongodb.log ，用来存放日志信息；<br />
-C:\MongoDB\Server\4.2\data\db目录，用来存放数据库数据。</p>
-</blockquote>
-</li>
-<li>
-<p>在C:\MongoDB\Server\4.2\data目录下创建<code>db</code>文件夹(因为默认安装中没有这个文件夹，但后面要用)<br />
-在C:\MongoDB\Server\4.2目录下创建mongo.config，在文件内部复制如下文本：</p>
- <figure class="highlight plaintext"><figcaption><span>mongo.config</span><a href="/downloads/code/mongo.config">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#端口号 默认为27017</span><br><span class="line">port=27017 </span><br><span class="line"></span><br><span class="line">##数据文件  此处=后对应到数据所存放的目录</span><br><span class="line">dbpath=C:\MongoDB\Server\4.2\data\db</span><br><span class="line"></span><br><span class="line">##日志文件  此处=后对应到日志文件所在路径</span><br><span class="line">logpath=C:\MongoDB\Server\4.2\log\mongodb.log</span><br><span class="line"></span><br><span class="line">#启用日志文件，默认启用，每次写入会记录一条操作日志（通过journal可以重新构造出写入的数据）。</span><br><span class="line">journal=true </span><br><span class="line"></span><br><span class="line">##错误日志采用追加模式，配置这个选项后mongodb的日志会追加到现有的日志文件，而不是从新创建一个新文件</span><br><span class="line">logappend=true </span><br><span class="line"></span><br><span class="line">#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false</span><br><span class="line">quiet=true </span><br><span class="line"></span><br><span class="line">#这样就可外部访问了，例如从win10中去连虚拟机中的MongoDB</span><br><span class="line">bind_ip = 0.0.0.0</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>安装服务<br />
+<p>这里我就简单描述一下： （这里我默认在 C: 创建了文件夹）
+C:，用来存放日志文件； C:\4.2.log 里的 mongodb.log ，用来存放日志信息；
+C:\4.2，用来存放数据库数据。</p>
+</blockquote></li>
+<li><p>在C:\4.2<code>db</code>文件夹(因为默认安装中没有这个文件夹，但后面要用)
+在C:\4.2目录下创建mongo.config，在文件内部复制如下文本：
+<figure class="highlight plaintext"><figcaption><span>mongo.config</span><a href="/downloads/code/mongo.config">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#端口号 默认为27017</span><br><span class="line">port=27017 </span><br><span class="line"></span><br><span class="line">##数据文件  此处=后对应到数据所存放的目录</span><br><span class="line">dbpath=C:\MongoDB\Server\4.2\data\db</span><br><span class="line"></span><br><span class="line">##日志文件  此处=后对应到日志文件所在路径</span><br><span class="line">logpath=C:\MongoDB\Server\4.2\log\mongodb.log</span><br><span class="line"></span><br><span class="line">#启用日志文件，默认启用，每次写入会记录一条操作日志（通过journal可以重新构造出写入的数据）。</span><br><span class="line">journal=true </span><br><span class="line"></span><br><span class="line">##错误日志采用追加模式，配置这个选项后mongodb的日志会追加到现有的日志文件，而不是从新创建一个新文件</span><br><span class="line">logappend=true </span><br><span class="line"></span><br><span class="line">#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false</span><br><span class="line">quiet=true </span><br><span class="line"></span><br><span class="line">#这样就可外部访问了，例如从win10中去连虚拟机中的MongoDB</span><br><span class="line">bind_ip = 0.0.0.0</span><br></pre></td></tr></table></figure></p></li>
+<li><p>安装服务
 用<code>管理员权限</code>打开cmd命令行，输入如下命令安装mongodb服务：</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc create MongoDB binPath= &quot;C:\MongoDB\Server\4.2\bin\mongod.exe --service --config=C:\MongoDB\Server\4.2\mongo.config&quot; </span><br></pre></td></tr></table></figure>
-<p>如果一直显示<code>[SC] CreateService 失败 1072:指定的服务已标记为删除。</code>，那请先退出<code>服务</code>那个窗口，因为那个占用“频道”了。<br />
-再 <code>cd</code> 进入C:\MongoDB\Server\4.2\bin文件夹，使用如下命令：</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:\MongoDB\Server\4.2\bin</span><br><span class="line"></span><br><span class="line">mongod --config C:\MongoDB\Server\4.2\mongo.config --install --serviceName &quot;MongoDB&quot;</span><br></pre></td></tr></table></figure>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc create MongoDB binPath= &quot;C:\MongoDB\Server\4.2\bin\mongod.exe --service --config=C:\MongoDB\Server\4.2\mongo.config&quot; </span><br></pre></td></tr></table></figure></p>
+<p>如果一直显示<code>[SC] CreateService 失败 1072:指定的服务已标记为删除。</code>，那请先退出<code>服务</code>那个窗口，因为那个占用“频道”了。
+再 <code>cd</code> 进入C:\4.2，使用如下命令：</p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:\MongoDB\Server\4.2\bin</span><br><span class="line"></span><br><span class="line">mongod --config C:\MongoDB\Server\4.2\mongo.config --install --serviceName &quot;MongoDB&quot;</span><br></pre></td></tr></table></figure></p>
 <p>继续使用如下命令：</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --logpath &quot;C:\MongoDB\Server\4.2\log\mongodb.log&quot; --logappend --dbpath &quot;C:\MongoDB\Server\4.2\data\db&quot; --serviceName &quot;MongoDB&quot; --install</span><br></pre></td></tr></table></figure>
-</li>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --logpath &quot;C:\MongoDB\Server\4.2\log\mongodb.log&quot; --logappend --dbpath &quot;C:\MongoDB\Server\4.2\data\db&quot; --serviceName &quot;MongoDB&quot; --install</span><br></pre></td></tr></table></figure></p></li>
 </ol>
 <hr />
-<p>​	然后在cmd里输入<code>services.msc</code>打开服务管理器，找到MongoDB服务，设置成自动启动，并启动。</p>
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/leanote/mongodb.png?x-oss-process=style/yunying61">
-<p>​	如果启动不成功，先删除服务，使用如下命令：</p>
-<p>​	<code>sc delete MongoDB</code></p>
-<p>​	然后再从第2步开始，重新排查各种配置项及操作</p>
+<p>​
+然后在cmd里输入<code>services.msc</code>打开服务管理器，找到MongoDB服务，设置成自动启动，并启动。</p>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/leanote/mongodb.png?x-oss-process=style/yunying61"></p>
+<p>​ 如果启动不成功，先删除服务，使用如下命令：</p>
+<p>​ <code>sc delete MongoDB</code></p>
+<p>​ 然后再从第2步开始，重新排查各种配置项及操作</p>
 <hr />
-<ol start="4">
-<li>
-<p>测试是否安装成功<br />
-进入C:\MongoDB\Server\4.2\bin文件夹下，点击mongod.exe，如果闪一下退出，说明安装正常。<br />
-然后在浏览器里访问这个地址<a target="_blank" rel="noopener" href="http://localhost:27017/">http://localhost:27017/</a><br />
-如果显示了</p>
+<ol start="4" type="1">
+<li><p>测试是否安装成功
+进入C:\4.2，点击mongod.exe，如果闪一下退出，说明安装正常。
+然后在浏览器里访问这个地址<a target="_blank" rel="noopener" href="http://localhost:27017/"
+class="uri">http://localhost:27017/</a> 如果显示了</p>
 <blockquote>
-<p>It looks like you are trying to access MongoDB over HTTP on the native driver port.</p>
+<p>It looks like you are trying to access MongoDB over HTTP on the
+native driver port.</p>
 </blockquote>
-<p>说明服务和端口正常。</p>
-</li>
+<p>说明服务和端口正常。</p></li>
 </ol>
 <hr />
-<h3 id="配置环境变量（可省略）">配置环境变量（可省略）<a class="header-anchor" href="#配置环境变量（可省略）">·</a></h3>
+<h3 id="配置环境变量可省略">配置环境变量（可省略）</h3>
 <ul>
-<li>如果不配置环境变量，在使用mongo命令时要先 <code>cd</code> 进入C:\MongoDB\Server\4.2\bin 目录才能使用命令</li>
-<li>通过配置环境变量的方式，让mongo命令在所有文件夹内都可以访问<br />
-在系统变量中找到path，双击打开后在变量值中的末尾增加输入<code>C:\MongoDB\Server\4.2\bin;</code>即可<br />
+<li>如果不配置环境变量，在使用mongo命令时要先 <code>cd</code>
+进入C:\4.2目录才能使用命令</li>
+<li>通过配置环境变量的方式，让mongo命令在所有文件夹内都可以访问
+在系统变量中找到path，双击打开后在变量值中的末尾增加输入<code>C:\MongoDB\Server\4.2\bin;</code>即可
 (Win10则双击打开后点击“<code>编辑文本</code>”同样在变量值中的末尾增加输入)！</li>
 </ul>
-<h3 id="远程连接MongoDB数据库（Windows版）">远程连接MongoDB数据库（Windows版）<a class="header-anchor" href="#远程连接MongoDB数据库（Windows版）">·</a></h3>
-<p>打开bin目录中的mongod.cfg文件进行编辑，其中bindIp:127.0.0.1改为0.0.0.0 不然别的地方访问不了，<br />
+<h3
+id="远程连接mongodb数据库windows版">远程连接MongoDB数据库（Windows版）</h3>
+<p>打开bin目录中的mongod.cfg文件进行编辑，其中bindIp:127.0.0.1改为0.0.0.0
+不然别的地方访问不了，
 取消security的<code>#</code>注释符，并添加authorization:enabled</p>
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/leanote/mongod-cfg.jpg?x-oss-process=style/yunying61">
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/leanote/mongod-cfg.jpg?x-oss-process=style/yunying61"></p>
 <p>然后以管理员身份在bin目录下执行如下命令，使配置生效</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config &quot;C:\MongoDB\Server\4.2\bin\mongod.cfg&quot; --install</span><br></pre></td></tr></table></figure>
 <p>然后重启MongoDB服务</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">net stop mongodb    // 先关闭mongodb</span><br><span class="line">net start mongodb    // 后开启mongodb</span><br></pre></td></tr></table></figure>
-<p>这里设置了0.0.0.0允许远程访问，所以最好加一层验证，添加一个mongo用户进行管理。<br />
+<p>这里设置了0.0.0.0允许远程访问，所以最好加一层验证，添加一个mongo用户进行管理。
 在bin目录打开cmd输入<code>mongo</code>执行命令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd C:\MongoDB\Server\4.2\bin</span><br><span class="line"></span><br><span class="line">mongo</span><br><span class="line"></span><br><span class="line">use admin</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -421,15 +429,18 @@ C:\MongoDB\Server\4.2\data\db目录，用来存放数据库数据。</p>
 <p>这里就添加了一个admin的用户，密码为password</p>
 <div class="note warning"><p>另外远程访问的话，记得开启安全组和防火墙端口，可能会因为这个导致全盘皆输</p>
 </div>
-<h2 id="Linux版">Linux版<a class="header-anchor" href="#Linux版">·</a></h2>
-<h3 id="解压MongoDB压缩包">解压MongoDB压缩包<a class="header-anchor" href="#解压MongoDB压缩包">·</a></h3>
-<p>假设已将文件下载到 <code>/home/</code> 目录下，打开<code>终端</code>，通过使用下面的命令</p>
+<h2 id="linux版">Linux版</h2>
+<h3 id="解压mongodb压缩包">解压MongoDB压缩包</h3>
+<p>假设已将文件下载到 <code>/home/</code>
+目录下，打开<code>终端</code>，通过使用下面的命令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"></span><br><span class="line">tar -xzvf mongodb-linux-x86_64-rhel80-5.0.6.tgz</span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /home/mongodb-linux-x86_64-rhel80-5.0.6.tgz /home/software/mongodb-5.0.6</span><br></pre></td></tr></table></figure>
-<p>解压文件，从而在 <code>/home/software</code> 目录下生成 <code>mongodb-5.0.6</code>目录</p>
+<p>解压文件，从而在 <code>/home/software</code> 目录下生成
+<code>mongodb-5.0.6</code>目录</p>
 <hr />
-<h3 id="配置MongoDB">配置MongoDB<a class="header-anchor" href="#配置MongoDB">·</a></h3>
+<h3 id="配置mongodb">配置MongoDB</h3>
 <p>为了快速使用<code>mongodb</code>命令, 可以配置环境变量。</p>
-<p>编辑 <code>~/.profile</code>或<code>/etc/profile</code> 文件， 将<code>mongodb/bin</code>路径加入即可，打开<code>终端</code>，输入命令:</p>
+<p>编辑 <code>~/.profile</code>或<code>/etc/profile</code> 文件，
+将<code>mongodb/bin</code>路径加入即可，打开<code>终端</code>，输入命令:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
 <p>在<code>/etc/profile</code>中，按<code>i</code>进入编辑模式，在最下面添加以下行，注意路径：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/home/software/mongodb-5.0.6/bin</span><br></pre></td></tr></table></figure>
@@ -439,14 +450,15 @@ C:\MongoDB\Server\4.2\data\db目录，用来存放数据库数据。</p>
 </div>
 <p>然后，是建立数据库的存放位置和日志文件的存放位置，在终端运行以下命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//用于存放数据库</span><br><span class="line"><span class="built_in">mkdir</span> -p /home/data/mongo-db</span><br><span class="line"></span><br><span class="line">//用于存放日志文件</span><br><span class="line"><span class="built_in">mkdir</span> -p /home/data/mongo-log</span><br></pre></td></tr></table></figure>
-<p>接着，在<code>/home/software/mongodb-5.0.6</code>目录下新建一个名为 <code>mongodb.conf</code> 的配置文件，写入如下配置内容：</p>
+<p>接着，在<code>/home/software/mongodb-5.0.6</code>目录下新建一个名为
+<code>mongodb.conf</code> 的配置文件，写入如下配置内容：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim mongodb.conf</span><br></pre></td></tr></table></figure>
 <p>按<code>i</code>进入编辑模式，按<code>ESC</code>退出编辑模式，再输入<code>:wq</code>保存修改。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#端口</span><br><span class="line">port=27017</span><br><span class="line"></span><br><span class="line">#默认127.0.0.1为只允许本地连接；0.0.0.0为不限制；多个指定服务器用&quot;,&quot;连接</span><br><span class="line">bind_ip=127.0.0.1</span><br><span class="line"></span><br><span class="line">#数据库存文件存放目录 </span><br><span class="line">dbpath=/home/data/mongo-db</span><br><span class="line"></span><br><span class="line">#日志文件</span><br><span class="line">logpath=/home/data/mongo-log/mongodb.log</span><br><span class="line"></span><br><span class="line">#使用追加的方式写日志</span><br><span class="line">logappend=true</span><br><span class="line"></span><br><span class="line">#以守护程序的方式启用，即在后台运行</span><br><span class="line">fork=true</span><br><span class="line"></span><br><span class="line">#最大同时连接数</span><br><span class="line">maxConns=100</span><br><span class="line"></span><br><span class="line">#不启用验证</span><br><span class="line">noauth=true</span><br><span class="line"></span><br><span class="line">#每次写入会记录一条操作日志（通过journal可以重新构造出写入的数据）。</span><br><span class="line">#即使宕机，启动时wiredtiger会先将数据恢复到最近一次的checkpoint点，然后重放后续的journal日志来恢复。</span><br><span class="line">journal=true</span><br><span class="line"></span><br><span class="line">#存储引擎有mmapv1、wiretiger、mongorocks</span><br><span class="line">storageEngine=wiredTiger</span><br></pre></td></tr></table></figure>
 <p>用以下命令启动<code>mongodb</code>:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config /home/software/mongodb-5.0.6/mongodb.conf</span><br></pre></td></tr></table></figure>
 <p>这时<code>mongod</code>已经启动了（这代表mongodb已经开始在后台运行）</p>
-<h3 id="测试mongodb安装">测试mongodb安装<a class="header-anchor" href="#测试mongodb安装">·</a></h3>
+<h3 id="测试mongodb安装">测试mongodb安装</h3>
 <p>继续在终端输入<code>mongo</code>进入交互程序：</p>
 <p><code>mongo</code></p>
 <p>行首出现 &gt; 表示进入mongo的交互程序，此时输入：</p>
@@ -456,9 +468,9 @@ C:\MongoDB\Server\4.2\data\db目录，用来存放数据库数据。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;admin    0.000GB</span><br><span class="line">&gt;config   0.000GB</span><br><span class="line">&gt;local    0.000GB</span><br></pre></td></tr></table></figure>
 <p>即安装成功</p>
 </blockquote>
-<h2 id="关于-MongoDB用户-的命令">关于 MongoDB用户 的命令<a class="header-anchor" href="#关于-MongoDB用户-的命令">·</a></h2>
+<h2 id="关于-mongodb用户-的命令">关于 MongoDB用户 的命令</h2>
 <figure class="highlight txt"><figcaption><span>MongoDB用户命令.txt</span><a href="/downloads/code/MongoDB用户命令.txt">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">show dbs        查看数据库</span><br><span class="line">use dbname      进入数据库</span><br><span class="line">show users      查看当前数据库用户权限</span><br><span class="line">创建用户</span><br><span class="line">db.createUser({user:&quot;usertest&quot;,pwd:&quot;passtest&quot;,roles:[  {role:&quot;clusterAdmin&quot;, db:&quot;admin&quot; }, {role:&quot;readAnyDatabase&quot;,db:&quot;admin&quot; }, {role:&quot;readWrite&quot;,db:&quot;testDB&quot; } ]})</span><br><span class="line">权限详解</span><br><span class="line">内建角色：</span><br><span class="line">数据库用户角色：    read、readWrite；</span><br><span class="line">数据库管理角色：    dbAdmin、dbOwner、userAdmin；</span><br><span class="line">集群管理角色：      clusterAdmin、clusterManager、clusterMonitor、hostManager；</span><br><span class="line">备份恢复角色：      backup、restore；</span><br><span class="line">所有数据库角色：    readAnyDatabase、readWriteAnyDatabase、userAdminAnyDatabase、dbAdminAnyDatabase</span><br><span class="line">超级用户角色：      root；  这里还有几个角色间接或直接提供了系统超级用户的访问（dbOwner 、userAdmin、userAdminAnyDatabase）</span><br><span class="line">内部角色：          __system；</span><br><span class="line">------------------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">角色说明：</span><br><span class="line">Read：                      允许用户读取指定数据库</span><br><span class="line">readWrite：                 允许用户读写指定数据库</span><br><span class="line">dbAdmin：                   允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问system.profile</span><br><span class="line">userAdmin：                 允许用户向system.users集合写入，可以找指定数据库里创建、删除和管理用户</span><br><span class="line">dbOwner：                   允许在当前DB中执行任意操作</span><br><span class="line">readAnyDatabase：           赋予用户所有数据库的读权限，只在admin数据库中可用</span><br><span class="line">readWriteAnyDatabase：      赋予用户所有数据库的读写权限，只在admin数据库中可用</span><br><span class="line">userAdminAnyDatabase：      赋予用户所有数据库管理User的权限，只在admin数据库中可用</span><br><span class="line">dbAdminAnyDatabase：        赋予管理所有数据库的权限，只在admin数据库中可用</span><br><span class="line">root：                      超级账号，超级权限，只在admin数据库中可用。</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">集群管理角色：</span><br><span class="line">clusterAdmin：                 赋予管理集群的最高权限，只在admin数据库中可用</span><br><span class="line">clusterManager：               赋予管理和监控集群的权限</span><br><span class="line">clusterMonitor：               赋予监控集群的权限，对监控工具具有readonly的权限</span><br><span class="line">hostManager：                  赋予管理Server</span><br><span class="line"></span><br><span class="line">修改密码</span><br><span class="line">方法1：db.changeUserPassword(&quot;usertest&quot;,&quot;changepass&quot;);</span><br><span class="line">方法2：db.updateUser(&quot;usertest&quot;,{pwd:&quot;changepass1&quot;})；</span><br><span class="line"></span><br><span class="line">修改权限</span><br><span class="line">db.updateUser(&quot;usertest&quot;,{roles:[ {role:&quot;read&quot;,db:&quot;testDB&quot;} ]})</span><br><span class="line"></span><br><span class="line">注：updateuser它是完全替换之前的值，如果要新增或添加roles而不是代替它 </span><br><span class="line">则使用方法： db.grantRolesToUser() 和 db.revokeRolesFromUser(）</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">修改权限</span><br><span class="line">db.grantRolesToUser(&quot;usertest&quot;, [{role:&quot;readWrite&quot;, db:&quot;testDB&quot;},{role:&quot;read&quot;, db:&quot;testDB&quot;}])</span><br><span class="line">删除权限</span><br><span class="line">db.revokeRolesFromUser(&quot;usertest&quot;,[{role:&quot;read&quot;, db:&quot;testDB&quot;}])</span><br></pre></td></tr></table></figure>
-<h2 id="MongoDB命令">MongoDB命令<a class="header-anchor" href="#MongoDB命令">·</a></h2>
+<h2 id="mongodb命令">MongoDB命令</h2>
 <figure class="highlight txt"><figcaption><span>mongodb.txt</span><a href="/downloads/code/mongodb.txt">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line">这是mongodb的一些命令： </span><br><span class="line"></span><br><span class="line">mongo   </span><br><span class="line">  运行mongo</span><br><span class="line"></span><br><span class="line">以下命令要运行mongo以后才能用</span><br><span class="line"></span><br><span class="line">db  </span><br><span class="line">  显示当前的数据库名称</span><br><span class="line"></span><br><span class="line">show dbs  </span><br><span class="line">  显示当前服务器下数据库（非空的数据库）列表</span><br><span class="line"></span><br><span class="line">use test  </span><br><span class="line">  如果test数据库不存在，则创建test数据库</span><br><span class="line">  如果test已存在，则切换到test数据库</span><br><span class="line"></span><br><span class="line">show collections  </span><br><span class="line">  显示当前数据库下所包含的集合（表）列表</span><br><span class="line"></span><br><span class="line">db.users.insert({name:&#x27;zhangsha&#x27;})  </span><br><span class="line">  向users集合中插入数据</span><br><span class="line">  如果users集合存在，则直接插入数据，如果不存在，则创建users集合再插入数据</span><br><span class="line"></span><br><span class="line">db.createCollection(&#x27;products&#x27;)</span><br><span class="line">  创建一个空集合products</span><br><span class="line"></span><br><span class="line">db.products.insert([{name:&#x27;lishi&#x27;},{name:&#x27;wangwu&#x27;}])    </span><br><span class="line">  一次插入多个数据</span><br><span class="line"></span><br><span class="line">db.products.find()</span><br><span class="line">  查询products集合中所有的数据</span><br><span class="line"></span><br><span class="line">db.products.find({name:&#x27;苹果手机&#x27;})</span><br><span class="line">  查询stu集合中name=&#x27;苹果手机&#x27;的数据</span><br><span class="line"></span><br><span class="line">db.products.find({name:{$eq:&#x27;苹果手机&#x27;}})</span><br><span class="line">  同上，$eq=&gt;等号，建议使用上面的方式，易记，易输入</span><br><span class="line">  eq = equal</span><br><span class="line"></span><br><span class="line">db.products.find({price:{$gt:18}})</span><br><span class="line">  查询stu集合中age&gt;18的数据  </span><br><span class="line">   把$gt换成如下的符号试试：</span><br><span class="line">    $gt=&gt;大于   great</span><br><span class="line">    $gte=&gt;大于等于 great equal</span><br><span class="line">    $lt=&gt;小于   less than</span><br><span class="line">    $lte=&gt;小于等于 less than equal</span><br><span class="line">    $ne=&gt;不等于  not equal</span><br><span class="line">    $in=&gt;在范围内</span><br><span class="line">    $nin=&gt;不在范围内</span><br><span class="line">  以上几个符号格式总结为：{ field: {符号: value}}</span><br><span class="line"></span><br><span class="line">db.products.find({name:/^华为/})</span><br><span class="line">  查找stu集合中name域中以“华为”字符的开头的数据</span><br><span class="line"></span><br><span class="line">db.products.find({name:{$in:[&#x27;手机1&#x27;,&#x27;手机2&#x27;]}})</span><br><span class="line">  查询stu集合中name=&#x27;手机1&#x27;和name=&#x27;手机2&#x27;的数据</span><br><span class="line">$in=&gt;在范围内</span><br><span class="line">$nin=&gt;不在范围内</span><br><span class="line">  以上两个符号格式为：{ field:{符号:[value1,value2,....]}}</span><br><span class="line"></span><br><span class="line">db.products.find({name:&quot;华为手机&quot;,price:800})</span><br><span class="line">  查找name=&quot;华为手机&quot;并且price:800的数据</span><br><span class="line"></span><br><span class="line">db.products.find({$or:[{name:&#x27;华为手机&#x27;},{price:{$lt:1000}}]})</span><br><span class="line">  查询products集合中name=&#x27;华为手机&#x27; 或者 price&lt;1000的数据</span><br><span class="line">    $or=&gt;或者  注意$or:[{},{},....]</span><br><span class="line">    $and=&gt;并且  格式同$or, 例：{$and:[{},{},....]}</span><br><span class="line">    $nor=&gt;not or 与$or相反， 格式同$or</span><br><span class="line"></span><br><span class="line">db.products.find({price:{$not:{$gt:100}}})</span><br><span class="line">  查询products集合中price&lt;=100的数据，不存在price属性的数据也会查询出来</span><br><span class="line">    $not=&gt;取反 </span><br><span class="line"></span><br><span class="line">db.products.find({price:{$exists: true}})</span><br><span class="line">  查询products集合中包含域名称为price的数据</span><br><span class="line"></span><br><span class="line">db.products.find({name:{$type:2}})</span><br><span class="line">  查询products集合中name属性为字符串类型的数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">db.products.find({</span><br><span class="line">  $where: function(){</span><br><span class="line">    return this.name == &#x27;华为手机&#x27;</span><br><span class="line">  }</span><br><span class="line">})</span><br><span class="line">  查询products集合中name=&#x27;华为手机’的数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">db.products.find({</span><br><span class="line">  $where: function(){</span><br><span class="line">     return  this.name.indexOf(&#x27;华为手机&#x27;) &gt; -1;</span><br><span class="line">  }</span><br><span class="line">})</span><br><span class="line">  查询products集合中name域中包含“华为手机”字符的数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">db.products.update({name:&#x27;华为手机&#x27;},{$set:{price:2000}},{</span><br><span class="line">  upsert: true,</span><br><span class="line">  multi:false</span><br><span class="line">})</span><br><span class="line">  把products集合中name=&#x27;华为手机&#x27;的那条数据，把price属性设置成2000，其它属性保留</span><br><span class="line">    $set是指更改的属性列表，不在列表中其他属性会被保留，如果不加此符号，其它属性会被丢弃（_id属性比较特殊，不会丢失）</span><br><span class="line">    upsert:true如果没有符号条件的更新时，则插入一条，为false时，则不会插入, 默认是false</span><br><span class="line">    multi:false一次只能更新一条数据，为true时，可更新多条，默认是false</span><br><span class="line"></span><br><span class="line">db.students.remove({})</span><br><span class="line">  清空集合students</span><br><span class="line"></span><br><span class="line">db.products.remove({name:&#x27;abc&#x27;})</span><br><span class="line">  删除products集合中name=&#x27;abc&#x27;的数据，注意，即使把集合products中的所有数据都删除了</span><br><span class="line">  products集合仍然存在， remove()是用来删除数据的，而drop()不仅会删除数据，还会把集合的结构给删除</span><br><span class="line"></span><br><span class="line">db.products.drop()</span><br><span class="line">  把stu集合彻底从当前数据中删除，集合stu不再存在，注意与remove()的区别</span><br><span class="line"></span><br><span class="line">db.dropDatabase()</span><br><span class="line">  删除当前数据库</span><br><span class="line"></span><br><span class="line">db.users.distinct(&#x27;name&#x27;)</span><br><span class="line">  查询users集合中不重复的name属性，返回的是数组</span><br><span class="line"></span><br><span class="line">db.stu.count({name:&#x27;zhangshan&#x27;})</span><br><span class="line">  查询stu集合中name=&#x27;zhangshan&#x27;的数据数量</span><br><span class="line"></span><br><span class="line">db.stu.find().limit(5)</span><br><span class="line">  查询stu集合中前5条数据</span><br><span class="line"></span><br><span class="line">db.stu.find().skip(5)</span><br><span class="line">  查询stu集合中跳过前5条后的数据</span><br><span class="line"></span><br><span class="line">db.stu.find().sort({name:1})</span><br><span class="line">  查询stu集合中的全部数据，并按name属性正序排列  注：1：正序 -1: 倒序</span><br><span class="line"></span><br><span class="line">由于mongodb的api接口方法很多，除以上命令外，其他的命令请多看官方文档</span><br></pre></td></tr></table></figure>
 
     </div>
@@ -585,14 +597,14 @@ C:\MongoDB\Server\4.2\data\db目录，用来存放数据库数据。</p>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">305k</span>
+    <span title="站点总字数">310k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:08</span>
+    <span title="站点阅读时长">14:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -622,6 +634,7 @@ C:\MongoDB\Server\4.2\data\db目录，用来存放数据库数据。</p>
   <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/code-unfold.js"></script>
 
   <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>

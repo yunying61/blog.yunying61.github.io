@@ -19,6 +19,16 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
@@ -153,8 +163,8 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="yunying61"
-      src="/images/yunying61.png">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
   <p class="site-author-name" itemprop="name">yunying61</p>
   <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
 </div>
@@ -173,7 +183,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">149</span>
+        <span class="site-state-item-count">150</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -283,15 +293,16 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+          <a href="/categories/IT/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url" rel="index"><span itemprop="name">问题解决</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url" rel="index"><span itemprop="name">问题解决</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
         </span>
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/07/Node-js%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5-%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5-%E6%B2%A1%E6%9C%89%E8%B6%B3%E5%A4%9F%E7%9A%84%E6%9D%83%E9%99%90%E8%AE%BF%E9%97%AE/" class="post-meta-item leancloud_visitors" data-flag-title="Node.js安装失败、更新失败 没有足够的权限访问" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -319,7 +330,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>183</span>
+      <span>195</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -337,8 +348,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Node-js安装失败、更新失败-没有足够的权限访问">Node.js安装失败、更新失败 没有足够的权限访问<a class="header-anchor" href="#Node-js安装失败、更新失败-没有足够的权限访问">·</a></h1>
-<h4 id="问题描述：">问题描述：<a class="header-anchor" href="#问题描述：">·</a></h4>
+          <h1
+id="node.js安装失败更新失败-没有足够的权限访问">Node.js安装失败、更新失败
+没有足够的权限访问</h1>
+<h4 id="问题描述">问题描述：</h4>
 <p>直接上图，大概意思是：没有足够的权限来访问那个目录下的<code>Node.js</code>文件夹</p>
           <!--noindex-->
             <div class="post-button">
@@ -433,15 +446,16 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+          <a href="/categories/IT/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url" rel="index"><span itemprop="name">问题解决</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url" rel="index"><span itemprop="name">问题解决</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
         </span>
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/07/Winodows%E6%96%87%E4%BB%B6%E5%A4%B9%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4-%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E6%89%80%E6%9C%89%E8%80%85/" class="post-meta-item leancloud_visitors" data-flag-title="Winodows文件夹无法删除 无法显示当前所有者" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -469,7 +483,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>302</span>
+      <span>305</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -487,8 +501,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="winodows文件夹无法删除-无法显示当前所有者">winodows文件夹无法删除 无法显示当前所有者<a class="header-anchor" href="#winodows文件夹无法删除-无法显示当前所有者">·</a></h1>
-<h2 id="问题描述">问题描述<a class="header-anchor" href="#问题描述">·</a></h2>
+          <h1
+id="winodows文件夹无法删除-无法显示当前所有者">winodows文件夹无法删除
+无法显示当前所有者</h1>
+<h2 id="问题描述">问题描述</h2>
 <p>在无NTLM权限的情况下，文件所有者丢失，导致文件或文件夹无法删除：</p>
           <!--noindex-->
             <div class="post-button">
@@ -580,6 +596,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/07/LaTeX%E5%85%AC%E5%BC%8F-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-meta-item leancloud_visitors" data-flag-title="LaTeX公式 帮助文档(未整理好)" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -607,14 +624,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>5.7k</span>
+      <span>4.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>16 分钟</span>
+      <span>11 分钟</span>
     </span>
 </div>
 
@@ -625,9 +642,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="符号与字母-Symbol-and-Alphabet">符号与字母 Symbol and Alphabet<a class="header-anchor" href="#符号与字母-Symbol-and-Alphabet">·</a></h1>
-<h2 id="希腊字母-Greek-alphabet">希腊字母 Greek alphabet<a class="header-anchor" href="#希腊字母-Greek-alphabet">·</a></h2>
-<p>在输入 Latex 代码时，要用 $$   $$ 包含</p>
+          <h1 id="符号与字母-symbol-and-alphabet">符号与字母 Symbol and
+Alphabet</h1>
+<h2 id="希腊字母-greek-alphabet">希腊字母 Greek alphabet</h2>
+<p>在输入 Latex 代码时，要用 $$ $$ 包含</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/07/LaTeX%E5%85%AC%E5%BC%8F-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/#more" rel="contents">
@@ -718,6 +736,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/05/C++-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0-%E9%BB%98%E8%AE%A4%E5%BD%A2%E5%8F%82/" class="post-meta-item leancloud_visitors" data-flag-title="C++ 自定义函数 默认形参" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -745,7 +764,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>547</span>
+      <span>544</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -763,8 +782,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="C-自定义函数-默认形参">C 自定义函数 默认形参<a class="header-anchor" href="#C-自定义函数-默认形参">·</a></h1>
-<h2 id="描述">描述<a class="header-anchor" href="#描述">·</a></h2>
+          <h1 id="c-自定义函数-默认形参">C 自定义函数 默认形参</h1>
+<h2 id="描述">描述</h2>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">fun</span> <span class="params">(<span class="type">int</span> a , <span class="type">int</span> b = <span class="number">4</span> , <span class="type">int</span> c = <span class="number">9</span>)</span></span>&#123;&#125; </span><br></pre></td></tr></table></figure>
 <p>这样在<code>c语言</code>中是不可以的，这是<code>c++的概念</code>，<strong>默认参数</strong>。</p>
           <!--noindex-->
@@ -857,6 +876,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/05/C++-%E9%87%8D%E8%BD%BD%E5%87%BD%E6%95%B0/" class="post-meta-item leancloud_visitors" data-flag-title="C++ 重载函数" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -884,7 +904,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>998</span>
+      <span>999</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -902,9 +922,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="C-重载函数">C++ 重载函数<a class="header-anchor" href="#C-重载函数">·</a></h1>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sherilindas/article/details/51678778">https://blog.csdn.net/sherilindas/article/details/51678778</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/skynet/archive/2010/09/05/1818636.html">https://www.cnblogs.com/skynet/archive/2010/09/05/1818636.html</a></p>
+          <h1 id="c-重载函数">C++ 重载函数</h1>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sherilindas/article/details/51678778"
+class="uri">https://blog.csdn.net/sherilindas/article/details/51678778</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://www.cnblogs.com/skynet/archive/2010/09/05/1818636.html"
+class="uri">https://www.cnblogs.com/skynet/archive/2010/09/05/1818636.html</a></p>
 <p>C++允许在同一范围中声明几个功能类似的同名函数，但是<strong>这些同名函数的形式参数（指参数的个数、类型或者顺序）必须不同</strong>，即函数的参数列表不同，也就是说用同一个运算符完成不同的运算功能。这就是<strong>重载函数</strong>。重载函数常用来实现功能类似而所处理的数据类型不同的问题。</p>
           <!--noindex-->
             <div class="post-button">
@@ -996,6 +1019,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/05/C++-%E4%B8%AD%E7%9A%84-%E5%BC%95%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="C++ 中的 引用" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1023,7 +1047,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>569</span>
+      <span>574</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1041,8 +1065,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="引用调用-reference">引用调用(reference)<a class="header-anchor" href="#引用调用-reference">·</a></h1>
-<p>引用是C<ins>特有的概念，它是程序设计语言发展的产物。C</ins>提供的引用应用于函数既满足使用时的简单方便，又保证执行的效率。C和C<ins>的函数调用的主要区别是C</ins>中使用了引用调用。</p>
+          <h1 id="引用调用reference">引用调用(reference)</h1>
+<p>引用是C++特有的概念，它是程序设计语言发展的产物。C++提供的引用应用于函数既满足使用时的简单方便，又保证执行的效率。C和C++的函数调用的主要区别是C++中使用了引用调用。</p>
 <p>引用调用是函数传递参数的一种方式，使用引用调用，可以在子函数中对形参所做的更改对主函数中的实参有效。</p>
 <p>引用可以看成是一种特殊类型的变量可以被认为是另一个变量的<code>别名</code>，就好比人的绰号一样，虽然名字不同，但所指向的人是一样的，所以引用还与指针有类似的地方。</p>
           <!--noindex-->
@@ -1135,6 +1159,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/05/C++-%E4%B8%AD-static-%E9%9D%99%E6%80%81%E5%AD%98%E5%82%A8/" class="post-meta-item leancloud_visitors" data-flag-title="C++ 中 static 静态存储" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1162,7 +1187,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
+      <span>2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1180,9 +1205,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="C-中-static-静态存储">C++ 中 static 静态存储<a class="header-anchor" href="#C-中-static-静态存储">·</a></h1>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/guotianqing/article/details/79828100">https://blog.csdn.net/guotianqing/article/details/79828100</a></p>
-<h2 id="描述">描述<a class="header-anchor" href="#描述">·</a></h2>
+          <h1 id="c-中-static-静态存储">C++ 中 static 静态存储</h1>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/guotianqing/article/details/79828100"
+class="uri">https://blog.csdn.net/guotianqing/article/details/79828100</a></p>
+<h2 id="描述">描述</h2>
 <p>static关键字在c语言中比较常用，使用恰当能够大大提高程序的模块化特性，有利于扩展和维护。</p>
 <p>但是对于c语言初学者，static由于使用灵活，并不容易掌握。</p>
           <!--noindex-->
@@ -1275,6 +1301,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/05/C++-%E4%B8%AD-setw-%E5%87%BD%E6%95%B0-%E6%8E%A7%E5%88%B6%E5%AD%97%E6%AE%B5%E5%AE%BD%E5%BA%A6/" class="post-meta-item leancloud_visitors" data-flag-title="C++ 中 setw() 函数  控制字段宽度" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1302,7 +1329,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>781</span>
+      <span>777</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1320,7 +1347,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="C-函数-setw">C++ 函数 - setw()<a class="header-anchor" href="#C-函数-setw">·</a></h1>
+          <h1 id="c-函数---setw">C++ 函数 - setw()</h1>
 <p>https://www.runoob.com/cplusplus/cpp-tutorial.html</p>
 <p>位于C++ 标准库 #include <iomanip></p>
 <p>其中io代表输入输出，manip是manipulator（操纵器）的缩写</p>
@@ -1414,6 +1441,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/05/C++-%E4%B8%AD-const-%E7%9A%84%E7%94%A8%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="C++ 中 const 的用法" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1441,7 +1469,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1459,9 +1487,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="C-函数-const-的用法">C++ 函数 - const 的用法<a class="header-anchor" href="#C-函数-const-的用法">·</a></h1>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xudong-bupt/p/3509567.html">https://www.cnblogs.com/xudong-bupt/p/3509567.html</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/cpp-const-keyword.html">https://www.runoob.com/w3cnote/cpp-const-keyword.html</a></p>
+          <h1 id="c-函数---const-的用法">C++ 函数 - const 的用法</h1>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xudong-bupt/p/3509567.html"
+class="uri">https://www.cnblogs.com/xudong-bupt/p/3509567.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/cpp-const-keyword.html"
+class="uri">https://www.runoob.com/w3cnote/cpp-const-keyword.html</a></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/05/C++-%E4%B8%AD-const-%E7%9A%84%E7%94%A8%E6%B3%95/#more" rel="contents">
@@ -1552,6 +1582,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/05/C++-%E4%B8%AD-new-%E7%9A%84%E7%94%A8%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="C++ 中 new 的用法" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -1597,8 +1628,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="C-关键字-new-的用法">C++ 关键字 - new 的用法<a class="header-anchor" href="#C-关键字-new-的用法">·</a></h1>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-standard-library.html">https://www.runoob.com/cprogramming/c-standard-library.html</a></p>
+          <h1 id="c-关键字---new-的用法">C++ 关键字 - new 的用法</h1>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-standard-library.html"
+class="uri">https://www.runoob.com/cprogramming/c-standard-library.html</a></p>
 <p>位于C++ 标准库 #include <iostream></p>
           <!--noindex-->
             <div class="post-button">
@@ -1650,14 +1682,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">305k</span>
+    <span title="站点总字数">310k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:08</span>
+    <span title="站点阅读时长">14:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -1687,6 +1719,7 @@
   <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/code-unfold.js"></script>
 
   <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>

@@ -19,21 +19,28 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="配置Java环境· 安装java和JDK· 首先我们需要下载java和java的开发工具包JDK，官方下载地址：java和jdk。  这里需要注意的一点的是，虽然我们是尽量下载最新版本，但有时候会出现某些命令不能用的情况，请使用 Java 8&#x2F;JDK 8。如果你已经下载了新版 JDK，你也可以使用 OpenJDK https:&#x2F;&#x2F;adoptopenjdk.net&#x2F;来解决这个问题。">
+    <meta name="description" content="配置Java环境 安装java和JDK 首先我们需要下载java和java的开发工具包JDK，官方下载地址：java和jdk。  这里需要注意的一点的是，虽然我们是尽量下载最新版本，但有时候会出现某些命令不能用的情况，请使用 Java 8&#x2F;JDK 8。如果你已经下载了新版 JDK，你也可以使用 OpenJDK https:&#x2F;&#x2F;adoptopenjdk.net&#x2F;来解决这个问题。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="配置Java环境">
 <meta property="og:url" content="https://www.yunying61.cn/2020/01/%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="配置Java环境· 安装java和JDK· 首先我们需要下载java和java的开发工具包JDK，官方下载地址：java和jdk。  这里需要注意的一点的是，虽然我们是尽量下载最新版本，但有时候会出现某些命令不能用的情况，请使用 Java 8&#x2F;JDK 8。如果你已经下载了新版 JDK，你也可以使用 OpenJDK https:&#x2F;&#x2F;adoptopenjdk.net&#x2F;来解决这个问题。">
+<meta property="og:description" content="配置Java环境 安装java和JDK 首先我们需要下载java和java的开发工具包JDK，官方下载地址：java和jdk。  这里需要注意的一点的是，虽然我们是尽量下载最新版本，但有时候会出现某些命令不能用的情况，请使用 Java 8&#x2F;JDK 8。如果你已经下载了新版 JDK，你也可以使用 OpenJDK https:&#x2F;&#x2F;adoptopenjdk.net&#x2F;来解决这个问题。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/JAVA_HOME.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/Path_JAVA_HOME.jpg?x-oss-process=style/yunying61">
 <meta property="article:published_time" content="2020-01-26T09:30:28.000Z">
 <meta property="article:modified_time" content="2022-03-17T08:43:34.220Z">
 <meta property="article:author" content="yunying61">
@@ -42,7 +49,6 @@
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="环境">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg?x-oss-process=style/yunying61">
 
 
 <link rel="canonical" href="https://www.yunying61.cn/2020/01/%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83/">
@@ -157,14 +163,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">配置Java环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85java%E5%92%8CJDK"><span class="nav-number">1.1.</span> <span class="nav-text">安装java和JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F"><span class="nav-number">1.3.</span> <span class="nav-text">测试是否配置成功</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E4%BF%A1%E6%81%AF"><span class="nav-number">1.4.</span> <span class="nav-text">其他信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E5%8F%82%E6%95%B0%E4%BF%A1%E6%81%AF"><span class="nav-number">1.4.1.</span> <span class="nav-text">环境变量的参数信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JDK-%E5%92%8C-JRE-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.4.2.</span> <span class="nav-text">JDK 和 JRE 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0JDK%E7%89%88%E6%9C%AC%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.4.3.</span> <span class="nav-text">更新JDK版本的问题</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEjava%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">配置Java环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85java%E5%92%8Cjdk"><span class="nav-number">1.1.</span> <span class="nav-text">安装java和JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F"><span class="nav-number">1.3.</span> <span class="nav-text">测试是否配置成功</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E4%BF%A1%E6%81%AF"><span class="nav-number">1.4.</span> <span class="nav-text">其他信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E5%8F%82%E6%95%B0%E4%BF%A1%E6%81%AF"><span class="nav-number">1.4.1.</span> <span class="nav-text">环境变量的参数信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jdk-%E5%92%8C-jre-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.4.2.</span> <span class="nav-text">JDK 和 JRE 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0jdk%E7%89%88%E6%9C%AC%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.4.3.</span> <span class="nav-text">更新JDK版本的问题</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="yunying61"
-      src="/images/yunying61.png">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
   <p class="site-author-name" itemprop="name">yunying61</p>
   <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
 </div>
@@ -183,7 +189,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">149</span>
+        <span class="site-state-item-count">150</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -302,15 +308,16 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%8E%AF%E5%A2%83/" itemprop="url" rel="index"><span itemprop="name">环境</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">搭建与配置</span></a>
+          <a href="/categories/IT/%E8%BD%AF%E4%BB%B6/%E7%8E%AF%E5%A2%83/" itemprop="url" rel="index"><span itemprop="name">环境</span></a>
         </span>
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2020/01/%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83/" class="post-meta-item leancloud_visitors" data-flag-title="配置Java环境" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -338,14 +345,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.3k</span>
+      <span>2.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>7 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 
@@ -356,44 +363,43 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="配置Java环境">配置Java环境<a class="header-anchor" href="#配置Java环境">·</a></h1>
-<h2 id="安装java和JDK">安装java和JDK<a class="header-anchor" href="#安装java和JDK">·</a></h2>
-<p>首先我们需要下载java和java的开发工具包JDK，官方下载地址：<a target="_blank" rel="noopener" href="https://www.java.com/zh_CN/">java</a>和<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">jdk</a>。</p>
+        <h1 id="配置java环境">配置Java环境</h1>
+<h2 id="安装java和jdk">安装java和JDK</h2>
+<p>首先我们需要下载java和java的开发工具包JDK，官方下载地址：<a
+target="_blank" rel="noopener" href="https://www.java.com/zh_CN/">java</a>和<a
+target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">jdk</a>。</p>
 <blockquote>
-<p>这里需要注意的一点的是，虽然我们是尽量下载最新版本，但有时候会出现某些命令不能用的情况，请使用 Java 8/JDK 8。如果你已经下载了新版 JDK，你也可以使用 <code>OpenJDK</code> <a target="_blank" rel="noopener" href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a>来解决这个问题。</p>
+<p>这里需要注意的一点的是，虽然我们是尽量下载最新版本，但有时候会出现某些命令不能用的情况，请使用
+Java 8/JDK 8。如果你已经下载了新版 JDK，你也可以使用
+<code>OpenJDK</code> <a target="_blank" rel="noopener" href="https://adoptopenjdk.net/"
+class="uri">https://adoptopenjdk.net/</a>来解决这个问题。</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="配置环境变量">配置环境变量<a class="header-anchor" href="#配置环境变量">·</a></h2>
-<p>右键&quot;此电脑&quot;(Win10)、“我的电脑”(Win7)，选择&quot;属性&quot;，在弹出的窗口中找到&quot;高级系统设置-环境变量&quot;。<br />
-这里告诉你们一个快捷的方法，<code>win + R</code>打开“运行”，输入<code>SystemPropertiesAdvanced.exe</code>再按回车，直接到达<em>系统属性</em>。<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg?x-oss-process=style/yunying61" alt="系统属性" /><br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/JAVA_HOME.jpg?x-oss-process=style/yunying61" alt="环境变量界面" /></p>
-<p>在环境变量中的 <strong>系统变量</strong> 中设置 3 项变量，<code>JAVA_HOME</code>、<code>PATH</code>、<code>CLASSPATH</code>(大小写无所谓),若已存在则点击&quot;编辑&quot;，不存在则点击&quot;新建&quot;。</p>
+<h2 id="配置环境变量">配置环境变量</h2>
+<p>右键"此电脑"(Win10)、"我的电脑"(Win7)，选择"属性"，在弹出的窗口中找到"高级系统设置-环境变量"。
+这里告诉你们一个快捷的方法，<code>win + R</code>打开“运行”，输入<code>SystemPropertiesAdvanced.exe</code>再按回车，直接到达<em>系统属性</em>。
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg?x-oss-process=style/yunying61"
+alt="系统属性" /> <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/JAVA_HOME.jpg?x-oss-process=style/yunying61"
+alt="环境变量界面" /></p>
+<p>在环境变量中的 <strong>系统变量</strong> 中设置 3
+项变量，<code>JAVA_HOME</code>、<code>PATH</code>、<code>CLASSPATH</code>(大小写无所谓),若已存在则点击"编辑"，不存在则点击"新建"。</p>
 <blockquote>
-<p>注意：如果使用 1.5 以上版本的 JDK，不用设置 CLASSPATH 环境变量，也可以正常编译和运行 Java 程序，但尽量设置吧。</p>
+<p>注意：如果使用 1.5 以上版本的 JDK，不用设置 CLASSPATH
+环境变量，也可以正常编译和运行 Java 程序，但尽量设置吧。</p>
 </blockquote>
-<p>变量 参数如下：</p>
+<p>变量 参数如下： + 变量名：JAVA_HOME +
+变量值：<code>C:\Program Files (x86)\Java\jdk1.8.0_91</code>
+请根据自己的jdk实际路径配置</p>
 <ul>
-<li>
-<p>变量名：JAVA_HOME</p>
+<li>变量名：CLASSPATH
 <ul>
-<li>变量值：<code>C:\Program Files (x86)\Java\jdk1.8.0_91</code><br />
-请根据自己的jdk实际路径配置</li>
-</ul>
-</li>
-<li>
-<p>变量名：CLASSPATH</p>
-<ul>
-<li>变量值：<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code><br />
+<li>变量值：<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code>
 记得前面有个<code>.</code></li>
-</ul>
-</li>
-<li>
-<p>变量名：Path</p>
+</ul></li>
+<li>变量名：Path
 <ul>
 <li>变量值：<code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code></li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <blockquote>
 <pre>注意：在 Windows10 中，Path 变量里是分条显示的，
@@ -402,31 +408,61 @@
 %JAVA_HOME%\jre\bin; 
 分开添加，否则无法识别。</pre>
 <p>如图</p>
-<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/Path_JAVA_HOME.jpg?x-oss-process=style/yunying61" alt="path" /></p>
-<p>当然，你可以点击右边标签中的 <code>编辑文本</code> ，并将 <code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code> 添加到最前面。</p>
+<figure>
+<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/Path_JAVA_HOME.jpg?x-oss-process=style/yunying61"
+alt="path" />
+<figcaption aria-hidden="true">path</figcaption>
+</figure>
+<p>当然，你可以点击右边标签中的 <code>编辑文本</code> ，并将
+<code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code> 添加到最前面。</p>
 </blockquote>
-<h2 id="测试是否配置成功">测试是否配置成功<a class="header-anchor" href="#测试是否配置成功">·</a></h2>
-<ol>
-<li><code>Win + R</code>，键入&quot;cmd&quot;；</li>
-<li>键入命令: <code>java -version</code> 、 <code>java</code> 、 <code>javac</code> 几个命令，没有报错并出现了其他命令，说明环境变量配置成功；</li>
+<h2 id="测试是否配置成功">测试是否配置成功</h2>
+<ol type="1">
+<li><code>Win + R</code>，键入"cmd"；</li>
+<li>键入命令: <code>java -version</code> 、 <code>java</code> 、
+<code>javac</code>
+几个命令，没有报错并出现了其他命令，说明环境变量配置成功；</li>
 </ol>
-<h2 id="其他信息">其他信息<a class="header-anchor" href="#其他信息">·</a></h2>
-<h3 id="环境变量的参数信息">环境变量的参数信息<a class="header-anchor" href="#环境变量的参数信息">·</a></h3>
+<h2 id="其他信息">其他信息</h2>
+<h3 id="环境变量的参数信息">环境变量的参数信息</h3>
 <p><strong>配置JAVA_HOME:</strong></p>
-<p>​		一是为了方便引用，比如，JDK安装在C:\jdk1.6.0目录里，则设置JAVA_HOME为该目录路径, 那么以后要使用这个路径的时候, 只需输入%JAVA_HOME%即可, 避免每次引用都输入很长的路径串;</p>
-<p>​		二则是归一原则, 当JDK路径改变的时候, 仅需更改JAVA_HOME的变量值即可, 否则,就要更改任何用绝对路径引用JDK目录的文档, 要是万一没有改全, 某个程序找不到JDK, 后果是可想而知的----系统崩溃!</p>
-<p>​		三则是第三方软件会引用约定好的 JAVA_HOME 变量, 不然, 你不能正常使用该软件。</p>
-<p><strong>配置 path 变量</strong><br />
-path 变量使得我们能够在系统中的任何地方运行java应用程序，比如 javac、java、javah 等等,这就要找到我们安装 JDK 的目录，</p>
-<p>​		假设我们的JDK安装在 C:\jdk1.6.0 目录下,那么在 C:\jdk1.6.0\bin 目录下就是我们常用的 java 应用程序,我们就需要把 C:\jdk1.6.0\bin 这个目录加到 path 环境变量里面。</p>
-<p><strong>配置 classpath 变量</strong><br />
-classpath 环境变量，是当我们在开发java程序时需要引用别人写好的类时，要让 java 解释器知道到哪里去找这个类。通常，sun 为我们提供了一些额外的丰富的类包，一个是 dt.jar，一个是 tools.jar，这两个 jar 包都位于 C:\jdk1.6.0\lib 目录下，所以通常我们都会把这两个 jar 包加到我们的 classpath 环境变量中，设置 classpath=<code>.;C:\jdk1.6.0\lib\tools.jar;C:\jdk1.6.0\lib\dt.jar;</code>。</p>
+<p>​
+一是为了方便引用，比如，JDK安装在C:.0目录里，则设置JAVA_HOME为该目录路径,
+那么以后要使用这个路径的时候, 只需输入%JAVA_HOME%即可,
+避免每次引用都输入很长的路径串;</p>
+<p>​ 二则是归一原则, 当JDK路径改变的时候, 仅需更改JAVA_HOME的变量值即可,
+否则,就要更改任何用绝对路径引用JDK目录的文档, 要是万一没有改全,
+某个程序找不到JDK, 后果是可想而知的----系统崩溃!</p>
+<p>​ 三则是第三方软件会引用约定好的 JAVA_HOME 变量, 不然,
+你不能正常使用该软件。</p>
+<p><strong>配置 path 变量</strong> path
+变量使得我们能够在系统中的任何地方运行java应用程序，比如
+javac、java、javah 等等,这就要找到我们安装 JDK 的目录，</p>
+<p>​ 假设我们的JDK安装在 C:.0 目录下,那么在 C:.0目录下就是我们常用的
+java 应用程序,我们就需要把 C:.0这个目录加到 path 环境变量里面。</p>
+<p><strong>配置 classpath 变量</strong> classpath
+环境变量，是当我们在开发java程序时需要引用别人写好的类时，要让 java
+解释器知道到哪里去找这个类。通常，sun
+为我们提供了一些额外的丰富的类包，一个是 dt.jar，一个是
+tools.jar，这两个 jar 包都位于 C:.0目录下，所以通常我们都会把这两个 jar
+包加到我们的 classpath 环境变量中，设置
+classpath=<code>.;C:\jdk1.6.0\lib\tools.jar;C:\jdk1.6.0\lib\dt.jar;</code>。</p>
 <p>注意在完成配置环境变量后测试JDK是否安装成功时键入命令：<code>java -version</code></p>
-<h3 id="JDK-和-JRE-的区别">JDK 和 JRE 的区别<a class="header-anchor" href="#JDK-和-JRE-的区别">·</a></h3>
-<p>JRE(Java Runtime Enviroment) 是 Java 的运行环境。面向 Java 程序的使用者，而不是开发者。如果你仅下载并安装了JRE，那么你的系统只能运行 Java 程序。JRE 是运行 Java 程序所必须环境的集合，包含JVM标准实现及 Java 核心类库。它包括 Java 虚拟机、Java 平台核心类和支持文件。它不包含开发工具(编译器、调试器等)。</p>
-<p>JDK(Java Development Kit) 又称 J2SDK(Java2 Software Development Kit)，是 Java 开发工具包，它提供了 Java 的开发环境(提供了编译器 javac 等工具，用于将 java 文件编译为 class 文件)和运行环境(提 供了 JVM 和 Runtime 辅助包，用于解析 class 文件使其得到运行)。如果你下载并安装了 JDK，那么你不仅可以开发 Java 程序，也同时拥有了运行 Java 程序的平台。JDK 是整个 Java 的核心，包括了Java 运行环境(JRE)，一堆 Java 工具 tools.jar 和 Java 标准类库 (rt.jar)。</p>
-<h3 id="更新JDK版本的问题">更新JDK版本的问题<a class="header-anchor" href="#更新JDK版本的问题">·</a></h3>
-<p>先安装JDK1.8版本后，想要更改JDk版本，直接去修改系统变量JAVA_HOME的话会发现不起作用：原因是安装JDK1.8版本时，会在C:\ProgramData\Oracle\Java目录中生成一些配置文件，并同时将此目录写到环境变量中的Path中，所以我们应该去把系统变量Path中的C:\ProgramData\Oracle\Java\javapath删除了，这样问题就解决了！</p>
+<h3 id="jdk-和-jre-的区别">JDK 和 JRE 的区别</h3>
+<p>JRE(Java Runtime Enviroment) 是 Java 的运行环境。面向 Java
+程序的使用者，而不是开发者。如果你仅下载并安装了JRE，那么你的系统只能运行
+Java 程序。JRE 是运行 Java 程序所必须环境的集合，包含JVM标准实现及 Java
+核心类库。它包括 Java 虚拟机、Java
+平台核心类和支持文件。它不包含开发工具(编译器、调试器等)。</p>
+<p>JDK(Java Development Kit) 又称 J2SDK(Java2 Software Development
+Kit)，是 Java 开发工具包，它提供了 Java 的开发环境(提供了编译器 javac
+等工具，用于将 java 文件编译为 class 文件)和运行环境(提 供了 JVM 和
+Runtime 辅助包，用于解析 class 文件使其得到运行)。如果你下载并安装了
+JDK，那么你不仅可以开发 Java 程序，也同时拥有了运行 Java 程序的平台。JDK
+是整个 Java 的核心，包括了Java 运行环境(JRE)，一堆 Java 工具 tools.jar
+和 Java 标准类库 (rt.jar)。</p>
+<h3 id="更新jdk版本的问题">更新JDK版本的问题</h3>
+<p>先安装JDK1.8版本后，想要更改JDk版本，直接去修改系统变量JAVA_HOME的话会发现不起作用：原因是安装JDK1.8版本时，会在C:，并同时将此目录写到环境变量中的Path中，所以我们应该去把系统变量Path中的C:，这样问题就解决了！</p>
 
     </div>
 
@@ -552,14 +588,14 @@ classpath 环境变量，是当我们在开发java程序时需要引用别人写
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">305k</span>
+    <span title="站点总字数">310k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:08</span>
+    <span title="站点阅读时长">14:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -589,6 +625,7 @@ classpath 环境变量，是当我们在开发java程序时需要引用别人写
   <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/code-unfold.js"></script>
 
   <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>

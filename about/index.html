@@ -19,20 +19,30 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="个人信息· 名    称：云影 性    别：男 邮    箱：yunying61@163.com 个人网站：https:&#x2F;&#x2F;www.yunying61.cn&#x2F; 求职意向· 意向岗位：游戏策划&#x2F;游戏开发 意向城市：广州 求职类型：实习&#x2F;校招 当前状态：月内到岗 期望行业：游戏 相关技能·  熟悉C#，熟悉常见的设计模式 熟练使用Unity常用功能和相关组件，已通过两条Unity官方学习路径（Uni">
+    <meta name="description" content="个人信息 名 称：云影 性 别：男 邮 箱：yunying61@163.com 个人网站：https:&#x2F;&#x2F;www.yunying61.cn&#x2F; 求职意向 意向岗位：游戏策划&#x2F;游戏开发 意向城市：广州 求职类型：实习&#x2F;校招 当前状态：月内到岗 期望行业：游戏 相关技能  熟悉C#，熟悉常见的设计模式 熟练使用Unity常用功能和相关组件，已通过两条Unity官方学习路径（Unity">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="关于我">
 <meta property="og:url" content="https://www.yunying61.cn/about/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="个人信息· 名    称：云影 性    别：男 邮    箱：yunying61@163.com 个人网站：https:&#x2F;&#x2F;www.yunying61.cn&#x2F; 求职意向· 意向岗位：游戏策划&#x2F;游戏开发 意向城市：广州 求职类型：实习&#x2F;校招 当前状态：月内到岗 期望行业：游戏 相关技能·  熟悉C#，熟悉常见的设计模式 熟练使用Unity常用功能和相关组件，已通过两条Unity官方学习路径（Uni">
+<meta property="og:description" content="个人信息 名 称：云影 性 别：男 邮 箱：yunying61@163.com 个人网站：https:&#x2F;&#x2F;www.yunying61.cn&#x2F; 求职意向 意向岗位：游戏策划&#x2F;游戏开发 意向城市：广州 求职类型：实习&#x2F;校招 当前状态：月内到岗 期望行业：游戏 相关技能  熟悉C#，熟悉常见的设计模式 熟练使用Unity常用功能和相关组件，已通过两条Unity官方学习路径（Unity">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-28T02:42:53.000Z">
-<meta property="article:modified_time" content="2023-01-09T07:51:42.007Z">
+<meta property="article:modified_time" content="2023-01-25T09:39:22.778Z">
 <meta property="article:author" content="yunying61">
 <meta property="article:tag" content="yunying61">
 <meta name="twitter:card" content="summary">
@@ -157,8 +167,8 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="yunying61"
-      src="/images/yunying61.png">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
   <p class="site-author-name" itemprop="name">yunying61</p>
   <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
 </div>
@@ -177,7 +187,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">149</span>
+        <span class="site-state-item-count">150</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -236,33 +246,34 @@
       
       
       <div class="post-body">
-          <h1 id="个人信息">个人信息<a class="header-anchor" href="#个人信息">·</a></h1>
-<p>名    称：云影<br />
-性    别：男<br />
-邮    箱：yunying61@163.com<br />
-个人网站：https://www.yunying61.cn/</p>
-<h1 id="求职意向">求职意向<a class="header-anchor" href="#求职意向">·</a></h1>
-<p>意向岗位：游戏策划/游戏开发<br />
-意向城市：广州<br />
-求职类型：实习/校招<br />
-当前状态：月内到岗<br />
-期望行业：游戏</p>
-<h1 id="相关技能">相关技能<a class="header-anchor" href="#相关技能">·</a></h1>
-<ol>
+          <h1 id="个人信息">个人信息</h1>
+<p>名 称：云影 性 别：男 邮 箱：<a
+href="mailto:yunying61@163.com">yunying61@163.com</a> 个人网站：<a
+href="https://www.yunying61.cn/"
+class="uri">https://www.yunying61.cn/</a></p>
+<h1 id="求职意向">求职意向</h1>
+<p>意向岗位：游戏策划/游戏开发 意向城市：广州 求职类型：实习/校招
+当前状态：月内到岗 期望行业：游戏</p>
+<h1 id="相关技能">相关技能</h1>
+<ol type="1">
 <li>熟悉C#，熟悉常见的设计模式</li>
-<li>熟练使用Unity常用功能和相关组件，已通过两条Unity官方学习路径（Unity Essentials、Junior Programmer）</li>
+<li>熟练使用Unity常用功能和相关组件，已通过两条Unity官方学习路径（Unity
+Essentials、Junior Programmer）</li>
 <li>熟悉Git、Plastic SCM，了解过Blender的基本建模。</li>
 </ol>
-<h1 id="项目经历">项目经历<a class="header-anchor" href="#项目经历">·</a></h1>
+<h1 id="项目经历">项目经历</h1>
 <ul>
 <li>项目名称：Unity官方学习路径-Junior Programmer</li>
-<li>项目介绍：此项目是专为任何有兴趣学习编码或获得入门级 Unity 角色的人而设计，完成后将获得 Unity 初级程序员认证。</li>
-<li>项目内容：利用各种 Unity API 编写代码，诊断并修复异常原因，在游戏中创建场景流，利用Profiler调试性能问题</li>
+<li>项目介绍：此项目是专为任何有兴趣学习编码或获得入门级 Unity
+角色的人而设计，完成后将获得 Unity 初级程序员认证。</li>
+<li>项目内容：利用各种 Unity API
+编写代码，诊断并修复异常原因，在游戏中创建场景流，利用Profiler调试性能问题</li>
 </ul>
 <hr />
 <ul>
 <li>项目名称：Unity官方学习路径-Unity Essentials</li>
-<li>项目介绍：此项目是专为刚接触 Unity 的人而设计，是在 Unity 编辑器中熟练地创建并将愿景变为现实的第一步。</li>
+<li>项目介绍：此项目是专为刚接触 Unity 的人而设计，是在 Unity
+编辑器中熟练地创建并将愿景变为现实的第一步。</li>
 <li>项目内容：熟练地使用Unity编辑器，构建场景、操作游戏对象、使用基本组件和脚本。</li>
 </ul>
 <hr />
@@ -272,12 +283,14 @@
 <li>项目内容：利用网上收集到的美术资源，逐帧实现了每个动作的动画。移动、冲刺、二段跳、爬墙跳、攻击等控制脚本均为自己独立实现的。</li>
 </ul>
 <hr />
-<p>2022.04 - 至今		剑之试炼<br />
-1.这是我个人立项的独立游戏项目，定位是2D动作跳跃类游戏，采用Unity游戏引擎制作。<br />
-2.规划了游戏的创新特点与游戏战斗核心表现相关设计。<br />
-3.旨在突出多招式、可收招的战斗模式。</p>
-<h1 id="游戏经历">游戏经历<a class="header-anchor" href="#游戏经历">·</a></h1>
-<ol>
+<p>2022.04 - 至今 剑之试炼</p>
+<ol type="1">
+<li>这是我个人立项的独立游戏项目，定位是2D动作跳跃类游戏，采用Unity游戏引擎制作。</li>
+<li>规划了游戏的创新特点与游戏战斗核心表现相关设计。</li>
+<li>旨在突出多招式、可收招的战斗模式。</li>
+</ol>
+<h1 id="游戏经历">游戏经历</h1>
+<ol type="1">
 <li>《光环》全系列，FPS类型，游戏时长500h+，全系列通关；</li>
 <li>《空洞骑士》，2D动作冒险类型，游戏时长100h+，通关3个结局；</li>
 <li>《行星边际2》，MMOFPS类型，游戏时长1284h+；</li>
@@ -286,76 +299,77 @@
 <li>《无人深空》，生存沙盒类型，游戏时长221h+；</li>
 <li>其他</li>
 </ol>
-<h1 id="自我评价">自我评价<a class="header-anchor" href="#自我评价">·</a></h1>
-<ol>
+<h1 id="自我评价">自我评价</h1>
+<ol type="1">
 <li>学习能力充足，善于洞悉问题本质并勇于寻找解决方法。</li>
 <li>有想法，对于创新及解决具有挑战性的问题充满激情。</li>
 <li>工作认真负责，主动性和执行力较强，头脑灵活。</li>
 <li>对游戏有热情并时刻关注游戏行业的变革，研究游戏行业的自我突破。</li>
 </ol>
-<h1 id="获奖经历">获奖经历<a class="header-anchor" href="#获奖经历">·</a></h1>
+<h1 id="获奖经历">获奖经历</h1>
 <table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 85%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>获奖时间</th>
 <th>奖项名称</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>2020-06-08</td>
 <td>2019－2020学年第一学期三等奖学金</td>
 </tr>
-<tr>
+<tr class="even">
 <td>2020-07-15</td>
 <td>第十届全国大学生电子商务“创新、创意及创业”挑战赛校赛三等奖</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>2020-09-10</td>
 <td>2019－2020学年第二学期三等奖学金</td>
 </tr>
-<tr>
+<tr class="even">
 <td>2020-09-15</td>
 <td>全国计算机等级考试二级C语言程序设计合格证书</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>2021-01-04</td>
 <td>2019－2020学年“社会活动积极分子”称号</td>
 </tr>
-<tr>
+<tr class="even">
 <td>2021-06-21</td>
 <td>第十一届全国大学生电子商务“创新、创意及创业”挑战赛校赛二等奖</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>2021-09-15</td>
 <td>2021年“互联网+”创新创业大赛校级三等奖</td>
 </tr>
-<tr>
+<tr class="even">
 <td>2021-09-23</td>
 <td>2020－2021学年第二学期二等奖学金</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>2022-01-07</td>
 <td>2020－2021学年“社会活动积极分子”称号</td>
 </tr>
-<tr>
-<td>2022-05-01</td>
-<td>南昌大学科学技术学院“优秀团员”称号</td>
-</tr>
-<tr>
+<tr class="even">
 <td>2022-05-20</td>
 <td>2021－2022学年第一学期二等奖学金</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>疫情拖延</td>
 <td>2021－2022学年第二学期三等奖学金</td>
 </tr>
-<tr>
+<tr class="even">
 <td>疫情拖延</td>
 <td>2021－2022学年“社会活动积极分子”称号</td>
 </tr>
 </tbody>
 </table>
+<a href="/2023/01/%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%84%E6%8A%A5%E5%91%8A-%E5%AD%A6%E8%81%8C%E5%B9%B3%E5%8F%B0/" title="综合测评报告_学职平台">综合测评报告_学职平台</a>
 
       </div>
       
@@ -388,14 +402,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">305k</span>
+    <span title="站点总字数">310k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:08</span>
+    <span title="站点阅读时长">14:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -425,6 +439,7 @@
   <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/code-unfold.js"></script>
 
   <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>

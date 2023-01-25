@@ -19,17 +19,27 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <script>
+    (function(){
+        if(''){
+          if (prompt('请输入文章密码') !== ''){
+            alert('密码错误');
+            history.back();
+          }
+        }
+    })();
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="以下所有演示，后面紧接的都是它们的代码行。  一级标题· 1# 一级标题 二级标题· 1## 二级标题">
+    <meta name="description" content="以下所有演示，后面紧接的都是它们的代码行。  一级标题 1# 一级标题 二级标题 1## 二级标题">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Markdown语法">
 <meta property="og:url" content="https://www.yunying61.cn/2019/11/Markdown%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="以下所有演示，后面紧接的都是它们的代码行。  一级标题· 1# 一级标题 二级标题· 1## 二级标题">
+<meta property="og:description" content="以下所有演示，后面紧接的都是它们的代码行。  一级标题 1# 一级标题 二级标题 1## 二级标题">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://static.runoob.com/images/runoob-logo.png">
 <meta property="og:image" content="http://static.runoob.com/images/runoob-logo.png">
@@ -38,8 +48,8 @@
 <meta property="article:modified_time" content="2022-12-17T09:35:58.203Z">
 <meta property="article:author" content="yunying61">
 <meta property="article:tag" content="笔记">
-<meta property="article:tag" content="markdown">
 <meta property="article:tag" content="语法">
+<meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://static.runoob.com/images/runoob-logo.png">
 
@@ -156,14 +166,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%85%AD%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">段落格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF%EF%BC%88%E6%B0%B4%E5%B9%B3%E7%BA%BF%EF%BC%89"><span class="nav-number">1.2.1.</span> <span class="nav-text">分割线（水平线）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.2.2.</span> <span class="nav-text">文本样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%9A%E6%B3%A8"><span class="nav-number">1.2.3.</span> <span class="nav-text">脚注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%A9%E5%86%99"><span class="nav-number">1.2.4.</span> <span class="nav-text">缩写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E6%A1%86"><span class="nav-number">1.2.5.</span> <span class="nav-text">判断框</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%86"><span class="nav-number">1.3.</span> <span class="nav-text">方框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">1.4.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.4.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.4.2.</span> <span class="nav-text">有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97"><span class="nav-number">1.5.</span> <span class="nav-text">区块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8"><span class="nav-number">1.5.1.</span> <span class="nav-text">区块中使用列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97"><span class="nav-number">1.5.2.</span> <span class="nav-text">列表中使用区块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E4%BA%AE%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.1.</span> <span class="nav-text">高亮代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.6.2.</span> <span class="nav-text">代码块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A9%BA%E8%A1%8C%E5%BC%8F%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">空行式代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E5%BC%95%E5%8F%B7%E5%BC%8F%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">反引号式代码块</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE"><span class="nav-number">1.6.2.2.1.</span> <span class="nav-text">代码语法高亮</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-number">1.7.</span> <span class="nav-text">链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E9%93%BE%E6%8E%A5"><span class="nav-number">1.7.1.</span> <span class="nav-text">高级链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98%E9%93%BE%E6%8E%A5"><span class="nav-number">1.7.2.</span> <span class="nav-text">文章标题链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87"><span class="nav-number">1.8.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC"><span class="nav-number">1.9.</span> <span class="nav-text">表格</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="nav-number">1.9.0.1.</span> <span class="nav-text">对齐方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84-HTML-%E5%85%83%E7%B4%A0"><span class="nav-number">1.10.</span> <span class="nav-text">支持的 HTML 元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89"><span class="nav-number">1.11.</span> <span class="nav-text">转义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F"><span class="nav-number">1.12.</span> <span class="nav-text">公式</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%85%AD%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">段落格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF%E6%B0%B4%E5%B9%B3%E7%BA%BF"><span class="nav-number">1.2.1.</span> <span class="nav-text">分割线（水平线）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.2.2.</span> <span class="nav-text">文本样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%9A%E6%B3%A8"><span class="nav-number">1.2.3.</span> <span class="nav-text">脚注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%A9%E5%86%99"><span class="nav-number">1.2.4.</span> <span class="nav-text">缩写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E6%A1%86"><span class="nav-number">1.2.5.</span> <span class="nav-text">判断框</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%86"><span class="nav-number">1.3.</span> <span class="nav-text">方框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">1.4.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.4.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.4.2.</span> <span class="nav-text">有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97"><span class="nav-number">1.5.</span> <span class="nav-text">区块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8"><span class="nav-number">1.5.1.</span> <span class="nav-text">区块中使用列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97"><span class="nav-number">1.5.2.</span> <span class="nav-text">列表中使用区块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E4%BA%AE%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.1.</span> <span class="nav-text">高亮代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.6.2.</span> <span class="nav-text">代码块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A9%BA%E8%A1%8C%E5%BC%8F%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">空行式代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E5%BC%95%E5%8F%B7%E5%BC%8F%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">反引号式代码块</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE"><span class="nav-number">1.6.2.2.1.</span> <span class="nav-text">代码语法高亮</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-number">1.7.</span> <span class="nav-text">链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E9%93%BE%E6%8E%A5"><span class="nav-number">1.7.1.</span> <span class="nav-text">高级链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98%E9%93%BE%E6%8E%A5"><span class="nav-number">1.7.2.</span> <span class="nav-text">文章标题链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87"><span class="nav-number">1.8.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC"><span class="nav-number">1.9.</span> <span class="nav-text">表格</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="nav-number">1.9.0.1.</span> <span class="nav-text">对齐方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84-html-%E5%85%83%E7%B4%A0"><span class="nav-number">1.10.</span> <span class="nav-text">支持的 HTML 元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89"><span class="nav-number">1.11.</span> <span class="nav-text">转义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F"><span class="nav-number">1.12.</span> <span class="nav-text">公式</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="yunying61"
-      src="/images/yunying61.png">
+    <a href="/"><img class="site-author-image" itemprop="image" alt="yunying61"
+      src="/images/yunying61.png"></a>
   <p class="site-author-name" itemprop="name">yunying61</p>
   <div class="site-description" itemprop="description">yunying61's Hexo Blog</div>
 </div>
@@ -182,7 +192,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">149</span>
+        <span class="site-state-item-count">150</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -290,6 +300,7 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
     <span id="/2019/11/Markdown%E8%AF%AD%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="Markdown语法" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
@@ -338,75 +349,76 @@
         <blockquote>
 <p>以下所有演示，后面紧接的都是它们的代码行。</p>
 </blockquote>
-<h1 id="一级标题">一级标题<a class="header-anchor" href="#一级标题">·</a></h1>
+<h1 id="一级标题">一级标题</h1>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br></pre></td></tr></table></figure>
-<h2 id="二级标题">二级标题<a class="header-anchor" href="#二级标题">·</a></h2>
+<h2 id="二级标题">二级标题</h2>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## 二级标题</span></span><br></pre></td></tr></table></figure>
 <span id="more"></span>
-<h3 id="三级标题">三级标题<a class="header-anchor" href="#三级标题">·</a></h3>
+<h3 id="三级标题">三级标题</h3>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">### 三级标题</span></span><br></pre></td></tr></table></figure>
-<h4 id="四级标题">四级标题<a class="header-anchor" href="#四级标题">·</a></h4>
+<h4 id="四级标题">四级标题</h4>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#### 四级标题</span></span><br></pre></td></tr></table></figure>
-<h5 id="五级标题">五级标题<a class="header-anchor" href="#五级标题">·</a></h5>
+<h5 id="五级标题">五级标题</h5>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">##### 五级标题</span></span><br></pre></td></tr></table></figure>
-<h6 id="六级标题">六级标题<a class="header-anchor" href="#六级标题">·</a></h6>
+<h6 id="六级标题">六级标题</h6>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-<h2 id="段落格式">段落格式<a class="header-anchor" href="#段落格式">·</a></h2>
-<h3 id="分割线（水平线）">分割线（水平线）<a class="header-anchor" href="#分割线（水平线）">·</a></h3>
+<h2 id="段落格式">段落格式</h2>
+<h3 id="分割线水平线">分割线（水平线）</h3>
 <hr />
 <hr />
 <hr />
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">__<span class="emphasis">_</span></span></span><br><span class="line"><span class="emphasis"><span class="strong"></span></span></span><br><span class="line"><span class="emphasis"><span class="strong">---</span></span></span><br><span class="line"><span class="emphasis"><span class="strong"></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="strong">**<span class="emphasis">*</span></span></span></span></span><br></pre></td></tr></table></figure>
-<h3 id="文本样式">文本样式<a class="header-anchor" href="#文本样式">·</a></h3>
+<h3 id="文本样式">文本样式</h3>
 <p><strong>This is bold text 加粗</strong></p>
 <p><strong>This is bold text 加粗</strong></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**This is bold text 加粗**</span></span><br><span class="line"><span class="strong">__This is bold text 加粗__</span></span><br></pre></td></tr></table></figure>
 <p><em>This is italic text 斜体</em></p>
 <p><em>This is italic text 斜体</em></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*This is italic text 斜体*</span></span><br><span class="line"><span class="emphasis">_This is italic text 斜体_</span></span><br></pre></td></tr></table></figure>
-<p><em><strong>粗斜体文本</strong></em></p>
-<p><em><strong>粗斜体文本</strong></em></p>
+<p><strong><em>粗斜体文本</em></strong></p>
+<p><strong><em>粗斜体文本</em></strong></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**<span class="emphasis">*粗斜体文本<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong"><span class="strong">__<span class="emphasis">_粗斜体文本<span class="strong">__<span class="emphasis">_</span></span></span></span></span></span></span></span></span><br></pre></td></tr></table></figure>
-<p><s>Strikethrough 删除线</s></p>
+<p><del>Strikethrough 删除线</del></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~Strikethrough 删除线~~ </span><br></pre></td></tr></table></figure>
 <p><u>xiahuaxian 下划线</u></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>xiahuaxian 下划线<span class="language-xml"><span class="tag">&lt;/<span class="name">u</span>&gt;</span></span>  </span><br></pre></td></tr></table></figure>
-<p>Markdown 扩展语法<br />
-内联公式（例：$\LaTeX$​）</p>
+<p>Markdown 扩展语法 内联公式（例：<span
+class="math inline">\(\LaTeX\)</span>​）</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\LaTeX</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
 <p>下标（例：H<sub>2</sub>0）</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H~2~0</span><br></pre></td></tr></table></figure>
 <p>上标（例：X<sup>2</sup>）</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X^2^</span><br></pre></td></tr></table></figure>
-<p>高亮（例：<mark>key</mark>）</p>
+<p>高亮（例：==key==）</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">==key==</span><br></pre></td></tr></table></figure>
-<h3 id="脚注">脚注<a class="header-anchor" href="#脚注">·</a></h3>
-<p>创建脚注<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<h3 id="脚注">脚注</h3>
+<p>创建脚注<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">代码：</span><br><span class="line">创建脚注[^脚注]</span><br><span class="line">[<span class="symbol">^脚注</span>]: <span class="link">脚注：在文章末尾对特定名词进行解释说明</span></span><br><span class="line"></span><br><span class="line">解释：</span><br><span class="line">// [^脚注]是标记点</span><br><span class="line">// 而[^脚注]: 则是脚注的详细内容</span><br></pre></td></tr></table></figure>
-<h3 id="缩写">缩写<a class="header-anchor" href="#缩写">·</a></h3>
-<p>不同于HTML语法中的 <abbr title="全写">缩写</abbr> ，比如： <abbr title="World Trade Organization">WTO</abbr></p>
+<h3 id="缩写">缩写</h3>
+<p>不同于HTML语法中的 <abbr title="全写">缩写</abbr> ，比如：
+<abbr title="World Trade Organization">WTO</abbr></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">&quot;World Trade Organization&quot;</span>&gt;</span>WTO<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-<h3 id="判断框">判断框<a class="header-anchor" href="#判断框">·</a></h3>
+<h3 id="判断框">判断框</h3>
 <ul class="task-list">
-<li class="task-list-item">
-<p><input type="checkbox" id="cbx_0" checked="true" disabled="true" /><label for="cbx_0"> 勾选</label></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox" id="cbx_1" disabled="true" /><label for="cbx_1"> 不勾选</label></p>
-</li>
+<li><p><input type="checkbox" disabled="" checked="" />
+勾选</p></li>
+<li><p><input type="checkbox" disabled="" />
+不勾选</p></li>
 </ul>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [x] 勾选</span><br><span class="line"><span class="bullet">-</span> [ ] 不勾选 </span><br></pre></td></tr></table></figure>
-<h2 id="方框">方框<a class="header-anchor" href="#方框">·</a></h2>
+<h2 id="方框">方框</h2>
 <pre>使用HTML的<b>pre标签</b>可以实现方框的高亮提示。pre标签原本的使用是可以实现对空行和空格的保留，
 如：
 此例演示如何使用 pre 标签
-	对空行
+    对空行
 和    空格
-		进行控制</pre>
+        进行控制</pre>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span>使用HTML的<span class="tag">&lt;<span class="name">b</span>&gt;</span>pre标签<span class="tag">&lt;/<span class="name">b</span>&gt;</span>可以实现方框的高亮提示。pre标签原本的使用是可以实现对空行和空格的保留，</span><br><span class="line">如：</span><br><span class="line">此例演示如何使用 pre 标签</span><br><span class="line">  对空行</span><br><span class="line">和    空格</span><br><span class="line">    进行控制<span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="列表">列表<a class="header-anchor" href="#列表">·</a></h2>
-<h3 id="无序列表">无序列表<a class="header-anchor" href="#无序列表">·</a></h3>
-<p>无序列表使用星号(<strong>*</strong>)、加号(<strong>+</strong>)或是减号(<strong>-</strong>)作为列表标记，标记后跟一个<strong>空格</strong>，然后再填写内容。无序列表可以嵌套，通过 <strong>tab键</strong> 建立层次关系：</p>
+<h2 id="列表">列表</h2>
+<h3 id="无序列表">无序列表</h3>
+<p>无序列表使用星号(<strong>*</strong>)、加号(<strong>+</strong>)或是减号(<strong>-</strong>)作为列表标记，标记后跟一个<strong>空格</strong>，然后再填写内容。无序列表可以嵌套，通过
+<strong>tab键</strong> 建立层次关系：</p>
 <ul>
 <li>第一层1
 <ul>
@@ -416,80 +428,60 @@
 <li>第三层1
 <ul>
 <li>第四层1</li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 <li>第二层3</li>
-</ul>
-</li>
+</ul></li>
 <li>第一层2</li>
 </ul>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+</span> 第一层1</span><br><span class="line"><span class="bullet">  +</span> 第二层1</span><br><span class="line"><span class="bullet">  +</span> 第二层2</span><br><span class="line"><span class="bullet">    +</span> 第三层1</span><br><span class="line"><span class="bullet">      +</span> 第四层1</span><br><span class="line"><span class="bullet">  +</span> 第二层3</span><br><span class="line"><span class="bullet">+</span> 第一层2</span><br></pre></td></tr></table></figure>
-<h3 id="有序列表">有序列表<a class="header-anchor" href="#有序列表">·</a></h3>
-<p>在每行代码的最前面输入序号如（1. ），注意 <code>.</code> 后面有空格，有序列表同样可以嵌套。<br />
-注意：只要有了第一个序号的开始，后面的编号会依次开始排序，如（5. ，接下来的将会是6. ）</p>
-<ol>
-<li>
-<p>Lorem ipsum dolor sit amet</p>
-</li>
-<li>
-<p>Consectetur adipiscing elit</p>
-<ol>
+<h3 id="有序列表">有序列表</h3>
+<p>在每行代码的最前面输入序号如（1. ），注意 <code>.</code>
+后面有空格，有序列表同样可以嵌套。<br />
+注意：只要有了第一个序号的开始，后面的编号会依次开始排序，如（5.
+，接下来的将会是6. ）</p>
+<ol type="1">
+<li><p>Lorem ipsum dolor sit amet</p></li>
+<li><p>Consectetur adipiscing elit</p>
+<ol type="1">
 <li>here</li>
 <li>there</li>
-</ol>
-</li>
-<li>
-<p>Integer molestie lorem at massa</p>
-</li>
-<li>
-<p>You can use sequential numbers…</p>
-</li>
-<li>
-<p>…or keep all the numbers as <code>1.</code></p>
-</li>
+</ol></li>
+<li><p>Integer molestie lorem at massa</p></li>
+<li><p>You can use sequential numbers...</p></li>
+<li><p>...or keep all the numbers as <code>1.</code></p></li>
 </ol>
 <p>按打头的编号开始排序:</p>
-<ol start="57">
+<ol start="57" type="1">
 <li>从57开始</li>
-<li>即使为 <code>1. </code> ，显示的序号也为58</li>
+<li>即使为 <code>1.</code> ，显示的序号也为58</li>
 </ol>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> Lorem ipsum dolor sit amet</span><br><span class="line"><span class="bullet">2.</span> Consectetur adipiscing elit</span><br><span class="line"><span class="bullet">  1.</span> here</span><br><span class="line"><span class="bullet">  2.</span> there</span><br><span class="line"><span class="bullet">3.</span> Integer molestie lorem at massa</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> You can use sequential numbers...</span><br><span class="line"><span class="bullet">1.</span> ...or keep all the numbers as <span class="code">`1.`</span></span><br><span class="line"></span><br><span class="line">按打头的编号开始排序:</span><br><span class="line"></span><br><span class="line"><span class="bullet">57.</span> 从57开始</span><br><span class="line"><span class="bullet">1.</span> 即使为 <span class="code">`1. `</span> ，显示的序号也为58</span><br></pre></td></tr></table></figure>
-<h2 id="区块">区块<a class="header-anchor" href="#区块">·</a></h2>
-<p>在段落开头使用 <code>&gt; </code> 符号 ，然后跟一个空格：</p>
+<h2 id="区块">区块</h2>
+<p>在段落开头使用 <code>&gt;</code> 符号 ，然后跟一个空格：</p>
 <blockquote>
 <p>区块引用</p>
 <p>区块衔接</p>
 </blockquote>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 区块引用</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; 区块衔接</span></span><br></pre></td></tr></table></figure>
-<p>区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推退：</p>
+<p>区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt;
+符号是第一层嵌套，以此类推退：</p>
 <blockquote>
 <p>最外层<br />
-最外层</p>
-<blockquote>
-<p>第一层嵌套<br />
-第一层嵌套</p>
-<blockquote>
-<p>第二层嵌套<br />
-第二层嵌套</p>
-</blockquote>
-</blockquote>
+最外层 &gt; 第一层嵌套<br />
+&gt; 第一层嵌套 &gt; &gt; 第二层嵌套<br />
+&gt; &gt; 第二层嵌套</p>
 </blockquote>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 最外层  </span></span><br><span class="line"><span class="quote">&gt; &gt; 第一层嵌套  </span></span><br><span class="line"><span class="quote">&gt; &gt; &gt; 第二层嵌套  </span></span><br></pre></td></tr></table></figure>
-<h3 id="区块中使用列表">区块中使用列表<a class="header-anchor" href="#区块中使用列表">·</a></h3>
+<h3 id="区块中使用列表">区块中使用列表</h3>
 <blockquote>
 <p>注意空行！</p>
 </blockquote>
 <blockquote>
 <p>区块中使用列表</p>
-<ol>
-<li>
-<p>第一项</p>
-</li>
-<li>
-<p>第二项</p>
-</li>
+<ol type="1">
+<li><p>第一项</p></li>
+<li><p>第二项</p></li>
 </ol>
 <ul>
 <li>第一项</li>
@@ -497,88 +489,92 @@
 </ul>
 </blockquote>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 区块中使用列表</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; 1. 第一项</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; 2. 第二项</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; + 第一项</span></span><br><span class="line"><span class="quote">&gt; + 第二项</span></span><br></pre></td></tr></table></figure>
-<h3 id="列表中使用区块">列表中使用区块<a class="header-anchor" href="#列表中使用区块">·</a></h3>
-<p><strong>如果要在列表项目内放进区块，那么就需要先<code>空一行</code>，然后在 &gt; 前添加四个空格的缩进。</strong></p>
+<h3 id="列表中使用区块">列表中使用区块</h3>
+<p><strong>如果要在列表项目内放进区块，那么就需要先<code>空一行</code>，然后在
+&gt; 前添加四个空格的缩进。</strong></p>
 <blockquote>
 <p>注意空行！</p>
 </blockquote>
 <p>区块中使用列表实例如下：</p>
 <ul>
-<li>
-<p>第一项</p>
+<li><p>第一项</p>
 <blockquote>
 <p>区块引用</p>
 <p>区块衔接</p>
-</blockquote>
-</li>
-<li>
-<p>第二项</p>
-</li>
+</blockquote></li>
+<li><p>第二项</p></li>
 </ul>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*</span> 第一项</span><br><span class="line"><span class="code">  </span></span><br><span class="line"><span class="code">  &gt; 区块引用</span></span><br><span class="line"><span class="code">  &gt;</span></span><br><span class="line"><span class="code">  &gt; 区块衔接</span></span><br><span class="line"><span class="code">* 第二项</span></span><br></pre></td></tr></table></figure>
-<h2 id="代码">代码<a class="header-anchor" href="#代码">·</a></h2>
-<h3 id="高亮代码">高亮代码<a class="header-anchor" href="#高亮代码">·</a></h3>
+<h2 id="代码">代码</h2>
+<h3 id="高亮代码">高亮代码</h3>
 <p><code>code</code></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`code`</span></span><br></pre></td></tr></table></figure>
-<h3 id="代码块">代码块<a class="header-anchor" href="#代码块">·</a></h3>
-<h4 id="空行式代码块">空行式代码块<a class="header-anchor" href="#空行式代码块">·</a></h4>
+<h3 id="代码块">代码块</h3>
+<h4 id="空行式代码块">空行式代码块</h4>
 <blockquote>
 <p>在Hexo-Next主题下，空行式代码块将不会显示代码行号，且没有复制按钮。类似于使用<code>&lt;pre&gt;</code>标签</p>
 </blockquote>
 <pre><code>line 1 of code
 line 2 of code
-line 3 of code
-</code></pre>
+line 3 of code</code></pre>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">该种代码行的格式：  </span><br><span class="line"><span class="code">`该段空行`</span></span><br><span class="line"><span class="code">  前面空4格（一个tab的长度），该段开始为代码行</span></span><br><span class="line"><span class="code">`结尾再空行，该段为结束`</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">演示如下：</span><br><span class="line"></span><br><span class="line"><span class="code">  line 1 of code</span></span><br><span class="line"><span class="code">  line 2 of code</span></span><br><span class="line"><span class="code">  line 3 of code</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
-<h4 id="反引号式代码块">反引号式代码块<a class="header-anchor" href="#反引号式代码块">·</a></h4>
+<h4 id="反引号式代码块">反引号式代码块</h4>
 <blockquote>
 <p>如果你在代码块里使用了3个反引号（```），则代码块本身要用4个反引号！</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">line 1 of code</span><br><span class="line">line 2 of code</span><br><span class="line">line 3 of code</span><br></pre></td></tr></table></figure>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">该种代码行的格式：</span><br><span class="line"><span class="code">`3个反引号`</span></span><br><span class="line">该段开始为代码行</span><br><span class="line"><span class="code">`3个反引号`</span></span><br><span class="line">演示如下：</span><br><span class="line"></span><br><span class="line"><span class="code">```</span></span><br><span class="line"><span class="code">line 1 of code</span></span><br><span class="line"><span class="code">line 2 of code</span></span><br><span class="line"><span class="code">line 3 of code</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-<h5 id="代码语法高亮">代码语法高亮<a class="header-anchor" href="#代码语法高亮">·</a></h5>
+<h5 id="代码语法高亮">代码语法高亮</h5>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">该种代码行的格式：</span><br><span class="line"><span class="string">`3个反引号`</span> <span class="string">`所使用的编程语言`</span></span><br><span class="line">该段开始为代码行</span><br><span class="line"><span class="string">`3个反引号`</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">演示如下：</span><br><span class="line"><span class="keyword">var</span> foo = <span class="keyword">function</span> (<span class="params">bar</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> bar++;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">foo</span>(<span class="number">5</span>));</span><br><span class="line"></span><br><span class="line">源代码如下：</span><br><span class="line"><span class="string">``</span><span class="string">` js</span></span><br><span class="line"><span class="string">var foo = function (bar) &#123;</span></span><br><span class="line"><span class="string">  return bar++;</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">console.log(foo(5));</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span></span><br></pre></td></tr></table></figure>
-<h2 id="链接">链接<a class="header-anchor" href="#链接">·</a></h2>
+<h2 id="链接">链接</h2>
 <p>这是一个链接 <a target="_blank" rel="noopener" href="https://www.runoob.com">菜鸟教程</a></p>
-<p>或者 <a target="_blank" rel="noopener" href="https://www.runoob.com">https://www.runoob.com</a></p>
+<p>或者 <a target="_blank" rel="noopener" href="https://www.runoob.com"
+class="uri">https://www.runoob.com</a></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [<span class="string">菜鸟教程</span>](<span class="link">https://www.runoob.com</span>)</span><br><span class="line"></span><br><span class="line"><span class="language-xml">&lt;https://www.runoob.com&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="高级链接">高级链接<a class="header-anchor" href="#高级链接">·</a></h3>
+<h3 id="高级链接">高级链接</h3>
 <p>链接也可以用变量来代替，文档末尾附带变量地址：<br />
-这个链接用 1 作为网址变量 <a target="_blank" rel="noopener" href="http://www.google.com/">Google</a><br />
-这个链接用 runoob 作为网址变量 <a target="_blank" rel="noopener" href="http://www.runoob.com/">Runoob</a><br />
+这个链接用 1 作为网址变量 <a
+target="_blank" rel="noopener" href="http://www.google.com/">Google</a><br />
+这个链接用 runoob 作为网址变量 <a
+target="_blank" rel="noopener" href="http://www.runoob.com/">Runoob</a><br />
 然后在文档的结尾为变量赋值（网址）</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Google</span>][<span class="symbol">1</span>]</span><br><span class="line">[<span class="string">Runoob</span>][<span class="symbol">2</span>]  </span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">http://www.google.com/  </span></span><br><span class="line">[<span class="symbol">2</span>]: <span class="link">http://www.runoob.com/</span></span><br></pre></td></tr></table></figure>
-<h3 id="文章标题链接">文章标题链接<a class="header-anchor" href="#文章标题链接">·</a></h3>
+<h3 id="文章标题链接">文章标题链接</h3>
 <ul>
 <li>通过<code>[名称](#标题名)</code> 创建标题链接，跳转到该标题处</li>
 </ul>
-<p><a href="#%E9%93%BE%E6%8E%A5">链接</a> <a href="#%E5%8F%8D%E5%BC%95%E5%8F%B7%E5%BC%8F%E4%BB%A3%E7%A0%81%E5%9D%97">反引号代码块</a></p>
+<p><a href="#链接">链接</a> <a
+href="#反引号式代码块">反引号代码块</a></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">链接</span>](<span class="link">#链接</span>)</span><br><span class="line">[<span class="string">反引号代码块</span>](<span class="link">#反引号式代码块</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="图片">图片<a class="header-anchor" href="#图片">·</a></h2>
+<h2 id="图片">图片</h2>
 <p>语法格式如下：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片名称</span>](<span class="link">图片地址</span>)</span><br><span class="line">![<span class="string">RUNOOB 图标</span>](<span class="link">http://static.runoob.com/images/runoob-logo.png</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">图片名称</span>](<span class="link">图片地址 &quot;可选标题&quot;</span>)  </span><br><span class="line">![<span class="string">RUNOOB 图标</span>](<span class="link">http://static.runoob.com/images/runoob-logo.png &quot;RUNOOB&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://static.runoob.com/images/runoob-logo.png&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>使用实例：<br />
-<img data-src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标" /></p>
-<p><img data-src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标" title="RUNOOB" /><br />
+<p>使用实例： <img data-src="http://static.runoob.com/images/runoob-logo.png"
+alt="RUNOOB 图标" /></p>
+<p><img data-src="http://static.runoob.com/images/runoob-logo.png"
+title="RUNOOB" alt="RUNOOB 图标" />
 当然，你也可以像网址那样对图片网址使用<strong>变量</strong></p>
-<p>Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用<strong>HTML</strong>的 <img> 标签。<br />
+<p>Markdown
+还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用<strong>HTML</strong>的
+<img> 标签。
 <img data-src="http://static.runoob.com/images/runoob-logo.png" width="50%"></p>
-<h2 id="表格">表格<a class="header-anchor" href="#表格">·</a></h2>
-<p>使用 <code>|</code> 来分隔不同的单元格，使用 <code>-</code> 来分隔表头和其他行。</p>
+<h2 id="表格">表格</h2>
+<p>使用 <code>|</code> 来分隔不同的单元格，使用 <code>-</code>
+来分隔表头和其他行。</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>表头</th>
 <th>表头</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>单元格</td>
 <td>单元格</td>
 </tr>
-<tr>
+<tr class="even">
 <td>单元格</td>
 <td>单元格</td>
 </tr>
@@ -586,67 +582,73 @@ line 3 of code
 </table>
 <p>语法格式如下：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
-<h4 id="对齐方式">对齐方式<a class="header-anchor" href="#对齐方式">·</a></h4>
-<p>我们可以设置表格的对齐方式：<br />
-–: 	设置内容和标题栏居右对齐。<br />
-:-- 	设置内容和标题栏居左对齐。<br />
-:–: 	设置内容和标题栏居中对齐。<br />
+<h4 id="对齐方式">对齐方式</h4>
+<p>我们可以设置表格的对齐方式： --: 设置内容和标题栏居右对齐。 :--
+设置内容和标题栏居左对齐。 :--: 设置内容和标题栏居中对齐。
 实例如下：</p>
 <table>
 <thead>
-<tr>
-<th style="text-align:left">左对齐</th>
-<th style="text-align:right">右对齐</th>
-<th style="text-align:center">居中对齐</th>
+<tr class="header">
+<th style="text-align: left;">左对齐</th>
+<th style="text-align: right;">右对齐</th>
+<th style="text-align: center;">居中对齐</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left">单元格</td>
-<td style="text-align:right">单元格</td>
-<td style="text-align:center">单元格</td>
+<tr class="odd">
+<td style="text-align: left;">单元格</td>
+<td style="text-align: right;">单元格</td>
+<td style="text-align: center;">单元格</td>
 </tr>
-<tr>
-<td style="text-align:left">单元格</td>
-<td style="text-align:right">单元格</td>
-<td style="text-align:center">单元格</td>
+<tr class="even">
+<td style="text-align: left;">单元格</td>
+<td style="text-align: right;">单元格</td>
+<td style="text-align: center;">单元格</td>
 </tr>
 </tbody>
 </table>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 左对齐 | 居中对齐 | 右对齐 |</span><br><span class="line">| :----- | :----: | ----:  |</span><br><span class="line">| 单元格 | 单元格 | 单元格   |</span><br><span class="line">| 单元格 | 单元格 | 单元格   |</span><br></pre></td></tr></table></figure>
-<h2 id="支持的-HTML-元素">支持的 HTML 元素<a class="header-anchor" href="#支持的-HTML-元素">·</a></h2>
-<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
-<p>目前支持的 HTML 元素有：&lt;kbd&gt;\ &lt;b&gt;\ &lt;i&gt;\ &lt;em&gt;\ &lt;sup&gt;\ &lt;sub&gt;\ &lt;br&gt;\等 ，如：</p>
+<h2 id="支持的-html-元素">支持的 HTML 元素</h2>
+<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML
+撰写。</p>
+<p>目前支持的 HTML
+元素有：&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;，如：</p>
 <p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用 <span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Ctrl<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Alt<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Del<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span> 重启电脑</span><br></pre></td></tr></table></figure>
-<h2 id="转义">转义<a class="header-anchor" href="#转义">·</a></h2>
-<p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符（\），Markdown 使用反斜杠转义特殊字符：<br />
-<strong>文本加粗</strong><br />
-** 正常显示星号 **</p>
+<h2 id="转义">转义</h2>
+<p>Markdown
+使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符（\），Markdown
+使用反斜杠转义特殊字符： <strong>文本加粗</strong> ** 正常显示星号
+**</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**文本加粗**</span> </span><br><span class="line">\<span class="emphasis">*\*</span> 正常显示星号 \<span class="emphasis">*\*</span></span><br></pre></td></tr></table></figure>
 <p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<p>\   反斜线<br />
-`   反引号<br />
-*   星号<br />
-_   下划线<br />
-{}  花括号<br />
-[]  方括号<br />
-()  小括号<br />
+<p>\ 反斜线<br />
+` 反引号<br />
+* 星号<br />
+_ 下划线<br />
+{} 花括号<br />
+[] 方括号<br />
+() 小括号<br />
 #井字号<br />
-+   加号<br />
--   减号<br />
-.   英文句点<br />
-!   感叹号</p>
-<h2 id="公式">公式<a class="header-anchor" href="#公式">·</a></h2>
-<p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
-<p>$$<br />
-\int \frac{1}{\sqrt{x^{2} \pm a^{2}}} d x=\ln |x+\sqrt{x^{2} \pm a^{2}}|+C<br />
-$$</p>
-<hr class="footnotes-sep" />
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>脚注：在文章末尾对特定名词进行解释说明 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
++ 加号<br />
+- 减号<br />
+. 英文句点<br />
+! 感叹号</p>
+<h2 id="公式">公式</h2>
+<p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或
+LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax
+对数学公式进行渲染。如：</p>
+<p><span class="math display">\[
+\int \frac{1}{\sqrt{x^{2} \pm a^{2}}} d x=\ln |x+\sqrt{x^{2} \pm
+a^{2}}|+C
+\]</span></p>
+<section class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"
+role="doc-endnote"><p>脚注：在文章末尾对特定名词进行解释说明<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -711,8 +713,8 @@ $$</p>
 
           <div class="post-tags">
               <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
-              <a href="/tags/markdown/" rel="tag"># markdown</a>
               <a href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag"># 语法</a>
+              <a href="/tags/markdown/" rel="tag"># markdown</a>
           </div>
 
         
@@ -770,14 +772,14 @@ $$</p>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">305k</span>
+    <span title="站点总字数">310k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:08</span>
+    <span title="站点阅读时长">14:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
@@ -807,6 +809,7 @@ $$</p>
   <script src="https://unpkg.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/code-unfold.js"></script>
 
   <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
