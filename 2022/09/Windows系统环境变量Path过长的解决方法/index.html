@@ -34,13 +34,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="问题描述  安装某些需要添加环境变量的软件时，提示无法添加，因为已有的环境变量占满了。 手动添加系统环境变量时，提示环境变量太大，限制了2047个字符。">
+    <meta name="description" content="问题描述·  安装某些需要添加环境变量的软件时，提示无法添加，因为已有的环境变量占满了。 手动添加系统环境变量时，提示环境变量太大，限制了2047个字符。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Windows系统环境变量Path过长的解决方法">
 <meta property="og:url" content="https://www.yunying61.cn/2022/09/Windows%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8FPath%E8%BF%87%E9%95%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="问题描述  安装某些需要添加环境变量的软件时，提示无法添加，因为已有的环境变量占满了。 手动添加系统环境变量时，提示环境变量太大，限制了2047个字符。">
+<meta property="og:description" content="问题描述·  安装某些需要添加环境变量的软件时，提示无法添加，因为已有的环境变量占满了。 手动添加系统环境变量时，提示环境变量太大，限制了2047个字符。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/can%20not%20add%20Path.png">
+<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/Path%20too%20Big.png">
+<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/New%20Path.png">
 <meta property="article:published_time" content="2022-09-24T05:21:50.000Z">
 <meta property="article:modified_time" content="2022-09-25T07:09:02.670Z">
 <meta property="article:author" content="yunying61">
@@ -49,6 +52,7 @@
 <meta property="article:tag" content="Path">
 <meta property="article:tag" content="环境变量">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/can%20not%20add%20Path.png">
 
 
 <link rel="canonical" href="https://www.yunying61.cn/2022/09/Windows%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8FPath%E8%BF%87%E9%95%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
@@ -329,7 +333,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>765</span>
+      <span>754</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -347,30 +351,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="问题描述">问题描述</h1>
-<ol type="1">
+        <h1 id="问题描述">问题描述<a class="header-anchor" href="#问题描述">·</a></h1>
+<ol>
 <li>安装某些需要添加环境变量的软件时，提示无法添加，因为已有的环境变量占满了。</li>
 <li>手动添加系统环境变量时，提示环境变量太大，限制了2047个字符。</li>
 </ol>
 <span id="more"></span>
-<figure>
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/can%20not%20add%20Path.png"
-alt="无法添加path" />
-<figcaption aria-hidden="true">无法添加path</figcaption>
-</figure>
-<figure>
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/Path%20too%20Big.png"
-alt="path太大" />
-<figcaption aria-hidden="true">path太大</figcaption>
-</figure>
-<h1 id="问题解决">问题解决</h1>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/can%20not%20add%20Path.png" alt="" loading="lazy" /></p>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/Path%20too%20Big.png" alt="" loading="lazy" /></p>
+<h1 id="问题解决">问题解决<a class="header-anchor" href="#问题解决">·</a></h1>
 <blockquote>
-<p><strong>思路</strong>：新建变量Path1 和 变量Path2,
-然后将Path1和Path2放入Path中</p>
+<p><strong>思路</strong>：新建变量Path1 和 变量Path2, 然后将Path1和Path2放入Path中</p>
 <p>%Path1%;%Path2%;</p>
 </blockquote>
 <p><strong>具体操作：</strong></p>
-<ol type="1">
+<ol>
 <li>右键点击我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;系统变量（或<code>win + R</code>打开“运行”，输入<code>SystemPropertiesAdvanced.exe</code>）</li>
 <li>编辑Path，编辑文本，全选其中的内容，全部复制出来放到文本文档中（建议保存备份一份）。</li>
 <li>新建两个系统变量取名Path1和Path2，编辑Path1，将Path中的所有内容复制进Path1然后保存</li>
@@ -378,22 +373,14 @@ alt="path太大" />
 </ol>
 <p>以后自己手动添加的环境变量就可以放到Path2中。</p>
 <p><strong>成品：</strong></p>
-<figure>
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/New%20Path.png"
-alt="新版Path" />
-<figcaption aria-hidden="true">新版Path</figcaption>
-</figure>
-<h2 id="注意事项">注意事项</h2>
-<ol type="1">
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/New%20Path.png" alt="" loading="lazy" /></p>
+<h2 id="注意事项">注意事项<a class="header-anchor" href="#注意事项">·</a></h2>
+<ol>
 <li><code>%Path1%;%Path2%;</code>要放在Path中最前面（建议所有%%类型的都放在前面，都放在Path中）</li>
-<li><code>%变量名%/其他</code>
-这种格式的，必须留在Path中，放在Path1等其他变量中无效，比如有：<code>%JAVA_HOME%\bin;</code>，<code>%JAVA_HOME%\jre\bin;</code>
-等。</li>
-<li>如果有些软件的环境变量在Path1中不起作用，那它可能只能在Path在起作用，请手动移至Path下。（比如：VS
-Code）</li>
-<li>Path1变量中不能含有<code>%变量名%/其他</code>
-这种格式的的项，否则整个Path1都不起作用！（Path2同理）</li>
-<li>一定要用Window的编码格式，且里面不能有。如果你是用记事本处理复制出来的内容，那没事，如果是用其他编码格式的软件编辑，那请注意了！</li>
+<li><code>%变量名%/其他</code> 这种格式的，必须留在Path中，放在Path1等其他变量中无效，比如有：<code>%JAVA_HOME%\bin;</code>，<code>%JAVA_HOME%\jre\bin;</code> 等。</li>
+<li>如果有些软件的环境变量在Path1中不起作用，那它可能只能在Path在起作用，请手动移至Path下。（比如：VS Code）</li>
+<li>Path1变量中不能含有<code>%变量名%/其他</code> 这种格式的的项，否则整个Path1都不起作用！（Path2同理）</li>
+<li>一定要用Window的编码格式，且里面不能有\r\n字符。如果你是用记事本处理复制出来的内容，那没事，如果是用其他编码格式的软件编辑，那请注意了！</li>
 <li>最后，记得<strong>备份</strong>，以防万一，如果忘了，请一直点取消，不要点确认，重新来过一遍。</li>
 </ol>
 
@@ -521,14 +508,14 @@ Code）</li>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

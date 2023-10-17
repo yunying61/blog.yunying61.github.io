@@ -34,12 +34,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="C语言 标准头文件(详) https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35782149&#x2F;article&#x2F;details&#x2F;79391154 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_36955347&#x2F;article&#x2F;details&#x2F;71511900 位于C 源代码 开头的 头文件引用 #include &quot;xxx.h&quot;">
+    <meta name="description" content="C语言 标准头文件(详)· https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35782149&#x2F;article&#x2F;details&#x2F;79391154 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_36955347&#x2F;article&#x2F;details&#x2F;71511900 位于C 源代码 开头的 头文件引用 #include &quot;xxx.h&quot;">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="C语言 标准头文件(详)">
 <meta property="og:url" content="https://www.yunying61.cn/2020/05/C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="C语言 标准头文件(详) https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35782149&#x2F;article&#x2F;details&#x2F;79391154 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_36955347&#x2F;article&#x2F;details&#x2F;71511900 位于C 源代码 开头的 头文件引用 #include &quot;xxx.h&quot;">
+<meta property="og:description" content="C语言 标准头文件(详)· https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35782149&#x2F;article&#x2F;details&#x2F;79391154 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_36955347&#x2F;article&#x2F;details&#x2F;71511900 位于C 源代码 开头的 头文件引用 #include &quot;xxx.h&quot;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-31T14:55:28.000Z">
 <meta property="article:modified_time" content="2022-05-08T02:19:12.050Z">
@@ -163,8 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#c%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6%E8%AF%A6"><span class="nav-number">1.</span> <span class="nav-text">C语言 标准头文件(详)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">标准头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stdio.h-%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="nav-number">1.2.</span> <span class="nav-text">&lt;stdio.h&gt; 输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#math.h-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">&lt;math.h&gt; 数学函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string.h-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">&lt;string.h&gt; 字符串函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#time.h-%E6%97%B6%E9%97%B4%E5%92%8C%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="nav-number">1.5.</span> <span class="nav-text">&lt;time.h&gt; 时间和日期函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ctype.h-%E5%AD%97%E7%AC%A6%E6%B5%8B%E8%AF%95"><span class="nav-number">1.6.</span> <span class="nav-text">&lt;ctype.h&gt; 字符测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stdlib.h-%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD"><span class="nav-number">1.7.</span> <span class="nav-text">&lt;stdlib.h&gt; 实用功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#limits.h-%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4"><span class="nav-number">1.8.</span> <span class="nav-text">&lt;limits.h&gt; 取值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#float.h-%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97"><span class="nav-number">1.9.</span> <span class="nav-text">&lt;float.h&gt; 浮点数运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#locale.h-%E6%9C%AC%E5%9C%9F%E5%8C%96"><span class="nav-number">1.10.</span> <span class="nav-text">&lt;locale.h&gt; 本土化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#setlocale%E5%87%BD%E6%95%B0"><span class="nav-number">1.10.1.</span> <span class="nav-text">setlocale函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localeconv%E5%87%BD%E6%95%B0"><span class="nav-number">1.10.2.</span> <span class="nav-text">localeconv函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stdarg.h-%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="nav-number">1.11.</span> <span class="nav-text">&lt;stdarg.h&gt; 可变参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stddef.h-%E4%B8%80%E4%BA%9B%E5%B8%B8%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F"><span class="nav-number">1.12.</span> <span class="nav-text">&lt;stddef.h&gt;
-一些常数，类型和变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#signal.h-%E4%BF%A1%E5%8F%B7"><span class="nav-number">1.13.</span> <span class="nav-text">&lt;signal.h&gt; 信号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setjmp.h-%E9%9D%9E%E5%B1%80%E9%83%A8%E8%B7%B3%E8%BD%AC"><span class="nav-number">1.14.</span> <span class="nav-text">&lt;setjmp.h&gt; “非局部跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#errno.h-%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81"><span class="nav-number">1.15.</span> <span class="nav-text">&lt;errno.h&gt; 错误代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#assert.h-%E6%96%AD%E8%A8%80"><span class="nav-number">1.16.</span> <span class="nav-text">&lt;assert.h&gt; 断言</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6-%E8%AF%A6"><span class="nav-number">1.</span> <span class="nav-text">C语言 标准头文件(详)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">标准头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stdio-h-%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="nav-number">1.2.</span> <span class="nav-text">&lt;stdio.h&gt; 输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#math-h-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">&lt;math.h&gt; 数学函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string-h-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">&lt;string.h&gt; 字符串函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#time-h-%E6%97%B6%E9%97%B4%E5%92%8C%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="nav-number">1.5.</span> <span class="nav-text">&lt;time.h&gt; 时间和日期函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ctype-h-%E5%AD%97%E7%AC%A6%E6%B5%8B%E8%AF%95"><span class="nav-number">1.6.</span> <span class="nav-text">&lt;ctype.h&gt; 字符测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stdlib-h-%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD"><span class="nav-number">1.7.</span> <span class="nav-text">&lt;stdlib.h&gt; 实用功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#limits-h-%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4"><span class="nav-number">1.8.</span> <span class="nav-text">&lt;limits.h&gt; 取值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#float-h-%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97"><span class="nav-number">1.9.</span> <span class="nav-text">&lt;float.h&gt; 浮点数运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#locale-h-%E6%9C%AC%E5%9C%9F%E5%8C%96"><span class="nav-number">1.10.</span> <span class="nav-text">&lt;locale.h&gt; 本土化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#setlocale%E5%87%BD%E6%95%B0"><span class="nav-number">1.10.1.</span> <span class="nav-text">setlocale函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localeconv%E5%87%BD%E6%95%B0"><span class="nav-number">1.10.2.</span> <span class="nav-text">localeconv函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stdarg-h-%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="nav-number">1.11.</span> <span class="nav-text">&lt;stdarg.h&gt; 可变参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stddef-h-%E4%B8%80%E4%BA%9B%E5%B8%B8%E6%95%B0%EF%BC%8C%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F"><span class="nav-number">1.12.</span> <span class="nav-text">&lt;stddef.h&gt; 一些常数，类型和变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#signal-h-%E4%BF%A1%E5%8F%B7"><span class="nav-number">1.13.</span> <span class="nav-text">&lt;signal.h&gt; 信号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setjmp-h-%E2%80%9C%E9%9D%9E%E5%B1%80%E9%83%A8%E8%B7%B3%E8%BD%AC"><span class="nav-number">1.14.</span> <span class="nav-text">&lt;setjmp.h&gt; “非局部跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#errno-h-%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81"><span class="nav-number">1.15.</span> <span class="nav-text">&lt;errno.h&gt; 错误代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#assert-h-%E6%96%AD%E8%A8%80"><span class="nav-number">1.16.</span> <span class="nav-text">&lt;assert.h&gt; 断言</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -344,288 +343,295 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="c语言-标准头文件详">C语言 标准头文件(详)</h1>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35782149/article/details/79391154"
-class="uri">https://blog.csdn.net/qq_35782149/article/details/79391154</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36955347/article/details/71511900"
-class="uri">https://blog.csdn.net/qq_36955347/article/details/71511900</a></p>
+        <h1 id="C语言-标准头文件-详">C语言 标准头文件(详)<a class="header-anchor" href="#C语言-标准头文件-详">·</a></h1>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35782149/article/details/79391154">https://blog.csdn.net/qq_35782149/article/details/79391154</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36955347/article/details/71511900">https://blog.csdn.net/qq_36955347/article/details/71511900</a></p>
 <p>位于C 源代码 开头的 <code>头文件</code>引用</p>
-<p><code>#include "xxx.h"</code></p>
+<p><code>#include &quot;xxx.h&quot;</code></p>
 <span id="more"></span>
-<h2 id="标准头文件">标准头文件</h2>
+<h2 id="标准头文件">标准头文件<a class="header-anchor" href="#标准头文件">·</a></h2>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;assert.h&gt;     断言</span><br><span class="line">&lt;ctype.h&gt;     字符类测试 </span><br><span class="line">&lt;errno.h&gt;     （部分）库函数抛出的错误代码 </span><br><span class="line">&lt;float.h&gt;     浮点数运算 </span><br><span class="line">&lt;limits.h&gt;     检测整型数据类型值范围 </span><br><span class="line">&lt;locale.h&gt;     本土化 </span><br><span class="line">&lt;math.h&gt;     数学函数 </span><br><span class="line">&lt;setjmp.h&gt;     “非局部跳转” </span><br><span class="line">&lt;signal.h&gt;     信号 </span><br><span class="line">&lt;stdarg.h&gt;     可变参数列表 </span><br><span class="line">&lt;stddef.h&gt;     一些常数，类型和变量 </span><br><span class="line">&lt;stdio.h&gt;     输入和输出 </span><br><span class="line">&lt;stdlib.h&gt;     实用功能 </span><br><span class="line">&lt;string.h&gt;     字符串函数 </span><br><span class="line">&lt;time.h&gt;     时间和日期函数</span><br></pre></td></tr></table></figure>
-<h2 id="stdio.h-输入和输出">&lt;stdio.h&gt; 输入和输出</h2>
-<p>&lt;stdio.h&gt;头文件定义了用于输入和输出的函数、类型和宏。最重要的类型是用于声明文件指针的file。另外两个常用的类型是
-size_t和fpos_t， size_t是由运算符sizeof产生的无符号整类型；
-fpos_t类型定义能够唯一说明文件中的每个位置的对象。由头部
-定义的最有用的宏是EOF，其值代表文件的结尾。</p>
+<h2 id="stdio-h-输入和输出">&lt;stdio.h&gt; 输入和输出<a class="header-anchor" href="#stdio-h-输入和输出">·</a></h2>
+<p>&lt;stdio.h&gt;头文件定义了用于输入和输出的函数、类型和宏。最重要的类型是用于声明文件指针的file。另外两个常用的类型是 size_t和fpos_t，<br />
+size_t是由运算符sizeof产生的无符号整类型；<br />
+fpos_t类型定义能够唯一说明文件中的每个位置的对象。由头部 定义的最有用的宏是EOF，其值代表文件的结尾。</p>
 <p>变量：</p>
 <blockquote>
-<p>typedef size_t typedef FILE typedef fpos_t</p>
+<p>typedef size_t<br />
+typedef FILE<br />
+typedef fpos_t</p>
 </blockquote>
 <p>常量 ：</p>
 <blockquote>
-<p>NULL 空值 _IOFBF 表示完全缓冲 _IOLBF 表示线缓冲 _IONBF 表示无缓存
-BUFSIZ setbuf函数所使用的缓冲区的大小 EOF EOF是负整数表示END OF FILE
-FOPEN_MAX (20)同时打开的文件的最大数量 FILENAME_MAX 文件名的最大长度
-L_tmpnam整数，最大长度的临时文件名 SEEK_CUR取得目前文件位置
-SEEK_END将读写位置移到文件尾时 SEEK_SET将读写位置移到文件开头
-TMP_MAXtmpnam最多次数 stderr标准错误流，默认为屏幕, 可输出到文件。
-stdin标准输入流，默认为键盘 stdout标准输出流，默认为屏幕</p>
+<p>NULL 空值<br />
+_IOFBF 表示完全缓冲<br />
+_IOLBF 表示线缓冲<br />
+_IONBF 表示无缓存<br />
+BUFSIZ setbuf函数所使用的缓冲区的大小<br />
+EOF EOF是负整数表示END OF FILE<br />
+FOPEN_MAX (20)同时打开的文件的最大数量<br />
+FILENAME_MAX 文件名的最大长度<br />
+L_tmpnam整数，最大长度的临时文件名<br />
+SEEK_CUR取得目前文件位置<br />
+SEEK_END将读写位置移到文件尾时<br />
+SEEK_SET将读写位置移到文件开头<br />
+TMP_MAXtmpnam最多次数<br />
+stderr标准错误流，默认为屏幕, 可输出到文件。<br />
+stdin标准输入流，默认为键盘<br />
+stdout标准输出流，默认为屏幕</p>
 </blockquote>
 <p>所有函数：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">clearerr();     复位错误标志</span><br><span class="line">fclose();       关闭一个流。</span><br><span class="line">feof();       检测文件结束符</span><br><span class="line">ferror();       检查流是否有错误</span><br><span class="line">fflush();      更新缓冲区</span><br><span class="line">fgetpos();       移动文件流的读写位置</span><br><span class="line">fopen();      打开文件</span><br><span class="line">fread();       从文件流读取数据</span><br><span class="line">freopen();       打开文件</span><br><span class="line">fseek();       移动文件流的读写位置</span><br><span class="line">fsetpos();      定位流上的文件指针</span><br><span class="line">ftell();       取得文件流的读取位置</span><br><span class="line">fwrite();       将数据写至文件流</span><br><span class="line">fgetc();       由文件中读取一个字符</span><br><span class="line">fgets();       文件中读取一字符串</span><br><span class="line">fputc();       将一指定字符写入文件流中</span><br><span class="line">fputs();       将一指定的字符串写入文件内</span><br><span class="line">fprintf();       格式化输出数据至文件</span><br><span class="line">fscanf();       格式化字符串输入</span><br><span class="line">getc();       由文件中读取一个字符</span><br><span class="line">getchar();       由标准输入设备内读进一字符</span><br><span class="line">gets();       由标准输入设备内读进一字符串</span><br><span class="line">putc();       将一指定字符写入文件中</span><br><span class="line">putchar();       将指定的字符写到标准输出设备</span><br><span class="line">puts();       送一字符串到流stdout中</span><br><span class="line">printf();       格式化输出数据</span><br><span class="line">perror();       打印出错误原因信息字符串 </span><br><span class="line">remove();       删除文件</span><br><span class="line">rename();       更改文件名称或位置</span><br><span class="line">rewind();       重设读取目录的位置为开头位置</span><br><span class="line">setbuf();       把缓冲区与流相联</span><br><span class="line">setvbuf();       把缓冲区与流相关</span><br><span class="line">scanf();       格式输入函数</span><br><span class="line">sprintf();       格式化字符串复制</span><br><span class="line">sscanf();       格式化字符串输入</span><br><span class="line">tmpfile();       以wb+形式创建一个临时二进制文件</span><br><span class="line">tmpnam();      产生一个唯一的文件名</span><br><span class="line">vfprintf();     格式化输出数据至文件</span><br><span class="line">vprintf();       格式化输出数据</span><br><span class="line">vsprintf();     格式化字符串复制</span><br><span class="line">ungetc();      将指定字符写回文件流中</span><br></pre></td></tr></table></figure>
-<h2 id="math.h-数学函数">&lt;math.h&gt; 数学函数</h2>
+<h2 id="math-h-数学函数">&lt;math.h&gt; 数学函数<a class="header-anchor" href="#math-h-数学函数">·</a></h2>
 <p>&lt;math.h&gt; 是C语言中的数学函数库</p>
 <p>三角函数（x代表了一个以弧度表示的角度）</p>
 <blockquote>
-<p>double sin(double x); 求 x 的正弦 double cos(double x); 求 x 的余弦
-double tan(double x); 求 x 的正切
+<p>double sin(double x); 求 x 的正弦<br />
+double cos(double x); 求 x 的余弦<br />
+double tan(double x); 求 x 的正切<br />
 //cot三角函数，可以使用tan(PI/2-x)来实现。</p>
 </blockquote>
 <p>反三角函数（PI = 3.14159265 ， x代表了一个以弧度表示的角度）</p>
 <blockquote>
-<p>double asin(double x); 求x的反正弦，结果在[-PI/2, PI/2] double
-acos(double x); 求x的反余弦，结果在[0, PI] double atan(double x);
-求x的反正切，结果在[-PI/2, PI/2] double atan2(double y,double x);
-求以弧度表示的y/x的反正切(整圆值) x代表 x 轴坐标的浮点值，y代表 y
-轴坐标的浮点值。y 和 x 的值的符号决定了正确的象限。结果介于[-PI,
-PI]。</p>
+<p>double asin(double x); 					 求x的反正弦，结果在[-PI/2, PI/2]<br />
+double acos(double x); 					求x的反余弦，结果在[0, PI]<br />
+double atan(double x);					  求x的反正切，结果在[-PI/2, PI/2]<br />
+double atan2(double y,double x);	求以弧度表示的y/x的反正切(整圆值)<br />
+x代表 x 轴坐标的浮点值，y代表 y 轴坐标的浮点值。y 和 x 的值的符号决定了正确的象限。结果介于[-PI, PI]。</p>
 </blockquote>
 <p>双曲三角函数</p>
 <blockquote>
-<p>double sinh(double x); 求 x 的双曲正弦 double cosh(double x); 求 x
-的双曲余弦 double tanh(double x); 求 x 的双曲正切</p>
+<p>double sinh(double x); 			求 x 的双曲正弦<br />
+double cosh(double x); 			求 x 的双曲余弦<br />
+double tanh(double x); 			求 x 的双曲正切</p>
 </blockquote>
 <p>指数与对数</p>
 <blockquote>
-<p>double exp(double x); 求e的x次幂的值 double sqrt(double x); 求平方根
-double log(double x); 求以e为底的对数 double log10(double x);
-求以10为底的对数 double pow(double x, double y); 计算以 x 的 y 次幂
-float powf(float x, float y); 与pow一致，输入与输出皆为浮点数</p>
+<p>double exp(double x); 					求e的x次幂的值<br />
+double sqrt(double x); 					求平方根<br />
+double log(double x); 					 求以e为底的对数<br />
+double log10(double x); 				 求以10为底的对数<br />
+double pow(double x, double y);	计算以 x 的 y 次幂<br />
+float powf(float x, float y);			   与pow一致，输入与输出皆为浮点数</p>
 </blockquote>
 <p>取整</p>
 <blockquote>
-<p>double ceil(double); 取上整 double floor(double); 取下整</p>
+<p>double ceil(double); 			   取上整<br />
+double floor(double); 			取下整</p>
 </blockquote>
 <p>标准化浮点数（(f = x * 2<sup>p</sup>) ，(f等于x乘以2的p次幂)）</p>
 <blockquote>
-<p>double frexp(double f, int *p); 已知 f 求<strong>x, p</strong> (
-x介于[0.5, 1) ) double ldexp(double x, int p); 已知 x、p 求 **f</p>
+<p>double frexp(double f, int *p);	已知 f 求<strong>x, p</strong> ( x介于[0.5, 1) )<br />
+double ldexp(double x, int p);	已知 x、p 求 **f</p>
 </blockquote>
 <p>取整与取余</p>
 <blockquote>
-<p>double modf(double x, double *y); 返回值 x 为小数点后的部分，并且 y
-为整数部分。</p>
+<p>double modf(double x, double *y);<br />
+返回值 x 为小数点后的部分，并且 y 为整数部分。</p>
 </blockquote>
 <p>求绝对值</p>
 <blockquote>
-<p>double fabs(double x) 返回 x 的绝对值。</p>
+<p>double fabs(double x)			返回 x 的绝对值。</p>
 </blockquote>
 <p>求整</p>
 <blockquote>
-<p>double ceil(double x) 返回大于或等于 x 的最小的整数值。 double
-floor(double x) 返回小于或等于 x 的最大的整数值。</p>
+<p>double ceil(double x)			   返回大于或等于 x 的最小的整数值。<br />
+double floor(double x)			返回小于或等于 x 的最大的整数值。</p>
 </blockquote>
 <p>求余数</p>
 <blockquote>
-<p>double fmod(double x, double y); 返回 x 除以 y 的余数。</p>
+<p>double fmod(double x, double y);		返回 x 除以 y 的余数。</p>
 </blockquote>
-<h2 id="string.h-字符串函数">&lt;string.h&gt; 字符串函数</h2>
+<h2 id="string-h-字符串函数">&lt;string.h&gt; 字符串函数<a class="header-anchor" href="#string-h-字符串函数">·</a></h2>
 <p>&lt;string.h&gt; 头文件里包含了C语言的最常用的字符串操作函数</p>
 <table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 37%" />
-<col style="width: 36%" />
-</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>函数原型说明</strong></th>
 <th><strong>功能</strong></th>
 <th><strong>返回值</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>char <em>strcat(char </em>s1,char *s2)</td>
+<tr>
+<td>char *strcat(char *s1,char *s2)</td>
 <td>把字符串s2接到s1后面</td>
 <td>s1所指地址</td>
 </tr>
-<tr class="even">
-<td>char <em>strchr(char </em>s,int ch)</td>
+<tr>
+<td>char *strchr(char *s,int ch)</td>
 <td>在s所指字符串中，找出第一次出现字符ch的位置</td>
 <td>返回找到的字符的地址，找不到返回NULL</td>
 </tr>
-<tr class="odd">
-<td>int strcmp(char <em>s1,char </em>s2)</td>
+<tr>
+<td>int strcmp(char *s1,char *s2)</td>
 <td>对s1和s2所指字符串进行比较</td>
 <td>s1&lt;s2,返回负数；s1= =s2,返回0；s1&gt;s2,返回正数</td>
 </tr>
-<tr class="even">
-<td>char <em>strcpy(char </em>s1,char *s2)</td>
+<tr>
+<td>char *strcpy(char *s1,char *s2)</td>
 <td>把s2指向的串复制到s1指向的空间</td>
 <td>s1 所指地址</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>unsigned strlen(char *s)</td>
 <td>求字符串s的长度</td>
-<td>返回串中字符（不计最后的'\0'）个数</td>
+<td>返回串中字符（不计最后的’\0’）个数</td>
 </tr>
-<tr class="even">
-<td>char <em>strstr(char </em>s1,char *s2)</td>
+<tr>
+<td>char *strstr(char *s1,char *s2)</td>
 <td>在s1所指字符串中，找出字符串s2第一次出现的位置</td>
 <td>返回找到的字符串的地址，找不到返回NULL</td>
 </tr>
 </tbody>
 </table>
 <p>宏：</p>
-<pre><code>NULL 空</code></pre>
+<pre><code>NULL 空
+</code></pre>
 <p>变量：</p>
-<pre><code>typedef size_t</code></pre>
+<pre><code>typedef size_t
+</code></pre>
 <p>函数：</p>
-<pre><code>memchr();       在某一内存范围中查找一特定字符
-memcmp();       比较内存内容
-memcpy();       拷贝内存内容
-memmove();      拷贝内存内容
-memset();       将一段内存空间填入某值
-strcat();       连接两字符串
-strncat();      连接两字符串
-strchr();       查找字符串中第一个出现的指定字符
-strcmp();       比较字符串
-strncmp();      比较2个字符串的前N个字符
-strcoll();      采用目前区域的字符排列比较字符串
-strcpy();       拷贝字符串
-strncpy();      拷贝字符串
-strcspn();      返回字符连续不含指定字符的字符数
-strerror();     返回错误原因的描述字符串
-strlen();       计算字符串长度
-strpbrk();      查找字符串中第一个出现的指定字符
-strrchr();      查找字符串中最后出现的指定字符
-strspn();       返回字符串连续不含指定字符的字符数
-strstr();       在一字符串中查找指定的字符串
-strtok();       分割字符串
-strxfrm();      转换字符串</code></pre>
-<h2 id="time.h-时间和日期函数">&lt;time.h&gt; 时间和日期函数</h2>
-<p>&lt;time.h&gt;
-是C标准函数库中获取时间与日期、对时间与日期数据操作及格式化的头文件。</p>
+<pre><code>memchr();		在某一内存范围中查找一特定字符
+memcmp(); 		比较内存内容
+memcpy(); 		拷贝内存内容
+memmove(); 		拷贝内存内容
+memset(); 		将一段内存空间填入某值
+strcat(); 		连接两字符串
+strncat(); 		连接两字符串
+strchr(); 		查找字符串中第一个出现的指定字符
+strcmp(); 		比较字符串
+strncmp();		比较2个字符串的前N个字符
+strcoll(); 		采用目前区域的字符排列比较字符串
+strcpy(); 		拷贝字符串
+strncpy(); 		拷贝字符串
+strcspn(); 		返回字符连续不含指定字符的字符数
+strerror(); 	返回错误原因的描述字符串
+strlen(); 		计算字符串长度
+strpbrk(); 		查找字符串中第一个出现的指定字符
+strrchr(); 		查找字符串中最后出现的指定字符
+strspn();		返回字符串连续不含指定字符的字符数
+strstr(); 		在一字符串中查找指定的字符串
+strtok(); 		分割字符串
+strxfrm(); 		转换字符串
+</code></pre>
+<h2 id="time-h-时间和日期函数">&lt;time.h&gt; 时间和日期函数<a class="header-anchor" href="#time-h-时间和日期函数">·</a></h2>
+<p>&lt;time.h&gt; 是C标准函数库中获取时间与日期、对时间与日期数据操作及格式化的头文件。</p>
 <p>宏：</p>
 <pre><code>NULL null是一个null指针常量的值
-CLOCKS_PER_SEC 每秒的时钟数</code></pre>
+CLOCKS_PER_SEC 每秒的时钟数
+</code></pre>
 <p>变量：</p>
 <pre><code>typedef size_t 类型定义
 typedef clock_t类型定义
 struct tm 结构体
  
 struct tm &#123;
-int tm_sec;         /* 秒 – 取值区间为[0,59] */
+int tm_sec; 		/* 秒 – 取值区间为[0,59] */
  
-int tm_min;         /* 分 - 取值区间为[0,59] */
+int tm_min; 		/* 分 - 取值区间为[0,59] */
  
-int tm_hour;        /* 时 - 取值区间为[0,23] */
+int tm_hour; 		/* 时 - 取值区间为[0,23] */
  
-int tm_mday;        /* 一个月中的日期 - 取值区间为[1,31] */
+int tm_mday; 		/* 一个月中的日期 - 取值区间为[1,31] */
  
-int tm_mon;     /* 月份（从一月开始，0代表一月）-取值区间为[0,11] */
+int tm_mon; 	/* 月份（从一月开始，0代表一月）-取值区间为[0,11] */
  
-int tm_year;        /* 年份，其值等于实际年份减去1900 */
+int tm_year; 		/* 年份，其值等于实际年份减去1900 */
  
-int tm_wday;        /* 星期 – 取值区间为[0,6]，其中0代表星期天，1代表星期一，以此类推 */
+int tm_wday; 		/* 星期 – 取值区间为[0,6]，其中0代表星期天，1代表星期一，以此类推 */
  
-int tm_yday;        /* 从每年的1月1日开始的天数 – 取值区间为[0,365]，其中0代表1月1日，1代表1月2日，以此类推 */
+int tm_yday; 		/* 从每年的1月1日开始的天数 – 取值区间为[0,365]，其中0代表1月1日，1代表1月2日，以此类推 */
  
-int tm_isdst;       /* 夏令时标识符，实行夏令时的时候，tm_isdst为正。不实行夏令时的进候，tm_isdst为0；不了解情况时，tm_isdst()为负。*/
-&#125;;</code></pre>
+int tm_isdst; 		/* 夏令时标识符，实行夏令时的时候，tm_isdst为正。不实行夏令时的进候，tm_isdst为0；不了解情况时，tm_isdst()为负。*/
+&#125;;
+</code></pre>
 <p>函数：</p>
-<pre><code>asctime();      将时间和日期以字符串格式表示
-clock();        确定处理器时间
-ctime();        把日期和时间转换为字符串
-difftime();     计算两个时刻之间的时间差
-gmtime();       把日期和时间转换为(GMT)时间
-localtime();    取得当地目前时间和日期
-mktime();       将时间结构数据转换成经过的秒数
-strftime();     将时间格式化
-time();         取得目前的时间</code></pre>
-<h2 id="ctype.h-字符测试">&lt;ctype.h&gt; 字符测试</h2>
-<p>&lt;<code>ctype.h</code>&gt;
-主要提供两类重要的函数：字符测试函数和字符大小转化函数。提供的函数中都以<code>int类型</code>为参数，并返回一个int类型的值。实参类型应该隐式转换或者显示转换为int类型。</p>
+<pre><code>asctime(); 		将时间和日期以字符串格式表示
+clock(); 		确定处理器时间
+ctime(); 		把日期和时间转换为字符串
+difftime(); 	计算两个时刻之间的时间差
+gmtime(); 		把日期和时间转换为(GMT)时间
+localtime();	取得当地目前时间和日期
+mktime();		将时间结构数据转换成经过的秒数
+strftime(); 	将时间格式化
+time(); 		取得目前的时间
+</code></pre>
+<h2 id="ctype-h-字符测试">&lt;ctype.h&gt; 字符测试<a class="header-anchor" href="#ctype-h-字符测试">·</a></h2>
+<p>&lt;<code>ctype.h</code>&gt; 主要提供两类重要的函数：字符测试函数和字符大小转化函数。提供的函数中都以<code>int类型</code>为参数，并返回一个int类型的值。实参类型应该隐式转换或者显示转换为int类型。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int isalnum(int c); 判断是否是字母或数字。</span><br><span class="line">int isalpha(int c); 判断是否是字母。</span><br><span class="line">int iscntrl(int c); 判断是否是控制字符。</span><br><span class="line">int isdigit(int c); 判断是否是数字。</span><br><span class="line">int isgraph(int c); 判断是否是可显示字符。</span><br><span class="line">int islower(int c); 判断是否是小写字母。</span><br><span class="line">int isupper(int c); 判断是否是大写字母。</span><br><span class="line">int isprint(int c); 判断是否是可显示字符。</span><br><span class="line">int ispunct(int c); 判断是否是标点字符。</span><br><span class="line">int isspace(int c); 判断是否是空白字符</span><br><span class="line">int isxdigit(int c); 判断字符是否为16进制。</span><br><span class="line">int tolower(int c); 转换为小写字母。</span><br><span class="line">int toupper(int c); 转换为大写字母</span><br></pre></td></tr></table></figure>
-<h2 id="stdlib.h-实用功能">&lt;stdlib.h&gt; 实用功能</h2>
+<h2 id="stdlib-h-实用功能">&lt;stdlib.h&gt; 实用功能<a class="header-anchor" href="#stdlib-h-实用功能">·</a></h2>
 <p>&lt;stdlib.h&gt; 头文件里包含了C语言的中最常用的系统函数</p>
 <p>宏：</p>
-<pre><code>NULL            空
-EXIT_FAILURE    失败状态码
-EXIT_SUCCESS    成功状态码
-RAND_MAX rand   的最大返回值
-MB_CUR_MAX      多字节字符中的最大字节数</code></pre>
+<pre><code>NULL 			空
+EXIT_FAILURE 	失败状态码
+EXIT_SUCCESS 	成功状态码
+RAND_MAX rand 	的最大返回值
+MB_CUR_MAX 		多字节字符中的最大字节数
+</code></pre>
 <p>变量：</p>
 <pre><code>typedef size_t 是 unsigned integer 类型
 typedef wchar_t 一个宽字符的大小
 struct div_t   是结构体类型 作为div函数的返回类型
-struct ldiv_t  是结构体类型 作为ldiv函数的返回类型</code></pre>
+struct ldiv_t  是结构体类型 作为ldiv函数的返回类型
+</code></pre>
 <p>函数：</p>
 <pre><code>字符串函数
-atof();         将字符串转换成浮点型数
-atoi();         将字符串转换成整型数
-atol();         将字符串转换成长整型数
-strtod();       将字符串转换成浮点数
-strtol();       将字符串转换成长整型数
-strtoul();      将字符串转换成无符号长整型数
+atof(); 		将字符串转换成浮点型数
+atoi(); 		将字符串转换成整型数
+atol(); 		将字符串转换成长整型数
+strtod(); 		将字符串转换成浮点数
+strtol(); 		将字符串转换成长整型数
+strtoul(); 		将字符串转换成无符号长整型数
  
 内存控制函数
-calloc();       配置内存空间
-free();         释放原先配置的内存
-malloc();       配置内存空间
-realloc();      重新分配主存
+calloc(); 		配置内存空间
+free(); 		释放原先配置的内存
+malloc(); 		配置内存空间
+realloc(); 		重新分配主存
  
 环境函数
-abort();        异常终止一个进程
-atexit();       设置程序正常结束前调用的函数
-exit();         正常结束进程
-getenv();       取得环境变量内容
-system();       执行shell 命令
+abort(); 		异常终止一个进程
+atexit();		设置程序正常结束前调用的函数
+exit(); 		正常结束进程
+getenv(); 		取得环境变量内容
+system(); 		执行shell 命令
  
 搜索和排序函数
-bsearch();      二元搜索
-qsort();        利用快速排序法排列数组
+bsearch(); 		二元搜索
+qsort(); 		利用快速排序法排列数组
  
 数学函数
-abs();          计算整型数的绝对值
-div();          将两个整数相除, 返回商和余数
-labs();         取长整型绝对值
-ldiv();         两个长整型数相除, 返回商和余数
-rand();         随机数发生器
-srand();        设置随机数种子
+abs(); 			计算整型数的绝对值
+div(); 			将两个整数相除, 返回商和余数
+labs(); 		取长整型绝对值
+ldiv();			两个长整型数相除, 返回商和余数
+rand(); 		随机数发生器
+srand(); 		设置随机数种子
  
 多字节函数
-mblen();        根据locale的设置确定字符的字节数
-mbstowcs();     把多字节字符串转换为宽字符串
-mbtowc();       把多字节字符转换为宽字符
-wcstombs();     把宽字符串转换为多字节字符串
-wctomb();       把宽字符转换为多字节字符</code></pre>
-<h2 id="limits.h-取值范围">&lt;limits.h&gt; 取值范围</h2>
+mblen(); 		根据locale的设置确定字符的字节数
+mbstowcs(); 	把多字节字符串转换为宽字符串
+mbtowc(); 		把多字节字符转换为宽字符
+wcstombs(); 	把宽字符串转换为多字节字符串
+wctomb(); 		把宽字符转换为多字节字符
+</code></pre>
+<h2 id="limits-h-取值范围">&lt;limits.h&gt; 取值范围<a class="header-anchor" href="#limits-h-取值范围">·</a></h2>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">CHAR_BIT   一个ASCII字符长度</span><br><span class="line">SCHAR_MIN   字符型最小值</span><br><span class="line">SCHAR_MAX   字符型最大值</span><br><span class="line">UCHAR_MAX   无符号字符型最大值</span><br><span class="line">CHAR_MIN</span><br><span class="line">CHAR_MAX</span><br><span class="line">char    字符的最大最小值，如果char字符正被表示有符号整数。它们的值就跟有符号整数一样。 否则char字符的最小值就是0，最大值就是无符号char字符的最大值。</span><br><span class="line">MB_LEN_MAX   一个字符所占最大字节数</span><br><span class="line">SHRT_MIN   最小短整型</span><br><span class="line">SHRT_MAX   最大短整形</span><br><span class="line">USHRT_MAX   最大无符号短整型</span><br><span class="line">INT_MIN   最小整型</span><br><span class="line">INT_MAX   最大整形</span><br><span class="line">UINT_MAX   最大无符号整型</span><br><span class="line">LONG_MIN   最小长整型</span><br><span class="line">LONG_MAX   最大长整型</span><br><span class="line">ULONG_MAX   无符号长整型</span><br></pre></td></tr></table></figure>
-<h2 id="float.h-浮点数运算">&lt;float.h&gt; 浮点数运算</h2>
-<p>float头文件定义了浮点型数值的最大最小限
-浮点型数值以下面的方式定义：符号-value E 指数
-符号是正负，value是数字的值
-下面的值是用#define定义的，这些值是详细的实现，但是可能没有比这里给出的更详细，
+<h2 id="float-h-浮点数运算">&lt;float.h&gt; 浮点数运算<a class="header-anchor" href="#float-h-浮点数运算">·</a></h2>
+<p>float头文件定义了浮点型数值的最大最小限 浮点型数值以下面的方式定义：符号-value E 指数 符号是正负，value是数字的值<br />
+下面的值是用#define定义的，这些值是详细的实现，但是可能没有比这里给出的更详细，<br />
 在所有实例里FLT指的是float，DBL是double，LDBL指的是long double</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">FLT_ROUNDS</span><br><span class="line">定义浮点型数值四舍五入的方式，-1是不确定，0是向0，1是向最近，2是向正无穷大，3是负无穷大</span><br><span class="line"></span><br><span class="line">FLT_RADIX 2</span><br><span class="line">定义指数的基本表示（比如base-2是二进制，base-10是十进制表示法，16是十六进制）</span><br><span class="line"></span><br><span class="line">FLT_MANT_DIG，DBL_MANT_DIG，LDBL_MANT_DIG</span><br><span class="line">定义数值里数字的个数</span><br><span class="line"></span><br><span class="line">FLT_DIG 6，DBL_DIG 10，LDBL_DIG 10</span><br><span class="line">在四舍五入之后能不更改表示的最大小数位</span><br><span class="line"></span><br><span class="line">FLT_MIN_EXP，DBL_MIN_EXP，LDBL_MIN_EXP</span><br><span class="line"></span><br><span class="line">FLT_RADIX 的指数的最小负整数值</span><br><span class="line"></span><br><span class="line">FLT_MIN_10_EXP -37，DBL_MIN_10_EXP -37，LDBL_MIN_10_EXP -37</span><br><span class="line">10进制表示法的的指数的最小负整数值</span><br><span class="line"></span><br><span class="line">FLT_MAX_EXP ,DBL_MAX_EXP ,LDBL_MAX_EXP</span><br><span class="line">FLT_RADIX 的指数的最大整数值</span><br><span class="line"></span><br><span class="line">FLT_MAX_10_EXP +37 ,DBL_MAX_10_EXP ,LDBL_MAX_10_EXP +37 +37</span><br><span class="line">10进制表示法的的指数的最大整数值</span><br><span class="line"></span><br><span class="line">FLT_MAX 1E+37，DBL_MAX 1E+37，LDBL_MAX 1E+37</span><br><span class="line">浮点型的最大限</span><br><span class="line"></span><br><span class="line">FLT_EPSILON 1E-5，DBL_EPSILON 1E-9，LDBL_EPSILON 1E-9</span><br><span class="line">能表示的最小有符号数</span><br></pre></td></tr></table></figure>
-<h2 id="locale.h-本土化">&lt;locale.h&gt; 本土化</h2>
-<p>国家、文化和语言规则集称为区域设置，&lt;locale.h&gt;
-头文件中定义了区域设置相关的函数。</p>
+<h2 id="locale-h-本土化">&lt;locale.h&gt; 本土化<a class="header-anchor" href="#locale-h-本土化">·</a></h2>
+<p>国家、文化和语言规则集称为区域设置，&lt;locale.h&gt; 头文件中定义了区域设置相关的函数。</p>
 <p>&lt;locale.h&gt; 头文件中提供了2个函数</p>
 <ul>
-<li>setlocale函数
-用于设置或返回当前的区域特性，设置或恢复本地化信息</li>
-<li>localeconv函数
-用于返回当前地域设置的信息，返回当前区域中的数字和货币信息（保存在struct
-lconv结构实例中）。</li>
+<li>setlocale函数		用于设置或返回当前的区域特性，设置或恢复本地化信息</li>
+<li>localeconv函数	 用于返回当前地域设置的信息，返回当前区域中的数字和货币信息（保存在struct lconv结构实例中）。</li>
 </ul>
-<h3 id="setlocale函数">setlocale函数</h3>
-<p>setlocale(constant,location)
-用法如果这个函数成功执行，将返回当前的场景属性；如果执行失败，将返回False。
+<h3 id="setlocale函数">setlocale函数<a class="header-anchor" href="#setlocale函数">·</a></h3>
+<p>setlocale(constant,location) 用法如果这个函数成功执行，将返回当前的场景属性；如果执行失败，将返回False。<br />
 setlocale的第一个实参constant指定要改变的区域行为类别，setlocale的第二个实参location指定需要进行场景信息设置的国家或区域。</p>
 <blockquote>
 <p>constant 参数 (必要参数。指定设置的场景信息)</p>
@@ -634,149 +640,161 @@ setlocale的第一个实参constant指定要改变的区域行为类别，setloc
 <blockquote>
 <p>location 参数 (必要参数，指定需要进行场景信息设置的国家或区域)</p>
 </blockquote>
-<p>location
-参数可以由一个字符串或一个数组组成。如果本地区域是一个数组，那么setlocale()函数将尝试每个数组元素直到它从中获取有效的语言和区域代码信息为止。如果一个区域处于不同操作系统中的不同名称下，那么这个参数将非常有用。</p>
-<h3 id="localeconv函数">localeconv函数</h3>
-<p>struct lconv *localeconv(void); 用法 localeconv 返回lconv结构指针
-lconv结构介绍:
-保存格式化的数值信息，保存数值包括货币和非货币的格式化信息，localeconv返回指向该对象的指针，以下为结构中的成员及信息：</p>
+<p>location 参数可以由一个字符串或一个数组组成。如果本地区域是一个数组，那么setlocale()函数将尝试每个数组元素直到它从中获取有效的语言和区域代码信息为止。如果一个区域处于不同操作系统中的不同名称下，那么这个参数将非常有用。</p>
+<h3 id="localeconv函数">localeconv函数<a class="header-anchor" href="#localeconv函数">·</a></h3>
+<p>struct lconv *localeconv(void); 用法<br />
+localeconv 返回lconv结构指针 lconv结构介绍: 保存格式化的数值信息，保存数值包括货币和非货币的格式化信息，localeconv返回指向该对象的指针，以下为结构中的成员及信息：</p>
 <blockquote>
-<p>char <em>decimal_point; 数字的小数点号 char </em>thousands_sep;
-数字的千分组分隔符
-每个元素为相应组中的数字位数，索引越高的元素越靠左边。一个值为CHAR_MAX的元素表示没有更多的分组了。一个值为0的元素表示前面的元素能用在靠左边的所有分组中
-char <em>grouping; 数字分组分隔符 char </em>int_curr_symbol;
-前面的三个字符ISO
-4217中规定的货币符号，第四个字符是分隔符，第五个字符是'\0' <em>/ char
-</em>currency_symbol; 本地货币符号 char <em>mon_decimal_point;
-货币的小数点号 char </em>mon_thousands_sep; 千分组分隔符 char
-<em>mon_grouping; 类似于grouping元素 char </em>positive_sign;
-正币值的符号 char *negative_sign; 负币值的符号 char int_frac_digits;
-国际币值的小数部分 char frac_digits; 本地币值的小数部分 char
-p_cs_precedes; 如果currency_symbol放在正币值之前则为1，否则为0 char
-p_sep_by_space; 当且仅当currency_symbol与正币值之间用空格分开时为1 char
-n_cs_precedes; &lt;
-如果currency_symbol放在负币值之前则为1，否则为0/dt&gt; char
-n_sep_by_space; 当且仅当currency_symbol与负币值之间用空格分开时为1 char
-p_sign_posn; 格式化选项</p>
-<p>0 - 在数量和货币符号周围的圆括号 1 - 数量和货币符号之前的 + 号 2 -
-数量和货币符号之后的 + 号 3 - 货币符号之前的 + 号 4 - 货币符号之后的 +
-号 char n_sign_posn 格式化选项 0 - 在数量和货币符号周围的圆括号 1 -
-数量和货币符号之前的 - 号 2 - 数量和货币符号之后的 - 号 3 -
-货币符号之前的 - 号 4 - 货币符号之后的 - 号</p>
+<p>char *decimal_point; 数字的小数点号<br />
+char *thousands_sep; 数字的千分组分隔符<br />
+每个元素为相应组中的数字位数，索引越高的元素越靠左边。一个值为CHAR_MAX的元素表示没有更多的分组了。一个值为0的元素表示前面的元素能用在靠左边的所有分组中<br />
+char *grouping; 数字分组分隔符<br />
+char *int_curr_symbol; 前面的三个字符ISO 4217中规定的货币符号，第四个字符是分隔符，第五个字符是’\0’ */<br />
+char *currency_symbol; 本地货币符号<br />
+char *mon_decimal_point; 货币的小数点号<br />
+char *mon_thousands_sep; 千分组分隔符<br />
+char *mon_grouping; 类似于grouping元素<br />
+char *positive_sign; 正币值的符号<br />
+char *negative_sign; 负币值的符号<br />
+char int_frac_digits; 国际币值的小数部分<br />
+char frac_digits; 本地币值的小数部分<br />
+char p_cs_precedes; 如果currency_symbol放在正币值之前则为1，否则为0<br />
+char p_sep_by_space; 当且仅当currency_symbol与正币值之间用空格分开时为1<br />
+char n_cs_precedes; &lt; 如果currency_symbol放在负币值之前则为1，否则为0/dt&gt;<br />
+char n_sep_by_space; 当且仅当currency_symbol与负币值之间用空格分开时为1<br />
+char p_sign_posn; 格式化选项</p>
+<p>0 - 在数量和货币符号周围的圆括号<br />
+1 - 数量和货币符号之前的 + 号<br />
+2 - 数量和货币符号之后的 + 号<br />
+3 - 货币符号之前的 + 号<br />
+4 - 货币符号之后的 + 号<br />
+char n_sign_posn 格式化选项<br />
+0 - 在数量和货币符号周围的圆括号<br />
+1 - 数量和货币符号之前的 - 号<br />
+2 - 数量和货币符号之后的 - 号<br />
+3 - 货币符号之前的 - 号<br />
+4 - 货币符号之后的 - 号</p>
 <p>最后提示：可以使用setlocale(LC_ALL,NULL)函数将场景信息设置为系统默认值。</p>
 </blockquote>
-<h2 id="stdarg.h-可变参数">&lt;stdarg.h&gt; 可变参数</h2>
-<p>&lt;stdarg.h&gt; 头文件定义了一些宏，当函数参数未知时去获取函数的参数
+<h2 id="stdarg-h-可变参数">&lt;stdarg.h&gt; 可变参数<a class="header-anchor" href="#stdarg-h-可变参数">·</a></h2>
+<p>&lt;stdarg.h&gt; 头文件定义了一些宏，当函数参数未知时去获取函数的参数<br />
 变量：typedef va_list</p>
 <p>宏：</p>
 <pre><code>va_start()
 va_arg()
-va_end()</code></pre>
+va_end()
+</code></pre>
 <p><strong>变量和定义</strong></p>
 <blockquote>
 <p>va_list类型通过stdarg宏定义来访问一个函数的参数表，参数列表的末尾会用省略号省略</p>
 </blockquote>
 <p><strong>声明：</strong></p>
 <blockquote>
-<p>void va_start(va_list ap, last_arg);
-用va_arg和va_end宏初始化参数ap，last_arg是传给函数的固定参数的最后一个，省略号之前的那个参数
-注意va_start必须在使用va_arg和va_end之前调用</p>
+<p>void va_start(va_list ap, last_arg);<br />
+用va_arg和va_end宏初始化参数ap，last_arg是传给函数的固定参数的最后一个，省略号之前的那个参数 注意va_start必须在使用va_arg和va_end之前调用</p>
 </blockquote>
 <p><strong>声明：</strong></p>
 <blockquote>
-<p>type va_arg(va_list ap, type); 用type类型扩展到参数表的下个参数
+<p>type va_arg(va_list ap, type);<br />
+用type类型扩展到参数表的下个参数<br />
 注意ap必须用va_start初始化，如果没有下一个参数，结果会是undefined</p>
 </blockquote>
 <p><strong>声明：</strong></p>
 <blockquote>
-<p>void va_end(va_list ap);
-允许一个有参数表（使用va_start宏）的函数返回，如果返回之前没有调用va_end,结果会是undefined。参数变量列表可能不再使用（在没调用va_start的情况下调用va_end）</p>
+<p>void va_end(va_list ap); 允许一个有参数表（使用va_start宏）的函数返回，如果返回之前没有调用va_end,结果会是undefined。参数变量列表可能不再使用（在没调用va_start的情况下调用va_end）</p>
 </blockquote>
-<h2 id="stddef.h-一些常数类型和变量">&lt;stddef.h&gt;
-一些常数，类型和变量</h2>
-<p>&lt;stddef.h&gt;
-头文件定义了一些标准定义，许多定义也会出现在其他的头文件里 宏命令：NULL
-和 offsetof()</p>
+<h2 id="stddef-h-一些常数，类型和变量">&lt;stddef.h&gt; 一些常数，类型和变量<a class="header-anchor" href="#stddef-h-一些常数，类型和变量">·</a></h2>
+<p>&lt;stddef.h&gt; 头文件定义了一些标准定义，许多定义也会出现在其他的头文件里<br />
+宏命令：NULL 和 offsetof()</p>
 <p><strong>宏：</strong></p>
 <blockquote>
-<p>offsetof(type, member-designator);
+<p>offsetof(type, member-designator);<br />
 这个宏返回一个结构体成员相对于结构体起始地址的偏移量（字节为单位），type是结构体的名字，member-designator是结构体成员的名字。</p>
 </blockquote>
 <p><strong>变量：</strong></p>
 <blockquote>
-<p>typedef ptrdiff_t typedef size_t typedef wchar_t</p>
+<p>typedef ptrdiff_t<br />
+typedef size_t<br />
+typedef wchar_t</p>
 </blockquote>
 <p><strong>变量和定义：</strong></p>
 <blockquote>
-<p>ptrdiff_t 是两个指针相减的结果 size_t
-是sizeof一个关键词得到的无符号整数值 wchar_t
-是一个宽字符常量的大小，是整数类型 NULL 是空指针的常量值</p>
+<p>ptrdiff_t		是两个指针相减的结果<br />
+size_t			是sizeof一个关键词得到的无符号整数值<br />
+wchar_t		是一个宽字符常量的大小，是整数类型<br />
+NULL			是空指针的常量值</p>
 </blockquote>
-<h2 id="signal.h-信号">&lt;signal.h&gt; 信号</h2>
-<p>在signal.h头文件中，提供了一些函数用以处理执行过程中所产生的信号。
+<h2 id="signal-h-信号">&lt;signal.h&gt; 信号<a class="header-anchor" href="#signal-h-信号">·</a></h2>
+<p>在signal.h头文件中，提供了一些函数用以处理执行过程中所产生的信号。<br />
 <strong>宏：</strong></p>
 <blockquote>
-<p>SIG_DFL SIG_ERR SIG_IGN SIGABRT SIGFPE SIGILL SIGINT SIGSEGV
+<p>SIG_DFL<br />
+SIG_ERR<br />
+SIG_IGN<br />
+SIGABRT<br />
+SIGFPE<br />
+SIGILL<br />
+SIGINT<br />
+SIGSEGV<br />
 SIGTERM</p>
 </blockquote>
 <p><strong>函数：</strong></p>
 <blockquote>
-<p>signal(); raise();</p>
+<p>signal();<br />
+raise();</p>
 </blockquote>
-<p><strong>signal 函数</strong> 声明： void(<em>signal(int sig,void
-(</em>func)(int)))(int); 上面的函数定义中，sig
-表示一个信号代码（相当于暗号类别），即是上面所定义的SIG开头的宏。当有信号出现（即当收到暗号）的时候，参数func所定义的函数就会被调用。如果func等于SIG_DFL，则表示调用默认的处理函数。如果等于SIG_IGN，则表示这个信号被忽略（不做处理）。如果func是用户自定义的函数，则会先调用默认的处理函数，再调用用户自己定义的函数。
-自定义函数，有一个参数，参数类型为int，用来表示信号代码（暗号类别）。同时，函数必须以return、abort、exit
-或
-longjump等语句结束。当自定义函数运行结束，程序会继续从被终止的地方继续运行。（除非信号是SIGFPE导致结果未定义，则可能无法继续运行）
-如果调用signal函数成功，则会返回一个指针，该指针指向为所指定的信号类别的所预先定义的信号处理器。
+<p><strong>signal 函数</strong><br />
+声明：	void(*signal(int sig,void (*func)(int)))(int);<br />
+上面的函数定义中，sig 表示一个信号代码（相当于暗号类别），即是上面所定义的SIG开头的宏。当有信号出现（即当收到暗号）的时候，参数func所定义的函数就会被调用。如果func等于SIG_DFL，则表示调用默认的处理函数。如果等于SIG_IGN，则表示这个信号被忽略（不做处理）。如果func是用户自定义的函数，则会先调用默认的处理函数，再调用用户自己定义的函数。 自定义函数，有一个参数，参数类型为int，用来表示信号代码（暗号类别）。同时，函数必须以return、abort、exit 或 longjump等语句结束。当自定义函数运行结束，程序会继续从被终止的地方继续运行。（除非信号是SIGFPE导致结果未定义，则可能无法继续运行）<br />
+如果调用signal函数成功，则会返回一个指针，该指针指向为所指定的信号类别的所预先定义的信号处理器。<br />
 如果调用失败，则会返回一个SIG_ERR，同时errno的值也会被相应的改变。</p>
-<p><strong>raise 函数</strong> 声明： int raise(int sig);
-发出一个信号sig。信号参数为SIG开头的宏。
+<p><strong>raise 函数</strong><br />
+声明：	int raise(int sig);<br />
+发出一个信号sig。信号参数为SIG开头的宏。<br />
 如果调用成功，返回0。否则返回一个非零值。</p>
 <p><strong>变量：</strong></p>
 <blockquote>
-<p>typedef sig_atomic_t sig_atomic_t
-类型是int类型，用于接收signal函数的返回值。
-以SIG_开头的宏用于定义信号处理函数 SIG_DFL 默认信号处理函数。 SIG_ERR
-表示一个错误信号，当signal函数调用失败时的返回值。 SIG_IGN
-信号处理函数，表示忽略该信号。
-SIG开头的宏是用来在下列情况下，用来表示一个信号代码： SIGABRT
-异常终止（abort函数产生）。 SIGFPE
-浮点错误（0作为除数产生的错误，非法的操作）。 SIGILL 非法操作（指令）。
-SIGINT 交互式操作产生的信号（如CTRL - C）。 SIGSEGV
-无效访问存储（片段的非法访问，内存非法访问）。 SIGTERM 终止请求。</p>
+<p>typedef sig_atomic_t<br />
+sig_atomic_t 类型是int类型，用于接收signal函数的返回值。<br />
+以SIG_开头的宏用于定义信号处理函数<br />
+SIG_DFL 默认信号处理函数。<br />
+SIG_ERR	表示一个错误信号，当signal函数调用失败时的返回值。<br />
+SIG_IGN	信号处理函数，表示忽略该信号。<br />
+SIG开头的宏是用来在下列情况下，用来表示一个信号代码：<br />
+SIGABRT	异常终止（abort函数产生）。<br />
+SIGFPE	浮点错误（0作为除数产生的错误，非法的操作）。<br />
+SIGILL	非法操作（指令）。<br />
+SIGINT	交互式操作产生的信号（如CTRL - C）。<br />
+SIGSEGV	无效访问存储（片段的非法访问，内存非法访问）。<br />
+SIGTERM	终止请求。</p>
 </blockquote>
-<h2 id="setjmp.h-非局部跳转">&lt;setjmp.h&gt; “非局部跳转</h2>
-<p>在该头文件中定义了一种特别的函数调用和函数返回顺序的方式。这种方式不同于以往的函数调用和返回顺序，
-它允许程序流程立即从一个深层嵌套的函数中返回。 <strong>宏：</strong></p>
+<h2 id="setjmp-h-“非局部跳转">&lt;setjmp.h&gt; “非局部跳转<a class="header-anchor" href="#setjmp-h-“非局部跳转">·</a></h2>
+<p>在该头文件中定义了一种特别的函数调用和函数返回顺序的方式。这种方式不同于以往的函数调用和返回顺序，<br />
+它允许程序流程立即从一个深层嵌套的函数中返回。<br />
+<strong>宏：</strong></p>
 <blockquote>
-<p>int setjmp(jmp_buf env); /<em>设置调转点</em>/ longjmp(jmp_buf jmpb,
-int retval); /<em>跳转</em>/</p>
+<p>int setjmp(jmp_buf env); /<em>设置调转点</em>/<br />
+longjmp(jmp_buf jmpb, int retval); /<em>跳转</em>/</p>
 </blockquote>
-<p>宏setjmp的功能是将当前程序的状态保存在结构env
-，为调用宏longjmp设置一个跳转点。setjmp将当前信息保存在env中供longjmp使用。其中env是jmp_buf结构类型的。</p>
+<p>宏setjmp的功能是将当前程序的状态保存在结构env ，为调用宏longjmp设置一个跳转点。setjmp将当前信息保存在env中供longjmp使用。其中env是jmp_buf结构类型的。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例如：</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;setjmp.h&gt;</span></span></span><br><span class="line"><span class="type">static</span> jmp_buf buf;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">second</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;second\n&quot;</span>);        </span><br><span class="line">  <span class="comment">// 打印</span></span><br><span class="line">    <span class="built_in">longjmp</span>(buf,<span class="number">1</span>);            </span><br><span class="line">  <span class="comment">// 跳回setjmp的调用处</span></span><br><span class="line">  - 使得setjmp返回值为<span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="type">void</span> <span class="title">first</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">second</span>();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;first\n&quot;</span>);          </span><br><span class="line">  <span class="comment">// 不可能执行到此行</span></span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;   </span><br><span class="line">    <span class="keyword">if</span> ( ! <span class="built_in">setjmp</span>(buf) ) &#123;</span><br><span class="line">        <span class="built_in">first</span>();               </span><br><span class="line">  <span class="comment">// 进入此行前，setjmp返回0</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;                  </span><br><span class="line">  <span class="comment">// 当longjmp跳转回，</span></span><br><span class="line">  setjmp返回<span class="number">1</span>，因此进入此行</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;main\n&quot;</span>);  </span><br><span class="line">    <span class="comment">// 打印</span></span><br><span class="line">    &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>直接调用setjmp时，返回值为0，这一般用于初始化（设置跳转点时）。以后再调用longjmp宏时用env变量进行跳转。程序会自动跳转到setjmp宏的返回语句处，此时setjmp的返回值为非0，由longjmp的第二个参数指定。
+<p>直接调用setjmp时，返回值为0，这一般用于初始化（设置跳转点时）。以后再调用longjmp宏时用env变量进行跳转。程序会自动跳转到setjmp宏的返回语句处，此时setjmp的返回值为非0，由longjmp的第二个参数指定。<br />
 一般地，宏setjmp和longjmp是成对使用的，这样程序流程可以从一个深层嵌套的函数中返回。</p>
-<h2 id="errno.h-错误代码">&lt;errno.h&gt; 错误代码</h2>
-<p>error.h 是 C语言
-C标准函式库里的头文件，定义了通过错误码来返回错误信息的宏：</p>
-<p>errno 宏定义为一个int型态的左值,
-包含任何函数使用errno功能所产生的上一个错误码。</p>
+<h2 id="errno-h-错误代码">&lt;errno.h&gt; 错误代码<a class="header-anchor" href="#errno-h-错误代码">·</a></h2>
+<p>error.h 是 C语言 C标准函式库里的头文件，定义了通过错误码来返回错误信息的宏：</p>
+<p>errno 宏定义为一个int型态的左值, 包含任何函数使用errno功能所产生的上一个错误码。</p>
 <p>一些表示错误码，定义为整数值的宏：</p>
 <blockquote>
-<p>EDOM 源自于函数的参数超出范围,例如 sqrt(-1) ERANGE
-源自于函数的结果超出范围,例如s trtol("0xfffffffff",NULL,0) EILSEQ
-源自于不合法的字符顺序,例如 wcstombs(str, L"", 2)</p>
+<p>EDOM 源自于函数的参数超出范围,例如 sqrt(-1)<br />
+ERANGE 源自于函数的结果超出范围,例如s trtol(“0xfffffffff”,NULL,0)<br />
+EILSEQ 源自于不合法的字符顺序,例如 wcstombs(str, L&quot;\xffff&quot;, 2)</p>
 </blockquote>
-<h2 id="assert.h-断言">&lt;assert.h&gt; 断言</h2>
-<p>头文件&lt;assert.h&gt;唯一的目的是提供宏assert的定义。如果断言非真（expression==0），则程序会在标准错误流输出提示信息，
+<h2 id="assert-h-断言">&lt;assert.h&gt; 断言<a class="header-anchor" href="#assert-h-断言">·</a></h2>
+<p>头文件&lt;assert.h&gt;唯一的目的是提供宏assert的定义。如果断言非真（expression==0），则程序会在标准错误流输出提示信息，<br />
 并使程序异常中止调用abort() 。</p>
 <p>定义：void assert (int expression);</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> NDEBUG</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;assert.h&gt;</span>  </span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">int</span> a = <span class="number">12</span>;</span><br><span class="line">  <span class="type">int</span> b = <span class="number">24</span>;</span><br><span class="line">  <span class="built_in">assert</span>( a &gt; b );</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;a is larger than b!&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面的程序会发现程序中止，printf并未执行，且有这样的输出： main:
-Assertion `a &gt; b' failed. 原因就是因为a其实小于b，
+<p>上面的程序会发现程序中止，printf并未执行，且有这样的输出： main: Assertion `a &gt; b’ failed. 原因就是因为a其实小于b，<br />
 导致断言失败，assert 输出错误信息，并调用abort()中止了程序执行。</p>
 
     </div>
@@ -903,14 +921,14 @@ Assertion `a &gt; b' failed. 原因就是因为a其实小于b，
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

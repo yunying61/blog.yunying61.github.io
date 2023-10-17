@@ -34,12 +34,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="组合模式 组合模式是为了在项目提高代码复用性，降低增加对象成本的设计模式。 简单来说，就是将每个功能单独分为一个脚本上使用，然后根据需要挂载到游戏对象上。 在 Unity 中，脚本继承了 MonoBehaviour 类，就会被视为一个脚本组件，如：public class GameManager : MonoBehaviour ，然后根据需要，将脚本组件添加到游戏对象上。">
+    <meta name="description" content="组合模式· 组合模式是为了在项目提高代码复用性，降低增加对象成本的设计模式。 简单来说，就是将每个功能单独分为一个脚本上使用，然后根据需要挂载到游戏对象上。 在 Unity 中，脚本继承了 MonoBehaviour 类，就会被视为一个脚本组件，如：public class GameManager : MonoBehaviour ，然后根据需要，将脚本组件添加到游戏对象上。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Unity-设计模式">
 <meta property="og:url" content="https://www.yunying61.cn/2023/01/Unity-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="组合模式 组合模式是为了在项目提高代码复用性，降低增加对象成本的设计模式。 简单来说，就是将每个功能单独分为一个脚本上使用，然后根据需要挂载到游戏对象上。 在 Unity 中，脚本继承了 MonoBehaviour 类，就会被视为一个脚本组件，如：public class GameManager : MonoBehaviour ，然后根据需要，将脚本组件添加到游戏对象上。">
+<meta property="og:description" content="组合模式· 组合模式是为了在项目提高代码复用性，降低增加对象成本的设计模式。 简单来说，就是将每个功能单独分为一个脚本上使用，然后根据需要挂载到游戏对象上。 在 Unity 中，脚本继承了 MonoBehaviour 类，就会被视为一个脚本组件，如：public class GameManager : MonoBehaviour ，然后根据需要，将脚本组件添加到游戏对象上。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-01-10T09:06:34.000Z">
 <meta property="article:modified_time" content="2023-01-10T09:15:30.411Z">
@@ -162,7 +162,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">组合模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E9%80%9A%E8%AE%AF"><span class="nav-number">1.1.</span> <span class="nav-text">脚本通讯</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#getcomponent%E7%9A%84%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">GetComponent()的性能问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">单例模式的两种写法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">命令模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">观察者模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E6%B1%A0%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">对象池模式</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">组合模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E9%80%9A%E8%AE%AF"><span class="nav-number">1.1.</span> <span class="nav-text">脚本通讯</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GetComponent-%E7%9A%84%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">GetComponent()的性能问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">单例模式的两种写法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">命令模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">观察者模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E6%B1%A0%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">对象池模式</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -324,7 +324,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>1.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -342,60 +342,62 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="组合模式">组合模式</h1>
+        <h1 id="组合模式">组合模式<a class="header-anchor" href="#组合模式">·</a></h1>
 <p>组合模式是为了在项目提高代码复用性，降低增加对象成本的设计模式。</p>
 <p>简单来说，就是将每个功能单独分为一个脚本上使用，然后根据需要挂载到游戏对象上。</p>
-<p>在 Unity 中，脚本继承了 MonoBehaviour
-类，就会被视为一个脚本组件，如：<code>public class GameManager : MonoBehaviour</code>
-，然后根据需要，将脚本组件添加到游戏对象上。</p>
+<p>在 Unity 中，脚本继承了 MonoBehaviour 类，就会被视为一个脚本组件，如：<code>public class GameManager : MonoBehaviour</code> ，然后根据需要，将脚本组件添加到游戏对象上。</p>
 <span id="more"></span>
-<h2 id="脚本通讯">脚本通讯</h2>
+<h2 id="脚本通讯">脚本通讯<a class="header-anchor" href="#脚本通讯">·</a></h2>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xxxx = GetComponent&lt;Walk&gt;();</span><br><span class="line">xxxx.walk();</span><br></pre></td></tr></table></figure>
-<h3 id="getcomponent的性能问题">GetComponent()的性能问题</h3>
-<ol type="1">
-<li>避免在 <strong>Update</strong> 中来使用
-GetComponent，否则性能代价过于昂贵。</li>
-<li>若多处地方使用
-GetComponent，尝试<strong>初始化</strong>获得组件的引用，避免反复获取。</li>
+<h3 id="GetComponent-的性能问题">GetComponent()的性能问题<a class="header-anchor" href="#GetComponent-的性能问题">·</a></h3>
+<ol>
+<li>避免在 <strong>Update</strong> 中来使用 GetComponent，否则性能代价过于昂贵。</li>
+<li>若多处地方使用 GetComponent，尝试<strong>初始化</strong>获得组件的引用，避免反复获取。</li>
 </ol>
-<h1 id="单例模式">单例模式</h1>
+<h1 id="单例模式">单例模式<a class="header-anchor" href="#单例模式">·</a></h1>
 <p>单例模式是最常用的设计模式之一，原因是因为其存在着方便快捷的好处，但同时也会带来<strong>耦合度高</strong>和<strong>扩展困难</strong>的问题。</p>
 <blockquote>
 <p>优点：</p>
 <ul>
-<li>节约内存 只存在一个对象进行运作</li>
-<li>节省性能
+<li>节约内存<br />
+只存在一个对象进行运作</li>
+<li>节省性能<br />
 只会在第一次请求时被创建，不用频繁经历<strong>被引用对象</strong>的创建和销毁</li>
-<li>使用方便 可以轻松地链接游戏各个模块</li>
+<li>使用方便<br />
+可以轻松地链接游戏各个模块</li>
 </ul>
 </blockquote>
 <blockquote>
 <p>缺点：</p>
 <ul>
-<li>代码耦合度加大，维护困难
+<li>代码耦合度加大，维护困难<br />
 滥用单例中的对象，修改对象时牵扯到的脚本数量难以计量</li>
-<li>代码更新和扩展困难 对单例中的对象，动一发则牵全身。</li>
+<li>代码更新和扩展困难<br />
+对单例中的对象，动一发则牵全身。</li>
 </ul>
 </blockquote>
-<h2 id="单例模式的两种写法">单例模式的两种写法</h2>
+<h2 id="单例模式的两种写法">单例模式的两种写法<a class="header-anchor" href="#单例模式的两种写法">·</a></h2>
 <p>第一种强调的是，除非 Instance 为空，才赋值；否则都自毁。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Awake</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (Instance == <span class="literal">null</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        Instance = <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        Destroy(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>第二种强调的是，只有 Instance
-不为空且不等于自己，才自毁；否则都更换新的指向对象。（重新赋值的几率更大）</p>
+<p>第二种强调的是，只有 Instance 不为空且不等于自己，才自毁；否则都更换新的指向对象。（重新赋值的几率更大）</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Awake</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (Instance != <span class="literal">null</span> &amp;&amp; Instance != <span class="keyword">this</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        Destroy(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        Instance = <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>用例：<a
-href=":/bbab593dceaa40388168f8d2e4163966#gamemanager-游戏管理器">Unity-实现功能
-# 1.2 GameManager - 游戏管理器</a></p>
-<h1 id="命令模式">命令模式</h1>
+<p>用例：<a href=":/bbab593dceaa40388168f8d2e4163966#gamemanager-%E6%B8%B8%E6%88%8F%E7%AE%A1%E7%90%86%E5%99%A8">Unity-实现功能 # 1.2 GameManager - 游戏管理器</a></p>
+<h1 id="命令模式">命令模式<a class="header-anchor" href="#命令模式">·</a></h1>
 <p>通过命令模式可以简单的实现解耦，撤销功能，以及对象的可参数化。</p>
-<h1 id="观察者模式">观察者模式</h1>
+<h1 id="观察者模式">观察者模式<a class="header-anchor" href="#观察者模式">·</a></h1>
 <p>通过委托和事件，将一个批量处理的操作，转换成事件的添加与执行。</p>
 <ul>
-<li><p>处理一个信息对应多个事件发生的情况</p></li>
-<li><p>使用更少的代码</p></li>
-<li><p>更加易于维护</p></li>
+<li>
+<p>处理一个信息对应多个事件发生的情况</p>
+</li>
+<li>
+<p>使用更少的代码</p>
+</li>
+<li>
+<p>更加易于维护</p>
+</li>
 </ul>
-<h1 id="对象池模式">对象池模式</h1>
+<h1 id="对象池模式">对象池模式<a class="header-anchor" href="#对象池模式">·</a></h1>
 <p>对象池模式可以大幅度减少游戏的性能开销，适用于高重复创建销毁物体的情况</p>
 
     </div>
@@ -521,14 +523,14 @@ href=":/bbab593dceaa40388168f8d2e4163966#gamemanager-游戏管理器">Unity-实�
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

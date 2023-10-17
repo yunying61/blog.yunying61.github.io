@@ -318,7 +318,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>400</span>
+      <span>387</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -336,7 +336,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <ol type="1">
+          <ol>
 <li>看文档</li>
 <li>配置软件</li>
 <li>查命令</li>
@@ -478,25 +478,23 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>参考文章：<a href="/2022/08/RSR%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8-%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/" title="RSR系列路由器-入门操作">RSR系列路由器-入门操作</a></p>
-<h2 id="拓扑结构">拓扑结构</h2>
-<figure>
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/VPN%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84.png"
-alt="VPN拓扑结构" />
-<figcaption aria-hidden="true">VPN拓扑结构</figcaption>
-</figure>
-<h2 id="操作思路">操作思路</h2>
-<ol type="1">
-<li>接线 路由器1：g0/0端口 【——连接——】 PC机（内网1）：网卡
-路由器1：g0/1端口 【——连接——】 路由器3（Internet）：g0/0端口
-路由器2：g0/0端口 【——连接——】 PC机（内网2）：网卡 路由器2：g0/1端口
-【——连接——】 路由器3（Internet）：g0/1端口</li>
+<h2 id="拓扑结构">拓扑结构<a class="header-anchor" href="#拓扑结构">·</a></h2>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/VPN%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84.png" alt="" loading="lazy" /></p>
+<h2 id="操作思路">操作思路<a class="header-anchor" href="#操作思路">·</a></h2>
+<ol>
+<li>接线<br />
+路由器1：g0/0端口    【——连接——】    PC机（内网1）：网卡<br />
+路由器1：g0/1端口    【——连接——】    路由器3（Internet）：g0/0端口<br />
+路由器2：g0/0端口    【——连接——】    PC机（内网2）：网卡<br />
+路由器2：g0/1端口    【——连接——】    路由器3（Internet）：g0/1端口</li>
 <li>配置路由器R1、R2和路由器3（Internet）</li>
 <li>在R1配置GRE隧道</li>
 <li>在R1配置路由，将局域网2网段路由指向GRE隧道</li>
 <li>在R2配置GRE隧道</li>
 <li>在R2配置路由，将局域网1网段路由指向GRE隧道</li>
-<li>客户机验证 <code>在内网1的电脑上ping内网2的地址。</code>
-<code>在路由器上查看GRE隧道状态</code>
+<li>客户机验证<br />
+<code>在内网1的电脑上ping内网2的地址。 </code><br />
+<code>在路由器上查看GRE隧道状态 </code><br />
 <code>show interfaces tunnel 1</code></li>
 </ol>
           <!--noindex-->
@@ -636,25 +634,23 @@ alt="VPN拓扑结构" />
     
     <div class="post-body" itemprop="articleBody">
           <p>参考文章：<a href="/2022/08/RSR%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8-%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/" title="RSR系列路由器-入门操作">RSR系列路由器-入门操作</a></p>
-<h2 id="拓扑结构">拓扑结构</h2>
-<figure>
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/DHCP%E4%B8%AD%E7%BB%A7%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84.png"
-alt="DHCP中继功能拓扑结构" />
-<figcaption aria-hidden="true">DHCP中继功能拓扑结构</figcaption>
-</figure>
-<h2 id="操作思路">操作思路</h2>
-<ol type="1">
-<li>接线 路由器1（DHCP服务器）：g0/1端口 【——连接——】
-路由器2（DHCP中继器）：g0/1端口 路由器2（DHCP中继器）：g0/0端口
-【——连接——】 PC机（客户机）：网卡</li>
+<h2 id="拓扑结构">拓扑结构<a class="header-anchor" href="#拓扑结构">·</a></h2>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/DHCP%E4%B8%AD%E7%BB%A7%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84.png" alt="" loading="lazy" /></p>
+<h2 id="操作思路">操作思路<a class="header-anchor" href="#操作思路">·</a></h2>
+<ol>
+<li>接线<br />
+路由器1（DHCP服务器）：g0/1端口    【——连接——】    路由器2（DHCP中继器）：g0/1端口<br />
+路由器2（DHCP中继器）：g0/0端口    【——连接——】    PC机（客户机）：网卡</li>
 <li>配置 路由器1为DHCP服务器</li>
 <li>配置路由器1的 g0/1端口的IP地址</li>
-<li>配置路由器1的路由地址 因为，一般是把Windows
-Server系统的PC机作为DHCP服务器的，而这里作为DHCP服务器的是路由器，它本身是不具备网关的功能的，所以需要一个路由地址来指出默认路由的地址。</li>
+<li>配置路由器1的路由地址<br />
+因为，一般是把Windows Server系统的PC机作为DHCP服务器的，而这里作为DHCP服务器的是路由器，它本身是不具备网关的功能的，所以需要一个路由地址来指出默认路由的地址。</li>
 <li>配置 路由器2为DHCP中继器</li>
 <li>配置路由器2的 g0/0端口的IP地址</li>
 <li>配置路由器2的 g0/1端口的IP地址</li>
-<li>客户机验证 <code>ipconfig /all</code> <code>ipconfig /release</code>
+<li>客户机验证<br />
+<code>ipconfig /all</code><br />
+<code>ipconfig /release</code><br />
 <code>ipconfig /renew</code></li>
 </ol>
           <!--noindex-->
@@ -794,22 +790,23 @@ Server系统的PC机作为DHCP服务器的，而这里作为DHCP服务器的是�
     
     <div class="post-body" itemprop="articleBody">
           <p>参考文章：<a href="/2022/08/RSR%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8-%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/" title="RSR系列路由器-入门操作">RSR系列路由器-入门操作</a></p>
-<h2 id="拓扑结构">拓扑结构</h2>
-<figure>
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/ACL%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84.png"
-alt="ACL拓扑结构" />
-<figcaption aria-hidden="true">ACL拓扑结构</figcaption>
-</figure>
-<h2 id="操作思路">操作思路</h2>
-<ol type="1">
-<li>接线 交换机：g0/0端口 【——连接——】 PC机1：网卡 交换机：g0/1端口
-【——连接——】 PC机2：网卡 交换机：g0/2端口 【——连接——】 PC机3：网卡</li>
+<h2 id="拓扑结构">拓扑结构<a class="header-anchor" href="#拓扑结构">·</a></h2>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/ACL%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84.png" alt="" loading="lazy" /></p>
+<h2 id="操作思路">操作思路<a class="header-anchor" href="#操作思路">·</a></h2>
+<ol>
+<li>接线<br />
+交换机：g0/0端口    【——连接——】    PC机1：网卡<br />
+交换机：g0/1端口    【——连接——】    PC机2：网卡<br />
+交换机：g0/2端口    【——连接——】    PC机3：网卡</li>
 <li>创建VLAN 10、VLAN 20、VLAN 30</li>
 <li>配置access端口到VLAN</li>
 <li>配置VLAN地址</li>
 <li>配置ACL</li>
-<li>验证 查看ACL配置 <code>show access-lists</code>
-<code>show vlan</code> 三个PC机，相互ping。</li>
+<li>验证<br />
+查看ACL配置<br />
+<code>show access-lists</code><br />
+<code>show vlan</code><br />
+三个PC机，相互ping。</li>
 </ol>
           <!--noindex-->
             <div class="post-button">
@@ -948,26 +945,25 @@ alt="ACL拓扑结构" />
     
     <div class="post-body" itemprop="articleBody">
           <p>参考文章：<a href="/2022/08/RSR%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8-%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/" title="RSR系列路由器-入门操作">RSR系列路由器-入门操作</a></p>
-<h2 id="拓扑结构">拓扑结构</h2>
-<figure>
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84.png"
-alt="动态路由拓扑结构" />
-<figcaption aria-hidden="true">动态路由拓扑结构</figcaption>
-</figure>
-<h2 id="操作思路">操作思路</h2>
-<ol type="1">
-<li>接线 路由器1：g0/0端口 【——连接——】 PC机1：网卡 路由器1：g0/1端口
-【——连接——】 路由器2：g0/1端口 路由器2：g0/0端口 【——连接——】
-路由器3：g0/0端口 路由器3：g0/1端口 【——连接——】 PC机2：网卡</li>
+<h2 id="拓扑结构">拓扑结构<a class="header-anchor" href="#拓扑结构">·</a></h2>
+<p><img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84.png" alt="" loading="lazy" /></p>
+<h2 id="操作思路">操作思路<a class="header-anchor" href="#操作思路">·</a></h2>
+<ol>
+<li>接线<br />
+路由器1：g0/0端口    【——连接——】    PC机1：网卡<br />
+路由器1：g0/1端口    【——连接——】    路由器2：g0/1端口<br />
+路由器2：g0/0端口    【——连接——】    路由器3：g0/0端口<br />
+路由器3：g0/1端口    【——连接——】    PC机2：网卡</li>
 <li>配置路由器1 端口地址</li>
 <li>配置路由器1 RIP协议</li>
 <li>配置路由器2 端口地址</li>
 <li>配置路由器2 RIP协议</li>
 <li>配置路由器3 端口地址</li>
 <li>配置路由器3 RIP协议</li>
-<li>验证
-查看每台路由器的路由，若每台路由器都能学习到整网的路由，则rip配置正确。
-<code>show ip route</code> 两端的PC机，ping每个IP地址。</li>
+<li>验证<br />
+查看每台路由器的路由，若每台路由器都能学习到整网的路由，则rip配置正确。<br />
+<code>show ip route</code><br />
+两端的PC机，ping每个IP地址。</li>
 </ol>
           <!--noindex-->
             <div class="post-button">
@@ -1087,7 +1083,7 @@ alt="动态路由拓扑结构" />
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>927</span>
+      <span>935</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1105,9 +1101,8 @@ alt="动态路由拓扑结构" />
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="数据结构中的哈希表">数据结构中的哈希表</h1>
-<p>哈希表(Hash
-Table)也叫散列表，在本文中，哈希表是一种数据结构，它提供了<strong>快速的插入操作和查找操作</strong>，无论哈希表总中有多少条数据，<u>插入和查找的时间复杂度都是为O(1)</u>。因为哈希表的查找速度非常快，所以在很多程序中都有使用哈希表，例如拼音检查器。</p>
+          <h1 id="数据结构中的哈希表">数据结构中的哈希表<a class="header-anchor" href="#数据结构中的哈希表">·</a></h1>
+<p>哈希表(Hash Table)也叫散列表，在本文中，哈希表是一种数据结构，它提供了<strong>快速的插入操作和查找操作</strong>，无论哈希表总中有多少条数据，<u>插入和查找的时间复杂度都是为O(1)</u>。因为哈希表的查找速度非常快，所以在很多程序中都有使用哈希表，例如拼音检查器。</p>
 <p>哈希表也有自己的缺点，哈希表是基于数组的，我们知道数组创建后扩容成本比较高，所以当哈希表被填满时，性能下降的比较严重。</p>
           <!--noindex-->
             <div class="post-button">
@@ -1235,7 +1230,7 @@ Table)也叫散列表，在本文中，哈希表是一种数据结构，它提�
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>138</span>
+      <span>129</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1253,8 +1248,8 @@ Table)也叫散列表，在本文中，哈希表是一种数据结构，它提�
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="输入法-双拼模式的学习">输入法-双拼模式的学习</h1>
-<h2 id="双拼学习">双拼学习</h2>
+          <h1 id="输入法-双拼模式的学习">输入法-双拼模式的学习<a class="header-anchor" href="#输入法-双拼模式的学习">·</a></h1>
+<h2 id="双拼学习">双拼学习<a class="header-anchor" href="#双拼学习">·</a></h2>
 <p>双拼就是把全拼的声韵母压缩成两键来表示，一键声母，一键韵母。双拼的设计主要是韵母键位的设计，所以你要学习的部分主要就是韵母键位被设定到哪个键上，这个通过使用就能逐渐形成记忆。</p>
           <!--noindex-->
             <div class="post-button">
@@ -1392,16 +1387,14 @@ Table)也叫散列表，在本文中，哈希表是一种数据结构，它提�
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="c-对象池应用">C# 对象池应用</h1>
+          <h1 id="C-对象池应用">C# 对象池应用<a class="header-anchor" href="#C-对象池应用">·</a></h1>
 <p>对象池是游戏编程中非常常用的优化策略以及设计模式。</p>
-<p>游戏中，我们常常会遇到频繁地<strong>创建</strong>和<strong>销毁</strong><u>大量相同对象</u>的场景。频繁的创建对象会造成GC<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>压力，可能导致卡顿，进而影响游戏体验。</p>
+<p>游戏中，我们常常会遇到频繁地<strong>创建</strong>和<strong>销毁</strong><u>大量相同对象</u>的场景。频繁的创建对象会造成GC<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>压力，可能导致卡顿，进而影响游戏体验。</p>
 <p><strong>核心思想</strong>：</p>
 <p>将需要重复创建的对象先缓存下来，需要时激活，不需要时停用，从而避免频繁创建对象。</p>
 <p><strong>原理</strong>：</p>
-<p>当创建对象时，对象池将对象放入池管理的某种内存连续的数据结构中（数组或者栈等）。当不需要对象时，对象池并不销毁对象，而是将对象回收到池中，下次需要的时候再次从池中拿出来。
-因为，对象储存在内存连续的数据结构中，所以解决了<strong>内存碎片</strong>的问题。
+<p>当创建对象时，对象池将对象放入池管理的某种内存连续的数据结构中（数组或者栈等）。当不需要对象时，对象池并不销毁对象，而是将对象回收到池中，下次需要的时候再次从池中拿出来。<br />
+因为，对象储存在内存连续的数据结构中，所以解决了<strong>内存碎片</strong>的问题。<br />
 因为，对象每次用完以后就放回池中循环利用而不是再次创建和销毁，这样就解决了<strong>频繁的内存分配和销毁</strong>的问题。</p>
           <!--noindex-->
             <div class="post-button">
@@ -1551,10 +1544,8 @@ role="doc-noteref"><sup>1</sup></a>压力，可能导致卡顿，进而影响游
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="file-manager---简易轻巧的文件管理系统">File Manager -
-简易轻巧的文件管理系统</h1>
-<p>File Manager
-基于GO的轻量级文件管理系统。指定的目录中提供文件管理界面，可用于上传，删除，预览，重命名和编辑文件。它允许创建多个用户，每个用户可以拥有自己的目录。</p>
+          <h1 id="File-Manager-简易轻巧的文件管理系统">File Manager - 简易轻巧的文件管理系统<a class="header-anchor" href="#File-Manager-简易轻巧的文件管理系统">·</a></h1>
+<p>File Manager 基于GO的轻量级文件管理系统。指定的目录中提供文件管理界面，可用于上传，删除，预览，重命名和编辑文件。它允许创建多个用户，每个用户可以拥有自己的目录。</p>
 <ul>
 <li>用户登录</li>
 <li>上传、预览、编辑、下载、分享（可加密）</li>
@@ -1710,42 +1701,31 @@ role="doc-noteref"><sup>1</sup></a>压力，可能导致卡顿，进而影响游
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="搭建基于gollum的wiki网站">搭建基于Gollum的Wiki网站</h1>
-<p>Gollum是一个建立在Git之上的简单wiki系统。Gollum
-Wiki只是一个具有特定性质的git存储库：</p>
+          <h1 id="搭建基于Gollum的Wiki网站">搭建基于Gollum的Wiki网站<a class="header-anchor" href="#搭建基于Gollum的Wiki网站">·</a></h1>
+<p>Gollum是一个建立在Git之上的简单wiki系统。Gollum Wiki只是一个具有特定性质的git存储库：</p>
 <ul>
 <li>支持 Markdown 语法</li>
 <li>可以包含其他内容，例如页面的图像，PDF和页眉/页脚。</li>
 <li>咕噜页面：
 <ul>
-<li>可以写成各种<a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum#markups">标记</a>。</li>
+<li>可以写成各种<a target="_blank" rel="noopener" href="https://github.com/gollum/gollum#markups">标记</a>。</li>
 <li>可以使用您喜欢的系统编辑器或IDE进行编辑（提交后将显示更改）或使用内置的Web界面进行编辑。</li>
 <li>可以在所有版本中显示，还原等。</li>
-</ul></li>
+</ul>
+</li>
 <li>Gollum 与 GitHub wiki 基本兼容</li>
 <li>Gollum 支持的高级功能：
 <ul>
-<li><a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#plantuml-diagrams">UML
-图</a></li>
-<li><a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/BibTeX-and-Citations">BibTeX
-和引文支持</a></li>
-<li>使用 <a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#criticmarkup-annotations">CriticMarkup</a>
-注释</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#mathematics">MathJax
-上的数学</a></li>
-<li><a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/Standard-Macros">宏</a></li>
-<li><a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#redirects">重定向</a></li>
-<li>最新更改的 <a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/5.0-release-notes#rss-feed">RSS
-源</a></li>
-<li>...以及<a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki">更多</a></li>
-</ul></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#plantuml-diagrams">UML 图</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/BibTeX-and-Citations">BibTeX 和引文支持</a></li>
+<li>使用 <a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#criticmarkup-annotations">CriticMarkup</a> 注释</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#mathematics">MathJax 上的数学</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/Standard-Macros">宏</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#redirects">重定向</a></li>
+<li>最新更改的 <a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/5.0-release-notes#rss-feed">RSS 源</a></li>
+<li>…以及<a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki">更多</a></li>
+</ul>
+</li>
 </ul>
           <!--noindex-->
             <div class="post-button">
@@ -1797,14 +1777,14 @@ target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/5.0-r
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

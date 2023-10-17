@@ -34,12 +34,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="网络爬虫 参考资料：Python爬虫教程（从入门到精通） 网络爬虫（Web Spider 又称为网页蜘蛛，网络机器人），它是一种按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。 Python 爬虫指的是用 Python 语言来编">
+    <meta name="description" content="网络爬虫· 参考资料：Python爬虫教程（从入门到精通） 网络爬虫（Web Spider 又称为网页蜘蛛，网络机器人），它是一种按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。 Python 爬虫指的是用 Python 语言来编写爬">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Python爬虫技术初探">
 <meta property="og:url" content="https://www.yunying61.cn/2022/10/Python%E7%88%AC%E8%99%AB%E6%8A%80%E6%9C%AF%E5%88%9D%E6%8E%A2/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="网络爬虫 参考资料：Python爬虫教程（从入门到精通） 网络爬虫（Web Spider 又称为网页蜘蛛，网络机器人），它是一种按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。 Python 爬虫指的是用 Python 语言来编">
+<meta property="og:description" content="网络爬虫· 参考资料：Python爬虫教程（从入门到精通） 网络爬虫（Web Spider 又称为网页蜘蛛，网络机器人），它是一种按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。 Python 爬虫指的是用 Python 语言来编写爬">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-30T06:36:19.000Z">
 <meta property="article:modified_time" content="2022-11-09T10:03:41.298Z">
@@ -161,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB"><span class="nav-number">1.</span> <span class="nav-text">网络爬虫</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%AC%E8%99%AB%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">爬虫类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8F%96%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">抓取类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python%E7%88%AC%E8%99%AB%E6%9E%B6%E6%9E%84"><span class="nav-number">1.3.</span> <span class="nav-text">Python爬虫架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B"><span class="nav-number">1.4.</span> <span class="nav-text">编写爬虫的流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#urllib%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">urllib库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">常用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#urlopen"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">1) urlopen()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#request"><span class="nav-number">2.1.0.2.</span> <span class="nav-text">2) Request()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#html%E5%93%8D%E5%BA%94%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.0.3.</span> <span class="nav-text">3) html响应对象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81%E6%93%8D%E4%BD%9C"><span class="nav-number">2.1.0.4.</span> <span class="nav-text">4) 编码解码操作</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB"><span class="nav-number">1.</span> <span class="nav-text">网络爬虫</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%AC%E8%99%AB%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">爬虫类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8F%96%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">抓取类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E7%88%AC%E8%99%AB%E6%9E%B6%E6%9E%84"><span class="nav-number">1.3.</span> <span class="nav-text">Python爬虫架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B"><span class="nav-number">1.4.</span> <span class="nav-text">编写爬虫的流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#urllib%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">urllib库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">常用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-urlopen"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">1) urlopen()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Request"><span class="nav-number">2.1.0.2.</span> <span class="nav-text">2) Request()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-html%E5%93%8D%E5%BA%94%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.0.3.</span> <span class="nav-text">3) html响应对象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81%E6%93%8D%E4%BD%9C"><span class="nav-number">2.1.0.4.</span> <span class="nav-text">4) 编码解码操作</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -286,11 +286,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+          <a href="/categories/IT/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">编程语言</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IT/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">编程语言</span></a>
+          <a href="/categories/IT/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -349,58 +349,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="网络爬虫">网络爬虫</h1>
-<p>参考资料：<a
-target="_blank" rel="noopener" href="http://c.biancheng.net/python_spider/">Python爬虫教程（从入门到精通）</a></p>
-<p>网络爬虫（Web Spider 又称为网页蜘蛛，<a
-target="_blank" rel="noopener" href="https://baike.baidu.com/item/网络/143243?fromModule=lemma_inlink">网络</a>机器人），它是一种按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。</p>
-<p>Python 爬虫指的是用 Python 语言来编写爬虫程序。除了 Python
-外，其他语言也可以编写，比如 Java、PHP 等，不过相比较而言，Python
-更为简单和实用。一方面， Python
-提供了许多可以应用于爬虫的库和模块；另一方面， Python
-语法简单、易读，更适合于初学者学习，因此 Python
-爬虫几乎成了网络爬虫的代名词。</p>
-<p><strong>学习条件</strong>：在学习爬虫技术前，您应该已经熟练掌握了
-Python 基础知识，并对前端语言以及 SQL
-数据库有基本掌握。当然，如果您对网络通信协议（TCP/IP
-或HTTP）有一定的了解，那么对学习 Python 爬虫技术将大有裨益。</p>
+        <h1 id="网络爬虫">网络爬虫<a class="header-anchor" href="#网络爬虫">·</a></h1>
+<p>参考资料：<a target="_blank" rel="noopener" href="http://c.biancheng.net/python_spider/">Python爬虫教程（从入门到精通）</a></p>
+<p>网络爬虫（Web Spider 又称为网页蜘蛛，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C/143243?fromModule=lemma_inlink">网络</a>机器人），它是一种按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。</p>
+<p>Python 爬虫指的是用 Python 语言来编写爬虫程序。除了 Python 外，其他语言也可以编写，比如 Java、PHP 等，不过相比较而言，Python 更为简单和实用。一方面， Python 提供了许多可以应用于爬虫的库和模块；另一方面， Python 语法简单、易读，更适合于初学者学习，因此 Python 爬虫几乎成了网络爬虫的代名词。</p>
+<p><strong>学习条件</strong>：在学习爬虫技术前，您应该已经熟练掌握了 Python 基础知识，并对前端语言以及 SQL 数据库有基本掌握。当然，如果您对网络通信协议（TCP/IP 或HTTP）有一定的了解，那么对学习 Python 爬虫技术将大有裨益。</p>
 <span id="more"></span>
-<h2 id="爬虫类型">爬虫类型</h2>
-<p>网络爬虫按照系统结构和实现技术，大致可以分为以下几种类型：通用网络爬虫（General
-Purpose Web Crawler）、聚焦网络爬虫（Focused Web
-Crawler）、增量式网络爬虫（Incremental Web Crawler）、深层网络爬虫（Deep
-Web Crawler）。 实际的网络爬虫系统通常是几种爬虫技术相结合实现的。</p>
+<h2 id="爬虫类型">爬虫类型<a class="header-anchor" href="#爬虫类型">·</a></h2>
+<p>网络爬虫按照系统结构和实现技术，大致可以分为以下几种类型：通用网络爬虫（General Purpose Web Crawler）、聚焦网络爬虫（Focused Web Crawler）、增量式网络爬虫（Incremental Web Crawler）、深层网络爬虫（Deep Web Crawler）。 实际的网络爬虫系统通常是几种爬虫技术相结合实现的。</p>
 <blockquote>
-<p><strong>通用网络爬虫</strong>又称全网爬虫（Scalable Web
-Crawler），爬行对象从一些种子 URL 扩充到整个
-Web，主要为门户站点搜索引擎和大型 Web 服务提供商采集数据。</p>
+<p><strong>通用网络爬虫</strong>又称全网爬虫（Scalable Web Crawler），爬行对象从一些种子 URL 扩充到整个 Web，主要为门户站点搜索引擎和大型 Web 服务提供商采集数据。</p>
 </blockquote>
 <blockquote>
-<p><strong>聚焦网络爬虫</strong>（Focused
-Crawler），又称主题网络爬虫（Topical
-Crawler），是指选择性地爬行那些与预先定义好的主题相关页面的网络爬虫。</p>
+<p><strong>聚焦网络爬虫</strong>（Focused Crawler），又称主题网络爬虫（Topical Crawler），是指选择性地爬行那些与预先定义好的主题相关页面的网络爬虫。</p>
 </blockquote>
 <blockquote>
-<p><strong>增量式网络爬虫</strong>（Incremental Web
-Crawler）是指对已下载网页采取增量式更新和只爬行新产生的或者已经发生变化网页的爬虫，它能够在一定程度上保证所爬行的页面是尽可能新的页面。</p>
+<p><strong>增量式网络爬虫</strong>（Incremental Web Crawler）是指对已下载网页采取增量式更新和只爬行新产生的或者已经发生变化网页的爬虫，它能够在一定程度上保证所爬行的页面是尽可能新的页面。</p>
 </blockquote>
 <blockquote>
 <p><strong>Deep Web 爬虫</strong></p>
-<p>Web 页面按存在方式可以分为表层网页（Surface Web）和深层网页（Deep
-Web，也称 Invisible Web Pages 或 Hidden Web）。</p>
-<p>表层网页是指传统搜索引擎可以索引的页面，以超链接可以到达的静态网页为主构成的
-Web 页面。</p>
-<p>Deep Web
-是那些大部分内容不能通过静态链接获取的、隐藏在搜索表单后的，只有用户提交一些关键词才能获得的
-Web 页面。</p>
-<p>Deep Web
-爬虫爬行过程中最重要部分就是<strong>表单填写</strong>，包含两种类型：</p>
+<p>Web 页面按存在方式可以分为表层网页（Surface Web）和深层网页（Deep Web，也称 Invisible Web Pages 或 Hidden Web）。</p>
+<p>表层网页是指传统搜索引擎可以索引的页面，以超链接可以到达的静态网页为主构成的 Web 页面。</p>
+<p>Deep Web 是那些大部分内容不能通过静态链接获取的、隐藏在搜索表单后的，只有用户提交一些关键词才能获得的 Web 页面。</p>
+<p>Deep Web 爬虫爬行过程中最重要部分就是<strong>表单填写</strong>，包含两种类型：</p>
 <p>（1）基于领域知识的表单填写：此方法一般会维持一个本体库，通过语义分析来选取合适的关键词填写表单。</p>
-<p>（2）基于网页结构分析的表单填写：
-此方法一般无领域知识或仅有有限的领域知识，将网页表单表示成 DOM
-树，从中提取表单各字段值。</p>
+<p>（2）基于网页结构分析的表单填写： 此方法一般无领域知识或仅有有限的领域知识，将网页表单表示成 DOM 树，从中提取表单各字段值。</p>
 </blockquote>
-<h2 id="抓取类型">抓取类型</h2>
+<h2 id="抓取类型">抓取类型<a class="header-anchor" href="#抓取类型">·</a></h2>
 <p>现有聚焦爬虫对抓取目标的描述可分为基于目标网页特征、基于目标数据模式和基于领域概念3种。</p>
 <blockquote>
 <p><strong>基于目标网页特征</strong></p>
@@ -412,26 +387,22 @@ Web 页面。</p>
 </blockquote>
 <blockquote>
 <p><strong>基于目标数据模式</strong></p>
-<p>基于目标数据模式的<a
-target="_blank" rel="noopener" href="https://baike.baidu.com/item/爬虫?fromModule=lemma_inlink">爬虫</a>针对的是网页上的数据，所抓取的数据一般要符合一定的模式，或者可以转化或映射为目标数据模式。</p>
+<p>基于目标数据模式的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%88%AC%E8%99%AB?fromModule=lemma_inlink">爬虫</a>针对的是网页上的数据，所抓取的数据一般要符合一定的模式，或者可以转化或映射为目标数据模式。</p>
 </blockquote>
 <blockquote>
 <p><strong>基于领域概念</strong></p>
 <p>另一种描述方式是建立目标领域的本体或词典，用于从语义角度分析不同特征在某一主题中的重要程度。</p>
 </blockquote>
-<h2 id="python爬虫架构">Python爬虫架构</h2>
-<p>Python
-爬虫架构主要由五个部分组成，分别是调度器、URL管理器、网页下载器、网页解析器、应用程序（爬取的有价值数据）。</p>
+<h2 id="Python爬虫架构">Python爬虫架构<a class="header-anchor" href="#Python爬虫架构">·</a></h2>
+<p>Python 爬虫架构主要由五个部分组成，分别是调度器、URL管理器、网页下载器、网页解析器、应用程序（爬取的有价值数据）。</p>
 <ul>
-<li><strong>调度器：</strong>相当于一台电脑的CPU，主要负责调度URL管理器、下载器、解析器之间的协调工作。</li>
-<li><strong>URL管理器：</strong>包括待爬取的URL地址和已爬取的URL地址，防止重复抓取URL和循环抓取URL，实现URL管理器主要用三种方式，通过内存、数据库、缓存数据库来实现。</li>
-<li><strong>网页下载器：</strong>通过传入一个URL地址来下载网页，将网页转换成一个字符串，网页下载器有urllib2（Python官方基础模块）包括需要登录、代理、和cookie，requests(第三方包)</li>
-<li><strong>网页解析器：</strong>将一个网页字符串进行解析，可以按照我们的要求来提取出我们有用的信息，也可以根据DOM树的解析方式来解析。网页解析器有正则表达式（直观，将网页转成字符串通过模糊匹配的方式来提取有价值的信息，当文档比较复杂的时候，该方法提取数据的时候就会非常的困难）、html.parser（Python自带的）、beautifulsoup（第三方插件，可以使用Python自带的html.parser进行解析，也可以使用lxml进行解析，相对于其他几种来说要强大一些）、lxml（第三方插件，可以解析
-xml 和 HTML），html.parser 和 beautifulsoup 以及 lxml 都是以 DOM
-树的方式进行解析的。</li>
-<li><strong>应用程序：</strong>就是从网页中提取的有用数据组成的一个应用。</li>
+<li>**调度器：**相当于一台电脑的CPU，主要负责调度URL管理器、下载器、解析器之间的协调工作。</li>
+<li>**URL管理器：**包括待爬取的URL地址和已爬取的URL地址，防止重复抓取URL和循环抓取URL，实现URL管理器主要用三种方式，通过内存、数据库、缓存数据库来实现。</li>
+<li>**网页下载器：**通过传入一个URL地址来下载网页，将网页转换成一个字符串，网页下载器有urllib2（Python官方基础模块）包括需要登录、代理、和cookie，requests(第三方包)</li>
+<li>**网页解析器：**将一个网页字符串进行解析，可以按照我们的要求来提取出我们有用的信息，也可以根据DOM树的解析方式来解析。网页解析器有正则表达式（直观，将网页转成字符串通过模糊匹配的方式来提取有价值的信息，当文档比较复杂的时候，该方法提取数据的时候就会非常的困难）、html.parser（Python自带的）、beautifulsoup（第三方插件，可以使用Python自带的html.parser进行解析，也可以使用lxml进行解析，相对于其他几种来说要强大一些）、lxml（第三方插件，可以解析 xml 和 HTML），html.parser 和 beautifulsoup 以及 lxml 都是以 DOM 树的方式进行解析的。</li>
+<li>**应用程序：**就是从网页中提取的有用数据组成的一个应用。</li>
 </ul>
-<h2 id="编写爬虫的流程">编写爬虫的流程</h2>
+<h2 id="编写爬虫的流程">编写爬虫的流程<a class="header-anchor" href="#编写爬虫的流程">·</a></h2>
 <p>爬虫程序与其他程序不同，它的的思维和逻辑一般都是相似的：</p>
 <ul>
 <li>获取数据</li>
@@ -446,9 +417,9 @@ xml 和 HTML），html.parser 和 beautifulsoup 以及 lxml 都是以 DOM
 <li>通过 Beautiful Soup 或则正则表达式提取数据。</li>
 <li>存储数据到本地磁盘或数据库。</li>
 </ul>
-<h1 id="urllib库">urllib库</h1>
-<h2 id="常用方法">常用方法</h2>
-<h4 id="urlopen">1) urlopen()</h4>
+<h1 id="urllib库">urllib库<a class="header-anchor" href="#urllib库">·</a></h1>
+<h2 id="常用方法">常用方法<a class="header-anchor" href="#常用方法">·</a></h2>
+<h4 id="1-urlopen">1) urlopen()<a class="header-anchor" href="#1-urlopen">·</a></h4>
 <p>表示向网站发起请求并获取响应对象，如下所示：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urllib.request.urlopen(url,timeout)</span><br></pre></td></tr></table></figure>
 <p>urlopen() 有两个参数，说明如下：</p>
@@ -456,19 +427,17 @@ xml 和 HTML），html.parser 和 beautifulsoup 以及 lxml 都是以 DOM
 <li>url：表示要爬取数据的 url 地址。</li>
 <li>timeout：设置等待超时时间，指定时间内未得到响应则抛出超时异常。</li>
 </ul>
-<h4 id="request">2) Request()</h4>
-<p>该方法用于创建请求对象、包装请求头，比如重构
-User-Agent（即用户代理，指用户使用的浏览器）使程序更像人类的请求，而非机器。重构
-User-Agent 是爬虫和反爬虫斗争的第一步。在下一节会做详细介绍。</p>
+<h4 id="2-Request">2) Request()<a class="header-anchor" href="#2-Request">·</a></h4>
+<p>该方法用于创建请求对象、包装请求头，比如重构 User-Agent（即用户代理，指用户使用的浏览器）使程序更像人类的请求，而非机器。重构 User-Agent 是爬虫和反爬虫斗争的第一步。在下一节会做详细介绍。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urllib.request.Request(url,headers)</span><br></pre></td></tr></table></figure>
 <p>参数说明如下：</p>
 <ul>
 <li>url：请求的URL地址。</li>
 <li>headers：重构请求头。</li>
 </ul>
-<h4 id="html响应对象方法">3) html响应对象方法</h4>
+<h4 id="3-html响应对象方法">3) html响应对象方法<a class="header-anchor" href="#3-html响应对象方法">·</a></h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bytes</span> = response.read() <span class="comment"># read()返回结果为 bytes 数据类型</span></span><br><span class="line">string = response.read().decode() <span class="comment"># decode()将字节串转换为 string 类型</span></span><br><span class="line">url = response.geturl() <span class="comment"># 返回响应对象的URL地址</span></span><br><span class="line">code = response.getcode() <span class="comment"># 返回请求时的HTTP响应码</span></span><br></pre></td></tr></table></figure>
-<h4 id="编码解码操作">4) 编码解码操作</h4>
+<h4 id="4-编码解码操作">4) 编码解码操作<a class="header-anchor" href="#4-编码解码操作">·</a></h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#字符串转换为字节码</span></span><br><span class="line">string.encode(<span class="string">&quot;utf-8&quot;</span>) </span><br><span class="line"><span class="comment">#字节码转换为字符串</span></span><br><span class="line"><span class="built_in">bytes</span>.decode(<span class="string">&quot;utf-8&quot;</span>) </span><br></pre></td></tr></table></figure>
 
     </div>
@@ -593,14 +562,14 @@ User-Agent 是爬虫和反爬虫斗争的第一步。在下一节会做详细介
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

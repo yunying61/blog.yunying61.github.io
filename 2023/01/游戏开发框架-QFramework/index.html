@@ -34,13 +34,19 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Unity学习 | 了解QFramework游戏开发框架 【专栏 &#x2F;视频】QFramework v1.0 使用指南 - GamePix 独立游戏学院 QFramework 简介 QFramework 是一套渐进式、快速开发框架，适用于任何类型的游戏及应用项目。 QFramework 包含一套 开发架构 和 大量的工具集。 QFramework 特性速览：  开发架构（QFram">
+    <meta name="description" content="Unity学习 | 了解QFramework游戏开发框架 【专栏 &#x2F;视频】QFramework v1.0 使用指南 - GamePix 独立游戏学院 QFramework 简介· QFramework 是一套渐进式、快速开发框架，适用于任何类型的游戏及应用项目。 QFramework 包含一套 开发架构 和 大量的工具集。 QFramework 特性速览：  开发架构（QFramework.cs">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="游戏开发框架-QFramework">
 <meta property="og:url" content="https://www.yunying61.cn/2023/01/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6-QFramework/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="Unity学习 | 了解QFramework游戏开发框架 【专栏 &#x2F;视频】QFramework v1.0 使用指南 - GamePix 独立游戏学院 QFramework 简介 QFramework 是一套渐进式、快速开发框架，适用于任何类型的游戏及应用项目。 QFramework 包含一套 开发架构 和 大量的工具集。 QFramework 特性速览：  开发架构（QFram">
+<meta property="og:description" content="Unity学习 | 了解QFramework游戏开发框架 【专栏 &#x2F;视频】QFramework v1.0 使用指南 - GamePix 独立游戏学院 QFramework 简介· QFramework 是一套渐进式、快速开发框架，适用于任何类型的游戏及应用项目。 QFramework 包含一套 开发架构 和 大量的工具集。 QFramework 特性速览：  开发架构（QFramework.cs">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://file.liangxiegame.com/5e9f1682-1907-47a2-a23a-2d5a4ba2e7a4.png">
+<meta property="og:image" content="https://file.liangxiegame.com/0b4e1255-ee5d-4223-97a6-2e49cf68715c.png">
+<meta property="og:image" content="https://file.liangxiegame.com/96bdc2f4-222d-4e91-a10e-dc2128e50fb4.png">
+<meta property="og:image" content="https://file.liangxiegame.com/60ccd370-7c2c-4792-8435-ff5427dc5a1b.png">
+<meta property="og:image" content="https://file.liangxiegame.com/fc803d9e-2868-4b5b-af29-d39dd9e37891.png">
+<meta property="og:image" content="https://file.liangxiegame.com/fc803d9e-2868-4b5b-af29-d39dd9e37891.png">
 <meta property="article:published_time" content="2023-01-10T09:07:51.000Z">
 <meta property="article:modified_time" content="2023-01-10T09:11:01.635Z">
 <meta property="article:author" content="yunying61">
@@ -48,6 +54,7 @@
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="QFramework">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://file.liangxiegame.com/5e9f1682-1907-47a2-a23a-2d5a4ba2e7a4.png">
 
 
 <link rel="canonical" href="https://www.yunying61.cn/2023/01/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6-QFramework/">
@@ -162,7 +169,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qframework-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">QFramework 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qframework-%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97"><span class="nav-number">2.</span> <span class="nav-text">QFramework 内置模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qframework-%E6%9E%B6%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">QFramework 架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%82%E7%BA%A7%E4%B9%8B%E9%97%B4%E7%9A%84%E8%A7%84%E5%88%99"><span class="nav-number">3.1.</span> <span class="nav-text">层级之间的规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E4%BA%92%E9%80%BB%E8%BE%91%E5%92%8C%E8%A1%A8%E7%8E%B0%E9%80%BB%E8%BE%91"><span class="nav-number">3.2.</span> <span class="nav-text">交互逻辑和表现逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%88%E4%BE%8B-%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">3.3.</span> <span class="nav-text">案例-计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E7%9A%84mvc%E6%A1%86%E6%9E%B6"><span class="nav-number">3.3.1.</span> <span class="nav-text">普通的MVC框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#model-%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">Model 的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#view-%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">3.3.1.2.</span> <span class="nav-text">View 的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#controller-%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">3.3.1.3.</span> <span class="nav-text">Controller 的代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BA%86qframework%E6%A1%86%E6%9E%B6"><span class="nav-number">3.3.2.</span> <span class="nav-text">使用了QFramework框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90"><span class="nav-number">3.3.3.</span> <span class="nav-text">对比分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%9E%B6%E6%9E%84architecturet"><span class="nav-number">3.4.</span> <span class="nav-text">主架构（Architecture&lt;T&gt;）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E7%8E%B0%E5%B1%82controller%E5%B1%82"><span class="nav-number">3.5.</span> <span class="nav-text">表现层（Controller层）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%B1%82system%E5%B1%82"><span class="nav-number">3.6.</span> <span class="nav-text">系统层（System层）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%B1%82model%E5%B1%82"><span class="nav-number">3.7.</span> <span class="nav-text">数据层（Model层）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E5%B1%82utility%E5%B1%82"><span class="nav-number">3.8.</span> <span class="nav-text">工具层（Utility层）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4command"><span class="nav-number">3.9.</span> <span class="nav-text">命令（Command）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#command%E6%8B%A6%E6%88%AA"><span class="nav-number">3.9.1.</span> <span class="nav-text">Command拦截</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6event"><span class="nav-number">3.10.</span> <span class="nav-text">事件（Event）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1bindableproperty"><span class="nav-number">3.11.</span> <span class="nav-text">对象（BindableProperty）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9D%97%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99"><span class="nav-number">3.12.</span> <span class="nav-text">用接口设计模块（依赖倒置原则）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#controller"><span class="nav-number">3.12.1.</span> <span class="nav-text">Controller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#system"><span class="nav-number">3.12.2.</span> <span class="nav-text">System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#model"><span class="nav-number">3.12.3.</span> <span class="nav-text">Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#utility"><span class="nav-number">3.12.4.</span> <span class="nav-text">Utility</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2query"><span class="nav-number">3.13.</span> <span class="nav-text">查询（Query）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E8%AF%95%E7%95%8C%E9%9D%A2editor"><span class="nav-number">3.14.</span> <span class="nav-text">调试界面（Editor）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#corekit-%E5%B7%A5%E5%85%B7%E9%9B%86"><span class="nav-number">4.</span> <span class="nav-text">CoreKit 工具集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#typeeventsystem"><span class="nav-number">4.1.</span> <span class="nav-text">TypeEventSystem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#easyevent"><span class="nav-number">4.2.</span> <span class="nav-text">Easyevent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ioccontainer"><span class="nav-number">4.3.</span> <span class="nav-text">IOCContainer</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#QFramework-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">QFramework 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QFramework-%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97"><span class="nav-number">2.</span> <span class="nav-text">QFramework 内置模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QFramework-%E6%9E%B6%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">QFramework 架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%82%E7%BA%A7%E4%B9%8B%E9%97%B4%E7%9A%84%E8%A7%84%E5%88%99"><span class="nav-number">3.1.</span> <span class="nav-text">层级之间的规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E4%BA%92%E9%80%BB%E8%BE%91%E5%92%8C%E8%A1%A8%E7%8E%B0%E9%80%BB%E8%BE%91"><span class="nav-number">3.2.</span> <span class="nav-text">交互逻辑和表现逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%88%E4%BE%8B-%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">3.3.</span> <span class="nav-text">案例-计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E7%9A%84MVC%E6%A1%86%E6%9E%B6"><span class="nav-number">3.3.1.</span> <span class="nav-text">普通的MVC框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Model-%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">Model 的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#View-%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">3.3.1.2.</span> <span class="nav-text">View 的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Controller-%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">3.3.1.3.</span> <span class="nav-text">Controller 的代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BA%86QFramework%E6%A1%86%E6%9E%B6"><span class="nav-number">3.3.2.</span> <span class="nav-text">使用了QFramework框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90"><span class="nav-number">3.3.3.</span> <span class="nav-text">对比分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%9E%B6%E6%9E%84%EF%BC%88Architecture-T-%EF%BC%89"><span class="nav-number">3.4.</span> <span class="nav-text">主架构（Architecture&lt;T&gt;）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E7%8E%B0%E5%B1%82%EF%BC%88Controller%E5%B1%82%EF%BC%89"><span class="nav-number">3.5.</span> <span class="nav-text">表现层（Controller层）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%B1%82%EF%BC%88System%E5%B1%82%EF%BC%89"><span class="nav-number">3.6.</span> <span class="nav-text">系统层（System层）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%B1%82%EF%BC%88Model%E5%B1%82%EF%BC%89"><span class="nav-number">3.7.</span> <span class="nav-text">数据层（Model层）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E5%B1%82%EF%BC%88Utility%E5%B1%82%EF%BC%89"><span class="nav-number">3.8.</span> <span class="nav-text">工具层（Utility层）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%EF%BC%88Command%EF%BC%89"><span class="nav-number">3.9.</span> <span class="nav-text">命令（Command）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Command%E6%8B%A6%E6%88%AA"><span class="nav-number">3.9.1.</span> <span class="nav-text">Command拦截</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%EF%BC%88Event%EF%BC%89"><span class="nav-number">3.10.</span> <span class="nav-text">事件（Event）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%EF%BC%88BindableProperty%EF%BC%89"><span class="nav-number">3.11.</span> <span class="nav-text">对象（BindableProperty）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9D%97%EF%BC%88%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99%EF%BC%89"><span class="nav-number">3.12.</span> <span class="nav-text">用接口设计模块（依赖倒置原则）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Controller"><span class="nav-number">3.12.1.</span> <span class="nav-text">Controller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System"><span class="nav-number">3.12.2.</span> <span class="nav-text">System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Model"><span class="nav-number">3.12.3.</span> <span class="nav-text">Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Utility"><span class="nav-number">3.12.4.</span> <span class="nav-text">Utility</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%EF%BC%88Query%EF%BC%89"><span class="nav-number">3.13.</span> <span class="nav-text">查询（Query）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E8%AF%95%E7%95%8C%E9%9D%A2%EF%BC%88Editor%EF%BC%89"><span class="nav-number">3.14.</span> <span class="nav-text">调试界面（Editor）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CoreKit-%E5%B7%A5%E5%85%B7%E9%9B%86"><span class="nav-number">4.</span> <span class="nav-text">CoreKit 工具集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeEventSystem"><span class="nav-number">4.1.</span> <span class="nav-text">TypeEventSystem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Easyevent"><span class="nav-number">4.2.</span> <span class="nav-text">Easyevent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOCContainer"><span class="nav-number">4.3.</span> <span class="nav-text">IOCContainer</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -338,14 +345,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a href=":/f4bf0e07c6be499dbc7322aafbcb46a0">Unity学习 |
-了解QFramework游戏开发框架</a></p>
-<p><a
-target="_blank" rel="noopener" href="https://www.gamepixedu.com/goods/show/25?targetId=50&amp;preview=0">【专栏
-/视频】QFramework v1.0 使用指南 - GamePix 独立游戏学院</a></p>
-<h1 id="qframework-简介">QFramework 简介</h1>
-<p>QFramework
-是一套渐进式、快速开发框架，适用于任何类型的游戏及应用项目。</p>
+        <p><a href=":/f4bf0e07c6be499dbc7322aafbcb46a0">Unity学习 | 了解QFramework游戏开发框架</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.gamepixedu.com/goods/show/25?targetId=50&amp;preview=0">【专栏 /视频】QFramework v1.0 使用指南 - GamePix 独立游戏学院</a></p>
+<h1 id="QFramework-简介">QFramework 简介<a class="header-anchor" href="#QFramework-简介">·</a></h1>
+<p>QFramework 是一套渐进式、快速开发框架，适用于任何类型的游戏及应用项目。</p>
 <p>QFramework 包含一套 开发架构 和 大量的工具集。</p>
 <p>QFramework 特性速览：</p>
 <ul>
@@ -358,7 +361,8 @@ target="_blank" rel="noopener" href="https://www.gamepixedu.com/goods/show/25?ta
 <li>符合 SOLID原则</li>
 <li>可以使用 DDD 的方式设计项目</li>
 <li>不到 1000 行代码</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <span id="more"></span>
 <ul>
@@ -373,44 +377,46 @@ target="_blank" rel="noopener" href="https://www.gamepixedu.com/goods/show/25?ta
 <li>默认使用 ResKit 方式管理界面资源</li>
 <li>可自定义界面的加载、卸载方式</li>
 <li>Manager Of Manager 架构集成（不推荐使用）</li>
-</ul></li>
+</ul>
+</li>
 <li>ResKit 资源快速开发&amp;管理解决方案
 <ul>
 <li>AssetBundle 提供模拟模式，开发阶段无需打包即可加载资源</li>
 <li>资源名称代码生成支持</li>
-<li>同一个 API 可加载 AssetBundle、Resources、网络 和
-自定义来源的资源</li>
+<li>同一个 API 可加载 AssetBundle、Resources、网络 和 自定义来源的资源</li>
 <li>提供一套引用计数的资源管理模型</li>
-</ul></li>
+</ul>
+</li>
 <li>AudioKit 音频管理解决方案
 <ul>
 <li>提供背景音乐、人声、音效 三种音频播放 API</li>
 <li>音量控制</li>
 <li>默认使用 ResKit 方式管理音频资源</li>
 <li>可自定义音频的加载、卸载方式</li>
-</ul></li>
+</ul>
+</li>
 <li>CoreKit 提供大量的代码工具
 <ul>
 <li>ActionKit：动作序列执行系统</li>
 <li>CodeGenKit：代码生成 &amp; 自动序列化赋值工具</li>
 <li>EventKit：提供基于类、字符串、枚举以及信号类型的事件工具集</li>
-<li>FluentAPI：对大量的 Unity 和 C# 常用的 API
-提供了静态扩展的封装（链式 API）</li>
+<li>FluentAPI：对大量的 Unity 和 C# 常用的 API 提供了静态扩展的封装（链式 API）</li>
 <li>IOCKit：提供依赖注入容器</li>
 <li>LocaleKit：本地化&amp;多语言工具集</li>
 <li>LogKit：日志工具集</li>
 <li>PackageKit：包管理工具，由此可更新框架和对应的插件模块。</li>
-<li>PoolKit：对象池工具集，提供对象池的基础上，也提供 ListPool 和
-Dictionary Pool 等工具。</li>
+<li>PoolKit：对象池工具集，提供对象池的基础上，也提供 ListPool 和 Dictionary Pool 等工具。</li>
 <li>SingletonKit：单例工具集</li>
 <li>TableKit：提供表格类数据结构的工具集</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p>QFramework 的设计哲学是从每个细节上提升开发效率。</p>
 <p>同时 QFramework 还包含丰富的生态。</p>
-<h1 id="qframework-内置模块">QFramework 内置模块</h1>
-<ol type="1">
+<h1 id="QFramework-内置模块">QFramework 内置模块<a class="header-anchor" href="#QFramework-内置模块">·</a></h1>
+<ol>
 <li>Framework：核心架构（包含一套系统设计架构）</li>
 <li>CoreKit: 核心工具库、插件管理</li>
 <li>ResKit：资源管理套件（快速开发）</li>
@@ -419,19 +425,19 @@ Dictionary Pool 等工具。</li>
 </ol>
 <p><strong>相关下载</strong></p>
 <ul>
-<li><a
-target="_blank" rel="noopener" href="https://file.liangxiegame.com/Frameworkv1_0_22_cf1ec6ca_1e33_448d_b675_45b4ac11617f.unitypackage">QFramework
-下载</a>
+<li><a target="_blank" rel="noopener" href="https://file.liangxiegame.com/Frameworkv1_0_22_cf1ec6ca_1e33_448d_b675_45b4ac11617f.unitypackage">QFramework 下载</a>
 <ul>
 <li>开箱即用的 Unity 开发框架</li>
 <li>内置 Res Kit、UI Kit、Audio 以及常用的工具库</li>
-</ul></li>
+</ul>
+</li>
 <li><a target="_blank" rel="noopener" href="https://qframework.cn/package">插件平台</a>
 <ul>
 <li>包含丰富的模块和解决方案</li>
-</ul></li>
 </ul>
-<h1 id="qframework-架构">QFramework 架构</h1>
+</li>
+</ul>
+<h1 id="QFramework-架构">QFramework 架构<a class="header-anchor" href="#QFramework-架构">·</a></h1>
 <p>这套架构的特性如下：</p>
 <ul>
 <li>基于 MVC</li>
@@ -452,294 +458,241 @@ target="_blank" rel="noopener" href="https://file.liangxiegame.com/Frameworkv1_0
 <li>数据层：IModel</li>
 <li>工具层：IUtility</li>
 </ul>
-<p>除了四个层级，还提供了 Command、Query、Event、BindableProperty
-等概念和工具。</p>
-<p><img data-src="https://file.liangxiegame.com/5e9f1682-1907-47a2-a23a-2d5a4ba2e7a4.png" /></p>
-<h2 id="层级之间的规则">层级之间的规则</h2>
+<p>除了四个层级，还提供了 Command、Query、Event、BindableProperty 等概念和工具。</p>
+<p><img data-src="https://file.liangxiegame.com/5e9f1682-1907-47a2-a23a-2d5a4ba2e7a4.png" alt="" loading="lazy" /></p>
+<h2 id="层级之间的规则">层级之间的规则<a class="header-anchor" href="#层级之间的规则">·</a></h2>
 <ul>
-<li>表现层：ViewController层，使用IController接口实现。
-负责接收输入和状态变化时的表现，一般情况下，MonoBehaviour 均为表现层
+<li>
+<p>表现层：ViewController层，使用IController接口实现。<br />
+负责接收输入和状态变化时的表现，一般情况下，MonoBehaviour 均为表现层</p>
 <ul>
 <li>可以获取 System、Model</li>
 <li>可以发送 Command、Query</li>
 <li>可以监听 Event</li>
-</ul></li>
-<li>系统层：System层。使用ISystem接口实现。
-帮助IController承担一部分逻辑，在多个表现层共享的逻辑，比如计时系统、商城系统、成就系统等
+</ul>
+</li>
+<li>
+<p>系统层：System层。使用ISystem接口实现。<br />
+帮助IController承担一部分逻辑，在多个表现层共享的逻辑，比如计时系统、商城系统、成就系统等</p>
 <ul>
 <li>可以获取 System、Model</li>
 <li>可以监听Event</li>
 <li>可以发送Event</li>
-</ul></li>
-<li>数据层：Model层。使用IModel接口实现。
-负责数据的定义、数据的增删查改方法的提供
+</ul>
+</li>
+<li>
+<p>数据层：Model层。使用IModel接口实现。<br />
+负责数据的定义、数据的增删查改方法的提供</p>
 <ul>
 <li>可以获取 Utility</li>
 <li>可以发送 Event</li>
-</ul></li>
-<li>工具层：Utility层。使用IUtility接口实现。
-负责提供基础设施，比如存储方法、序列化方法、网络连接方法、蓝牙方法、SDK、框架继承等。啥都干不了，可以集成第三方库，或者封装API</li>
-<li>Command：命令，负责数据的增删改。
+</ul>
+</li>
+<li>
+<p>工具层：Utility层。使用IUtility接口实现。<br />
+负责提供基础设施，比如存储方法、序列化方法、网络连接方法、蓝牙方法、SDK、框架继承等。啥都干不了，可以集成第三方库，或者封装API</p>
+</li>
+<li>
+<p>Command：命令，负责数据的增删改。</p>
 <ul>
 <li>可以获取 System、Model</li>
 <li>可以发送 Event、Command</li>
-</ul></li>
-<li>Query：查询、负责数据的查询
+</ul>
+</li>
+<li>
+<p>Query：查询、负责数据的查询</p>
 <ul>
 <li>可以获取 System、Model</li>
 <li>可以发送 Query</li>
-</ul></li>
-<li>通用规则：
+</ul>
+</li>
+<li>
+<p>通用规则：</p>
 <ul>
 <li>IController 更改 ISystem、IModel 的状态必须用Command</li>
-<li>ISystem、IModel 状态发生变更后通知 IController
-必须用事件或BindableProperty</li>
+<li>ISystem、IModel 状态发生变更后通知 IController 必须用事件或BindableProperty</li>
 <li>IController可以获取ISystem、IModel对象来进行数据查询</li>
 <li>ICommand、IQuery 不能有状态,</li>
 <li>上层可以直接获取下层，下层不能获取上层对象</li>
 <li>下层向上层通信用事件</li>
-<li>上层向下层通信用方法调用（只是做查询，状态变更用
-Command），IController 的交互逻辑为特别情况，只能用 Command</li>
-</ul></li>
+<li>上层向下层通信用方法调用（只是做查询，状态变更用 Command），IController 的交互逻辑为特别情况，只能用 Command</li>
+</ul>
+</li>
 </ul>
 <p>通用规则是理想状态下的一套规则，但是落实的实际项目，很有可能需要对以上规则做一些修改。</p>
-<h2 id="交互逻辑和表现逻辑">交互逻辑和表现逻辑</h2>
+<h2 id="交互逻辑和表现逻辑">交互逻辑和表现逻辑<a class="header-anchor" href="#交互逻辑和表现逻辑">·</a></h2>
 <p>交互逻辑，就是从用户输入开始到数据变更的逻辑</p>
 <p>顺序是 View-&gt;Controller-&gt;Model</p>
 <p>表现逻辑，就是数据变更到在界面显示的逻辑</p>
 <p>顺序是 Model-&gt;Controller-&gt;View</p>
-<p><img data-src="https://file.liangxiegame.com/0b4e1255-ee5d-4223-97a6-2e49cf68715c.png" /></p>
-<p>虽然交互逻辑和表现逻辑理解起来简单，但是它们非常重要，因为 QFramework
-接下来的概念都是围绕这两个概念展开的。</p>
-<p>View、Model 以及 Controller
-的交互逻辑和表现逻辑形成了一个闭环。构成了完整的 MVC 闭环。</p>
+<p><img data-src="https://file.liangxiegame.com/0b4e1255-ee5d-4223-97a6-2e49cf68715c.png" alt="" loading="lazy" /></p>
+<p>虽然交互逻辑和表现逻辑理解起来简单，但是它们非常重要，因为 QFramework 接下来的概念都是围绕这两个概念展开的。</p>
+<p>View、Model 以及 Controller 的交互逻辑和表现逻辑形成了一个闭环。构成了完整的 MVC 闭环。</p>
 <hr />
-<p>而 Controller 本身之所以臃肿，是因为，它负责了两种职责，即改变 Model
-数据 的交互逻辑，以及 Model 数据变更之后更新到界面的表现逻辑。</p>
-<p>而在一个有一定规模的项目中，表现逻辑和交互逻辑非常多。而一个
-Controller 很容易就做到上千行代码。</p>
+<p>而 Controller 本身之所以臃肿，是因为，它负责了两种职责，即改变 Model 数据 的交互逻辑，以及 Model 数据变更之后更新到界面的表现逻辑。</p>
+<p>而在一个有一定规模的项目中，表现逻辑和交互逻辑非常多。而一个 Controller 很容易就做到上千行代码。</p>
 <hr />
-<p>而大部分的 MVC 方案，解决 Controller 臃肿用的是引入 Command
-的方式，即引入命令模式，通过命令来分担 Controller 的交互逻辑的职责。</p>
+<p>而大部分的 MVC 方案，解决 Controller 臃肿用的是引入 Command 的方式，即引入命令模式，通过命令来分担 Controller 的交互逻辑的职责。</p>
 <p>QFramework 也是使用了同样的方式解决 Controller 臃肿的问题。</p>
-<h2 id="案例-计数器">案例-计数器</h2>
-<h3 id="普通的mvc框架">普通的MVC框架</h3>
+<h2 id="案例-计数器">案例-计数器<a class="header-anchor" href="#案例-计数器">·</a></h2>
+<h3 id="普通的MVC框架">普通的MVC框架<a class="header-anchor" href="#普通的MVC框架">·</a></h3>
 <p>Model、View、Controller</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.UI;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">QFramework.Example</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Controller</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterAppController</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// View</span></span><br><span class="line">        <span class="keyword">private</span> Button mBtnAdd;</span><br><span class="line">        <span class="keyword">private</span> Button mBtnSub;</span><br><span class="line">        <span class="keyword">private</span> Text mCountText;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Model</span></span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">int</span> mCount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// View 组件获取</span></span><br><span class="line">            mBtnAdd = transform.Find(<span class="string">&quot;BtnAdd&quot;</span>).GetComponent&lt;Button&gt;();</span><br><span class="line">            mBtnSub = transform.Find(<span class="string">&quot;BtnSub&quot;</span>).GetComponent&lt;Button&gt;();</span><br><span class="line">            mCountText = transform.Find(<span class="string">&quot;CountText&quot;</span>).GetComponent&lt;Text&gt;();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 监听输入</span></span><br><span class="line">            mBtnAdd.onClick.AddListener(() =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 交互逻辑</span></span><br><span class="line">                mCount++;</span><br><span class="line">                <span class="comment">// 表现逻辑</span></span><br><span class="line">                UpdateView();        </span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            mBtnSub.onClick.AddListener(() =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 交互逻辑</span></span><br><span class="line">                mCount--;</span><br><span class="line">                <span class="comment">// 表现逻辑</span></span><br><span class="line">                UpdateView();</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            UpdateView();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">UpdateView</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            mCountText.text = mCount.ToString();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="model-的代码">Model 的代码</h4>
+<h4 id="Model-的代码">Model 的代码<a class="header-anchor" href="#Model-的代码">·</a></h4>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Model</span></span><br><span class="line"><span class="keyword">private</span> <span class="built_in">int</span> mCount = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<p>非常简单，只有一个成员变量，但是在这里它其实并不算是一个
-Model，他只是要在 View 中显示的一个数据而已，具体为什么不是 Model
-我们在后边再说。</p>
-<h4 id="view-的代码">View 的代码</h4>
+<p>非常简单，只有一个成员变量，但是在这里它其实并不算是一个 Model，他只是要在 View 中显示的一个数据而已，具体为什么不是 Model 我们在后边再说。</p>
+<h4 id="View-的代码">View 的代码<a class="header-anchor" href="#View-的代码">·</a></h4>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// View</span></span><br><span class="line"><span class="keyword">private</span> Button mBtnAdd;</span><br><span class="line"><span class="keyword">private</span> Button mBtnSub;</span><br><span class="line"><span class="keyword">private</span> Text mCountText;</span><br></pre></td></tr></table></figure>
-<p>View 的代码也很简单，View 在 QFramework 的 MVC
-定义里就是提供关键组件的引用，比如这三个组件是要在 Controller
-代码里要用到的。而其他的例如 Canvas Scaler 等这些组件目前 Controller
-不需要，所以就不用声明。</p>
-<h4 id="controller-的代码">Controller 的代码</h4>
+<p>View 的代码也很简单，View 在 QFramework 的 MVC 定义里就是提供关键组件的引用，比如这三个组件是要在 Controller 代码里要用到的。而其他的例如 Canvas Scaler 等这些组件目前 Controller 不需要，所以就不用声明。</p>
+<h4 id="Controller-的代码">Controller 的代码<a class="header-anchor" href="#Controller-的代码">·</a></h4>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 监听输入</span></span><br><span class="line">    mBtnAdd.onClick.AddListener(() =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 交互逻辑</span></span><br><span class="line">        mCount++;</span><br><span class="line">        <span class="comment">// 表现逻辑</span></span><br><span class="line">        UpdateView();        </span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    mBtnSub.onClick.AddListener(() =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 交互逻辑</span></span><br><span class="line">        mCount--;</span><br><span class="line">        <span class="comment">// 表现逻辑</span></span><br><span class="line">        UpdateView();</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    UpdateView();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">UpdateView</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    mCountText.text = mCount.ToString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>以上就是 Controller 的代码。</p>
-<h3 id="使用了qframework框架">使用了QFramework框架</h3>
-<p>使用到了
-主架构、表现层、系统层、数据层、工具层、命令，分块的代码在每个部分中有展示。</p>
+<h3 id="使用了QFramework框架">使用了QFramework框架<a class="header-anchor" href="#使用了QFramework框架">·</a></h3>
+<p>使用到了 主架构、表现层、系统层、数据层、工具层、命令，分块的代码在每个部分中有展示。</p>
 <p>完整代码如下：</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.UI;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">QFramework.Example</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 1. 定义一个 Model 对象</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">ICounterAppModel</span> : <span class="title">IModel</span></span><br><span class="line">    &#123;</span><br><span class="line">        BindableProperty&lt;<span class="built_in">int</span>&gt; Count &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterAppModel</span> : <span class="title">AbstractModel</span>,<span class="title">ICounterAppModel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> BindableProperty&lt;<span class="built_in">int</span>&gt; Count &#123; <span class="keyword">get</span>; &#125; = <span class="keyword">new</span> BindableProperty&lt;<span class="built_in">int</span>&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInit</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> storage = <span class="keyword">this</span>.GetUtility&lt;IStorage&gt;();</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 设置初始值（不触发事件）</span></span><br><span class="line">            Count.SetValueWithoutEvent(storage.LoadInt(<span class="keyword">nameof</span>(Count)));</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 当数据变更时 存储数据</span></span><br><span class="line">            Count.Register(newCount =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                storage.SaveInt(<span class="keyword">nameof</span>(Count),newCount);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IAchievementSystem</span> : <span class="title">ISystem</span></span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AchievementSystem</span> : <span class="title">AbstractSystem</span> ,<span class="title">IAchievementSystem</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInit</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.GetModel&lt;ICounterAppModel&gt;() <span class="comment">// -+</span></span><br><span class="line">                .Count</span><br><span class="line">                .Register(newCount =&gt;</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (newCount == <span class="number">10</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Debug.Log(<span class="string">&quot;触发 点击达人 成就&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (newCount == <span class="number">20</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Debug.Log(<span class="string">&quot;触发 点击专家 成就&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (newCount == <span class="number">-10</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Debug.Log(<span class="string">&quot;触发 点击菜鸟 成就&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IStorage</span> : <span class="title">IUtility</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">SaveInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> <span class="keyword">value</span></span>)</span>;</span><br><span class="line">        <span class="function"><span class="built_in">int</span> <span class="title">LoadInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> defaultValue = <span class="number">0</span></span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Storage</span> : <span class="title">IStorage</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SaveInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> <span class="keyword">value</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            PlayerPrefs.SetInt(key,<span class="keyword">value</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">LoadInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> defaultValue = <span class="number">0</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> PlayerPrefs.GetInt(key, defaultValue);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.定义一个架构（提供 MVC、分层、模块管理等）</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterApp</span> : <span class="title">Architecture</span>&lt;<span class="title">CounterApp</span>&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Init</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 注册 System </span></span><br><span class="line">            <span class="keyword">this</span>.RegisterSystem&lt;IAchievementSystem&gt;(<span class="keyword">new</span> AchievementSystem()); </span><br><span class="line">             </span><br><span class="line">            <span class="comment">// 注册 Model</span></span><br><span class="line">            <span class="keyword">this</span>.RegisterModel&lt;ICounterAppModel&gt;(<span class="keyword">new</span> CounterAppModel());</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 注册存储工具的对象</span></span><br><span class="line">            <span class="keyword">this</span>.RegisterUtility&lt;IStorage&gt;(<span class="keyword">new</span> Storage());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">ExecuteCommand</span>(<span class="params">ICommand command</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Debug.Log(<span class="string">&quot;Before &quot;</span> + command.GetType().Name + <span class="string">&quot;Execute&quot;</span>);</span><br><span class="line">            <span class="keyword">base</span>.ExecuteCommand(command);</span><br><span class="line">            Debug.Log(<span class="string">&quot;After &quot;</span> + command.GetType().Name + <span class="string">&quot;Execute&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 引入 Command</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">IncreaseCountCommand</span> : <span class="title">AbstractCommand</span> </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnExecute</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> model = <span class="keyword">this</span>.GetModel&lt;ICounterAppModel&gt;();</span><br><span class="line">                </span><br><span class="line">            model.Count.Value++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">DecreaseCountCommand</span> : <span class="title">AbstractCommand</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnExecute</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.GetModel&lt;ICounterAppModel&gt;().Count.Value--; <span class="comment">// -+</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Controller</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterAppController</span> : <span class="title">MonoBehaviour</span> , <span class="title">IController</span> <span class="comment">/* 3.实现 IController 接口 */</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// View</span></span><br><span class="line">        <span class="keyword">private</span> Button mBtnAdd;</span><br><span class="line">        <span class="keyword">private</span> Button mBtnSub;</span><br><span class="line">        <span class="keyword">private</span> Text mCountText;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 4. Model</span></span><br><span class="line">        <span class="keyword">private</span> ICounterAppModel mModel;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 5. 获取模型</span></span><br><span class="line">            mModel = <span class="keyword">this</span>.GetModel&lt;ICounterAppModel&gt;();</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// View 组件获取</span></span><br><span class="line">            mBtnAdd = transform.Find(<span class="string">&quot;BtnAdd&quot;</span>).GetComponent&lt;Button&gt;();</span><br><span class="line">            mBtnSub = transform.Find(<span class="string">&quot;BtnSub&quot;</span>).GetComponent&lt;Button&gt;();</span><br><span class="line">            mCountText = transform.Find(<span class="string">&quot;CountText&quot;</span>).GetComponent&lt;Text&gt;();</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 监听输入</span></span><br><span class="line">            mBtnAdd.onClick.AddListener(() =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 交互逻辑</span></span><br><span class="line">                <span class="keyword">this</span>.SendCommand&lt;IncreaseCountCommand&gt;();</span><br><span class="line">            &#125;);</span><br><span class="line">            </span><br><span class="line">            mBtnSub.onClick.AddListener(() =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 交互逻辑</span></span><br><span class="line">                <span class="keyword">this</span>.SendCommand(<span class="keyword">new</span> DecreaseCountCommand(<span class="comment">/* 这里可以传参（如果有） */</span>));</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 表现逻辑</span></span><br><span class="line">            mModel.Count.RegisterWithInitValue(newCount =&gt; <span class="comment">// -+</span></span><br><span class="line">            &#123;</span><br><span class="line">                UpdateView();</span><br><span class="line"></span><br><span class="line">            &#125;).UnRegisterWhenGameObjectDestroyed(gameObject);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">UpdateView</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            mCountText.text = mModel.Count.ToString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> IArchitecture <span class="title">GetArchitecture</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> CounterApp.Interface;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnDestroy</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 8. 将 Model 设置为空</span></span><br><span class="line">            mModel = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="对比分析">对比分析</h3>
+<h3 id="对比分析">对比分析<a class="header-anchor" href="#对比分析">·</a></h3>
 <p>目前像计数器这样的逻辑，使用MVC框架的代码完全没有问题，甚至显得更简单，代码更少。</p>
 <p>但是我们要用发展的眼光看待问题。</p>
 <p>假如这是一个初创项目，那么接下来很有可能需要添加大量的业务逻辑。</p>
-<p>其中很有可能让 mCount 在多个 Controller 中使用，甚至需要针对 mCount
-这个数据写一些其他逻辑，比如增加 mCount 则增加 5 个分数，或者 mCount
-需要存储等，总之 mCount 在未来可能会发展成一个需要共享的数据，而 mCount
-目前只属于 CounterAppController，显然在未来这是不够用的。</p>
-<p>我们就需要让 mCount 成员变量变成一个共享的数据，最快的做法是吧 mCount
-变量变成静态变量或者单例，但是这样虽然写起来很快，但是在后期维护额度时候会产生很多的问题。</p>
-<h2 id="主架构architecturet">主架构（Architecture&lt;T&gt;）</h2>
-<p>Architecture 用于管理模块，或者说 Architecture
-提供一整套架构的解决方案，而模块管理和提供 MVC
-只是其功能的一小部分。</p>
+<p>其中很有可能让 mCount 在多个 Controller 中使用，甚至需要针对 mCount 这个数据写一些其他逻辑，比如增加 mCount 则增加 5 个分数，或者 mCount 需要存储等，总之 mCount 在未来可能会发展成一个需要共享的数据，而 mCount 目前只属于 CounterAppController，显然在未来这是不够用的。</p>
+<p>我们就需要让 mCount 成员变量变成一个共享的数据，最快的做法是吧 mCount 变量变成静态变量或者单例，但是这样虽然写起来很快，但是在后期维护额度时候会产生很多的问题。</p>
+<h2 id="主架构（Architecture-T-）">主架构（Architecture&lt;T&gt;）<a class="header-anchor" href="#主架构（Architecture-T-）">·</a></h2>
+<p>Architecture 用于管理模块，或者说 Architecture 提供一整套架构的解决方案，而模块管理和提供 MVC 只是其功能的一小部分。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个架构（提供 MVC、分层、模块管理等）</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterApp</span> : <span class="title">Architecture</span>&lt;<span class="title">CounterApp</span>&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Init</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 注册 System </span></span><br><span class="line">            <span class="keyword">this</span>.RegisterSystem&lt;IAchievementSystem&gt;(<span class="keyword">new</span> AchievementSystem()); </span><br><span class="line">             </span><br><span class="line">            <span class="comment">// 注册 Model</span></span><br><span class="line">            <span class="keyword">this</span>.RegisterModel&lt;ICounterAppModel&gt;(<span class="keyword">new</span> CounterAppModel());</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 注册存储工具的对象</span></span><br><span class="line">            <span class="keyword">this</span>.RegisterUtility&lt;IStorage&gt;(<span class="keyword">new</span> Storage());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">ExecuteCommand</span>(<span class="params">ICommand command</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Debug.Log(<span class="string">&quot;Before &quot;</span> + command.GetType().Name + <span class="string">&quot;Execute&quot;</span>);</span><br><span class="line">            <span class="keyword">base</span>.ExecuteCommand(command);</span><br><span class="line">            Debug.Log(<span class="string">&quot;After &quot;</span> + command.GetType().Name + <span class="string">&quot;Execute&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="表现层controller层">表现层（Controller层）</h2>
-<p>负责接收输入和状态变化时的表现，一般情况下，MonoBehaviour
-均为表现层。</p>
+<h2 id="表现层（Controller层）">表现层（Controller层）<a class="header-anchor" href="#表现层（Controller层）">·</a></h2>
+<p>负责接收输入和状态变化时的表现，一般情况下，MonoBehaviour 均为表现层。</p>
 <p>使用IController接口实现。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Controller</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterAppController</span> : <span class="title">MonoBehaviour</span> , <span class="title">IController</span> <span class="comment">/* 3.实现 IController 接口 */</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// View</span></span><br><span class="line">        <span class="keyword">private</span> Button mBtnAdd;</span><br><span class="line">        <span class="keyword">private</span> Button mBtnSub;</span><br><span class="line">        <span class="keyword">private</span> Text mCountText;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 4. Model</span></span><br><span class="line">        <span class="keyword">private</span> ICounterAppModel mModel;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 5. 获取模型</span></span><br><span class="line">            mModel = <span class="keyword">this</span>.GetModel&lt;ICounterAppModel&gt;();</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// View 组件获取</span></span><br><span class="line">            mBtnAdd = transform.Find(<span class="string">&quot;BtnAdd&quot;</span>).GetComponent&lt;Button&gt;();</span><br><span class="line">            mBtnSub = transform.Find(<span class="string">&quot;BtnSub&quot;</span>).GetComponent&lt;Button&gt;();</span><br><span class="line">            mCountText = transform.Find(<span class="string">&quot;CountText&quot;</span>).GetComponent&lt;Text&gt;();</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 监听输入</span></span><br><span class="line">            mBtnAdd.onClick.AddListener(() =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 交互逻辑</span></span><br><span class="line">                <span class="keyword">this</span>.SendCommand&lt;IncreaseCountCommand&gt;();</span><br><span class="line">            &#125;);</span><br><span class="line">            </span><br><span class="line">            mBtnSub.onClick.AddListener(() =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 交互逻辑</span></span><br><span class="line">                <span class="keyword">this</span>.SendCommand(<span class="keyword">new</span> DecreaseCountCommand(<span class="comment">/* 这里可以传参（如果有） */</span>));</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 表现逻辑</span></span><br><span class="line">            mModel.Count.RegisterWithInitValue(newCount =&gt; <span class="comment">// -+</span></span><br><span class="line">            &#123;</span><br><span class="line">                UpdateView();</span><br><span class="line"></span><br><span class="line">            &#125;).UnRegisterWhenGameObjectDestroyed(gameObject);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">UpdateView</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            mCountText.text = mModel.Count.ToString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> IArchitecture <span class="title">GetArchitecture</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> CounterApp.Interface;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnDestroy</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 8. 将 Model 设置为空</span></span><br><span class="line">            mModel = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="系统层system层">系统层（System层）</h2>
+<h2 id="系统层（System层）">系统层（System层）<a class="header-anchor" href="#系统层（System层）">·</a></h2>
 <p>帮助IController承担一部分逻辑，在多个表现层共享的逻辑，比如计时系统、商城系统、成就系统等</p>
 <p>使用ISystem接口实现。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// System 层</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IAchievementSystem</span> : <span class="title">ISystem</span></span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AchievementSystem</span> : <span class="title">AbstractSystem</span> ,<span class="title">IAchievementSystem</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInit</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.GetModel&lt;ICounterAppModel&gt;() <span class="comment">// -+</span></span><br><span class="line">                .Count</span><br><span class="line">                .Register(newCount =&gt;</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (newCount == <span class="number">10</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Debug.Log(<span class="string">&quot;触发 点击达人 成就&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (newCount == <span class="number">20</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Debug.Log(<span class="string">&quot;触发 点击专家 成就&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (newCount == <span class="number">-10</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Debug.Log(<span class="string">&quot;触发 点击菜鸟 成就&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="数据层model层">数据层（Model层）</h2>
+<h2 id="数据层（Model层）">数据层（Model层）<a class="header-anchor" href="#数据层（Model层）">·</a></h2>
 <p>负责数据的定义、提供数据的增删查改方法。</p>
 <p>使用IModel接口实现。</p>
 <hr />
-<p>Model
-的引入是为了解决数据共享的问题，但不只是为了让数据和表现分离，这一点是非常重要的一点。</p>
+<p>Model 的引入是为了解决数据共享的问题，但不只是为了让数据和表现分离，这一点是非常重要的一点。</p>
 <p>数据共享分两种：空间上的共享和时间上的共享。</p>
 <p>空间的共享很简单，就是多个点的代码需要访问 Model 里的数据。</p>
-<p>时间上的共享就是存储功能，将上一次关闭 App
-之前的数据存储到一个文件里，这次打开时获得上次关闭 App 之前的数据。</p>
+<p>时间上的共享就是存储功能，将上一次关闭 App 之前的数据存储到一个文件里，这次打开时获得上次关闭 App 之前的数据。</p>
 <hr />
 <p><strong>数据共享</strong>的问题通过 引入 Model 就可以解决了。</p>
-<p>但是，需要共享的数据放 Model
-里，<u>不需要共享的，能不放就不放</u>。</p>
+<p>但是，需要共享的数据放 Model 里，<u>不需要共享的，能不放就不放</u>。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Model 层</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">ICounterAppModel</span> : <span class="title">IModel</span></span><br><span class="line">    &#123;</span><br><span class="line">        BindableProperty&lt;<span class="built_in">int</span>&gt; Count &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterAppModel</span> : <span class="title">AbstractModel</span>,<span class="title">ICounterAppModel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> Count1;  <span class="comment">// 不使用BindableProperty的形式</span></span><br><span class="line">        <span class="keyword">public</span> BindableProperty&lt;<span class="built_in">int</span>&gt; Count &#123; <span class="keyword">get</span>; &#125; = <span class="keyword">new</span> BindableProperty&lt;<span class="built_in">int</span>&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInit</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            Count = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">var</span> storage = <span class="keyword">this</span>.GetUtility&lt;IStorage&gt;();</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 设置初始值（不触发事件）</span></span><br><span class="line">            Count.SetValueWithoutEvent(storage.LoadInt(<span class="keyword">nameof</span>(Count)));</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 当数据变更时 存储数据</span></span><br><span class="line">            Count.Register(newCount =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                storage.SaveInt(<span class="keyword">nameof</span>(Count),newCount);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="工具层utility层">工具层（Utility层）</h2>
+<h2 id="工具层（Utility层）">工具层（Utility层）<a class="header-anchor" href="#工具层（Utility层）">·</a></h2>
 <p>负责提供基础设施，比如存储方法、序列化方法、网络连接方法、蓝牙方法、SDK、框架继承等。也可以集成第三方库，或者封装API。</p>
 <p>使用IUtility接口实现。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Utility 层</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IStorage</span> : <span class="title">IUtility</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">SaveInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> <span class="keyword">value</span></span>)</span>;</span><br><span class="line">        <span class="function"><span class="built_in">int</span> <span class="title">LoadInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> defaultValue = <span class="number">0</span></span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Storage</span> : <span class="title">IStorage</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SaveInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> <span class="keyword">value</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            PlayerPrefs.SetInt(key,<span class="keyword">value</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">LoadInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> defaultValue = <span class="number">0</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> PlayerPrefs.GetInt(key, defaultValue);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="命令command">命令（Command）</h2>
+<h2 id="命令（Command）">命令（Command）<a class="header-anchor" href="#命令（Command）">·</a></h2>
 <p>负责数据的增删改。</p>
-<p>参考<a href="#交互逻辑和表现逻辑">交互逻辑和表现逻辑</a></p>
+<p>参考<a href="#%E4%BA%A4%E4%BA%92%E9%80%BB%E8%BE%91%E5%92%8C%E8%A1%A8%E7%8E%B0%E9%80%BB%E8%BE%91">交互逻辑和表现逻辑</a></p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入 Command</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">IncreaseCountCommand</span> : <span class="title">AbstractCommand</span> </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnExecute</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.GetModel&lt;ICounterAppModel&gt;().Count.Value++;  <span class="comment">// +</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">DecreaseCountCommand</span> : <span class="title">AbstractCommand</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnExecute</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.GetModel&lt;ICounterAppModel&gt;().Count.Value--;  <span class="comment">// -</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>大家可能会问，一个简单的数据加减操作，至于创建一个 Command
-对象来承担么？看不出来好处呀，反而代码更多了。</p>
-<p>如果整个项目只有一个简单的数据加减操作，那使用 Command
-有点多此一举，但是一般的项目的交互逻辑，是非常复杂的，代码量也非常多，整个时候使用
-Command 词汇发挥作用。</p>
+<p>大家可能会问，一个简单的数据加减操作，至于创建一个 Command 对象来承担么？看不出来好处呀，反而代码更多了。</p>
+<p>如果整个项目只有一个简单的数据加减操作，那使用 Command 有点多此一举，但是一般的项目的交互逻辑，是非常复杂的，代码量也非常多，整个时候使用 Command 词汇发挥作用。</p>
 <p>具体发挥什么作用，使用 Command 可以带来很多便利，比如：</p>
 <ul>
 <li>Command 可以<strong>复用</strong>，Command 也可以调用 Command</li>
-<li>Command 可以比较方便实现<strong>撤销功能</strong>，如果 App 或者
-游戏需要的话</li>
+<li>Command 可以比较方便实现<strong>撤销功能</strong>，如果 App 或者 游戏需要的话</li>
 <li>如果遵循一定规范，可以实现使用 Command 跑自动化测试。</li>
-<li>Command 可以定制 Command <strong>队列</strong>，也可以让 Command
-按照特定的方式执行</li>
+<li>Command 可以定制 Command <strong>队列</strong>，也可以让 Command 按照特定的方式执行</li>
 <li>一个 Command 也可以封装成一个 Http 或者 TCP 里的一次数据请求</li>
 <li>Command 可以实现 Command 中间件模式</li>
 <li>等等</li>
 </ul>
 <hr />
-<p>OK，通过引入 Command，帮助分担了 Controller 的交互逻辑。使得
-Controller 成为一个薄薄的一层，在需要修改 Model 的时候，Controller
-只要调用一句简单的 Command 即可。</p>
+<p>OK，通过引入 Command，帮助分担了 Controller 的交互逻辑。使得 Controller 成为一个薄薄的一层，在需要修改 Model 的时候，Controller 只要调用一句简单的 Command 即可。</p>
 <p>Command 最明显的好处就是：</p>
 <ul>
-<li>就算代码再乱，也只是在一个 Command
-对象里乱，而不会影响其他的对象。</li>
+<li>就算代码再乱，也只是在一个 Command 对象里乱，而不会影响其他的对象。</li>
 <li>讲方法封装成命令对象，可以实现对命令对象的组织、排序、延时等操作。</li>
 </ul>
 <p>更多好处会随着大家的实践慢慢体会到。</p>
-<h3 id="command拦截">Command拦截</h3>
+<h3 id="Command拦截">Command拦截<a class="header-anchor" href="#Command拦截">·</a></h3>
 <p>QFramework 提供了拦截 Command 的 API。</p>
 <p>我们尝试在 CounterApp 中实现一个 Command 日志。</p>
 <p>代码很简单，如下:</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterApp</span> : <span class="title">Architecture</span>&lt;<span class="title">CounterApp</span>&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Init</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 注册 System </span></span><br><span class="line">        <span class="keyword">this</span>.RegisterSystem&lt;IAchievementSystem&gt;(<span class="keyword">new</span> AchievementSystem()); </span><br><span class="line"></span><br><span class="line">        <span class="comment">// 注册 Model</span></span><br><span class="line">        <span class="keyword">this</span>.RegisterModel&lt;ICounterAppModel&gt;(<span class="keyword">new</span> CounterAppModel());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 注册存储工具的对象</span></span><br><span class="line">        <span class="keyword">this</span>.RegisterUtility&lt;IStorage&gt;(<span class="keyword">new</span> Storage());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">ExecuteCommand</span>(<span class="params">ICommand command</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Debug.Log(<span class="string">&quot;Before &quot;</span> + command.GetType().Name + <span class="string">&quot;Execute&quot;</span>);</span><br><span class="line">        <span class="keyword">base</span>.ExecuteCommand(command);</span><br><span class="line">        Debug.Log(<span class="string">&quot;After &quot;</span> + command.GetType().Name + <span class="string">&quot;Execute&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>只需要在 Architecture 中覆写 ExecuteCommand 即可。</p>
 <p>运行之后，随意点击了几次按钮，结果如下:</p>
-<p><a
-target="_blank" rel="noopener" href="https://file.liangxiegame.com/96bdc2f4-222d-4e91-a10e-dc2128e50fb4.png"><img data-src="https://file.liangxiegame.com/96bdc2f4-222d-4e91-a10e-dc2128e50fb4.png"
-alt="img" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://file.liangxiegame.com/96bdc2f4-222d-4e91-a10e-dc2128e50fb4.png"><img data-src="https://file.liangxiegame.com/96bdc2f4-222d-4e91-a10e-dc2128e50fb4.png" alt="" loading="lazy" /></a></p>
 <p>这样就实现了一个非常简单的 Command 日志功能。</p>
 <p>有了 Command 拦截功能，我们可以做非常多的事情，比如：</p>
 <ul>
 <li>Command 日志可以用来方便调试</li>
-<li>可以实现 Command 中间件模式 可以写各种各样额度 Command 中间件，比如
-Command 日志中间件</li>
+<li>可以实现 Command 中间件模式 可以写各种各样额度 Command 中间件，比如 Command 日志中间件</li>
 <li>可以方便你先撤销功能</li>
 <li>可以用 Command 做自动化测试</li>
 <li>等等</li>
 </ul>
-<h2 id="事件event">事件（Event）</h2>
+<h2 id="事件（Event）">事件（Event）<a class="header-anchor" href="#事件（Event）">·</a></h2>
 <p>在一个项目中，表现逻辑的调用次数，至少会和交互逻辑的调用次数一样多。因为只要修改了数据，对应地就要把数据的变化在界面上表现出来。</p>
 <p>而这部分使用的表现逻辑的代码也会很多，所以我们引入一个事件机制来解决这个问题。</p>
-<p>这个事件机制的使用其实是和 Command
-一起使用的，这里有一个简单的小模式，如下图所示：</p>
-<figure>
-<img data-src="https://file.liangxiegame.com/60ccd370-7c2c-4792-8435-ff5427dc5a1b.png"
-alt="img" />
-<figcaption aria-hidden="true">img</figcaption>
-</figure>
-<p>即通过 Command
-修改数据，当数据发生修改后发送对应的<strong>数据变更事件</strong>。</p>
-<p>这个是简化版本的 CQRS 原则，即 Command Query Responsibility
-Separiation，读写分离原则。</p>
+<p>这个事件机制的使用其实是和 Command 一起使用的，这里有一个简单的小模式，如下图所示：</p>
+<p><img data-src="https://file.liangxiegame.com/60ccd370-7c2c-4792-8435-ff5427dc5a1b.png" alt="" loading="lazy" /></p>
+<p>即通过 Command 修改数据，当数据发生修改后发送对应的<strong>数据变更事件</strong>。</p>
+<p>这个是简化版本的 CQRS 原则，即 Command Query Responsibility Separiation，读写分离原则。</p>
 <p>引入这项原则会很容易实现 事件驱动、数据驱动 架构。</p>
-<h2 id="对象bindableproperty">对象（BindableProperty）</h2>
-<p>BindableProperty 是包含 数据 + <strong>数据变更事件</strong>
-的一个对象。</p>
-<p>一般情况下，像主角的金币、分数等数据非常适合用 BindableProperty
-的方式实现。</p>
+<h2 id="对象（BindableProperty）">对象（BindableProperty）<a class="header-anchor" href="#对象（BindableProperty）">·</a></h2>
+<p>BindableProperty 是包含 数据 + <strong>数据变更事件</strong> 的一个对象。</p>
+<p>一般情况下，像主角的金币、分数等数据非常适合用 BindableProperty 的方式实现。</p>
 <hr />
 <p>简单的用法如下:</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="keyword">new</span> BindableProperty&lt;<span class="built_in">int</span>&gt;(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">age.Register(newAge=&gt;&#123;</span><br><span class="line">  Debug.Log(newAge)</span><br><span class="line">&#125;).UnRegisterWhenGameObjectDestoryed(gameObject);</span><br><span class="line"></span><br><span class="line">age++;</span><br><span class="line">age--;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出结果</span></span><br><span class="line"><span class="comment">// 11</span></span><br><span class="line"><span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
-<p>非常简单，就是当调用 age++ 和 age--
-的时候，就会触发数据变更事件。</p>
-<p>BindableProperty 除了提供 Register 这个 API 之外，还提供了
-RegisterWithInitValue API,意思是 注册时 先把当前值返回过来。</p>
+<p>非常简单，就是当调用 age++ 和 age-- 的时候，就会触发数据变更事件。</p>
+<p>BindableProperty 除了提供 Register 这个 API 之外，还提供了 RegisterWithInitValue API,意思是 注册时 先把当前值返回过来。</p>
 <p>具体用法如下:</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="keyword">new</span> BindableProperty&lt;<span class="built_in">int</span>&gt;(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">age.RegisterWithInitValue(newAge =&gt; &#123;</span><br><span class="line">  Debug.Log(newAge);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出结果</span></span><br><span class="line"><span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
-<p>这个 API 就是，没有任何变化的情况下，age
-先返回一个当前的值，比较方便用于显示初始界面。</p>
-<p>BindableProperty 是一个独立的工具，可以脱离 QFramework
-架构使用，也就是说不用非要用 QFramework 的 MVC 才能用
-BindableProperty，而是可以再自己项目中随意使用。</p>
+<p>这个 API 就是，没有任何变化的情况下，age 先返回一个当前的值，比较方便用于显示初始界面。</p>
+<p>BindableProperty 是一个独立的工具，可以脱离 QFramework 架构使用，也就是说不用非要用 QFramework 的 MVC 才能用 BindableProperty，而是可以再自己项目中随意使用。</p>
 <hr />
 <p>具体用法：</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置Count初始值（不触发事件）</span></span><br><span class="line">Count.SetValueWithoutEvent(storage.LoadInt(<span class="keyword">nameof</span>(Count)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当Count数据变更时 存储数据</span></span><br><span class="line">Count.Register(newCount =&gt;</span><br><span class="line">&#123;</span><br><span class="line">  storage.SaveInt(<span class="keyword">nameof</span>(Count),newCount);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="用接口设计模块依赖倒置原则">用接口设计模块（依赖倒置原则）</h2>
-<p>QFramework
-本身支持依赖倒置原则，就是所有的模块访问和交互都可以通过接口来完成。</p>
-<p>所有的模块注册、模块获取等代码都是通过接口完成，这一点符合 SOLID
-原则中的 依赖倒置原则。</p>
+<h2 id="用接口设计模块（依赖倒置原则）">用接口设计模块（依赖倒置原则）<a class="header-anchor" href="#用接口设计模块（依赖倒置原则）">·</a></h2>
+<p>QFramework 本身支持依赖倒置原则，就是所有的模块访问和交互都可以通过接口来完成。</p>
+<p>所有的模块注册、模块获取等代码都是通过接口完成，这一点符合 SOLID 原则中的 依赖倒置原则。</p>
 <p>通过接口设计模块可以让我们更容易思考模块之间的交互和职责本身，而不是具体实现，在设计的时候可以减少很多的干扰。</p>
 <p>当然面向接口的方式去做开发也有很多其他的好处，这当然是大家随着使用时长会慢慢体会的。</p>
-<p>其中有一个重要的点，就是我们之前说的 Storage，如果想把存储的 API 从
-PlayerPrefs 切换成 EasySave，那么我们就不需要去修改 Storage
-对象，而是扩展一个 IStorage 接口即可，伪代码如下:</p>
+<p>其中有一个重要的点，就是我们之前说的 Storage，如果想把存储的 API 从 PlayerPrefs 切换成 EasySave，那么我们就不需要去修改 Storage 对象，而是扩展一个 IStorage 接口即可，伪代码如下:</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">EasySaveStorage</span> : <span class="title">IStorage</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SaveInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> <span class="keyword">value</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// todo</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">LoadInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> defaultValue = <span class="number">0</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// todo</span></span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> System.NotImplementedException();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注册模块的伪代码如下:</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个架构（用于管理模块）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterApp</span> : <span class="title">Architecture</span>&lt;<span class="title">CounterApp</span>&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Init</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 注册成就系统</span></span><br><span class="line">        <span class="keyword">this</span>.RegisterSystem&lt;IAchievementSystem&gt;(<span class="keyword">new</span> AchievementSystem());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.RegisterModel&lt;ICounterAppModel&gt;(<span class="keyword">new</span> CounterAppModel());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 注册存储工具对象，从Storage换成了EasySaveStorage</span></span><br><span class="line">        <span class="comment">// this.RegisterUtility&lt;IStorage&gt;(new Storage());</span></span><br><span class="line">        <span class="keyword">this</span>.RegisterUtility&lt;IStorage&gt;(<span class="keyword">new</span> EasySaveStorage());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样，底层所有存储的代码都切换成了 EasySave
-的存储，替换一套方案非常简单。</p>
-<h3 id="controller">Controller</h3>
+<p>这样，底层所有存储的代码都切换成了 EasySave 的存储，替换一套方案非常简单。</p>
+<h3 id="Controller">Controller<a class="header-anchor" href="#Controller">·</a></h3>
 <p>IController已在QFramework框架中给出，可直接使用</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterAppController</span> : <span class="title">MonoBehaviour</span> , <span class="title">IController</span></span><br><span class="line">&#123;  <span class="meta"># ...	&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="system">System</h3>
+<h3 id="System">System<a class="header-anchor" href="#System">·</a></h3>
 <p>ISystem已在QFramework框架中给出，请先继承再使用</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IAchievementSystem</span> : <span class="title">ISystem</span></span><br><span class="line">&#123;  &#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AchievementSystem</span> : <span class="title">AbstractSystem</span> ,<span class="title">IAchievementSystem</span></span><br><span class="line">&#123;  <span class="meta"># ...	&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="model">Model</h3>
+<h3 id="Model">Model<a class="header-anchor" href="#Model">·</a></h3>
 <p>IModel已在QFramework框架中给出，请先继承再使用</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">ICounterAppModel</span> : <span class="title">IModel</span></span><br><span class="line">&#123;</span><br><span class="line">    BindableProperty&lt;<span class="built_in">int</span>&gt; Count &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterAppModel</span> : <span class="title">AbstractModel</span>,<span class="title">ICounterAppModel</span></span><br><span class="line">&#123;  <span class="meta"># ...	&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="utility">Utility</h3>
+<h3 id="Utility">Utility<a class="header-anchor" href="#Utility">·</a></h3>
 <p>IUtility已在QFramework框架中给出，请先继承再使用</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IStorage</span> : <span class="title">IUtility</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SaveInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> <span class="keyword">value</span></span>)</span>;</span><br><span class="line">    <span class="function"><span class="built_in">int</span> <span class="title">LoadInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> defaultValue = <span class="number">0</span></span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Storage</span> : <span class="title">IStorage</span></span><br><span class="line">&#123;  <span class="meta"># ...	&#125;</span></span><br></pre></td></tr></table></figure>
-<h2 id="查询query">查询（Query）</h2>
+<h2 id="查询（Query）">查询（Query）<a class="header-anchor" href="#查询（Query）">·</a></h2>
 <p>负责数据的查询</p>
-<p>Query 是 CQRS 中的 Q，也就是 Command Query Responsibility Saperation
-中的 Query。</p>
-<p>首先 Controller 中的表现逻辑更多是接收到数据变更事件之后，对 Model
-或者 System 进行查询，而查询的时候，有的时候需要组合查询，比如多个 Model
-一起查询，查询的数据可能还需要转换一下，这种查询的代码量比较多。尤其是像模拟警用或者非常重数据的项目，所以
-QFramework 支持通过 Query 这样的一个概念，来解决这部分问题。</p>
+<p>Query 是 CQRS 中的 Q，也就是 Command Query Responsibility Saperation 中的 Query。</p>
+<p>首先 Controller 中的表现逻辑更多是接收到数据变更事件之后，对 Model 或者 System 进行查询，而查询的时候，有的时候需要组合查询，比如多个 Model 一起查询，查询的数据可能还需要转换一下，这种查询的代码量比较多。尤其是像模拟警用或者非常重数据的项目，所以 QFramework 支持通过 Query 这样的一个概念，来解决这部分问题。</p>
 <hr />
-<p>Query
-是一个可选的概念，如果游戏中数据的查询逻辑并不是很重的话，直接在
-Controller
-的表现逻辑里写就可以了，但是查询数据比较重，或者项目规模非常大的话，最好是用
-Query 来承担查询的逻辑。</p>
+<p>Query 是一个可选的概念，如果游戏中数据的查询逻辑并不是很重的话，直接在 Controller 的表现逻辑里写就可以了，但是查询数据比较重，或者项目规模非常大的话，最好是用 Query 来承担查询的逻辑。</p>
 <p>Command 一般负责数据的 增 删 改，而 Query 负责数据的 查。</p>
-<p>如果游戏需要从服务器同步数据，一般拉取服务器数据的请求可以写在 Query
-中，而增删改服务器输的请求可以写在 Command 中。</p>
+<p>如果游戏需要从服务器同步数据，一般拉取服务器数据的请求可以写在 Query 中，而增删改服务器输的请求可以写在 Command 中。</p>
 <hr />
-<p>使用的方式也很简单，和 Command 用法一致，这里我们写一个小的 App，
-叫做 QueryExampleApp 代码如下:</p>
+<p>使用的方式也很简单，和 Command 用法一致，这里我们写一个小的 App， 叫做 QueryExampleApp 代码如下:</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">QFramework.Example</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">QueryExampleController</span> : <span class="title">MonoBehaviour</span>,<span class="title">IController</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">StudentModel</span> : <span class="title">AbstractModel</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">public</span> List&lt;<span class="built_in">string</span>&gt; StudentNames = <span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt;()</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">                <span class="string">&quot;李四&quot;</span></span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInit</span>()</span></span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TeacherModel</span> : <span class="title">AbstractModel</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">public</span> List&lt;<span class="built_in">string</span>&gt; TeacherNames = <span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt;()</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">                <span class="string">&quot;赵六&quot;</span></span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInit</span>()</span></span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Architecture</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">QueryExampleApp</span> : <span class="title">Architecture</span>&lt;<span class="title">QueryExampleApp</span>&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Init</span>()</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">this</span>.RegisterModel(<span class="keyword">new</span> StudentModel());</span><br><span class="line">                <span class="keyword">this</span>.RegisterModel(<span class="keyword">new</span> TeacherModel());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 获取学校的全部人数</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SchoolAllPersonCountQuery</span> : <span class="title">AbstractQuery</span>&lt;<span class="title">int</span>&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="built_in">int</span> <span class="title">OnDo</span>()</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">this</span>.GetModel&lt;StudentModel&gt;().StudentNames.Count +</span><br><span class="line">                       <span class="keyword">this</span>.GetModel&lt;TeacherModel&gt;().TeacherNames.Count;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">int</span> mAllPersonCount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnGUI</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            GUILayout.Label(mAllPersonCount.ToString());</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;查询学校总人数&quot;</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                mAllPersonCount = <span class="keyword">this</span>.SendQuery(<span class="keyword">new</span> SchoolAllPersonCountQuery());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> IArchitecture <span class="title">GetArchitecture</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> QueryExampleApp.Interface;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行之后，当按下查询按钮时，结果就会显示。</p>
-<h2 id="调试界面editor">调试界面（Editor）</h2>
+<h2 id="调试界面（Editor）">调试界面（Editor）<a class="header-anchor" href="#调试界面（Editor）">·</a></h2>
 <p>将底层的系统原型与简易的Editor界面配合，把数据和接口调好后，再与UGUI对接。</p>
-<p><img data-src="https://file.liangxiegame.com/fc803d9e-2868-4b5b-af29-d39dd9e37891.png" /></p>
-<p><img data-src="https://file.liangxiegame.com/fc803d9e-2868-4b5b-af29-d39dd9e37891.png" /></p>
-<h1 id="corekit-工具集">CoreKit 工具集</h1>
-<h2 id="typeeventsystem">TypeEventSystem</h2>
-<p><a
-target="_blank" rel="noopener" href="https://www.gamepixedu.com/course/50/task/5193/show">15.内置工具：TypeEventSystem</a></p>
-<h2 id="easyevent">Easyevent</h2>
-<p><a
-target="_blank" rel="noopener" href="https://www.gamepixedu.com/course/50/task/5394/show">16.内置工具：Easyevent</a></p>
-<h2 id="ioccontainer">IOCContainer</h2>
-<p><a
-target="_blank" rel="noopener" href="https://www.gamepixedu.com/course/50/task/5196/show">18.内置工具：IOCContainer</a></p>
+<p><img data-src="https://file.liangxiegame.com/fc803d9e-2868-4b5b-af29-d39dd9e37891.png" alt="" loading="lazy" /></p>
+<p><img data-src="https://file.liangxiegame.com/fc803d9e-2868-4b5b-af29-d39dd9e37891.png" alt="" loading="lazy" /></p>
+<h1 id="CoreKit-工具集">CoreKit 工具集<a class="header-anchor" href="#CoreKit-工具集">·</a></h1>
+<h2 id="TypeEventSystem">TypeEventSystem<a class="header-anchor" href="#TypeEventSystem">·</a></h2>
+<p><a target="_blank" rel="noopener" href="https://www.gamepixedu.com/course/50/task/5193/show">15.内置工具：TypeEventSystem</a></p>
+<h2 id="Easyevent">Easyevent<a class="header-anchor" href="#Easyevent">·</a></h2>
+<p><a target="_blank" rel="noopener" href="https://www.gamepixedu.com/course/50/task/5394/show">16.内置工具：Easyevent</a></p>
+<h2 id="IOCContainer">IOCContainer<a class="header-anchor" href="#IOCContainer">·</a></h2>
+<p><a target="_blank" rel="noopener" href="https://www.gamepixedu.com/course/50/task/5196/show">18.内置工具：IOCContainer</a></p>
 
     </div>
 
@@ -861,14 +814,14 @@ target="_blank" rel="noopener" href="https://www.gamepixedu.com/course/50/task/5
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

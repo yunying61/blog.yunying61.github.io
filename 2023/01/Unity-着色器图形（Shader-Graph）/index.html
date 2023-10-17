@@ -34,13 +34,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="着色器窗口">
+    <meta name="description" content="着色器窗口·">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Unity-着色器图形（Shader Graph）">
 <meta property="og:url" content="https://www.yunying61.cn/2023/01/Unity-%E7%9D%80%E8%89%B2%E5%99%A8%E5%9B%BE%E5%BD%A2%EF%BC%88Shader-Graph%EF%BC%89/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="着色器窗口">
+<meta property="og:description" content="着色器窗口·">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662343798016-3de74097-8218-44f7-9787-28f6f3b678ee.png#clientId=u1bcd46f2-a3c0-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ub2bd3aa1&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=672&amp;originWidth=1269&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=237176&amp;status=done&amp;style=none&amp;taskId=u447f2303-4139-4d46-835a-ccf336f6a6e&amp;title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662343679470-be18f150-312a-4fe8-9a71-ca0e2bc70726.png#clientId=u1bcd46f2-a3c0-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ub5783c37&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=405&amp;originWidth=374&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=22627&amp;status=done&amp;style=none&amp;taskId=u8f4be001-6cc7-4a97-803e-fe119d57758&amp;title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662344543090-6b12af84-405a-4a5d-8308-c8ad2848b613.png#clientId=u08e2ee8d-7dd9-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u2ea24189&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=568&amp;originWidth=1009&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=48441&amp;status=done&amp;style=none&amp;taskId=ue7844f09-8181-4670-b6fe-5a7ca335379&amp;title=">
 <meta property="article:published_time" content="2023-01-10T09:02:23.000Z">
 <meta property="article:modified_time" content="2023-01-10T09:15:26.561Z">
 <meta property="article:author" content="yunying61">
@@ -48,6 +51,7 @@
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662343798016-3de74097-8218-44f7-9787-28f6f3b678ee.png#clientId=u1bcd46f2-a3c0-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ub2bd3aa1&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=672&amp;originWidth=1269&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=237176&amp;status=done&amp;style=none&amp;taskId=u447f2303-4139-4d46-835a-ccf336f6a6e&amp;title=">
 
 
 <link rel="canonical" href="https://www.yunying61.cn/2023/01/Unity-%E7%9D%80%E8%89%B2%E5%99%A8%E5%9B%BE%E5%BD%A2%EF%BC%88Shader-Graph%EF%BC%89/">
@@ -162,8 +166,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9D%80%E8%89%B2%E5%99%A8%E7%AA%97%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">着色器窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">1.1.</span> <span class="nav-text">输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC"><span class="nav-number">1.1.1.</span> <span class="nav-text">基本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#time---%E6%97%B6%E9%97%B4%E8%8A%82%E7%82%B9"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Time
-- 时间节点</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9D%80%E8%89%B2%E5%99%A8%E7%AA%97%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">着色器窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">基本操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9D%80%E8%89%B2%E5%99%A8-%E8%8A%82%E7%82%B9%EF%BC%88Node%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">着色器-节点（Node）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vertex%E5%92%8CFragment-%E4%B8%BB%E6%A0%88"><span class="nav-number">2.1.</span> <span class="nav-text">Vertex和Fragment - 主栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="nav-number">2.2.</span> <span class="nav-text">自定义变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E8%8A%82%E7%82%B9"><span class="nav-number">2.3.</span> <span class="nav-text">自定义函数节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">2.4.</span> <span class="nav-text">输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC"><span class="nav-number">2.4.1.</span> <span class="nav-text">基本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Time-%E6%97%B6%E9%97%B4%E8%8A%82%E7%82%B9"><span class="nav-number">2.4.1.1.</span> <span class="nav-text">Time - 时间节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Color-%E9%A2%9C%E8%89%B2%E8%8A%82%E7%82%B9"><span class="nav-number">2.4.1.2.</span> <span class="nav-text">Color - 颜色节点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95"><span class="nav-number">2.4.2.</span> <span class="nav-text">几何</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Position-%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE%E8%8A%82%E7%82%B9"><span class="nav-number">2.4.2.1.</span> <span class="nav-text">Position - 顶点位置节点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%90%E5%8F%98"><span class="nav-number">2.4.3.</span> <span class="nav-text">渐变</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6"><span class="nav-number">2.5.</span> <span class="nav-text">数学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC-2"><span class="nav-number">2.5.1.</span> <span class="nav-text">基本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Add-%E5%8A%A0%E6%B3%95%E8%8A%82%E7%82%B9"><span class="nav-number">2.5.1.1.</span> <span class="nav-text">Add - 加法节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Subtract-%E5%87%8F%E6%B3%95%E8%8A%82%E7%82%B9"><span class="nav-number">2.5.1.2.</span> <span class="nav-text">Subtract - 减法节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiply-%E4%B9%98%E6%B3%95%E8%8A%82%E7%82%B9"><span class="nav-number">2.5.1.3.</span> <span class="nav-text">Multiply - 乘法节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Divide-%E9%99%A4%E6%B3%95%E8%8A%82%E7%82%B9"><span class="nav-number">2.5.1.4.</span> <span class="nav-text">Divide - 除法节点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UV"><span class="nav-number">2.6.</span> <span class="nav-text">UV</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tiling-And-Offset-%E5%B9%B3%E9%93%BA%E5%92%8C%E5%81%8F%E7%A7%BB%E8%8A%82%E7%82%B9"><span class="nav-number">2.6.1.</span> <span class="nav-text">Tiling And Offset - 平铺和偏移节点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%B9%E7%90%86"><span class="nav-number">2.7.</span> <span class="nav-text">纹理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Texture-2D-Asset-2D%E7%BA%B9%E7%90%86%E8%B5%84%E6%BA%90%E8%8A%82%E7%82%B9"><span class="nav-number">2.7.1.</span> <span class="nav-text">Texture 2D Asset - 2D纹理资源节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Texture-2D-2D%E7%BA%B9%E7%90%86%E9%87%87%E6%A0%B7%E8%8A%82%E7%82%B9"><span class="nav-number">2.7.2.</span> <span class="nav-text">Sample Texture 2D - 2D纹理采样节点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E5%8C%96"><span class="nav-number">2.8.</span> <span class="nav-text">程序化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0"><span class="nav-number">2.8.1.</span> <span class="nav-text">噪声</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Simple-Noise"><span class="nav-number">2.8.1.1.</span> <span class="nav-text">Simple Noise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Noise"><span class="nav-number">2.8.1.2.</span> <span class="nav-text">Gradient Noise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Voronoi"><span class="nav-number">2.8.1.3.</span> <span class="nav-text">Voronoi</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%8E%E6%9C%AF"><span class="nav-number">2.9.</span> <span class="nav-text">美术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Blend-%E6%B7%B7%E5%90%88"><span class="nav-number">2.9.1.</span> <span class="nav-text">Blend - 混合</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -325,7 +328,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -343,146 +346,121 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="着色器窗口">着色器窗口</h1>
+        <h1 id="着色器窗口">着色器窗口<a class="header-anchor" href="#着色器窗口">·</a></h1>
 <span id="more"></span>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662343798016-3de74097-8218-44f7-9787-28f6f3b678ee.png#clientId=u1bcd46f2-a3c0-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ub2bd3aa1&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=672&amp;originWidth=1269&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=237176&amp;status=done&amp;style=none&amp;taskId=u447f2303-4139-4d46-835a-ccf336f6a6e&amp;title="
-alt="image.png" />
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662343798016-3de74097-8218-44f7-9787-28f6f3b678ee.png#clientId=u1bcd46f2-a3c0-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ub2bd3aa1&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=672&amp;originWidth=1269&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=237176&amp;status=done&amp;style=none&amp;taskId=u447f2303-4139-4d46-835a-ccf336f6a6e&amp;title=" alt="" loading="lazy" /></p>
 <ul>
-<li><p>Shader Graph 工具栏 <strong>(1)</strong>
-是您保存着色器资源的地方。</p></li>
-<li><p>Blackboard <strong>(2)
-</strong>包含可供使用此着色器创建材质的艺术家使用的属性。您可以在此处定义属性类型及其名称、属性和默认值。</p></li>
-<li><p>工作区** (3) **将在其中创建着色器的节点图。</p></li>
-<li><p>主预览窗口** (4)
-**将为您提供着色器外观及其行为方式的实时更新。</p></li>
-<li><p>Graph Inspector 窗口** (5)
-**将显示您选择的任何节点的当前设置、属性和值。</p></li>
-<li><p>Master Stack** (6)
-**是定义着色器最终表面外观的着色器图的终点。它列出了顶点着色器和片段着色器的主要着色器属性，并为您提供了插入必要值的末端节点。
-## 基本操作</p></li>
-<li><p>平移：中键点按并拖动，或按住 Alt （Windows）
-或“选项”（macOS）并点按并拖动。</p></li>
-<li><p>缩放：旋转滚轮或使用触控板缩放。</p></li>
-<li><p>对焦和放大：选择一个元素，然后按下 F 键。</p></li>
-<li><p>适合窗口：按 A 键。</p></li>
-<li><p>创建节点：空格键</p></li>
-<li><p>节点组合：Ctrl + G # 着色器-节点（Node） ## Vertex和Fragment - <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Master-Stack.html">主栈</a>
-又名主栈（Master Stack），用于控制输出。主栈包含两个上下文：Vertex 和
-Fragment，分别代表着色器的两个阶段。它的内容可能会根据选择的 <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Graph-Settings-Menu.html">Graph
-Settings</a> 而变化（在Graph Inspector窗口的Graph
-Settings选项卡中，添加一个Active
-Targets中的Universal，其中的Material可以配置Lit、Unlit等模式）</p></li>
+<li>
+<p>Shader Graph 工具栏 <strong>(1)</strong> 是您保存着色器资源的地方。</p>
+</li>
+<li>
+<p>Blackboard **(2) **包含可供使用此着色器创建材质的艺术家使用的属性。您可以在此处定义属性类型及其名称、属性和默认值。</p>
+</li>
+<li>
+<p>工作区** (3) **将在其中创建着色器的节点图。</p>
+</li>
+<li>
+<p>主预览窗口** (4) **将为您提供着色器外观及其行为方式的实时更新。</p>
+</li>
+<li>
+<p>Graph Inspector 窗口** (5) **将显示您选择的任何节点的当前设置、属性和值。</p>
+</li>
+<li>
+<p>Master Stack** (6) **是定义着色器最终表面外观的着色器图的终点。它列出了顶点着色器和片段着色器的主要着色器属性，并为您提供了插入必要值的末端节点。</p>
+</li>
 </ul>
-<p>连接到 Vertex Context 中的 Block
-的任何节点都将成为最终着色器的顶点函数的一部分。连接到 Fragment Context
-中的 Block
-的任何节点都将成为最终着色器的片元（或像素）函数的一部分。如果您将任何节点连接到两个上下文，它们将被执行两次，一次在顶点函数中，然后在片元函数中再次执行。上下文不能剪切、复制或粘贴。
-## 自定义变量 <img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662343679470-be18f150-312a-4fe8-9a71-ca0e2bc70726.png#clientId=u1bcd46f2-a3c0-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ub5783c37&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=405&amp;originWidth=374&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=22627&amp;status=done&amp;style=none&amp;taskId=u8f4be001-6cc7-4a97-803e-fe119d57758&amp;title="
-alt="image.png" /> ## <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Custom-Function-Node.html">自定义函数节点</a>
-自定义函数节点用于在 Shader Graph 中注入自定义 HLSL
-代码。这样，您可在需要时提供额外的控制级别（例如，进行一些细粒度的优化）。可以使用
-string 模式直接将较小的函数写入图形，或者引用外部的 HLSL include
-文件。还可以使用 <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Custom-Port-Menu.html">Custom
-Port Menu</a> 在节点本身上定义自己的输入和输出端口。 <img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662344543090-6b12af84-405a-4a5d-8308-c8ad2848b613.png#clientId=u08e2ee8d-7dd9-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u2ea24189&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=568&amp;originWidth=1009&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=48441&amp;status=done&amp;style=none&amp;taskId=ue7844f09-8181-4670-b6fe-5a7ca335379&amp;title="
-alt="image.png" /></p>
-<h2 id="输入">输入</h2>
-<h3 id="基本">基本</h3>
-<h4 id="time---时间节点"><a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Time-Node.html">Time</a>
-- 时间节点</h4>
-<p>输出时间变量 类型：</p>
+<h2 id="基本操作">基本操作<a class="header-anchor" href="#基本操作">·</a></h2>
 <ul>
-<li>Time 时间普通值</li>
-<li>Sine Time 时间正弦值</li>
-<li>Cosine Time 时间余弦值</li>
-<li>Delta Time 当前帧时间</li>
-<li>Smooth Time已平滑的当前帧时间 #### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Color-Node.html">Color</a>
-- 颜色节点 使用 Color 字段在着色器中定义一个常量矢量 4 值。可通过<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Node.html">节点</a>的上下文菜单转换为
-Color <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Property-Types.html">属性类型</a>。生成<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Property-Types.html">属性</a>时，也会考虑
-Mode 参数的值。 ### 几何 #### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Position-Node.html">Position</a>
-- 顶点位置节点 允许访问网格顶点或片元的位置，具体取决于<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Node.html">节点</a>所属图形部分的有效<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Shader-Stage.html">着色器阶段</a>。可使用
-Space 下拉选单参数选择输出值的坐标空间。</li>
+<li>
+<p>平移：中键点按并拖动，或按住 Alt （Windows） 或“选项”（macOS）并点按并拖动。</p>
+</li>
+<li>
+<p>缩放：旋转滚轮或使用触控板缩放。</p>
+</li>
+<li>
+<p>对焦和放大：选择一个元素，然后按下 F 键。</p>
+</li>
+<li>
+<p>适合窗口：按 A 键。</p>
+</li>
+<li>
+<p>创建节点：空格键</p>
+</li>
+<li>
+<p>节点组合：Ctrl + G</p>
+</li>
 </ul>
-<p>提供对网格顶点或片元位置的访问。它控制着色器在场景中的行为方式以及它在什么空间中渲染。例如，如果将位置更改为“视图”，着色器将始终从摄像机的视图方向进行渲染。
+<h1 id="着色器-节点（Node）">着色器-节点（Node）<a class="header-anchor" href="#着色器-节点（Node）">·</a></h1>
+<h2 id="Vertex和Fragment-主栈">Vertex和Fragment - <a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Master-Stack.html">主栈</a><a class="header-anchor" href="#Vertex和Fragment-主栈">·</a></h2>
+<p>又名主栈（Master Stack），用于控制输出。主栈包含两个上下文：Vertex 和 Fragment，分别代表着色器的两个阶段。它的内容可能会根据选择的 <a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Graph-Settings-Menu.html">Graph Settings</a> 而变化（在Graph Inspector窗口的Graph Settings选项卡中，添加一个Active Targets中的Universal，其中的Material可以配置Lit、Unlit等模式）</p>
+<p>连接到 Vertex Context 中的 Block 的任何节点都将成为最终着色器的顶点函数的一部分。连接到 Fragment Context 中的 Block 的任何节点都将成为最终着色器的片元（或像素）函数的一部分。如果您将任何节点连接到两个上下文，它们将被执行两次，一次在顶点函数中，然后在片元函数中再次执行。上下文不能剪切、复制或粘贴。</p>
+<h2 id="自定义变量">自定义变量<a class="header-anchor" href="#自定义变量">·</a></h2>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662343679470-be18f150-312a-4fe8-9a71-ca0e2bc70726.png#clientId=u1bcd46f2-a3c0-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=ub5783c37&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=405&amp;originWidth=374&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=22627&amp;status=done&amp;style=none&amp;taskId=u8f4be001-6cc7-4a97-803e-fe119d57758&amp;title=" alt="" loading="lazy" /></p>
+<h2 id="自定义函数节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Custom-Function-Node.html">自定义函数节点</a><a class="header-anchor" href="#自定义函数节点">·</a></h2>
+<p>自定义函数节点用于在 Shader Graph 中注入自定义 HLSL 代码。这样，您可在需要时提供额外的控制级别（例如，进行一些细粒度的优化）。可以使用 string 模式直接将较小的函数写入图形，或者引用外部的 HLSL include 文件。还可以使用 <a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Custom-Port-Menu.html">Custom Port Menu</a> 在节点本身上定义自己的输入和输出端口。<br />
+<img data-src="https://cdn.nlark.com/yuque/0/2022/png/28154130/1662344543090-6b12af84-405a-4a5d-8308-c8ad2848b613.png#clientId=u08e2ee8d-7dd9-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u2ea24189&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=568&amp;originWidth=1009&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=48441&amp;status=done&amp;style=none&amp;taskId=ue7844f09-8181-4670-b6fe-5a7ca335379&amp;title=" alt="" loading="lazy" /></p>
+<h2 id="输入">输入<a class="header-anchor" href="#输入">·</a></h2>
+<h3 id="基本">基本<a class="header-anchor" href="#基本">·</a></h3>
+<h4 id="Time-时间节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Time-Node.html">Time</a> - 时间节点<a class="header-anchor" href="#Time-时间节点">·</a></h4>
+<p>输出时间变量<br />
+类型：</p>
+<ul>
+<li>Time		时间普通值</li>
+<li>Sine Time	时间正弦值</li>
+<li>Cosine Time	时间余弦值</li>
+<li>Delta Time	当前帧时间</li>
+<li>Smooth Time已平滑的当前帧时间</li>
+</ul>
+<h4 id="Color-颜色节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Color-Node.html">Color</a> - 颜色节点<a class="header-anchor" href="#Color-颜色节点">·</a></h4>
+<p>使用 Color 字段在着色器中定义一个常量矢量 4 值。可通过<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Node.html">节点</a>的上下文菜单转换为 Color <a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Property-Types.html">属性类型</a>。生成<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Property-Types.html">属性</a>时，也会考虑 Mode 参数的值。</p>
+<h3 id="几何">几何<a class="header-anchor" href="#几何">·</a></h3>
+<h4 id="Position-顶点位置节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Position-Node.html">Position</a> - 顶点位置节点<a class="header-anchor" href="#Position-顶点位置节点">·</a></h4>
+<p>允许访问网格顶点或片元的位置，具体取决于<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Node.html">节点</a>所属图形部分的有效<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Shader-Stage.html">着色器阶段</a>。可使用 Space 下拉选单参数选择输出值的坐标空间。</p>
+<p>提供对网格顶点或片元位置的访问。它控制着色器在场景中的行为方式以及它在什么空间中渲染。例如，如果将位置更改为“视图”，着色器将始终从摄像机的视图方向进行渲染。<br />
 输出是可通过“Space”下拉列表确定的坐标空间。此节点具有单个输出和一个参数。</p>
 <ul>
-<li>Space
-参数：允许您选择要输出的位置的坐标空间。它具有以下选项：“Object”、“View”、“World”、“Tangent”和"Absolute
-World"。
+<li>Space 参数：允许您选择要输出的位置的坐标空间。它具有以下选项：“Object”、“View”、“World”、“Tangent”和&quot;Absolute World&quot;。
 <ul>
 <li>Object：当您希望位置基于场景中对象的坐标时。它对于使用与着色器附加到的对象专门相关的坐标非常有用。</li>
 <li>View：当您要使用查看器坐标时。当您想要使用查看器面向的位置和方向来影响着色器时，它非常有用。</li>
 <li>World：如果要对整个场景使用坐标系，此选项很有用。当您想要使用整个场景的位置数据，而不是局限于对象或视图坐标时，非常有用。</li>
 <li>Tangent(切线)：此选项导出最接近给定点的对象的位置坐标。想象一下球体上的一个点，多个平面都经过该点。其中一个平面（<strong>切面</strong>）接触球体，同时尽可能接近所有附近的点。</li>
-<li>Absolute
-World：此选项返回所有可编写脚本的渲染管线中场景中对象的绝对世界位置。这是通用渲染管线的默认世界空间，其中高清渲染管线使用摄像机相对世界空间。
-### 渐变 Gradient - 渐变节点 定义用于 <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Shader-Graph.md">Shader
-Graph</a> 中的常量渐变
-(Gradient)，但这在着色器内部定义为结构。要对渐变采样，必须将其与 <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Sample-Gradient-Node.html">Sample
-Gradient 节点</a>结合使用。使用单个 Gradient 节点时，可使用不同的 Time
-参数对渐变进行多次采样。 ## 数学 ### 基本 #### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@10.10/manual/Add-Node.html">Add</a>-
-加法节点 返回两个输入值 A 和 B 的和。 #### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@10.10/manual/Subtract-Node.html">Subtract</a>-
-减法节点 返回输入 A 减去输入 B 的结果。 #### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Multiply-Node.html">Multiply</a>-
-乘法节点 返回输入 A 乘以输入 B 的结果。 #### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Divide-Node.html">Divide</a>-
-除法节点 返回输入 A（被除数）除以输入 B（除数）的结果。 ## UV ### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@10.10/manual/Tiling-And-Offset-Node.html">Tiling
-And Offset</a> - 平铺和偏移节点 根据输入 Tiling 和 Offset
-来平铺和偏移输入 UV 的值。这通常用于细节贴图和随<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Time-Node.html">时间</a>滚动纹理。
-## 纹理 ### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Texture-2D-Asset-Node.html">Texture
-2D Asset</a> - 2D纹理资源节点 定义要在着色器中使用的常量 2D
-纹理资源。要对 2D 纹理资源采样，必须将其与 <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Sample-Texture-2D-Node.html">Sample
-Texture 2D 节点</a>结合使用。使用单个 Texture 2D Asset
-节点时，可使用不同的参数对 2D 纹理进行两次采样，无需对 2D
-纹理本身进行两次定义。 ### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Sample-Texture-2D-Node.html">Sample
-Texture 2D</a> - 2D纹理采样节点 对 2D 纹理进行采样并返回矢量 4
-颜色值以在着色器中使用。可使用 UV 输入覆盖 UV 坐标，并使用 Sampler
-输入自定义采样器状态。 ## 程序化 ### 噪声 #### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Simple-Noise-Node.html">Simple
-Noise</a> 根据输入 UV 生成简单噪声或 <a
-target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Value_noise">Value</a>
-噪声。生成噪声的比例由输入 Scale 控制。 #### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Gradient-Noise-Node.html">Gradient
-Noise</a> 根据输入 UV 生成<strong>渐变</strong>或<a
-target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Perlin_noise">柏林</a>噪声。生成噪声的比例由输入
-Scale 控制。 #### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Voronoi-Node.html">Voronoi</a>
-根据输入 UV 生成 Voronoi 或 <a
-target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Worley_noise">Worley</a>
-噪声。Voronoi
-噪声是通过计算像素和点阵之间的距离生成的。通过使这些点偏移由输入 Angle
-Offset
-控制的伪随机数，可以生成一组单元。这些单元的规模以及产生的噪声由输入
-Cell Density 控制。输出 Cells 包含原始单元数据。 ## 美术 ### <a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Gradient-Noise-Node.html">Blend</a>
-- 混合 使用 Mode 参数定义的混合模式将输入 Blend 的值混合到输入 Base
-上。指混合的强度由输入 Opacity 定义。Opacity 值为 0 将原封不动返回输入
-Base。</li>
-</ul></li>
+<li>Absolute World：此选项返回所有可编写脚本的渲染管线中场景中对象的绝对世界位置。这是通用渲染管线的默认世界空间，其中高清渲染管线使用摄像机相对世界空间。</li>
 </ul>
+</li>
+</ul>
+<h3 id="渐变">渐变<a class="header-anchor" href="#渐变">·</a></h3>
+<p>Gradient - 渐变节点<br />
+定义用于 <a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Shader-Graph.md">Shader Graph</a> 中的常量渐变 (Gradient)，但这在着色器内部定义为结构。要对渐变采样，必须将其与 <a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Sample-Gradient-Node.html">Sample Gradient 节点</a>结合使用。使用单个 Gradient 节点时，可使用不同的 Time 参数对渐变进行多次采样。</p>
+<h2 id="数学">数学<a class="header-anchor" href="#数学">·</a></h2>
+<h3 id="基本-2">基本<a class="header-anchor" href="#基本-2">·</a></h3>
+<h4 id="Add-加法节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@10.10/manual/Add-Node.html">Add </a>- 加法节点<a class="header-anchor" href="#Add-加法节点">·</a></h4>
+<p>返回两个输入值 A 和 B 的和。</p>
+<h4 id="Subtract-减法节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@10.10/manual/Subtract-Node.html">Subtract </a>- 减法节点<a class="header-anchor" href="#Subtract-减法节点">·</a></h4>
+<p>返回输入 A 减去输入 B 的结果。</p>
+<h4 id="Multiply-乘法节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Multiply-Node.html">Multiply </a>- 乘法节点<a class="header-anchor" href="#Multiply-乘法节点">·</a></h4>
+<p>返回输入 A 乘以输入 B 的结果。</p>
+<h4 id="Divide-除法节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Divide-Node.html">Divide </a>- 除法节点<a class="header-anchor" href="#Divide-除法节点">·</a></h4>
+<p>返回输入 A（被除数）除以输入 B（除数）的结果。</p>
+<h2 id="UV">UV<a class="header-anchor" href="#UV">·</a></h2>
+<h3 id="Tiling-And-Offset-平铺和偏移节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@10.10/manual/Tiling-And-Offset-Node.html">Tiling And Offset</a> - 平铺和偏移节点<a class="header-anchor" href="#Tiling-And-Offset-平铺和偏移节点">·</a></h3>
+<p>根据输入 Tiling 和 Offset 来平铺和偏移输入 UV 的值。这通常用于细节贴图和随<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Time-Node.html">时间</a>滚动纹理。</p>
+<h2 id="纹理">纹理<a class="header-anchor" href="#纹理">·</a></h2>
+<h3 id="Texture-2D-Asset-2D纹理资源节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Texture-2D-Asset-Node.html">Texture 2D Asset</a> - 2D纹理资源节点<a class="header-anchor" href="#Texture-2D-Asset-2D纹理资源节点">·</a></h3>
+<p>定义要在着色器中使用的常量 2D 纹理资源。要对 2D 纹理资源采样，必须将其与 <a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Sample-Texture-2D-Node.html">Sample Texture 2D 节点</a>结合使用。使用单个 Texture 2D Asset 节点时，可使用不同的参数对 2D 纹理进行两次采样，无需对 2D 纹理本身进行两次定义。</p>
+<h3 id="Sample-Texture-2D-2D纹理采样节点"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Sample-Texture-2D-Node.html">Sample Texture 2D</a> - 2D纹理采样节点<a class="header-anchor" href="#Sample-Texture-2D-2D纹理采样节点">·</a></h3>
+<p>对 2D 纹理进行采样并返回矢量 4 颜色值以在着色器中使用。可使用 UV 输入覆盖 UV 坐标，并使用 Sampler 输入自定义采样器状态。</p>
+<h2 id="程序化">程序化<a class="header-anchor" href="#程序化">·</a></h2>
+<h3 id="噪声">噪声<a class="header-anchor" href="#噪声">·</a></h3>
+<h4 id="Simple-Noise"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Simple-Noise-Node.html">Simple Noise</a><a class="header-anchor" href="#Simple-Noise">·</a></h4>
+<p>根据输入 UV 生成简单噪声或 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Value_noise">Value</a> 噪声。生成噪声的比例由输入 Scale 控制。</p>
+<h4 id="Gradient-Noise"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Gradient-Noise-Node.html">Gradient Noise</a><a class="header-anchor" href="#Gradient-Noise">·</a></h4>
+<p>根据输入 UV 生成<strong>渐变</strong>或<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Perlin_noise">柏林</a>噪声。生成噪声的比例由输入 Scale 控制。</p>
+<h4 id="Voronoi"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Voronoi-Node.html">Voronoi</a><a class="header-anchor" href="#Voronoi">·</a></h4>
+<p>根据输入 UV 生成 Voronoi 或 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Worley_noise">Worley</a> 噪声。Voronoi 噪声是通过计算像素和点阵之间的距离生成的。通过使这些点偏移由输入 Angle Offset 控制的伪随机数，可以生成一组单元。这些单元的规模以及产生的噪声由输入 Cell Density 控制。输出 Cells 包含原始单元数据。</p>
+<h2 id="美术">美术<a class="header-anchor" href="#美术">·</a></h2>
+<h3 id="Blend-混合"><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/Packages/com.unity.shadergraph@10.5/manual/Gradient-Noise-Node.html">Blend</a> - 混合<a class="header-anchor" href="#Blend-混合">·</a></h3>
+<p>使用 Mode 参数定义的混合模式将输入 Blend 的值混合到输入 Base 上。指混合的强度由输入 Opacity 定义。Opacity 值为 0 将原封不动返回输入 Base。</p>
 
     </div>
 
@@ -607,14 +585,14 @@ Base。</li>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

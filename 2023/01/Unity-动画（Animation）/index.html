@@ -34,14 +34,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="在Unity中使用动画 在 Unity 中使用两种主要类型的动画：  从其他程序导入的动画 在编辑器本身中创建的动画">
+    <meta name="description" content="在Unity中使用动画· 在 Unity 中使用两种主要类型的动画：  从其他程序导入的动画 在编辑器本身中创建的动画">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Unity-动画（Animation）">
 <meta property="og:url" content="https://www.yunying61.cn/2023/01/Unity-%E5%8A%A8%E7%94%BB%EF%BC%88Animation%EF%BC%89/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="在Unity中使用动画 在 Unity 中使用两种主要类型的动画：  从其他程序导入的动画 在编辑器本身中创建的动画">
+<meta property="og:description" content="在Unity中使用动画· 在 Unity 中使用两种主要类型的动画：  从其他程序导入的动画 在编辑器本身中创建的动画">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.unity3d.com/cn/current/uploads/Main/AnyState.png">
+<meta property="og:image" content="https://connect-cdn-public-prd.unitychina.cn/h1/20211123/learn/images/1b734627-3e4d-40cb-b794-d9370b390e9a_frames_mark.png.1800x0x1.png">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/webp/28154130/1665627637704-fd727073-f45b-446c-b2e9-096513182fc5.webp#clientId=u574b21b2-6b88-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u1f01be88&amp;margin=%5Bobject%20Object%5D&amp;originHeight=273&amp;originWidth=930&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u79c43d3f-0093-4e5b-9154-88532e9c5ac&amp;title=">
+<meta property="og:image" content="https://www.yunying61.cn/2023/01/Unity-%E5%8A%A8%E7%94%BB%EF%BC%88Animation%EF%BC%89/:/06ef54a92b06467e8a4ae2fb6426cda4">
+<meta property="og:image" content="https://connect-cdn-public-prd.unitychina.cn/h1/20211123/learn/images/5b93562b-7d3b-4560-8df5-ec0ff1a06033_rigimport.png.1800x0x1.png">
 <meta property="article:published_time" content="2023-01-10T09:03:11.000Z">
 <meta property="article:modified_time" content="2023-01-10T09:21:56.076Z">
 <meta property="article:author" content="yunying61">
@@ -164,12 +168,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8unity%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8A%A8%E7%94%BB"><span class="nav-number">1.</span> <span class="nav-text">在Unity中使用动画</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E5%99%A8animator"><span class="nav-number">2.</span> <span class="nav-text">动画器（Animator）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#animator%E7%BB%84%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">Animator组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E6%A0%B9%E8%BF%90%E5%8A%A8root-motion"><span class="nav-number">2.1.1.</span> <span class="nav-text">应用根运动（Root Motion）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E6%8E%A7%E5%88%B6%E5%99%A8animator-controller"><span class="nav-number">3.</span> <span class="nav-text">动画控制器（Animator
-Controller）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E7%8A%B6%E6%80%81%E6%9C%BAstate-machine"><span class="nav-number">3.1.</span> <span class="nav-text">动画状态机（State
-Machine）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E5%B1%82layers"><span class="nav-number">3.1.1.</span> <span class="nav-text">动画层（Layers）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E5%8F%82%E6%95%B0parameters"><span class="nav-number">3.1.2.</span> <span class="nav-text">动画参数（Parameters）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E7%8A%B6%E6%80%81"><span class="nav-number">3.1.3.</span> <span class="nav-text">动画状态</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%BB%E6%84%8F%E7%8A%B6%E6%80%81any-state"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">任意状态（Any State）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%B7%E5%90%88%E6%A0%91"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">混合树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1animation-transitions"><span class="nav-number">3.1.4.</span> <span class="nav-text">动画过渡（Animation
-transitions）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">3.1.4.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#conditions---%E6%9D%A1%E4%BB%B6"><span class="nav-number">3.1.4.2.</span> <span class="nav-text">Conditions - 条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%87%E6%B8%A1%E4%B8%AD%E6%96%ADtransition-interruption"><span class="nav-number">3.1.4.3.</span> <span class="nav-text">过渡中断（Transition
-Interruption）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E7%94%BBanimation"><span class="nav-number">4.</span> <span class="nav-text">动画（Animation）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#animation-clip---%E5%8A%A8%E7%94%BB%E5%89%AA%E8%BE%91"><span class="nav-number">4.1.</span> <span class="nav-text">Animation Clip - 动画剪辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%95%E5%88%B6%E5%85%B3%E9%94%AE%E5%B8%A7"><span class="nav-number">4.1.1.</span> <span class="nav-text">录制关键帧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%83%AD%E9%94%AE"><span class="nav-number">4.1.1.1.</span> <span class="nav-text">热键</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B2%E7%BA%BF%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">4.1.2.</span> <span class="nav-text">曲线编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E6%9B%B2%E7%BA%BF%E8%A7%86%E5%9B%BE%E4%B8%AD%E5%AF%BC%E8%88%AA"><span class="nav-number">4.1.2.1.</span> <span class="nav-text">在曲线视图中导航</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%88%87%E7%BA%BF"><span class="nav-number">4.1.2.2.</span> <span class="nav-text">编辑切线</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%87%E7%BA%BF%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.2.2.1.</span> <span class="nav-text">切线类型</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#animationevent---%E5%8A%A8%E7%94%BB%E4%BA%8B%E4%BB%B6"><span class="nav-number">4.2.</span> <span class="nav-text">AnimationEvent
-- 动画事件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#d-animation%E5%8C%85"><span class="nav-number">5.</span> <span class="nav-text">2D Animation包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B2%BE%E7%81%B5%E7%9A%AE%E8%82%A4%E7%BB%84%E4%BB%B6---sprite-skin"><span class="nav-number">5.1.</span> <span class="nav-text">精灵皮肤组件 - Sprite Skin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%92%99%E7%9A%AE%E7%BC%96%E8%BE%91%E5%99%A8---skinning-editor"><span class="nav-number">5.2.</span> <span class="nav-text">蒙皮编辑器 - Skinning Editor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A7%BF%E6%80%81%E5%B7%A5%E5%85%B7"><span class="nav-number">5.2.1.</span> <span class="nav-text">姿态工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AA%A8%E9%AA%BC%E5%B7%A5%E5%85%B7"><span class="nav-number">5.2.2.</span> <span class="nav-text">骨骼工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E4%BD%93"><span class="nav-number">5.2.3.</span> <span class="nav-text">几何体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%87%8D"><span class="nav-number">5.2.4.</span> <span class="nav-text">权重</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">5.3.</span> <span class="nav-text">工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8unity%E7%9A%84%E9%AA%A8%E9%AA%BC%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.3.0.1.</span> <span class="nav-text">使用Unity的骨骼系统</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%8A%A8%E7%94%BB"><span class="nav-number">6.</span> <span class="nav-text">导入动画</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%8A%A8%E7%94%BB%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.1.</span> <span class="nav-text">配置动画类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%8A%A8%E7%94%BB%E5%89%AA%E8%BE%91"><span class="nav-number">6.2.</span> <span class="nav-text">配置动画剪辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E8%BF%90%E5%8A%A8"><span class="nav-number">6.2.1.</span> <span class="nav-text">根运动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E5%BD%A2%E5%8A%A8%E7%94%BB"><span class="nav-number">6.3.</span> <span class="nav-text">人形动画</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">性能优化</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8Unity%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8A%A8%E7%94%BB"><span class="nav-number">1.</span> <span class="nav-text">在Unity中使用动画</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E5%99%A8%EF%BC%88Animator%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">动画器（Animator）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Animator%E7%BB%84%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">Animator组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E6%A0%B9%E8%BF%90%E5%8A%A8%EF%BC%88Root-Motion%EF%BC%89"><span class="nav-number">2.1.1.</span> <span class="nav-text">应用根运动（Root Motion）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E6%8E%A7%E5%88%B6%E5%99%A8%EF%BC%88Animator-Controller%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">动画控制器（Animator Controller）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E7%8A%B6%E6%80%81%E6%9C%BA%EF%BC%88State-Machine%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">动画状态机（State Machine）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E5%B1%82%EF%BC%88Layers%EF%BC%89"><span class="nav-number">3.1.1.</span> <span class="nav-text">动画层（Layers）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E5%8F%82%E6%95%B0%EF%BC%88Parameters%EF%BC%89"><span class="nav-number">3.1.2.</span> <span class="nav-text">动画参数（Parameters）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E7%8A%B6%E6%80%81"><span class="nav-number">3.1.3.</span> <span class="nav-text">动画状态</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%BB%E6%84%8F%E7%8A%B6%E6%80%81%EF%BC%88Any-State%EF%BC%89"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">任意状态（Any State）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%B7%E5%90%88%E6%A0%91"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">混合树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1%EF%BC%88Animation-transitions%EF%BC%89"><span class="nav-number">3.1.4.</span> <span class="nav-text">动画过渡（Animation transitions）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">3.1.4.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Conditions-%E6%9D%A1%E4%BB%B6"><span class="nav-number">3.1.4.2.</span> <span class="nav-text">Conditions - 条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%87%E6%B8%A1%E4%B8%AD%E6%96%AD%EF%BC%88Transition-Interruption%EF%BC%89"><span class="nav-number">3.1.4.3.</span> <span class="nav-text">过渡中断（Transition Interruption）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%EF%BC%88Animation%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">动画（Animation）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Animation-Clip-%E5%8A%A8%E7%94%BB%E5%89%AA%E8%BE%91"><span class="nav-number">4.1.</span> <span class="nav-text">Animation Clip - 动画剪辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%95%E5%88%B6%E5%85%B3%E9%94%AE%E5%B8%A7"><span class="nav-number">4.1.1.</span> <span class="nav-text">录制关键帧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%83%AD%E9%94%AE"><span class="nav-number">4.1.1.1.</span> <span class="nav-text">热键</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B2%E7%BA%BF%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">4.1.2.</span> <span class="nav-text">曲线编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E6%9B%B2%E7%BA%BF%E8%A7%86%E5%9B%BE%E4%B8%AD%E5%AF%BC%E8%88%AA"><span class="nav-number">4.1.2.1.</span> <span class="nav-text">在曲线视图中导航</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%88%87%E7%BA%BF"><span class="nav-number">4.1.2.2.</span> <span class="nav-text">编辑切线</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%87%E7%BA%BF%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.2.2.1.</span> <span class="nav-text">切线类型</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AnimationEvent-%E5%8A%A8%E7%94%BB%E4%BA%8B%E4%BB%B6"><span class="nav-number">4.2.</span> <span class="nav-text">AnimationEvent - 动画事件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2D-Animation%E5%8C%85"><span class="nav-number">5.</span> <span class="nav-text">2D Animation包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B2%BE%E7%81%B5%E7%9A%AE%E8%82%A4%E7%BB%84%E4%BB%B6-Sprite-Skin"><span class="nav-number">5.1.</span> <span class="nav-text">精灵皮肤组件 - Sprite Skin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%92%99%E7%9A%AE%E7%BC%96%E8%BE%91%E5%99%A8-Skinning-Editor"><span class="nav-number">5.2.</span> <span class="nav-text">蒙皮编辑器 - Skinning Editor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A7%BF%E6%80%81%E5%B7%A5%E5%85%B7"><span class="nav-number">5.2.1.</span> <span class="nav-text">姿态工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AA%A8%E9%AA%BC%E5%B7%A5%E5%85%B7"><span class="nav-number">5.2.2.</span> <span class="nav-text">骨骼工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E4%BD%93"><span class="nav-number">5.2.3.</span> <span class="nav-text">几何体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%87%8D"><span class="nav-number">5.2.4.</span> <span class="nav-text">权重</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">5.3.</span> <span class="nav-text">工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Unity%E7%9A%84%E9%AA%A8%E9%AA%BC%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.3.0.1.</span> <span class="nav-text">使用Unity的骨骼系统</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%8A%A8%E7%94%BB"><span class="nav-number">6.</span> <span class="nav-text">导入动画</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%8A%A8%E7%94%BB%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.1.</span> <span class="nav-text">配置动画类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%8A%A8%E7%94%BB%E5%89%AA%E8%BE%91"><span class="nav-number">6.2.</span> <span class="nav-text">配置动画剪辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E8%BF%90%E5%8A%A8"><span class="nav-number">6.2.1.</span> <span class="nav-text">根运动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E5%BD%A2%E5%8A%A8%E7%94%BB"><span class="nav-number">6.3.</span> <span class="nav-text">人形动画</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">性能优化</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -349,338 +348,223 @@ Interruption）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="在unity中使用动画">在Unity中使用动画</h1>
+        <h1 id="在Unity中使用动画">在Unity中使用动画<a class="header-anchor" href="#在Unity中使用动画">·</a></h1>
 <p>在 Unity 中使用两种主要类型的动画：</p>
 <ul>
 <li>从其他程序导入的动画</li>
 <li>在编辑器本身中创建的动画</li>
 </ul>
 <span id="more"></span>
-<h1 id="动画器animator">动画器（<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Animator.html">Animator</a>）</h1>
-<p>Animator 播放由 Controller 分配并要求播放的动画。我们可以通过脚本中的
-Animator 将数据发送到 Controller，从而根据游戏过程来选择正确的动画！</p>
-<p><a
-target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/control-animation-with-an-animator?uv=2020.3&amp;pathwayId=61a65568edbc2a00206076dd&amp;missionId=61a64e25edbc2a0020607564#">使用动画器控制动画
-- Unity 学习</a></p>
-<h2 id="animator组件">Animator组件</h2>
+<h1 id="动画器（Animator）">动画器（<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Animator.html">Animator</a>）<a class="header-anchor" href="#动画器（Animator）">·</a></h1>
+<p>Animator 播放由 Controller 分配并要求播放的动画。我们可以通过脚本中的 Animator 将数据发送到 Controller，从而根据游戏过程来选择正确的动画！</p>
+<p><a target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/control-animation-with-an-animator?uv=2020.3&amp;pathwayId=61a65568edbc2a00206076dd&amp;missionId=61a64e25edbc2a0020607564#">使用动画器控制动画 - Unity 学习</a></p>
+<h2 id="Animator组件">Animator组件<a class="header-anchor" href="#Animator组件">·</a></h2>
 <ul>
 <li>控制器</li>
 <li>Avatar</li>
-<li>应用根运动（Root Motion）
+<li>应用根运动（Root Motion）<br />
 选择从动画本身还是从脚本控制角色的位置和旋转。</li>
 <li>更新模式
 <ul>
-<li>正常（Normal） Animator 与 Update 调用同步更新，Animator
-的速度与当前时间标度匹配。</li>
-<li>物理化（Animate Physics） Animator 与 FixedUpdate
-调用同步更新。如果要对具有物理交互的对象（例如可四处推动刚体对象的角色）的运动进行动画化，应使用此模式。</li>
-<li>禁用时间缩放（Unscaled Time） Animator 与 Update 调用同步更新，但是
-Animator 的速度忽略当前时间标度而不顾一切以 100%
-速度进行动画化。此选项可用于以正常速度对 GUI
-系统进行动画化，同时将修改的时间标度用于特效或暂停游戏。</li>
-</ul></li>
+<li>正常（Normal）<br />
+Animator 与 Update 调用同步更新，Animator 的速度与当前时间标度匹配。</li>
+<li>物理化（Animate Physics）<br />
+Animator 与 FixedUpdate 调用同步更新。如果要对具有物理交互的对象（例如可四处推动刚体对象的角色）的运动进行动画化，应使用此模式。</li>
+<li>禁用时间缩放（Unscaled Time）<br />
+Animator 与 Update 调用同步更新，但是 Animator 的速度忽略当前时间标度而不顾一切以 100% 速度进行动画化。此选项可用于以正常速度对 GUI 系统进行动画化，同时将修改的时间标度用于特效或暂停游戏。</li>
+</ul>
+</li>
 <li>剔除模式
 <ul>
-<li>Always Animate 始终进行动画化，即使在屏幕外也不要剔除。</li>
-<li>Cull Update Transforms
+<li>Always Animate<br />
+始终进行动画化，即使在屏幕外也不要剔除。</li>
+<li>Cull Update Transforms<br />
 不在屏幕内时，禁用变换组件的重定向、IK（反向动力学）和写入。</li>
-<li>Cull Completely 不在屏幕内时，完全禁用动画。</li>
-</ul></li>
+<li>Cull Completely<br />
+不在屏幕内时，完全禁用动画。</li>
 </ul>
-<h3 id="应用根运动root-motion">应用根运动（Root Motion）</h3>
+</li>
+</ul>
+<h3 id="应用根运动（Root-Motion）">应用根运动（Root Motion）<a class="header-anchor" href="#应用根运动（Root-Motion）">·</a></h3>
 <p>选择从动画本身还是从脚本控制角色的位置和旋转。</p>
 <p>脚本通过OnAnimatorMove()方法和使用Animator.deltaPosition、Animator.deltaRotation控制。</p>
-<p><a
-target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1kZ4y1B7Tc/?spm_id_from=pageDriver&amp;vd_source=83b60c8bc528ec682dd5670fc57ef7a4">【Unity动画系统详解
-十五】Unity中Root Motion的核心机制（勾选Animator组件中的Apply Root
-Motion后到底发生了什么）_哔哩哔哩_bilibili</a></p>
-<h1 id="动画控制器animator-controller">动画控制器（Animator
-Controller）</h1>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1kZ4y1B7Tc/?spm_id_from=pageDriver&amp;vd_source=83b60c8bc528ec682dd5670fc57ef7a4">【Unity动画系统详解 十五】Unity中Root Motion的核心机制（勾选Animator组件中的Apply Root Motion后到底发生了什么）_哔哩哔哩_bilibili</a></p>
+<h1 id="动画控制器（Animator-Controller）">动画控制器（Animator Controller）<a class="header-anchor" href="#动画控制器（Animator-Controller）">·</a></h1>
 <p>Controller 存储的状态机定义这些动画之间的关系。</p>
-<h2 id="动画状态机state-machine">动画状态机（<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/StateMachineBasics.html">State
-Machine</a>）</h2>
+<h2 id="动画状态机（State-Machine）">动画状态机（<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/StateMachineBasics.html">State Machine</a>）<a class="header-anchor" href="#动画状态机（State-Machine）">·</a></h2>
 <p>动画状态机以图形方式显示动画的所有状态以及如何从一段动画过渡到另一段动画。</p>
-<h3 id="动画层layers">动画层（<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/AnimationLayers.html">Layers</a>）</h3>
-<p>Layers 可用于 3D 动画，因为你可以将动画用于角色的不同部分。Unity
-使用__动画层__来管理不同身体部位的复杂状态机。相应的示例为：您有一个用于行走/跳跃的下身层，还有一个用于投掷物体/射击的上身层。</p>
-<h3 id="动画参数parameters">动画参数（<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/AnimationParameters.html">Parameters</a>）</h3>
-<p>动画参数是在 Animator Controller
-中定义的变量，可从脚本访问这些变量并向其赋值。这是脚本控制或影响状态机流程的方法。</p>
-<h3 id="动画状态">动画状态</h3>
-<p>动画状态是<strong>动画状态机</strong>的基本构建块。每个状态都包含一个动画序列（或<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-BlendTree.html">混合树</a>），当角色处于该状态时播放。</p>
+<h3 id="动画层（Layers）">动画层（<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/AnimationLayers.html">Layers</a>）<a class="header-anchor" href="#动画层（Layers）">·</a></h3>
+<p>Layers 可用于 3D 动画，因为你可以将动画用于角色的不同部分。Unity 使用__动画层__来管理不同身体部位的复杂状态机。相应的示例为：您有一个用于行走/跳跃的下身层，还有一个用于投掷物体/射击的上身层。</p>
+<h3 id="动画参数（Parameters）">动画参数（<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/AnimationParameters.html">Parameters</a>）<a class="header-anchor" href="#动画参数（Parameters）">·</a></h3>
+<p>动画参数是在 Animator Controller 中定义的变量，可从脚本访问这些变量并向其赋值。这是脚本控制或影响状态机流程的方法。</p>
+<h3 id="动画状态">动画状态<a class="header-anchor" href="#动画状态">·</a></h3>
+<p>动画状态是<strong>动画状态机</strong>的基本构建块。每个状态都包含一个动画序列（或<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-BlendTree.html">混合树</a>），当角色处于该状态时播放。</p>
 <table>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 81%" />
-</colgroup>
 <thead>
-<tr class="header">
-<th style="text-align: left;">属性：</th>
-<th style="text-align: left;">描述：</th>
+<tr>
+<th style="text-align:left">属性：</th>
+<th style="text-align:left">描述：</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>动作</strong></td>
-<td style="text-align: left;">指定给此状态的动画剪辑或混合树。</td>
+<tr>
+<td style="text-align:left"><strong>动作</strong></td>
+<td style="text-align:left">指定给此状态的动画剪辑或混合树。</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;"><strong>速度</strong></td>
-<td
-style="text-align: left;">此状态的默认运动速度。启用参数以使用脚本中的自定义值修改速度。例如，您可以将速度与自定义值相乘，以减速或加快播放速度。</td>
+<tr>
+<td style="text-align:left"><strong>速度</strong></td>
+<td style="text-align:left">此状态的默认运动速度。启用参数以使用脚本中的自定义值修改速度。例如，您可以将速度与自定义值相乘，以减速或加快播放速度。</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>动作时间</strong></td>
-<td
-style="text-align: left;">用于播放此状态的动作的时间。启用参数以使用脚本中的自定义值控制动作时间。</td>
+<tr>
+<td style="text-align:left"><strong>动作时间</strong></td>
+<td style="text-align:left">用于播放此状态的动作的时间。启用参数以使用脚本中的自定义值控制动作时间。</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;"><strong>镜像</strong></td>
-<td
-style="text-align: left;">此属性仅适用于具有人形动画的状态。启用此选项可镜像此状态的动画。启用参数以启用或禁用脚本镜像。</td>
+<tr>
+<td style="text-align:left"><strong>镜像</strong></td>
+<td style="text-align:left">此属性仅适用于具有人形动画的状态。启用此选项可镜像此状态的动画。启用参数以启用或禁用脚本镜像。</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>周期偏移 X</strong></td>
-<td
-style="text-align: left;">偏移量添加到运动的状态时间。此偏移不会影响运动时间。启用参数以指定脚本的周期偏移。</td>
+<tr>
+<td style="text-align:left"><strong>周期偏移 X</strong></td>
+<td style="text-align:left">偏移量添加到运动的状态时间。此偏移不会影响运动时间。启用参数以指定脚本的周期偏移。</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Foot IK</strong></td>
-<td
-style="text-align: left;">此属性仅适用于具有人形动画的状态。启用以尊重此状态的
-Foot IK。</td>
+<tr>
+<td style="text-align:left"><strong>Foot IK</strong></td>
+<td style="text-align:left">此属性仅适用于具有人形动画的状态。启用以尊重此状态的 Foot IK。</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>写入默认值</strong></td>
-<td style="text-align: left;">是否写入默认的动画状态。</td>
+<tr>
+<td style="text-align:left"><strong>写入默认值</strong></td>
+<td style="text-align:left">是否写入默认的动画状态。</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;"><strong>转换</strong></td>
-<td style="text-align: left;">源自此状态的转换列表。</td>
+<tr>
+<td style="text-align:left"><strong>转换</strong></td>
+<td style="text-align:left">源自此状态的转换列表。</td>
 </tr>
 </tbody>
 </table>
-<h4 id="任意状态any-state">任意状态（Any State）</h4>
+<h4 id="任意状态（Any-State）">任意状态（Any State）<a class="header-anchor" href="#任意状态（Any-State）">·</a></h4>
 <p><strong>任意状态</strong>是一个永远存在的特殊状态。当无论你当前处于哪种状态时，都想要进入某一个特定状态的情况，可以使用这种特殊状态。</p>
-<p>这是将相同的向外转换添加到计算机中所有状态的简写方法。请注意，任何状态的特殊含义意味着它不能是<strong>过渡的终点</strong>（即，无法主动过渡到“任意状态（Any
-State）”）。</p>
-<figure>
-<img data-src="https://docs.unity3d.com/cn/current/uploads/Main/AnyState.png"
-alt="Any State" />
-<figcaption aria-hidden="true">Any State</figcaption>
-</figure>
+<p>这是将相同的向外转换添加到计算机中所有状态的简写方法。请注意，任何状态的特殊含义意味着它不能是<strong>过渡的终点</strong>（即，无法主动过渡到“任意状态（Any State）”）。</p>
+<p><img data-src="https://docs.unity3d.com/cn/current/uploads/Main/AnyState.png" alt="" loading="lazy" /></p>
 <p>应用：无论角色处于什么状态，都能发动攻击，开始播放攻击动画。</p>
-<h4 id="混合树">混合树</h4>
-<p>混合树允许你根据参数来混合多段动画。 <a
-target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/jing-ling-dong-hua?uv=2020.3&amp;projectId=5facf921edbc2a2003a58d3a#6073def7edbc2a04020b22a6">使用混合树</a></p>
-<h3 id="动画过渡animation-transitions">动画过渡（<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Transition.html">Animation
-transitions</a>）</h3>
-<p>动画过渡允许<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/StateMachineBasics.html">状态机</a>从一个动画状态切换或混合到另一动画状态。过渡不仅定义状态之间的混合应该耗费多长时间，而且还定义它们应该在什么条件下激活。您可以设置仅在特定条件成立时才发生过渡。</p>
-<p><a
-target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/jing-ling-dong-hua?uv=2020.3&amp;projectId=5facf921edbc2a2003a58d3a#6073def7edbc2a04020b22a9">案例
-- 精灵动画</a></p>
-<h4 id="属性">属性</h4>
+<h4 id="混合树">混合树<a class="header-anchor" href="#混合树">·</a></h4>
+<p>混合树允许你根据参数来混合多段动画。<br />
+<a target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/jing-ling-dong-hua?uv=2020.3&amp;projectId=5facf921edbc2a2003a58d3a#6073def7edbc2a04020b22a6">使用混合树</a></p>
+<h3 id="动画过渡（Animation-transitions）">动画过渡（<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Transition.html">Animation transitions</a>）<a class="header-anchor" href="#动画过渡（Animation-transitions）">·</a></h3>
+<p>动画过渡允许<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/StateMachineBasics.html">状态机</a>从一个动画状态切换或混合到另一动画状态。过渡不仅定义状态之间的混合应该耗费多长时间，而且还定义它们应该在什么条件下激活。您可以设置仅在特定条件成立时才发生过渡。</p>
+<p><a target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/jing-ling-dong-hua?uv=2020.3&amp;projectId=5facf921edbc2a2003a58d3a#6073def7edbc2a04020b22a9">案例 - 精灵动画</a></p>
+<h4 id="属性">属性<a class="header-anchor" href="#属性">·</a></h4>
 <table>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 25%" />
-<col style="width: 62%" />
-</colgroup>
 <thead>
-<tr class="header">
-<th style="text-align: left;"><strong>属性</strong></th>
-<th style="text-align: left;">英文</th>
-<th style="text-align: left;"><strong>功能</strong></th>
+<tr>
+<th style="text-align:left"><strong>属性</strong></th>
+<th style="text-align:left">英文</th>
+<th style="text-align:left"><strong>功能</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: left;">有退出时间</td>
-<td style="text-align: left;"><strong>Has Exit Time</strong></td>
-<td style="text-align: left;"><strong>Exit Time</strong>
-是一种不依赖参数的特殊过渡。但是，它依赖状态的标准化时间。选中此选项可在
-<strong>Exit Time</strong> 指定的具体时间进行过渡。</td>
+<tr>
+<td style="text-align:left">有退出时间</td>
+<td style="text-align:left"><strong>Has Exit Time</strong></td>
+<td style="text-align:left"><strong>Exit Time</strong> 是一种不依赖参数的特殊过渡。但是，它依赖状态的标准化时间。选中此选项可在 <strong>Exit Time</strong> 指定的具体时间进行过渡。</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><strong>Settings</strong></td>
-<td
-style="text-align: left;">包含详细过渡设置的折叠菜单（如下所示）。</td>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><strong>Settings</strong></td>
+<td style="text-align:left">包含详细过渡设置的折叠菜单（如下所示）。</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">退出时间</td>
-<td style="text-align: left;"><strong>Exit Time</strong></td>
-<td style="text-align: left;">如果选中 **Has Exit
-Time__，此值表示过渡可以生效的确切时间。该时间以标准化时间表示（例如，退出时间为
-0.75 表示，在已播放 75% 动画的第一帧上，__Exit Time** 条件为
-true）。在下一帧上，该条件为 false。
-对于循环动画，每个循环都会评估退出时间小于 1
-的过渡，因此可使用此选项在每个循环的动画中以适当时机对过渡进行计时。<br />对
-<strong>Exit Time</strong> 大于 1
-的过渡仅评估一次，因此此类过渡可用于在固定循环次数后的特定时间退出。例如，过渡的退出时间为
-3.5 的情况下，在三个半循环后对该过渡评估一次。</td>
+<tr>
+<td style="text-align:left">退出时间</td>
+<td style="text-align:left"><strong>Exit Time</strong></td>
+<td style="text-align:left">如果选中 <strong>Has Exit Time__，此值表示过渡可以生效的确切时间。该时间以标准化时间表示（例如，退出时间为 0.75 表示，在已播放 75% 动画的第一帧上，__Exit Time</strong> 条件为 true）。在下一帧上，该条件为 false。  对于循环动画，每个循环都会评估退出时间小于 1 的过渡，因此可使用此选项在每个循环的动画中以适当时机对过渡进行计时。<br />对 <strong>Exit Time</strong> 大于 1 的过渡仅评估一次，因此此类过渡可用于在固定循环次数后的特定时间退出。例如，过渡的退出时间为 3.5 的情况下，在三个半循环后对该过渡评估一次。</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">固定持续时间</td>
-<td style="text-align: left;"><strong>Fixed Duration</strong></td>
-<td style="text-align: left;">如果选中 <strong>Fixed Duration</strong>
-复选框，则以秒为单位解读过渡时间。如果未选中 <strong>Fixed
-Duration</strong>
-复选框，则过渡时间解读为源状态的标准化时间的一部分。</td>
+<tr>
+<td style="text-align:left">固定持续时间</td>
+<td style="text-align:left"><strong>Fixed Duration</strong></td>
+<td style="text-align:left">如果选中 <strong>Fixed Duration</strong> 复选框，则以秒为单位解读过渡时间。如果未选中 <strong>Fixed Duration</strong> 复选框，则过渡时间解读为源状态的标准化时间的一部分。</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">过渡持续时间</td>
-<td style="text-align: left;"><strong>Transition Duration</strong></td>
-<td
-style="text-align: left;">相对于当前状态持续时间的过渡持续时间，以标准化时间或秒为单位（具体取决于
-<strong>Fixed Duration</strong>
-模式）。此时间在过渡图中显示为两个蓝色标记之间的部分。</td>
+<tr>
+<td style="text-align:left">过渡持续时间</td>
+<td style="text-align:left"><strong>Transition Duration</strong></td>
+<td style="text-align:left">相对于当前状态持续时间的过渡持续时间，以标准化时间或秒为单位（具体取决于 <strong>Fixed Duration</strong> 模式）。此时间在过渡图中显示为两个蓝色标记之间的部分。</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">过渡偏移</td>
-<td style="text-align: left;"><strong>Transition Offset</strong></td>
-<td
-style="text-align: left;">过渡到的目标状态的起始播放的时间偏移。例如，值为
-0.5 表示目标状态在其时间轴的 50% 处开始播放。</td>
+<tr>
+<td style="text-align:left">过渡偏移</td>
+<td style="text-align:left"><strong>Transition Offset</strong></td>
+<td style="text-align:left">过渡到的目标状态的起始播放的时间偏移。例如，值为 0.5 表示目标状态在其时间轴的 50% 处开始播放。</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">中断源</td>
-<td style="text-align: left;"><strong>Interruption Source</strong></td>
-<td
-style="text-align: left;">此选项用于控制该过渡可能中断的情况（请参阅下文的<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Transition.html#TransitionInterruption">过渡中断</a>）。</td>
+<tr>
+<td style="text-align:left">中断源</td>
+<td style="text-align:left"><strong>Interruption Source</strong></td>
+<td style="text-align:left">此选项用于控制该过渡可能中断的情况（请参阅下文的<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Transition.html#TransitionInterruption">过渡中断</a>）。</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">有序中断</td>
-<td style="text-align: left;"><strong>Ordered Interruption</strong></td>
-<td
-style="text-align: left;">确定当前过渡是否可在不考虑顺序的情况下被其他过渡中断（请参阅下文的<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Transition.html#TransitionInterruption">过渡中断</a>）。</td>
+<tr>
+<td style="text-align:left">有序中断</td>
+<td style="text-align:left"><strong>Ordered Interruption</strong></td>
+<td style="text-align:left">确定当前过渡是否可在不考虑顺序的情况下被其他过渡中断（请参阅下文的<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Transition.html#TransitionInterruption">过渡中断</a>）。</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">条件</td>
-<td style="text-align: left;"><strong>Conditions</strong></td>
-<td
-style="text-align: left;">一个过渡可以具有单个条件、多个条件或根本没有条件。如果过渡没有条件，Unity
-Editor 只会考虑 Exit
-Time，并在达到退出时间时发生过渡。如果过渡有一个或多个条件，则必须满足所有条件才能触发过渡。<br />一个条件包含：<br />-
-一个事件参数（在条件中考虑其值）。<br />-
-条件谓词（需要时填写，例如，浮点数的“小于”或“大于”）。<br />-
-一个参数值（需要时填写）。<br /><br />如果为该过渡选择 Has Exit Time
-并有一个或多个条件，请注意 Unity Editor 在 <strong>Exit Time</strong>
-之后考虑条件是否为 true。这样可确保在动画的特定部分中进行过渡。</td>
+<tr>
+<td style="text-align:left">条件</td>
+<td style="text-align:left"><strong>Conditions</strong></td>
+<td style="text-align:left">一个过渡可以具有单个条件、多个条件或根本没有条件。如果过渡没有条件，Unity Editor 只会考虑 Exit Time，并在达到退出时间时发生过渡。如果过渡有一个或多个条件，则必须满足所有条件才能触发过渡。<br />一个条件包含：<br />- 一个事件参数（在条件中考虑其值）。<br />- 条件谓词（需要时填写，例如，浮点数的“小于”或“大于”）。<br />- 一个参数值（需要时填写）。<br /><br />如果为该过渡选择 Has Exit Time 并有一个或多个条件，请注意 Unity Editor 在 <strong>Exit Time</strong> 之后考虑条件是否为 true。这样可确保在动画的特定部分中进行过渡。</td>
 </tr>
 </tbody>
 </table>
-<p><strong>有退出时间（Has Exit Time）</strong> 若为取消选中状态，这表示
-Moving 动画不会等到状态机进入到 Idle
-动画之前结束，而是会立即发生变化。</p>
-<h4 id="conditions---条件">Conditions - 条件</h4>
+<p><strong>有退出时间（Has Exit Time）</strong> 若为取消选中状态，这表示 Moving 动画不会等到状态机进入到 Idle 动画之前结束，而是会立即发生变化。</p>
+<h4 id="Conditions-条件">Conditions - 条件<a class="header-anchor" href="#Conditions-条件">·</a></h4>
 <p>在两种情况下会发生过渡：</p>
 <ul>
-<li>如果没有条件，则在动画结束时发生过渡。此处不属于这种情况，因为我们的动画正在循环播放，但是如果你查看从
-Hit 到 Idle 的过渡，就属于这种情况：已勾选 Has Exit
-Time，并且没有设置任何条件，这意味着 Hit 动画将播放一次，然后过渡回
-Idle。</li>
-<li>或者，我们可以根据你的参数设置条件。在此处，如果 Ruby 的速度小于
-0.1，则状态机将从 Moving 过渡到 Idle。</li>
+<li>如果没有条件，则在动画结束时发生过渡。此处不属于这种情况，因为我们的动画正在循环播放，但是如果你查看从 Hit 到 Idle 的过渡，就属于这种情况：已勾选 Has Exit Time，并且没有设置任何条件，这意味着 Hit 动画将播放一次，然后过渡回 Idle。</li>
+<li>或者，我们可以根据你的参数设置条件。在此处，如果 Ruby 的速度小于 0.1，则状态机将从 Moving 过渡到 Idle。</li>
 </ul>
-<h4 id="过渡中断transition-interruption">过渡中断（<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Transition.html#TransitionInterruption">Transition
-Interruption</a>）</h4>
-<p><a
-target="_blank" rel="noopener" href="https://blog.unity.com/technology/wait-ive-changed-my-mind-state-machine-transition-interruptions">过渡中断解释
-- 官方技术博客</a></p>
-<p><a
-target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1xq4y147pD/?vd_source=83b60c8bc528ec682dd5670fc57ef7a4">【Unity动画系统详解
-十二】动画状态过渡中断/转换打断（Transition Interruption）</a></p>
-<p>使用 <strong>Interruption Source</strong> 和 <strong>Ordered
-Interruption</strong> 属性可控制如何中断过渡。</p>
+<h4 id="过渡中断（Transition-Interruption）">过渡中断（<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-Transition.html#TransitionInterruption">Transition Interruption</a>）<a class="header-anchor" href="#过渡中断（Transition-Interruption）">·</a></h4>
+<p><a target="_blank" rel="noopener" href="https://blog.unity.com/technology/wait-ive-changed-my-mind-state-machine-transition-interruptions">过渡中断解释 - 官方技术博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1xq4y147pD/?vd_source=83b60c8bc528ec682dd5670fc57ef7a4">【Unity动画系统详解 十二】动画状态过渡中断/转换打断（Transition Interruption）</a></p>
+<p>使用 <strong>Interruption Source</strong> 和 <strong>Ordered Interruption</strong> 属性可控制如何中断过渡。</p>
 <p>在概念上，中断顺序就像这些过渡已排队，然后解析为一个有效过渡从第一个过渡插入到最后一个过渡。</p>
-<h1 id="动画animation">动画（Animation）</h1>
-<p><a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/animeditor-UsingAnimationEditor.html">使用
-Animation 视图 - Unity 手册</a></p>
-<figure>
-<img data-src="https://connect-cdn-public-prd.unitychina.cn/h1/20211123/learn/images/1b734627-3e4d-40cb-b794-d9370b390e9a_frames_mark.png.1800x0x1.png"
-alt="时间轴模式" />
-<figcaption aria-hidden="true">时间轴模式</figcaption>
-</figure>
+<h1 id="动画（Animation）">动画（Animation）<a class="header-anchor" href="#动画（Animation）">·</a></h1>
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/animeditor-UsingAnimationEditor.html">使用 Animation 视图 - Unity 手册</a></p>
+<p><img data-src="https://connect-cdn-public-prd.unitychina.cn/h1/20211123/learn/images/1b734627-3e4d-40cb-b794-d9370b390e9a_frames_mark.png.1800x0x1.png" alt="" loading="lazy" /></p>
 <ul>
 <li>帧模式</li>
 <li>秒模式</li>
 </ul>
 <hr />
 <p>Unity 动画的帧速率 （FPS）</p>
-<p>默认情况下，Unity 动画的帧速率 （FPS） 为
-60。这意味着对于每一秒的动画，屏幕上渲染 60
-帧。这会产生非常流畅的动画;但是，动画更常见的帧速率是 24
-FPS。这也是大多数电影的帧速率。您选择用于动画的帧速率最终取决于个人喜好，但<u><strong>请确保在项目中的所有动画中始终使用相同的速率</strong></u>。如果您打算使用从
-DCC 或 Unity 资源商店导入的动画（通常为 24 FPS）。</p>
-<p><strong>注意：</strong>了解采样率低于每秒 60
-帧的动画在时间轴中的数字显示方式非常重要。冒号之前的第一个数字是动画的第二个数字，而冒号后面的数字是当前帧。例如，1：22
-表示<strong>第一秒内</strong>动画的<strong>第 22 帧</strong>。</p>
-<h2 id="animation-clip---动画剪辑">Animation Clip - 动画剪辑</h2>
+<p>默认情况下，Unity 动画的帧速率 （FPS） 为 60。这意味着对于每一秒的动画，屏幕上渲染 60 帧。这会产生非常流畅的动画;但是，动画更常见的帧速率是 24 FPS。这也是大多数电影的帧速率。您选择用于动画的帧速率最终取决于个人喜好，但<u><strong>请确保在项目中的所有动画中始终使用相同的速率</strong></u>。如果您打算使用从 DCC 或 Unity 资源商店导入的动画（通常为 24 FPS）。</p>
+<p><strong>注意：<strong>了解采样率低于每秒 60 帧的动画在时间轴中的数字显示方式非常重要。冒号之前的第一个数字是动画的第二个数字，而冒号后面的数字是当前帧。例如，1：22 表示</strong>第一秒内</strong>动画的<strong>第 22 帧</strong>。</p>
+<h2 id="Animation-Clip-动画剪辑">Animation Clip - 动画剪辑<a class="header-anchor" href="#Animation-Clip-动画剪辑">·</a></h2>
 <p>动画剪辑是用于存储动画数据的资源。</p>
-<p><a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/animeditor-CreatingANewAnimationClip.html">创建新动画剪辑
-- Unity 手册</a></p>
-<h3 id="录制关键帧">录制关键帧</h3>
-<ol type="1">
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/animeditor-CreatingANewAnimationClip.html">创建新动画剪辑 - Unity 手册</a></p>
+<h3 id="录制关键帧">录制关键帧<a class="header-anchor" href="#录制关键帧">·</a></h3>
+<ol>
 <li>在动画窗口中，手动添加需要动画化的属性</li>
 <li>层次窗口，选择游戏对象的子对象，在需要动画化的属性上，右键，添加关键帧（Key）</li>
 </ol>
-<h4 id="热键">热键</h4>
+<h4 id="热键">热键<a class="header-anchor" href="#热键">·</a></h4>
 <ul>
-<li><strong>K</strong> - <em>为所有动画属性添加关键帧。</em>在 Animation
-窗口回放头的当前位置为所有动画属性添加关键帧。</li>
-<li><strong>Shift-K</strong> - <em>为所有已修改属性添加关键帧。</em>在
-Animation 窗口回放头的当前位置仅为已修改的动画属性添加关键帧。</li>
+<li><strong>K</strong> - *为所有动画属性添加关键帧。*在 Animation 窗口回放头的当前位置为所有动画属性添加关键帧。</li>
+<li><strong>Shift-K</strong> - *为所有已修改属性添加关键帧。*在 Animation 窗口回放头的当前位置仅为已修改的动画属性添加关键帧。</li>
 </ul>
-<h3 id="曲线编辑器">曲线编辑器</h3>
-<p><a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/animeditor-AnimationCurves.html">使用动画曲线
-- Unity 手册</a></p>
-<p><a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/EditingCurves.html">编辑曲线
-- Unity 手册</a></p>
-<h4 id="在曲线视图中导航">在曲线视图中导航</h4>
+<h3 id="曲线编辑器">曲线编辑器<a class="header-anchor" href="#曲线编辑器">·</a></h3>
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/animeditor-AnimationCurves.html">使用动画曲线 - Unity 手册</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/EditingCurves.html">编辑曲线 - Unity 手册</a></p>
+<h4 id="在曲线视图中导航">在曲线视图中导航<a class="header-anchor" href="#在曲线视图中导航">·</a></h4>
 <ul>
 <li>按 <strong>F</strong> 来完全框选显示的曲线或选定的关键点。</li>
-<li>按住 <strong>Alt</strong> 键
-+（鼠标滚轮、触控板缩放或者鼠标右键拖动）来__缩放__曲线视图。</li>
+<li>按住 <strong>Alt</strong> 键 +（鼠标滚轮、触控板缩放或者鼠标右键拖动）来__缩放__曲线视图。</li>
 <li>按住 <strong>Ctrl</strong> 键，水平缩放。</li>
 <li>按住 <strong>Shift</strong> 键，垂直缩放。</li>
-<li>鼠标中键拖动，或按住 <strong>Alt</strong> 键 +
-鼠标左键，来__平移__曲线视图。</li>
+<li>鼠标中键拖动，或按住 <strong>Alt</strong> 键 + 鼠标左键，来__平移__曲线视图。</li>
 </ul>
-<h4 id="编辑切线">编辑切线</h4>
+<h4 id="编辑切线">编辑切线<a class="header-anchor" href="#编辑切线">·</a></h4>
 <p>一个关键点有两条__切线__：左切线、右切线。切线可控制关键点之间的曲线形状。</p>
-<h5 id="切线类型">切线类型</h5>
+<h5 id="切线类型">切线类型<a class="header-anchor" href="#切线类型">·</a></h5>
 <p>用于控制曲线离开一个关键点并到达下一个关键点的方式。右键单击一个关键点可以选择该关键点的切线类型。</p>
 <ul>
-<li><strong>自动钳制（Clamped
-Auto）</strong>：这是<strong>默认切线模式</strong>。系统会自动设置切线，使曲线通过关键点时保持平滑。编辑关键点的位置或时间时，切线会进行调整以防止曲线“超出”目标值。如果在
-Clamped Auto 模式下手动调整关键点的切线，则会切换到 Free Smooth
-模式。</li>
-<li><strong>自动（Auto）</strong>：这是<a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/UpgradeGuide55.html">旧版切线模式</a>，但此选项仍然保留着以便与旧项目向后兼容。除非有特别原因要使用此模式，否则请使用默认的
-Clamped
-Auto。当关键点设置为此模式时，系统会自动设置切线，使曲线通过关键点时保持平滑。但是，与
-Clamped Auto 模式相比有两个不同之处：
-1.当编辑关键点的位置或时间时，切线不会自动调整；切线仅在最初将关键点设置为此模式时进行调整。
-2.Unity 在计算切线时，不会考虑避免“超出”关键点的目标值。</li>
-<li><strong>自动平滑（Free
-Smooth）</strong>：拖动切线控制柄来自由设置切线。它们被锁定为共线以确保平滑。</li>
-<li><strong>水平（Flat）</strong>：切线设置为水平（这是 Free Smooth
-的特例）。</li>
+<li><strong>自动钳制（Clamped Auto）</strong>：这是<strong>默认切线模式</strong>。系统会自动设置切线，使曲线通过关键点时保持平滑。编辑关键点的位置或时间时，切线会进行调整以防止曲线“超出”目标值。如果在 Clamped Auto 模式下手动调整关键点的切线，则会切换到 Free Smooth 模式。</li>
+<li><strong>自动（Auto）</strong>：这是<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/UpgradeGuide55.html">旧版切线模式</a>，但此选项仍然保留着以便与旧项目向后兼容。除非有特别原因要使用此模式，否则请使用默认的 Clamped Auto。当关键点设置为此模式时，系统会自动设置切线，使曲线通过关键点时保持平滑。但是，与 Clamped Auto 模式相比有两个不同之处： 1.当编辑关键点的位置或时间时，切线不会自动调整；切线仅在最初将关键点设置为此模式时进行调整。 2.Unity 在计算切线时，不会考虑避免“超出”关键点的目标值。</li>
+<li><strong>自动平滑（Free Smooth）</strong>：拖动切线控制柄来自由设置切线。它们被锁定为共线以确保平滑。</li>
+<li><strong>水平（Flat）</strong>：切线设置为水平（这是 Free Smooth 的特例）。</li>
 <li><strong>断开（Broken）</strong>：使用中断的切线时，可以单独设置左右切线。拖动切线控制柄来自由设置切线。
 <ul>
 <li>左切线
@@ -689,99 +573,92 @@ Smooth）</strong>：拖动切线控制柄来自由设置切线。它们被锁�
 <li>线性曲线</li>
 <li>恒定曲线</li>
 <li>加权曲线</li>
-</ul></li>
+</ul>
+</li>
 <li>右切线
 <ul>
 <li>自由曲线</li>
 <li>线性曲线</li>
 <li>恒定曲线</li>
-</ul></li>
+</ul>
+</li>
 <li>双切线
 <ul>
 <li>自由曲线</li>
 <li>线性曲线</li>
 <li>恒定曲线</li>
 <li>加权曲线</li>
-</ul></li>
-</ul></li>
 </ul>
-<h2 id="animationevent---动画事件"><a
-target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/script-AnimationWindowEvent.html">AnimationEvent</a>
-- 动画事件</h2>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="AnimationEvent-动画事件"><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/script-AnimationWindowEvent.html">AnimationEvent</a> - 动画事件<a class="header-anchor" href="#AnimationEvent-动画事件">·</a></h2>
 <p>动画事件允许您在时间轴中的指定点<strong>调用对象脚本中的函数</strong>。</p>
 <p>并不是所有的函数都可以被当做动画事件函数的，可以被调用的动画事件函数必须满足以下规则：</p>
-<ol type="1">
+<ol>
 <li>最多只能接受一个参数</li>
-<li>参数的类型必须是float、string、int 、 object 引用、 AnimationEvent
-对象</li>
+<li>参数的类型必须是float、string、int 、 object 引用、 AnimationEvent 对象</li>
 </ol>
-<p>AnimationEvent
-对象具有一些成员变量，通过这些变量可将浮点、字符串、整数和对象引用以及有关触发函数调用的事件的其他信息一次性传递给该函数。</p>
-<p><img data-src="https://cdn.nlark.com/yuque/0/2022/webp/28154130/1665627637704-fd727073-f45b-446c-b2e9-096513182fc5.webp#clientId=u574b21b2-6b88-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u1f01be88&amp;margin=%5Bobject%20Object%5D&amp;originHeight=273&amp;originWidth=930&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u79c43d3f-0093-4e5b-9154-88532e9c5ac&amp;title=" /></p>
-<p>参考资料：<a
-target="_blank" rel="noopener" href="https://www.jianshu.com/p/23984fa87857">Unity/Animation --
-添加动画事件(Animation Events)</a></p>
-<h1 id="d-animation包">2D Animation包</h1>
-<p>官方文档：<a
-target="_blank" rel="noopener" href="https://docs.unity.cn/Packages/com.unity.2d.animation@7.0/manual/index.html">com.unity.2d.animation@7.0</a></p>
-<p>在“包管理器”窗口中，找到“2D Animation”包，然后安装2D
-Animation包。</p>
-<h2 id="精灵皮肤组件---sprite-skin">精灵皮肤组件 - Sprite Skin</h2>
-<h2 id="蒙皮编辑器---skinning-editor">蒙皮编辑器 - Skinning Editor</h2>
-<p><a
-target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/rigging-a-sprite-with-the-2d-animation-package-1?language=en&amp;utm_source=learn_recommendation#5ddbb698edbc2a0715b9bf4b">案例
-- 使用 2D 动画包绑定精灵</a></p>
-<p><a
-target="_blank" rel="noopener" href="https://docs.unity.cn/Packages/com.unity.2d.animation@7.0/manual/SkinEdToolsShortcuts.html">官方文档
-- 编辑器工具和快捷方式</a></p>
-<p>在Sprite编辑器的下拉列表中，可以找到并打开。 <img data-src=":/06ef54a92b06467e8a4ae2fb6426cda4" alt="Skinning Editor" />
+<p>AnimationEvent 对象具有一些成员变量，通过这些变量可将浮点、字符串、整数和对象引用以及有关触发函数调用的事件的其他信息一次性传递给该函数。</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/webp/28154130/1665627637704-fd727073-f45b-446c-b2e9-096513182fc5.webp#clientId=u574b21b2-6b88-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=u1f01be88&amp;margin=%5Bobject%20Object%5D&amp;originHeight=273&amp;originWidth=930&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u79c43d3f-0093-4e5b-9154-88532e9c5ac&amp;title=" alt="" loading="lazy" /></p>
+<p>参考资料：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/23984fa87857">Unity/Animation – 添加动画事件(Animation Events)</a></p>
+<h1 id="2D-Animation包">2D Animation包<a class="header-anchor" href="#2D-Animation包">·</a></h1>
+<p>官方文档：<a target="_blank" rel="noopener" href="https://docs.unity.cn/Packages/com.unity.2d.animation@7.0/manual/index.html">com.unity.2d.animation@7.0</a></p>
+<p>在“包管理器”窗口中，找到“2D Animation”包，然后安装2D Animation包。</p>
+<h2 id="精灵皮肤组件-Sprite-Skin">精灵皮肤组件 - Sprite Skin<a class="header-anchor" href="#精灵皮肤组件-Sprite-Skin">·</a></h2>
+<h2 id="蒙皮编辑器-Skinning-Editor">蒙皮编辑器 - Skinning Editor<a class="header-anchor" href="#蒙皮编辑器-Skinning-Editor">·</a></h2>
+<p><a target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/rigging-a-sprite-with-the-2d-animation-package-1?language=en&amp;utm_source=learn_recommendation#5ddbb698edbc2a0715b9bf4b">案例 - 使用 2D 动画包绑定精灵</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/Packages/com.unity.2d.animation@7.0/manual/SkinEdToolsShortcuts.html">官方文档 - 编辑器工具和快捷方式</a></p>
+<p>在Sprite编辑器的下拉列表中，可以找到并打开。<br />
+<img data-src=":/06ef54a92b06467e8a4ae2fb6426cda4" alt="" loading="lazy" /><br />
 蒙皮编辑器用于构建一个骨架，角色绑定到该骨架上。Sprite充当一种皮肤，因此蒙皮编辑器得名。蒙皮编辑器是Sprite编辑器的子集。</p>
-<h3 id="姿态工具">姿态工具</h3>
+<h3 id="姿态工具">姿态工具<a class="header-anchor" href="#姿态工具">·</a></h3>
 <ul>
-<li>预览姿势（Preview
-Pose）：这允许您移动和旋转骨骼，以查看绑定如何影响姿势和动画。您可以连接、断开和重新定位骨骼，但这些更改不是永久性的，仅在预览期间处于活动状态。</li>
+<li>预览姿势（Preview Pose）：这允许您移动和旋转骨骼，以查看绑定如何影响姿势和动画。您可以连接、断开和重新定位骨骼，但这些更改不是永久性的，仅在预览期间处于活动状态。</li>
 <li>重置姿态</li>
 </ul>
-<h3 id="骨骼工具">骨骼工具</h3>
+<h3 id="骨骼工具">骨骼工具<a class="header-anchor" href="#骨骼工具">·</a></h3>
 <ul>
-<li><p>编辑骨骼（Edit
-Bone）：将骨骼重新定位到新位置。这些更改将自动保存为“恢复绑定姿势”工具的默认绑定姿势。在此模式下，精灵几何体不会随骨骼变形，即使骨骼作为影响因素附加也是如此。</p></li>
-<li><p>创建骨骼（Create
-Bone）：这允许您创建骨骼。如果要从另一个工具切换到此工具，则骨骼默认为先前所选骨骼链根的子项，从而在层次结构中启动一个新分支。或者，您可以单击现有骨骼的尖端，使其成为新骨骼的父骨骼。如果要在没有父骨骼的情况下创建新骨骼，请右键单击以断开任何连接。左键单击以放置骨根，然后再次单击以放置尖端。创建骨骼时，您可以为其命名并设置其精灵深度。</p></li>
-<li><p>分割骨骼（Split
-Bone）：这会将单个骨骼拆分为两个连接的骨骼。</p></li>
+<li>
+<p>编辑骨骼（Edit Bone）：将骨骼重新定位到新位置。这些更改将自动保存为“恢复绑定姿势”工具的默认绑定姿势。在此模式下，精灵几何体不会随骨骼变形，即使骨骼作为影响因素附加也是如此。</p>
+</li>
+<li>
+<p>创建骨骼（Create Bone）：这允许您创建骨骼。如果要从另一个工具切换到此工具，则骨骼默认为先前所选骨骼链根的子项，从而在层次结构中启动一个新分支。或者，您可以单击现有骨骼的尖端，使其成为新骨骼的父骨骼。如果要在没有父骨骼的情况下创建新骨骼，请右键单击以断开任何连接。左键单击以放置骨根，然后再次单击以放置尖端。创建骨骼时，您可以为其命名并设置其精灵深度。</p>
+</li>
+<li>
+<p>分割骨骼（Split Bone）：这会将单个骨骼拆分为两个连接的骨骼。</p>
+</li>
 </ul>
-<h3 id="几何体">几何体</h3>
+<h3 id="几何体">几何体<a class="header-anchor" href="#几何体">·</a></h3>
 <ul>
-<li>自动几何体（Auto
-Geometry）：这会自动为精灵创建顶点网格体，将现有骨骼分配给顶点，并生成骨骼权重信息。骨骼权重是按顶点设置的，并确定骨骼对顶点的影响程度。顶点的颜色与受其影响的骨骼相匹配，受多个骨骼影响的顶点是骨骼颜色的混合。顶点网格体的细分是自动的，基于精灵几何轮廓，而不是骨骼的计数和位置。</li>
-<li>编辑几何（Edit
-Geometry）：这允许您移动和删除边和顶点。如果删除边框边缘，导致网格打开，Unity
-仅保留顶点和其他边框边缘。内部边缘信息将丢失，直到再次闭合曲面或使用“自动几何图形”。</li>
-<li>创建顶点（Create
-Vertex）：这允许您创建顶点，自动创建边以将其连接到相邻顶点。</li>
-<li>创建边（Create
-Edge）：这允许您在两个现有折点之间创建边，或者创建一个现有折点和放置在您单击位置的新折点之间创建边。</li>
-<li>分割边缘（Split
-Edge）：这将拆分离鼠标最近的边缘，方法是在您单击的位置创建一个新顶点，并将其与原始边缘的两个端点连接起来。</li>
+<li>自动几何体（Auto Geometry）：这会自动为精灵创建顶点网格体，将现有骨骼分配给顶点，并生成骨骼权重信息。骨骼权重是按顶点设置的，并确定骨骼对顶点的影响程度。顶点的颜色与受其影响的骨骼相匹配，受多个骨骼影响的顶点是骨骼颜色的混合。顶点网格体的细分是自动的，基于精灵几何轮廓，而不是骨骼的计数和位置。</li>
+<li>编辑几何（Edit Geometry）：这允许您移动和删除边和顶点。如果删除边框边缘，导致网格打开，Unity 仅保留顶点和其他边框边缘。内部边缘信息将丢失，直到再次闭合曲面或使用“自动几何图形”。</li>
+<li>创建顶点（Create Vertex）：这允许您创建顶点，自动创建边以将其连接到相邻顶点。</li>
+<li>创建边（Create Edge）：这允许您在两个现有折点之间创建边，或者创建一个现有折点和放置在您单击位置的新折点之间创建边。</li>
+<li>分割边缘（Split Edge）：这将拆分离鼠标最近的边缘，方法是在您单击的位置创建一个新顶点，并将其与原始边缘的两个端点连接起来。</li>
 </ul>
-<h3 id="权重">权重</h3>
+<h3 id="权重">权重<a class="header-anchor" href="#权重">·</a></h3>
 <ul>
-<li><p>自动权重：这将打开一个面板，可以自动生成、归一化或清除骨骼重量。</p></li>
-<li><p>权重滑块：可以通过一组滑块调整选定的顶点。通过单击它们一次选择一个顶点，也可以在按住
-Ctrl
-并单击鼠标左键的同时选择多个顶点。您还可以通过在所需顶点周围拖动矩形套索来选择组。按住
-Shift，您可以拖动其他套索以添加到您的选择中。在不按住 Shift
-的情况下拖动套索可快速清除您的选择。</p></li>
-<li><p>权重刷子：这允许您选择骨骼并使用传统的数字画笔绘制其影响区域。画笔大小、硬度和步进就像在
-Photoshop 等绘画程序中一样工作。</p></li>
-<li><p>骨骼影响（Bone Influence）：选择影响精灵的骨骼。</p></li>
-<li><p>精灵影响（Sprite
-Influence）：选择哪些精灵受到骨骼的影响。</p></li>
+<li>
+<p>自动权重：这将打开一个面板，可以自动生成、归一化或清除骨骼重量。</p>
+</li>
+<li>
+<p>权重滑块：可以通过一组滑块调整选定的顶点。通过单击它们一次选择一个顶点，也可以在按住 Ctrl 并单击鼠标左键的同时选择多个顶点。您还可以通过在所需顶点周围拖动矩形套索来选择组。按住 Shift，您可以拖动其他套索以添加到您的选择中。在不按住 Shift 的情况下拖动套索可快速清除您的选择。</p>
+</li>
+<li>
+<p>权重刷子：这允许您选择骨骼并使用传统的数字画笔绘制其影响区域。画笔大小、硬度和步进就像在 Photoshop 等绘画程序中一样工作。</p>
+</li>
+<li>
+<p>骨骼影响（Bone Influence）：选择影响精灵的骨骼。</p>
+</li>
+<li>
+<p>精灵影响（Sprite Influence）：选择哪些精灵受到骨骼的影响。</p>
+</li>
 </ul>
-<h2 id="工作流程">工作流程</h2>
-<h4 id="使用unity的骨骼系统">使用Unity的骨骼系统</h4>
-<ol type="1">
+<h2 id="工作流程">工作流程<a class="header-anchor" href="#工作流程">·</a></h2>
+<h4 id="使用Unity的骨骼系统">使用Unity的骨骼系统<a class="header-anchor" href="#使用Unity的骨骼系统">·</a></h4>
+<ol>
 <li>导入精灵</li>
 <li>编辑精灵设置</li>
 <li>打开蒙皮编辑器</li>
@@ -793,55 +670,36 @@ Influence）：选择哪些精灵受到骨骼的影响。</p></li>
 <li>点击“创建骨骼”</li>
 <li>制作骨骼动画</li>
 </ol>
-<p><a
-target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/animating-a-sprite-with-the-2d-animation-package#5ff8d434edbc2a00202d47a6">使用
-2D 动画包制作精灵动画 - Unity 学习</a></p>
-<h1 id="导入动画">导入动画</h1>
-<h2 id="配置动画类型">配置动画类型</h2>
-<p><a
-target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/import-animation?uv=2020.3&amp;pathwayId=61a65568edbc2a00206076dd&amp;missionId=61a64e25edbc2a0020607564#619cff89edbc2a209c88d03a">导入动画
-- 配置动画类型</a></p>
-<figure>
-<img data-src="https://connect-cdn-public-prd.unitychina.cn/h1/20211123/learn/images/5b93562b-7d3b-4560-8df5-ec0ff1a06033_rigimport.png.1800x0x1.png"
-alt="配置动画类型" />
-<figcaption aria-hidden="true">配置动画类型</figcaption>
-</figure>
+<p><a target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/animating-a-sprite-with-the-2d-animation-package#5ff8d434edbc2a00202d47a6">使用 2D 动画包制作精灵动画 - Unity 学习</a></p>
+<h1 id="导入动画">导入动画<a class="header-anchor" href="#导入动画">·</a></h1>
+<h2 id="配置动画类型">配置动画类型<a class="header-anchor" href="#配置动画类型">·</a></h2>
+<p><a target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/import-animation?uv=2020.3&amp;pathwayId=61a65568edbc2a00206076dd&amp;missionId=61a64e25edbc2a0020607564#619cff89edbc2a209c88d03a">导入动画 - 配置动画类型</a></p>
+<p><img data-src="https://connect-cdn-public-prd.unitychina.cn/h1/20211123/learn/images/5b93562b-7d3b-4560-8df5-ec0ff1a06033_rigimport.png.1800x0x1.png" alt="" loading="lazy" /></p>
 <ul>
 <li>无</li>
 <li>旧版</li>
 <li>泛型</li>
 <li>人形</li>
 </ul>
-<h2 id="配置动画剪辑">配置动画剪辑</h2>
-<p><a
-target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/import-animation?uv=2020.3&amp;pathwayId=61a65568edbc2a00206076dd&amp;missionId=61a64e25edbc2a0020607564#619cff9aedbc2a3ca451554d">导入动画
-- 配置动画剪辑</a></p>
-<ol type="1">
+<h2 id="配置动画剪辑">配置动画剪辑<a class="header-anchor" href="#配置动画剪辑">·</a></h2>
+<p><a target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/import-animation?uv=2020.3&amp;pathwayId=61a65568edbc2a00206076dd&amp;missionId=61a64e25edbc2a0020607564#619cff9aedbc2a3ca451554d">导入动画 - 配置动画剪辑</a></p>
+<ol>
 <li>新增剪辑</li>
 <li>重命名</li>
 <li>为特定动作定义开始帧和结束帧</li>
 <li>是否动画循环</li>
-<li>消除滑动效应 在根变换旋转、根变换位置 （Y） 和根变换位置 （XZ）
-中启用<strong>烘焙成的动作</strong>选项</li>
+<li>消除滑动效应<br />
+在根变换旋转、根变换位置 （Y） 和根变换位置 （XZ） 中启用<strong>烘焙成的动作</strong>选项</li>
 <li>现在，可以将剪辑从项目中添加到动画器中了。</li>
 </ol>
-<h3 id="根运动">根运动</h3>
-<h2 id="人形动画">人形动画</h2>
-<p><a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/ConfiguringtheAvatar.html">导入带有人形动画的模型
-- Unity 手册 (unity3d.com)</a></p>
-<p><a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/Retargeting.html">重定向人形动画
-- Unity 手册 (unity3d.com)</a></p>
-<p>重定向只适用于已配置了 Avatar
-的人形模型，因为这可以让我们在模型的骨骼结构之间建立对应关系。</p>
-<p><a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/AvatarCreationandSetup.html">人形Avatar
-- Unity 手册 (unity3d.com)</a></p>
-<h1 id="性能优化">性能优化</h1>
-<p><a
-target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/MecanimPeformanceandOptimization.html">动画系统的性能和优化
-- Unity 手册 (unity3d.com)</a></p>
+<h3 id="根运动">根运动<a class="header-anchor" href="#根运动">·</a></h3>
+<h2 id="人形动画">人形动画<a class="header-anchor" href="#人形动画">·</a></h2>
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/ConfiguringtheAvatar.html">导入带有人形动画的模型 - Unity 手册 (unity3d.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/Retargeting.html">重定向人形动画 - Unity 手册 (unity3d.com)</a></p>
+<p>重定向只适用于已配置了 Avatar 的人形模型，因为这可以让我们在模型的骨骼结构之间建立对应关系。</p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/AvatarCreationandSetup.html">人形Avatar - Unity 手册 (unity3d.com)</a></p>
+<h1 id="性能优化">性能优化<a class="header-anchor" href="#性能优化">·</a></h1>
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/MecanimPeformanceandOptimization.html">动画系统的性能和优化 - Unity 手册 (unity3d.com)</a></p>
 
     </div>
 
@@ -966,14 +824,14 @@ target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

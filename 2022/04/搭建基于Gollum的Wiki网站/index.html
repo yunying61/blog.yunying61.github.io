@@ -34,12 +34,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="搭建基于Gollum的Wiki网站 Gollum是一个建立在Git之上的简单wiki系统。Gollum Wiki只是一个具有特定性质的git存储库：  支持 Markdown 语法 可以包含其他内容，例如页面的图像，PDF和页眉&#x2F;页脚。 咕噜页面：  可以写成各种标记。 可以使用您喜欢的系统编辑器或IDE进行编辑（提交后将显示更改）或使用内置的Web界面进行编辑。 可以在所有版">
+    <meta name="description" content="搭建基于Gollum的Wiki网站· Gollum是一个建立在Git之上的简单wiki系统。Gollum Wiki只是一个具有特定性质的git存储库：  支持 Markdown 语法 可以包含其他内容，例如页面的图像，PDF和页眉&#x2F;页脚。 咕噜页面：  可以写成各种标记。 可以使用您喜欢的系统编辑器或IDE进行编辑（提交后将显示更改）或使用内置的Web界面进行编辑。 可以在所有版本中显示，还原等。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="搭建基于Gollum的Wiki网站">
 <meta property="og:url" content="https://www.yunying61.cn/2022/04/%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8EGollum%E7%9A%84Wiki%E7%BD%91%E7%AB%99/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="搭建基于Gollum的Wiki网站 Gollum是一个建立在Git之上的简单wiki系统。Gollum Wiki只是一个具有特定性质的git存储库：  支持 Markdown 语法 可以包含其他内容，例如页面的图像，PDF和页眉&#x2F;页脚。 咕噜页面：  可以写成各种标记。 可以使用您喜欢的系统编辑器或IDE进行编辑（提交后将显示更改）或使用内置的Web界面进行编辑。 可以在所有版">
+<meta property="og:description" content="搭建基于Gollum的Wiki网站· Gollum是一个建立在Git之上的简单wiki系统。Gollum Wiki只是一个具有特定性质的git存储库：  支持 Markdown 语法 可以包含其他内容，例如页面的图像，PDF和页眉&#x2F;页脚。 咕噜页面：  可以写成各种标记。 可以使用您喜欢的系统编辑器或IDE进行编辑（提交后将显示更改）或使用内置的Web界面进行编辑。 可以在所有版本中显示，还原等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-20T02:17:43.000Z">
 <meta property="article:modified_time" content="2022-11-09T09:57:02.949Z">
@@ -162,7 +162,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Egollum%E7%9A%84wiki%E7%BD%91%E7%AB%99"><span class="nav-number">1.</span> <span class="nav-text">搭建基于Gollum的Wiki网站</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E"><span class="nav-number">1.1.</span> <span class="nav-text">安装说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-rvm"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装 RVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-gollum"><span class="nav-number">1.2.2.</span> <span class="nav-text">安装 Gollum</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">1.4.</span> <span class="nav-text">后记</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8EGollum%E7%9A%84Wiki%E7%BD%91%E7%AB%99"><span class="nav-number">1.</span> <span class="nav-text">搭建基于Gollum的Wiki网站</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E"><span class="nav-number">1.1.</span> <span class="nav-text">安装说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-RVM"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装 RVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Gollum"><span class="nav-number">1.2.2.</span> <span class="nav-text">安装 Gollum</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">1.4.</span> <span class="nav-text">后记</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -354,75 +354,69 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="搭建基于gollum的wiki网站">搭建基于Gollum的Wiki网站</h1>
-<p>Gollum是一个建立在Git之上的简单wiki系统。Gollum
-Wiki只是一个具有特定性质的git存储库：</p>
+        <h1 id="搭建基于Gollum的Wiki网站">搭建基于Gollum的Wiki网站<a class="header-anchor" href="#搭建基于Gollum的Wiki网站">·</a></h1>
+<p>Gollum是一个建立在Git之上的简单wiki系统。Gollum Wiki只是一个具有特定性质的git存储库：</p>
 <ul>
 <li>支持 Markdown 语法</li>
 <li>可以包含其他内容，例如页面的图像，PDF和页眉/页脚。</li>
 <li>咕噜页面：
 <ul>
-<li>可以写成各种<a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum#markups">标记</a>。</li>
+<li>可以写成各种<a target="_blank" rel="noopener" href="https://github.com/gollum/gollum#markups">标记</a>。</li>
 <li>可以使用您喜欢的系统编辑器或IDE进行编辑（提交后将显示更改）或使用内置的Web界面进行编辑。</li>
 <li>可以在所有版本中显示，还原等。</li>
-</ul></li>
+</ul>
+</li>
 <li>Gollum 与 GitHub wiki 基本兼容</li>
 <li>Gollum 支持的高级功能：
 <ul>
-<li><a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#plantuml-diagrams">UML
-图</a></li>
-<li><a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/BibTeX-and-Citations">BibTeX
-和引文支持</a></li>
-<li>使用 <a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#criticmarkup-annotations">CriticMarkup</a>
-注释</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#mathematics">MathJax
-上的数学</a></li>
-<li><a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/Standard-Macros">宏</a></li>
-<li><a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#redirects">重定向</a></li>
-<li>最新更改的 <a
-target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/5.0-release-notes#rss-feed">RSS
-源</a></li>
-<li>...以及<a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki">更多</a></li>
-</ul></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#plantuml-diagrams">UML 图</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/BibTeX-and-Citations">BibTeX 和引文支持</a></li>
+<li>使用 <a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#criticmarkup-annotations">CriticMarkup</a> 注释</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#mathematics">MathJax 上的数学</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/Standard-Macros">宏</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki#redirects">重定向</a></li>
+<li>最新更改的 <a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki/5.0-release-notes#rss-feed">RSS 源</a></li>
+<li>…以及<a target="_blank" rel="noopener" href="https://github.com/gollum/gollum/wiki">更多</a></li>
+</ul>
+</li>
 </ul>
 <span id="more"></span>
-<h2 id="安装说明">安装说明</h2>
+<h2 id="安装说明">安装说明<a class="header-anchor" href="#安装说明">·</a></h2>
 <p>我为了安装这个Gollum真的是遇到了很多问题，可以说是刚好卡在了一个特殊的节点吧。</p>
-<ol type="1">
-<li>CentOS 8
-安装的ruby最高只能安装2.5.9版本，而Gollum最低要求要2.6.0😅。
-所以，被迫先迁移到CentOS Stream
-8，但好像没用，repo库里还是只有2.5.9版本。</li>
-<li>然后我尝试用RVM版本管理器去安装Ruby，又无法导入GPG密钥。
+<ol>
+<li>CentOS 8 安装的ruby最高只能安装2.5.9版本，而Gollum最低要求要2.6.0😅。<br />
+所以，被迫先迁移到CentOS Stream 8，但好像没用，repo库里还是只有2.5.9版本。</li>
+<li>然后我尝试用RVM版本管理器去安装Ruby，又无法导入GPG密钥。<br />
 后来用他们的Web服务器，总算是可以导入了。</li>
 </ol>
-<h2 id="安装">安装</h2>
-<h3 id="安装-rvm">安装 RVM</h3>
-<ol type="1">
-<li><p>安装 GPG 密钥，在终端运行以下代码：</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</span><br><span class="line">或</span><br><span class="line">gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</span><br></pre></td></tr></table></figure></p>
-<p>如果以上两条命令都没有用，提示<code>gpg: keyserver receive failed: Server indicated a failure</code>的话，再使用下面这个不太安全的
-Web 服务器导入密钥：</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://rvm.io/mpapis.asc | gpg --import -</span><br><span class="line">curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -</span><br></pre></td></tr></table></figure></p></li>
-<li><p>安装 RVM：</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\curl -sSL https://get.rvm.io | bash -s stable</span><br></pre></td></tr></table></figure></p></li>
-<li><p>更新shell环境</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br><span class="line"><span class="built_in">source</span> /usr/local/rvm/scripts/rvm</span><br></pre></td></tr></table></figure></p>
+<h2 id="安装">安装<a class="header-anchor" href="#安装">·</a></h2>
+<h3 id="安装-RVM">安装 RVM<a class="header-anchor" href="#安装-RVM">·</a></h3>
+<ol>
+<li>
+<p>安装 GPG 密钥，在终端运行以下代码：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</span><br><span class="line">或</span><br><span class="line">gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</span><br></pre></td></tr></table></figure>
+<p>如果以上两条命令都没有用，提示<code>gpg: keyserver receive failed: Server indicated a failure</code>的话，再使用下面这个不太安全的 Web 服务器导入密钥：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://rvm.io/mpapis.asc | gpg --import -</span><br><span class="line">curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>安装 RVM：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\curl -sSL https://get.rvm.io | bash -s stable</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>更新shell环境</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br><span class="line"><span class="built_in">source</span> /usr/local/rvm/scripts/rvm</span><br></pre></td></tr></table></figure>
 <p>检查是否安装成功：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rvm -v</span><br><span class="line">rvm list known</span><br></pre></td></tr></table></figure></p></li>
-<li><p>安装 ruby 先修改 RVM 的 Ruby 安装源到 Ruby China 的 Ruby
-镜像服务器，这样能提高安装速度</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;ruby_url=https://cache.ruby-china.com/pub/ruby&quot;</span> &gt; /usr/local/rvm/user/db</span><br><span class="line"></span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/</span><br><span class="line">gem sources -l</span><br></pre></td></tr></table></figure></p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rvm -v</span><br><span class="line">rvm list known</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>安装 ruby<br />
+先修改 RVM 的 Ruby 安装源到 Ruby China 的 Ruby 镜像服务器，这样能提高安装速度</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;ruby_url=https://cache.ruby-china.com/pub/ruby&quot;</span> &gt; /usr/local/rvm/user/db</span><br><span class="line"></span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/</span><br><span class="line">gem sources -l</span><br></pre></td></tr></table></figure>
 <p>开始安装：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm install ruby-head</span><br></pre></td></tr></table></figure></p></li>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm install ruby-head</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h3 id="安装-gollum">安装 Gollum</h3>
+<h3 id="安装-Gollum">安装 Gollum<a class="header-anchor" href="#安装-Gollum">·</a></h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm install current &amp;&amp; rvm use current</span><br></pre></td></tr></table></figure>
 <p>安装 gem 编译依赖项：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install icu</span><br></pre></td></tr></table></figure>
@@ -430,11 +424,10 @@ Web 服务器导入密钥：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install gollum</span><br></pre></td></tr></table></figure>
 <p>检查是否安装成功：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gollum --v</span><br></pre></td></tr></table></figure>
-<h2 id="使用">使用</h2>
+<h2 id="使用">使用<a class="header-anchor" href="#使用">·</a></h2>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /www/wwwroot</span><br><span class="line">mkdir gollumWiki</span><br><span class="line">cd gollumWiki</span><br><span class="line">git init</span><br><span class="line">gollum</span><br></pre></td></tr></table></figure>
-<p>访问<a target="_blank" rel="noopener" href="http://localhost:4567"
-class="uri">http://localhost:4567</a>即可看到一个创建新Home页面的界面</p>
-<h2 id="后记">后记</h2>
+<p>访问<a target="_blank" rel="noopener" href="http://localhost:4567">http://localhost:4567</a>即可看到一个创建新Home页面的界面</p>
+<h2 id="后记">后记<a class="header-anchor" href="#后记">·</a></h2>
 <p>折腾到现在，我对Gollum已经有些不耐烦了，太过于麻烦，太过于复杂，其实后面我还弄了一下unicorn，为了给Gollum配置一个更好的web服务，但没成功。回过头来看，弯路太多，与初衷渐行渐远，遂放弃。还是转投MediaWiki吧，虽然要学一个新的语法。</p>
 
     </div>
@@ -560,14 +553,14 @@ class="uri">http://localhost:4567</a>即可看到一个创建新Home页面的界
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动

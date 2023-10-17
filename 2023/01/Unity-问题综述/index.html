@@ -34,12 +34,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="解决玩家碰撞物体时的抖动问题 为什么会抖动？ 当玩家不断尝试往箱子里面移动时，物理系统会处理碰撞，阻止你的移入，然后将你移回。你要求代码执行的操作与物理系统执行的操作之间的这种冲突就会导致发生抖动。 要解决玩家的抖动问题，你需要移动刚体本身而不是游戏对象变换组件，并让物理系统将游戏对象位置同步到刚体位置。这样，物理系统就可以在进入箱子之前停止移动，而不必在玩家已经进入箱子之后再移出玩家。">
+    <meta name="description" content="解决玩家碰撞物体时的抖动问题· 为什么会抖动？ 当玩家不断尝试往箱子里面移动时，物理系统会处理碰撞，阻止你的移入，然后将你移回。你要求代码执行的操作与物理系统执行的操作之间的这种冲突就会导致发生抖动。 要解决玩家的抖动问题，你需要移动刚体本身而不是游戏对象变换组件，并让物理系统将游戏对象位置同步到刚体位置。这样，物理系统就可以在进入箱子之前停止移动，而不必在玩家已经进入箱子之后再移出玩家。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Unity-问题综述">
 <meta property="og:url" content="https://www.yunying61.cn/2023/01/Unity-%E9%97%AE%E9%A2%98%E7%BB%BC%E8%BF%B0/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="解决玩家碰撞物体时的抖动问题 为什么会抖动？ 当玩家不断尝试往箱子里面移动时，物理系统会处理碰撞，阻止你的移入，然后将你移回。你要求代码执行的操作与物理系统执行的操作之间的这种冲突就会导致发生抖动。 要解决玩家的抖动问题，你需要移动刚体本身而不是游戏对象变换组件，并让物理系统将游戏对象位置同步到刚体位置。这样，物理系统就可以在进入箱子之前停止移动，而不必在玩家已经进入箱子之后再移出玩家。">
+<meta property="og:description" content="解决玩家碰撞物体时的抖动问题· 为什么会抖动？ 当玩家不断尝试往箱子里面移动时，物理系统会处理碰撞，阻止你的移入，然后将你移回。你要求代码执行的操作与物理系统执行的操作之间的这种冲突就会导致发生抖动。 要解决玩家的抖动问题，你需要移动刚体本身而不是游戏对象变换组件，并让物理系统将游戏对象位置同步到刚体位置。这样，物理系统就可以在进入箱子之前停止移动，而不必在玩家已经进入箱子之后再移出玩家。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-01-10T09:07:38.000Z">
 <meta property="article:modified_time" content="2023-01-10T09:11:52.419Z">
@@ -163,8 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E7%8E%A9%E5%AE%B6%E7%A2%B0%E6%92%9E%E7%89%A9%E4%BD%93%E6%97%B6%E7%9A%84%E6%8A%96%E5%8A%A8%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">解决玩家碰撞物体时的抖动问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E8%A2%AB%E6%92%9E%E9%A3%9E%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">解决移动平台的被撞飞问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E7%AA%97%E5%8F%A3-%E6%97%A0%E6%B3%95%E6%89%A7%E8%A1%8C-upm-%E6%93%8D%E4%BD%9C-connect-etimedout-172.81.232.209443"><span class="nav-number">3.</span> <span class="nav-text">[包管理器窗口]
-无法执行 upm 操作: connect ETIMEDOUT 172.81.232.209:443</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%89%8B%E6%9F%84%E6%BC%82%E7%A7%BB%E6%88%96%E6%8D%9F%E5%9D%8F%E5%AF%BC%E8%87%B4%E7%9A%84%E8%AF%AF%E8%A7%A6"><span class="nav-number">4.</span> <span class="nav-text">解决手柄漂移或损坏导致的误触</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E7%8E%A9%E5%AE%B6%E7%A2%B0%E6%92%9E%E7%89%A9%E4%BD%93%E6%97%B6%E7%9A%84%E6%8A%96%E5%8A%A8%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">解决玩家碰撞物体时的抖动问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E8%A2%AB%E6%92%9E%E9%A3%9E%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">解决移动平台的被撞飞问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E7%AA%97%E5%8F%A3-%E6%97%A0%E6%B3%95%E6%89%A7%E8%A1%8C-upm-%E6%93%8D%E4%BD%9C-connect-ETIMEDOUT-172-81-232-209-443"><span class="nav-number">3.</span> <span class="nav-text">[包管理器窗口] 无法执行 upm 操作: connect ETIMEDOUT 172.81.232.209:443</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%89%8B%E6%9F%84%E6%BC%82%E7%A7%BB%E6%88%96%E6%8D%9F%E5%9D%8F%E5%AF%BC%E8%87%B4%E7%9A%84%E8%AF%AF%E8%A7%A6"><span class="nav-number">4.</span> <span class="nav-text">解决手柄漂移或损坏导致的误触</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -326,7 +325,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>764</span>
+      <span>776</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -344,22 +343,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="解决玩家碰撞物体时的抖动问题">解决玩家碰撞物体时的抖动问题</h2>
-<p><a
-target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/shi-jie-jiao-hu-zu-zhi-yi-dong?uv=2020.3&amp;projectId=5facf921edbc2a2003a58d3a#6073de22edbc2a0021c5b6f5">为什么会抖动？</a>
-当玩家不断尝试往箱子里面移动时，物理系统会处理碰撞，阻止你的移入，然后将你移回。你要求代码执行的操作与物理系统执行的操作之间的这种冲突就会导致发生抖动。
+        <h2 id="解决玩家碰撞物体时的抖动问题">解决玩家碰撞物体时的抖动问题<a class="header-anchor" href="#解决玩家碰撞物体时的抖动问题">·</a></h2>
+<p><a target="_blank" rel="noopener" href="https://learn.unity.com/tutorial/shi-jie-jiao-hu-zu-zhi-yi-dong?uv=2020.3&amp;projectId=5facf921edbc2a2003a58d3a#6073de22edbc2a0021c5b6f5">为什么会抖动？</a><br />
+当玩家不断尝试往箱子里面移动时，物理系统会处理碰撞，阻止你的移入，然后将你移回。你要求代码执行的操作与物理系统执行的操作之间的这种冲突就会导致发生抖动。<br />
 要解决玩家的抖动问题，你需要移动刚体本身而不是游戏对象变换组件，并让物理系统将游戏对象位置同步到刚体位置。这样，物理系统就可以在进入箱子之前停止移动，而不必在玩家已经进入箱子之后再移出玩家。</p>
 <span id="more"></span>
-<h2 id="解决移动平台的被撞飞问题">解决移动平台的被撞飞问题</h2>
-<p>调整 Rigidbody 类型为
-Kinematic，该对象将不会被物理引擎驱动，只能通过变换
-(Transform）对其进行操作。对于<strong>移动平台</strong>，或者如果要动画化<strong>附加了
-HingeJoint 的刚体</strong>，此属性将非常有用。</p>
-<h2
-id="包管理器窗口-无法执行-upm-操作-connect-etimedout-172.81.232.209443">[包管理器窗口]
-无法执行 upm 操作: connect ETIMEDOUT 172.81.232.209:443</h2>
+<h2 id="解决移动平台的被撞飞问题">解决移动平台的被撞飞问题<a class="header-anchor" href="#解决移动平台的被撞飞问题">·</a></h2>
+<p>调整 Rigidbody 类型为 Kinematic，该对象将不会被物理引擎驱动，只能通过变换 (Transform）对其进行操作。对于<strong>移动平台</strong>，或者如果要动画化<strong>附加了 HingeJoint 的刚体</strong>，此属性将非常有用。</p>
+<h2 id="包管理器窗口-无法执行-upm-操作-connect-ETIMEDOUT-172-81-232-209-443">[包管理器窗口] 无法执行 upm 操作: connect ETIMEDOUT 172.81.232.209:443<a class="header-anchor" href="#包管理器窗口-无法执行-upm-操作-connect-ETIMEDOUT-172-81-232-209-443">·</a></h2>
 <p><strong>问题描述：</strong></p>
-<ol type="1">
+<ol>
 <li>无法刷新包管理器</li>
 <li>无法安装Unity 注册表中的包</li>
 </ol>
@@ -370,17 +363,15 @@ id="包管理器窗口-无法执行-upm-操作-connect-etimedout-172.81.232.2094
 <p>我也去试了配置防火墙、配置代理服务器等方法，同样无济于事。</p>
 <p>最终才意识到，可能是校园网，或者说当前网络的问题。</p>
 </blockquote>
-<p><strong>问题解决：</strong>用手机热点</p>
-<h2 id="解决手柄漂移或损坏导致的误触">解决手柄漂移或损坏导致的误触</h2>
+<p>**问题解决：**用手机热点</p>
+<h2 id="解决手柄漂移或损坏导致的误触">解决手柄漂移或损坏导致的误触<a class="header-anchor" href="#解决手柄漂移或损坏导致的误触">·</a></h2>
 <p><strong>问题描述：</strong></p>
-<ol type="1">
+<ol>
 <li>摇杆漂移导致不正常操作</li>
 <li>摇杆损坏导致无法达到最大输出值</li>
 </ol>
 <hr />
-<p><strong>问题解决：</strong>用Input
-System，Actions中的第三项Processors --&gt; Stick
-Deadzone。设置输入范围。</p>
+<p>**问题解决：**用Input System，Actions中的第三项Processors --&gt; Stick Deadzone。设置输入范围。</p>
 
     </div>
 
@@ -506,14 +497,14 @@ Deadzone。设置输入范围。</p>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">310k</span>
+    <span title="站点总字数">307k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:22</span>
+    <span title="站点阅读时长">14:12</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
