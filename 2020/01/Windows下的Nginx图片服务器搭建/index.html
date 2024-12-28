@@ -34,22 +34,19 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yunying61.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":15},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#f00","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"zoomIn","post_header":"flipInX","post_body":"fadeInLeft","coll_header":"zoomIn","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":2,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Windows下的Nginx图片服务器搭建· 其实现在网上的图片托管服务也是非常成熟了，本人之前也是用了一个月的七牛云的对象存储服务来进行图片托管。当然也只是用了一个月而已，因为它的测试域名只能用一个月，一个月后你就要绑定一个自己的域名。绑域名简单啊，可是七牛云坑的就是要绑一个已经备案的域名，因为本人当时域名备案受限(也是一把泪啊，当然还是鼓励大家域名备案的)，所以让七牛云进行图片托管的路也算是废">
+    <meta name="description" content="Windows下的Nginx图片服务器搭建 其实现在网上的图片托管服务也是非常成熟了，本人之前也是用了一个月的七牛云的对象存储服务来进行图片托管。当然也只是用了一个月而已，因为它的测试域名只能用一个月，一个月后你就要绑定一个自己的域名。绑域名简单啊，可是七牛云坑的就是要绑一个已经备案的域名，因为本人当时域名备案受限(也是一把泪啊，当然还是鼓励大家域名备案的)，所以让七牛云进行图片托管的路也算是废">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Windows下的Nginx图片服务器搭建">
 <meta property="og:url" content="https://www.yunying61.cn/2020/01/Windows%E4%B8%8B%E7%9A%84Nginx%E5%9B%BE%E7%89%87%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="星幕·云影">
-<meta property="og:description" content="Windows下的Nginx图片服务器搭建· 其实现在网上的图片托管服务也是非常成熟了，本人之前也是用了一个月的七牛云的对象存储服务来进行图片托管。当然也只是用了一个月而已，因为它的测试域名只能用一个月，一个月后你就要绑定一个自己的域名。绑域名简单啊，可是七牛云坑的就是要绑一个已经备案的域名，因为本人当时域名备案受限(也是一把泪啊，当然还是鼓励大家域名备案的)，所以让七牛云进行图片托管的路也算是废">
+<meta property="og:description" content="Windows下的Nginx图片服务器搭建 其实现在网上的图片托管服务也是非常成熟了，本人之前也是用了一个月的七牛云的对象存储服务来进行图片托管。当然也只是用了一个月而已，因为它的测试域名只能用一个月，一个月后你就要绑定一个自己的域名。绑域名简单啊，可是七牛云坑的就是要绑一个已经备案的域名，因为本人当时域名备案受限(也是一把泪啊，当然还是鼓励大家域名备案的)，所以让七牛云进行图片托管的路也算是废">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/nginx_welcome.jpg?x-oss-process=style/yunying61">
-<meta property="og:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/nginx_conf.jpg?x-oss-process=style/yunying61">
 <meta property="article:published_time" content="2020-01-13T11:18:26.000Z">
 <meta property="article:modified_time" content="2022-03-17T07:52:51.157Z">
 <meta property="article:author" content="yunying61">
 <meta property="article:tag" content="服务器">
 <meta property="article:tag" content="Nginx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/nginx_welcome.jpg?x-oss-process=style/yunying61">
 
 
 <link rel="canonical" href="https://www.yunying61.cn/2020/01/Windows%E4%B8%8B%E7%9A%84Nginx%E5%9B%BE%E7%89%87%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">
@@ -164,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows%E4%B8%8B%E7%9A%84Nginx%E5%9B%BE%E7%89%87%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">Windows下的Nginx图片服务器搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-number">1.1.</span> <span class="nav-text">Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E8%A6%81%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.2.</span> <span class="nav-text">简要步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Nginx%E5%B9%B6%E5%90%AF%E5%8A%A8"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装Nginx并启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E9%93%BE%E6%8E%A5"><span class="nav-number">1.2.2.</span> <span class="nav-text">配置文件链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.</span> <span class="nav-text">Nginx常用命令</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#windows%E4%B8%8B%E7%9A%84nginx%E5%9B%BE%E7%89%87%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">Windows下的Nginx图片服务器搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx"><span class="nav-number">1.1.</span> <span class="nav-text">Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E8%A6%81%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.2.</span> <span class="nav-text">简要步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nginx%E5%B9%B6%E5%90%AF%E5%8A%A8"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装Nginx并启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E9%93%BE%E6%8E%A5"><span class="nav-number">1.2.2.</span> <span class="nav-text">配置文件链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.</span> <span class="nav-text">Nginx常用命令</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,7 +176,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-count">89</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -190,7 +187,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">150</span>
+        <span class="site-state-item-count">154</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -356,85 +353,124 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Windows下的Nginx图片服务器搭建">Windows下的Nginx图片服务器搭建<a class="header-anchor" href="#Windows下的Nginx图片服务器搭建">·</a></h1>
-<p>其实现在网上的图片托管服务也是非常成熟了，本人之前也是用了一个月的七牛云的对象存储服务来进行图片托管。当然也只是用了一个月而已，因为它的测试域名只能用一个月，一个月后你就要绑定一个自己的域名。绑域名简单啊，可是七牛云坑的就是要绑一个已经备案的域名，因为本人当时域名备案受限(也是一把泪啊，当然还是鼓励大家域名备案的)，所以让七牛云进行图片托管的路也算是废了(其实七牛云还蛮好用的)。<br />
-于是乎，我为了解决这个图片托管的问题，找遍了各种方法，到头来想了想，还是放自己服务器里托管更方便，所以就找到了用Nginx来搭建图片服务器。<br />
+        <h1
+id="windows下的nginx图片服务器搭建">Windows下的Nginx图片服务器搭建</h1>
+<p>其实现在网上的图片托管服务也是非常成熟了，本人之前也是用了一个月的七牛云的对象存储服务来进行图片托管。当然也只是用了一个月而已，因为它的测试域名只能用一个月，一个月后你就要绑定一个自己的域名。绑域名简单啊，可是七牛云坑的就是要绑一个已经备案的域名，因为本人当时域名备案受限(也是一把泪啊，当然还是鼓励大家域名备案的)，所以让七牛云进行图片托管的路也算是废了(其实七牛云还蛮好用的)。
+于是乎，我为了解决这个图片托管的问题，找遍了各种方法，到头来想了想，还是放自己服务器里托管更方便，所以就找到了用Nginx来搭建图片服务器。
 以上是我的吐槽，以及图片托管的一些经历。下面废话不多说，进入正题。</p>
 <span id="more"></span>
-<h2 id="Nginx">Nginx<a class="header-anchor" href="#Nginx">·</a></h2>
+<h2 id="nginx">Nginx</h2>
 <ul>
-<li>Nginx是什么？<br />
-Nginx是一个开源的Web服务器，同时Nginx也提供了反向代理和负载均衡的功能。<br />
+<li>Nginx是什么？
+Nginx是一个开源的Web服务器，同时Nginx也提供了反向代理和负载均衡的功能。
 Nginx通常作为负载均衡器暴露在外网接受用户请求，同时也使用其反向代理的功能，将用户的请求转发到实际提供服务的内网服务器。</li>
-<li>Windows什么情况下需要Nginx？<br />
-通常来说Windows下IIS就够用了，支持 .NET、ASP、PHP等等，不过如果你需要做负载均衡那你就需要Nginx，或者说你在一台服务器上，部署了Apache、IIS、Tomcat等多个Web服务器，这时候把80端口或443端口给Nginx在合适不过了。<br />
+<li>Windows什么情况下需要Nginx？ 通常来说Windows下IIS就够用了，支持
+.NET、ASP、PHP等等，不过如果你需要做负载均衡那你就需要Nginx，或者说你在一台服务器上，部署了Apache、IIS、Tomcat等多个Web服务器，这时候把80端口或443端口给Nginx在合适不过了。
 当然，作为商业公司来说，通常不会有以上情况，但是如果你是个草根站长。或者说你想把你的Windows开发机作为服务器对外提供服务，那把你的Windows装上Nginx再合适不过了。</li>
 </ul>
-<h2 id="简要步骤">简要步骤<a class="header-anchor" href="#简要步骤">·</a></h2>
-<ol>
+<h2 id="简要步骤">简要步骤</h2>
+<ol type="1">
 <li>安装Nginx并启动</li>
 <li>配置地址链接</li>
 <li>然后就可以用了</li>
 </ol>
-<h3 id="安装Nginx并启动">安装Nginx并启动<a class="header-anchor" href="#安装Nginx并启动">·</a></h3>
-<ol>
-<li>下载nginx，下载地址：<a target="_blank" rel="noopener" href="http://nginx.org/">http://nginx.org/</a>，以<a target="_blank" rel="noopener" href="http://nginx.org/download/nginx-1.16.1.zip">nginx-1.16.1.zip</a>为例，下载下来后，解压到如：<u>C:\nginx\nginx-1.16.1</u></li>
+<h3 id="安装nginx并启动">安装Nginx并启动</h3>
+<ol type="1">
+<li>下载nginx，下载地址：<a target="_blank" rel="noopener" href="http://nginx.org/"
+class="uri">http://nginx.org/</a>，以<a
+target="_blank" rel="noopener" href="http://nginx.org/download/nginx-1.16.1.zip">nginx-1.16.1.zip</a>为例，下载下来后，解压到如：<u>C:.1</u></li>
 <li>启动nginx，双击文件夹里的nginx.exe，双击后会有一个黑色的弹窗一闪而过</li>
-<li>检查nginx是否启动成功<br />
-直接在浏览器地址栏输入网址 <a target="_blank" rel="noopener" href="http://localhost:80">http://localhost:80</a>，回车，出现以下页面说明启动成功<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/nginx_welcome.jpg?x-oss-process=style/yunying61" alt="" loading="lazy" /><br />
-也可以在cmd命令窗口输入命令 <code>tasklist /fi &quot;imagename eq nginx.exe&quot;</code> ，出现结果说明启动成功<br />
-nginx的配置文件是conf目录下的nginx.conf，默认配置的nginx监听的端口为80，如果80端口被占用可以修改为未被占用的端口即可<br />
-检查80端口是否被占用的命令是： <code>netstat -ano | findstr 0.0.0.0:80</code> 或 <code>netstat -ano | findstr &quot;80&quot;</code></li>
+<li>检查nginx是否启动成功 直接在浏览器地址栏输入网址 <a
+target="_blank" rel="noopener" href="http://localhost:80"
+class="uri">http://localhost:80</a>，回车，出现以下页面说明启动成功 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/nginx_welcome.jpg?x-oss-process=style/yunying61"
+alt="nginx" /> 也可以在cmd命令窗口输入命令
+<code>tasklist /fi "imagename eq nginx.exe"</code>
+，出现结果说明启动成功
+nginx的配置文件是conf目录下的nginx.conf，默认配置的nginx监听的端口为80，如果80端口被占用可以修改为未被占用的端口即可
+检查80端口是否被占用的命令是：
+<code>netstat -ano | findstr 0.0.0.0:80</code> 或
+<code>netstat -ano | findstr "80"</code>
+&gt;这里建议大家改一下端口，比如我的就改成88端口了，因为80端口是比较频繁被访问的端口，我们的图片服务器就另用其他的端口比较好。而且也能避免某些冲突和问题。</li>
+<li>关闭nginx
+如果使用cmd命令窗口启动nginx，关闭cmd窗口是不能结束nginx进程的，可使用两种方法关闭nginx
+(1)输入nginx命令 nginx -s stop(快速停止nginx) 或 nginx -s
+quit(完整有序的停止nginx) (2)使用taskkill taskkill /f /t /im nginx.exe
+&gt;这里要注意的是，每次重启电脑以后，Nginx服务器都会关闭，所以需要自己手动打开，当然也可以设置计划任务让它自动打开。</li>
 </ol>
 <blockquote>
-<p>这里建议大家改一下端口，比如我的就改成88端口了，因为80端口是比较频繁被访问的端口，我们的图片服务器就另用其他的端口比较好。而且也能避免某些冲突和问题。</p>
+<p>当我们修改了nginx的配置文件nginx.conf
+时，不需要关闭nginx后重新启动nginx，只需要执行命令<code>nginx -s reload</code>即可让改动生效</p>
 </blockquote>
-<ol start="4">
-<li>关闭nginx<br />
-如果使用cmd命令窗口启动nginx，关闭cmd窗口是不能结束nginx进程的，可使用两种方法关闭nginx<br />
-(1)输入nginx命令  nginx -s stop(快速停止nginx)  或  nginx -s quit(完整有序的停止nginx)<br />
-(2)使用taskkill   taskkill /f /t /im nginx.exe</li>
-</ol>
-<blockquote>
-<p>这里要注意的是，每次重启电脑以后，Nginx服务器都会关闭，所以需要自己手动打开，当然也可以设置计划任务让它自动打开。</p>
-</blockquote>
-<blockquote>
-<p>当我们修改了nginx的配置文件nginx.conf 时，不需要关闭nginx后重新启动nginx，只需要执行命令<code>nginx -s reload</code>即可让改动生效</p>
-</blockquote>
-<h3 id="配置文件链接">配置文件链接<a class="header-anchor" href="#配置文件链接">·</a></h3>
-<p>如果有配置FTP服务器，那可以在FTP服务器的根目录下创建一个img文件夹；没有FTP服务器就随便创建一个文件夹。<br />
+<h3 id="配置文件链接">配置文件链接</h3>
+<p>如果有配置FTP服务器，那可以在FTP服务器的根目录下创建一个img文件夹；没有FTP服务器就随便创建一个文件夹。
 这里，我就在nginx目录下的html创建img文件夹</p>
-<p>接下来，打开Nginx的配置文件(nginx.conf)，路径：…\nginx-1.17.7\conf\nginx.conf  ，没有其他软件打开的话，就用记事本也可以打开。</p>
-<p>添加两行代码<br />
-<img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/nginx_conf.jpg?x-oss-process=style/yunying61" alt="" loading="lazy" /></p>
+<p>接下来，打开Nginx的配置文件(nginx.conf)，路径：...7.conf
+，没有其他软件打开的话，就用记事本也可以打开。</p>
+<p>添加两行代码 <img data-src="https://picgo-yunying61.oss-cn-guangzhou.aliyuncs.com/picgo_app/nginx_conf.jpg?x-oss-process=style/yunying61"
+alt="conf配置" /></p>
 <blockquote>
-<p>这里可以看到，我用的端口是88端口，然后再location / {…}后面空一行，添加如图代码，稍微注意一下格式，涂红处的路径就是你改成创建的img文件夹。</p>
+<p>这里可以看到，我用的端口是88端口，然后再location /
+{..}后面空一行，添加如图代码，稍微注意一下格式，涂红处的路径就是你改成创建的img文件夹。</p>
 </blockquote>
 <p>访问图片的地址是：http://localhost:88/img/1.jpg</p>
-<h2 id="Nginx常用命令">Nginx常用命令<a class="header-anchor" href="#Nginx常用命令">·</a></h2>
+<h2 id="nginx常用命令">Nginx常用命令</h2>
 <table border="1px" align="center">
-	<tr>
-		<th>命令</th><th>说明</th>
-	</tr>
-	<tr>
-		<td>nginx -h</td><td>查看帮助信息</td>
-	</tr>
-    <tr>
-		<td>nginx -v</td><td>查看Nginx版本</td>
-	</tr>
-    <tr>
-		<td>nginx -s stop</td><td>停止Nginx</td>
-	</tr>
-    <tr>
-		<td>nginx -s quit</td><td>优雅的停止Nginx（处理完正在进行中请求后停止）</td>
-	</tr>
-    <tr>
-		<td>nginx -s reload</td><td>重新加载配置，并优雅的重启进程</td>
-	</tr>
-    <tr>
-		<td>nginx -s reopen</td><td>重启日志文件</td>
-	</tr>
+<tr>
+<th>
+命令
+</th>
+<th>
+说明
+</th>
+</tr>
+<tr>
+<td>
+nginx -h
+</td>
+<td>
+查看帮助信息
+</td>
+</tr>
+<tr>
+<td>
+nginx -v
+</td>
+<td>
+查看Nginx版本
+</td>
+</tr>
+<tr>
+<td>
+nginx -s stop
+</td>
+<td>
+停止Nginx
+</td>
+</tr>
+<tr>
+<td>
+nginx -s quit
+</td>
+<td>
+优雅的停止Nginx（处理完正在进行中请求后停止）
+</td>
+</tr>
+<tr>
+<td>
+nginx -s reload
+</td>
+<td>
+重新加载配置，并优雅的重启进程
+</td>
+</tr>
+<tr>
+<td>
+nginx -s reopen
+</td>
+<td>
+重启日志文件
+</td>
+</tr>
 </table>
 
     </div>
@@ -547,7 +583,7 @@ nginx的配置文件是conf目录下的nginx.conf，默认配置的nginx监听�
 
 <div class="copyright">
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
@@ -559,14 +595,14 @@ nginx的配置文件是conf目录下的nginx.conf，默认配置的nginx监听�
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">307k</span>
+    <span title="站点总字数">311k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">14:12</span>
+    <span title="站点阅读时长">14:24</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
